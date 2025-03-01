@@ -40,7 +40,7 @@ jobs:
           zip -r signed_apk.zip signed_apk/
 
       - name: Upload signed APK
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: signed-apk
           path: signed_apk.zip
