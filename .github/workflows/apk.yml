@@ -4,9 +4,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  sign:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -14,7 +13,16 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '11'  # 设置为您项目所需的 Java 版本
+          java-version: '11'
+          distribution: 'temurin'  # 指定 Java 发行版
+          java-package: 'jdk'
+          architecture: 'x64'
+          check-latest: false
+          server-id: 'github'
+          server-username: '${{ github.actor }}'
+          server-password: '${{ secrets.GITHUB_TOKEN }}'
+          overwrite-settings: true
+          job-status: 'success'
 
       - name: Build the project
         run: ./gradlew assembleRelease
