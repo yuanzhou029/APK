@@ -18,35 +18,40 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
-      # Step 3: 对 APK 进行签名
-      - name: Sign APK
+      # Step 3: 移除旧的签名
+      - name: Remove old signature
+        run: |
+          zip -d 智远TV_6.0.3.apk META-INF/*
+
+      # Step 4: 对齐 APK
+      - name: Align APK
+        run: |
+          zipalign -v 4 智远TV_6.0.3.apk 智远TV_6.0.3-aligned.apk
+
+      # Step 5: 设置 Android SDK
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+
+      # Step 6: 使用新的密钥签名
+      - name: Sign APK with apksigner
         env:
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 \
-            -keystore my-release-key.jks \
-            -storepass $KEYSTORE_PASSWORD \
-            -keypass $KEY_PASSWORD \
-            智远TV_6.0.3.apk \
-            $KEY_ALIAS
+          apksigner sign \
+            --ks my-release-key.jks \
+            --ks-pass pass:$KEYSTORE_PASSWORD \
+            --key-pass pass:$KEY_PASSWORD \
+            --out 智远TV_6.0.3-signed.apk \
+            智远TV_6.0.3-aligned.apk
 
-      # Step 4: 压缩签名后的 APK
-      - name: Zip signed APK
+      # Step 7: 验证签名
+      - name: Verify Signature
         run: |
-          mkdir signed_apk
-          cp 智远TV_6.0.3.apk signed_apk/
-          zip -r signed_apk.zip signed_apk/
+          apksigner verify --verbose 智远TV_6.0.3-signed.apk
 
-      # Step 5: 上传签名后的 APK 作为 Artifact
-      - name: Upload signed APK
-        uses: actions/upload-artifact@v4.6.0
-        with:
-          name: signed-apk
-          path: signed_apk.zip
-
-      # Step 6: 创建 GitHub Release 并发布 APK
+      # Step 8: 发布签名后的 APK
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
@@ -55,7 +60,7 @@ jobs:
           release_name: Release v6.0.3  # 替换为你的发布名称
           body: |
             这是一个自动生成的发布版本。
-            files: 
-            - signed_apk.zip
+          files: |
+            智远TV_6.0.3-signed.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
