@@ -17,7 +17,7 @@ jobs:
           java-version: '11'  # 设置为您项目所需的 Java 版本
 
       - name: Build the project
-        run: ./gradlew assembleRelease  # 根据您的项目构建命令进行调整
+        run: ./gradlew assembleRelease
 
       - name: Sign APK
         env:
@@ -25,7 +25,6 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          # 使用 jarsigner 对 APK 进行签名
           jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 \
             -keystore my-release-key.jks \
             -storepass $KEYSTORE_PASSWORD \
@@ -42,9 +41,8 @@ jobs:
 
       - name: Obfuscate APK (Optional)
         run: |
-          # 这里可以插入您加固 APK 的命令
-          # 例如，使用某个加固工具的命令行工具
-          # ./path/to/your/obfuscation-tool signed_apk/app-release.apk
+          # 在这里插入您加固 APK 的命令
+          # 例如：./path/to/your/obfuscation-tool signed_apk/app-release.apk
 
       - name: Upload signed APK
         uses: actions/upload-artifact@v2
@@ -56,11 +54,11 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v6.0.3  # 替换为您的版本号
-          release_name: Release v6.0.3  # 替换为您的发布名称
+          tag_name: v1.0.0  # 替换为您的版本号
+          release_name: Release v1.0.0  # 替换为您的发布名称
           body: |
             这是一个自动生成的发布版本。
           files: 
             - signed_apk.zip
         env:
-          GITHUB_TOKEN: ${{ secrets.GT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
