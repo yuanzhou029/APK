@@ -1,7 +1,7 @@
-name: Sign APK
+name: Sign and Release APK
 
 on:
-workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   sign:
@@ -39,9 +39,28 @@ jobs:
           cp app/build/outputs/apk/release/app-release-unsigned.apk signed_apk/
           cp app/build/outputs/apk/release/app-release.apk signed_apk/
           zip -r signed_apk.zip signed_apk/
-          
+
+      - name: Obfuscate APK (Optional)
+        run: |
+          # 这里可以插入您加固 APK 的命令
+          # 例如，使用某个加固工具的命令行工具
+          # ./path/to/your/obfuscation-tool signed_apk/app-release.apk
+
       - name: Upload signed APK
         uses: actions/upload-artifact@v2
         with:
           name: signed-apk
           path: signed_apk.zip
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v6.0.3  # 替换为您的版本号
+          release_name: Release v6.0.3  # 替换为您的发布名称
+          body: |
+            这是一个自动生成的发布版本。
+          files: 
+            - signed_apk.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GT_TOKEN }}
