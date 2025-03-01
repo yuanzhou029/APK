@@ -18,19 +18,19 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
-      # Step 3: 移除旧的签名
-      - name: Remove old signature
-        run: |
-          zip -d 智远TV_6.0.3.apk META-INF/*
+      # Step 3: 安装 Android SDK
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
 
-      # Step 4: 对齐 APK
+      # Step 4: 将 zipalign 添加到 PATH
+      - name: Add zipalign to PATH
+        run: |
+          echo "$ANDROID_SDK_ROOT/build-tools/$(ls $ANDROID_SDK_ROOT/build-tools | sort -V | tail -1)" >> $GITHUB_PATH
+
+      # Step 5: 对齐 APK
       - name: Align APK
         run: |
           zipalign -v 4 智远TV_6.0.3.apk 智远TV_6.0.3-aligned.apk
-
-      # Step 5: 设置 Android SDK
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v2
 
       # Step 6: 使用新的密钥签名
       - name: Sign APK with apksigner
@@ -56,8 +56,8 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v6.0.3  # 替换为你的版本号
-          release_name: Release v6.0.3  # 替换为你的发布名称
+          tag_name: v1.0.0  # 替换为你的版本号
+          release_name: Release v1.0.0  # 替换为你的发布名称
           body: |
             这是一个自动生成的发布版本。
           files: |
