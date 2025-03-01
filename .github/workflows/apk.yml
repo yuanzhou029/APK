@@ -9,20 +9,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
           java-version: '11'
-          distribution: 'temurin'  # 指定 Java 发行版
+          distribution: 'temurin'
           java-package: 'jdk'
           architecture: 'x64'
-          check-latest: false
-          server-id: 'github'
-          server-username: '${{ github.actor }}'
-          server-password: '${{ secrets.GITHUB_TOKEN }}'
-          overwrite-settings: true
-          job-status: 'success'
 
       - name: Build the project
         run: ./gradlew assembleRelease
@@ -57,8 +53,8 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.0.0  # 替换为您的版本号
-          release_name: Release v1.0.0  # 替换为您的发布名称
+          tag_name: v1.0.0
+          release_name: Release v1.0.0
           body: |
             这是一个自动生成的发布版本。
             files: 
