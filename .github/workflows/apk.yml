@@ -63,4 +63,4 @@ jobs:
           files: |
             智远TV_6.0.3-signed.apk
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GT_TOKEN }}
