@@ -43,8 +43,8 @@ jobs:
             --ks my-release-key.jks \
             --ks-pass pass:$KEYSTORE_PASSWORD \
             --key-pass pass:$KEY_PASSWORD \
-            --out 智远TV_6.0.3-signed.apk \
-            智远TV_6.0.3-aligned.apk
+            --out 可可影视_3.3.3-signed.apk \
+            可可影视_3.3.3-aligned.apkk
 
       # Step 7: 验证签名
       - name: Verify Signature
