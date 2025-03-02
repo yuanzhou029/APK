@@ -1,0 +1,71 @@
+name: Sign and Release APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sign-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: 克隆仓库
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: 设置 JDK 17
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'  # 使用 Java 17
+          distribution: 'temurin'
+
+      # Step 3: 安装 Android SDK
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+
+      # Step 4: 将 zipalign 添加到 PATH
+      - name: Add zipalign to PATH
+        run: |
+          echo "$ANDROID_SDK_ROOT/build-tools/$(ls $ANDROID_SDK_ROOT/build-tools | sort -V | tail -1)" >> $GITHUB_PATH
+
+      # Step 5: 对齐 APK
+      - name: Align APK
+        run: |
+          zipalign -v 4 智远TV_6.0.3.apk 智远TV_6.0.3-aligned.apk
+
+      # Step 6: 使用新的密钥签名
+      - name: Sign APK with apksigner
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          apksigner sign \
+            --ks my-release-key.jks \
+            --ks-pass pass:$KEYSTORE_PASSWORD \
+            --key-pass pass:$KEY_PASSWORD \
+            --out 智远TV_6.0.3-signed.apk \
+            --v2-signing-enabled true \
+            智远TV_6.0.3-aligned.apk
+            
+      - name: Verify Signed APK
+        run: |
+          apksigner verify --verbose 智远TV_6.0.3-signed.apk  
+
+      # Step 7: 验证签名
+      - name: Verify Signature
+        run: |
+          apksigner verify --verbose 智远TV_6.0.3-aligned.apk
+
+      # Step 8: 发布签名后的 APK
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v1.0.0  # 替换为你的版本号
+          release_name: Release v1.0.0  # 替换为你的发布名称
+          body: |
+            这是一个自动生成的发布版本。
+          files: |
+            智远TV_6.0.3-signed.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GT_TOKEN }}
