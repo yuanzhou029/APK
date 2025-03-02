@@ -1,4 +1,4 @@
-name: Sign and Release APK
+name: Sign KEKE APK
 
 on:
   workflow_dispatch:
