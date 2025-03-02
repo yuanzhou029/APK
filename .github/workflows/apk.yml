@@ -30,7 +30,7 @@ jobs:
       # Step 5: 对齐 APK
       - name: Align APK
         run: |
-          zipalign -v 4 智远TV_6.0.3.apk 智远TV_6.0.3-aligned.apk
+          zipalign -v 4 可可影视_3.3.3.apk可可影视_3.3.3.apk 可可影视_3.3.3-aligned.apk
 
       # Step 6: 使用新的密钥签名
       - name: Sign APK with apksigner
