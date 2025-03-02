@@ -82,6 +82,6 @@ jobs:
           body: |
             这是一个自动生成的发布版本。
           files: |
-            KEKE_3.3.3-signed.apk  # 确保这里使用的是签名后的 APK 文件名
+            KEKE_3.3.3-signed.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GT_TOKEN }}
