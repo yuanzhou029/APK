@@ -46,6 +46,10 @@ jobs:
             --out 可可影视_3.3.3-signed.apk \
             --v2-signing-enabled true \
             可可影视_3.3.3-aligned.apk
+            
+      - name: Verify Signed APK
+        run: |
+          apksigner verify --verbose 可可影视_3.3.3-signed.apk  
 
       # Step 7: 验证签名
       - name: Verify Signature
