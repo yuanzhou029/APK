@@ -49,7 +49,7 @@ jobs:
       # Step 7: 验证签名
       - name: Verify Signature
         run: |
-          apksigner verify --verbose 智远TV_6.0.3-signed.apk
+          apksigner verify --verbose 可可影视_3.3.3-aligned.apk
 
       # Step 8: 发布签名后的 APK
       - name: Create Release
