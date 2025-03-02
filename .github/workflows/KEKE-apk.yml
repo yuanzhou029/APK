@@ -66,8 +66,8 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v2.0.0  # 替换为你的版本号
-          name: Release v2.0.0  # 使用 'name' 参数设置发布名称
+          tag_name: v2.0.1  # 替换为你的版本号
+          name: Release v2.0.1  # 使用 'name' 参数设置发布名称
           body: |
             这是一个自动生成的发布版本。
           files: |
