@@ -32,8 +32,6 @@ jobs:
         run: |
           zipalign -v 4 可可影视_3.3.3.apk 可可影视_3.3.3-aligned.apk
 
-
-
       # Step 6: 使用新的密钥签名
       - name: Sign APK with apksigner
         env:
@@ -46,6 +44,7 @@ jobs:
             --ks-pass pass:$KEYSTORE_PASSWORD \
             --key-pass pass:$KEY_PASSWORD \
             --out 可可影视_3.3.3-signed.apk \
+            --v2-signing-enabled true \
             可可影视_3.3.3-aligned.apk
 
       # Step 7: 验证签名
