@@ -1,4 +1,4 @@
-name: Sign and Release APK
+name: Sign KEKE APK
 
 on:
   workflow_dispatch:
@@ -47,14 +47,10 @@ jobs:
             --v2-signing-enabled true \
             可可影视_3.3.3-aligned.apk
             
+      # Step 7: 验证签名后的 APK
       - name: Verify Signed APK
         run: |
           apksigner verify --verbose 可可影视_3.3.3-signed.apk  
-
-      # Step 7: 验证签名
-      - name: Verify Signature
-        run: |
-          apksigner verify --verbose 可可影视_3.3.3-aligned.apk
 
       # Step 8: 发布签名后的 APK
       - name: Create Release
@@ -66,6 +62,6 @@ jobs:
           body: |
             这是一个自动生成的发布版本。
           files: |
-            智远TV_6.0.3-signed.apk
+            可可影视_3.3.3-signed.apk  # 确保这里使用的是签名后的 APK 文件名
         env:
           GITHUB_TOKEN: ${{ secrets.GT_TOKEN }}
