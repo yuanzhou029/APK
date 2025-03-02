@@ -1,4 +1,4 @@
-name: Sign KEKE APK
+name: Sign and Release APK
 
 on:
   workflow_dispatch:
@@ -52,7 +52,16 @@ jobs:
         run: |
           apksigner verify --verbose 可可影视_3.3.3-signed.apk  
 
-      # Step 8: 发布签名后的 APK
+      # Step 8: 检查签名 APK 文件是否存在
+      - name: Check Signed APK File
+        run: |
+          ls -al
+          if [ ! -f 可可影视_3.3.3-signed.apk ]; then
+            echo "Error: Signed APK not found!"
+            exit 1
+          fi
+
+      # Step 9: 发布签名后的 APK
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
