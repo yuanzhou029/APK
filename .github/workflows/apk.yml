@@ -30,7 +30,8 @@ jobs:
       # Step 5: 对齐 APK
       - name: Align APK
         run: |
-          zipalign -v 4 /path/to/可可影视_3.3.3.apk /path/to/可可影视_3.3.3-aligned.apk
+          zipalign -v 4 可可影视_3.3.3.apk 可可影视_3.3.3-aligned.apk
+
 
 
       # Step 6: 使用新的密钥签名
