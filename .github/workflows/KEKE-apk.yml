@@ -39,7 +39,7 @@ jobs:
       # Step 5: 对齐 APK
       - name: Align APK
         run: |
-          zipalign -v 4 可可影视_3.3.3.apk 可可影视_3.3.3-aligned.apk
+          zipalign -v 4 可可影视_3.3.3.apk KEKE_3.3.3-aligned.apk
           ls -al  # 列出文件以确认对齐后的 APK 是否存在
 
       # Step 6: 使用新的密钥签名
@@ -53,21 +53,21 @@ jobs:
             --ks my-release-key.jks \
             --ks-pass pass:$KEYSTORE_PASSWORD \
             --key-pass pass:$KEY_PASSWORD \
-            --out 可可影视_3.3.3-signed.apk \
+            --out KEKE_3.3.3-signed.apk \
             --v2-signing-enabled true \
-            可可影视_3.3.3-aligned.apk
+            KEKE_3.3.3-aligned.apk
           ls -al  # 列出文件以确认签名后的 APK 是否存在
             
       # Step 7: 验证签名后的 APK
       - name: Verify Signed APK
         run: |
-          apksigner verify --verbose 可可影视_3.3.3-signed.apk  
+          apksigner verify --verbose KEKE_3.3.3-signed.apk  
 
       # Step 8: 检查签名 APK 文件是否存在
       - name: Check Signed APK File
         run: |
           ls -al
-          if [ ! -f 可可影视_3.3.3-signed.apk ]; then
+          if [ ! -f KEKE_3.3.3-signed.apk ]; then
             echo "Error: Signed APK not found!"
             exit 1
           fi
@@ -82,6 +82,6 @@ jobs:
           body: |
             这是一个自动生成的发布版本。
           files: |
-            可可影视_3.3.3-signed.apk  # 确保这里使用的是签名后的 APK 文件名
+            KEKE_3.3.3-signed.apk  # 确保这里使用的是签名后的 APK 文件名
         env:
           GITHUB_TOKEN: ${{ secrets.GT_TOKEN }}
