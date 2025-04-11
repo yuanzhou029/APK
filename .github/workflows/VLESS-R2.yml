@@ -1,0 +1,59 @@
+name: VLESS-Cloudflare R2
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+  push:
+
+jobs:
+  upload-to-r2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download file from GitHub
+        run: |
+          curl -o result.txt https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.txt
+          curl -o result.m3u https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.m3u
+
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update && sudo apt-get install -y python3-pip
+          pip3 install awscli --upgrade
+
+      - name: Upload file to Cloudflare R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
+          AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
+          BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
+        run: |
+          aws s3 cp result.txt s3://$BUCKET_NAME/result.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp result.txt s3://$BUCKET_NAME/result.m3u --endpoint-url $AWS_ENDPOINT_URL
+
+  cleanup-workflow-runs:
+    runs-on: ubuntu-latest
+    needs: upload-to-r2  # 只有上传成功后才执行
+
+    steps:
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Delete completed workflow runs
+        env:
+          GH_TOKEN: ${{ secrets.GT_TOKEN }}
+        run: |
+          echo "Fetching completed workflow runs..."
+
+          # 获取运行记录 ID 列表（最多 100 条）
+          RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
+            | jq '.workflow_runs[] | select(.status == "completed") | .id')
+
+          # 删除每一条记录
+          for run_id in $RUN_IDS; do
+            echo "Deleting run ID: $run_id"
+            curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
+          done
