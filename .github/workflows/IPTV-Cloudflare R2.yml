@@ -1,0 +1,40 @@
+name: IPTV-Cloudflare R2
+
+on:
+  push:
+  schedule:
+    - cron: '0 0 * * *' # 每天 UTC 00:00 触发
+
+jobs:
+  upload-to-r2:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: 下载指定文件
+      - name: Download file from GitHub
+        run: |
+          curl -o result.txt https://raw.githubusercontent.com/8080713/iptv-api/refs/heads/main/output/result.txt
+
+      # Step 2: 安装 AWS CLI（用于操作 Cloudflare R2）
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update && sudo apt-get install -y awscli
+
+      # Step 3: 配置 AWS CLI 以连接到 Cloudflare R2
+      - name: Configure AWS CLI for Cloudflare R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+          AWS_ENDPOINT: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
+        run: |
+          aws configure set default.region us-east-1
+          aws configure set default.s3.addressing_style path
+
+      # Step 4: 上传文件到 Cloudflare R2
+      - name: Upload file to Cloudflare R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+          AWS_ENDPOINT: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
+        run: |
+          aws s3 cp result.txt s3://your-bucket-name/result.txt
