@@ -1,12 +1,9 @@
 name: IPTV-Cloudflare R2
 
 on:
-  # 手动触发
   workflow_dispatch:
-  # 定时触发（每天 UTC 00:00）
   schedule:
     - cron: '0 0 * * *'
-  # 推送到任何分支时触发
   push:
 
 jobs:
@@ -19,7 +16,7 @@ jobs:
         run: |
           curl -o result.txt https://raw.githubusercontent.com/8080713/iptv-api/refs/heads/main/output/result.txt
 
-      # Step 2: 安装 AWS CLI（用于操作 Cloudflare R2）
+      # Step 2: 安装 AWS CLI（通过 pip 安装）
       - name: Install AWS CLI
         run: |
           sudo apt-get update && sudo apt-get install -y python3-pip
@@ -32,10 +29,22 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
           AWS_ENDPOINT: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
         run: |
+          echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
+          echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"
+          echo "AWS_ENDPOINT: $AWS_ENDPOINT"
           aws configure set default.region us-east-1
           aws configure set default.s3.addressing_style path
 
-      # Step 4: 上传文件到 Cloudflare R2
+      # Step 4: 验证 AWS CLI 配置
+      - name: Test AWS CLI Configuration
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+          AWS_ENDPOINT: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
+        run: |
+          aws s3 ls s3://zhou
+
+      # Step 5: 上传文件到 Cloudflare R2
       - name: Upload file to Cloudflare R2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
@@ -43,6 +52,7 @@ jobs:
           AWS_ENDPOINT: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
         run: |
           aws s3 cp result.txt s3://zhou/result.txt
+
 
   # 任务：清除工作流运行记录
   cleanup-workflow-runs:
