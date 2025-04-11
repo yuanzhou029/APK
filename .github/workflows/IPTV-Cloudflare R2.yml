@@ -14,6 +14,7 @@ jobs:
       - name: Download file from GitHub
         run: |
           curl -o result.txt https://raw.githubusercontent.com/8080713/iptv-api/refs/heads/main/output/result.txt
+          curl -o result.txt https://raw.githubusercontent.com/8080713/iptv-api/refs/heads/main/output/result.m3u
 
       - name: Install AWS CLI
         run: |
@@ -29,6 +30,7 @@ jobs:
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
           aws s3 cp result.txt s3://$BUCKET_NAME/result.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp result.txt s3://$BUCKET_NAME/result.m3u --endpoint-url $AWS_ENDPOINT_URL
 
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
