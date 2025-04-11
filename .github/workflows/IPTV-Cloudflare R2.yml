@@ -22,7 +22,8 @@ jobs:
       # Step 2: 安装 AWS CLI（用于操作 Cloudflare R2）
       - name: Install AWS CLI
         run: |
-          sudo apt-get update && sudo apt-get install -y awscli
+          sudo apt-get update && sudo apt-get install -y python3-pip
+          pip3 install awscli --upgrade
 
       # Step 3: 配置 AWS CLI 以连接到 Cloudflare R2
       - name: Configure AWS CLI for Cloudflare R2
