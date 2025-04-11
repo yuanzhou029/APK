@@ -29,3 +29,29 @@ jobs:
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
           aws s3 cp result.txt s3://$BUCKET_NAME/result.txt --endpoint-url $AWS_ENDPOINT_URL
+
+  cleanup-workflow-runs:
+    runs-on: ubuntu-latest
+    needs: upload-to-r2  # 只有上传成功后才执行
+
+    steps:
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Delete completed workflow runs
+        env:
+          GH_TOKEN: ${{ secrets.GT_TOKEN }}
+        run: |
+          echo "Fetching completed workflow runs..."
+
+          # 获取运行记录 ID 列表（最多 100 条）
+          RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
+            | jq '.workflow_runs[] | select(.status == "completed") | .id')
+
+          # 删除每一条记录
+          for run_id in $RUN_IDS; do
+            echo "Deleting run ID: $run_id"
+            curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
+          done
