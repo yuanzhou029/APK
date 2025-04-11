@@ -1,9 +1,13 @@
 name: IPTV-Cloudflare R2
 
 on:
-  push:
+  # 手动触发
+  workflow_dispatch:
+  # 定时触发（每天 UTC 00:00）
   schedule:
-    - cron: '0 0 * * *' # 每天 UTC 00:00 触发
+    - cron: '0 0 * * *'
+  # 推送到任何分支时触发
+  push:
 
 jobs:
   upload-to-r2:
@@ -39,7 +43,7 @@ jobs:
         run: |
           aws s3 cp result.txt s3://your-bucket-name/result.txt
 
-  # 新增任务：清除工作流运行记录
+  # 任务：清除工作流运行记录
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
     needs: upload-to-r2
@@ -51,10 +55,14 @@ jobs:
         run: |
           echo "GH_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
 
-      # Step 2: 删除工作流运行记录
+      # Step 2: 安装 jq
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      # Step 3: 删除工作流运行记录
       - name: Delete workflow runs
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # 获取当前工作流的所有运行记录
           RUNS=$(curl -s -H "Authorization: token $GH_TOKEN" \
