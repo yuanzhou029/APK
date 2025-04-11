@@ -11,18 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: 下载指定文件
       - name: Download file from GitHub
         run: |
           curl -o result.txt https://raw.githubusercontent.com/8080713/iptv-api/refs/heads/main/output/result.txt
 
-      # Step 2: 安装 AWS CLI（通过 pip 安装）
       - name: Install AWS CLI
         run: |
           sudo apt-get update && sudo apt-get install -y python3-pip
           pip3 install awscli --upgrade
 
-      # Step 3: 配置 AWS CLI 以连接到 Cloudflare R2
       - name: Configure AWS CLI for Cloudflare R2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
@@ -30,64 +27,45 @@ jobs:
           AWS_ENDPOINT: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
-          echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"
-          echo "AWS_ENDPOINT: $AWS_ENDPOINT"
-          echo "BUCKET_NAME: $BUCKET_NAME"
+          aws configure set aws_access_key_id "$AWS_ACCESS_KEY_ID"
+          aws configure set aws_secret_access_key "$AWS_SECRET_ACCESS_KEY"
           aws configure set default.region us-east-1
           aws configure set default.s3.addressing_style path
+          aws configure set default.s3.endpoint_url "$AWS_ENDPOINT"  # ✅ 添加此行
 
-
-     # Step 3: 测试连接到 Cloudflare R2
       - name: Test Connection to Cloudflare R2
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
-          AWS_ENDPOINT: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
           aws s3 ls s3://$BUCKET_NAME
 
-     # Step 4: 上传文件到 Cloudflare R2（可选）
-      - name: Upload File to Cloudflare R2
+      - name: Upload result.txt to Cloudflare R2  # ✅ 改为上传目标文件
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
-          AWS_ENDPOINT: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          echo "Hello, Cloudflare R2!" > test.txt
-          aws s3 cp test.txt s3://$BUCKET_NAME/test.txt
+          aws s3 cp result.txt s3://$BUCKET_NAME/result.txt
 
-
-  # 任务：清除工作流运行记录
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
     needs: upload-to-r2
 
     steps:
-      # Step 1: 设置 GitHub 访问令牌
       - name: Setup GitHub Token
-        id: setup-github-token
-        run: |
-              echo "GH_TOKEN=${{ secrets.GT_TOKEN }}" >> $GITHUB_ENV
+        run: echo "GH_TOKEN=${{ secrets.GT_TOKEN }}" >> $GITHUB_ENV
 
-      # Step 2: 安装 jq
       - name: Install jq
         run: sudo apt-get install -y jq
 
-      # Step 3: 删除工作流运行记录
       - name: Delete workflow runs
         env:
           GH_TOKEN: ${{ secrets.GT_TOKEN }}
         run: |
-          # 获取当前工作流的所有运行记录
-          RUNS=$(curl -s -H "Authorization: token $GT_TOKEN" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" | jq '.workflow_runs[] | select(.status == "completed") | .id')
+          RUNS=$(curl -s -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
+            | jq '.workflow_runs[] | select(.status == "completed") | .id')
 
-          # 遍历并删除每个运行记录
           for RUN_ID in $RUNS; do
             echo "Deleting run ID: $RUN_ID"
-            curl -X DELETE -H "Authorization: token $GT_TOKEN" \
+            curl -X DELETE -H "Authorization: token $GH_TOKEN" \
               "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RUN_ID"
           done
