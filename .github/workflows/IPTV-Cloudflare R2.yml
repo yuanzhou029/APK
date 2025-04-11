@@ -3,7 +3,7 @@ name: IPTV-Cloudflare R2
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  # 每天零点运行
   push:
 
 jobs:
@@ -11,35 +11,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: 下载文件
       - name: Download file from GitHub
         run: |
           curl -o result.txt https://raw.githubusercontent.com/8080713/iptv-api/refs/heads/main/output/result.txt
 
+      # Step 2: 安装 AWS CLI
       - name: Install AWS CLI
         run: |
           sudo apt-get update && sudo apt-get install -y python3-pip
           pip3 install awscli --upgrade
 
+      # Step 3: 配置 AWS CLI 连接 Cloudflare R2
       - name: Configure AWS CLI for Cloudflare R2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
           AWS_ENDPOINT: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
-          BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
           aws configure set aws_access_key_id "$AWS_ACCESS_KEY_ID"
           aws configure set aws_secret_access_key "$AWS_SECRET_ACCESS_KEY"
           aws configure set default.region us-east-1
           aws configure set default.s3.addressing_style path
-          aws configure set default.s3.endpoint_url "$AWS_ENDPOINT"  # ✅ 添加此行
+          aws configure set default.s3.endpoint_url "$AWS_ENDPOINT"
 
-      - name: Test Connection to Cloudflare R2
-        env:
-          BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
-        run: |
-          aws s3 ls s3://$BUCKET_NAME
-
-      - name: Upload result.txt to Cloudflare R2  # ✅ 改为上传目标文件
+      # Step 4: 上传文件到 Cloudflare R2
+      - name: Upload result.txt to Cloudflare R2
         env:
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
@@ -50,19 +47,18 @@ jobs:
     needs: upload-to-r2
 
     steps:
-      - name: Setup GitHub Token
-        run: echo "GH_TOKEN=${{ secrets.GT_TOKEN }}" >> $GITHUB_ENV
-
+      # Step 1: 安装 jq
       - name: Install jq
         run: sudo apt-get install -y jq
 
-      - name: Delete workflow runs
+      # Step 2: 删除旧的 workflow 运行记录
+      - name: Delete old workflow runs
         env:
           GH_TOKEN: ${{ secrets.GT_TOKEN }}
         run: |
           RUNS=$(curl -s -H "Authorization: token $GH_TOKEN" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
-            | jq '.workflow_runs[] | select(.status == "completed") | .id')
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" | \
+            jq '.workflow_runs[] | select(.status == "completed") | .id')
 
           for RUN_ID in $RUNS; do
             echo "Deleting run ID: $RUN_ID"
