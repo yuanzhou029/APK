@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Download file from GitHub
         run: |
-          curl -o result.txt https://raw.githubusercontent.com/8080713/iptv-api/refs/heads/main/output/result.txt
-          curl -o result.txt https://raw.githubusercontent.com/8080713/iptv-api/refs/heads/main/output/result.m3u
+          curl -o result.txt https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.txt
+          curl -o result.m3u https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.m3u
 
       - name: Install AWS CLI
         run: |
