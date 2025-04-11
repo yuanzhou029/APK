@@ -41,7 +41,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
           AWS_ENDPOINT: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
         run: |
-          aws s3 cp result.txt s3://your-bucket-name/result.txt
+          aws s3 cp result.txt s3://zhou/result.txt
 
   # 任务：清除工作流运行记录
   cleanup-workflow-runs:
