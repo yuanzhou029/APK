@@ -3,7 +3,7 @@ name: VLESS-Cloudflare R2
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+ #   - cron: '0 0 * * *'
   push:
 
 jobs:
@@ -13,8 +13,7 @@ jobs:
     steps:
       - name: Download file from GitHub
         run: |
-          curl -o result.txt https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.txt
-          curl -o result.m3u https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.m3u
+          curl -o result.yzml https://gist.githubusercontent.com/PangTouY00/2efa3f1165304204299a6e091eee070f/raw/8a3249ba519cdf72a7d22ca80b1ffebab7e150f6/clash.yaml
 
       - name: Install AWS CLI
         run: |
@@ -29,8 +28,8 @@ jobs:
           AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          aws s3 cp result.txt s3://$BUCKET_NAME/result.txt --endpoint-url $AWS_ENDPOINT_URL
-          aws s3 cp result.txt s3://$BUCKET_NAME/result.m3u --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp result.txt s3://$BUCKET_NAME/result.yzml --endpoint-url $AWS_ENDPOINT_URL
+        
 
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
