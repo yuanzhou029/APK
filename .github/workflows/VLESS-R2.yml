@@ -2,7 +2,7 @@ name: VLESS-Cloudflare R2
 
 on:
   workflow_dispatch:
-  schedule:
+  #schedule:
  #   - cron: '0 0 * * *'
   push:
 
@@ -28,7 +28,7 @@ jobs:
           AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          aws s3 cp result.txt s3://$BUCKET_NAME/result.yzml --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp result.txt s3://$BUCKET_NAME/result.yaml --endpoint-url $AWS_ENDPOINT_URL
         
 
   cleanup-workflow-runs:
