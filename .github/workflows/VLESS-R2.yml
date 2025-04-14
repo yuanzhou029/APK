@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Download file from GitHub
         run: |
-          curl -o result.yaml https://gist.githubusercontent.com/PangTouY00/2efa3f1165304204299a6e091eee070f/raw/8a3249ba519cdf72a7d22ca80b1ffebab7e150f6/clash.yaml
+          curl -o result.yaml https://imperialb.in/r/crbvnnsm
 
       - name: Install AWS CLI
         run: |
