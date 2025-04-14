@@ -2,8 +2,8 @@ name: VLESS-Cloudflare R2
 
 on:
   workflow_dispatch:
-  #schedule:
- #   - cron: '0 0 * * *'
+  schedule:
+    - cron: '0 0 * * *'
   push:
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Download file from GitHub
         run: |
-          curl -o v2ray.txt https://imperialb.in/r/xwpnhgtd
+          curl -o clash.yaml https://imperialb.in/r/crbvnnsm
 
       - name: Install AWS CLI
         run: |
@@ -28,7 +28,7 @@ jobs:
           AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          aws s3 cp v2ray.txt s3://$BUCKET_NAME/v2ray.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp clash.yaml s3://$BUCKET_NAME/clash.yaml --endpoint-url $AWS_ENDPOINT_URL
         
 
   cleanup-workflow-runs:
