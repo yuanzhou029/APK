@@ -28,7 +28,7 @@ jobs:
           AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          aws s3 cp V2Ray.txt s3://$BUCKET_NAME/V2Ray.tx --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp V2Ray.txt s3://$BUCKET_NAME/V2Ray.txt --endpoint-url $AWS_ENDPOINT_URL
         
 
   cleanup-workflow-runs:
