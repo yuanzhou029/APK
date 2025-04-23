@@ -7,82 +7,27 @@ on:
   push:
 
 jobs:
-  # 任务 1: 将订阅链接转换为 V2Ray 格式并保存为 Clash.txt
-  convert-to-v2ray:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      # 设置 Python 环境
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.9"
-
-      # 安装 requests 库
-      - name: Install dependencies
-        run: |
-          pip install requests
-
-      # 调用转换后端 API
-      - name: Call subconverter API to convert to V2Ray format
-        run: |
-          python -c '
-          import requests
-
-          # API URL 和参数
-          api_url = "https://sub.140407.xyz/sub"
-          params = {
-              "target": "v2ray",  # 目标格式为 V2Ray
-              "url": "https://ys.jiedianxielou.workers.dev",  # 输入订阅链接
-          }
-
-          # 发送请求
-          response = requests.get(api_url, params=params)
-
-          # 检查响应状态
-          if response.status_code == 200:
-              # 保存结果到文件
-              with open("Clash.txt", "wb") as f:
-                  f.write(response.content)
-              print("转换成功，文件已保存为 Clash.txt")
-          else:
-              print(f"转换失败，状态码：{response.status_code}")
-          '
-
-      # 将转换后的文件上传为 GitHub Actions 产物，明确指定版本
-      - name: Upload converted file
-        uses: actions/upload-artifact@v3.1.3  # 明确指定版本
-        with:
-          name: V2Ray_output
-          path: Clash.txt
-
-  # 任务 2: 将转换后的 Clash.txt 文件上传到 Cloudflare R2
   upload-to-r2:
     runs-on: ubuntu-latest
-    needs: convert-to-v2ray  # 依赖于转换任务
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Download file from GitHub
+        run: |
+          curl -o Clash.yaml https://ys.jiedianxielou.workers.dev
 
-      # 下载转换后的文件（从 Artifacts 中获取）
-      - name: Download converted file
-        uses: actions/download-artifact@v3
-        with:
-          name: V2Ray_output
-          path: .
+      - name: Convert Clash.yaml to V2Ray format using your backend
+        run: |
+          curl -X POST https://sub.140407.xyz \
+            -H "Content-Type: application/x-yaml" \
+            --data-binary @Clash.yaml \
+            -o Clash.txt
 
-      # 安装 AWS CLI
       - name: Install AWS CLI
         run: |
           sudo apt-get update && sudo apt-get install -y python3-pip
           pip3 install awscli --upgrade
 
-      # 上传文件到 Cloudflare R2
-      - name: Upload file to Cloudflare R2
+      - name: Upload Clash.txt to Cloudflare R2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
@@ -92,10 +37,9 @@ jobs:
         run: |
           aws s3 cp Clash.txt s3://$BUCKET_NAME/Clash.txt --endpoint-url $AWS_ENDPOINT_URL
 
-  # 任务 3: 清理已完成的工作流运行记录
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
-    needs: upload-to-r2  # 依赖于上传任务
+    needs: upload-to-r2
 
     steps:
       - name: Install jq
@@ -107,12 +51,10 @@ jobs:
         run: |
           echo "Fetching completed workflow runs..."
 
-          # 获取运行记录 ID 列表（最多 100 条）
           RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
             "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
             | jq '.workflow_runs[] | select(.status == "completed") | .id')
 
-          # 删除每一条记录
           for run_id in $RUN_IDS; do
             echo "Deleting run ID: $run_id"
             curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
