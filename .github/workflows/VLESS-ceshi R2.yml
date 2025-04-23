@@ -29,14 +29,6 @@ jobs:
           # 如果找到了subconverter文件，设置权限并执行
           chmod +x subconverter/subconverter
           ./subconverter/subconverter -i ../Clash.yaml -o ../v2ray.txt -f v2ray
-
-          
-      - name: 使用 subconverter 转换为 Clash.txt
-        run: |
-          # 切换到解压目录
-          cd subconverter
-          # 执行 subconverter
-          ./subconverter -i ../Clash.yaml -o ../v2ray.txt -f v2ray
       
 
       - name: Install AWS CLI
