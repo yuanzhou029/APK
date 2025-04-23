@@ -24,12 +24,13 @@ jobs:
           mkdir -p subconverter
           # 解压 .tar.gz 文件到指定目录
           tar -zxvf subconverter_linux64.tar.gz -C subconverter
-          # 切换到解压目录，确认文件是否存在
-          ls -l subconverter
+          # 列出解压后的文件结构，确认文件是否存在
+          ls -lR subconverter
           # 设置文件执行权限
           chmod +x subconverter/subconverter
           # 执行 subconverter
-          ./subconverter/subconverter -i Clash.yaml -o v2ray.txt -f v2ray
+          ./subconverter/subconverter -i ../Clash.yaml -o ../v2ray.txt -f v2ray
+
           
       - name: 使用 subconverter 转换为 Clash.txt
         run: |
