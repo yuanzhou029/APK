@@ -23,7 +23,7 @@ jobs:
           # 创建解压目录
           # mkdir -p subconverter
           # 解压 .tar.gz 文件到指定目录
-          tar -zxvf subconverter_linux64.tar.gz -C subconverter --strip-components=1
+          tar -zxvf subconverter_linux64.tar.gz 
           # 列出解压后的文件结构，确认文件是否存在
           ls -lR subconverter
           # 如果找到了subconverter文件，设置权限并执行
