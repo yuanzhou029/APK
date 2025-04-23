@@ -11,13 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download file from GitHub
+      - name: Download converted V2Ray file from API
         run: |
-          curl -o Clash.yaml https://ys.jiedianxielou.workers.dev
+          curl -L -o Clash.txt "https://sub.140407.xyz/sub?target=v2ray&url=https://ys.jiedianxielou.workers.dev"
       
-      - name: 转换为 Base64 并生成 Clash.txt
-        run: |
-          base64 -w 0 Clash.yaml > Clash.txt
 
       - name: Install AWS CLI
         run: |
