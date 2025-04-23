@@ -17,8 +17,8 @@ jobs:
       
       - name: 下载并解压 subconverter
         run: |
-          curl -L -o subconverter_linux64.zip https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.zip
-          unzip subconverter_linux64.zip -d subconverter
+          curl -L -o subconverter_linux64.tar.gz https://github.com/tindy2013/subconverter/releases/download/v0.9.0/subconverter_linux64.tar.gz
+          unzip subconverter_linux64.tar.gz -d subconverter
           chmod +x subconverter/subconverter
 
       - name: 使用 subconverter 转换为 Clash.txt
