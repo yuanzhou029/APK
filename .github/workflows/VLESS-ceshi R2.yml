@@ -20,6 +20,8 @@ jobs:
           curl -L -o subconverter_linux64.tar.gz https://github.com/tindy2013/subconverter/releases/download/v0.9.0/subconverter_linux64.tar.gz
           # 检查文件类型，确认下载成功
           file subconverter_linux64.tar.gz
+          # 创建解压目录
+          mkdir -p subconverter
           # 解压 .tar.gz 文件
           tar -zxvf subconverter_linux64.tar.gz -C subconverter
           chmod +x subconverter/subconverter
