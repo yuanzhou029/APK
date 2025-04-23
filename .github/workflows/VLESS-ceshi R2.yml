@@ -14,6 +14,10 @@ jobs:
       - name: Download file from GitHub
         run: |
           curl -o Clash.yaml https://ys.jiedianxielou.workers.dev
+      
+      - name: 转换为 Base64 并生成 Clash.txt
+        run: |
+          base64 -w 0 Clash.yaml > Clash.txt
 
       - name: Install AWS CLI
         run: |
@@ -28,7 +32,7 @@ jobs:
           AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          aws s3 cp Clash.yaml s3://$BUCKET_NAME/Clash.yaml --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp Clash.txt s3://$BUCKET_NAME/Clash.txt --endpoint-url $AWS_ENDPOINT_URL
         
 
   cleanup-workflow-runs:
