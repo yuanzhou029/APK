@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Download file from GitHub
         run: |
-          curl -o V2Ray.txt https://imperialb.in/r/muqx0vhc
+          curl -o Clash.yaml https://ys.jiedianxielou.workers.dev
 
       - name: Install AWS CLI
         run: |
@@ -28,7 +28,7 @@ jobs:
           AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          aws s3 cp V2Ray.txt s3://$BUCKET_NAME/V2Ray.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp Clash.yaml s3://$BUCKET_NAME/Clash.yaml --endpoint-url $AWS_ENDPOINT_URL
         
 
   cleanup-workflow-runs:
