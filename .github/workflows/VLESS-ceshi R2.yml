@@ -17,7 +17,7 @@ jobs:
       
       - name: 下载并解压 subconverter
         run: |
-          curl -LO https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.zip
+          curl -L -o subconverter_linux64.zip https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.zip
           unzip subconverter_linux64.zip -d subconverter
           chmod +x subconverter/subconverter
 
