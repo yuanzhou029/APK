@@ -32,6 +32,7 @@ jobs:
       - name: 使用 subconverter 转换为 V2Ray 格式
         run: |
           cd subconverter  # 切换到解压目录
+          echo "Current directory: $(pwd)"
           ./subconverter -i ../Clash.yaml -o ../Clash.txt -f v2ray
       
 
