@@ -11,16 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download file from GitHub
+      - name: Download converted Clash.txt from your backend
         run: |
-          curl -o Clash.yaml https://ys.jiedianxielou.workers.dev
-
-      - name: Convert Clash.yaml to V2Ray format using your backend
-        run: |
-          curl -X POST https://sub.140407.xyz/sub \
-            -H "Content-Type: application/x-yaml" \
-            --data-binary @Clash.yaml \
-            -o Clash.txt
+          curl -L "https://sub.140407.xyz/sub?target=v2ray&url=https://ys.jiedianxielou.workers.dev" -o Clash.txt
 
       - name: Install AWS CLI
         run: |
@@ -50,11 +43,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GT_TOKEN }}
         run: |
           echo "Fetching completed workflow runs..."
-
           RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
             "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
             | jq '.workflow_runs[] | select(.status == "completed") | .id')
-
           for run_id in $RUN_IDS; do
             echo "Deleting run ID: $run_id"
             curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
