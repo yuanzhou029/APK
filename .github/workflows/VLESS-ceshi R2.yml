@@ -22,18 +22,21 @@ jobs:
           file subconverter_linux64.tar.gz
           # 创建解压目录
           mkdir -p subconverter
-          # 解压 .tar.gz 文件
+          # 解压 .tar.gz 文件到指定目录
           tar -zxvf subconverter_linux64.tar.gz -C subconverter
+          # 切换到解压目录，确认文件是否存在
+          ls -l subconverter
+          # 设置文件执行权限
           chmod +x subconverter/subconverter
-
+          # 执行 subconverter
+          ./subconverter/subconverter -i Clash.yaml -o v2ray.txt -f v2ray
+          
       - name: 使用 subconverter 转换为 Clash.txt
         run: |
-          ./subconverter/subconverter \
-            -g \
-            -i Clash.yaml \
-            -o ./Clash.txt \
-            -f v2ray \
-            --filename v2ray
+          # 切换到解压目录
+          cd subconverter
+          # 执行 subconverter
+          ./subconverter -i ../Clash.yaml -o ../v2ray.txt -f v2ray
       
 
       - name: Install AWS CLI
