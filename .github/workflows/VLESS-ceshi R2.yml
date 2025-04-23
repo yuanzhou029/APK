@@ -11,9 +11,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download converted V2Ray file from API
+      - name: 下载 Clash.yaml
         run: |
-          curl -L -o Clash.txt "https://sub.140407.xyz/sub?target=v2ray&url=https://ys.jiedianxielou.workers.dev"
+          curl -o Clash.yaml https://ys.jiedianxielou.workers.dev
+      
+      - name: 下载并解压 subconverter
+        run: |
+          curl -LO https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.zip
+          unzip subconverter_linux64.zip -d subconverter
+          chmod +x subconverter/subconverter
+
+      - name: 使用 subconverter 转换为 Clash.txt
+        run: |
+          ./subconverter/subconverter \
+            -g \
+            -i Clash.yaml \
+            -o ./Clash.txt \
+            -f v2ray \
+            --filename v2ray
       
 
       - name: Install AWS CLI
