@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Download converted Clash.txt from your backend
         run: |
-          curl -L "https://sub.140407.xyz/sub?target=v2ray&url=https://ys.jiedianxielou.workers.dev" -o Clash.txt
+          curl -L "subapi.cmliussss.net/sub?target=v2ray&url=https://ys.jiedianxielou.workers.dev" -o Clash.txt
 
       - name: Install AWS CLI
         run: |
