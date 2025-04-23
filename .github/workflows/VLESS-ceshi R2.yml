@@ -21,7 +21,7 @@ jobs:
           # 检查文件类型，确认下载成功
           file subconverter_linux64.tar.gz
           # 创建解压目录
-          mkdir -p subconverter
+          # mkdir -p subconverter
           # 解压 .tar.gz 文件到指定目录
           tar -zxvf subconverter_linux64.tar.gz -C subconverter --strip-components=1
           # 列出解压后的文件结构，确认文件是否存在
