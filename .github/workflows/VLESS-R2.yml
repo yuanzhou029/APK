@@ -33,7 +33,7 @@ jobs:
           # 清理当前目录
           rm -rf ./*
           # 克隆存储库
-          git clone --depth 1 https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git .
+          git clone --depth 1 https://${{ secrets.GT_TOKEN }}@github.com/${{ github.repository }}.git .
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
