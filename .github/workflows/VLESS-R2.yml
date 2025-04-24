@@ -17,7 +17,7 @@ jobs:
           sudo apt-get install -y python3-pip jq curl
           pip3 install awscli
 
-      # 步骤 2: 配置 Telegram 通知脚本
+      # 步骤 2: 配置 Telegram 通知函数
       - name: Configure Telegram notification script
         run: |
           echo '#!/bin/bash
@@ -83,36 +83,32 @@ jobs:
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: aws s3 cp V2RayN.txt s3://$BUCKET_NAME/V2RayN.txt --endpoint-url $AWS_ENDPOINT_URL
 
-      # 步骤 8: 保存当前哈希值到 GitHub Secrets（仅当哈希值变化时）
+      # 步骤 8: 保存当前哈希值到 Secrets（仅当哈希值变化时）
       - name: Save current hash to GitHub Secrets
         if: steps.check_hash.outputs.hash_changed == 'true'
         env:
-          GT_TOKEN: ${{ secrets.GT_TOKEN }}
+          GT_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           gh secret set PREVIOUS_HASH -b"$(cat xh.txt)" --repo $GITHUB_REPOSITORY
 
       # 步骤 9: 发送 Telegram 通知
       - name: Send Telegram notification for workflow start
         if: always()
-        run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "⏳ 工作流已启动！" ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "⏳ 工作流已启动." ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
       - name: Send Telegram notification for success
         if: success()
         run: |
-          MESSAGE="🎉 工作流已成功完成！\n\n"
-          if [ "${{ steps.check_file.outputs.has_content }}" == "false" ]; then
-            MESSAGE+="📂 文件状态：\n- 文件是否存在：不存在\n- 文件大小：0 字节\n"
-          else
-            MESSAGE+="📂 文件状态：\n- 文件是否存在：存在\n- 文件大小：${{ steps.check_file.outputs.file_size }} 字节\n\n"
-            MESSAGE+="📊 哈希值状态：\n"
+          MESSAGE="✅ 工作流已成功完成.\n\n"
+          MESSAGE+="文件是否存在: ${{ steps.check_file.outputs.has_content }}\n"
+          if [ "${{ steps.check_file.outputs.has_content }}" == "true" ]; then
+            MESSAGE+="文件大小: ${{ steps.check_file.outputs.file_size }} 字节\n"
+            MESSAGE+="哈希值是否变化: ${{ steps.check_hash.outputs.hash_changed }}\n"
+            MESSAGE+="哈希值: ${{ steps.hash.outputs.hash }}\n"
             if [ "${{ steps.check_hash.outputs.hash_changed }}" == "true" ]; then
-              MESSAGE+="- 哈希值是否变化：是\n"
-              MESSAGE+="- 当前哈希值：${{ steps.hash.outputs.hash }}\n\n"
-              MESSAGE+="⬆️ 上传状态：\n- 文件已上传至 Cloudflare R2\n"
+              MESSAGE+="文件已上传到 Cloudflare R2.\n"
             else
-              MESSAGE+="- 哈希值是否变化：否\n"
-              MESSAGE+="- 当前哈希值：${{ steps.hash.outputs.hash }}\n\n"
-              MESSAGE+="⬆️ 上传状态：\n- 文件未上传（哈希值未变化）\n"
+              MESSAGE+="文件未上传，哈希值未变化.\n"
             fi
           fi
           ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "$MESSAGE" ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -120,16 +116,12 @@ jobs:
       - name: Send Telegram notification for failure
         if: failure()
         run: |
-          MESSAGE="❌ 工作流运行失败！\n\n"
-          MESSAGE+="📂 文件状态：\n"
+          MESSAGE="❌ 工作流运行失败.\n\n"
+          MESSAGE+="文件是否存在: ${{ steps.check_file.outputs.has_content }}\n"
           if [ "${{ steps.check_file.outputs.has_content }}" == "true" ]; then
-            MESSAGE+="- 文件是否存在：存在\n"
-            MESSAGE+="- 文件大小：${{ steps.check_file.outputs.file_size }} 字节\n"
-            MESSAGE+="- 哈希值是否变化：${{ steps.check_hash.outputs.hash_changed }}\n"
-            MESSAGE+="- 当前哈希值：${{ steps.hash.outputs.hash }}\n"
-          else
-            MESSAGE+="- 文件是否存在：不存在\n"
-            MESSAGE+="- 文件大小：0 字节\n"
+            MESSAGE+="文件大小: ${{ steps.check_file.outputs.file_size }} 字节\n"
+            MESSAGE+="哈希值是否变化: ${{ steps.check_hash.outputs.hash_changed }}\n"
+            MESSAGE+="哈希值: ${{ steps.hash.outputs.hash }}\n"
           fi
           ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "$MESSAGE" ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
@@ -145,15 +137,15 @@ jobs:
       # 步骤 2: 删除已完成的工作流运行记录
       - name: Delete completed workflow runs
         env:
-          GT_TOKEN: ${{ secrets.GT_TOKEN }}
+          GH_TOKEN: ${{ secrets.GT_TOKEN }}
         run: |
           echo "Fetching completed workflow runs..."
-          RUN_IDS=$(curl -s -H "Authorization: token $GT_TOKEN" \
+          RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
             "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
             | jq -r '.workflow_runs[] | select(.status == "completed") | .id')
 
           for run_id in $RUN_IDS; do
             echo "Deleting run ID: $run_id"
-            curl -s -X DELETE -H "Authorization: token $GT_TOKEN" \
+            curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
               "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
           done
