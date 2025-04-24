@@ -86,11 +86,11 @@ jobs:
       # 步骤 9: 发送 Telegram 通知
       - name: Send Telegram notification for success
         if: success()
-        run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "✅ Workflow completed successfully." ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "✅ 工作流以运行完成." ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
       - name: Send Telegram notification for failure
         if: failure()
-        run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "❌ Workflow failed." ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "❌ 工作流运行失败." ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
