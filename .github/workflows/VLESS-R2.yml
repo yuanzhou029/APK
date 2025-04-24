@@ -27,18 +27,18 @@ jobs:
           curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" -d "chat_id=${CHAT_ID}&text=${MESSAGE}" > /dev/null' > notify.sh
           chmod +x notify.sh
 
-      # 步骤 3: 检查文件是否存在
+      # 步骤 3: 检查文件是否存在（基于文件大小）
       - name: Check if file exists and has content
         id: check_file
         run: |
-          RESPONSE=$(curl -s -I https://paste.xxxxi.filegear-sg.me/r/muqx0vhc1)
+          RESPONSE=$(curl -s -I https://paste.xxxxi.filegear-sg.me/r/muqx0vhc)
           CONTENT_LENGTH=$(echo "$RESPONSE" | grep -i Content-Length | awk '{print $2}' | tr -d '\r')
-          if [ -n "$CONTENT_LENGTH" ] && [ "$CONTENT_LENGTH" -gt 0 ]; then
+          if [ -n "$CONTENT_LENGTH" ] && [ "$CONTENT_LENGTH" -gt 100 ]; then
             echo "File exists and has content. Content-Length: $CONTENT_LENGTH"
             echo "::set-output name=has_content::true"
-            echo "::set-output name=file_size::$CONTENT_LENGTH"  # 保存文件大小
+            echo "::set-output name=file_size::$CONTENT_LENGTH"
           else
-            echo "File does not exist or has no content."
+            echo "File does not exist or has no content (file size is less than 100 bytes)."
             echo "::set-output name=has_content::false"
           fi
 
@@ -60,7 +60,10 @@ jobs:
         if: steps.check_file.outputs.has_content == 'true'
         id: check_hash
         run: |
-          if [ -f xh_previous.txt ] && [ "$(cat xh.txt)" == "$(cat xh_previous.txt)" ]; then
+          # 从 Secrets 中读取上一次的哈希值
+          PREVIOUS_HASH=${{ secrets.PREVIOUS_HASH }}
+
+          if [ -n "$PREVIOUS_HASH" ] && [ "$(cat xh.txt)" == "$PREVIOUS_HASH" ]; then
             echo "Hash has not changed. Skipping upload."
             echo "::set-output name=hash_changed::false"
           else
@@ -80,10 +83,13 @@ jobs:
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: aws s3 cp V2RayN.txt s3://$BUCKET_NAME/V2RayN.txt --endpoint-url $AWS_ENDPOINT_URL
 
-      # 步骤 8: 保存当前哈希值为历史记录
-      - name: Save current hash for next run
-        if: steps.check_file.outputs.has_content == 'true'
-        run: cp xh.txt xh_previous.txt
+      # 步骤 8: 保存当前哈希值到 Secrets（仅当哈希值变化时）
+      - name: Save current hash to GitHub Secrets
+        if: steps.check_hash.outputs.hash_changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh secret set PREVIOUS_HASH -b"$(cat xh.txt)" --repo $GITHUB_REPOSITORY
 
       # 步骤 9: 发送 Telegram 通知
       - name: Send Telegram notification for workflow start
