@@ -31,7 +31,7 @@ jobs:
       - name: Check if file exists and has content
         id: check_file
         run: |
-          RESPONSE=$(curl -s -I https://paste.xxxxi.filegear-sg.me/r/muqx0vhc)
+          RESPONSE=$(curl -s -I https://imperialb.in/r/zushpzup)
           CONTENT_LENGTH=$(echo "$RESPONSE" | grep -i Content-Length | awk '{print $2}' | tr -d '\r')
           if [ -n "$CONTENT_LENGTH" ] && [ "$CONTENT_LENGTH" -gt 100 ]; then
             echo "File exists and has content. Content-Length: $CONTENT_LENGTH"
@@ -45,7 +45,7 @@ jobs:
       # 步骤 4: 下载文件（仅当文件存在且有内容时）
       - name: Download file
         if: steps.check_file.outputs.has_content == 'true'
-        run: curl -o V2RayN.txt https://paste.xxxxi.filegear-sg.me/r/muqx0vhc
+        run: curl -o V2RayN.txt https://imperialb.in/r/zushpzup
 
       # 步骤 5: 计算文件的哈希值
       - name: Calculate file hash
