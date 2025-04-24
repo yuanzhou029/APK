@@ -94,7 +94,7 @@ jobs:
       - name: Save current hash to GitHub Secrets
         if: steps.check_hash.outputs.hash_changed == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GT_TOKEN: ${{ secrets.GT_TOKEN }}
         run: |
           gh secret set PREVIOUS_HASH -b"$(cat xh.txt)" --repo $GITHUB_REPOSITORY
 
