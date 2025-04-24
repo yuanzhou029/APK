@@ -1,5 +1,3 @@
-name: VLESS-Cloudflare R2
-
 on:
   workflow_dispatch:
   schedule:
@@ -34,11 +32,11 @@ jobs:
           RESPONSE=$(curl -s -I https://paste.xxxxi.filegear-sg.me/r/muqx0vhc)
           CONTENT_LENGTH=$(echo "$RESPONSE" | grep -i Content-Length | awk '{print $2}' | tr -d '\r')
           if [ -n "$CONTENT_LENGTH" ] && [ "$CONTENT_LENGTH" -gt 100 ]; then
-            echo "文件存在且有内容. 文件大小: $CONTENT_LENGTH 字节"
+            echo "File exists and has content. Content-Length: $CONTENT_LENGTH"
             echo "::set-output name=has_content::true"
             echo "::set-output name=file_size::$CONTENT_LENGTH"
           else
-            echo "文件不存在或文件大小不足 (小于 100 字节)."
+            echo "File does not exist or has no content (file size is less than 100 bytes)."
             echo "::set-output name=has_content::false"
           fi
 
@@ -64,10 +62,10 @@ jobs:
           PREVIOUS_HASH=${{ secrets.PREVIOUS_HASH }}
 
           if [ -n "$PREVIOUS_HASH" ] && [ "$(cat xh.txt)" == "$PREVIOUS_HASH" ]; then
-            echo "哈希值未发生变化. 跳过上传."
+            echo "Hash has not changed. Skipping upload."
             echo "::set-output name=hash_changed::false"
           else
-            echo "哈希值发生变化或未找到上一次哈希值. 继续上传."
+            echo "Hash has changed or no previous hash found. Proceeding with upload."
             echo "::set-output name=hash_changed::true"
           fi
 
@@ -95,43 +93,34 @@ jobs:
       - name: Send Telegram notification for workflow start
         if: always()
         run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "⏳ 工作流已启动." ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        
+
       - name: Send Telegram notification for success
         if: success()
         run: |
-          MESSAGE="✅ 【工作流成功完成】\n\n"
-          MESSAGE+="🔍 文件检查结果:\n"
+          MESSAGE="✅ 工作流已成功完成.\n\n"
+          MESSAGE+="文件是否存在: ${{ steps.check_file.outputs.has_content }}\n"
           if [ "${{ steps.check_file.outputs.has_content }}" == "true" ]; then
-            MESSAGE+="   - 文件是否存在: 是\n"
-            MESSAGE+="   - 文件大小: ${STEPS.check_file.outputs.file_size} 字节\n"
-            MESSAGE+="   - 哈希值是否变化: ${STEPS.check_hash.outputs.hash_changed}\n"
-            MESSAGE+="   - 哈希值: ${STEPS.hash.outputs.hash}\n"
+            MESSAGE+="文件大小: ${{ steps.check_file.outputs.file_size }} 字节\n"
+            MESSAGE+="哈希值是否变化: ${{ steps.check_hash.outputs.hash_changed }}\n"
+            MESSAGE+="哈希值: ${{ steps.hash.outputs.hash }}\n"
             if [ "${{ steps.check_hash.outputs.hash_changed }}" == "true" ]; then
-              MESSAGE+="💾 文件已上传到 Cloudflare R2.\n"
+              MESSAGE+="文件已上传到 Cloudflare R2.\n"
             else
-              MESSAGE+="⏭️ 文件未上传，哈希值未变化.\n"
+              MESSAGE+="文件未上传，哈希值未变化.\n"
             fi
-          else
-            MESSAGE+="   - 文件是否存在: 否\n"
           fi
-          MESSAGE+="\n📅 时间: $(date +'%Y-%m-%d %H:%M:%S')"
           ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "$MESSAGE" ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
       - name: Send Telegram notification for failure
         if: failure()
         run: |
-          MESSAGE="❌ 【工作流运行失败】\n\n"
-          MESSAGE+="🔍 文件检查结果:\n"
+          MESSAGE="❌ 工作流运行失败.\n\n"
+          MESSAGE+="文件是否存在: ${{ steps.check_file.outputs.has_content }}\n"
           if [ "${{ steps.check_file.outputs.has_content }}" == "true" ]; then
-            MESSAGE+="   - 文件是否存在: 是\n"
-            MESSAGE+="   - 文件大小: ${STEPS.check_file.outputs.file_size} 字节\n"
-            MESSAGE+="   - 哈希值是否变化: ${STEPS.check_hash.outputs.hash_changed}\n"
-            MESSAGE+="   - 哈希值: ${STEPS.hash.outputs.hash}\n"
-          else
-            MESSAGE+="   - 文件是否存在: 否\n"
+            MESSAGE+="文件大小: ${{ steps.check_file.outputs.file_size }} 字节\n"
+            MESSAGE+="哈希值是否变化: ${{ steps.check_hash.outputs.hash_changed }}\n"
+            MESSAGE+="哈希值: ${{ steps.hash.outputs.hash }}\n"
           fi
-          MESSAGE+="\n⚠️ 请检查工作流日志以获取更多信息.\n"
-          MESSAGE+="📅 时间: $(date +'%Y-%m-%d %H:%M:%S')"
           ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "$MESSAGE" ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
   cleanup-workflow-runs:
