@@ -1,4 +1,4 @@
-name: VLESS-Cloudflare R2 with Telegram Notification
+name: VLESS-Cloudflare R2
 
 on:
   workflow_dispatch:
