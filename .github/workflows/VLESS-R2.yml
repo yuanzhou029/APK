@@ -27,17 +27,26 @@ jobs:
           curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" -d "chat_id=${CHAT_ID}&text=${MESSAGE}" > /dev/null' > notify.sh
           chmod +x notify.sh
 
-      # 步骤 3: 克隆存储库（用于同步 xh.txt）
+      # 步骤 3: 检查 notify.sh 是否存在
+      - name: Check if notify.sh exists
+        run: |
+          ls -l notify.sh
+          if [ ! -f notify.sh ]; then
+            echo "Error: notify.sh does not exist!"
+            exit 1
+          fi
+
+      # 步骤 4: 克隆存储库（用于同步 xh.txt）
       - name: Clone repository
         run: |
-          # 清理当前目录
-          rm -rf ./*
+          # 清理当前目录（排除某些文件）
+          rm -rf ./* ! -name 'notify.sh' ! -name '.github'
           # 克隆存储库
-          git clone --depth 1 https://${{ secrets.GT_TOKEN }}@github.com/${{ github.repository }}.git .
+          git clone --depth 1 https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git .
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      # 步骤 4: 检查文件是否存在
+      # 步骤 5: 检查文件是否存在
       - name: Check if file exists and has content
         id: check_file
         run: |
@@ -52,12 +61,12 @@ jobs:
             echo "::set-output name=has_content::false"
           fi
 
-      # 步骤 5: 下载文件（仅当文件存在且有内容时）
+      # 步骤 6: 下载文件（仅当文件存在且有内容时）
       - name: Download file
         if: steps.check_file.outputs.has_content == 'true'
         run: curl -o V2RayN.txt https://paste.xxxxi.filegear-sg.me/r/muqx0vhc
 
-      # 步骤 6: 计算文件的哈希值
+      # 步骤 7: 计算文件的哈希值
       - name: Calculate file hash
         if: steps.check_file.outputs.has_content == 'true'
         id: hash
@@ -65,7 +74,7 @@ jobs:
           sha256sum V2RayN.txt | awk '{print $1}' > xh.txt
           echo "::set-output name=hash::$(cat xh.txt)"
 
-      # 步骤 7: 检查哈希值是否变化
+      # 步骤 8: 检查哈希值是否变化
       - name: Check if hash has changed
         if: steps.check_file.outputs.has_content == 'true'
         id: check_hash
@@ -78,7 +87,7 @@ jobs:
             echo "::set-output name=hash_changed::true"
           fi
 
-      # 步骤 8: 上传文件到 Cloudflare R2（仅当哈希值变化时）
+      # 步骤 9: 上传文件到 Cloudflare R2（仅当哈希值变化时）
       - name: Upload file to Cloudflare R2
         if: steps.check_hash.outputs.hash_changed == 'true'
         id: upload_file
@@ -90,13 +99,13 @@ jobs:
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: aws s3 cp V2RayN.txt s3://$BUCKET_NAME/V2RayN.txt --endpoint-url $AWS_ENDPOINT_URL
 
-      # 步骤 9: 保存当前哈希值到 xh.txt 文件
+      # 步骤 10: 保存当前哈希值到 xh.txt 文件
       - name: Save current hash to xh.txt
         if: steps.check_file.outputs.has_content == 'true'
         run: |
           cp xh.txt xh_previous.txt  # 更新 xh_previous.txt
 
-      # 步骤 10: 将 xh.txt 文件提交并推送到存储库
+      # 步骤 11: 将 xh.txt 文件提交并推送到存储库
       - name: Commit and push xh.txt to repository
         if: steps.check_file.outputs.has_content == 'true' && steps.check_hash.outputs.hash_changed == 'true'
         run: |
@@ -109,7 +118,7 @@ jobs:
             echo "xh.txt did not change. Skipping commit and push."
           fi
 
-      # 步骤 11: 发送 Telegram 通知
+      # 步骤 12: 发送 Telegram 通知
       - name: Send Telegram notification for workflow start
         if: always()
         run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "⏳ 工作流已启动." ${{ secrets.TELEGRAM_BOT_TOKEN }}
