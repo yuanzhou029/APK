@@ -3,147 +3,53 @@ name: VLESS-Cloudflare R2
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */6 * * *'  # 每 6 小时触发一次
+    - cron: '0 0 * * *'
 
 jobs:
   upload-to-r2:
     runs-on: ubuntu-latest
 
     steps:
-      # 步骤 1: 安装必要的工具
-      - name: Install dependencies
+      - name: Download file from GitHub
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y python3-pip jq curl
-          pip3 install awscli
+          curl -o V2RayN.txt https://imperialb.in/r/zushpzup
 
-      # 步骤 2: 配置 Telegram 通知函数
-      - name: Configure Telegram notification script
+      - name: Install AWS CLI
         run: |
-          echo '#!/bin/bash
-          CHAT_ID="${1}"
-          MESSAGE="${2}"
-          BOT_TOKEN="${3}"
-          curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" -d "chat_id=${CHAT_ID}&text=${MESSAGE}" > /dev/null' > notify.sh
-          chmod +x notify.sh
+          sudo apt-get update && sudo apt-get install -y python3-pip
+          pip3 install awscli --upgrade
 
-      # 步骤 3: 检查文件是否存在（基于文件大小）
-      - name: Check if file exists and has content
-        id: check_file
-        run: |
-          RESPONSE=$(curl -s -I https://imperialb.in/r/zushpzup)
-          CONTENT_LENGTH=$(echo "$RESPONSE" | grep -i Content-Length | awk '{print $2}' | tr -d '\r')
-          if [ -n "$CONTENT_LENGTH" ] && [ "$CONTENT_LENGTH" -gt 100 ]; then
-            echo "File exists and has content. Content-Length: $CONTENT_LENGTH"
-            echo "has_content=true" >> $GITHUB_OUTPUT
-            echo "::set-output name=file_size::$CONTENT_LENGTH"
-          else
-            echo "File does not exist or has no content (file size is less than 100 bytes)."
-            echo "has_content=false" >> $GITHUB_OUTPUT
-          fi
-
-      # 步骤 4: 下载文件（仅当文件存在且有内容时）
-      - name: Download file
-        if: steps.check_file.outputs.has_content == 'true'
-        run: curl -o V2RayN.txt https://imperialb.in/r/zushpzup
-
-      # 步骤 5: 计算文件的哈希值
-      - name: Calculate file hash
-        if: steps.check_file.outputs.has_content == 'true'
-        id: hash
-        run: |
-          sha256sum V2RayN.txt | awk '{print $1}' > xh.txt
-          echo "::set-output name=hash::$(cat xh.txt)"
-
-      # 步骤 6: 检查哈希值是否变化
-      - name: Check if hash has changed
-        if: steps.check_file.outputs.has_content == 'true'
-        id: check_hash
-        run: |
-          # 从 Secrets 中读取上一次的哈希值
-          PREVIOUS_HASH=${{ secrets.PREVIOUS_HASH }}
-
-          if [ -n "$PREVIOUS_HASH" ] && [ "$(cat xh.txt)" == "$PREVIOUS_HASH" ]; then
-            echo "Hash has not changed. Skipping upload."
-            echo "::set-output name=hash_changed::false"
-          else
-            echo "Hash has changed or no previous hash found. Proceeding with upload."
-            echo "::set-output name=hash_changed::true"
-          fi
-
-      # 步骤 7: 上传文件到 Cloudflare R2（仅当哈希值变化时）
       - name: Upload file to Cloudflare R2
-        if: steps.check_hash.outputs.hash_changed == 'true'
-        id: upload_file
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: us-east-1
           AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
-        run: aws s3 cp V2RayN.txt s3://$BUCKET_NAME/V2RayN.txt --endpoint-url $AWS_ENDPOINT_URL
-
-      # 步骤 8: 保存当前哈希值到 Secrets（仅当哈希值变化时）
-      - name: Save current hash to GitHub Secrets
-        if: steps.check_hash.outputs.hash_changed == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GT_TOKEN }}
         run: |
-          gh secret set PREVIOUS_HASH -b"$(cat xh.txt)" --repo $GITHUB_REPOSITORY
-
-      # 步骤 9: 发送 Telegram 通知
-      - name: Send Telegram notification for workflow start
-        if: always()
-        run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "⏳ 工作流已启动." ${{ secrets.TELEGRAM_BOT_TOKEN }}
-
-      - name: Send Telegram notification for success
-        if: success()
-        run: |
-          MESSAGE="✅ 工作流已成功完成.\n\n-------"
-          MESSAGE+="🔍文件是否存在: ${{ steps.check_file.outputs.has_content }}\n-----"
-          if [ "${{ steps.check_file.outputs.has_content }}" == "true" ]; then
-            MESSAGE+="💾文件大小: ${{ steps.check_file.outputs.file_size }} 字节\n-----"
-            MESSAGE+="⚠️哈希值是否变化: ${{ steps.check_hash.outputs.hash_changed }}\n-----"
-            MESSAGE+="⚠️哈希值: ${{ steps.hash.outputs.hash }}\n-----"
-            if [ "${{ steps.check_hash.outputs.hash_changed }}" == "true" ]; then
-              MESSAGE+="⏭️文件已上传到 Cloudflare R2."
-            else
-              MESSAGE+="⏭️文件未上传，哈希值未变化."
-            fi
-          fi
-          ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "$MESSAGE" ${{ secrets.TELEGRAM_BOT_TOKEN }}
-
-      - name: Send Telegram notification for failure
-        if: failure()
-        run: |
-          MESSAGE="❌ 工作流运行失败.\n\n-----"
-          MESSAGE+="🔍文件是否存在: ${{ steps.check_file.outputs.has_content }}\n-----"
-          if [ "${{ steps.check_file.outputs.has_content }}" == "true" ]; then
-            MESSAGE+="💾文件大小: ${{ steps.check_file.outputs.file_size }} 字节\n----"
-            MESSAGE+="⚠️哈希值是否变化: ${{ steps.check_hash.outputs.hash_changed }}\n----"
-            MESSAGE+="⚠️哈希值: ${{ steps.hash.outputs.hash }}\n----"
-          fi
-          ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "$MESSAGE" ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          aws s3 cp V2RayN.txt s3://$BUCKET_NAME/V2RayN.txt --endpoint-url $AWS_ENDPOINT_URL
+        
 
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
-    needs: upload-to-r2  # 仅在上传成功后执行
+    needs: upload-to-r2  # 只有上传成功后才执行
 
     steps:
-      # 步骤 1: 安装 jq
       - name: Install jq
         run: sudo apt-get install -y jq
 
-      # 步骤 2: 删除已完成的工作流运行记录
       - name: Delete completed workflow runs
         env:
           GH_TOKEN: ${{ secrets.GT_TOKEN }}
         run: |
           echo "Fetching completed workflow runs..."
+
+          # 获取运行记录 ID 列表（最多 100 条）
           RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
             "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
-            | jq -r '.workflow_runs[] | select(.status == "completed") | .id')
+            | jq '.workflow_runs[] | select(.status == "completed") | .id')
 
+          # 删除每一条记录
           for run_id in $RUN_IDS; do
             echo "Deleting run ID: $run_id"
             curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
