@@ -31,7 +31,7 @@ jobs:
       - name: Check if file exists and has content
         id: check_file
         run: |
-          RESPONSE=$(curl -s -I https://paste.xxxxi.filegear-sg.me/r/muqx0vhc1)
+          RESPONSE=$(curl -s -I https://paste.xxxxi.filegear-sg.me/r/muqx0vhc)
           CONTENT_LENGTH=$(echo "$RESPONSE" | grep -i Content-Length | awk '{print $2}' | tr -d '\r')
           if [ -n "$CONTENT_LENGTH" ] && [ "$CONTENT_LENGTH" -gt 100 ]; then
             echo "File exists and has content. Content-Length: $CONTENT_LENGTH"
