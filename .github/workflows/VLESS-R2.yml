@@ -36,6 +36,7 @@ jobs:
           if [ -n "$CONTENT_LENGTH" ] && [ "$CONTENT_LENGTH" -gt 0 ]; then
             echo "File exists and has content. Content-Length: $CONTENT_LENGTH"
             echo "::set-output name=has_content::true"
+            echo "::set-output name=file_size::$CONTENT_LENGTH"  # 保存文件大小
           else
             echo "File does not exist or has no content."
             echo "::set-output name=has_content::false"
@@ -70,6 +71,7 @@ jobs:
       # 步骤 7: 上传文件到 Cloudflare R2（仅当哈希值变化时）
       - name: Upload file to Cloudflare R2
         if: steps.check_hash.outputs.hash_changed == 'true'
+        id: upload_file
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
@@ -84,13 +86,38 @@ jobs:
         run: cp xh.txt xh_previous.txt
 
       # 步骤 9: 发送 Telegram 通知
+      - name: Send Telegram notification for workflow start
+        if: always()
+        run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "⏳ 工作流已启动." ${{ secrets.TELEGRAM_BOT_TOKEN }}
+
       - name: Send Telegram notification for success
         if: success()
-        run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "✅ 工作流以运行完成." ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          MESSAGE="✅ 工作流已成功完成.\n\n"
+          MESSAGE+="文件是否存在: ${{ steps.check_file.outputs.has_content }}\n"
+          if [ "${{ steps.check_file.outputs.has_content }}" == "true" ]; then
+            MESSAGE+="文件大小: ${{ steps.check_file.outputs.file_size }} 字节\n"
+            MESSAGE+="哈希值是否变化: ${{ steps.check_hash.outputs.hash_changed }}\n"
+            MESSAGE+="哈希值: ${{ steps.hash.outputs.hash }}\n"
+            if [ "${{ steps.check_hash.outputs.hash_changed }}" == "true" ]; then
+              MESSAGE+="文件已上传到 Cloudflare R2.\n"
+            else
+              MESSAGE+="文件未上传，哈希值未变化.\n"
+            fi
+          fi
+          ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "$MESSAGE" ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
       - name: Send Telegram notification for failure
         if: failure()
-        run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "❌ 工作流运行失败." ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          MESSAGE="❌ 工作流运行失败.\n\n"
+          MESSAGE+="文件是否存在: ${{ steps.check_file.outputs.has_content }}\n"
+          if [ "${{ steps.check_file.outputs.has_content }}" == "true" ]; then
+            MESSAGE+="文件大小: ${{ steps.check_file.outputs.file_size }} 字节\n"
+            MESSAGE+="哈希值是否变化: ${{ steps.check_hash.outputs.hash_changed }}\n"
+            MESSAGE+="哈希值: ${{ steps.hash.outputs.hash }}\n"
+          fi
+          ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "$MESSAGE" ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
