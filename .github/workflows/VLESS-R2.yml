@@ -10,15 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 步骤 1: 安装必要的工具
+      # 步骤 1: 检查环境
+      - name: Check environment
+        run: |
+          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
+          echo "GITHUB_ACTOR: $GITHUB_ACTOR"
+
+      # 步骤 2: 安装必要的工具
       - name: Install dependencies
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y python3-pip jq curl
           pip3 install awscli
-          npm install @peculiar/webcrypto
+          type -p gh || (curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo apt-get update && sudo apt-get install gh -y)
 
-      # 步骤 2: 配置 Telegram 通知脚本
+      # 步骤 3: 配置 Telegram 通知脚本
       - name: Configure Telegram notification script
         run: |
           echo '#!/bin/bash
@@ -28,7 +34,7 @@ jobs:
           curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" -d "chat_id=${CHAT_ID}&text=${MESSAGE}" > /dev/null' > notify.sh
           chmod +x notify.sh
 
-      # 步骤 3: 检查文件是否存在（基于文件大小）
+      # 步骤 4: 检查文件是否存在（基于文件大小）
       - name: Check if file exists and has content
         id: check_file
         run: |
@@ -43,12 +49,12 @@ jobs:
             echo "::set-output name=has_content::false"
           fi
 
-      # 步骤 4: 下载文件（仅当文件存在且有内容时）
+      # 步骤 5: 下载文件（仅当文件存在且有内容时）
       - name: Download file
         if: steps.check_file.outputs.has_content == 'true'
         run: curl -o V2RayN.txt https://paste.xxxxi.filegear-sg.me/r/muqx0vhc
 
-      # 步骤 5: 计算文件的哈希值
+      # 步骤 6: 计算文件的哈希值
       - name: Calculate file hash
         if: steps.check_file.outputs.has_content == 'true'
         id: hash
@@ -56,7 +62,7 @@ jobs:
           sha256sum V2RayN.txt | awk '{print $1}' > xh.txt
           echo "::set-output name=hash::$(cat xh.txt)"
 
-      # 步骤 6: 检查哈希值是否变化
+      # 步骤 7: 检查哈希值是否变化
       - name: Check if hash has changed
         if: steps.check_file.outputs.has_content == 'true'
         id: check_hash
@@ -72,7 +78,7 @@ jobs:
             echo "::set-output name=hash_changed::true"
           fi
 
-      # 步骤 7: 上传文件到 Cloudflare R2（仅当哈希值变化时）
+      # 步骤 8: 上传文件到 Cloudflare R2（仅当哈希值变化时）
       - name: Upload file to Cloudflare R2
         if: steps.check_hash.outputs.hash_changed == 'true'
         id: upload_file
@@ -84,26 +90,15 @@ jobs:
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: aws s3 cp V2RayN.txt s3://$BUCKET_NAME/V2RayN.txt --endpoint-url $AWS_ENDPOINT_URL
 
-      # 步骤 8: 保存当前哈希值到 GitHub Secrets（仅当哈希值变化时）
+      # 步骤 9: 保存当前哈希值到 GitHub Secrets（仅当哈希值变化时）
       - name: Save current hash to GitHub Secrets
         if: steps.check_hash.outputs.hash_changed == 'true'
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-      # 获取当前仓库的 public-key
-        PUBLIC_KEY_RESPONSE=$(curl -s -H "Authorization: token $GH_TOKEN" \
-        "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/secrets/public-key")
-        PUBLIC_KEY=$(echo "$PUBLIC_KEY_RESPONSE" | jq -r '.key')
-        KEY_ID=$(echo "$PUBLIC_KEY_RESPONSE" | jq -r '.key_id')
-      # 加密哈希值
-        ENCRYPTED_VALUE=$(echo -n "$(cat xh.txt)" | npx @peculiar/webcrypto encrypt "RSA-OAEP" -p "$PUBLIC_KEY" | base64)
-      # 更新 Secrets
-        curl -s -X PUT -H "Authorization: token $GH_TOKEN" \
-          -H "Content-Type: application/json" \
-          -d "{\"encrypted_value\":\"$ENCRYPTED_VALUE\",\"key_id\":\"$KEY_ID\"}" \
-          "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/secrets/PREVIOUS_HASH"
+          gh secret set PREVIOUS_HASH -b"$(cat xh.txt)" --repo $GITHUB_REPOSITORY
 
-      # 步骤 9: 发送 Telegram 通知
+      # 步骤 10: 发送 Telegram 通知
       - name: Send Telegram notification for workflow start
         if: always()
         run: ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "⏳ 工作流已启动！" ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -144,28 +139,3 @@ jobs:
             MESSAGE+="- 文件大小：0 字节\n"
           fi
           ./notify.sh ${{ secrets.TELEGRAM_CHAT_ID }} "$MESSAGE" ${{ secrets.TELEGRAM_BOT_TOKEN }}
-
-  cleanup-workflow-runs:
-    runs-on: ubuntu-latest
-    needs: upload-to-r2  # 仅在上传成功后执行
-
-    steps:
-      # 步骤 1: 安装 jq
-      - name: Install jq
-        run: sudo apt-get install -y jq
-
-      # 步骤 2: 删除已完成的工作流运行记录
-      - name: Delete completed workflow runs
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          echo "Fetching completed workflow runs..."
-          RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
-            | jq -r '.workflow_runs[] | select(.status == "completed") | .id')
-
-          for run_id in $RUN_IDS; do
-            echo "Deleting run ID: $run_id"
-            curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
-              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
-          done
