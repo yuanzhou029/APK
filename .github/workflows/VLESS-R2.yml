@@ -30,7 +30,10 @@ jobs:
       # 步骤 3: 克隆存储库（用于同步 xh.txt）
       - name: Clone repository
         run: |
-          git clone https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git .
+          # 清理当前目录
+          rm -rf ./*
+          # 克隆存储库
+          git clone --depth 1 https://${{ secrets.GT_TOKEN }}@github.com/${{ github.repository }}.git .
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
@@ -67,7 +70,7 @@ jobs:
         if: steps.check_file.outputs.has_content == 'true'
         id: check_hash
         run: |
-          if [ -f xh.txt ] && [ "$(cat xh.txt)" == "$(cat xh_previous.txt)" ]; then
+          if [ -f xh.txt ] && [ "$(cat xh.txt)" == "$(cat xh_previous.txt 2>/dev/null || echo '')" ]; then
             echo "Hash has not changed. Skipping upload."
             echo "::set-output name=hash_changed::false"
           else
@@ -91,16 +94,20 @@ jobs:
       - name: Save current hash to xh.txt
         if: steps.check_file.outputs.has_content == 'true'
         run: |
-          mv xh.txt xh_previous.txt  # 更新 xh_previous.txt
-          cp xh_previous.txt xh.txt  # 同步到存储库
+          cp xh.txt xh_previous.txt  # 更新 xh_previous.txt
 
       # 步骤 10: 将 xh.txt 文件提交并推送到存储库
       - name: Commit and push xh.txt to repository
-        if: steps.check_file.outputs.has_content == 'true'
+        if: steps.check_file.outputs.has_content == 'true' && steps.check_hash.outputs.hash_changed == 'true'
         run: |
-          git add xh.txt
-          git commit -m "Update xh.txt with latest hash"
-          git push origin main
+          # 检查 xh.txt 是否发生变化
+          if ! git diff --quiet xh.txt; then
+            git add xh.txt
+            git commit -m "Update xh.txt with latest hash"
+            git push origin main
+          else
+            echo "xh.txt did not change. Skipping commit and push."
+          fi
 
       # 步骤 11: 发送 Telegram 通知
       - name: Send Telegram notification for workflow start
