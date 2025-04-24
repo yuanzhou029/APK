@@ -3,7 +3,7 @@ name: VLESS-ceshi R2
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 */8 * * *'  # 每 8 小时触发一次
 
 jobs:
   upload-to-r2:
