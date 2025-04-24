@@ -99,12 +99,14 @@ jobs:
       - name: Send Telegram notification for success
         if: success()
         run: |
-          MESSAGE="✅ 工作流已成功完成.\n\n"
-          MESSAGE+="文件是否存在: ${{ steps.check_file.outputs.has_content }}\n"
+          MESSAGE="✅ 工作流已成功完成.\n"
+          MESSAGE+="🔍 文件检查结果:\n"
+          MESSAGE+="   - 文件是否存在: ${STEPS.check_file.outputs.has_content}\n"
           if [ "${{ steps.check_file.outputs.has_content }}" == "true" ]; then
-            MESSAGE+="文件大小: ${{ steps.check_file.outputs.file_size }} 字节\n"
-            MESSAGE+="哈希值是否变化: ${{ steps.check_hash.outputs.hash_changed }}\n"
-            MESSAGE+="哈希值: ${{ steps.hash.outputs.hash }}\n"
+            MESSAGE+="   - 文件是否存在: 是\n"
+            MESSAGE+="   -文件大小: ${{ steps.check_file.outputs.file_size }} 字节\n"
+            MESSAGE+="   -哈希值是否变化: ${{ steps.check_hash.outputs.hash_changed }}\n"
+            MESSAGE+="   -哈希值: ${{ steps.hash.outputs.hash }}\n"
             if [ "${{ steps.check_hash.outputs.hash_changed }}" == "true" ]; then
               MESSAGE+="文件已上传到 Cloudflare R2.\n"
             else
@@ -117,6 +119,7 @@ jobs:
         if: failure()
         run: |
           MESSAGE="❌ 工作流运行失败.\n\n"
+           MESSAGE+="🔍 文件检查结果:\n"
           MESSAGE+="文件是否存在: ${{ steps.check_file.outputs.has_content }}\n"
           if [ "${{ steps.check_file.outputs.has_content }}" == "true" ]; then
             MESSAGE+="文件大小: ${{ steps.check_file.outputs.file_size }} 字节\n"
