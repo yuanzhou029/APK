@@ -40,7 +40,9 @@ jobs:
       - name: Clone repository
         run: |
           # 清理当前目录（排除某些文件）
-          find . -mindepth 1 -maxdepth 1 ! -name 'notify.sh' ! -name '.github' -exec rm -rf {} +
+          shopt -s extglob
+          rm -rf !(.github|notify.sh)
+          shopt -u extglob
           # 克隆存储库
           git clone --depth 1 https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git .
           git config --global user.name "github-actions"
