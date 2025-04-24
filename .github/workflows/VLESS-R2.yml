@@ -35,11 +35,11 @@ jobs:
           CONTENT_LENGTH=$(echo "$RESPONSE" | grep -i Content-Length | awk '{print $2}' | tr -d '\r')
           if [ -n "$CONTENT_LENGTH" ] && [ "$CONTENT_LENGTH" -gt 100 ]; then
             echo "File exists and has content. Content-Length: $CONTENT_LENGTH"
-            echo "::set-output name=has_content::true"
+            echo "has_content=true" >> $GITHUB_OUTPUT
             echo "::set-output name=file_size::$CONTENT_LENGTH"
           else
             echo "File does not exist or has no content (file size is less than 100 bytes)."
-            echo "::set-output name=has_content::false"
+            echo "has_content=false" >> $GITHUB_OUTPUT
           fi
 
       # 步骤 4: 下载文件（仅当文件存在且有内容时）
