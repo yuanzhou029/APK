@@ -3,7 +3,7 @@ name: VLESS-Cloudflare R2
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */8 * * *'  # 每 8 小时触发一次
+    - cron: '0 */12 * * *'  # 每 8 小时触发一次
 
 jobs:
   upload-to-r2:
@@ -12,8 +12,7 @@ jobs:
     steps:
       - name: Download file from GitHub
         run: |
-          curl -o V2RayN.txt https://woyooo-distribute.hf.space/api/v1/subscribe?token=e9ldidvac1nkw4rm&target=v2ray&list=true
-
+          curl -o V2RayN.txt https://woyooo-distribute.hf.space/api/v1/subscribe?token=h3oz31g04pcd06uu&target=v2ray&list=true
       - name: Install AWS CLI
         run: |
           sudo apt-get update && sudo apt-get install -y python3-pip
