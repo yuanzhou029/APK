@@ -2,8 +2,8 @@ name: Get Token and Save Subscription
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # 每6小时运行一次
-  workflow_dispatch:  # 允许手动触发
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   get-token:
@@ -25,7 +25,7 @@ jobs:
       run: python get_token.py
       
     - name: Upload v2ray.txt
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: v2ray-subscription
         path: v2ray.txt
