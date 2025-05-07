@@ -29,3 +29,4 @@ jobs:
       with:
         name: v2ray-subscription
         path: v2ray.txt
+        if-no-files-found: error
