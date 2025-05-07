@@ -42,10 +42,11 @@ if __name__ == "__main__":
         print(f"获取到的token: {token}")
         print(f"生成的订阅URL: {subscribe_url}")
         
-        if save_subscription_data(subscribe_url):
-            print("订阅数据已保存到v2ray.txt")
-        else:
-            print("⚠️ 订阅数据保存失败")
+        # 注释掉保存订阅数据的函数调用
+        # if save_subscription_data(subscribe_url):
+        #     print("订阅数据已保存到v2ray.txt")
+        # else:
+        #     print("⚠️ 订阅数据保存失败")
         print("="*50)
     else:
         print("⚠️ 未找到符合格式的token")
