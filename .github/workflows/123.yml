@@ -1,0 +1,31 @@
+name: Get Token and Save Subscription
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # 每6小时运行一次
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  get-token:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: pip install requests
+      
+    - name: Run get_token.py
+      run: python get_token.py
+      
+    - name: Upload v2ray.txt
+      uses: actions/upload-artifact@v3
+      with:
+        name: v2ray-subscription
+        path: v2ray.txt
