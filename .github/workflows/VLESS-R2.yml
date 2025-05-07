@@ -3,54 +3,65 @@ name: VLESS-Cloudflare R2
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */12 * * *'  # 每 8 小时触发一次
+    - cron: '0 */12 * * *'  # 每12小时触发一次
 
 jobs:
   upload-to-r2:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Download file from GitHub
-        run: |
-          curl -o V2RayN.txt https://woyooo-distribute.hf.space/api/v1/subscribe?token=ndod6tah602dnelk&target=v2ray&list=true
-      - name: Install AWS CLI
-        run: |
-          sudo apt-get update && sudo apt-get install -y python3-pip
-          pip3 install awscli --upgrade
-
-      - name: Upload file to Cloudflare R2
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: us-east-1
-          AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
-          BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
-        run: |
-          aws s3 cp V2RayN.txt s3://$BUCKET_NAME/V2RayN.txt --endpoint-url $AWS_ENDPOINT_URL
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
         
+    - name: Install dependencies
+      run: |
+        pip install requests
+        sudo apt-get update && sudo apt-get install -y python3-pip
+        pip3 install awscli --upgrade
+        
+    - name: Get subscription URL
+      run: |
+        python get_token.py
+        SUB_URL=$(python -c "from get_token import extract_unified_token, generate_subscribe_url; print(generate_subscribe_url(extract_unified_token()))")
+        echo "SUB_URL=$SUB_URL" >> $GITHUB_ENV
+        
+    - name: Download config
+      run: |
+        curl -o V2RayN.txt "$SUB_URL"
+        
+    - name: Upload to Cloudflare R2
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: us-east-1
+        AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
+        BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
+      run: |
+        aws s3 cp V2RayN.txt s3://$BUCKET_NAME/V2RayN.txt --endpoint-url $AWS_ENDPOINT_URL
 
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
-    needs: upload-to-r2  # 只有上传成功后才执行
-
+    needs: upload-to-r2
+    
     steps:
-      - name: Install jq
-        run: sudo apt-get install -y jq
-
-      - name: Delete completed workflow runs
-        env:
-          GH_TOKEN: ${{ secrets.GT_TOKEN }}
-        run: |
-          echo "Fetching completed workflow runs..."
-
-          # 获取运行记录 ID 列表（最多 100 条）
-          RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
-            | jq '.workflow_runs[] | select(.status == "completed") | .id')
-
-          # 删除每一条记录
-          for run_id in $RUN_IDS; do
-            echo "Deleting run ID: $run_id"
-            curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
-              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
-          done
+    - name: Install jq
+      run: sudo apt-get install -y jq
+      
+    - name: Cleanup old runs
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
+          "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
+          | jq '.workflow_runs[] | select(.status == "completed") | .id')
+          
+        for run_id in $RUN_IDS; do
+          echo "Deleting run ID: $run_id"
+          curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
+        done
