@@ -13,6 +13,8 @@ jobs:
       - name: Download converted Clash.txt from your backend
         run: |
           curl -L "subapi.cmliussss.net/sub?target=v2ray&url=https://ys.jiedianxielou.workers.dev" -o Clash.txt
+          curl -L "subapi.cmliussss.net/sub?target=v2ray&url=http://119.23.77.81:9008/clash/config" -o Clash1.txt
+          curl -L "subapi.cmliussss.net/sub?target=v2ray&url=http://kiwi2.zxzn.xyz/clash/config" -o Clash2.txt
 
 
       - name: Install AWS CLI
@@ -29,6 +31,8 @@ jobs:
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
           aws s3 cp Clash.txt s3://$BUCKET_NAME/Clash.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp Clash1.txt s3://$BUCKET_NAME/Clash1.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp Clash2.txt s3://$BUCKET_NAME/Clash2.txt --endpoint-url $AWS_ENDPOINT_URL
 
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
