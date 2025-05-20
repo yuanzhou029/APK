@@ -3,7 +3,7 @@ name: VLESS-Cloudflare R2
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */8 * * *'  # 每12小时触发一次
+    - cron: '0 */4 * * *'  # 每4小时触发一次
 
 jobs:
   upload-to-r2:
