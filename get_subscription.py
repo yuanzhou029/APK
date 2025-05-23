@@ -22,7 +22,7 @@ def get_subscription_links():
         os.remove("base64.txt")
         print("已删除 base64.txt 文件")
     
-    # 获取当前日期，使用%#m去掉月份前面的0
+    # 获取当前日期，手动去掉月份前面的0
     today = datetime.now()
     days_back = 0
     min_nodes = 1000
@@ -30,7 +30,10 @@ def get_subscription_links():
     
     while days_back < max_attempts:
         # 计算当前日期
-        current_date = (today - timedelta(days=days_back)).strftime("%#m%d")
+        target_date = today - timedelta(days=days_back)
+        month = target_date.month
+        day = target_date.day
+        current_date = f"{month if month >= 10 else month}{day}"  # 手动去掉月份前面的0
         
         # 动态生成当前日期的URL
         url_current = f"https://shz.al/~{current_date}-tg@pgkj666"
