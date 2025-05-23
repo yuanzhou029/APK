@@ -1,9 +1,9 @@
-name: Run Python Script
+name: TG Script
 
 on:
   workflow_dispatch:  # 添加手动触发
   schedule:
-    - cron: '0 0 * * *'  # 每天午夜运行
+    - cron: '0 */8 * * *'  # 每8小时触发一次  
 
 jobs:
   run-script:
