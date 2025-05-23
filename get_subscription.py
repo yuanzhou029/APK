@@ -36,7 +36,7 @@ def get_subscription_links():
         current_date = f"{month if month >= 10 else month}{day}"  # 手动去掉月份前面的0
         
         # 动态生成当前日期的URL
-        url_current = f"https://shz.al/~{current_date}-TG@pgkj666"
+        url_current = f"https://shz.al/~{current_date}-tg@pgkj666"
         
         # 打印动态生成的URL
         print(f"当前日期URL: {url_current}")
