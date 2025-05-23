@@ -25,3 +25,13 @@ jobs:
 
       - name: Run Python script
         run: python ./get_subscription.py
+
+      - name: Upload to Cloudflare R2
+        env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: us-east-1
+        AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
+        BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
+        run: |
+         aws s3 cp base64.txt s3://$BUCKET_NAME/V2RayN.txt --endpoint-url $AWS_ENDPOINT_URL
