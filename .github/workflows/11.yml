@@ -1,4 +1,4 @@
-name: 111 Script
+name: Run Python Script
 
 on:
   workflow_dispatch:  # 添加手动触发
@@ -24,4 +24,4 @@ jobs:
           pip install requests
 
       - name: Run Python script
-        run: python d:/python项目文件/获取节点信息/get_subscription.py
+        run: python ./get_subscription.py
