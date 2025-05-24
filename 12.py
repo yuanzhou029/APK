@@ -2,11 +2,11 @@ from telethon import TelegramClient
 import re
 
 # 你的 API ID 和 API Hash
-api_id = '22012162'
-api_hash = '844e41eece3ff519edb47f28e9240371'
+api_id = os.getenv('API_ID')
+api_hash = os.getenv('API_HASH')
 
 # 你的电话号码（用于登录 Telegram）
-phone_number = '+8615355518940'  # 替换为你的电话号码
+phone_number = os.getenv('PHONE_NUMBER')  # 替换为你的电话号码
 
 # 创建客户端
 client = TelegramClient('session_name', api_id, api_hash)
