@@ -32,7 +32,7 @@ jobs:
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
-        run: python d:/python项目文件/VS/12.py  # 调整为仓库内实际路径（如文件在根目录可简化为 python 12.py）
+        run: python 12.py  # 调整为仓库内实际路径（如文件在根目录可简化为 python 12.py）
 
       - name: Commit and push links.txt
         run: |
