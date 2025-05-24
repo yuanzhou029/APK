@@ -1,16 +1,19 @@
 from telethon import TelegramClient
 import asyncio
+import os
 
-# 你的 API ID 和 API Hash
-api_id = '22012162'  # 替换为你的 API ID
-api_hash = '844e41eece3ff519edb47f28e9240371'  # 替换为你的 API Hash
+# 从环境变量中获取 API ID 和 API Hash
+api_id = os.getenv('API_ID')
+api_hash = os.getenv('API_HASH')
+phone_number = os.getenv('PHONE_NUMBER')
+group_id = int(os.getenv('GROUP_ID'))
 
 # 创建客户端
 client = TelegramClient('session_name', api_id, api_hash)
 
 async def get_subscription_messages(group_id):
     # 启动客户端
-    await client.start()
+    await client.start(phone=phone_number)
     
     # 确认是否已登录
     if await client.is_user_authorized():
@@ -31,5 +34,4 @@ async def get_subscription_messages(group_id):
 
 # 运行主函数
 if __name__ == "__main__":
-    group_id = -1002172828140  # 替换为你的群组ID
     asyncio.run(get_subscription_messages(group_id))
