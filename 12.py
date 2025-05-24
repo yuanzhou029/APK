@@ -8,7 +8,7 @@ api_hash = '844e41eece3ff519edb47f28e9240371'  # 替换为你的 API Hash
 # 创建客户端
 client = TelegramClient('session_name', api_id, api_hash)
 
-async def get_group_or_channel_info():
+async def get_subscription_messages(group_id):
     # 启动客户端
     await client.start()
     
@@ -19,13 +19,17 @@ async def get_group_or_channel_info():
         print("登录失败！")
         return
 
-    # 列出所有对话（包括群组、频道、私聊等）
-    dialogs = await client.get_dialogs()
+    # 获取群组实体
+    group = await client.get_entity(group_id)
     
-    print("你加入的群组和频道：")
-    for dialog in dialogs:
-        if dialog.is_group or dialog.is_channel:  # 过滤群组和频道
-            print(f"名称: {dialog.name}, 用户名: {dialog.entity.username}, ID: {dialog.id}")
+    # 获取群组中的最新消息
+    messages = await client.get_messages(group, limit=10)  # 获取最新的10条消息
+    
+    print("订阅群组中的消息：")
+    for message in messages:
+        print(f"消息内容: {message.text}")
 
 # 运行主函数
-asyncio.run(get_group_or_channel_info())
+if __name__ == "__main__":
+    group_id = -1002172828140  # 替换为你的群组ID
+    asyncio.run(get_subscription_messages(group_id))
