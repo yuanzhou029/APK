@@ -30,28 +30,40 @@ async def get_subscription_links(group_username):
         await client.start()  # 无交互登录（通过会话字符串自动认证）
         print(f"客户端已连接，开始抓取群组 {group_username}...")
         
-        async for message in client.iter_messages(group_username, limit=200):
-            if message.text:
-                matched_links = re.findall(SUBSCRIPTION_LINK_REGEX, message.text)
-                if matched_links:
-                    # 去重逻辑：仅添加未重复的链接
-                    new_links = [link for link in matched_links if link not in links]
-                    links.extend(new_links)
-                    for link in new_links:
-                        print(f"[群组 {group_username}] 发现订阅链接: {link}")
-                    # 检查是否达到最大链接数（去重后）
-                    if len(links) >= MAX_LINKS:
-                        print(f"已收集到 {MAX_LINKS} 条订阅链接，提前终止抓取...")
-                        break  # 退出消息遍历循环
+        # 新增：检查客户端是否已连接
+        if not client.is_connected():
+            print(f"错误：客户端未连接，跳过群组 {group_username}")
+            return links
+
+        # 新增：为消息迭代添加60秒超时
+        try:
+            async for message in asyncio.wait_for(
+                client.iter_messages(group_username, limit=200),
+                timeout=60.0  # 调整超时时间（根据实际情况）
+            ):
+                if message.text:
+                    matched_links = re.findall(SUBSCRIPTION_LINK_REGEX, message.text)
+                    if matched_links:
+                        new_links = [link for link in matched_links if link not in links]
+                        links.extend(new_links)
+                        for link in new_links:
+                            print(f"[群组 {group_username}] 发现订阅链接: {link}")
+                        if len(links) >= MAX_LINKS:
+                            print(f"已收集到 {MAX_LINKS} 条订阅链接，提前终止抓取...")
+                            break
+        except asyncio.TimeoutError:
+            print(f"[群组 {group_username}] 抓取超时（60秒未完成），终止任务...")
+        except asyncio.CancelledError:
+            print(f"[群组 {group_username}] 任务被取消，可能是网络问题或API限制...")
 
     except Exception as e:
-        print(f"[群组 {group_username}] 抓取失败: {e}")
+        print(f"[群组 {group_username}] 抓取失败: {str(e)}")
     finally:
         await client.disconnect()
     return links[:MAX_LINKS]  # 确保返回不超过50条
 
 if __name__ == "__main__":
-    groups = ['@zzzjjjkkkoi', '@pgkj666']  # 按需修改群组名
+    groups = ['@zzzjjjkkkoi']  # 按需修改群组名
 
     async def main():
         semaphore = asyncio.Semaphore(3)  # 限制并发数
