@@ -1,37 +1,47 @@
 from telethon import TelegramClient
-import asyncio
-import os
+import re
 
-# 从环境变量中获取 API ID 和 API Hash
-api_id = os.getenv('API_ID')
-api_hash = os.getenv('API_HASH')
-phone_number = os.getenv('PHONE_NUMBER')
-group_id = int(os.getenv('GROUP_ID'))
+# 你的 API ID 和 API Hash
+api_id = '22012162'
+api_hash = '844e41eece3ff519edb47f28e9240371'
+
+# 你的电话号码（用于登录 Telegram）
+phone_number = '+8615355518940'  # 替换为你的电话号码
 
 # 创建客户端
 client = TelegramClient('session_name', api_id, api_hash)
 
-async def get_subscription_messages(group_id):
-    # 启动客户端并自动处理验证码
-    await client.start(phone=phone_number, code_callback=lambda: os.getenv('TELEGRAM_CODE'))
-    
-    # 确认是否已登录
-    if await client.is_user_authorized():
-        print("登录成功！")
-    else:
-        print("登录失败！")
-        return
+# 定义正则表达式，用于匹配订阅链接
+SUBSCRIPTION_LINK_REGEX = r'订阅链接:\s*(https?://[^\s]+)'
 
-    # 获取群组实体
-    group = await client.get_entity(group_id)
-    
-    # 获取群组中的最新消息
-    messages = await client.get_messages(group, limit=10)  # 获取最新的10条消息
-    
-    print("订阅群组中的消息：")
-    for message in messages:
-        print(f"消息内容: {message.text}")
+async def get_subscription_links(group_username):
+    """
+    从指定的公开群组中获取免费订阅链接。
+    :param group_username: 群组的用户名（例如：@public_group）
+    """
+    try:
+        # 连接到 Telegram
+        await client.start(phone=phone_number)
+        print("客户端已成功连接...")
 
-# 运行主函数
+        # 获取群组消息
+        print(f"正在从群组 {group_username} 中抓取消息...")
+        async for message in client.iter_messages(group_username):
+            if message.text:
+                # 使用正则表达式匹配订阅链接
+                links = re.findall(SUBSCRIPTION_LINK_REGEX, message.text)
+                for link in links:
+                    print(f"发现订阅链接: {link}")
+
+    except Exception as e:
+        print(f"发生错误: {e}")
+    finally:
+        # 断开客户端连接
+        await client.disconnect()
+
+# 运行脚本
 if __name__ == "__main__":
-    asyncio.run(get_subscription_messages(group_id))
+    import asyncio
+    # 替换为你要抓取的公开群组的用户名（例如：@public_group）
+    group_username = '@zzzjjjkkkoi'
+    asyncio.run(get_subscription_links(group_username))
