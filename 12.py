@@ -12,8 +12,8 @@ group_id = int(os.getenv('GROUP_ID'))
 client = TelegramClient('session_name', api_id, api_hash)
 
 async def get_subscription_messages(group_id):
-    # 启动客户端
-    await client.start(phone=phone_number)
+    # 启动客户端并自动处理验证码
+    await client.start(phone=phone_number, code_callback=lambda: os.getenv('TELEGRAM_CODE'))
     
     # 确认是否已登录
     if await client.is_user_authorized():
