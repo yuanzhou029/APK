@@ -20,8 +20,8 @@ def extract_unified_token():
 
 def generate_subscribe_url(token):
     """生成订阅URL"""
-    return f"https://woyooo-distribute.hf.space/api/v1/subscribe?token={token}&target=v2ray&list=true"
-
+    return f"https://ohayoo-distribute.hf.space/api/v1/subscribe?token={token}&target=v2ray&list=true"
+    
 def save_subscription_data(url, filename="v2ray.txt"):
     """保存订阅数据到文件"""
     try:
