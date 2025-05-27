@@ -34,7 +34,7 @@ jobs:
          AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
          BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-         aws s3 cp base64.txt s3://$BUCKET_NAME/V2RayN.txt --endpoint-url $AWS_ENDPOINT_URL
+         aws s3 cp base64.txt s3://$BUCKET_NAME/base64.txt --endpoint-url $AWS_ENDPOINT_URL
          
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
