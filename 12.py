@@ -10,7 +10,8 @@ api_hash = os.getenv('TELEGRAM_API_HASH')
 session_string = os.getenv('TELEGRAM_SESSION_STRING')
 
 # 定义正则表达式，用于匹配订阅链接（调整后支持反引号包裹的链接）
-SUBSCRIPTION_LINK_REGEX = r'🔗订阅链接:\s*`(https?://[^\s`]+)`'  # 匹配格式：🔗订阅链接: `http://xxx`
+# 定义正则表达式（修改后支持「订阅链接」和「v2ray订阅」）
+SUBSCRIPTION_LINK_REGEX = r'(🔗订阅链接|v2ray订阅):\s*`(https?://[^\s`]+)`'  # 匹配格式：🔗订阅链接: `http://xxx` 或 v2ray订阅: `http://xxx`
 MAX_LINKS = 50  # 最大链接数（提取为常量）
 RETRY_TIMES = 3  # 重试次数
 
