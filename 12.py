@@ -51,7 +51,7 @@ async def get_subscription_links(group_username):
     return links[:MAX_LINKS]  # 确保返回不超过50条
 
 if __name__ == "__main__":
-    groups = ['@pgkj666','@fqDINYUE']  # 按需修改群组名
+    groups = ['@pgkj666']  # 按需修改群组名
 
     async def main():
         semaphore = asyncio.Semaphore(3)  # 限制并发数
