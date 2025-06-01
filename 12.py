@@ -59,7 +59,7 @@ async def get_subscription_links(group_username):
     return links[:MAX_LINKS]
 
 if __name__ == "__main__":
-    groups = ['@fqDINYUE','@zzzjjjkkkoi']  # 目标群组（保持原逻辑）
+    groups = ['@fqDINYUE','@zzzjjjkkkoi','@anzhuoapk']  # 目标群组（保持原逻辑）
 
     async def main():
         semaphore = asyncio.Semaphore(3)  # 限制并发数（保持原逻辑）
