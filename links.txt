@@ -48,6 +48,7 @@ https://nano.nachoneko.cn/api/v1/client/subscribe?token=76f11057c2731a948cc6d0ab
 https://app.mitce.net/?sid=261147&token=srvnqrvq
 https://yyr68.no-mad-world.club/link/eYfmNfyLiBcfVu8S?clash=1
 https://wow.dogss-host.store/api/v1/client/subscribe?token=ee8b59bbeadff28029d6aaa444e7f41f
+https://89e8a4bd.ghelper.me/subs/clash/8527441689e8a4bda8c4124fc15280a7
 https://sub.zyfx6.xyz/share/file/%E6%B0%B8%E4%B9%85%E8%AE%A2%E9%98%85%40txwl666?token=clash
 https://94256693.ghelper.me/subs/clash/29015a1e94256693eacc26d8f15f0f12
 https://84b262c8.ghelper.me/subs/clash/6dd996d284b262c8065426e000072af9
@@ -71,7 +72,6 @@ https://geesoon.me/s/429b1674dbe166307d4c52cc424cde20
 http://207.170.66.146:50209/share/sub/node9PB?token=6rf8MzrhV_sKXhSg6icl3
 https://d28e32ec.ghelper.me/subs/shadowrocket/eee0543fd28e32ec1279193fd9459d7e
 https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml
-https://89e8a4bd.ghelper.me/subs/clash/8527441689e8a4bda8c4124fc15280a7
 https://www.xrayvip.com/free.yaml
 https://xship.top/v1/subscribe?starlink=free
 https://3388ebe0.ghelper.me/subs/clash/7f2d66183388ebe0a6e1d9119de5a435
