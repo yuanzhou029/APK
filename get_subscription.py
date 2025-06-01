@@ -3,75 +3,82 @@ import base64
 from datetime import datetime, timedelta
 import logging
 import re
-import os  
+import os
 
-logging.basicConfig(level=logging.DEBUG)
+# 配置日志（替换print，更清晰）
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
-def count_nodes(subscription_links):
-    """统计节点数量"""
-    try:
-        # 解码base64并统计节点数量
-        decoded = base64.b64decode(subscription_links).decode('utf-8')
-        return len(re.findall(r'vmess://|vless://|trojan://|ss://|hysteria2', decoded))
-    except:
-        return 0
+def extract_nodes(content):
+    """从原始订阅内容中提取所有节点链接（支持vmess、vless等协议）"""
+    # 正则匹配所有协议链接（精确匹配完整链接，避免部分匹配）
+    node_pattern = r'vmess://[\w\-+\/=]+|vless://[\w\-+\/=]+|trojan://[\w\-+\/=]+|ss://[\w\-+\/=]+|hysteria2://[\w\-+\/=]+'
+    return re.findall(node_pattern, content)
 
 def get_subscription_links():
-    # 删除 base64.txt 文件（如果存在）
-    if os.path.exists("base64.txt"):
-        os.remove("base64.txt")
-        print("已删除 base64.txt 文件")
-    
-    # 获取当前日期，手动去掉月份前面的0
+    # 删除旧文件（如果存在）
+    for filename in ["base64.txt", "temp_subscription.txt"]:
+        if os.path.exists(filename):
+            os.remove(filename)
+            logger.info(f"已删除旧文件: {filename}")
+
     today = datetime.now()
-    days_back = 0
-    min_nodes = 1000
-    max_attempts = 10  # 最大尝试次数
-    
-    while days_back < max_attempts:
-        # 计算当前日期
-        target_date = today - timedelta(days=days_back)
-        month = target_date.month
-        day = target_date.day
-        current_date = f"{month if month >= 10 else month}{day}"  # 手动去掉月份前面的0
-        
-        # 动态生成当前日期的URL
-        url_current = f"https://shz.al/~{current_date}-tg@pgkj666"
-        
-        # 打印动态生成的URL
-        print(f"当前日期URL: {url_current}")
-        
-        # 尝试获取当前日期的订阅链接
+    min_nodes = 1000  # 目标最小节点数
+    max_days_ago = 10  # 最多向前查找10天
+
+    for days_ago in range(max_days_ago):
+        # 生成两位的月份和日期（如01月05日 -> 0105）
+        target_date = today - timedelta(days=days_ago)
+        date_str = target_date.strftime("%m%d")  # 修正为两位数字格式
+        url = f"https://shz.al/~{date_str}-tg@pgkj666"
+        logger.info(f"尝试日期: {target_date.date()}，生成URL: {url}")
+
         try:
-            response_current = requests.get(url_current, timeout=10)
-            response_current.raise_for_status()
-            subscription_links_current = response_current.text
-            print("获取当前日期订阅链接成功")
-            
-            # 转换为Base64编码并保存到文件
-            base64_links_current = base64.b64encode(subscription_links_current.encode('utf-8')).decode('utf-8')
-            with open("base64.txt", "a") as file:  # 使用追加模式
-                file.write(base64_links_current + "\n")  # 追加并换行
-            
-            # 统计当前URL的节点数量
-            node_count = count_nodes(base64_links_current)
-            print(f"当前URL节点数量: {node_count}")
-            
-            # 读取 base64.txt 文件并统计总结点数
-            with open("base64.txt", "r") as file:
-                total_nodes = sum(count_nodes(line.strip()) for line in file)
-            print(f"总节点数量: {total_nodes}")
-            
-            if total_nodes >= min_nodes:
-                print(f"节点数量满足要求，停止查找")
-                break
+            # 获取订阅内容（带超时）
+            response = requests.get(url, timeout=15)
+            response.raise_for_status()
+            subscription_content = response.text
+
+            # 保存原始订阅内容到临时文件
+            with open("temp_subscription.txt", "w", encoding="utf-8") as f:
+                f.write(subscription_content)
+            logger.info("订阅内容已保存到临时文件 temp_subscription.txt")
+
+            # 提取原始节点（未去重）
+            raw_nodes = extract_nodes(subscription_content)
+            raw_node_count = len(raw_nodes)
+            logger.info(f"原始节点数（未去重）: {raw_node_count}")
+
+            if raw_node_count >= min_nodes:
+                # 去重处理
+                unique_nodes = list(set(raw_nodes))  # 去重
+                unique_node_count = len(unique_nodes)
+                logger.info(f"去重后节点数: {unique_node_count}")
+
+                if unique_node_count >= min_nodes:
+                    # 去重后满足条件，转换为Base64并保存
+                    unique_content = "\n".join(unique_nodes)  # 合并为文本
+                    base64_content = base64.b64encode(unique_content.encode("utf-8")).decode("utf-8")
+                    with open("base64.txt", "w", encoding="utf-8") as f:
+                        f.write(base64_content)
+                    logger.info(f"去重后节点数达标（{unique_node_count}≥{min_nodes}），已保存到 base64.txt")
+                    return  # 任务完成，退出循环
+                else:
+                    logger.info(f"去重后节点数不足（{unique_node_count}<{min_nodes}），继续查找前一天...")
             else:
-                print(f"节点数量不足 {min_nodes} 个，继续查找前一天...")
-                days_back += 1
-                
+                logger.info(f"原始节点数不足（{raw_node_count}<{min_nodes}），继续查找前一天...")
+
         except requests.exceptions.RequestException as e:
-            print(f"获取当前日期订阅链接失败: {e}")
-            days_back += 1
+            logger.error(f"请求 {url} 失败: {str(e)}，继续查找前一天...")
+            continue
+        except Exception as e:
+            logger.error(f"处理日期 {date_str} 时发生异常: {str(e)}，继续查找前一天...")
+            continue
+
+    logger.warning(f"已尝试前 {max_days_ago} 天，未找到满足条件的节点（去重后不足 {min_nodes}）")
 
 if __name__ == "__main__":
     get_subscription_links()
