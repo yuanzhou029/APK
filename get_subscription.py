@@ -35,52 +35,49 @@ def get_subscription_links():
         month = target_date.month
         day = target_date.day
         date_str = f"{month}{day}"
-        url = f"https://shz.al/~{date_str}-tg@pgkj666"
-        logger.info(f"尝试日期: {target_date.date()}，生成URL: {url}")
+        
+        # 生成两个URL后缀（原'tg'和新'TG'）
+        url_suffixes = ['tg', 'TG']
+        for suffix in url_suffixes:
+            url = f"https://shz.al/~{date_str}-{suffix}@pgkj666"
+            logger.info(f"尝试日期: {target_date.date()}，生成URL（后缀-{suffix}）: {url}")
 
-        try:
-            response = requests.get(url, timeout=15)
-            response.raise_for_status()
-            subscription_content = response.text
+            try:
+                response = requests.get(url, timeout=15)
+                response.raise_for_status()
+                subscription_content = response.text
 
-            # 追加保存原始订阅内容到临时文件（累计所有日期）
-            with open("temp_subscription.txt", "a", encoding="utf-8") as f:
-                f.write(subscription_content + "\n")  # 换行分隔不同日期内容
-            logger.info("订阅内容已追加到临时文件 temp_subscription.txt")
+                # 追加保存原始订阅内容到临时文件（累计所有日期和后缀的内容）
+                with open("temp_subscription.txt", "a", encoding="utf-8") as f:
+                    f.write(subscription_content + "\n")  # 换行分隔不同内容
+                logger.info(f"订阅内容（后缀-{suffix}）已追加到临时文件 temp_subscription.txt")
 
-            # 提取当前日期的原始节点数并累计
-            current_raw_nodes = extract_nodes(subscription_content)
-            current_raw_count = len(current_raw_nodes)
-            total_raw_nodes += current_raw_count
-            logger.info(f"当前日期原始节点数: {current_raw_count}，累计原始节点数: {total_raw_nodes}")
+                # 提取当前URL的原始节点数并累计
+                current_raw_nodes = extract_nodes(subscription_content)
+                current_raw_count = len(current_raw_nodes)
+                total_raw_nodes += current_raw_count
+                logger.info(f"当前URL（后缀-{suffix}）原始节点数: {current_raw_count}，累计原始节点数: {total_raw_nodes}")
 
-            # 仅当累计原始节点数≥1000时，触发去重检查
-            if total_raw_nodes >= min_nodes:
-                # 读取所有累计的订阅内容
-                with open("temp_subscription.txt", "r", encoding="utf-8") as f:
-                    all_content = f.read()
-                # 提取所有节点（不进行去重）
-                all_raw_nodes = extract_nodes(all_content)
-                raw_node_count = len(all_raw_nodes)
-                if raw_node_count >= min_nodes:
-                    # 不进行去重，直接使用原始节点
-                    logger.info(f"原始节点数: {raw_node_count}")
-                    # 转换原始节点为Base64并保存（修复：使用all_raw_nodes替代未定义的raw_nodes）
-                    raw_content = "\n".join(all_raw_nodes)  # 合并原始节点文本
-                    base64_content = base64.b64encode(raw_content.encode("utf-8")).decode("utf-8")
-                    with open("base64.txt", "w", encoding="utf-8") as f:
-                        f.write(base64_content)
-                    logger.info(f"原始节点数达标（{raw_node_count}≥{min_nodes}），已保存到 base64.txt")
-                    return  # 任务完成，退出循环
-                else:
-                    logger.info(f"原始节点数不足（{raw_node_count}<{min_nodes}），继续查找前一天...")
+                # 仅当累计原始节点数≥1000时，触发保存逻辑
+                if total_raw_nodes >= min_nodes:
+                    with open("temp_subscription.txt", "r", encoding="utf-8") as f:
+                        all_content = f.read()
+                    all_raw_nodes = extract_nodes(all_content)
+                    raw_node_count = len(all_raw_nodes)
+                    if raw_node_count >= min_nodes:
+                        raw_content = "\n".join(all_raw_nodes)
+                        base64_content = base64.b64encode(raw_content.encode("utf-8")).decode("utf-8")
+                        with open("base64.txt", "w", encoding="utf-8") as f:
+                            f.write(base64_content)
+                        logger.info(f"原始节点数达标（{raw_node_count}≥{min_nodes}），已保存到 base64.txt")
+                        return  # 任务完成，退出所有循环
 
-        except requests.exceptions.RequestException as e:
-            logger.error(f"请求 {url} 失败: {str(e)}，继续查找前一天...")
-            continue
-        except Exception as e:
-            logger.error(f"处理日期 {date_str} 时发生异常: {str(e)}，继续查找前一天...")
-            continue
+            except requests.exceptions.RequestException as e:
+                logger.error(f"请求URL（后缀-{suffix}）失败: {str(e)}，继续尝试下一个URL...")
+                continue  # 单个URL失败，继续处理同日期的另一个后缀
+            except Exception as e:
+                logger.error(f"处理URL（后缀-{suffix}）时发生异常: {str(e)}，继续尝试下一个URL...")
+                continue
 
     logger.warning(f"已尝试前 {max_days_ago} 天，累计去重后节点数不足 {min_nodes}")
 
