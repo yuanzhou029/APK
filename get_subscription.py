@@ -39,7 +39,7 @@ def get_subscription_links():
         # 生成两个URL后缀（原'tg'和新'TG'）
         url_suffixes = ['tg', 'TG']
         for suffix in url_suffixes:
-            url = f"https://shz.al/~{date_str}-{suffix}@pgkj666"
+            url = f"https://shz.al/~{date_str}-{suffix}@pgkj0402"
             logger.info(f"尝试日期: {target_date.date()}，生成URL（后缀-{suffix}）: {url}")
 
             try:
