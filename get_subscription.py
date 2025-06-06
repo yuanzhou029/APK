@@ -26,7 +26,7 @@ def get_subscription_links():
             logger.info(f"已删除旧文件: {filename}")
 
     today = datetime.now()
-    min_nodes = 1000  # 目标最小节点数（累计去重后）
+    min_nodes = 300  # 目标最小节点数（累计去重后）
     max_days_ago = 10  # 最多向前查找10天
     total_raw_nodes = 0  # 累计原始节点数（未去重）
 
