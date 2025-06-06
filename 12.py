@@ -120,7 +120,7 @@ async def process_links_and_count_nodes():
     print(f"已将去重后的 {unique_count} 个节点保存至 unique_nodes.txt")
 
 if __name__ == "__main__":
-    groups = ['@pgkj0402']  # 目标群组（保持原逻辑）
+    groups = ['@pgkj666']  # 目标群组（保持原逻辑）
 
     async def main():
         semaphore = asyncio.Semaphore(3)  # 限制并发数（保持原逻辑）
