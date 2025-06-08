@@ -28,4 +28,4 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
           CF_KV_KEY: "LINK.txt"  # 可选，若需修改键名可调整
-        run: python KV.PY  # 注意路径与仓库结构匹配（若脚本在根目录则改为 python KV.py）
+        run: python kv.py  # 注意路径与仓库结构匹配（若脚本在根目录则改为 python KV.py）
