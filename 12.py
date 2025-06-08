@@ -11,8 +11,8 @@ api_hash = os.getenv('TELEGRAM_API_HASH')
 session_string = os.getenv('TELEGRAM_SESSION_STRING')
 
 # 定义正则表达式，用于匹配订阅链接（调整后支持反引号包裹的链接）
-# 定义正则表达式（优化后仅捕获链接）
-SUBSCRIPTION_LINK_REGEX = r'(?:v2ray订阅):\s*`(https?://[^\s`]+)`' # 匹配格式：🔗订阅链接: `http://xxx` 或 v2ray订阅: `http://xxx`
+# 定义正则表达式（优化后匹配v2ray订阅后的链接，支持更多空格和符号）
+SUBSCRIPTION_LINK_REGEX = r'(?:🔗订阅链接|v2ray订阅):\s*`(https?://[^\s`]+)`'  # 保持原逻辑，但明确匹配v2ray订阅后的链接
 MAX_LINKS = 50  # 最大链接数（提取为常量）
 RETRY_TIMES = 3  # 重试次数
 
@@ -120,7 +120,7 @@ async def process_links_and_count_nodes():
     print(f"已将去重后的 {unique_count} 个节点保存至 unique_nodes.txt")
 
 if __name__ == "__main__":
-    groups = ['@pgkj666']  # 目标群组（保持原逻辑）
+    groups = ['@fqDINYUE','@zzzjjjkkkoi']  # 目标群组（保持原逻辑）
 
     async def main():
         semaphore = asyncio.Semaphore(3)  # 限制并发数（保持原逻辑）
