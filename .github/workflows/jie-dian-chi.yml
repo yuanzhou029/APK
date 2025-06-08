@@ -1,64 +1,62 @@
 name: VLESS-Cloudflare KV
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # 手动触发
   schedule:
-    - cron: '0 */4 * * *'  # 每4小时触发一次
+    - cron: '0 */4 * * *'  # 每4小时自动触发
 
 jobs:
   upload-to-r2:
     runs-on: ubuntu-latest
     permissions:
-      contents: write 
+      contents: write  # 允许提交代码到仓库
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1  # 仅检出最新提交（减少下载量）
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'  # 指定Python版本
+          cache: 'pip'  # 缓存pip依赖（加速后续运行）
 
-    - name: Install dependencies
-      run: |
-        pip install requests
-        sudo apt-get update && sudo apt-get install -y python3-pip
-        pip3 install awscli --upgrade
-        pip install requests
-        pip install telethon
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests telethon awscli  # 合并重复的依赖安装（移除冗余命令）
 
-    - name: Run Python script
-      run: |
-        python get_subscription.py
-        python get_token.py
-  
+      - name: Run core Python scripts
+        run: |
+          python get_subscription.py  # 运行订阅获取脚本（需确保文件存在）
+          python get_token.py         # 运行Token获取脚本（需确保文件存在）
 
-    - name: Run scraping script
-      env:
-        TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
-        TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
-        TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
-        run: python 12.py  # 调整为仓库内实际路径（如文件在根目录可简化为 python 12.py）
+      - name: Run Telegram scraping script
+        env:
+          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
+        run: python 12.py  # 调整为实际路径（如文件在根目录无需修改）
 
+      - name: Sync to Cloudflare KV
+        env:
+          CF_EMAIL: ${{ secrets.CF_EMAIL }}
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
+          CF_KV_KEY: "LINK.txt"
+        run: python kv.py  # 确保kv.py存在且路径正确
 
-    - name: 运行 KV 同步脚本
-      env:
-          # 从 GitHub Secrets 注入环境变量（需提前在仓库 Settings > Secrets 中配置）
-        CF_EMAIL: ${{ secrets.CF_EMAIL }}
-        CF_API_KEY: ${{ secrets.CF_API_KEY }}
-        CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-        CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
-        CF_KV_KEY: "LINK.txt"  # 可选，若需修改键名可调整
-        run: python kv.py  # 注意路径与仓库结构匹配（若脚本在根目录则改为 python KV.py）
-
-    - name: Commit and push changes
-      run: |
-        git config user.name "GitHub Actions"
-        git config user.email "actions@github.com"
-        git add links.txt
-        git commit -m "Update links.txt with valid URLs"
-        git push  
-
-        
-          
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add links.txt  # 仅提交修改的文件（避免意外提交）
+          if [ -n "$(git status --porcelain)" ]; then  # 仅当有修改时提交
+            git commit -m "Update links.txt with valid URLs"
+            git push
+          else
+            echo "No changes to commit"
+          fi
