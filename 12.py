@@ -3,7 +3,6 @@ from telethon.sessions import StringSession
 import re
 import os
 import asyncio
-import requests  # 新增：用于获取订阅内容
 
 # 从环境变量读取敏感信息（GitHub Actions 中通过 Secrets 注入）
 api_id = os.getenv('TELEGRAM_API_ID')
@@ -59,66 +58,6 @@ async def get_subscription_links(group_username):
     
     return links[:MAX_LINKS]
 
-# 新增：节点提取正则（复用之前TG.PY的扩展版本，覆盖更多特殊字符）
-NODE_REGEX = r'vmess://[\w\-+\/=?&@#.:%]+|vless://[\w\-+\/=?&@#.:%]+|trojan://[\w\-+\/=?&@#.:%]+|ss://[\w\-+\/=?&@#.:%]+|hysteria2://[\w\-+\/=?&@#.:%]+'
-
-async def fetch_subscription_content(url):
-    """获取订阅链接的原始内容（带异常处理）"""
-    try:
-        response = requests.get(url, timeout=15)
-        response.raise_for_status()
-        return response.text
-    except Exception as e:
-        print(f"获取订阅链接 {url} 失败: {str(e)}")
-        return None
-
-async def process_links_and_count_nodes():
-    """处理links.txt中的链接，累计节点并去重统计"""
-    # 读取links.txt中的所有订阅链接
-    if not os.path.exists('links.txt'):
-        print("错误：未找到 links.txt 文件")
-        return
-
-    with open('links.txt', 'r', encoding='utf-8') as f:
-        subscription_links = [line.strip() for line in f.readlines() if line.strip()]
-
-    if not subscription_links:
-        print("错误：links.txt 中无有效订阅链接")
-        return
-
-    # 累计节点到临时文件（temp_nodes.txt）
-    temp_nodes_path = 'temp_nodes.txt'
-    if os.path.exists(temp_nodes_path):
-        os.remove(temp_nodes_path)  # 每次运行前清空临时文件
-
-    total_nodes = 0
-    for url in subscription_links:
-        content = await fetch_subscription_content(url)
-        if content:
-            # 提取节点并追加到临时文件
-            nodes = re.findall(NODE_REGEX, content)
-            with open(temp_nodes_path, 'a', encoding='utf-8') as f:
-                f.write('\n'.join(nodes) + '\n')  # 换行分隔节点
-            total_nodes += len(nodes)
-            print(f"处理链接 {url} 成功，提取节点数: {len(nodes)}，累计节点数: {total_nodes}")
-
-    # 去重并统计最终节点数
-    if not os.path.exists(temp_nodes_path):
-        print("错误：临时文件 temp_nodes.txt 未生成")
-        return
-
-    with open(temp_nodes_path, 'r', encoding='utf-8') as f:
-        all_nodes = [line.strip() for line in f.readlines() if line.strip()]
-
-    unique_nodes = list(set(all_nodes))  # 去重
-    unique_count = len(unique_nodes)
-    print(f"\n最终统计：累计原始节点数 {total_nodes}，去重后节点数 {unique_count}")
-
-    # 保存去重后的节点（可选）
-    with open('unique_nodes.txt', 'w', encoding='utf-8') as f:
-        f.write('\n'.join(unique_nodes))
-    print(f"已将去重后的 {unique_count} 个节点保存至 unique_nodes.txt")
-
 if __name__ == "__main__":
     groups = ['@fqDINYUE','@zzzjjjkkkoi']  # 目标群组（保持原逻辑）
 
@@ -140,8 +79,5 @@ if __name__ == "__main__":
             for link in all_links:
                 f.write(link + '\n')
         print("已将订阅链接保存至 links.txt 文件。")
-
-        # 新增：抓取完成后处理节点统计
-        await process_links_and_count_nodes()
 
     asyncio.run(main())
