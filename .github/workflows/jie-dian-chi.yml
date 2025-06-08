@@ -27,6 +27,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests telethon awscli  # 合并重复的依赖安装（移除冗余命令）
 
+      - name: Clear links.txt content
+        run: echo -n "" > links.txt 
+
       - name: Run core Python scripts
         run: |
           python get_subscription.py  # 运行订阅获取脚本（需确保文件存在）
