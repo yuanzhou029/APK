@@ -32,12 +32,12 @@ jobs:
       - name: Clear links.txt content
         run: echo -n "" > links.txt 
 
-      - name: Run Telegram scraping script
-        env:
-          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
-          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
-          TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
-        run: python tg-url.py  # 调整为实际路径（如文件在根目录无需修改）
+      #- name: Run Telegram scraping script
+      #  env:
+      #    TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+      #    TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+      #    TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
+      #  run: python tg-url.py  # 调整为实际路径（如文件在根目录无需修改）
 
       - name: Run core Python scripts
         run: |
