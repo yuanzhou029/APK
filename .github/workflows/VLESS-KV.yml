@@ -1,4 +1,4 @@
-name: VLESS-Cloudflare KV
+name: VLESS-KV
 
 on:
   workflow_dispatch:  # 手动触发
