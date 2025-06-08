@@ -39,8 +39,9 @@ jobs:
 
       - name: Run core Python scripts
         run: |
-          python tg@pgkj0402.py  # 运行订阅获取脚本（需确保文件存在）
-          python get_token.py         # 运行Token获取脚本（需确保文件存在）
+          python tg@pgkj0402.py       # 运行订阅获取脚本（需确保文件存在）
+          python get_token.py         # 运行Token获取脚本（需确保文件存在)
+          python yz.py                # 运行去重检查脚本（对links.txt文件的链接进行去重和检测）
 
       - name: Sync to Cloudflare KV
         env:
