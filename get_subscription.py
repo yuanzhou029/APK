@@ -11,6 +11,16 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def get_valid_urls():
+    # 确认 links.txt 是否存在（同目录下）
+    links_path = os.path.join(os.path.dirname(__file__), "links.txt")
+    if not os.path.exists(links_path):
+        # 不存在则创建空文件（避免后续追加时报错）
+        with open(links_path, "w", encoding="utf-8") as f:
+            pass
+        logger.info("links.txt 文件不存在，已创建新文件")
+    else:
+        logger.info("links.txt 文件已存在")
+
     today = datetime.now()
     max_days_ago = 10  # 最多向前查找10天（保持原参数）
 
@@ -31,7 +41,7 @@ def get_valid_urls():
                 response.raise_for_status()  # 验证URL有效性（HTTP状态码2xx）
                 
                 # 有效URL追加到links.txt（不覆盖原有数据）
-                with open("links.txt", "a", encoding="utf-8") as f:
+                with open(links_path, "a", encoding="utf-8") as f:
                     f.write(url + "\n")  # 每个URL占一行
                 logger.info(f"URL有效，已保存到links.txt: {url}")
 
