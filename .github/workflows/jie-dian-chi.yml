@@ -14,14 +14,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 1  # 仅检出最新提交（减少下载量）
+
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'  # 指定Python版本
-          cache: 'pip'  # 缓存pip依赖（加速后续运行）
+        
 
       - name: Install dependencies
         run: |
