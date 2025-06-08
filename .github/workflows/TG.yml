@@ -25,3 +25,11 @@ jobs:
 
       - name: Run Python script
         run: python get_subscription.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add links.txt
+          git commit -m "Update links.txt with valid URLs"
+          git push  
