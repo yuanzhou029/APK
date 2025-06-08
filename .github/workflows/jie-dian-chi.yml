@@ -32,7 +32,7 @@ jobs:
 
       - name: Run core Python scripts
         run: |
-          python get_subscription.py  # 运行订阅获取脚本（需确保文件存在）
+          python tg@pgkj0402.py  # 运行订阅获取脚本（需确保文件存在）
           python get_token.py         # 运行Token获取脚本（需确保文件存在）
 
       - name: Run Telegram scraping script
