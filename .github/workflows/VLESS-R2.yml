@@ -8,6 +8,8 @@ on:
 jobs:
   upload-to-r2:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write 
     
     steps:
     - name: Checkout code
@@ -27,4 +29,12 @@ jobs:
     - name: Get subscription URL
       run: |
         python get_token.py
+
+    - name: Commit and push changes
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add links.txt
+        git commit -m "Update links.txt with valid URLs"
+        git push
         
