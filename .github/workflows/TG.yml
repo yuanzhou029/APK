@@ -24,4 +24,4 @@ jobs:
           pip install requests
 
       - name: Run Python script
-        run: python ./get_subscription.py
+        run: python get_subscription.py
