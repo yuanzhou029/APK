@@ -30,17 +30,17 @@ jobs:
       - name: Clear links.txt content
         run: echo -n "" > links.txt 
 
-      - name: Run core Python scripts
-        run: |
-          python tg@pgkj0402.py  # 运行订阅获取脚本（需确保文件存在）
-          python get_token.py         # 运行Token获取脚本（需确保文件存在）
-
       - name: Run Telegram scraping script
         env:
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
         run: python tg-url.py  # 调整为实际路径（如文件在根目录无需修改）
+
+      - name: Run core Python scripts
+        run: |
+          python tg@pgkj0402.py  # 运行订阅获取脚本（需确保文件存在）
+          python get_token.py         # 运行Token获取脚本（需确保文件存在）
 
       - name: Sync to Cloudflare KV
         env:
