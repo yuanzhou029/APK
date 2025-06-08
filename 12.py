@@ -74,10 +74,10 @@ if __name__ == "__main__":
         all_links = [link for sublist in results for link in sublist]
         print(f"\n抓取完成！共收集到 {len(all_links)} 个订阅链接。")
 
-        # 写入文件（保持原逻辑）
-        with open('links.txt', 'w', encoding='utf-8') as f:
+        # 写入文件（修改为追加模式，不覆盖原有内容）
+        with open('links.txt', 'a', encoding='utf-8') as f:  # 原模式 'w' 改为 'a'
             for link in all_links:
                 f.write(link + '\n')
-        print("已将订阅链接保存至 links.txt 文件。")
+        print("已将订阅链接追加保存至 links.txt 文件。")
 
     asyncio.run(main())
