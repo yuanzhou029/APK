@@ -40,7 +40,7 @@ jobs:
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
-        run: python 12.py  # 调整为实际路径（如文件在根目录无需修改）
+        run: python tg-url.py  # 调整为实际路径（如文件在根目录无需修改）
 
       - name: Sync to Cloudflare KV
         env:
