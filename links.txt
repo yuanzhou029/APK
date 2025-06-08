@@ -102,3 +102,4 @@ http://103.35.189.118:7001/s/68a95aaf8a22330847c0507d28147292
 https://subapi.cmliussss.net/sub?&url=https%3A%2F%2Fd.aizrf.com%2Fvless-base64&target=clash&emoji=true&append_type=true&append_info=true&scv=false&udp=false&list=false&sort=false&fdn=false&insert=false
 https://igdux.top/jJba
 https://c1a1afff.ghelper.me/clash/6c15b2d7c9372686a289fbe9bb13037a
+https://ohayoo-pm.hf.space/api/v1/subscribe?token=ouiw0lw7h3gx9fzm&target=v2ray&list=true
