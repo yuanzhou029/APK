@@ -34,6 +34,7 @@ jobs:
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
           aws s3 cp Clash.txt s3://$BUCKET_NAME/Clash.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp Clash1.txt s3://$BUCKET_NAME/Clash1.txt --endpoint-url $AWS_ENDPOINT_URL
 
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
