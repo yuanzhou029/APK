@@ -15,7 +15,7 @@ jobs:
          TARGET_URL: "https://sub.fqzsnai.ggff.net/auto"
          OUTPUT_FILE: "Clash1.txt"
         run: |
-          curl -L "sub.140407.xyz/sub?target=v2ray&url=https://ys.jiedianxielou.workers.dev" -o Clash.txt
+          curl -L "url.v1.mk/sub?target=v2ray&url=https://ys.jiedianxielou.workers.dev" -o Clash.txt
           curl -L "${{ env.TARGET_URL }}" -o ${{ env.OUTPUT_FILE }}
 
 
