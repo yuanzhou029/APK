@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 def extract_subscription_links(page_content):
     # 正则匹配目标格式：https://mm.mibei77.com/YYYYMM/DD.随机字符.txt
     # 解释：https?:// 匹配 http/https 协议；mm\.mibei77\.com 固定域名；\d{6} 匹配 YYYYMM（如202506）；\d{2} 匹配 DD（如06）；[a-zA-Z0-9]+ 匹配随机字符串；\.txt 固定后缀
-    pattern = re.compile(r'https?://(?:mm\.mibei77\.com/\d+/\d+\.[a-zA-Z0-9]+|fs\.v2rayse\.com/share/\d+/[a-zA-Z0-9]+)\.txt')
+    pattern = re.compile(r'https?://(?:mm\.mibei77\.com/\d+/\d+\.[a-zA-Z0-9]+|fs\.v2rayse\.com/share/\d+/[a-zA-Z0-9]+)\.yaml|txt')
     return pattern.findall(page_content)
 
 def find_recent_messages(url):
