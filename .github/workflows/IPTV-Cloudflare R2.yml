@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: Download file from GitHub
         run: |
-          curl -o result.txt https://raw.githubusercontent.com/Fabali/Jsnzkpg/refs/heads/Jsnzkpg/Jsnzkpg1
-          curl -o result.m3u https://raw.githubusercontent.com/Fabali/Jsnzkpg/refs/heads/Jsnzkpg/Jsnzkpg1
+          curl -o result.txt https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg1
+          curl -o result.m3u https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg1
 
       - name: Install AWS CLI
         run: |
