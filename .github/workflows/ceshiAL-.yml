@@ -3,7 +3,7 @@ name: DY - AliyunDrive
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 */4 * * *'  # UTC 22:00 触发，北京时间 6:00
+    - cron: '0 */4 * * *'  # 每4小时运行一次
 
 jobs:
   upload-to-aliyun:
@@ -15,10 +15,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y python3-pip
           pip install --upgrade pip
-          pip install aligo
+          pip install aligo requests
 
       - name: 下载订阅文件
         run: |
+          rm -f dy-*.txt  # 先清空旧文件
           urls=(
             "https://sub.fqzsnai.ggff.net/auto"
             "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt"
@@ -52,20 +53,48 @@ jobs:
             i=$((i+1))
           done
 
-      - name: 上传到阿里云盘
+      - name: 上传到阿里云盘（自动刷新 token）
         env:
           ALIYUN_REFRESH_TOKEN: ${{ secrets.ALIYUN_REFRESH_TOKEN }}
+          ALIYUN_AUTH_CODE: ${{ secrets.ALIYUN_AUTH_CODE }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 << 'EOF'
           import os
+          import requests
           from aligo import Aligo
+          from github import Github
 
           refresh_token = os.environ.get("ALIYUN_REFRESH_TOKEN")
+          auth_code = os.environ.get("ALIYUN_AUTH_CODE")
+
+          if not refresh_token and not auth_code:
+              raise Exception("缺少 ALIYUN_REFRESH_TOKEN 或 ALIYUN_AUTH_CODE")
+
+          # 如果 refresh_token 不存在，就用 auth_code 登录获取
+          if not refresh_token:
+              r = requests.post(
+                  "https://auth.aliyundrive.com/v2/oauth/token",
+                  json={
+                      "code": auth_code,
+                      "grant_type": "authorization_code"
+                  }
+              )
+              r.raise_for_status()
+              refresh_token = r.json()["refresh_token"]
+
+          # 用 aligo 登录
           ali = Aligo(refresh_token=refresh_token)
 
-          # 创建一个文件夹存放
-          folder = ali.create_folder('DY订阅文件')
+          # 获取新的 refresh_token
+          new_token = ali.refresh_token
+          if new_token != refresh_token:
+              print("检测到新的 refresh_token，更新到 GitHub Secrets")
+              repo = Github(os.environ["GH_TOKEN"]).get_repo(os.environ["GITHUB_REPOSITORY"])
+              repo.create_or_update_secret("ALIYUN_REFRESH_TOKEN", new_token)
 
+          # 上传文件
+          folder = ali.create_folder('DY订阅文件')
           for i in range(1, 25):
               file_name = f"dy-{i}.txt"
               if os.path.exists(file_name):
