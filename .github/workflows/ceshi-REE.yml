@@ -12,9 +12,30 @@ jobs:
     steps:
       - name: 清理旧文件，下载并保存内容
         run: |
-          rm -f C1.txt C2.txt
-          curl -L "https://sub.fqzsnai.ggff.net/auto" -o C1.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o C2.txt
+          rm -f dy-1.txt dy-2.txt
+          curl -L "https://sub.fqzsnai.ggff.net/auto" -o dy-1.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-2.txt
+          curl -L "https://sub.zyfx6.xyz/share/file/%E6%B0%B8%E4%B9%85%E8%AE%A2%E9%98%85%40txwl666?token=clash" -o dy-3.txt
+          curl -L "https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg" -o dy-4.txt
+          curl -L "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Splitted-By-Protocol/vless.txt" -o dy-5.txt
+          curl -L "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Splitted-By-Protocol/trojan.txt" -o dy-6.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-7.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-8.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-9.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-10.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-11.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-12.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-13.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-14.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-15.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-16.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-17.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-18.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-19.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-20.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-21.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-22.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-23.txt
 
 
       - name: Install AWS CLI
