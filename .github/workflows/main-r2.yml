@@ -1,48 +1,29 @@
-name: R2 multiple URLs
+name: VLESS- R2
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */4 * * *'
+     - cron: '0 */4 * * *'  # UTC 22:00 触发，北京时间 6:00
 
 jobs:
   upload-to-r2:
     runs-on: ubuntu-latest
 
-    env:
-      # 用分号分隔的多个目标订阅 URL
-      TARGET_URLS: |
-        https://dy.51281868.xyz/yuanzhou029?b64
-        https://sub.fqzsnai.ggff.net/auto
-        https://ys.jiedianxielou.workers.dev
-        
-      OUTPUT_FILE: "v2ray.txt"
-
     steps:
-      - name: Install curl
-        run: sudo apt-get update && sudo apt-get install -y curl
-
-      - name: Download and convert multiple URLs, merge to one file
+      - name: Download converted Clash.txt from your backend
+        env:
+         TARGET_URL: "https://subapi.140407.xyz/sub?target=v2ray&url=https%3A%2F%2Fys.jiedianxielou.workers.dev&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false"
+         OUTPUT_FILE: "Clash1.txt"
         run: |
-          # 清空输出文件
-          > ${{ env.OUTPUT_FILE }}
+          curl -L "${{ env.TARGET_URL }}" -o ${{ env.OUTPUT_FILE }}
 
-          # 读取环境变量的多行URL，逐行处理
-          echo "${{ env.TARGET_URLS }}" | while read url; do
-            if [ ! -z "$url" ]; then
-              echo "Processing $url ..."
-              # 拼装转换接口URL，获取转换后的内容
-              curl -s -L "https://sub.140407.xyz/sub?target=v2ray&url=$url" >> ${{ env.OUTPUT_FILE }}
-              echo -e "\n" >> ${{ env.OUTPUT_FILE }}  # 文件间加个换行分隔
-            fi
-          done
 
       - name: Install AWS CLI
         run: |
           sudo apt-get update && sudo apt-get install -y python3-pip
           pip3 install awscli --upgrade
 
-      - name: Upload merged Clash1.txt to Cloudflare R2
+      - name: Upload Clash.txt to Cloudflare R2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
@@ -50,4 +31,27 @@ jobs:
           AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          aws s3 cp ${{ env.OUTPUT_FILE }} s3://$BUCKET_NAME/${{ env.OUTPUT_FILE }} --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp Clash.txt s3://$BUCKET_NAME/Clash.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp Clash1.txt s3://$BUCKET_NAME/Clash1.txt --endpoint-url $AWS_ENDPOINT_URL
+
+  cleanup-workflow-runs:
+    runs-on: ubuntu-latest
+    needs: upload-to-r2
+
+    steps:
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Delete completed workflow runs
+        env:
+          GH_TOKEN: ${{ secrets.GT_TOKEN }}
+        run: |
+          echo "Fetching completed workflow runs..."
+          RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
+            | jq '.workflow_runs[] | select(.status == "completed") | .id')
+          for run_id in $RUN_IDS; do
+            echo "Deleting run ID: $run_id"
+            curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
+          done
