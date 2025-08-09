@@ -1,0 +1,56 @@
+name: CESHI- R2
+
+on:
+  workflow_dispatch:
+  schedule:
+     - cron: '0 */4 * * *'  # UTC 22:00 触发，北京时间 6:00
+
+jobs:
+  upload-to-r2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 清理旧文件，下载并保存内容
+        run: |
+          rm -f C1.txt C2.txt
+          curl -L "https://sub.fqzsnai.ggff.net/auto" -o C1.txt
+          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o C2.txt
+
+
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update && sudo apt-get install -y python3-pip
+          pip3 install awscli --upgrade
+
+      - name: Upload Clash.txt to Cloudflare R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
+          AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
+          BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
+        run: |
+          aws s3 cp C1.txt s3://$BUCKET_NAME/C1.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp C2.txt s3://$BUCKET_NAME/C2.txt --endpoint-url $AWS_ENDPOINT_URL
+
+  cleanup-workflow-runs:
+    runs-on: ubuntu-latest
+    needs: upload-to-r2
+
+    steps:
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Delete completed workflow runs
+        env:
+          GH_TOKEN: ${{ secrets.GT_TOKEN }}
+        run: |
+          echo "Fetching completed workflow runs..."
+          RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
+            | jq '.workflow_runs[] | select(.status == "completed") | .id')
+          for run_id in $RUN_IDS; do
+            echo "Deleting run ID: $run_id"
+            curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
+          done
