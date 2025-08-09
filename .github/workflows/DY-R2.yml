@@ -2,8 +2,8 @@ name: DY - R2
 
 on:
   workflow_dispatch:
-  schedule:
-     - cron: '0 */4 * * *'  # UTC 22:00 触发，北京时间 6:00
+  #schedule:
+     #- cron: '0 */4 * * *'  # UTC 22:00 触发，北京时间 6:00
 
 jobs:
   upload-to-r2:
