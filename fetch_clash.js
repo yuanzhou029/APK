@@ -1,9 +1,11 @@
 const fs = require('fs');
-const puppeteer = require('puppeteer');
+const puppeteerExtra = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+
+puppeteerExtra.use(StealthPlugin());
 
 (async () => {
   const urlEnv = process.env.TARGET_URLS || '';
-  // 按换行或逗号分割都支持，且去除空行和空字符串
   const urls = urlEnv.split(/[\n,]+/).map(u => u.trim()).filter(Boolean);
 
   if (urls.length === 0) {
@@ -13,11 +15,10 @@ const puppeteer = require('puppeteer');
 
   const outputFile = process.env.OUTPUT_FILE || 'v2ray.txt';
 
-  // 运行开始时清空文件
   fs.writeFileSync(outputFile, '', 'utf-8');
   console.log(`清空文件：${outputFile}`);
 
-  const browser = await puppeteer.launch({
+  const browser = await puppeteerExtra.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
@@ -29,10 +30,8 @@ const puppeteer = require('puppeteer');
       console.log(`开始访问：${url}`);
       await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
 
-      // 获取页面纯文本内容
       const content = await page.evaluate(() => document.body.innerText);
 
-      // 追加写入文件
       fs.appendFileSync(outputFile, content + '\n\n', 'utf-8');
 
       console.log(`成功追加内容，URL：${url}`);
