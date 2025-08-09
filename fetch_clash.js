@@ -3,41 +3,44 @@ const puppeteer = require('puppeteer');
 
 (async () => {
   const urlEnv = process.env.TARGET_URLS || '';
-  const urlList = urlEnv.split(',').map(u => u.trim()).filter(Boolean);
+  // 按换行或逗号分割都支持，且去除空行和空字符串
+  const urls = urlEnv.split(/[\n,]+/).map(u => u.trim()).filter(Boolean);
 
-  if (urlList.length === 0) {
-    console.error('请设置环境变量 TARGET_URLS，多条 URL 用逗号分隔');
+  if (urls.length === 0) {
+    console.error('请设置环境变量 TARGET_URLS，多个 URL 用换行或逗号分隔');
     process.exit(1);
   }
 
   const outputFile = process.env.OUTPUT_FILE || 'v2ray.txt';
 
-  // 清空文件，避免重复追加
+  // 运行开始时清空文件
   fs.writeFileSync(outputFile, '', 'utf-8');
+  console.log(`清空文件：${outputFile}`);
 
   const browser = await puppeteer.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 
   const page = await browser.newPage();
 
-  for (const url of urlList) {
+  for (const url of urls) {
     try {
-      console.log(`正在访问：${url}`);
+      console.log(`开始访问：${url}`);
       await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
 
-      const content = await page.evaluate(() => document.body.textContent);
+      // 获取页面纯文本内容
+      const content = await page.evaluate(() => document.body.innerText);
 
+      // 追加写入文件
       fs.appendFileSync(outputFile, content + '\n\n', 'utf-8');
 
       console.log(`成功追加内容，URL：${url}`);
-    } catch (e) {
-      console.error(`访问失败，跳过 URL：${url}\n错误：${e.message}`);
+    } catch (err) {
+      console.error(`访问失败，跳过 URL：${url}，错误：${err.message}`);
     }
   }
 
   await browser.close();
-
-  console.log(`所有完成，内容已保存到 ${outputFile}`);
+  console.log(`全部完成，内容已保存到 ${outputFile}`);
 })();
