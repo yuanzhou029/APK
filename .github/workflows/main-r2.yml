@@ -24,7 +24,7 @@ jobs:
       - name: Run Puppeteer to fetch Clash.txt
         env:
           TARGET_URL: "https://subapi.140407.xyz/sub?target=v2ray&url=https%3A%2F%2Fys.jiedianxielou.workers.dev&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false"
-          OUTPUT_FILE: "Clash1.txt"
+          OUTPUT_FILE: "v2ray.txt"
         run: node fetch_clash.js
 
       - name: Install AWS CLI
@@ -40,4 +40,4 @@ jobs:
           AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          aws s3 cp Clash1.txt s3://$BUCKET_NAME/Clash1.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp Clash1.txt s3://$BUCKET_NAME/v2ray.txt --endpoint-url $AWS_ENDPOINT_URL
