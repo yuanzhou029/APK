@@ -13,7 +13,7 @@ puppeteerExtra.use(StealthPlugin());
     process.exit(1);
   }
 
-  const outputFile = process.env.OUTPUT_FILE || 'v2ray.txt';
+  const outputFile = process.env.OUTPUT_FILE || 'dy.txt';
 
   fs.writeFileSync(outputFile, '', 'utf-8');
   console.log(`清空文件：${outputFile}`);
