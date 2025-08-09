@@ -19,23 +19,23 @@ jobs:
           curl -L "https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg" -o dy-4.txt
           curl -L "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Splitted-By-Protocol/vless.txt" -o dy-5.txt
           curl -L "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Splitted-By-Protocol/trojan.txt" -o dy-6.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-7.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-8.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-9.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-10.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-11.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-12.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-13.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-14.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-15.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-16.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-17.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-18.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-19.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-20.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-21.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-22.txt
-          curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-23.txt
+          curl -L "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Splitted-By-Protocol/vmess.txt" -o dy-7.txt
+          curl -L "http://43.207.145.186:8080/clash/proxies?type=all" -o dy-8.txt
+          curl -L "https://pp.dcd.one/clash/proxies" -o dy-9.txt
+          curl -L "https://ys.jiedianxielou.workers.dev" -o dy-10.txt
+          curl -L "https://q3dlaxpoaq.github.io/APIs/sc0.yaml" -o dy-11.txt
+          curl -L "https://q3dlaxpoaq.github.io/APIs/sc2.yaml" -o dy-12.txt
+          curl -L "https://q3dlaxpoaq.github.io/APIs/sc3.yaml" -o dy-13.txt
+          curl -L "https://q3dlaxpoaq.github.io/APIs/sc4.yaml" -o dy-14.txt
+          curl -L "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml" -o dy-15.txt
+          curl -L "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml" -o dy-16.txt
+          curl -L "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml" -o dy-17.txt
+          curl -L "https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml" -o dy-18.txt
+          curl -L "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml" -o dy-19.txt
+          curl -L "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml" -o dy-20.txt
+          curl -L "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml" -o dy-21.txt
+          curl -L "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml" -o dy-22.txt
+          curl -L "https://raw.githubusercontent.com/xiaoji235/airport-free/refs/heads/main/v2ray.txt" -o dy-23.txt
 
 
       - name: Install AWS CLI
