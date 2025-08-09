@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install puppeteer
-        run: npm install puppeteer
+      - name: Install puppeteer-extra and stealth plugin
+        run: npm install puppeteer-extra puppeteer-extra-plugin-stealth puppeteer
 
       - name: Run Puppeteer to fetch v2ray.txt from multiple URLs
         env:
