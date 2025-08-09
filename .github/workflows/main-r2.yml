@@ -16,7 +16,7 @@ jobs:
         https://sub.fqzsnai.ggff.net/auto
         https://ys.jiedianxielou.workers.dev
         
-      OUTPUT_FILE: "Clash1.txt"
+      OUTPUT_FILE: "v2ray.txt"
 
     steps:
       - name: Install curl
