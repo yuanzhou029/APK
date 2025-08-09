@@ -32,7 +32,7 @@ jobs:
             if [ ! -z "$url" ]; then
               echo "Processing $url ..."
               # 拼装转换接口URL，获取转换后的内容
-              curl -s -L "https://subapi.cmliussss.net/sub?target=v2ray&url=$url" >> ${{ env.OUTPUT_FILE }}
+              curl -s -L "https://sub.140407.xyz/sub?target=v2ray&url=$url" >> ${{ env.OUTPUT_FILE }}
               echo -e "\n" >> ${{ env.OUTPUT_FILE }}  # 文件间加个换行分隔
             fi
           done
