@@ -70,7 +70,7 @@ jobs:
 
           ali = Aligo(refresh_token=refresh_token)
 
-          new_token = ali.token.refresh_token
+          new_token = ali.refresh_token  # 获取刷新后的token
 
           if new_token != refresh_token:
               print("检测到新的 refresh_token，更新到 GitHub Secrets")
