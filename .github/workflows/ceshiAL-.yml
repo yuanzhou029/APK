@@ -19,31 +19,11 @@ jobs:
 
       - name: 下载订阅文件
         run: |
-          rm -f dy-*.txt  # 先清空旧文件
+          rm -f dy-*.txt
           urls=(
             "https://sub.fqzsnai.ggff.net/auto"
             "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt"
-            "https://sub.zyfx6.xyz/share/file/%E6%B0%B8%E4%B9%85%E8%AE%A2%E9%98%85%40txwl666?token=clash"
-            "https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
-            "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Splitted-By-Protocol/vless.txt"
-            "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Splitted-By-Protocol/trojan.txt"
-            "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Splitted-By-Protocol/vmess.txt"
-            "http://43.207.145.186:8080/clash/proxies?type=all"
-            "https://pp.dcd.one/clash/proxies"
-            "https://ys.jiedianxielou.workers.dev"
-            "https://q3dlaxpoaq.github.io/APIs/sc0.yaml"
-            "https://q3dlaxpoaq.github.io/APIs/sc2.yaml"
-            "https://q3dlaxpoaq.github.io/APIs/sc3.yaml"
-            "https://q3dlaxpoaq.github.io/APIs/sc4.yaml"
-            "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml"
-            "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml"
-            "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
-            "https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml"
-            "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml"
-            "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml"
-            "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
-            "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml"
-            "https://raw.githubusercontent.com/xiaoji235/airport-free/refs/heads/main/v2ray.txt"
+            # ... 这里省略其他链接，保持你原先列表 ...
             "https://dy.51281868.xyz/yuanzhou029?b64"
           )
           i=1
@@ -53,48 +33,29 @@ jobs:
             i=$((i+1))
           done
 
-      - name: 上传到阿里云盘（自动刷新 token）
+      - name: 上传到阿里云盘（自动刷新 token，仅用 refresh_token）
         env:
           ALIYUN_REFRESH_TOKEN: ${{ secrets.ALIYUN_REFRESH_TOKEN }}
-          ALIYUN_AUTH_CODE: ${{ secrets.ALIYUN_AUTH_CODE }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           python3 << 'EOF'
           import os
-          import requests
           from aligo import Aligo
           from github import Github
 
           refresh_token = os.environ.get("ALIYUN_REFRESH_TOKEN")
-          auth_code = os.environ.get("ALIYUN_AUTH_CODE")
-
-          if not refresh_token and not auth_code:
-              raise Exception("缺少 ALIYUN_REFRESH_TOKEN 或 ALIYUN_AUTH_CODE")
-
-          # 如果 refresh_token 不存在，就用 auth_code 登录获取
           if not refresh_token:
-              r = requests.post(
-                  "https://auth.aliyundrive.com/v2/oauth/token",
-                  json={
-                      "code": auth_code,
-                      "grant_type": "authorization_code"
-                  }
-              )
-              r.raise_for_status()
-              refresh_token = r.json()["refresh_token"]
+              raise Exception("缺少 ALIYUN_REFRESH_TOKEN，请先手动获取并配置到 Secrets")
 
-          # 用 aligo 登录
           ali = Aligo(refresh_token=refresh_token)
-
-          # 获取新的 refresh_token
           new_token = ali.refresh_token
+
           if new_token != refresh_token:
               print("检测到新的 refresh_token，更新到 GitHub Secrets")
               repo = Github(os.environ["GH_TOKEN"]).get_repo(os.environ["GITHUB_REPOSITORY"])
               repo.create_or_update_secret("ALIYUN_REFRESH_TOKEN", new_token)
 
-          # 上传文件
           folder = ali.create_folder('DY订阅文件')
           for i in range(1, 25):
               file_name = f"dy-{i}.txt"
