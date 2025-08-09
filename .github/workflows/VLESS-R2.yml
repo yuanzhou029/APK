@@ -15,7 +15,7 @@ jobs:
          TARGET_URL: "https://sub.fqzsnai.ggff.net/auto"
          OUTPUT_FILE: "Clash1.txt"
         run: |
-          curl -L "sub.cmliussss.com/sub?target=v2ray&url=https://ys.jiedianxielou.workers.dev" -o Clash.txt
+          curl -L "https://subapi.140407.xyz/sub?target=v2ray&url=https%3A%2F%2Fys.jiedianxielou.workers.dev&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false" -o Clash.txt
           curl -L "${{ env.TARGET_URL }}" -o ${{ env.OUTPUT_FILE }}
 
 
