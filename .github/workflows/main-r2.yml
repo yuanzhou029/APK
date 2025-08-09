@@ -1,0 +1,50 @@
+name: R2 multiple URLs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */4 * * *'
+
+jobs:
+  upload-to-r2:
+    runs-on: ubuntu-latest
+
+    env:
+      # 用分号分隔的多个目标订阅 URL
+      TARGET_URLS: |
+        https://dy.51281868.xyz/yuanzhou029?b64
+      OUTPUT_FILE: "Clash1.txt"
+
+    steps:
+      - name: Install curl
+        run: sudo apt-get update && sudo apt-get install -y curl
+
+      - name: Download and convert multiple URLs, merge to one file
+        run: |
+          # 清空输出文件
+          > ${{ env.OUTPUT_FILE }}
+
+          # 读取环境变量的多行URL，逐行处理
+          echo "${{ env.TARGET_URLS }}" | while read url; do
+            if [ ! -z "$url" ]; then
+              echo "Processing $url ..."
+              # 拼装转换接口URL，获取转换后的内容
+              curl -s -L "https://subapi.cmliussss.net/sub?target=v2ray&url=$url" >> ${{ env.OUTPUT_FILE }}
+              echo -e "\n" >> ${{ env.OUTPUT_FILE }}  # 文件间加个换行分隔
+            fi
+          done
+
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update && sudo apt-get install -y python3-pip
+          pip3 install awscli --upgrade
+
+      - name: Upload merged Clash1.txt to Cloudflare R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
+          AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
+          BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
+        run: |
+          aws s3 cp ${{ env.OUTPUT_FILE }} s3://$BUCKET_NAME/${{ env.OUTPUT_FILE }} --endpoint-url $AWS_ENDPOINT_URL
