@@ -51,8 +51,29 @@ jobs:
           AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          aws s3 cp C1.txt s3://$BUCKET_NAME/C1.txt --endpoint-url $AWS_ENDPOINT_URL
-          aws s3 cp C2.txt s3://$BUCKET_NAME/C2.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-1.txt s3://$BUCKET_NAME/dy-1.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-2.txt s3://$BUCKET_NAME/dy-2.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-3.txt s3://$BUCKET_NAME/dy-3.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-4.txt s3://$BUCKET_NAME/dy-4.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-5.txt s3://$BUCKET_NAME/dy-5.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-6.txt s3://$BUCKET_NAME/dy-6.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-7.txt s3://$BUCKET_NAME/dy-7.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-8.txt s3://$BUCKET_NAME/dy-8.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-9.txt s3://$BUCKET_NAME/dy-9.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-10.txt s3://$BUCKET_NAME/dy-10.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-11.txt s3://$BUCKET_NAME/dy-11.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-12.txt s3://$BUCKET_NAME/dy-12.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-13.txt s3://$BUCKET_NAME/dy-13.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-14.txt s3://$BUCKET_NAME/dy-14.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-15.txt s3://$BUCKET_NAME/dy-15.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-16.txt s3://$BUCKET_NAME/dy-16.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-17.txt s3://$BUCKET_NAME/dy-17.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-18.txt s3://$BUCKET_NAME/dy-18.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-19.txt s3://$BUCKET_NAME/dy-19.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-20.txt s3://$BUCKET_NAME/dy-20.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-21.txt s3://$BUCKET_NAME/dy-21.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-22.txt s3://$BUCKET_NAME/dy-22.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-23.txt s3://$BUCKET_NAME/dy-23.txt --endpoint-url $AWS_ENDPOINT_URL
 
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
