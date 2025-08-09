@@ -56,37 +56,21 @@ jobs:
       - name: 上传到阿里云盘（自动刷新 token）
         env:
           ALIYUN_REFRESH_TOKEN: ${{ secrets.ALIYUN_REFRESH_TOKEN }}
-          ALIYUN_AUTH_CODE: ${{ secrets.ALIYUN_AUTH_CODE }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           python3 << 'EOF'
           import os
-          import requests
           from aligo import Aligo
           from github import Github
 
           refresh_token = os.environ.get("ALIYUN_REFRESH_TOKEN")
-          auth_code = os.environ.get("ALIYUN_AUTH_CODE")
-
-          if not refresh_token and not auth_code:
-              raise Exception("缺少 ALIYUN_REFRESH_TOKEN 或 ALIYUN_AUTH_CODE")
-
-          # 如果 refresh_token 不存在，就用 auth_code 登录获取
           if not refresh_token:
-              r = requests.post(
-                  "https://auth.aliyundrive.com/v2/oauth/token",
-                  json={
-                      "code": auth_code,
-                      "grant_type": "authorization_code"
-                  }
-              )
-              r.raise_for_status()
-              refresh_token = r.json()["refresh_token"]
+              raise Exception("缺少 ALIYUN_REFRESH_TOKEN，请在 Secrets 中添加")
 
           ali = Aligo(refresh_token=refresh_token)
 
-          new_token = ali.token.refresh_token  # 这里改为 ali.token.refresh_token
+          new_token = ali.token.refresh_token
 
           if new_token != refresh_token:
               print("检测到新的 refresh_token，更新到 GitHub Secrets")
