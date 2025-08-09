@@ -3,18 +3,17 @@ const puppeteer = require('puppeteer');
 
 (async () => {
   const urlEnv = process.env.TARGET_URLS || '';
-  const urls = urlEnv.split(',').map(u => u.trim()).filter(Boolean);
-  if (!urls) {
+  const urlList = urlEnv.split(',').map(u => u.trim()).filter(Boolean);
+
+  if (urlList.length === 0) {
     console.error('请设置环境变量 TARGET_URLS，多条 URL 用逗号分隔');
     process.exit(1);
   }
 
-  const outputFile = process.env.OUTPUT_FILE || 'v2ray,txt';
+  const outputFile = process.env.OUTPUT_FILE || 'v2ray.txt';
 
-  // 先清空文件，避免重复追加
+  // 清空文件，避免重复追加
   fs.writeFileSync(outputFile, '', 'utf-8');
-
-  const urlList = urls.split(',');
 
   const browser = await puppeteer.launch({
     headless: true,
@@ -26,9 +25,9 @@ const puppeteer = require('puppeteer');
   for (const url of urlList) {
     try {
       console.log(`正在访问：${url}`);
-      await page.goto(url.trim(), { waitUntil: 'networkidle0', timeout: 60000 });
+      await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
 
-      const content = await page.evaluate(() => document.body.innerText);
+      const content = await page.evaluate(() => document.body.textContent);
 
       fs.appendFileSync(outputFile, content + '\n\n', 'utf-8');
 
