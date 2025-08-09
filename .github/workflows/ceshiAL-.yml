@@ -1,0 +1,76 @@
+name: DY - AliyunDrive
+
+on:
+  workflow_dispatch:
+  schedule:
+     - cron: '0 */4 * * *'  # UTC 22:00 触发，北京时间 6:00
+
+jobs:
+  upload-to-aliyun:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 安装 Python 和 aligo
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip
+          pip install --upgrade pip
+          pip install aligo
+
+      - name: 下载订阅文件
+        run: |
+          urls=(
+            "https://sub.fqzsnai.ggff.net/auto"
+            "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt"
+            "https://sub.zyfx6.xyz/share/file/%E6%B0%B8%E4%B9%85%E8%AE%A2%E9%98%85%40txwl666?token=clash"
+            "https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
+            "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Splitted-By-Protocol/vless.txt"
+            "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Splitted-By-Protocol/trojan.txt"
+            "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/Splitted-By-Protocol/vmess.txt"
+            "http://43.207.145.186:8080/clash/proxies?type=all"
+            "https://pp.dcd.one/clash/proxies"
+            "https://ys.jiedianxielou.workers.dev"
+            "https://q3dlaxpoaq.github.io/APIs/sc0.yaml"
+            "https://q3dlaxpoaq.github.io/APIs/sc2.yaml"
+            "https://q3dlaxpoaq.github.io/APIs/sc3.yaml"
+            "https://q3dlaxpoaq.github.io/APIs/sc4.yaml"
+            "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml"
+            "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml"
+            "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
+            "https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml"
+            "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml"
+            "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml"
+            "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
+            "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml"
+            "https://raw.githubusercontent.com/xiaoji235/airport-free/refs/heads/main/v2ray.txt"
+            "https://dy.51281868.xyz/yuanzhou029?b64"
+          )
+          i=1
+          for url in "${urls[@]}"; do
+            echo "Downloading dy-$i.txt"
+            curl -L --max-time 30 "$url" -o "dy-$i.txt" || echo "下载失败: $url"
+            i=$((i+1))
+          done
+
+      - name: 上传到阿里云盘
+        env:
+          ALIYUN_REFRESH_TOKEN: ${{ secrets.ALIYUN_REFRESH_TOKEN }}
+        run: |
+          python3 << 'EOF'
+          import os
+          from aligo import Aligo
+
+          refresh_token = os.environ.get("ALIYUN_REFRESH_TOKEN")
+          ali = Aligo(refresh_token=refresh_token)
+
+          # 创建一个文件夹存放
+          folder = ali.create_folder('DY订阅文件')
+
+          for i in range(1, 25):
+              file_name = f"dy-{i}.txt"
+              if os.path.exists(file_name):
+                  ali.upload_file(file_name, parent_file_id=folder.file_id)
+                  print(f"已上传: {file_name}")
+              else:
+                  print(f"跳过: {file_name} (不存在)")
+          EOF
