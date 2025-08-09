@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: 清理旧文件，下载并保存内容
         run: |
-          rm -f dy-1.txt dy-2.txt
+          rm -f dy-1.txt dy-2.txt dy-3.txt dy-4.txt dy-5.txt dy-6.txt dy-7.txt dy-8.txt dy-9.txt dy-10.txt dy-11.txt dy-12.txt dy-13.txt dy-14.txt dy-15.txt dy-16.txt dy-17.txt dy-18.txt dy-19.txt dy-20.txt dy-21.txt dy-22.txt dy-23.txt dy-24.txt dy-25.txt dy-26.txt dy-27.txt
           curl -L "https://sub.fqzsnai.ggff.net/auto" -o dy-1.txt
           curl -L "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt" -o dy-2.txt
           curl -L "https://sub.zyfx6.xyz/share/file/%E6%B0%B8%E4%B9%85%E8%AE%A2%E9%98%85%40txwl666?token=clash" -o dy-3.txt
