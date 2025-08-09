@@ -13,6 +13,9 @@ jobs:
       # 用分号分隔的多个目标订阅 URL
       TARGET_URLS: |
         https://dy.51281868.xyz/yuanzhou029?b64
+        https://sub.fqzsnai.ggff.net/auto
+        https://ys.jiedianxielou.workers.dev
+        
       OUTPUT_FILE: "Clash1.txt"
 
     steps:
