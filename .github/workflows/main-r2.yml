@@ -3,7 +3,7 @@ name: R2
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 */4 * * *'  # UTC 22:00 触发，北京时间 6:00
+    - cron: '0 */4 * * *'  # UTC 22:00 触发，北京时间 6:00
 
 jobs:
   upload-to-r2:
@@ -23,9 +23,9 @@ jobs:
 
       - name: Run Puppeteer to fetch v2ray.txt from multiple URLs
         env:
-          TARGET_URL: |
-              https://subapi.140407.xyz/sub?target=v2ray&url=https%3A%2F%2Fys.jiedianxielou.workers.dev&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false,
-              https://subapi.140407.xyz/sub?target=v2ray&url=https%3A%2F%2Fsub.fqzsnai.ggff.net%2Fauto&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false
+          TARGET_URLS: |
+            https://subapi.140407.xyz/sub?target=v2ray&url=https%3A%2F%2Fys.jiedianxielou.workers.dev&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false,
+            https://subapi.140407.xyz/sub?target=v2ray&url=https%3A%2F%2Fsub.fqzsnai.ggff.net%2Fauto&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false
           OUTPUT_FILE: "v2ray.txt"
         run: node fetch_clash.js
 
@@ -34,7 +34,7 @@ jobs:
           sudo apt-get update && sudo apt-get install -y python3-pip
           pip3 install awscli --upgrade
 
-      - name: Upload Clash.txt to Cloudflare R2
+      - name: Upload v2ray.txt to Cloudflare R2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
@@ -42,4 +42,4 @@ jobs:
           AWS_ENDPOINT_URL: ${{ secrets.CLOUDFLARE_R2_ENDPOINT }}
           BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
         run: |
-          aws s3 cp Clash1.txt s3://$BUCKET_NAME/v2ray.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp v2ray.txt s3://$BUCKET_NAME/v2ray.txt --endpoint-url $AWS_ENDPOINT_URL
