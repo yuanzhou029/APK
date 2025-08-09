@@ -21,9 +21,11 @@ jobs:
       - name: Install puppeteer
         run: npm install puppeteer
 
-      - name: Run Puppeteer to fetch Clash.txt
+      - name: Run Puppeteer to fetch Clash.txt from multiple URLs
         env:
-          TARGET_URL: "https://subapi.140407.xyz/sub?target=v2ray&url=https%3A%2F%2Fys.jiedianxielou.workers.dev&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false"
+          TARGET_URL: |
+              "https://subapi.140407.xyz/sub?target=v2ray&url=https%3A%2F%2Fys.jiedianxielou.workers.dev&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false"
+              "https://subapi.140407.xyz/sub?target=v2ray&url=https%3A%2F%2Fsub.fqzsnai.ggff.net%2Fauto&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false"
           OUTPUT_FILE: "v2ray.txt"
         run: node fetch_clash.js
 
