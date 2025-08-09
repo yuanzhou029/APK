@@ -2,7 +2,8 @@ const fs = require('fs');
 const puppeteer = require('puppeteer');
 
 (async () => {
-  const urls = process.env.TARGET_URLS;
+  const urlEnv = process.env.TARGET_URLS || '';
+  const urls = urlEnv.split(',').map(u => u.trim()).filter(Boolean);
   if (!urls) {
     console.error('请设置环境变量 TARGET_URLS，多条 URL 用逗号分隔');
     process.exit(1);
