@@ -19,7 +19,7 @@ const puppeteer = require('puppeteer');
 
   const content = await page.evaluate(() => document.body.innerText);
 
-  fs.writeFileSync(process.env.OUTPUT_FILE || 'Clash1.txt', content, 'utf-8');
+  fs.writeFileSync(process.env.OUTPUT_FILE || 'v2ray.txt', content, 'utf-8');
 
   console.log(`内容已保存到 ${process.env.OUTPUT_FILE || 'Clash1.txt'}`);
 
