@@ -36,6 +36,7 @@ jobs:
           curl -L "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml" -o dy-21.txt
           curl -L "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml" -o dy-22.txt
           curl -L "https://raw.githubusercontent.com/xiaoji235/airport-free/refs/heads/main/v2ray.txt" -o dy-23.txt
+          curl -L "https://dy.51281868.xyz/yuanzhou029?b64" -o dy-24.txt
 
 
       - name: Install AWS CLI
@@ -74,6 +75,7 @@ jobs:
           aws s3 cp dy-21.txt s3://$BUCKET_NAME/dy-21.txt --endpoint-url $AWS_ENDPOINT_URL
           aws s3 cp dy-22.txt s3://$BUCKET_NAME/dy-22.txt --endpoint-url $AWS_ENDPOINT_URL
           aws s3 cp dy-23.txt s3://$BUCKET_NAME/dy-23.txt --endpoint-url $AWS_ENDPOINT_URL
+          aws s3 cp dy-24.txt s3://$BUCKET_NAME/dy-24.txt --endpoint-url $AWS_ENDPOINT_URL
 
   cleanup-workflow-runs:
     runs-on: ubuntu-latest
