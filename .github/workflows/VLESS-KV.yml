@@ -4,47 +4,59 @@ on:
   workflow_dispatch:  # 手动触发
   schedule:
     - cron: '30 22 * * *'  # UTC 22:00 触发，北京时间 6:30
-    
 
 jobs:
   upload-to-r2:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # 允许提交代码到仓库
+      contents: write
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'  # 指定Python版本
-        
+          python-version: '3.11'
+
+      # 安装 Chrome 和对应版本的 ChromeDriver
+      - name: Install Chrome & Matching ChromeDriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip google-chrome-stable
+          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+' | head -1)
+          DRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
+          wget -q https://chromedriver.storage.googleapis.com/$DRIVER_VERSION/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /usr/local/bin/
+          sudo chmod +x /usr/local/bin/chromedriver
+          echo "✅ Chrome version: $(google-chrome --version)"
+          echo "✅ ChromeDriver version: $(chromedriver --version)"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests telethon awscli beautifulsoup4 selenium undetected-chromedriver # 合并重复的依赖安装（移除冗余命令）
+          pip install requests telethon awscli beautifulsoup4 selenium undetected-chromedriver
 
       - name: Clear links.txt content
         run: echo -n "" > links.txt 
 
-      #- name: Run Telegram scraping script
-      #  env:
-      #    TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
-      #    TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
-      #    TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
-      #  run: python tg-url.py  # 调整为实际路径（如文件在根目录无需修改）
+      # 如果需要运行 Telegram 脚本，取消下面的注释
+      # - name: Run Telegram scraping script
+      #   env:
+      #     TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+      #     TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+      #     TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
+      #   run: python tg-url.py
 
       - name: Run core Python scripts
         run: |
-          python tg@pgkj0402.py       # 运行订阅获取脚本（需确保文件存在）
-          python get_token.py         # 运行Token获取脚本（需确保文件存在)
-          python MB.py                # 米贝分享的订阅链接
-          python 85LA.py              # 85LA免费节点
-          python yz.py                # 运行去重检查脚本（对links.txt文件的链接进行去重和检测）
+          python "tg@pgkj0402.py" # 运行订阅获取脚本（需确保文件存在）
+          python get_token.py    # 运行Token获取脚本（需确保文件存在)
+          python MB.py           # 米贝分享的订阅链接
+          python 85LA.py         # 85LA免费节点
+          python yz.py           # 运行去重检查脚本（对links.txt文件的链接进行去重和检测）
 
       - name: Sync to Cloudflare KV
         env:
@@ -53,14 +65,14 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
           CF_KV_KEY: "LINK.txt"
-        run: python kv.py  # 确保kv.py存在且路径正确
+        run: python kv.py
 
       - name: Commit and push changes
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add links.txt  # 仅提交修改的文件（避免意外提交）
-          if [ -n "$(git status --porcelain)" ]; then  # 仅当有修改时提交
+          git add links.txt
+          if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Update links.txt with valid URLs"
             git push
           else
