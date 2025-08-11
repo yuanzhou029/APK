@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
 
     steps:
       - name: Checkout code
@@ -20,21 +21,21 @@ jobs:
         with:
           python-version: '3.11'
 
-      # 安装 Chrome（保留）
       - name: Install Chrome
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget unzip google-chrome-stable
+          sudo apt-get install -y google-chrome-stable
+          google-chrome --version
 
-      # 安装Python依赖，添加chromedriver-autoinstaller，移除手动安装driver步骤
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests telethon awscli beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller 
+          pip install requests telethon awscli beautifulsoup4 selenium undetected-chromedriver
+          # 如果你用undetected-chromedriver，建议暂时不用chromedriver-autoinstaller，避免冲突
+
       - name: Clear links.txt content
         run: echo -n "" > links.txt 
 
-      # 你之前的脚本执行步骤不变
       - name: Run core Python scripts
         run: |
           python "tg@pgkj0402.py"
@@ -74,14 +75,12 @@ jobs:
 
       - name: Delete completed workflow runs
         env:
-          GH_TOKEN: ${{ secrets.GT_TOKEN }}
+          GH_TOKEN: ${{ secrets.GT_TOKEN }}  # 确认此处secret正确无误
         run: |
           echo "Fetching completed workflow runs..."
-          RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
-            | jq '.workflow_runs[] | select(.status == "completed") | .id')
-          for run_id in $RUN_IDS; do
-            echo "Deleting run ID: $run_id"
-            curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
-              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
-          done
+          curl -s -H "Authorization: token $GH_TOKEN" "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
+            | jq -r '.workflow_runs[] | select(.status == "completed") | .id' \
+            | while read run_id; do
+                echo "Deleting run ID: $run_id"
+                curl -s -X DELETE -H "Authorization: token $GH_TOKEN" "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
+              done
