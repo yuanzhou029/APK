@@ -3,7 +3,8 @@ import time
 import re
 import os
 import datetime
-from selenium import webdriver
+# from selenium import webdriver # 替换为undetected_chromedriver
+import undetected_chromedriver as uc
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
@@ -33,12 +34,12 @@ class SimpleBrowserCrawler:
             if self.headless:
                 chrome_options.add_argument('--headless')
             
-            # 反检测设置
-            chrome_options.add_argument('--disable-blink-features=AutomationControlled')
-            chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-            chrome_options.add_experimental_option('useAutomationExtension', False)
+            # undetected_chromedriver 已经处理了大部分反检测，这里可以简化
+            # chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+            # chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            # chrome_options.add_experimental_option('useAutomationExtension', False)
             
-            # 用户代理设置
+            # 用户代理设置 (undetected_chromedriver 默认会使用随机UA，这里可以保留或移除)
             chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
             
             # 窗口设置
@@ -47,17 +48,17 @@ class SimpleBrowserCrawler:
             # 语言设置
             chrome_options.add_argument('--lang=zh-CN')
             
-            # 创建WebDriver
-            self.driver = webdriver.Chrome(options=chrome_options)
+            # 创建WebDriver，使用undetected_chromedriver
+            self.driver = uc.Chrome(options=chrome_options)
             
-            # 执行反检测脚本
-            self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+            # undetected_chromedriver 已经处理了webdriver属性，这里可以移除
+            # self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
             
             print("✅ Chrome浏览器驱动初始化成功")
             
         except Exception as e:
             print(f"❌ 浏览器驱动初始化失败: {e}")
-            print("💡 请确保已安装Chrome浏览器和ChromeDriver")
+            print("💡 请确保已安装Chrome浏览器和ChromeDriver，并尝试安装undetected-chromedriver库")
             self.driver = None
     
     def wait_for_page_load(self, timeout=30):
@@ -201,8 +202,9 @@ def extract_v2ray_links(html_content):
     else:
         print("⚠️ 未找到V2ray订阅链接")
     return v2ray_links
+# False保存临时html文件 True 不保存html文件
+def process_links_from_file(links_file, crawler, delete_temp_files=True):
 
-def process_links_from_file(links_file, crawler):
     """从url.txt文件中读取链接并逐个访问"""
     try:
         with open(links_file, 'r', encoding='utf-8') as f:
@@ -235,12 +237,13 @@ def process_links_from_file(links_file, crawler):
                     else:
                         print(f"⚠️ 未在 {temp_file} 中找到V2ray订阅链接")
 
-                    # 删除临时HTML文件
-                    try:
-                        os.remove(temp_file)
-                        print(f"✅ 临时文件 {temp_file} 已删除")
-                    except Exception as e:
-                        print(f"⚠️ 删除临时文件 {temp_file} 失败: {e}")
+                    # 根据delete_temp_files参数决定是否删除临时HTML文件
+                    if delete_temp_files:
+                        try:
+                            os.remove(temp_file)
+                            print(f"✅ 临时文件 {temp_file} 已删除")
+                        except Exception as e:
+                            print(f"⚠️ 删除临时文件 {temp_file} 失败: {e}")
 
                 else:
                     print(f"❌ 保存页面内容到 {temp_file} 失败")
@@ -270,6 +273,9 @@ def main():
         print("❌ 无法启动浏览器，请检查Chrome和ChromeDriver安装")
         return
     
+    # 设置为True表示删除临时文件，设置为False表示保留临时文件
+    should_delete_temp_html = False # 调试时设置为False，发布时设置为True
+
     try:
         # 获取页面内容
         page_content = crawler.get_page_content(url)
@@ -285,7 +291,7 @@ def main():
                     save_links_to_file(recent_links, links_file)
                     
                     # 处理url.txt中的链接，并提取V2ray链接到links.txt
-                    process_links_from_file(links_file, crawler)
+                    process_links_from_file(links_file, crawler, should_delete_temp_html)
                 else:
                     print(f"⚠️ 未找到最近{days}天内的链接")
                 
