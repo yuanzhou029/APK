@@ -28,8 +28,8 @@ jobs:
           CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d '.' -f 1)
           echo "Detected Chrome major version: $CHROME_VERSION"
           DRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION}" || true)
-          if [ -z "$DRIVER_VERSION" ]; then
-            echo "⚠️ Failed to find matching ChromeDriver for version $CHROME_VERSION, falling back to latest"
+          if [[ "$DRIVER_VERSION" == *"Error"* ]] || [ -z "$DRIVER_VERSION" ]; then
+            echo "⚠️ No matching ChromeDriver for version $CHROME_VERSION, falling back to latest"
             DRIVER_VERSION=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
           fi
           echo "Installing ChromeDriver version: $DRIVER_VERSION"
