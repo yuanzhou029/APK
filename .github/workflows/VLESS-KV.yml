@@ -26,15 +26,14 @@ jobs:
           pip install requests telethon awscli beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller
 
       - name: Clear links.txt content
-        run: echo -n "" > links.txt 
+        run: echo -n "" > links.txt
 
-      # 你之前的脚本执行步骤不变
       - name: Run core Python scripts
         run: |
           python "tg@pgkj0402.py"
           python get_token.py
           python MB.py
-          python 85LA.py
+          python 58LA.py
           python yz.py
 
       - name: Sync to Cloudflare KV
