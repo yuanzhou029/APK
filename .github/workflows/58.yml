@@ -26,8 +26,8 @@ jobs:
 
     - name: 运行爬虫脚本
       env:
-         可选：添加代理配置
-         PROXY: ${{ secrets.PROXY }}
+        # 可选：添加代理配置
+        PROXY: ${{ secrets.PROXY }}
       run: python 58LA.py
 
     - name: 提交更新的links.txt文件
