@@ -34,8 +34,9 @@ jobs:
           python "tg@pgkj0402.py"
           python get_token.py
           python MB.py
-   #       python 58LA.py
           python yz.py
+        # python 58LA.py
+          
 
       - name: Sync to Cloudflare KV
         env:
