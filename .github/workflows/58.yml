@@ -1,9 +1,8 @@
-# 示例工作流文件配置
 name: 定时运行爬虫脚本
 on:
   schedule:
-    - cron: '0 18 * * *'  # 每天UTC 18:00运行
-  workflow_dispatch:  # 允许手动触发
+    - cron: '0 18 * * *'
+  workflow_dispatch:
 
 jobs:
   crawl:
@@ -11,17 +10,36 @@ jobs:
     steps:
       - name: 检出代码
         uses: actions/checkout@v3
+
+      - name: 安装系统依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip libxi6 libgconf-2-4
+          # 安装Chrome
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb
+          sudo apt-get -f install -y
+
       - name: 设置Python环境
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-      - name: 安装依赖
-        run: pip install -r requirements.txt
+
+      - name: 安装Python依赖
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          # 安装Selenium
+          pip install selenium
+          # 安装ChromeDriver
+          pip install webdriver-manager
+
       - name: 运行爬虫脚本
-        #env:
+        env:
           # 可选：添加代理配置
-          #PROXY: ${{ secrets.PROXY }}
+          PROXY: ${{ secrets.PROXY }}
         run: python 58LA.py
+
       - name: 提交结果
         run: |
           git config --global user.name 'github-actions[bot]'
