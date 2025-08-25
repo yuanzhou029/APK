@@ -5,42 +5,92 @@ import datetime
 import logging
 import time
 import random
+import json
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 # 配置日志
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-# 设置请求头，模拟浏览器
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'Accept-Language': 'zh-CN,zh;q=0.9',
-    'Referer': 'https://www.85la.com/',
-    'Connection': 'keep-alive'
-}
+# 轮换User-Agent列表
+USER_AGENTS = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1'
+]
+
+# 随机生成请求头
+def get_random_headers():
+    headers = {
+        'User-Agent': random.choice(USER_AGENTS),
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'Accept-Language': 'zh-CN,zh;q=0.9',
+        'Referer': 'https://www.85la.com/',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'same-origin',
+        'Sec-Fetch-User': '?1',
+    }
+    return headers
 
 # 创建带重试机制的session
 def create_session():
     session = requests.Session()
-    # 添加403状态码到重试列表
-    retry = Retry(total=5, backoff_factor=1, status_forcelist=[403, 429, 500, 502, 503, 504])
+    # 配置重试策略，增加总重试次数和回退因子
+    retry = Retry(total=8, backoff_factor=2, status_forcelist=[403, 429, 500, 502, 503, 504])
     adapter = HTTPAdapter(max_retries=retry)
     session.mount('http://', adapter)
     session.mount('https://', adapter)
-    # 设置session的默认请求头
-    session.headers.update(HEADERS)
     return session
 
 session = create_session()
 
+# 尝试从环境变量获取代理配置
+def get_proxy_config():
+    # 从环境变量获取代理信息，格式: PROXY={'http': 'http://proxy:port', 'https': 'https://proxy:port'}
+    proxy_env = os.environ.get('PROXY')
+    if proxy_env:
+        try:
+            return json.loads(proxy_env)
+        except json.JSONDecodeError:
+            logging.warning('代理配置格式无效，将不使用代理')
+    return None
+
+proxy = get_proxy_config()
+
+# 模拟访问首页以获取Cookies
+def setup_cookies():
+    try:
+        # 先访问首页获取Cookies
+        home_url = 'https://www.85la.com/'
+        headers = get_random_headers()
+        response = session.get(home_url, headers=headers, proxies=proxy)
+        if response.status_code == 200:
+            logging.info('成功获取Cookies')
+            return True
+        else:
+            logging.warning(f'获取Cookies失败，状态码: {response.status_code}')
+            return False
+    except Exception as e:
+        logging.error(f'获取Cookies时出错: {e}')
+        return False
+
 def fetch_page(url):
     """发送 HTTP 请求并返回页面内容"""
     try:
-        # 使用session发送请求
-        response = session.get(url)
+        # 每次请求使用不同的请求头
+        headers = get_random_headers()
+        # 添加随机延迟，范围增大
+        time.sleep(random.uniform(2, 5))
+        # 发送请求，使用代理（如果有）
+        response = session.get(url, headers=headers, proxies=proxy)
         if response.status_code == 200:
-            # 添加随机延迟，模拟人类浏览行为
+            logging.info(f"成功访问页面: {url}")
+            # 添加随机延迟
             time.sleep(random.uniform(1, 3))
             return response.text
         else:
@@ -87,8 +137,12 @@ def fetch_subscriptions(links):
         for link in links:
             try:
                 logging.info(f"访问链接: {link}")
-                # 使用session发送请求
-                response = session.get(link)
+                # 每次请求使用不同的请求头
+                headers = get_random_headers()
+                # 添加随机延迟，范围增大
+                time.sleep(random.uniform(3, 7))
+                # 发送请求，使用代理（如果有）
+                response = session.get(link, headers=headers, proxies=proxy)
                 if response.status_code == 200:
                     soup = BeautifulSoup(response.text, 'html.parser')
                     # 查找三级标题为“Base64 订阅地址”
@@ -102,17 +156,18 @@ def fetch_subscriptions(links):
                             file.write(link_url + "\n")  # 将链接写入文件
                 else:
                     logging.error(f"无法访问链接 {link}，状态码: {response.status_code}")
-                # 添加随机延迟
-                time.sleep(random.uniform(2, 5))
             except Exception as e:
                 logging.error(f"处理链接 {link} 时出错: {e}")
                 # 出错时也添加延迟
-                time.sleep(random.uniform(1, 3))
+                time.sleep(random.uniform(2, 4))
 
 
 def main():
     url = "https://www.85la.com/internet-access/free-network-nodes"
     current_date = datetime.datetime.now()
+
+    # 尝试获取Cookies
+    setup_cookies()
 
     # 获取页面内容
     html = fetch_page(url)
@@ -125,6 +180,13 @@ def main():
         fetch_subscriptions(links)
     else:
         logging.error("未能获取页面内容，脚本终止")
+        # 尝试使用备用URL（如果有）
+        alternative_url = "https://www.85la.com/internet-access"
+        logging.info(f"尝试使用备用URL: {alternative_url}")
+        html = fetch_page(alternative_url)
+        if html:
+            links = parse_links(html, current_date)
+            fetch_subscriptions(links)
 
 if __name__ == "__main__":
     main()
