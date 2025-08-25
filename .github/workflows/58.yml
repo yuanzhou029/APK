@@ -1,49 +1,39 @@
-name: 定时运行爬虫脚本
+name: 58LA Crawler Workflow
+
 on:
   schedule:
-    - cron: '0 18 * * *'
-  workflow_dispatch:
+    - cron: '0 0 * * *'  # 每天午夜执行
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
   crawl:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-18.04  # 使用Ubuntu 18.04，它包含libgconf-2-4包
     steps:
       - name: 检出代码
         uses: actions/checkout@v3
 
-      - name: 安装系统依赖
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget unzip libxi6 libgconf-2-4
-          # 安装Chrome
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo dpkg -i google-chrome-stable_current_amd64.deb
-          sudo apt-get -f install -y
-
       - name: 设置Python环境
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.9'  # 使用Python 3.9
+
+      - name: 安装系统依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgconf-2-4
+          # 安装Chrome浏览器用于Selenium
+          sudo apt-get install -y google-chrome-stable
 
       - name: 安装Python依赖
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-          # 安装Selenium
-          pip install selenium
-          # 安装ChromeDriver
-          pip install webdriver-manager
 
       - name: 运行爬虫脚本
-        env:
-          # 可选：添加代理配置
-          PROXY: ${{ secrets.PROXY }}
         run: python 58LA.py
 
-      - name: 提交结果
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add links.txt
-          git commit -m '更新订阅链接'
-          git push
+      - name: 上传结果文件
+        uses: actions/upload-artifact@v3
+        with:
+          name: subscription-links
+          path: links.txt
