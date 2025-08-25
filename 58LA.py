@@ -23,10 +23,13 @@ HEADERS = {
 # 创建带重试机制的session
 def create_session():
     session = requests.Session()
-    retry = Retry(total=3, backoff_factor=0.5, status_forcelist=[429, 500, 502, 503, 504])
+    # 添加403状态码到重试列表
+    retry = Retry(total=5, backoff_factor=1, status_forcelist=[403, 429, 500, 502, 503, 504])
     adapter = HTTPAdapter(max_retries=retry)
     session.mount('http://', adapter)
     session.mount('https://', adapter)
+    # 设置session的默认请求头
+    session.headers.update(HEADERS)
     return session
 
 session = create_session()
@@ -34,8 +37,11 @@ session = create_session()
 def fetch_page(url):
     """发送 HTTP 请求并返回页面内容"""
     try:
-        response = requests.get(url)
+        # 使用session发送请求
+        response = session.get(url)
         if response.status_code == 200:
+            # 添加随机延迟，模拟人类浏览行为
+            time.sleep(random.uniform(1, 3))
             return response.text
         else:
             logging.error(f"无法访问页面，状态码: {response.status_code}")
@@ -57,7 +63,11 @@ def parse_links(html, current_date):
                 title = h2.get_text(strip=True)
                 date_str = title.split(' ')[0]
                 if is_recent_date(date_str, current_date):
-                    links.append(link['href'])
+                    # 确保链接是完整的
+                    href = link['href']
+                    if not href.startswith('http'):
+                        href = f"https://www.85la.com{href}"
+                    links.append(href)
             except ValueError:
                 logging.warning(f"跳过无效标题: {h2.get_text(strip=True)}")
                 continue
@@ -77,7 +87,8 @@ def fetch_subscriptions(links):
         for link in links:
             try:
                 logging.info(f"访问链接: {link}")
-                response = requests.get(link)
+                # 使用session发送请求
+                response = session.get(link)
                 if response.status_code == 200:
                     soup = BeautifulSoup(response.text, 'html.parser')
                     # 查找三级标题为“Base64 订阅地址”
@@ -91,8 +102,13 @@ def fetch_subscriptions(links):
                             file.write(link_url + "\n")  # 将链接写入文件
                 else:
                     logging.error(f"无法访问链接 {link}，状态码: {response.status_code}")
+                # 添加随机延迟
+                time.sleep(random.uniform(2, 5))
             except Exception as e:
                 logging.error(f"处理链接 {link} 时出错: {e}")
+                # 出错时也添加延迟
+                time.sleep(random.uniform(1, 3))
+
 
 def main():
     url = "https://www.85la.com/internet-access/free-network-nodes"
@@ -107,6 +123,8 @@ def main():
             logging.info(f"提取的链接: {link}")
         # 访问链接并提取订阅地址
         fetch_subscriptions(links)
+    else:
+        logging.error("未能获取页面内容，脚本终止")
 
 if __name__ == "__main__":
     main()
