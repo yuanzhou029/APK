@@ -7,7 +7,8 @@ on:
 
 jobs:
   crawl:
-    runs-on: ubuntu-18.04  # 使用Ubuntu 18.04，它包含libgconf-2-4包
+    runs-on: ubuntu-18.04
+    timeout-minutes: 30  # 设置30分钟超时
     steps:
       - name: 检出代码
         uses: actions/checkout@v3
@@ -30,7 +31,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: 运行爬虫脚本
-        run: python 58LA.py
+        run: |
+          echo "开始运行爬虫脚本"
+          python 58LA.py
+          echo "爬虫脚本运行完成"
 
       - name: 上传结果文件
         uses: actions/upload-artifact@v3
