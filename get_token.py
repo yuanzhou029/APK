@@ -21,7 +21,7 @@ def extract_unified_token():
 
 def generate_subscribe_url(token):
     """生成订阅URL"""
-    return f"https://pm.enjoy.cloudns.biz/api/v1/subscribe?token={token}&target=v2ray&list=true"
+    return f"https://proxy-manager-ggeu.onrender.com/api/v1/subscribe?token={token}&target=v2ray&list=true"
 
 if __name__ == "__main__":
     # 新增：检查links.txt是否存在（同脚本目录）
@@ -52,4 +52,5 @@ if __name__ == "__main__":
         print("="*50)
     else:
         print("⚠️ 未找到符合格式的token")
+
 
