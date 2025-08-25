@@ -51,12 +51,28 @@ session = create_session()
 
 # 尝试从环境变量获取代理配置
 def get_proxy_config():
-    # 从环境变量获取代理信息，格式: PROXY={'http': 'http://proxy:port', 'https': 'https://proxy:port'}
+    # 从环境变量获取代理信息
+    # 格式1: JSON字符串: {'http': 'http://proxy:port', 'https': 'https://proxy:port'}
+    # 格式2: 分号分隔: http://proxy:port;https://proxy:port
     proxy_env = os.environ.get('PROXY')
     if proxy_env:
         try:
+            # 尝试JSON格式解析
             return json.loads(proxy_env)
         except json.JSONDecodeError:
+            # 尝试分号分隔格式
+            if ';' in proxy_env:
+                proxy_parts = proxy_env.split(';')
+                proxy_dict = {}
+                for part in proxy_parts:
+                    if part.strip():
+                        if part.startswith('http://'):
+                            proxy_dict['http'] = part
+                        elif part.startswith('https://'):
+                            proxy_dict['https'] = part
+                if proxy_dict:
+                    logging.info('使用分号分隔格式的代理配置')
+                    return proxy_dict
             logging.warning('代理配置格式无效，将不使用代理')
     return None
 
