@@ -3,7 +3,7 @@ name: VLESS-KV
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 22 * * *'
+    - cron: '30 18 */2 * *' #北京时间2:30分两天运行一次
 
 jobs:
   upload-to-r2:
