@@ -7,6 +7,8 @@ from datetime import datetime, timedelta
 from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
+from crawl4ai import AsyncWebCrawler
+import asyncio
 
 # 配置中文字符集
 sys.stdout.reconfigure(encoding='utf-8')
@@ -91,7 +93,28 @@ def extract_subscription_links(page_content):
     pattern = re.compile(r'https?://(?:mm\.mibei77\.com/\d+/\d+\.[a-zA-Z0-9]+|fs\.v2rayse\.com/share/\d+/[a-zA-Z0-9]+)\.txt')
     return pattern.findall(page_content)
 
-def find_recent_messages(url):
+# 替换原create_session和request_with_retry函数
+async def crawl_with_crawl4ai(url):
+    # 初始化异步爬虫，启用代理和反爬策略
+    crawler = AsyncWebCrawler(
+        verbose=True,
+        proxy="http://your_proxy_ip:port",  # 可选代理配置
+        headers={
+            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+            'DNT': '1'
+        }
+    )
+    
+    # 使用Crawl4AI内置的智能抓取功能
+    result = await crawler.fetch(url)
+    
+    # 内置的LLM友好格式输出
+    if result.success:
+        return result.markdown  # 或 result.html, result.json
+    return None
+
+# 修改find_recent_messages为异步函数
+async def find_recent_messages(url):
     """获取当前日期及前两天（共三天）的消息"""
     # 生成三天的日期列表（格式：YYYY年MM月DD日）：今天、昨天、前天
     today = datetime.today()
@@ -143,6 +166,7 @@ def find_recent_messages(url):
         print(f"访问或解析页面失败: {str(e)}")
         return []
 
+# 修改主程序入口
 if __name__ == "__main__":
     # 生成三天的日期范围（用于提示）
     today = datetime.today().strftime("%Y年%m月%d日")
@@ -151,7 +175,7 @@ if __name__ == "__main__":
     print(f"当前查询日期范围：{two_days_ago}、{yesterday}、{today}")
     
     target_url = "https://www.mibei77.com/"
-    messages = find_recent_messages(target_url)
+    messages = asyncio.run(find_recent_messages(target_url))
     
     links_path = os.path.join(os.path.dirname(__file__), "links.txt")
     
