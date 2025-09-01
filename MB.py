@@ -151,7 +151,7 @@ if __name__ == "__main__":
     print(f"当前查询日期范围：{two_days_ago}、{yesterday}、{today}")
     
     target_url = "https://www.mibei77.com/"
-    messages = find_recent_messages(target_url, session)
+    messages = find_recent_messages(target_url)
     
     links_path = os.path.join(os.path.dirname(__file__), "links.txt")
     
