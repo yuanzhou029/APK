@@ -24,7 +24,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install requests telethon awscli beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller crawl4ai
-          playwright install chromiu
+          playwright install chromium
           
 
       - name: Clear links.txt content
