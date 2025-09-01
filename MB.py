@@ -1,15 +1,63 @@
 import sys
 import re
 import os
-from datetime import datetime, timedelta  # 新增：timedelta用于日期偏移
+import random
+import time
+from datetime import datetime, timedelta
 from urllib.parse import urljoin
-sys.stdout.reconfigure(encoding='utf-8')
 import requests
 from bs4 import BeautifulSoup
 
+# 配置中文字符集
+sys.stdout.reconfigure(encoding='utf-8')
+
+# 模拟浏览器的User-Agent列表
+USER_AGENTS = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
+]
+
+# 创建会话对象
+def create_session():
+    session = requests.Session()
+    # 设置默认请求头
+    headers = {
+        'User-Agent': random.choice(USER_AGENTS),
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Cache-Control': 'max-age=0',
+    }
+    session.headers.update(headers)
+    return session
+
+# 带重试机制的请求函数
+def request_with_retry(session, url, max_retries=3, delay_range=(2, 5)):
+    retries = 0
+    while retries < max_retries:
+        try:
+            # 随机延迟，避免被检测为爬虫
+            time.sleep(random.uniform(*delay_range))
+            response = session.get(url, timeout=15)
+            response.raise_for_status()
+            return response
+        except requests.exceptions.RequestException as e:
+            retries += 1
+            print(f"请求失败 ({retries}/{max_retries}): {str(e)}")
+            # 指数退避策略
+            if retries < max_retries:
+                wait_time = random.uniform(2 ** retries, 2 ** retries + 2)
+                print(f"等待 {wait_time:.2f} 秒后重试...")
+                time.sleep(wait_time)
+    return None
+
 def extract_subscription_links(page_content):
     # 正则匹配目标格式：https://mm.mibei77.com/YYYYMM/DD.随机字符.txt
-    # 解释：https?:// 匹配 http/https 协议；mm\.mibei77\.com 固定域名；\d{6} 匹配 YYYYMM（如202506）；\d{2} 匹配 DD（如06）；[a-zA-Z0-9]+ 匹配随机字符串；\.txt 固定后缀
     pattern = re.compile(r'https?://(?:mm\.mibei77\.com/\d+/\d+\.[a-zA-Z0-9]+|fs\.v2rayse\.com/share/\d+/[a-zA-Z0-9]+)\.txt')
     return pattern.findall(page_content)
 
