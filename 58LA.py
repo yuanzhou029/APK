@@ -58,12 +58,19 @@ async def main():
                     v2ray_content = v2ray_match.group(1).strip()
                     print("\n===== 提取到的v2ray订阅地址 =====")
                     print(v2ray_content)
-                    # 修改文件保存路径为相对路径
-                    file_path = os.path.join(os.getcwd(), 'links.txt')
-                    # 使用追加模式写入
-                    with open(file_path, 'a', encoding='utf-8') as f:
-                        f.write(v2ray_content + '\n')
-                    print(f"订阅地址已保存到: {file_path}")
+                    # 添加订阅链接到links.txt
+                    file_path = 'links.txt'
+                    # 检查文件是否存在
+                    if os.path.exists(file_path):
+                        # 文件存在，以追加模式写入
+                        with open(file_path, 'a', encoding='utf-8') as f:
+                            f.write(v2ray_content + '\n')
+                        print(f"订阅地址已追加到 {file_path}")
+                    else:
+                        # 文件不存在，新建文件并写入
+                        with open(file_path, 'w', encoding='utf-8') as f:
+                            f.write(v2ray_content + '\n')
+                        print(f"已创建 {file_path} 并添加订阅地址")
                 else:
                     print("\n===== 未找到有效的v2ray订阅地址 =====")
                     print("\n未找到V2ray订阅地址")
