@@ -11,48 +11,80 @@ from bs4 import BeautifulSoup
 # 配置中文字符集
 sys.stdout.reconfigure(encoding='utf-8')
 
-# 模拟浏览器的User-Agent列表
+# 扩展的User-Agent列表
 USER_AGENTS = [
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Edge/116.0.1938.76',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1',
+    'Mozilla/5.0 (iPad; CPU OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1'
 ]
 
 # 创建会话对象
 def create_session():
     session = requests.Session()
-    # 设置默认请求头
+    # 随机选择User-Agent
     headers = {
         'User-Agent': random.choice(USER_AGENTS),
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'Accept-Language': 'zh-CN,zh;q=0.9',
         'Accept-Encoding': 'gzip, deflate, br',
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1',
         'Cache-Control': 'max-age=0',
+        'TE': 'Trailers',
     }
     session.headers.update(headers)
     return session
 
-# 带重试机制的请求函数
-def request_with_retry(session, url, max_retries=3, delay_range=(2, 5)):
+# 带重试机制的请求函数，特别优化了GitHub Actions环境
+def request_with_retry(session, url, max_retries=5, base_delay=3):
     retries = 0
     while retries < max_retries:
         try:
-            # 随机延迟，避免被检测为爬虫
-            time.sleep(random.uniform(*delay_range))
-            response = session.get(url, timeout=15)
+            # 在GitHub Actions环境中使用更长的随机延迟
+            is_github_actions = os.environ.get('GITHUB_ACTIONS') == 'true'
+            if is_github_actions:
+                delay = random.uniform(base_delay * 2, base_delay * 3)
+            else:
+                delay = random.uniform(base_delay, base_delay * 2)
+            
+            print(f"等待 {delay:.2f} 秒后发送请求...")
+            time.sleep(delay)
+            
+            response = session.get(url, timeout=20)
+            
+            # 检测到429错误时的特殊处理
+            if response.status_code == 429:
+                print(f"收到429 Too Many Requests错误，正在应用特殊处理...")
+                retries += 1
+                # 增加等待时间并更换User-Agent
+                wait_time = random.uniform(base_delay * (2 ** retries), base_delay * (2 ** retries) + 5)
+                print(f"等待 {wait_time:.2f} 秒后重试，更换User-Agent...")
+                session.headers['User-Agent'] = random.choice(USER_AGENTS)
+                time.sleep(wait_time)
+                continue
+            
             response.raise_for_status()
             return response
+            
         except requests.exceptions.RequestException as e:
             retries += 1
             print(f"请求失败 ({retries}/{max_retries}): {str(e)}")
-            # 指数退避策略
+            
             if retries < max_retries:
-                wait_time = random.uniform(2 ** retries, 2 ** retries + 2)
+                # 指数退避策略，GitHub Actions环境中使用更长的等待时间
+                if is_github_actions:
+                    wait_time = random.uniform(base_delay * (2 ** retries), base_delay * (2 ** retries) + 10)
+                else:
+                    wait_time = random.uniform(base_delay * (2 ** retries), base_delay * (2 ** retries) + 5)
+                
                 print(f"等待 {wait_time:.2f} 秒后重试...")
+                # 重试前更换User-Agent
+                session.headers['User-Agent'] = random.choice(USER_AGENTS)
                 time.sleep(wait_time)
     return None
 
