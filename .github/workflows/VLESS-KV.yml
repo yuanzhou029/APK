@@ -33,7 +33,6 @@ jobs:
       # 你之前的脚本执行步骤不变
       - name: Run core Python scripts
         run: |
-          #python "tg@pgkj0402.py"
           python get_token.py
           python MB.py
           python 58LA.py
