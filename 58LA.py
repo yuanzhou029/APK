@@ -50,7 +50,7 @@ async def main():
                 
                 # 提取v2ray
                 # 确保使用正确的变量名（假设实际内容存储在link_result中）
-                v2ray_pattern = re.compile(r'###\s*2\.\s*V2ray\s*订阅地址\s*<\s*(https?://[^>]+?)\s*>')
+                v2ray_pattern = re.compile(r'###\s*1\.\s*Base64\s*订阅地址\s*<\s*(https?://[^>]+?)\s*>')
                 # 使用实际返回的结果对象替代未定义的'content'变量
                 v2ray_match = v2ray_pattern.search(link_result.markdown)
                 # 先检查link_result和markdown属性是否存在
@@ -79,3 +79,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
