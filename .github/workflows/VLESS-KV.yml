@@ -28,7 +28,9 @@ jobs:
           
 
       - name: Clear links.txt content
-        run: echo -n "" > links.txt 
+        run: |
+         echo -n "" > links.txt
+         echo -n "" > usb.txt
 
       # 你之前的脚本执行步骤不变
       - name: Run core Python scripts
