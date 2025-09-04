@@ -30,32 +30,32 @@ def get_subscription_content():
         
         # 创建或清空usb.txt文件
         with open(output_file, 'w', encoding='utf-8') as f_out:
-            f_out.write("# 订阅链接内容汇总\n")
-            f_out.write("# " + "="*50 + "\n\n")
             
             # 处理每个链接
             for index, link in enumerate(links, 1):
                 print(f"处理链接 {index}/{len(links)}: {link}")
                 
-                # 写入链接信息
-                f_out.write(f"# 链接 {index}: {link}\n")
-                f_out.write(f"# " + "-"*50 + "\n")
+                # 移除链接标题和分隔线
+                # f_out.write(f"# 链接 {index}: {link}\n")
+                # f_out.write(f"# " + "-"*50 + "\n")
                 
                 try:
                     # 发送请求获取链接内容
                     response = requests.get(link, headers=HEADERS, timeout=TIMEOUT)
                     response.raise_for_status()  # 检查请求是否成功
                     
-                    # 将内容写入usb.txt文件
-                    f_out.write(response.text + '\n\n')
+                    # 仅写入纯链接内容，不添加额外格式
+                    f_out.write(response.text + '\n')  # 保留一个换行分隔不同链接内容
                     print(f"  成功: 已获取并保存链接内容")
                     
                 except requests.exceptions.RequestException as e:
-                    error_msg = f"  错误: 获取链接内容失败: {e}"
+                    error_msg = f"获取链接内容失败: {e}"
                     print(error_msg)
-                    f_out.write(f"# {error_msg}\n\n")
+                    # 不在文件中记录错误信息
+                    # f_out.write(f"# {error_msg}\n\n")
                 
-                f_out.write("# " + "="*50 + "\n\n")
+                # 移除分隔线
+                # f_out.write("# " + "="*50 + "\n\n")
         
         print(f"\n成功: 已处理所有 {len(links)} 个订阅链接，并将内容保存到 {output_file} 文件中")
         
