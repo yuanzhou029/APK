@@ -120,7 +120,7 @@ async def find_recent_messages(url):
     today = datetime.today()
     date_list = [
         (today - timedelta(days=i)).strftime("%Y年%m月%d日") 
-        for i in range(0, 3)  # 0: 今天, 1: 昨天, 2: 前天（共3天）
+        for i in range(0, 1)  # 0: 今天, 1: 昨天, 2: 前天（共3天）
     ]
     
     try:
