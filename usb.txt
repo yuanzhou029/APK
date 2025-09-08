@@ -17,104 +17,103 @@ dns:
     - tls://dns.google:853
 proxies:
   - {name: 关注https://github.com/wzdnzd不迷路, server: 9.9.9.9, port: 54321, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: febf501b-e19d-4451-8071-aa6144bb8825, tfo: false}
-  - {name: 🇮🇳 印度 03, server: xdd.dashuai.cyou, port: 45073, client-fingerprint: chrome, type: vmess, uuid: c3784506-e78e-4796-aba2-a0ac434182b9, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
-  - {name: 🇹🇼 台湾家宽 216, server: 114.46.123.84, port: 10070, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: efee5d33-8879-4335-bcc6-517a4d5209c2, tfo: false}
-  - {name: 🇺🇸 美国 132, server: 185.18.250.195, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /Telegram, headers: {Host: ocost-dy.wmlefl.cc}}}
-  - {name: 🇹🇼 台湾家宽 164, server: 118.170.216.58, port: 10021, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0e9c983f-3e84-48df-b5ba-b8b39e26791b, tfo: false}
-  - {name: 🇭🇰 香港 083, server: xg.xfy003.cfd, port: 21333, client-fingerprint: chrome, type: hysteria2, password: 19e8cc69-3e79-47dc-9bd8-bca8fe4e0cd0, auth: 19e8cc69-3e79-47dc-9bd8-bca8fe4e0cd0, sni: xg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇺🇸 美国 001, server: 45.144.174.211, port: 25151, client-fingerprint: chrome, type: vmess, uuid: c67d7f5c-308a-4478-9571-64a6d49f45b8, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇭🇰 香港 019, server: qqb12.198139.xyz, port: 62871, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 64bd10e1-4380-4ab6-8380-22eb77f4cd86, tfo: false}
-  - {name: 🇹🇼 台湾家宽 692, server: 114.35.114.182, port: 10129, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 3c05865c-1353-49d8-a67a-0673299e30be, tfo: false}
-  - {name: 🇭🇰 香港 112, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 0c061897-06f8-4211-a767-693412892270, auth: 0c061897-06f8-4211-a767-693412892270, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 029, server: 45.144.174.211, port: 23169, client-fingerprint: chrome, type: vmess, uuid: 92386fa3-b184-4bb1-ade8-9b5cf814889e, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇹🇼 台湾家宽 567, server: 1.165.86.85, port: 10061, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4a393e6a-37bc-4810-b12f-bf7a5cc19491, tfo: false}
-  - {name: 🇺🇸 美国 060, server: tj.cpddx.club, port: 8443, client-fingerprint: chrome, type: trojan, password: 597925d9-b76e-4264-a73b-2969609a02ca, sni: tj.cpddx.club, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tj.cpddx.club}}}
-  - {name: 🇭🇰 香港 038, server: 45.144.174.211, port: 33079, client-fingerprint: chrome, type: hysteria2, password: 33515774-4edd-4bf1-9218-c6a0928ad2de, auth: 33515774-4edd-4bf1-9218-c6a0928ad2de, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇹🇼 台湾家宽 597, server: 36.234.79.153, port: 10063, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 158e27c7-90ad-4a33-877c-76e28bd04894, tfo: false}
-  - {name: 🇹🇼 台湾 021, server: 111.253.205.251, port: 10147, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 56a3eaf9-b107-495b-a071-0f3b92e03c16, tfo: false}
-  - {name: 🇹🇼 台湾家宽 566, server: 125.231.68.156, port: 10065, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4a393e6a-37bc-4810-b12f-bf7a5cc19491, tfo: false}
-  - {name: 🇹🇼 台湾家宽 065, server: 36.232.90.105, port: 10130, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 3d953287-7f64-4a54-bb46-e6bafa61a82d, tfo: false}
-  - {name: 🇹🇼 台湾家宽 484, server: 118.170.242.124, port: 10004, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0e9c983f-3e84-48df-b5ba-b8b39e26791b, tfo: false}
-  - {name: 🇭🇰 香港 011, server: qqb12.198139.xyz, port: 62871, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 085ba414-9e8f-495a-bfda-31c1b1f18107, tfo: false}
-  - {name: 🇷🇺 俄罗斯联邦 02, server: cg1c08.waimaojd.com, port: 443, client-fingerprint: chrome, type: vmess, uuid: 6fc84fd2-0442-405f-baa7-6daf66b81a10, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /api/v1/graphql, headers: {Host: cg1c08.waimaojd.com}}}
-  - {name: 🇺🇸 美国 097, server: 194.76.18.87, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3, headers: {Host: ocost-dy.wmlefl.cc}}}
-  - {name: 🇹🇼 台湾家宽 321, server: 114.46.100.87, port: 10068, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 7ca7410c-f040-4b43-a6eb-e73975ce5c5b, tfo: false}
-  - {name: 🇺🇸 美国 169, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 915cd180-0ef8-4e85-afa5-2701284d7a8c, auth: 915cd180-0ef8-4e85-afa5-2701284d7a8c, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇹🇼 台湾家宽 093, server: 114.33.53.213, port: 10037, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 64133a15-dd5f-444e-9efa-439df58deb51, tfo: false}
-  - {name: 🇹🇼 台湾 133, server: 118.170.242.124, port: 10004, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 254618df-ecc6-46a4-9619-8934138c8add, tfo: false}
-  - {name: 🇹🇼 台湾家宽 464, server: 125.228.31.10, port: 10113, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 45da8b44-0775-406d-8ba8-549eaed2ff8c, tfo: false}
-  - {name: 🇹🇼 台湾家宽 851, server: 36.232.90.105, port: 10130, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4be60f66-08de-4f42-beb1-8745e47387f9, tfo: false}
-  - {name: 🇹🇼 台湾家宽 312, server: 36.232.67.139, port: 10140, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 64133a15-dd5f-444e-9efa-439df58deb51, tfo: false}
-  - {name: 🇹🇼 台湾 079, server: 111.253.205.251, port: 10147, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4be60f66-08de-4f42-beb1-8745e47387f9, tfo: false}
-  - {name: 🇦🇹 奥地利 01, server: 212.183.88.195, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /Telegram🇨🇳, headers: {Host: ocost-dy.wmlefl.cc}}}
-  - {name: 🇹🇼 台湾家宽 603, server: 114.46.100.87, port: 10068, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 30ac1116-2995-469d-b272-cc58f911eb08, tfo: false}
-  - {name: 🇹🇼 台湾家宽 417, server: 1.170.40.42, port: 10087, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0409f537-1292-4d75-b738-380167f66ef8, tfo: false}
-  - {name: 🇹🇼 台湾家宽 855, server: 114.46.123.84, port: 10070, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4a393e6a-37bc-4810-b12f-bf7a5cc19491, tfo: false}
-  - {name: 🇹🇼 台湾家宽 634, server: 1.170.40.42, port: 10087, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 8340adea-d1d8-4ccf-869c-ed25159ebdd9, tfo: false}
-  - {name: 🇺🇸 美国 057, server: tj.cpddx.club, port: 8443, client-fingerprint: chrome, type: trojan, password: df3b66a7-c71e-47f4-9678-f549994255b2, sni: tj.cpddx.club, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tj.cpddx.club}}}
-  - {name: 🇹🇼 台湾家宽 288, server: 1.165.120.160, port: 10022, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 85ce0ad1-2da5-48f3-a4b8-7a4bd101c306, tfo: false}
-  - {name: 🇭🇰 香港 085, server: xg.xfy003.cfd, port: 21333, client-fingerprint: chrome, type: hysteria2, password: d3a59e3e-e59a-4485-abdc-99442b004226, auth: d3a59e3e-e59a-4485-abdc-99442b004226, sni: xg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇹🇼 台湾家宽 231, server: 125.228.162.163, port: 10137, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: dea2220f-4198-4272-ac9c-3eb6088eba3a, tfo: false}
-  - {name: 🇹🇼 台湾家宽 411, server: 36.232.85.144, port: 10123, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: b30118ca-6bed-446a-979f-c1ff17eeca31, tfo: false}
-  - {name: 🇹🇼 台湾家宽 241, server: 114.46.90.9, port: 10052, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: ca52d052-b0c2-4daf-aff9-a2aaea76c787, tfo: false}
-  - {name: 🇭🇰 香港 098, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 5dd55d64-b81a-4378-a8a6-d5cd1edda268, auth: 5dd55d64-b81a-4378-a8a6-d5cd1edda268, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 292, server: 185.174.138.195, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: "%25252FTelegram", headers: {Host: ocost-dy.wmlefl.cc}}}
-  - {name: 🇹🇼 台湾家宽 648, server: 114.46.123.84, port: 10070, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: d5abead3-0b9d-4ff8-9ecc-f0ad5ef0a192, tfo: false}
-  - {name: 🇹🇼 台湾家宽 772, server: 1.165.86.85, port: 10061, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 85ce0ad1-2da5-48f3-a4b8-7a4bd101c306, tfo: false}
-  - {name: 🇺🇸 美国 125, server: 185.148.105.195, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: "%25252FTelegram", headers: {Host: ocost-dy.wmlefl.cc}}}
-  - {name: 🇹🇼 台湾家宽 640, server: 36.235.20.222, port: 10101, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: dfced461-6b67-46b4-9ed6-078162e7685a, tfo: false}
-  - {name: 🇹🇼 台湾家宽 724, server: 114.46.90.9, port: 10052, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 8340adea-d1d8-4ccf-869c-ed25159ebdd9, tfo: false}
-  - {name: 🇹🇼 台湾家宽 054, server: 36.232.116.141, port: 10143, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: e91b658b-b18b-4c6f-90ed-832a6bf10966, tfo: false}
-  - {name: 🇹🇼 台湾家宽 429, server: 1.165.120.160, port: 10022, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4b21866d-7865-4b44-a53a-fd2831aa22cf, tfo: false}
-  - {name: 🇺🇸 美国 252, server: tw2.jjzcloud.top, port: 57338, client-fingerprint: chrome, type: hysteria2, password: ead092f2-f8c4-4765-a2d9-de8757c8a24b, auth: ead092f2-f8c4-4765-a2d9-de8757c8a24b, sni: tw2.jjzcloud.top, skip-cert-verify: false}
-  - {name: 🇹🇼 台湾家宽 168, server: 1.170.40.42, port: 10087, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: d5abead3-0b9d-4ff8-9ecc-f0ad5ef0a192, tfo: false}
-  - {name: 🇹🇼 台湾家宽 228, server: 114.46.123.84, port: 10070, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0409f537-1292-4d75-b738-380167f66ef8, tfo: false}
-  - {name: 🇷🇺 俄罗斯联邦 03, server: yd.foldjc.top, port: 37014, client-fingerprint: chrome, type: hysteria2, password: cf4c0a82-ee00-4d0c-a9b7-99372b76bee3, auth: cf4c0a82-ee00-4d0c-a9b7-99372b76bee3, sni: yd.foldjc.top, skip-cert-verify: false}
-  - {name: 🇹🇼 台湾家宽 629, server: 125.228.31.117, port: 10097, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: aa26dc5c-72d8-4030-86a7-e1dd4cedabbd, tfo: false}
-  - {name: 🇹🇼 台湾家宽 605, server: 125.228.162.233, port: 10145, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4c0ffaef-a922-4c98-8d17-611f967cef68, tfo: false}
-  - {name: 🇺🇸 美国 314, server: join.my.telegram.channel.cmliussss.to.unlock.more.premium.nodes.cf.090227.xyz, port: 443, client-fingerprint: chrome, type: vless, uuid: 0199264a-f72e-87d9-03fc-cd9cf0551961, tls: true, tfo: false, skip-cert-verify: false, servername: 0000tvs0n4xitzbmb1w1mutxsf5tmxbchdgoocsr9kp3718m31habro7kxl9fgjoux17ae3dt55ls4rilahaxqgl.31229412.xyz, network: ws, ws-opts: {path: "/snippets?ip=proxyip:port(443)&nat64=6to4", headers: {Host: 0000tvs0n4xitzbmb1w1mutxsf5tmxbchdgoocsr9kp3718m31habro7kxl9fgjoux17ae3dt55ls4rilahaxqgl.31229412.xyz}}}
-  - {name: 🇹🇼 台湾家宽 965, server: 114.46.90.9, port: 10052, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0e9c983f-3e84-48df-b5ba-b8b39e26791b, tfo: false}
-  - {name: 🇺🇸 美国 141, server: tj.cpddx.club, port: 8443, client-fingerprint: chrome, type: trojan, password: ffb256bf-2136-43b7-8be1-d641c3f39f89, sni: tj.cpddx.club, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tj.cpddx.club}}}
-  - {name: 🇹🇼 台湾家宽 964, server: 1.165.72.103, port: 10010, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: cfecd2ca-7885-49ed-8b89-000b432c8117, tfo: false}
-  - {name: 🇹🇼 台湾家宽 445, server: 125.228.31.117, port: 10097, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 3d953287-7f64-4a54-bb46-e6bafa61a82d, tfo: false}
-  - {name: 🇹🇼 台湾家宽 446, server: 36.235.19.160, port: 10116, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 61a4d0c1-2d13-4fc9-a821-10562deccef1, tfo: false}
-  - {name: 🇺🇸 美国 289, server: 185.148.104.195, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /Telegram🇨🇳, headers: {Host: ocost-dy.wmlefl.cc}}}
-  - {name: 🇹🇼 台湾家宽 128, server: 36.232.116.141, port: 10143, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 3d953287-7f64-4a54-bb46-e6bafa61a82d, tfo: false}
-  - {name: 🇹🇼 台湾家宽 272, server: 1.170.14.70, port: 10118, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 3d953287-7f64-4a54-bb46-e6bafa61a82d, tfo: false}
-  - {name: 🇹🇼 台湾家宽 348, server: 114.46.91.108, port: 10072, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: a2c85f13-26a3-4786-a76b-380171cf7722, tfo: false}
-  - {name: 🇺🇸 美国 027, server: 45.144.174.211, port: 25151, client-fingerprint: chrome, type: vmess, uuid: 876c22a6-b13a-4e96-9d7e-846e8ff95d6d, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 美国 191, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 915cd180-0ef8-4e85-afa5-2701284d7a8c, auth: 915cd180-0ef8-4e85-afa5-2701284d7a8c, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 033, server: 195.26.229.87, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3, headers: {Host: ocost-dy.wmlefl.cc}}}
-  - {name: 🇺🇸 美国 018, server: 45.144.174.211, port: 25151, client-fingerprint: chrome, type: vmess, uuid: 92386fa3-b184-4bb1-ade8-9b5cf814889e, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 美国 230, server: mg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 589278e2-609f-4b26-b95c-e0924cc96a16, auth: 589278e2-609f-4b26-b95c-e0924cc96a16, sni: mg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇹🇼 台湾家宽 903, server: 111.253.205.251, port: 10147, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 7ca7410c-f040-4b43-a6eb-e73975ce5c5b, tfo: false}
-  - {name: 🇹🇼 台湾家宽 814, server: 125.228.162.163, port: 10137, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 85ce0ad1-2da5-48f3-a4b8-7a4bd101c306, tfo: false}
-  - {name: 🇺🇸 美国 319, server: snipaste5.speedip.eu.org, port: 443, client-fingerprint: chrome, type: vless, uuid: 019926a1-3614-561e-34b4-8082456be2e8, tls: true, tfo: false, skip-cert-verify: false, servername: 0000ts98qicxczd71il2ce18no05u8e9nt9ekefgdouvrn1bamt3oigyg0mw0zd6zb8pe.zmxquick.sbs, network: ws, ws-opts: {path: "/snippets?ip=proxyip:port(443)&nat64=6to4", headers: {Host: 0000ts98qicxczd71il2ce18no05u8e9nt9ekefgdouvrn1bamt3oigyg0mw0zd6zb8pe.zmxquick.sbs}}}
-  - {name: 🇺🇸 美国 162, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 915cd180-0ef8-4e85-afa5-2701284d7a8c, auth: 915cd180-0ef8-4e85-afa5-2701284d7a8c, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 078, server: tj.cpddx.club, port: 8443, client-fingerprint: chrome, type: trojan, password: 1975bf64-e07b-43fc-96c3-5c195007b0d9, sni: tj.cpddx.club, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tj.cpddx.club}}}
-  - {name: 🇹🇼 台湾 160, server: 125.228.31.10, port: 10113, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: d5abead3-0b9d-4ff8-9ecc-f0ad5ef0a192, tfo: false}
-  - {name: 🇭🇰 香港 061, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: c17080ce-a749-4672-904b-96793971f00a, auth: c17080ce-a749-4672-904b-96793971f00a, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇹🇼 台湾家宽 628, server: 114.46.100.87, port: 10068, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: d5abead3-0b9d-4ff8-9ecc-f0ad5ef0a192, tfo: false}
-  - {name: 🇭🇰 香港 056, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 0d77b1fe-5139-49d2-8156-0fc20998c474, auth: 0d77b1fe-5139-49d2-8156-0fc20998c474, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇹🇼 台湾家宽 078, server: 36.232.67.139, port: 10140, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: a2c85f13-26a3-4786-a76b-380171cf7722, tfo: false}
-  - {name: 🇺🇸 美国 071, server: tj.cpddx.club, port: 8443, client-fingerprint: chrome, type: trojan, password: 3fabaf7f-638f-4ca3-8763-da895b974727, sni: tj.cpddx.club, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tj.cpddx.club}}}
-  - {name: 🇭🇰 香港 113, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: c17080ce-a749-4672-904b-96793971f00a, auth: c17080ce-a749-4672-904b-96793971f00a, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇹🇼 台湾家宽 451, server: 125.231.68.36, port: 10056, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: d5abead3-0b9d-4ff8-9ecc-f0ad5ef0a192, tfo: false}
-  - {name: 🇹🇼 台湾家宽 712, server: 36.234.79.153, port: 10063, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: efee5d33-8879-4335-bcc6-517a4d5209c2, tfo: false}
-  - {name: 🇹🇼 台湾 149, server: tw.akebi.cc, port: 30001, client-fingerprint: chrome, type: hysteria2, password: 6c82f683-aed5-45c5-b1f6-a663161d74d2, auth: 6c82f683-aed5-45c5-b1f6-a663161d74d2, sni: tw1-vds14.anyhk.co, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 121, server: 45.144.174.211, port: 25151, client-fingerprint: chrome, type: vmess, uuid: 1994346d-d6f0-4e3b-bde9-ff141aacf9bb, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 45.144.174.211}}}
-  - {name: 🇹🇼 台湾家宽 275, server: 1.170.50.132, port: 10115, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 254618df-ecc6-46a4-9619-8934138c8add, tfo: false}
-  - {name: 🇹🇼 台湾家宽 129, server: 36.232.80.235, port: 10141, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 158e27c7-90ad-4a33-877c-76e28bd04894, tfo: false}
-  - {name: 🇹🇼 台湾家宽 407, server: 125.228.162.163, port: 10137, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 8340adea-d1d8-4ccf-869c-ed25159ebdd9, tfo: false}
-  - {name: 🇹🇼 台湾家宽 778, server: 114.35.114.182, port: 10129, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: a6bb2a3c-2740-42f4-aff3-ac463db73e8e, tfo: false}
-  - {name: 🇭🇰 香港 037, server: 45.144.174.211, port: 33079, client-fingerprint: chrome, type: hysteria2, password: 394ee3b2-598c-4bc4-8cf2-9a55647954aa, auth: 394ee3b2-598c-4bc4-8cf2-9a55647954aa, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇹🇼 台湾家宽 722, server: 36.232.80.235, port: 10141, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4b21866d-7865-4b44-a53a-fd2831aa22cf, tfo: false}
-  - {name: 🇭🇰 香港 091, server: xg.xfy003.cfd, port: 21333, client-fingerprint: chrome, type: hysteria2, password: 549c9ee5-7190-4243-937d-bb38b75375e7, auth: 549c9ee5-7190-4243-937d-bb38b75375e7, sni: xg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇹🇼 台湾家宽 428, server: 114.46.90.9, port: 10052, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: dea2220f-4198-4272-ac9c-3eb6088eba3a, tfo: false}
-  - {name: 🇹🇼 台湾家宽 165, server: 114.35.114.182, port: 10129, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 30ac1116-2995-469d-b272-cc58f911eb08, tfo: false}
-  - {name: 🇹🇼 台湾家宽 822, server: 36.232.90.105, port: 10130, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: e6187cf8-7003-47e2-967b-7b900b132ddb, tfo: false}
-  - {name: 🇹🇼 台湾家宽 936, server: 125.228.31.117, port: 10097, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 8340adea-d1d8-4ccf-869c-ed25159ebdd9, tfo: false}
-  - {name: 🇭🇰 香港 039, server: 45.144.174.211, port: 33079, client-fingerprint: chrome, type: hysteria2, password: ac09066f-0ec5-45cf-b5d2-50ab44440eec, auth: ac09066f-0ec5-45cf-b5d2-50ab44440eec, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇹🇼 台湾家宽 0192, server: 125.228.31.117, port: 10097, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 146b1ba8-62d7-4f06-8e78-ec3148132c88, tfo: false}
+  - {name: 🇺🇸 美国 314, server: dx.1010991.xyz, port: 2052, client-fingerprint: chrome, type: vmess, uuid: 1fea217c-0827-4981-aefd-da59a43c186b, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /hls/cctv4.m3u8, headers: {Host: syyn-au1-b56m7j.1095815.xyz}}}
+  - {name: 🇹🇼 台湾家宽 0568, server: 125.228.31.10, port: 10113, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: cf71197c-8a32-48fd-b302-d256d3e06bed, tfo: false}
+  - {name: 🇺🇸 美国 038, server: tj.cpddx.club, port: 8443, client-fingerprint: chrome, type: trojan, password: 1975bf64-e07b-43fc-96c3-5c195007b0d9, sni: tj.cpddx.club, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tj.cpddx.club}}}
+  - {name: 🇭🇰 香港 026, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: e33b95f1-4363-40d4-afdd-1ce468882df4, auth: e33b95f1-4363-40d4-afdd-1ce468882df4, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾家宽 0766, server: 125.231.68.156, port: 10065, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: f200fa8b-dd29-4fac-a67f-67bc05717bad, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0795, server: 36.232.67.139, port: 10140, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 3c05865c-1353-49d8-a67a-0673299e30be, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0476, server: 36.232.80.235, port: 10141, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0ac158d1-6ef9-47be-aa2a-02ff4cc82e3b, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0343, server: 114.33.53.213, port: 10037, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: dea2220f-4198-4272-ac9c-3eb6088eba3a, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0974, server: 36.232.106.223, port: 10131, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 217de109-14f1-47e5-97c1-122540776aa8, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0478, server: 36.232.90.105, port: 10130, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 85ce0ad1-2da5-48f3-a4b8-7a4bd101c306, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0481, server: 36.232.90.105, port: 10130, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 64133a15-dd5f-444e-9efa-439df58deb51, tfo: false}
+  - {name: 🇩🇪 德国 23, server: desrv.ssvpnapp.win, port: 57456, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: fe166c5b3465540f, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0065, server: 114.46.90.9, port: 10052, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: fb20c0a0-a0d1-479c-acb0-2192c6e1a8fe, tfo: false}
+  - {name: 🇺🇸 美国 209, server: 209.46.30.87, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3, headers: {Host: ocost-dy.wmlefl.cc}}}
+  - {name: 🇹🇼 台湾家宽 0164, server: 36.232.106.223, port: 10131, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 1aec9682-8966-4896-86ac-a2e271e9abc8, tfo: false}
+  - {name: 🇧🇷 巴西 02, server: ldu.izenny.com, port: 55936, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 57192a95-b9e1-4ff3-96c6-6e7d4a1baf4a, tfo: false}
+  - {name: 🇺🇸 美国 077, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 12cc60a0-03e5-4df5-b2d0-90360d7e06ba, auth: 12cc60a0-03e5-4df5-b2d0-90360d7e06ba, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾家宽 0288, server: 1.165.83.231, port: 10039, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: cdf077a0-e137-4373-92f1-65782f3eadbb, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0109, server: 1.170.14.70, port: 10118, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 8994d231-e38e-4e20-b7fe-0c6acff1cb81, tfo: false}
+  - {name: 🇺🇸 美国 313, server: 205.233.181.87, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3, headers: {Host: ocost-dy.wmlefl.cc}}}
+  - {name: 🇨🇦 加拿大 03, server: xdd.dashuai.cyou, port: 45065, client-fingerprint: chrome, type: vmess, uuid: 023fb9cd-16d7-4737-9b93-bcb920f879c6, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾家宽 0197, server: 114.46.91.108, port: 10072, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0e9c983f-3e84-48df-b5ba-b8b39e26791b, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0085, server: 1.170.50.132, port: 10115, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: fb20c0a0-a0d1-479c-acb0-2192c6e1a8fe, tfo: false}
+  - {name: 🇺🇸 美国 030, server: tj.cpddx.club, port: 8443, client-fingerprint: chrome, type: trojan, password: d69f047a-b628-415e-8015-4de3965b048b, sni: tj.cpddx.club, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tj.cpddx.club}}}
+  - {name: 🇺🇸 美国 263, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 0fa27b66-c29d-4628-b5b6-ab70f24451c9, auth: 0fa27b66-c29d-4628-b5b6-ab70f24451c9, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾家宽 0898, server: 36.232.116.141, port: 10143, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0ac158d1-6ef9-47be-aa2a-02ff4cc82e3b, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0779, server: 114.35.114.182, port: 10129, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 7b8c1ca4-f806-4c98-aa5c-72fc3995d4d7, tfo: false}
+  - {name: 🇺🇸 美国 279, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 626873ff-9e0d-4b5f-9243-f66eec240926, auth: 626873ff-9e0d-4b5f-9243-f66eec240926, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾家宽 1010, server: tw-niihost.mhdy.me, port: 35929, reality-opts: {public-key: X9NZApWgcOOh89CN5uzbcoVy1gk9wah7lKrtkSZvuRI, short-id: "4c095d40" }, client-fingerprint: chrome, type: vless, uuid: ffd8fa53-3fe7-4690-8736-9bb6944cf0a8, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: gamedownloads-rockstargames-com.akamaized.net, network: tcp}
+  - {name: 🇺🇸 美国 308, server: 185.251.81.195, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /Telegram🇨🇳, headers: {Host: ocost-dy.wmlefl.cc}}}
+  - {name: 🇹🇼 台湾家宽 0552, server: 125.231.68.156, port: 10065, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: e6187cf8-7003-47e2-967b-7b900b132ddb, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0052, server: 114.46.123.84, port: 10070, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: cfecd2ca-7885-49ed-8b89-000b432c8117, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0871, server: 36.232.85.144, port: 10123, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: ae42584d-3780-4812-af3b-1d69ca3f0a7e, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0403, server: 114.35.114.182, port: 10129, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4be60f66-08de-4f42-beb1-8745e47387f9, tfo: false}
+  - {name: 🇹🇼 台湾 47, server: 118.170.242.124, port: 10004, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 8340adea-d1d8-4ccf-869c-ed25159ebdd9, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0412, server: 36.232.67.139, port: 10140, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 7b8c1ca4-f806-4c98-aa5c-72fc3995d4d7, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0498, server: 36.235.19.160, port: 10116, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 14cd9748-b2f9-4d75-ad23-4982b25127ce, tfo: false}
+  - {name: 🇭🇰 香港 094, server: 45.144.174.211, port: 33079, client-fingerprint: chrome, type: hysteria2, password: c5bf1e44-971c-4dcc-a016-8cc43eedbf60, auth: c5bf1e44-971c-4dcc-a016-8cc43eedbf60, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇹🇼 台湾家宽 0629, server: 125.228.31.10, port: 10113, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 39e8e67f-2eb2-4688-a9bd-ed16ba5eb136, tfo: false}
+  - {name: 🇺🇸 美国 310, server: 195.13.45.195, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /Telegram🇨🇳, headers: {Host: ocost-dy.wmlefl.cc}}}
+  - {name: 🇹🇼 台湾家宽 0792, server: 114.46.100.87, port: 10068, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: dea2220f-4198-4272-ac9c-3eb6088eba3a, tfo: false}
+  - {name: 🇺🇸 美国 072, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 04a24f06-17fa-464b-a799-90600783499f, auth: 04a24f06-17fa-464b-a799-90600783499f, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾家宽 0904, server: 114.46.123.84, port: 10070, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 85ce0ad1-2da5-48f3-a4b8-7a4bd101c306, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0722, server: 114.46.100.87, port: 10068, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0e9c983f-3e84-48df-b5ba-b8b39e26791b, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0161, server: 1.165.120.160, port: 10022, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 158e27c7-90ad-4a33-877c-76e28bd04894, tfo: false}
+  - {name: 🇺🇸 美国 237, server: h23.cpddx.club, port: 8443, client-fingerprint: chrome, type: hysteria2, password: 68b298de-c2cf-41b0-affc-1aedf81c84f9, auth: 68b298de-c2cf-41b0-affc-1aedf81c84f9, sni: h23.cpddx.club, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾家宽 0754, server: 36.232.126.82, port: 10135, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0ac158d1-6ef9-47be-aa2a-02ff4cc82e3b, tfo: false}
+  - {name: 🇭🇰 香港 017, server: qqb12.198139.xyz, port: 62871, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: e4c1f312-2ac0-406a-9b00-932d8ba032d0, tfo: false}
+  - {name: 🇺🇸 美国 023, server: tj.cpddx.club, port: 8443, client-fingerprint: chrome, type: trojan, password: 3cfd4e5e-1363-42ba-9b0a-f25d3f20fb45, sni: tj.cpddx.club, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tj.cpddx.club}}}
+  - {name: 🇭🇰 香港 076, server: qqb12.198139.xyz, port: 62871, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 67383797-1784-4b3e-a4ba-4dce90fb813d, tfo: false}
+  - {name: 🇭🇰 香港 081, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 7fd98159-a3e7-440f-b29a-6185c04f14e9, auth: 7fd98159-a3e7-440f-b29a-6185c04f14e9, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 022, server: qqb12.198139.xyz, port: 62871, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 5a07439c-6128-45d6-9f12-5cf7348bcdfd, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0144, server: 1.170.14.70, port: 10118, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4ad92cd9-6ce7-435f-af13-14419e1f921b, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0573, server: 125.228.31.117, port: 10097, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: bad6587e-c8e3-4eab-9517-edea9df9234a, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0790, server: 1.170.50.132, port: 10115, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 02e43aa7-ef96-47bd-ab33-1df84a26645e, tfo: false}
+  - {name: 🇺🇸 美国 334, server: 195.13.45.87, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3, headers: {Host: ocost-dy.wmlefl.cc}}}
+  - {name: 🇹🇼 台湾家宽 0385, server: 1.165.86.85, port: 10061, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: dea2220f-4198-4272-ac9c-3eb6088eba3a, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0622, server: 36.232.90.105, port: 10130, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 8994d231-e38e-4e20-b7fe-0c6acff1cb81, tfo: false}
+  - {name: 🇭🇰 香港 014, server: qqb12.198139.xyz, port: 62871, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 56d9b929-913a-4571-8ac0-47df2334b495, tfo: false}
+  - {name: 🇺🇸 美国 133, server: 185.18.184.195, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: Telegram%252525F0%2525259F%25252587%252525A8%252525F0%2525259F%25252587%252525B3, headers: {Host: ocost-dy.wmlefl.cc}}}
+  - {name: 🇹🇼 台湾家宽 0450, server: 36.232.106.223, port: 10131, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 158e27c7-90ad-4a33-877c-76e28bd04894, tfo: false}
+  - {name: 🇹🇼 台湾家宽 1002, server: 114.46.91.108, port: 10072, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 1aec9682-8966-4896-86ac-a2e271e9abc8, tfo: false}
+  - {name: 🇻🇳 越南 01, server: 103.186.155.30, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0931, server: 36.232.106.223, port: 10131, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: d203e4db-8eb1-4658-ae48-0b22af34de63, tfo: false}
+  - {name: 🇹🇼 台湾家宽 1003, server: 1.170.50.132, port: 10115, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: dfced461-6b67-46b4-9ed6-078162e7685a, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0819, server: 114.46.90.9, port: 10052, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 8fc95eb8-83b4-47af-ae17-d7639dd0fd2c, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0506, server: 1.165.86.85, port: 10061, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: ae42584d-3780-4812-af3b-1d69ca3f0a7e, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0846, server: 114.46.100.87, port: 10068, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: d896a614-7fa3-4ca5-b4b5-a2c01a6597e4, tfo: false}
+  - {name: 🇹🇼 台湾 43, server: 118.170.242.124, port: 10004, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 39e8e67f-2eb2-4688-a9bd-ed16ba5eb136, tfo: false}
+  - {name: 🇺🇸 美国 115, server: mg2.jjzcloud.top, port: 57338, client-fingerprint: chrome, type: hysteria2, password: 5c39113c-0b45-4854-a87e-f30315ecb6a8, auth: 5c39113c-0b45-4854-a87e-f30315ecb6a8, sni: mg2.jjzcloud.top, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾家宽 0636, server: 36.235.19.160, port: 10116, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: e6187cf8-7003-47e2-967b-7b900b132ddb, tfo: false}
+  - {name: 🇺🇸 美国 327, server: lt.1010991.xyz, port: 2052, client-fingerprint: chrome, type: vmess, uuid: 1fea217c-0827-4981-aefd-da59a43c186b, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /hls/cctv4.m3u8, headers: {Host: syyn-au1-b56m7j.1095815.xyz}}}
+  - {name: 🇹🇼 台湾家宽 0713, server: 1.170.50.132, port: 10115, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: e6187cf8-7003-47e2-967b-7b900b132ddb, tfo: false}
+  - {name: 🇮🇱 以色列 01, server: ldu.izenny.com, port: 18140, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 57192a95-b9e1-4ff3-96c6-6e7d4a1baf4a, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0966, server: 36.232.116.141, port: 10143, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: dea2220f-4198-4272-ac9c-3eb6088eba3a, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0036, server: 125.228.31.10, port: 10113, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 086366ee-0f70-4c1d-bff5-873a48fae1b1, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0556, server: 111.253.205.251, port: 10147, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0ac158d1-6ef9-47be-aa2a-02ff4cc82e3b, tfo: false}
+  - {name: 🇹🇼 台湾 44, server: 118.170.242.124, port: 10004, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 9035c9de-ca80-4897-9631-8014d0f7be7f, tfo: false}
+  - {name: 🇭🇰 香港 075, server: qqb12.198139.xyz, port: 62871, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 90cf991d-094d-4952-94b3-3e6101f20dfa, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0718, server: 114.46.90.9, port: 10052, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4be60f66-08de-4f42-beb1-8745e47387f9, tfo: false}
+  - {name: 🇸🇬 新加坡 02, server: haa.dashuai.cyou, port: 45054, client-fingerprint: chrome, type: vmess, uuid: 476a454e-75dd-460d-954b-e72d4fa08c6e, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾家宽 0712, server: 125.228.31.10, port: 10113, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: f200fa8b-dd29-4fac-a67f-67bc05717bad, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0874, server: 36.235.19.160, port: 10116, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: ae42584d-3780-4812-af3b-1d69ca3f0a7e, tfo: false}
+  - {name: 🇯🇵 日本 20, server: 47.79.86.167, port: 1113, reality-opts: {public-key: wl83CHdRpVz5cbwXAiNWtNUH4ETIOJ7OWyNrBZxrhHc, short-id: "30780577" }, client-fingerprint: qq, type: vless, uuid: 7a1579f6-fe36-456c-a65d-12b80c456b6d, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: gamedownloads-rockstargames-com.akamaized.net, network: tcp}
+  - {name: 🇹🇼 台湾家宽 0023, server: 36.232.126.82, port: 10135, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4a393e6a-37bc-4810-b12f-bf7a5cc19491, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0474, server: 36.232.126.82, port: 10135, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: bad6587e-c8e3-4eab-9517-edea9df9234a, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0480, server: 36.232.106.223, port: 10131, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0ac158d1-6ef9-47be-aa2a-02ff4cc82e3b, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0623, server: 114.33.53.213, port: 10037, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: aa26dc5c-72d8-4030-86a7-e1dd4cedabbd, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0337, server: 36.232.116.141, port: 10143, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 7b8c1ca4-f806-4c98-aa5c-72fc3995d4d7, tfo: false}
+  - {name: 🇺🇸 美国 321, server: freev2.cloudflare.182682.xyz, port: 443, client-fingerprint: random, type: vless, uuid: 4fd16fe2-1775-4ce0-a557-2a7383ecb3dc, tls: true, tfo: false, skip-cert-verify: false, servername: do-lon1.008883.xyz, network: ws, ws-opts: {path: "/freev2.net?ed=2048", headers: {Host: do-lon1.008883.xyz}}}
+  - {name: 🇭🇰 香港 098, server: 45.144.174.211, port: 22108, client-fingerprint: chrome, type: vmess, uuid: 8db49eb9-d68b-4cce-a1de-7e9c7cad1610, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇺🇸 美国 043, server: tj.cpddx.club, port: 8443, client-fingerprint: chrome, type: trojan, password: 7d63e2db-6c7b-4f4c-a677-9e1460add144, sni: tj.cpddx.club, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tj.cpddx.club}}}
+  - {name: 🇹🇼 台湾家宽 0574, server: 36.232.85.144, port: 10123, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 0ac158d1-6ef9-47be-aa2a-02ff4cc82e3b, tfo: false}
+  - {name: 🇹🇼 台湾家宽 0304, server: 114.46.90.9, port: 10052, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 7b8c1ca4-f806-4c98-aa5c-72fc3995d4d7, tfo: false}
+  - {name: 🇻🇳 越南 07, server: 160.25.74.112, port: 10109, reality-opts: {public-key: 4pKEpsSJGmhzAZBV0GEaRG02P66LtQQRcDdFTjjMkGY, short-id: "ca43f9f6" }, client-fingerprint: safari, type: vless, uuid: ffd8fa53-3fe7-4690-8736-9bb6944cf0a8, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: content.cdp.bethesda.net, network: tcp}
+  - {name: 🇭🇰 香港 033, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 4bd663f9-8af8-4fde-8405-717e0e76043b, auth: 4bd663f9-8af8-4fde-8405-717e0e76043b, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
   - {name: 🇷🇺 RU俄罗斯(yz), server: 193.124.224.195, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /Telegram, headers: {Host: ocost-dy.wmlefl.cc}}}
   - {name: 🇺🇸 US美国(yz), server: 185.148.105.195, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /Telegram, headers: {Host: ocost-dy.wmlefl.cc}}}
   - {name: 🇬🇧 GB英国(yz), server: 195.26.229.195, port: 2096, client-fingerprint: chrome, type: trojan, password: slch2024, sni: ocost-dy.wmlefl.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /Telegram, headers: {Host: ocost-dy.wmlefl.cc}}}
@@ -595,104 +594,103 @@ proxy-groups:
     type: select
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇮🇳 印度 03
-      - 🇹🇼 台湾家宽 216
-      - 🇺🇸 美国 132
-      - 🇹🇼 台湾家宽 164
-      - 🇭🇰 香港 083
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港 019
-      - 🇹🇼 台湾家宽 692
-      - 🇭🇰 香港 112
-      - 🇺🇸 美国 029
-      - 🇹🇼 台湾家宽 567
-      - 🇺🇸 美国 060
-      - 🇭🇰 香港 038
-      - 🇹🇼 台湾家宽 597
-      - 🇹🇼 台湾 021
-      - 🇹🇼 台湾家宽 566
-      - 🇹🇼 台湾家宽 065
-      - 🇹🇼 台湾家宽 484
-      - 🇭🇰 香港 011
-      - 🇷🇺 俄罗斯联邦 02
-      - 🇺🇸 美国 097
-      - 🇹🇼 台湾家宽 321
-      - 🇺🇸 美国 169
-      - 🇹🇼 台湾家宽 093
-      - 🇹🇼 台湾 133
-      - 🇹🇼 台湾家宽 464
-      - 🇹🇼 台湾家宽 851
-      - 🇹🇼 台湾家宽 312
-      - 🇹🇼 台湾 079
-      - 🇦🇹 奥地利 01
-      - 🇹🇼 台湾家宽 603
-      - 🇹🇼 台湾家宽 417
-      - 🇹🇼 台湾家宽 855
-      - 🇹🇼 台湾家宽 634
-      - 🇺🇸 美国 057
-      - 🇹🇼 台湾家宽 288
-      - 🇭🇰 香港 085
-      - 🇹🇼 台湾家宽 231
-      - 🇹🇼 台湾家宽 411
-      - 🇹🇼 台湾家宽 241
-      - 🇭🇰 香港 098
-      - 🇺🇸 美国 292
-      - 🇹🇼 台湾家宽 648
-      - 🇹🇼 台湾家宽 772
-      - 🇺🇸 美国 125
-      - 🇹🇼 台湾家宽 640
-      - 🇹🇼 台湾家宽 724
-      - 🇹🇼 台湾家宽 054
-      - 🇹🇼 台湾家宽 429
-      - 🇺🇸 美国 252
-      - 🇹🇼 台湾家宽 168
-      - 🇹🇼 台湾家宽 228
-      - 🇷🇺 俄罗斯联邦 03
-      - 🇹🇼 台湾家宽 629
-      - 🇹🇼 台湾家宽 605
+      - 🇹🇼 台湾家宽 0192
       - 🇺🇸 美国 314
-      - 🇹🇼 台湾家宽 965
-      - 🇺🇸 美国 141
-      - 🇹🇼 台湾家宽 964
-      - 🇹🇼 台湾家宽 445
-      - 🇹🇼 台湾家宽 446
-      - 🇺🇸 美国 289
-      - 🇹🇼 台湾家宽 128
-      - 🇹🇼 台湾家宽 272
-      - 🇹🇼 台湾家宽 348
-      - 🇺🇸 美国 027
-      - 🇺🇸 美国 191
-      - 🇺🇸 美国 033
-      - 🇺🇸 美国 018
-      - 🇺🇸 美国 230
-      - 🇹🇼 台湾家宽 903
-      - 🇹🇼 台湾家宽 814
-      - 🇺🇸 美国 319
-      - 🇺🇸 美国 162
-      - 🇺🇸 美国 078
-      - 🇹🇼 台湾 160
-      - 🇭🇰 香港 061
-      - 🇹🇼 台湾家宽 628
-      - 🇭🇰 香港 056
-      - 🇹🇼 台湾家宽 078
-      - 🇺🇸 美国 071
-      - 🇭🇰 香港 113
-      - 🇹🇼 台湾家宽 451
-      - 🇹🇼 台湾家宽 712
-      - 🇹🇼 台湾 149
-      - 🇺🇸 美国 121
-      - 🇹🇼 台湾家宽 275
-      - 🇹🇼 台湾家宽 129
-      - 🇹🇼 台湾家宽 407
-      - 🇹🇼 台湾家宽 778
-      - 🇭🇰 香港 037
-      - 🇹🇼 台湾家宽 722
-      - 🇭🇰 香港 091
-      - 🇹🇼 台湾家宽 428
-      - 🇹🇼 台湾家宽 165
-      - 🇹🇼 台湾家宽 822
-      - 🇹🇼 台湾家宽 936
-      - 🇭🇰 香港 039
+      - 🇹🇼 台湾家宽 0568
+      - 🇺🇸 美国 038
+      - 🇭🇰 香港 026
+      - 🇹🇼 台湾家宽 0766
+      - 🇹🇼 台湾家宽 0795
+      - 🇹🇼 台湾家宽 0476
+      - 🇹🇼 台湾家宽 0343
+      - 🇹🇼 台湾家宽 0974
+      - 🇹🇼 台湾家宽 0478
+      - 🇹🇼 台湾家宽 0481
+      - 🇩🇪 德国 23
+      - 🇹🇼 台湾家宽 0065
+      - 🇺🇸 美国 209
+      - 🇹🇼 台湾家宽 0164
+      - 🇧🇷 巴西 02
+      - 🇺🇸 美国 077
+      - 🇹🇼 台湾家宽 0288
+      - 🇹🇼 台湾家宽 0109
+      - 🇺🇸 美国 313
+      - 🇨🇦 加拿大 03
+      - 🇹🇼 台湾家宽 0197
+      - 🇹🇼 台湾家宽 0085
+      - 🇺🇸 美国 030
+      - 🇺🇸 美国 263
+      - 🇹🇼 台湾家宽 0898
+      - 🇹🇼 台湾家宽 0779
+      - 🇺🇸 美国 279
+      - 🇹🇼 台湾家宽 1010
+      - 🇺🇸 美国 308
+      - 🇹🇼 台湾家宽 0552
+      - 🇹🇼 台湾家宽 0052
+      - 🇹🇼 台湾家宽 0871
+      - 🇹🇼 台湾家宽 0403
+      - 🇹🇼 台湾 47
+      - 🇹🇼 台湾家宽 0412
+      - 🇹🇼 台湾家宽 0498
+      - 🇭🇰 香港 094
+      - 🇹🇼 台湾家宽 0629
+      - 🇺🇸 美国 310
+      - 🇹🇼 台湾家宽 0792
+      - 🇺🇸 美国 072
+      - 🇹🇼 台湾家宽 0904
+      - 🇹🇼 台湾家宽 0722
+      - 🇹🇼 台湾家宽 0161
+      - 🇺🇸 美国 237
+      - 🇹🇼 台湾家宽 0754
+      - 🇭🇰 香港 017
+      - 🇺🇸 美国 023
+      - 🇭🇰 香港 076
+      - 🇭🇰 香港 081
+      - 🇭🇰 香港 022
+      - 🇹🇼 台湾家宽 0144
+      - 🇹🇼 台湾家宽 0573
+      - 🇹🇼 台湾家宽 0790
+      - 🇺🇸 美国 334
+      - 🇹🇼 台湾家宽 0385
+      - 🇹🇼 台湾家宽 0622
+      - 🇭🇰 香港 014
+      - 🇺🇸 美国 133
+      - 🇹🇼 台湾家宽 0450
+      - 🇹🇼 台湾家宽 1002
+      - 🇻🇳 越南 01
+      - 🇹🇼 台湾家宽 0931
+      - 🇹🇼 台湾家宽 1003
+      - 🇹🇼 台湾家宽 0819
+      - 🇹🇼 台湾家宽 0506
+      - 🇹🇼 台湾家宽 0846
+      - 🇹🇼 台湾 43
+      - 🇺🇸 美国 115
+      - 🇹🇼 台湾家宽 0636
+      - 🇺🇸 美国 327
+      - 🇹🇼 台湾家宽 0713
+      - 🇮🇱 以色列 01
+      - 🇹🇼 台湾家宽 0966
+      - 🇹🇼 台湾家宽 0036
+      - 🇹🇼 台湾家宽 0556
+      - 🇹🇼 台湾 44
+      - 🇭🇰 香港 075
+      - 🇹🇼 台湾家宽 0718
+      - 🇸🇬 新加坡 02
+      - 🇹🇼 台湾家宽 0712
+      - 🇹🇼 台湾家宽 0874
+      - 🇯🇵 日本 20
+      - 🇹🇼 台湾家宽 0023
+      - 🇹🇼 台湾家宽 0474
+      - 🇹🇼 台湾家宽 0480
+      - 🇹🇼 台湾家宽 0623
+      - 🇹🇼 台湾家宽 0337
+      - 🇺🇸 美国 321
+      - 🇭🇰 香港 098
+      - 🇺🇸 美国 043
+      - 🇹🇼 台湾家宽 0574
+      - 🇹🇼 台湾家宽 0304
+      - 🇻🇳 越南 07
+      - 🇭🇰 香港 033
       - 🇷🇺 RU俄罗斯(yz)
       - 🇺🇸 US美国(yz)
       - 🇬🇧 GB英国(yz)
@@ -1161,104 +1159,103 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇮🇳 印度 03
-      - 🇹🇼 台湾家宽 216
-      - 🇺🇸 美国 132
-      - 🇹🇼 台湾家宽 164
-      - 🇭🇰 香港 083
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港 019
-      - 🇹🇼 台湾家宽 692
-      - 🇭🇰 香港 112
-      - 🇺🇸 美国 029
-      - 🇹🇼 台湾家宽 567
-      - 🇺🇸 美国 060
-      - 🇭🇰 香港 038
-      - 🇹🇼 台湾家宽 597
-      - 🇹🇼 台湾 021
-      - 🇹🇼 台湾家宽 566
-      - 🇹🇼 台湾家宽 065
-      - 🇹🇼 台湾家宽 484
-      - 🇭🇰 香港 011
-      - 🇷🇺 俄罗斯联邦 02
-      - 🇺🇸 美国 097
-      - 🇹🇼 台湾家宽 321
-      - 🇺🇸 美国 169
-      - 🇹🇼 台湾家宽 093
-      - 🇹🇼 台湾 133
-      - 🇹🇼 台湾家宽 464
-      - 🇹🇼 台湾家宽 851
-      - 🇹🇼 台湾家宽 312
-      - 🇹🇼 台湾 079
-      - 🇦🇹 奥地利 01
-      - 🇹🇼 台湾家宽 603
-      - 🇹🇼 台湾家宽 417
-      - 🇹🇼 台湾家宽 855
-      - 🇹🇼 台湾家宽 634
-      - 🇺🇸 美国 057
-      - 🇹🇼 台湾家宽 288
-      - 🇭🇰 香港 085
-      - 🇹🇼 台湾家宽 231
-      - 🇹🇼 台湾家宽 411
-      - 🇹🇼 台湾家宽 241
-      - 🇭🇰 香港 098
-      - 🇺🇸 美国 292
-      - 🇹🇼 台湾家宽 648
-      - 🇹🇼 台湾家宽 772
-      - 🇺🇸 美国 125
-      - 🇹🇼 台湾家宽 640
-      - 🇹🇼 台湾家宽 724
-      - 🇹🇼 台湾家宽 054
-      - 🇹🇼 台湾家宽 429
-      - 🇺🇸 美国 252
-      - 🇹🇼 台湾家宽 168
-      - 🇹🇼 台湾家宽 228
-      - 🇷🇺 俄罗斯联邦 03
-      - 🇹🇼 台湾家宽 629
-      - 🇹🇼 台湾家宽 605
+      - 🇹🇼 台湾家宽 0192
       - 🇺🇸 美国 314
-      - 🇹🇼 台湾家宽 965
-      - 🇺🇸 美国 141
-      - 🇹🇼 台湾家宽 964
-      - 🇹🇼 台湾家宽 445
-      - 🇹🇼 台湾家宽 446
-      - 🇺🇸 美国 289
-      - 🇹🇼 台湾家宽 128
-      - 🇹🇼 台湾家宽 272
-      - 🇹🇼 台湾家宽 348
-      - 🇺🇸 美国 027
-      - 🇺🇸 美国 191
-      - 🇺🇸 美国 033
-      - 🇺🇸 美国 018
-      - 🇺🇸 美国 230
-      - 🇹🇼 台湾家宽 903
-      - 🇹🇼 台湾家宽 814
-      - 🇺🇸 美国 319
-      - 🇺🇸 美国 162
-      - 🇺🇸 美国 078
-      - 🇹🇼 台湾 160
-      - 🇭🇰 香港 061
-      - 🇹🇼 台湾家宽 628
-      - 🇭🇰 香港 056
-      - 🇹🇼 台湾家宽 078
-      - 🇺🇸 美国 071
-      - 🇭🇰 香港 113
-      - 🇹🇼 台湾家宽 451
-      - 🇹🇼 台湾家宽 712
-      - 🇹🇼 台湾 149
-      - 🇺🇸 美国 121
-      - 🇹🇼 台湾家宽 275
-      - 🇹🇼 台湾家宽 129
-      - 🇹🇼 台湾家宽 407
-      - 🇹🇼 台湾家宽 778
-      - 🇭🇰 香港 037
-      - 🇹🇼 台湾家宽 722
-      - 🇭🇰 香港 091
-      - 🇹🇼 台湾家宽 428
-      - 🇹🇼 台湾家宽 165
-      - 🇹🇼 台湾家宽 822
-      - 🇹🇼 台湾家宽 936
-      - 🇭🇰 香港 039
+      - 🇹🇼 台湾家宽 0568
+      - 🇺🇸 美国 038
+      - 🇭🇰 香港 026
+      - 🇹🇼 台湾家宽 0766
+      - 🇹🇼 台湾家宽 0795
+      - 🇹🇼 台湾家宽 0476
+      - 🇹🇼 台湾家宽 0343
+      - 🇹🇼 台湾家宽 0974
+      - 🇹🇼 台湾家宽 0478
+      - 🇹🇼 台湾家宽 0481
+      - 🇩🇪 德国 23
+      - 🇹🇼 台湾家宽 0065
+      - 🇺🇸 美国 209
+      - 🇹🇼 台湾家宽 0164
+      - 🇧🇷 巴西 02
+      - 🇺🇸 美国 077
+      - 🇹🇼 台湾家宽 0288
+      - 🇹🇼 台湾家宽 0109
+      - 🇺🇸 美国 313
+      - 🇨🇦 加拿大 03
+      - 🇹🇼 台湾家宽 0197
+      - 🇹🇼 台湾家宽 0085
+      - 🇺🇸 美国 030
+      - 🇺🇸 美国 263
+      - 🇹🇼 台湾家宽 0898
+      - 🇹🇼 台湾家宽 0779
+      - 🇺🇸 美国 279
+      - 🇹🇼 台湾家宽 1010
+      - 🇺🇸 美国 308
+      - 🇹🇼 台湾家宽 0552
+      - 🇹🇼 台湾家宽 0052
+      - 🇹🇼 台湾家宽 0871
+      - 🇹🇼 台湾家宽 0403
+      - 🇹🇼 台湾 47
+      - 🇹🇼 台湾家宽 0412
+      - 🇹🇼 台湾家宽 0498
+      - 🇭🇰 香港 094
+      - 🇹🇼 台湾家宽 0629
+      - 🇺🇸 美国 310
+      - 🇹🇼 台湾家宽 0792
+      - 🇺🇸 美国 072
+      - 🇹🇼 台湾家宽 0904
+      - 🇹🇼 台湾家宽 0722
+      - 🇹🇼 台湾家宽 0161
+      - 🇺🇸 美国 237
+      - 🇹🇼 台湾家宽 0754
+      - 🇭🇰 香港 017
+      - 🇺🇸 美国 023
+      - 🇭🇰 香港 076
+      - 🇭🇰 香港 081
+      - 🇭🇰 香港 022
+      - 🇹🇼 台湾家宽 0144
+      - 🇹🇼 台湾家宽 0573
+      - 🇹🇼 台湾家宽 0790
+      - 🇺🇸 美国 334
+      - 🇹🇼 台湾家宽 0385
+      - 🇹🇼 台湾家宽 0622
+      - 🇭🇰 香港 014
+      - 🇺🇸 美国 133
+      - 🇹🇼 台湾家宽 0450
+      - 🇹🇼 台湾家宽 1002
+      - 🇻🇳 越南 01
+      - 🇹🇼 台湾家宽 0931
+      - 🇹🇼 台湾家宽 1003
+      - 🇹🇼 台湾家宽 0819
+      - 🇹🇼 台湾家宽 0506
+      - 🇹🇼 台湾家宽 0846
+      - 🇹🇼 台湾 43
+      - 🇺🇸 美国 115
+      - 🇹🇼 台湾家宽 0636
+      - 🇺🇸 美国 327
+      - 🇹🇼 台湾家宽 0713
+      - 🇮🇱 以色列 01
+      - 🇹🇼 台湾家宽 0966
+      - 🇹🇼 台湾家宽 0036
+      - 🇹🇼 台湾家宽 0556
+      - 🇹🇼 台湾 44
+      - 🇭🇰 香港 075
+      - 🇹🇼 台湾家宽 0718
+      - 🇸🇬 新加坡 02
+      - 🇹🇼 台湾家宽 0712
+      - 🇹🇼 台湾家宽 0874
+      - 🇯🇵 日本 20
+      - 🇹🇼 台湾家宽 0023
+      - 🇹🇼 台湾家宽 0474
+      - 🇹🇼 台湾家宽 0480
+      - 🇹🇼 台湾家宽 0623
+      - 🇹🇼 台湾家宽 0337
+      - 🇺🇸 美国 321
+      - 🇭🇰 香港 098
+      - 🇺🇸 美国 043
+      - 🇹🇼 台湾家宽 0574
+      - 🇹🇼 台湾家宽 0304
+      - 🇻🇳 越南 07
+      - 🇭🇰 香港 033
       - 🇷🇺 RU俄罗斯(yz)
       - 🇺🇸 US美国(yz)
       - 🇬🇧 GB英国(yz)
@@ -1727,104 +1724,103 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇮🇳 印度 03
-      - 🇹🇼 台湾家宽 216
-      - 🇺🇸 美国 132
-      - 🇹🇼 台湾家宽 164
-      - 🇭🇰 香港 083
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港 019
-      - 🇹🇼 台湾家宽 692
-      - 🇭🇰 香港 112
-      - 🇺🇸 美国 029
-      - 🇹🇼 台湾家宽 567
-      - 🇺🇸 美国 060
-      - 🇭🇰 香港 038
-      - 🇹🇼 台湾家宽 597
-      - 🇹🇼 台湾 021
-      - 🇹🇼 台湾家宽 566
-      - 🇹🇼 台湾家宽 065
-      - 🇹🇼 台湾家宽 484
-      - 🇭🇰 香港 011
-      - 🇷🇺 俄罗斯联邦 02
-      - 🇺🇸 美国 097
-      - 🇹🇼 台湾家宽 321
-      - 🇺🇸 美国 169
-      - 🇹🇼 台湾家宽 093
-      - 🇹🇼 台湾 133
-      - 🇹🇼 台湾家宽 464
-      - 🇹🇼 台湾家宽 851
-      - 🇹🇼 台湾家宽 312
-      - 🇹🇼 台湾 079
-      - 🇦🇹 奥地利 01
-      - 🇹🇼 台湾家宽 603
-      - 🇹🇼 台湾家宽 417
-      - 🇹🇼 台湾家宽 855
-      - 🇹🇼 台湾家宽 634
-      - 🇺🇸 美国 057
-      - 🇹🇼 台湾家宽 288
-      - 🇭🇰 香港 085
-      - 🇹🇼 台湾家宽 231
-      - 🇹🇼 台湾家宽 411
-      - 🇹🇼 台湾家宽 241
-      - 🇭🇰 香港 098
-      - 🇺🇸 美国 292
-      - 🇹🇼 台湾家宽 648
-      - 🇹🇼 台湾家宽 772
-      - 🇺🇸 美国 125
-      - 🇹🇼 台湾家宽 640
-      - 🇹🇼 台湾家宽 724
-      - 🇹🇼 台湾家宽 054
-      - 🇹🇼 台湾家宽 429
-      - 🇺🇸 美国 252
-      - 🇹🇼 台湾家宽 168
-      - 🇹🇼 台湾家宽 228
-      - 🇷🇺 俄罗斯联邦 03
-      - 🇹🇼 台湾家宽 629
-      - 🇹🇼 台湾家宽 605
+      - 🇹🇼 台湾家宽 0192
       - 🇺🇸 美国 314
-      - 🇹🇼 台湾家宽 965
-      - 🇺🇸 美国 141
-      - 🇹🇼 台湾家宽 964
-      - 🇹🇼 台湾家宽 445
-      - 🇹🇼 台湾家宽 446
-      - 🇺🇸 美国 289
-      - 🇹🇼 台湾家宽 128
-      - 🇹🇼 台湾家宽 272
-      - 🇹🇼 台湾家宽 348
-      - 🇺🇸 美国 027
-      - 🇺🇸 美国 191
-      - 🇺🇸 美国 033
-      - 🇺🇸 美国 018
-      - 🇺🇸 美国 230
-      - 🇹🇼 台湾家宽 903
-      - 🇹🇼 台湾家宽 814
-      - 🇺🇸 美国 319
-      - 🇺🇸 美国 162
-      - 🇺🇸 美国 078
-      - 🇹🇼 台湾 160
-      - 🇭🇰 香港 061
-      - 🇹🇼 台湾家宽 628
-      - 🇭🇰 香港 056
-      - 🇹🇼 台湾家宽 078
-      - 🇺🇸 美国 071
-      - 🇭🇰 香港 113
-      - 🇹🇼 台湾家宽 451
-      - 🇹🇼 台湾家宽 712
-      - 🇹🇼 台湾 149
-      - 🇺🇸 美国 121
-      - 🇹🇼 台湾家宽 275
-      - 🇹🇼 台湾家宽 129
-      - 🇹🇼 台湾家宽 407
-      - 🇹🇼 台湾家宽 778
-      - 🇭🇰 香港 037
-      - 🇹🇼 台湾家宽 722
-      - 🇭🇰 香港 091
-      - 🇹🇼 台湾家宽 428
-      - 🇹🇼 台湾家宽 165
-      - 🇹🇼 台湾家宽 822
-      - 🇹🇼 台湾家宽 936
-      - 🇭🇰 香港 039
+      - 🇹🇼 台湾家宽 0568
+      - 🇺🇸 美国 038
+      - 🇭🇰 香港 026
+      - 🇹🇼 台湾家宽 0766
+      - 🇹🇼 台湾家宽 0795
+      - 🇹🇼 台湾家宽 0476
+      - 🇹🇼 台湾家宽 0343
+      - 🇹🇼 台湾家宽 0974
+      - 🇹🇼 台湾家宽 0478
+      - 🇹🇼 台湾家宽 0481
+      - 🇩🇪 德国 23
+      - 🇹🇼 台湾家宽 0065
+      - 🇺🇸 美国 209
+      - 🇹🇼 台湾家宽 0164
+      - 🇧🇷 巴西 02
+      - 🇺🇸 美国 077
+      - 🇹🇼 台湾家宽 0288
+      - 🇹🇼 台湾家宽 0109
+      - 🇺🇸 美国 313
+      - 🇨🇦 加拿大 03
+      - 🇹🇼 台湾家宽 0197
+      - 🇹🇼 台湾家宽 0085
+      - 🇺🇸 美国 030
+      - 🇺🇸 美国 263
+      - 🇹🇼 台湾家宽 0898
+      - 🇹🇼 台湾家宽 0779
+      - 🇺🇸 美国 279
+      - 🇹🇼 台湾家宽 1010
+      - 🇺🇸 美国 308
+      - 🇹🇼 台湾家宽 0552
+      - 🇹🇼 台湾家宽 0052
+      - 🇹🇼 台湾家宽 0871
+      - 🇹🇼 台湾家宽 0403
+      - 🇹🇼 台湾 47
+      - 🇹🇼 台湾家宽 0412
+      - 🇹🇼 台湾家宽 0498
+      - 🇭🇰 香港 094
+      - 🇹🇼 台湾家宽 0629
+      - 🇺🇸 美国 310
+      - 🇹🇼 台湾家宽 0792
+      - 🇺🇸 美国 072
+      - 🇹🇼 台湾家宽 0904
+      - 🇹🇼 台湾家宽 0722
+      - 🇹🇼 台湾家宽 0161
+      - 🇺🇸 美国 237
+      - 🇹🇼 台湾家宽 0754
+      - 🇭🇰 香港 017
+      - 🇺🇸 美国 023
+      - 🇭🇰 香港 076
+      - 🇭🇰 香港 081
+      - 🇭🇰 香港 022
+      - 🇹🇼 台湾家宽 0144
+      - 🇹🇼 台湾家宽 0573
+      - 🇹🇼 台湾家宽 0790
+      - 🇺🇸 美国 334
+      - 🇹🇼 台湾家宽 0385
+      - 🇹🇼 台湾家宽 0622
+      - 🇭🇰 香港 014
+      - 🇺🇸 美国 133
+      - 🇹🇼 台湾家宽 0450
+      - 🇹🇼 台湾家宽 1002
+      - 🇻🇳 越南 01
+      - 🇹🇼 台湾家宽 0931
+      - 🇹🇼 台湾家宽 1003
+      - 🇹🇼 台湾家宽 0819
+      - 🇹🇼 台湾家宽 0506
+      - 🇹🇼 台湾家宽 0846
+      - 🇹🇼 台湾 43
+      - 🇺🇸 美国 115
+      - 🇹🇼 台湾家宽 0636
+      - 🇺🇸 美国 327
+      - 🇹🇼 台湾家宽 0713
+      - 🇮🇱 以色列 01
+      - 🇹🇼 台湾家宽 0966
+      - 🇹🇼 台湾家宽 0036
+      - 🇹🇼 台湾家宽 0556
+      - 🇹🇼 台湾 44
+      - 🇭🇰 香港 075
+      - 🇹🇼 台湾家宽 0718
+      - 🇸🇬 新加坡 02
+      - 🇹🇼 台湾家宽 0712
+      - 🇹🇼 台湾家宽 0874
+      - 🇯🇵 日本 20
+      - 🇹🇼 台湾家宽 0023
+      - 🇹🇼 台湾家宽 0474
+      - 🇹🇼 台湾家宽 0480
+      - 🇹🇼 台湾家宽 0623
+      - 🇹🇼 台湾家宽 0337
+      - 🇺🇸 美国 321
+      - 🇭🇰 香港 098
+      - 🇺🇸 美国 043
+      - 🇹🇼 台湾家宽 0574
+      - 🇹🇼 台湾家宽 0304
+      - 🇻🇳 越南 07
+      - 🇭🇰 香港 033
       - 🇷🇺 RU俄罗斯(yz)
       - 🇺🇸 US美国(yz)
       - 🇬🇧 GB英国(yz)
@@ -2294,104 +2290,103 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇮🇳 印度 03
-      - 🇹🇼 台湾家宽 216
-      - 🇺🇸 美国 132
-      - 🇹🇼 台湾家宽 164
-      - 🇭🇰 香港 083
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港 019
-      - 🇹🇼 台湾家宽 692
-      - 🇭🇰 香港 112
-      - 🇺🇸 美国 029
-      - 🇹🇼 台湾家宽 567
-      - 🇺🇸 美国 060
-      - 🇭🇰 香港 038
-      - 🇹🇼 台湾家宽 597
-      - 🇹🇼 台湾 021
-      - 🇹🇼 台湾家宽 566
-      - 🇹🇼 台湾家宽 065
-      - 🇹🇼 台湾家宽 484
-      - 🇭🇰 香港 011
-      - 🇷🇺 俄罗斯联邦 02
-      - 🇺🇸 美国 097
-      - 🇹🇼 台湾家宽 321
-      - 🇺🇸 美国 169
-      - 🇹🇼 台湾家宽 093
-      - 🇹🇼 台湾 133
-      - 🇹🇼 台湾家宽 464
-      - 🇹🇼 台湾家宽 851
-      - 🇹🇼 台湾家宽 312
-      - 🇹🇼 台湾 079
-      - 🇦🇹 奥地利 01
-      - 🇹🇼 台湾家宽 603
-      - 🇹🇼 台湾家宽 417
-      - 🇹🇼 台湾家宽 855
-      - 🇹🇼 台湾家宽 634
-      - 🇺🇸 美国 057
-      - 🇹🇼 台湾家宽 288
-      - 🇭🇰 香港 085
-      - 🇹🇼 台湾家宽 231
-      - 🇹🇼 台湾家宽 411
-      - 🇹🇼 台湾家宽 241
-      - 🇭🇰 香港 098
-      - 🇺🇸 美国 292
-      - 🇹🇼 台湾家宽 648
-      - 🇹🇼 台湾家宽 772
-      - 🇺🇸 美国 125
-      - 🇹🇼 台湾家宽 640
-      - 🇹🇼 台湾家宽 724
-      - 🇹🇼 台湾家宽 054
-      - 🇹🇼 台湾家宽 429
-      - 🇺🇸 美国 252
-      - 🇹🇼 台湾家宽 168
-      - 🇹🇼 台湾家宽 228
-      - 🇷🇺 俄罗斯联邦 03
-      - 🇹🇼 台湾家宽 629
-      - 🇹🇼 台湾家宽 605
+      - 🇹🇼 台湾家宽 0192
       - 🇺🇸 美国 314
-      - 🇹🇼 台湾家宽 965
-      - 🇺🇸 美国 141
-      - 🇹🇼 台湾家宽 964
-      - 🇹🇼 台湾家宽 445
-      - 🇹🇼 台湾家宽 446
-      - 🇺🇸 美国 289
-      - 🇹🇼 台湾家宽 128
-      - 🇹🇼 台湾家宽 272
-      - 🇹🇼 台湾家宽 348
-      - 🇺🇸 美国 027
-      - 🇺🇸 美国 191
-      - 🇺🇸 美国 033
-      - 🇺🇸 美国 018
-      - 🇺🇸 美国 230
-      - 🇹🇼 台湾家宽 903
-      - 🇹🇼 台湾家宽 814
-      - 🇺🇸 美国 319
-      - 🇺🇸 美国 162
-      - 🇺🇸 美国 078
-      - 🇹🇼 台湾 160
-      - 🇭🇰 香港 061
-      - 🇹🇼 台湾家宽 628
-      - 🇭🇰 香港 056
-      - 🇹🇼 台湾家宽 078
-      - 🇺🇸 美国 071
-      - 🇭🇰 香港 113
-      - 🇹🇼 台湾家宽 451
-      - 🇹🇼 台湾家宽 712
-      - 🇹🇼 台湾 149
-      - 🇺🇸 美国 121
-      - 🇹🇼 台湾家宽 275
-      - 🇹🇼 台湾家宽 129
-      - 🇹🇼 台湾家宽 407
-      - 🇹🇼 台湾家宽 778
-      - 🇭🇰 香港 037
-      - 🇹🇼 台湾家宽 722
-      - 🇭🇰 香港 091
-      - 🇹🇼 台湾家宽 428
-      - 🇹🇼 台湾家宽 165
-      - 🇹🇼 台湾家宽 822
-      - 🇹🇼 台湾家宽 936
-      - 🇭🇰 香港 039
+      - 🇹🇼 台湾家宽 0568
+      - 🇺🇸 美国 038
+      - 🇭🇰 香港 026
+      - 🇹🇼 台湾家宽 0766
+      - 🇹🇼 台湾家宽 0795
+      - 🇹🇼 台湾家宽 0476
+      - 🇹🇼 台湾家宽 0343
+      - 🇹🇼 台湾家宽 0974
+      - 🇹🇼 台湾家宽 0478
+      - 🇹🇼 台湾家宽 0481
+      - 🇩🇪 德国 23
+      - 🇹🇼 台湾家宽 0065
+      - 🇺🇸 美国 209
+      - 🇹🇼 台湾家宽 0164
+      - 🇧🇷 巴西 02
+      - 🇺🇸 美国 077
+      - 🇹🇼 台湾家宽 0288
+      - 🇹🇼 台湾家宽 0109
+      - 🇺🇸 美国 313
+      - 🇨🇦 加拿大 03
+      - 🇹🇼 台湾家宽 0197
+      - 🇹🇼 台湾家宽 0085
+      - 🇺🇸 美国 030
+      - 🇺🇸 美国 263
+      - 🇹🇼 台湾家宽 0898
+      - 🇹🇼 台湾家宽 0779
+      - 🇺🇸 美国 279
+      - 🇹🇼 台湾家宽 1010
+      - 🇺🇸 美国 308
+      - 🇹🇼 台湾家宽 0552
+      - 🇹🇼 台湾家宽 0052
+      - 🇹🇼 台湾家宽 0871
+      - 🇹🇼 台湾家宽 0403
+      - 🇹🇼 台湾 47
+      - 🇹🇼 台湾家宽 0412
+      - 🇹🇼 台湾家宽 0498
+      - 🇭🇰 香港 094
+      - 🇹🇼 台湾家宽 0629
+      - 🇺🇸 美国 310
+      - 🇹🇼 台湾家宽 0792
+      - 🇺🇸 美国 072
+      - 🇹🇼 台湾家宽 0904
+      - 🇹🇼 台湾家宽 0722
+      - 🇹🇼 台湾家宽 0161
+      - 🇺🇸 美国 237
+      - 🇹🇼 台湾家宽 0754
+      - 🇭🇰 香港 017
+      - 🇺🇸 美国 023
+      - 🇭🇰 香港 076
+      - 🇭🇰 香港 081
+      - 🇭🇰 香港 022
+      - 🇹🇼 台湾家宽 0144
+      - 🇹🇼 台湾家宽 0573
+      - 🇹🇼 台湾家宽 0790
+      - 🇺🇸 美国 334
+      - 🇹🇼 台湾家宽 0385
+      - 🇹🇼 台湾家宽 0622
+      - 🇭🇰 香港 014
+      - 🇺🇸 美国 133
+      - 🇹🇼 台湾家宽 0450
+      - 🇹🇼 台湾家宽 1002
+      - 🇻🇳 越南 01
+      - 🇹🇼 台湾家宽 0931
+      - 🇹🇼 台湾家宽 1003
+      - 🇹🇼 台湾家宽 0819
+      - 🇹🇼 台湾家宽 0506
+      - 🇹🇼 台湾家宽 0846
+      - 🇹🇼 台湾 43
+      - 🇺🇸 美国 115
+      - 🇹🇼 台湾家宽 0636
+      - 🇺🇸 美国 327
+      - 🇹🇼 台湾家宽 0713
+      - 🇮🇱 以色列 01
+      - 🇹🇼 台湾家宽 0966
+      - 🇹🇼 台湾家宽 0036
+      - 🇹🇼 台湾家宽 0556
+      - 🇹🇼 台湾 44
+      - 🇭🇰 香港 075
+      - 🇹🇼 台湾家宽 0718
+      - 🇸🇬 新加坡 02
+      - 🇹🇼 台湾家宽 0712
+      - 🇹🇼 台湾家宽 0874
+      - 🇯🇵 日本 20
+      - 🇹🇼 台湾家宽 0023
+      - 🇹🇼 台湾家宽 0474
+      - 🇹🇼 台湾家宽 0480
+      - 🇹🇼 台湾家宽 0623
+      - 🇹🇼 台湾家宽 0337
+      - 🇺🇸 美国 321
+      - 🇭🇰 香港 098
+      - 🇺🇸 美国 043
+      - 🇹🇼 台湾家宽 0574
+      - 🇹🇼 台湾家宽 0304
+      - 🇻🇳 越南 07
+      - 🇭🇰 香港 033
       - 🇷🇺 RU俄罗斯(yz)
       - 🇺🇸 US美国(yz)
       - 🇬🇧 GB英国(yz)
@@ -3034,19 +3029,16 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇭🇰 香港 083
-      - 🇭🇰 香港 019
-      - 🇭🇰 香港 112
-      - 🇭🇰 香港 038
-      - 🇭🇰 香港 011
-      - 🇭🇰 香港 085
+      - 🇭🇰 香港 026
+      - 🇭🇰 香港 094
+      - 🇭🇰 香港 017
+      - 🇭🇰 香港 076
+      - 🇭🇰 香港 081
+      - 🇭🇰 香港 022
+      - 🇭🇰 香港 014
+      - 🇭🇰 香港 075
       - 🇭🇰 香港 098
-      - 🇭🇰 香港 061
-      - 🇭🇰 香港 056
-      - 🇭🇰 香港 113
-      - 🇭🇰 香港 037
-      - 🇭🇰 香港 091
-      - 🇭🇰 香港 039
+      - 🇭🇰 香港 033
       - 🇭🇰 HK香港(yz)
       - 🇭🇰 www.85la.com🇭🇰HK_3|3.0MB/s|4%|YT-HK|NF|D+|GPT⁺
       - 🇭🇰 www.85la.com🇭🇰HK_3|1.1MB/s|4%|YT-HK|NF|D+|GPT
@@ -3060,6 +3052,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇯🇵 日本 20
       - 🇯🇵 JP日本(yz)
       - 🇯🇵 JP日本(yz) 2
       - 🇯🇵 JP日本(yz) 3
@@ -3074,31 +3067,26 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
-      - 🇺🇸 美国 132
-      - 🇺🇸 美国 001
-      - 🇺🇸 美国 029
-      - 🇺🇸 美国 060
-      - 🇷🇺 俄罗斯联邦 02
-      - 🇺🇸 美国 097
-      - 🇺🇸 美国 169
-      - 🇺🇸 美国 057
-      - 🇺🇸 美国 292
-      - 🇺🇸 美国 125
-      - 🇺🇸 美国 252
-      - 🇷🇺 俄罗斯联邦 03
       - 🇺🇸 美国 314
-      - 🇺🇸 美国 141
-      - 🇺🇸 美国 289
-      - 🇺🇸 美国 027
-      - 🇺🇸 美国 191
-      - 🇺🇸 美国 033
-      - 🇺🇸 美国 018
-      - 🇺🇸 美国 230
-      - 🇺🇸 美国 319
-      - 🇺🇸 美国 162
-      - 🇺🇸 美国 078
-      - 🇺🇸 美国 071
-      - 🇺🇸 美国 121
+      - 🇺🇸 美国 038
+      - 🇩🇪 德国 23
+      - 🇺🇸 美国 209
+      - 🇺🇸 美国 077
+      - 🇺🇸 美国 313
+      - 🇺🇸 美国 030
+      - 🇺🇸 美国 263
+      - 🇺🇸 美国 279
+      - 🇺🇸 美国 308
+      - 🇺🇸 美国 310
+      - 🇺🇸 美国 072
+      - 🇺🇸 美国 237
+      - 🇺🇸 美国 023
+      - 🇺🇸 美国 334
+      - 🇺🇸 美国 133
+      - 🇺🇸 美国 115
+      - 🇺🇸 美国 327
+      - 🇺🇸 美国 321
+      - 🇺🇸 美国 043
       - 🇷🇺 RU俄罗斯(yz)
       - 🇺🇸 US美国(yz)
       - 🇬🇧 GB英国(yz)
@@ -3428,65 +3416,66 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇮🇳 印度 03
-      - 🇹🇼 台湾家宽 216
-      - 🇹🇼 台湾家宽 164
-      - 🇹🇼 台湾家宽 692
-      - 🇹🇼 台湾家宽 567
-      - 🇹🇼 台湾家宽 597
-      - 🇹🇼 台湾 021
-      - 🇹🇼 台湾家宽 566
-      - 🇹🇼 台湾家宽 065
-      - 🇹🇼 台湾家宽 484
-      - 🇹🇼 台湾家宽 321
-      - 🇹🇼 台湾家宽 093
-      - 🇹🇼 台湾 133
-      - 🇹🇼 台湾家宽 464
-      - 🇹🇼 台湾家宽 851
-      - 🇹🇼 台湾家宽 312
-      - 🇹🇼 台湾 079
-      - 🇹🇼 台湾家宽 603
-      - 🇹🇼 台湾家宽 417
-      - 🇹🇼 台湾家宽 855
-      - 🇹🇼 台湾家宽 634
-      - 🇹🇼 台湾家宽 288
-      - 🇹🇼 台湾家宽 231
-      - 🇹🇼 台湾家宽 411
-      - 🇹🇼 台湾家宽 241
-      - 🇹🇼 台湾家宽 648
-      - 🇹🇼 台湾家宽 772
-      - 🇹🇼 台湾家宽 640
-      - 🇹🇼 台湾家宽 724
-      - 🇹🇼 台湾家宽 054
-      - 🇹🇼 台湾家宽 429
-      - 🇹🇼 台湾家宽 168
-      - 🇹🇼 台湾家宽 228
-      - 🇹🇼 台湾家宽 629
-      - 🇹🇼 台湾家宽 605
-      - 🇹🇼 台湾家宽 965
-      - 🇹🇼 台湾家宽 964
-      - 🇹🇼 台湾家宽 445
-      - 🇹🇼 台湾家宽 446
-      - 🇹🇼 台湾家宽 128
-      - 🇹🇼 台湾家宽 272
-      - 🇹🇼 台湾家宽 348
-      - 🇹🇼 台湾家宽 903
-      - 🇹🇼 台湾家宽 814
-      - 🇹🇼 台湾 160
-      - 🇹🇼 台湾家宽 628
-      - 🇹🇼 台湾家宽 078
-      - 🇹🇼 台湾家宽 451
-      - 🇹🇼 台湾家宽 712
-      - 🇹🇼 台湾 149
-      - 🇹🇼 台湾家宽 275
-      - 🇹🇼 台湾家宽 129
-      - 🇹🇼 台湾家宽 407
-      - 🇹🇼 台湾家宽 778
-      - 🇹🇼 台湾家宽 722
-      - 🇹🇼 台湾家宽 428
-      - 🇹🇼 台湾家宽 165
-      - 🇹🇼 台湾家宽 822
-      - 🇹🇼 台湾家宽 936
+      - 🇹🇼 台湾家宽 0192
+      - 🇹🇼 台湾家宽 0568
+      - 🇹🇼 台湾家宽 0766
+      - 🇹🇼 台湾家宽 0795
+      - 🇹🇼 台湾家宽 0476
+      - 🇹🇼 台湾家宽 0343
+      - 🇹🇼 台湾家宽 0974
+      - 🇹🇼 台湾家宽 0478
+      - 🇹🇼 台湾家宽 0481
+      - 🇹🇼 台湾家宽 0065
+      - 🇹🇼 台湾家宽 0164
+      - 🇹🇼 台湾家宽 0288
+      - 🇹🇼 台湾家宽 0109
+      - 🇹🇼 台湾家宽 0197
+      - 🇹🇼 台湾家宽 0085
+      - 🇹🇼 台湾家宽 0898
+      - 🇹🇼 台湾家宽 0779
+      - 🇹🇼 台湾家宽 1010
+      - 🇹🇼 台湾家宽 0552
+      - 🇹🇼 台湾家宽 0052
+      - 🇹🇼 台湾家宽 0871
+      - 🇹🇼 台湾家宽 0403
+      - 🇹🇼 台湾 47
+      - 🇹🇼 台湾家宽 0412
+      - 🇹🇼 台湾家宽 0498
+      - 🇹🇼 台湾家宽 0629
+      - 🇹🇼 台湾家宽 0792
+      - 🇹🇼 台湾家宽 0904
+      - 🇹🇼 台湾家宽 0722
+      - 🇹🇼 台湾家宽 0161
+      - 🇹🇼 台湾家宽 0754
+      - 🇹🇼 台湾家宽 0144
+      - 🇹🇼 台湾家宽 0573
+      - 🇹🇼 台湾家宽 0790
+      - 🇹🇼 台湾家宽 0385
+      - 🇹🇼 台湾家宽 0622
+      - 🇹🇼 台湾家宽 0450
+      - 🇹🇼 台湾家宽 1002
+      - 🇹🇼 台湾家宽 0931
+      - 🇹🇼 台湾家宽 1003
+      - 🇹🇼 台湾家宽 0819
+      - 🇹🇼 台湾家宽 0506
+      - 🇹🇼 台湾家宽 0846
+      - 🇹🇼 台湾 43
+      - 🇹🇼 台湾家宽 0636
+      - 🇹🇼 台湾家宽 0713
+      - 🇹🇼 台湾家宽 0966
+      - 🇹🇼 台湾家宽 0036
+      - 🇹🇼 台湾家宽 0556
+      - 🇹🇼 台湾 44
+      - 🇹🇼 台湾家宽 0718
+      - 🇹🇼 台湾家宽 0712
+      - 🇹🇼 台湾家宽 0874
+      - 🇹🇼 台湾家宽 0023
+      - 🇹🇼 台湾家宽 0474
+      - 🇹🇼 台湾家宽 0480
+      - 🇹🇼 台湾家宽 0623
+      - 🇹🇼 台湾家宽 0337
+      - 🇹🇼 台湾家宽 0574
+      - 🇹🇼 台湾家宽 0304
       - 🇮🇳 IN印度(yz)
       - 🇮🇳 IN印度(yz) 2
       - 🇮🇳 IN印度(yz) 3
@@ -3498,13 +3487,14 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - DIRECT
+      - 🇸🇬 新加坡 02
   - name: 🇰🇷 韩国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 🇧🇷 巴西 02
       - 🇰🇷 www.85la.com 韩国
   - name: 🎥 奈飞节点
     type: select
