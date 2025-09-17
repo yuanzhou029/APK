@@ -13,7 +13,7 @@ jobs:
       - name: Download file from GitHub
         run: |
           curl -o result.txt https://raw.githubusercontent.com/10000ge10000/iptv-api/refs/heads/master/output/user_result.txt
-          curl -o result.m3u https://raw.githubusercontent.com/10000ge10000/iptv-api/refs/heads/master/output/user_result.m3u
+          curl -o result.m3u https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u
 
       - name: Install AWS CLI
         run: |
