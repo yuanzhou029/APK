@@ -17,144 +17,95 @@ dns:
     - tls://dns.google:853
 proxies:
   - {name: 关注https://github.com/wzdnzd不迷路, server: 9.9.9.9, port: 54321, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: febf501b-e19d-4451-8071-aa6144bb8825, tfo: false}
-  - {name: 🇺🇸 美国 008, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 5e0c9776-1635-49a8-9fb2-7e348ca04c18, auth: 5e0c9776-1635-49a8-9fb2-7e348ca04c18, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 099, server: fastcup.net, port: 80, client-fingerprint: chrome, type: vmess, uuid: 1d9442f8-f4d6-46d0-8c81-69d4f404f8a5, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /profile/telegram@ssrsub, headers: {Host: cdn-node-oss-91.paofu.de}}}
-  - {name: 🇺🇸 美国 001, server: 45.144.174.60, port: 80, client-fingerprint: chrome, type: hysteria2, password: ff46b88f-23c3-4807-86cd-9b9353a7aadc, auth: ff46b88f-23c3-4807-86cd-9b9353a7aadc, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇭🇰 香港家宽 13, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 8fc32097-2003-4c6a-ac40-53c4a4758f41, auth: 8fc32097-2003-4c6a-ac40-53c4a4758f41, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 063, server: yg.foldjc.top, port: 37011, client-fingerprint: chrome, type: hysteria2, password: b8f89919-e0c5-415b-a53d-048218e5dcb6, auth: b8f89919-e0c5-415b-a53d-048218e5dcb6, sni: yg.foldjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港家宽 54, server: hk.xilucloud.top, port: 14558, client-fingerprint: chrome, type: hysteria2, password: 31763e6e-c8e5-4659-9e8b-51185314ea4a, auth: 31763e6e-c8e5-4659-9e8b-51185314ea4a, sni: hk.xilucloud.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 060, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: f2c5833a-d034-42e3-ad86-78a7fb273b21, auth: f2c5833a-d034-42e3-ad86-78a7fb273b21, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港家宽 17, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 1c001cea-2da9-455d-96ed-0e9b79d1644b, auth: 1c001cea-2da9-455d-96ed-0e9b79d1644b, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 215, server: tw.xilucloud.top, port: 14558, client-fingerprint: chrome, type: hysteria2, password: f54eba3d-e4d1-4b5f-969d-ac8ea27b1037, auth: f54eba3d-e4d1-4b5f-969d-ac8ea27b1037, sni: tw.xilucloud.top, skip-cert-verify: false}
-  - {name: 🇬🇧 英国 06, server: ukhub.xg-hub.icu, port: 25785, client-fingerprint: chrome, type: hysteria2, password: 03871437-6838-4ff4-9c6c-8f078d98039b, auth: 03871437-6838-4ff4-9c6c-8f078d98039b, sni: ukhub.xg-hub.icu, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇺🇸 美国 231, server: v36.heduian.link, port: 30836, client-fingerprint: chrome, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
-  - {name: 🇧🇷 巴西 12, server: 38.54.57.90, port: 989, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, tfo: false}
-  - {name: 🇭🇰 香港 131, server: 45.144.174.60, port: 80, client-fingerprint: chrome, type: hysteria2, password: c6e71ff5-b123-4f6a-8e8b-47d7199b68eb, auth: c6e71ff5-b123-4f6a-8e8b-47d7199b68eb, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇻🇳 越南 091, server: 103.186.155.63, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 294, server: gyus.aifjj.asia, port: 30250, client-fingerprint: chrome, type: hysteria2, password: 79dc600a-b63b-4406-bd79-f5f7fb0c0e52, auth: 79dc600a-b63b-4406-bd79-f5f7fb0c0e52, sni: gyus.aifjj.asia, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 023, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 37cb73f5-178e-4552-bbfd-12cd815f97dd, auth: 37cb73f5-178e-4552-bbfd-12cd815f97dd, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 311, server: ushub.xg-hub.icu, port: 25780, client-fingerprint: chrome, type: hysteria2, password: 74f135a0-6ff1-4024-90e7-a6e3f542525a, auth: 74f135a0-6ff1-4024-90e7-a6e3f542525a, sni: ushub.xg-hub.icu, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇭🇰 香港 014, server: xg.xfy003.cfd, port: 21333, client-fingerprint: chrome, type: hysteria2, password: 794283d6-0e98-4849-87a4-c93f8eb8c39b, auth: 794283d6-0e98-4849-87a4-c93f8eb8c39b, sni: xg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇭🇰 香港 074, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 49904f74-629c-40e4-ab64-19613e557ca8, auth: 49904f74-629c-40e4-ab64-19613e557ca8, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 048, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 879cf33f-d0ea-4eda-9d80-b9db942fd628, auth: 879cf33f-d0ea-4eda-9d80-b9db942fd628, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 241, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 7ac98096-d64e-4bfd-b08d-cd7d7545c4ad, auth: 7ac98096-d64e-4bfd-b08d-cd7d7545c4ad, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 003, server: 103.186.155.71, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 194, server: 45.144.174.60, port: 80, client-fingerprint: chrome, type: hysteria2, password: 59300434-b69b-4163-a87f-3c852b8b0efe, auth: 59300434-b69b-4163-a87f-3c852b8b0efe, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇭🇰 香港家宽 46, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 5cb02d92-b2a5-4c7d-b984-3622b419c5eb, auth: 5cb02d92-b2a5-4c7d-b984-3622b419c5eb, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港家宽 14, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 3997f23e-2d49-44ef-8f52-292ff3e73633, auth: 3997f23e-2d49-44ef-8f52-292ff3e73633, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇩🇪 德国 07, server: dg.xfy003.cfd, port: 26565, client-fingerprint: chrome, type: hysteria2, password: 119cef51-4f93-481b-a923-b42c9473a916, auth: 119cef51-4f93-481b-a923-b42c9473a916, sni: dg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇵🇭 菲律宾 01, server: xcsgp.cokecloud.top, port: 11277, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, tfo: false}
-  - {name: 🇺🇸 美国 102, server: us3.xilucloud.top, port: 14558, client-fingerprint: chrome, type: hysteria2, password: 2a15dec6-fb46-440e-983b-4641d19ef915, auth: 2a15dec6-fb46-440e-983b-4641d19ef915, sni: us3.xilucloud.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 121, server: 45.144.174.60, port: 31008, client-fingerprint: chrome, type: hysteria2, password: bdfceb3b-7f80-4133-99c4-d1c8b1dd83ee, auth: bdfceb3b-7f80-4133-99c4-d1c8b1dd83ee, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇺🇸 美国 116, server: us.xilucloud.top, port: 14558, client-fingerprint: chrome, type: hysteria2, password: 93480fcc-d6ff-4c14-9d31-b482166122b3, auth: 93480fcc-d6ff-4c14-9d31-b482166122b3, sni: us.xilucloud.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 150, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 8fc32097-2003-4c6a-ac40-53c4a4758f41, auth: 8fc32097-2003-4c6a-ac40-53c4a4758f41, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港家宽 40, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 71a1a8ab-8898-4427-a7d7-9d9b56a0467f, auth: 71a1a8ab-8898-4427-a7d7-9d9b56a0467f, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇰🇷 韩国 04, server: hg1.xfy003.cfd, port: 26546, client-fingerprint: chrome, type: hysteria2, password: 794283d6-0e98-4849-87a4-c93f8eb8c39b, auth: 794283d6-0e98-4849-87a4-c93f8eb8c39b, sni: hg1.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇭🇰 香港 006, server: xg2.dimoyun.top, port: 40001, client-fingerprint: chrome, type: hysteria2, password: 3e313efb-e8ec-4910-9d5a-3cdb5e38b6da, auth: 3e313efb-e8ec-4910-9d5a-3cdb5e38b6da, sni: xg2.dimoyun.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 080, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: e0cc849a-3a46-4358-96ef-f7700984f7a7, auth: e0cc849a-3a46-4358-96ef-f7700984f7a7, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 167, server: 45.144.174.60, port: 80, client-fingerprint: chrome, type: hysteria2, password: 21c1d8e0-83ce-4c92-9ac8-bd904ebd5f5f, auth: 21c1d8e0-83ce-4c92-9ac8-bd904ebd5f5f, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇭🇰 香港家宽 26, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 60b66af6-a235-4ca9-82cb-b2d331506beb, auth: 60b66af6-a235-4ca9-82cb-b2d331506beb, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 223, server: us2.xilucloud.top, port: 14558, client-fingerprint: chrome, type: hysteria2, password: 8cec5bed-ccfc-4603-a1a4-dc8641f362a2, auth: 8cec5bed-ccfc-4603-a1a4-dc8641f362a2, sni: us2.xilucloud.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 107, server: 103.186.154.175, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇭🇰 香港家宽 30, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 04a94329-98f4-453e-9318-3853f10fcf74, auth: 04a94329-98f4-453e-9318-3853f10fcf74, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 045, server: 103.186.155.66, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇭🇰 香港 025, server: xg.xfy003.cfd, port: 21333, client-fingerprint: chrome, type: hysteria2, password: 38b215a8-a45a-4590-bb91-7fb7454fcf50, auth: 38b215a8-a45a-4590-bb91-7fb7454fcf50, sni: xg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇭🇰 香港 138, server: ss.028.node-for-bigairport.win, port: 36887, client-fingerprint: chrome, type: ss, cipher: aes-256-gcm, password: c69374da-2208-4cbd-b81e-cdf88b5e7f53, tfo: false}
-  - {name: 🇸🇬 新加坡 10, server: yd-03.paofunlink.com, port: 1095, client-fingerprint: chrome, type: ssr, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 222545:TIvS2C, obfs-param: 45672222545.microsoft.com}
-  - {name: 🇺🇸 美国 082, server: mg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 331302eb-3f6c-48ab-bd67-5c747c6b5496, auth: 331302eb-3f6c-48ab-bd67-5c747c6b5496, sni: mg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 061, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 3997f23e-2d49-44ef-8f52-292ff3e73633, auth: 3997f23e-2d49-44ef-8f52-292ff3e73633, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 035, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 49904f74-629c-40e4-ab64-19613e557ca8, auth: 49904f74-629c-40e4-ab64-19613e557ca8, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港家宽 50, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 9cb769d9-01f5-4b92-aa3a-a8752d18a3b5, auth: 9cb769d9-01f5-4b92-aa3a-a8752d18a3b5, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇰🇷 韩国 06, server: hg1.xfy003.cfd, port: 26546, client-fingerprint: chrome, type: hysteria2, password: 95ebe0a7-5ae7-43f3-8581-bc13d7c72a29, auth: 95ebe0a7-5ae7-43f3-8581-bc13d7c72a29, sni: hg1.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇻🇳 越南 074, server: 103.186.154.231, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇭🇰 香港 102, server: tw.foldjc.top, port: 37013, client-fingerprint: chrome, type: hysteria2, password: e756d7ea-5cd3-4080-b092-b8b5a720f884, auth: e756d7ea-5cd3-4080-b092-b8b5a720f884, sni: tw.foldjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 154, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 6154dab6-3b26-454f-9bb4-276ff56738ed, auth: 6154dab6-3b26-454f-9bb4-276ff56738ed, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 062, server: yg.foldjc.top, port: 37011, client-fingerprint: chrome, type: hysteria2, password: 0cb561b7-73bd-4c66-8d3d-08fccae297c1, auth: 0cb561b7-73bd-4c66-8d3d-08fccae297c1, sni: yg.foldjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 061, server: 103.186.155.78, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 165, server: 45.144.174.60, port: 33079, client-fingerprint: chrome, type: hysteria2, password: 59300434-b69b-4163-a87f-3c852b8b0efe, auth: 59300434-b69b-4163-a87f-3c852b8b0efe, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇺🇸 美国 073, server: mg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 60b66af6-a235-4ca9-82cb-b2d331506beb, auth: 60b66af6-a235-4ca9-82cb-b2d331506beb, sni: mg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 045, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: c6cc43a9-20a4-43c3-aa26-758cd31161c7, auth: c6cc43a9-20a4-43c3-aa26-758cd31161c7, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 030, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 1d73b668-deec-43bd-9348-83c314b6311d, auth: 1d73b668-deec-43bd-9348-83c314b6311d, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 097, server: mg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: e0cc849a-3a46-4358-96ef-f7700984f7a7, auth: e0cc849a-3a46-4358-96ef-f7700984f7a7, sni: mg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 129, server: 103.186.155.15, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇭🇰 香港 023, server: xg.xfy003.cfd, port: 21333, client-fingerprint: chrome, type: hysteria2, password: cf4d0a69-f4d1-4198-876e-cbd1c03e82ef, auth: cf4d0a69-f4d1-4198-876e-cbd1c03e82ef, sni: xg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇻🇳 越南 095, server: 103.186.155.9, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇭🇰 香港 070, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: e33b95f1-4363-40d4-afdd-1ce468882df4, auth: e33b95f1-4363-40d4-afdd-1ce468882df4, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 053, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 71a1a8ab-8898-4427-a7d7-9d9b56a0467f, auth: 71a1a8ab-8898-4427-a7d7-9d9b56a0467f, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇫🇷 法国 03, server: 51.38.168.151, port: 8080, client-fingerprint: chrome, type: vless, uuid: dde87267-da95-4a6b-9891-0c864a3e9be8, tls: false, tfo: false, skip-cert-verify: false, servername: wWw.SpeEDTeSt.nEt, network: ws, ws-opts: {path: /wslinka, headers: {Host: wWw.SpeEDTeSt.nEt}}}
-  - {name: 🇺🇸 美国 198, server: 45.144.174.60, port: 31008, client-fingerprint: chrome, type: hysteria2, password: 5115c9e9-a90c-4f9f-a38d-5985a5e52ebd, auth: 5115c9e9-a90c-4f9f-a38d-5985a5e52ebd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇹🇼 台湾家宽 01, server: xdtw.cokecloud.top, port: 21073, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, tfo: false}
-  - {name: 🇺🇸 美国 181, server: 45.144.174.60, port: 33079, client-fingerprint: chrome, type: hysteria2, password: 4453a020-4dd5-45bd-9d83-55e57f67065a, auth: 4453a020-4dd5-45bd-9d83-55e57f67065a, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇺🇸 美国 049, server: yg.foldjc.top, port: 37011, client-fingerprint: chrome, type: hysteria2, password: 14a95cf9-e6d6-433b-88cf-c8a5db74f878, auth: 14a95cf9-e6d6-433b-88cf-c8a5db74f878, sni: yg.foldjc.top, skip-cert-verify: false}
-  - {name: 🇳🇱 荷兰 11, server: yapc-1.adamhayward.co.uk, port: 36600, client-fingerprint: chrome, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇭🇰 香港家宽 11, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 5e0c9776-1635-49a8-9fb2-7e348ca04c18, auth: 5e0c9776-1635-49a8-9fb2-7e348ca04c18, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 044, server: 103.186.154.145, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇻🇳 越南 087, server: 103.186.155.39, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 216, server: mg.dimoyun.top, port: 40001, client-fingerprint: chrome, type: hysteria2, password: 407297e6-39f8-4a01-aa52-924571172670, auth: 407297e6-39f8-4a01-aa52-924571172670, sni: mg.dimoyun.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 132, server: 103.186.155.101, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 042, server: yg.foldjc.top, port: 37011, client-fingerprint: chrome, type: hysteria2, password: f2c218ad-e0a4-424d-9f29-5070a9f9263a, auth: f2c218ad-e0a4-424d-9f29-5070a9f9263a, sni: yg.foldjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 345, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 8d71d22c-5cc1-4568-b452-dbec812b12bc, auth: 8d71d22c-5cc1-4568-b452-dbec812b12bc, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 143, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 9596fba6-7f65-49b5-a36e-38571a549389, auth: 9596fba6-7f65-49b5-a36e-38571a549389, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 098, server: 103.186.155.49, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇯🇵 日本 12, server: cokecloudjp.cokecloud.top, port: 19439, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, tfo: false}
-  - {name: 🇻🇳 越南 099, server: 103.186.154.160, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇷🇺 俄罗斯联邦 03, server: yd.foldjc.top, port: 37014, client-fingerprint: chrome, type: hysteria2, password: 0fcdebd4-3be4-4227-a5f9-e22e2f2b6cd2, auth: 0fcdebd4-3be4-4227-a5f9-e22e2f2b6cd2, sni: yd.foldjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 126, server: 45.144.174.60, port: 31008, client-fingerprint: chrome, type: hysteria2, password: 034089b0-6a7e-40bd-857e-be217fece895, auth: 034089b0-6a7e-40bd-857e-be217fece895, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇷🇺 俄罗斯联邦 01, server: yd.foldjc.top, port: 37014, client-fingerprint: chrome, type: hysteria2, password: c7dbce1e-4d6d-425b-9b37-320b34d22be5, auth: c7dbce1e-4d6d-425b-9b37-320b34d22be5, sni: yd.foldjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 277, server: b9c3912b-t07z40-t1l1nh-d6ar.la.shifen.uk, port: 1743, client-fingerprint: chrome, type: hysteria2, password: a16d62f6-048d-11f0-af5a-f23c93136cb3, auth: a16d62f6-048d-11f0-af5a-f23c93136cb3, sni: b9c3912b-t07z40-t1l1nh-d6ar.la.shifen.uk, skip-cert-verify: false}
-  - {name: 🇭🇰 香港家宽 16, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 756b0d5d-3829-4804-a5b8-cf957f5c2e5f, auth: 756b0d5d-3829-4804-a5b8-cf957f5c2e5f, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇰🇷 韩国 01, server: xckr.cokecloud.top, port: 28595, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, tfo: false}
-  - {name: 🇺🇸 美国 209, server: us2.xilucloud.top, port: 14558, client-fingerprint: chrome, type: hysteria2, password: 33497ba6-0f6e-46ab-9ec8-7f504b2a7d48, auth: 33497ba6-0f6e-46ab-9ec8-7f504b2a7d48, sni: us2.xilucloud.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 114, server: us.xilucloud.top, port: 14558, client-fingerprint: chrome, type: hysteria2, password: 2f0072f2-5788-4caa-be32-b28b87048c7a, auth: 2f0072f2-5788-4caa-be32-b28b87048c7a, sni: us.xilucloud.top, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 10, server: rb1.xfy003.cfd, port: 44234, client-fingerprint: chrome, type: hysteria2, password: 9465ce2b-ee0a-48f4-9f6a-5c8d5b5c1f0e, auth: 9465ce2b-ee0a-48f4-9f6a-5c8d5b5c1f0e, sni: rb1.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇺🇸 美国 043, server: yg.foldjc.top, port: 37011, client-fingerprint: chrome, type: hysteria2, password: ffaef5d7-4030-4f9c-9c71-1eca01547e87, auth: ffaef5d7-4030-4f9c-9c71-1eca01547e87, sni: yg.foldjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 057, server: 103.186.155.45, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 337, server: us2.xilucloud.top, port: 14558, client-fingerprint: chrome, type: hysteria2, password: 31763e6e-c8e5-4659-9e8b-51185314ea4a, auth: 31763e6e-c8e5-4659-9e8b-51185314ea4a, sni: us2.xilucloud.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 087, server: tw.foldjc.top, port: 37013, client-fingerprint: chrome, type: hysteria2, password: f2c218ad-e0a4-424d-9f29-5070a9f9263a, auth: f2c218ad-e0a4-424d-9f29-5070a9f9263a, sni: tw.foldjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 122, server: xg2.dimoyun.top, port: 40001, client-fingerprint: chrome, type: hysteria2, password: 94e7bd30-1321-47a8-bc2f-250a3bb1f5c7, auth: 94e7bd30-1321-47a8-bc2f-250a3bb1f5c7, sni: xg2.dimoyun.top, skip-cert-verify: false}
-  - {name: 🇷🇺 俄罗斯 20, server: els2.dimoyun.top, port: 40001, client-fingerprint: chrome, type: hysteria2, password: 729cf4e2-d5c8-4273-8c78-a2483afaf3e4, auth: 729cf4e2-d5c8-4273-8c78-a2483afaf3e4, sni: els1.dimoyun.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 052, server: yg.foldjc.top, port: 37011, client-fingerprint: chrome, type: hysteria2, password: 871f919b-dda1-46e6-89b8-c4243a7e572f, auth: 871f919b-dda1-46e6-89b8-c4243a7e572f, sni: yg.foldjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 050, server: yg.foldjc.top, port: 37011, client-fingerprint: chrome, type: hysteria2, password: 2a988cfa-ac2c-42a5-8dc4-189b7e995b76, auth: 2a988cfa-ac2c-42a5-8dc4-189b7e995b76, sni: yg.foldjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 042, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: aa57ea6d-0218-4e7d-bb8e-c7864f8e3e38, auth: aa57ea6d-0218-4e7d-bb8e-c7864f8e3e38, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 081, server: mg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 199cd6fd-3012-4d9b-b28d-8aa86fffa039, auth: 199cd6fd-3012-4d9b-b28d-8aa86fffa039, sni: mg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 120, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: b15f1706-dbd5-401c-934d-a3325b995875, auth: b15f1706-dbd5-401c-934d-a3325b995875, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 280, server: 15204.57227.yixianled.com, port: 49459, client-fingerprint: chrome, type: vmess, uuid: 6578c489-28d2-4f12-8c2f-9f2d8789626d, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 15204.57227.yixianled.com}}}
-  - {name: 🇺🇸 美国 333, server: mg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 2b271b2e-ef43-4da7-bc19-74f451c1a9b0, auth: 2b271b2e-ef43-4da7-bc19-74f451c1a9b0, sni: mg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇦🇺 澳大利亚 01, server: autf.cokecloud.top, port: 18071, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, tfo: false}
-  - {name: 🇩🇪 德国 03, server: dg.xfy003.cfd, port: 26565, client-fingerprint: chrome, type: hysteria2, password: 95ebe0a7-5ae7-43f3-8581-bc13d7c72a29, auth: 95ebe0a7-5ae7-43f3-8581-bc13d7c72a29, sni: dg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇺🇸 美国 079, server: mg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: c6cc43a9-20a4-43c3-aa26-758cd31161c7, auth: c6cc43a9-20a4-43c3-aa26-758cd31161c7, sni: mg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 027, server: 103.186.154.206, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 257, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 1d73b668-deec-43bd-9348-83c314b6311d, auth: 1d73b668-deec-43bd-9348-83c314b6311d, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 028, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 1a001e41-030b-46c1-ae5c-606710f9ae1d, auth: 1a001e41-030b-46c1-ae5c-606710f9ae1d, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 023, server: 103.186.154.48, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇫🇷 法国 05, server: 46.29.34.205, port: 41346, client-fingerprint: chrome, type: vmess, uuid: 6063ad0d-26fe-46a7-bf78-dfea71afde9b, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 096, server: tw.foldjc.top, port: 37013, client-fingerprint: chrome, type: hysteria2, password: f4d326fa-7d44-4d89-b18f-30e8c6ac02aa, auth: f4d326fa-7d44-4d89-b18f-30e8c6ac02aa, sni: tw.foldjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 347, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 49904f74-629c-40e4-ab64-19613e557ca8, auth: 49904f74-629c-40e4-ab64-19613e557ca8, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港家宽 10, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 1fd00115-b36f-4dbf-8f7b-9c9c50aaae4f, auth: 1fd00115-b36f-4dbf-8f7b-9c9c50aaae4f, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 107, server: xctransfer1st.cokecloud.top, port: 33575, client-fingerprint: chrome, type: vmess, uuid: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 197, server: 45.144.174.60, port: 33079, client-fingerprint: chrome, type: hysteria2, password: 92386fa3-b184-4bb1-ade8-9b5cf814889e, auth: 92386fa3-b184-4bb1-ade8-9b5cf814889e, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇷🇺 俄罗斯 09, server: yd.foldjc.top, port: 37014, client-fingerprint: chrome, type: hysteria2, password: a3b2ac61-6d47-48db-9c38-79999b7bbe16, auth: a3b2ac61-6d47-48db-9c38-79999b7bbe16, sni: yd.foldjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港家宽 53, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 7ac98096-d64e-4bfd-b08d-cd7d7545c4ad, auth: 7ac98096-d64e-4bfd-b08d-cd7d7545c4ad, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 047, server: yg.foldjc.top, port: 37011, client-fingerprint: chrome, type: hysteria2, password: 0cfc3fcc-9d23-4177-9cf2-d7c1c7c9d627, auth: 0cfc3fcc-9d23-4177-9cf2-d7c1c7c9d627, sni: yg.foldjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 075, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 04a94329-98f4-453e-9318-3853f10fcf74, auth: 04a94329-98f4-453e-9318-3853f10fcf74, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 272, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 45183e5f-ff99-44ac-95ef-22a13d2356fd, auth: 45183e5f-ff99-44ac-95ef-22a13d2356fd, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇳🇱 荷兰 02, server: yapc-1.adamhayward.co.uk, port: 35000, client-fingerprint: chrome, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇩🇪 德国 13, server: 104.21.36.57, port: 443, client-fingerprint: chrome, type: vless, uuid: 6f6e8f09-c1b3-48fd-ab00-18f921d875ef, tls: true, tfo: false, skip-cert-verify: false, servername: profit.fullmargintraders.com, network: ws, ws-opts: {path: /wsv/6f6e8f09-c1b3-48fd-ab00-18f921d875ef, headers: {Host: profit.fullmargintraders.com}}}
-  - {name: 🇺🇸 美国 299, server: freev2.cloudflare.182682.xyz, port: 443, client-fingerprint: random, type: vless, uuid: 54e2cff4-a34c-409d-a67f-a4506998bca0, tls: true, tfo: false, skip-cert-verify: false, servername: do-sfo3.008883.xyz, network: ws, ws-opts: {path: "/freev2.net?ed=2048", headers: {Host: do-sfo3.008883.xyz}}}
-  - {name: 🇯🇵 日本 01, server: xj.cokecloud.top, port: 32283, client-fingerprint: chrome, type: trojan, password: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, sni: xj.cokecloud.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 105, server: us.xilucloud.top, port: 14558, client-fingerprint: chrome, type: hysteria2, password: 722bb127-df7c-4fa5-b94a-3ee6438dcb95, auth: 722bb127-df7c-4fa5-b94a-3ee6438dcb95, sni: us.xilucloud.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 119, server: 156.251.179.135, port: 443, client-fingerprint: chrome, type: ss, cipher: aes-256-gcm, password: 2b5fad3874e5, tfo: false, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hk6v1.dsjsapp.com, path: /aqwshiog, tls: true, mux: true, skip-cert-verify: false}}
-  - {name: 🇷🇺 俄罗斯联邦 05, server: els2.dimoyun.top, port: 40001, client-fingerprint: chrome, type: hysteria2, password: 86f65769-c0d9-4698-b69a-ea7c1aaba2b2, auth: 86f65769-c0d9-4698-b69a-ea7c1aaba2b2, sni: els1.dimoyun.top, skip-cert-verify: false}
-  - {name: 🇹🇼 台湾 06, server: xdtw.cokecloud.top, port: 13255, client-fingerprint: chrome, type: vmess, uuid: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 293, server: cokecloudjp.cokecloud.top, port: 47393, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, tfo: false}
-  - {name: 🇭🇰 香港 108, server: xctransfer1st.cokecloud.top, port: 45861, client-fingerprint: chrome, type: vmess, uuid: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 348, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: ddecf4ab-427f-4016-babd-09e3839bd922, auth: ddecf4ab-427f-4016-babd-09e3839bd922, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 096, server: 103.186.155.141, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇭🇰 香港家宽 06, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: e33b95f1-4363-40d4-afdd-1ce468882df4, auth: e33b95f1-4363-40d4-afdd-1ce468882df4, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 019, server: 103.186.154.45, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 163, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 64a974b1-0a8a-47c3-b028-474a511da143, auth: 64a974b1-0a8a-47c3-b028-474a511da143, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 101, server: tw.foldjc.top, port: 37013, client-fingerprint: chrome, type: hysteria2, password: 6eaaa754-4fed-41dc-baef-230f67803238, auth: 6eaaa754-4fed-41dc-baef-230f67803238, sni: tw.foldjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 234, server: us.xilucloud.top, port: 14558, client-fingerprint: chrome, type: hysteria2, password: 8cec5bed-ccfc-4603-a1a4-dc8641f362a2, auth: 8cec5bed-ccfc-4603-a1a4-dc8641f362a2, sni: us.xilucloud.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 003, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 879cf33f-d0ea-4eda-9d80-b9db942fd628, auth: 879cf33f-d0ea-4eda-9d80-b9db942fd628, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 216, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 879cf33f-d0ea-4eda-9d80-b9db942fd628, auth: 879cf33f-d0ea-4eda-9d80-b9db942fd628, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 012, server: xg.xfy003.cfd, port: 21333, client-fingerprint: chrome, type: hysteria2, password: 3b788360-3626-4d5b-96e0-cd7d1eb6b612, auth: 3b788360-3626-4d5b-96e0-cd7d1eb6b612, sni: xg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇺🇸 美国 086, server: 45.144.174.60, port: 80, client-fingerprint: chrome, type: hysteria2, password: 2d69b6f0-ac9d-48fa-bafc-b369b69acea9, auth: 2d69b6f0-ac9d-48fa-bafc-b369b69acea9, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇭🇰 香港 084, server: tw.foldjc.top, port: 37013, client-fingerprint: chrome, type: hysteria2, password: 869fe2a1-76a2-4b2c-ba1b-7a04358b8234, auth: 869fe2a1-76a2-4b2c-ba1b-7a04358b8234, sni: tw.foldjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 257, server: mg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 5cb02d92-b2a5-4c7d-b984-3622b419c5eb, auth: 5cb02d92-b2a5-4c7d-b984-3622b419c5eb, sni: mg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 193, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: b15f1706-dbd5-401c-934d-a3325b995875, auth: b15f1706-dbd5-401c-934d-a3325b995875, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 199, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 1c3c6df4-6e25-4a32-90d6-519832cfb746, auth: 1c3c6df4-6e25-4a32-90d6-519832cfb746, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 136, server: 103.186.155.26, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇭🇰 香港 020, server: xg.xfy003.cfd, port: 21333, client-fingerprint: chrome, type: hysteria2, password: a42750ef-1954-4f6b-b7cd-5565e9f9aa93, auth: a42750ef-1954-4f6b-b7cd-5565e9f9aa93, sni: xg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇭🇰 香港家宽 26, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 04a94329-98f4-453e-9318-3853f10fcf74, auth: 04a94329-98f4-453e-9318-3853f10fcf74, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 008, server: 103.186.154.49, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇭🇰 香港家宽 33, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 5e0c9776-1635-49a8-9fb2-7e348ca04c18, auth: 5e0c9776-1635-49a8-9fb2-7e348ca04c18, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 214, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 7620d37d-8633-49e9-be68-4a87812d18e8, auth: 7620d37d-8633-49e9-be68-4a87812d18e8, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 209, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 1c001cea-2da9-455d-96ed-0e9b79d1644b, auth: 1c001cea-2da9-455d-96ed-0e9b79d1644b, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 113, server: 103.186.155.35, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇻🇳 越南 145, server: 103.186.155.107, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇺🇸 美国 119, server: 45.144.174.60, port: 23175, client-fingerprint: chrome, type: vmess, uuid: 9540a2a8-3497-43db-b074-46e6f051f502, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇭🇰 香港家宽 49, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 3c8af0e2-544a-4253-88d4-af8c877858f4, auth: 3c8af0e2-544a-4253-88d4-af8c877858f4, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇭🇰 香港家宽 14, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 15a0d2e5-3cb8-40e2-b746-bda2dcd9cbf8, auth: 15a0d2e5-3cb8-40e2-b746-bda2dcd9cbf8, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇬🇷 希腊 02, server: 192.71.166.100, port: 989, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, tfo: false}
+  - {name: 🇭🇰 香港 128, server: 45.144.174.60, port: 31008, client-fingerprint: chrome, type: hysteria2, password: ead8ef6c-ead8-43c2-85d6-e4ae34f4cdce, auth: ead8ef6c-ead8-43c2-85d6-e4ae34f4cdce, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇻🇳 越南 020, server: 103.186.155.68, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇺🇸 美国 159, server: 45.144.174.60, port: 22113, client-fingerprint: chrome, type: vmess, uuid: 8dd4dcf9-8b23-48f1-a5f2-34669f48679a, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇻🇳 越南 059, server: 103.186.155.20, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇻🇳 越南 110, server: 103.186.154.153, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇭🇰 香港家宽 23, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 9cb769d9-01f5-4b92-aa3a-a8752d18a3b5, auth: 9cb769d9-01f5-4b92-aa3a-a8752d18a3b5, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 011, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 77d9377f-c528-4d0c-94c2-11af286ebaab, auth: 77d9377f-c528-4d0c-94c2-11af286ebaab, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇨🇦 加拿大 07, server: 40.233.103.51, port: 47262, client-fingerprint: chrome, type: hysteria2, password: 862e90e1-2f26-4506-b8b9-0adf20da05fc, auth: 862e90e1-2f26-4506-b8b9-0adf20da05fc, sni: www.bing.com, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 041, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: f2c5833a-d034-42e3-ad86-78a7fb273b21, auth: f2c5833a-d034-42e3-ad86-78a7fb273b21, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 212, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 05bac355-24b7-4e14-9bc7-98b7bafa5fca, auth: 05bac355-24b7-4e14-9bc7-98b7bafa5fca, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 118, server: 45.144.174.60, port: 23175, client-fingerprint: chrome, type: vmess, uuid: db19dadd-8c57-4cfc-8b93-1df12443901e, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇯🇵 日本 06, server: rb1.xfy003.cfd, port: 44266, client-fingerprint: chrome, type: hysteria2, password: 4df3cd2f-0699-4e12-b766-67a4065845b7, auth: 4df3cd2f-0699-4e12-b766-67a4065845b7, sni: rb1.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇭🇰 香港 039, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 3997f23e-2d49-44ef-8f52-292ff3e73633, auth: 3997f23e-2d49-44ef-8f52-292ff3e73633, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 169, server: 45.144.174.60, port: 31008, client-fingerprint: chrome, type: hysteria2, password: 01f61774-f8ac-46b0-ab05-484e35c50214, auth: 01f61774-f8ac-46b0-ab05-484e35c50214, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇷🇺 俄罗斯联邦 01, server: yd.foldjc.top, port: 37014, client-fingerprint: chrome, type: hysteria2, password: 0cfc3fcc-9d23-4177-9cf2-d7c1c7c9d627, auth: 0cfc3fcc-9d23-4177-9cf2-d7c1c7c9d627, sni: yd.foldjc.top, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 101, server: xctransfer1st.cokecloud.top, port: 21552, client-fingerprint: chrome, type: vmess, uuid: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 130, server: tw.foldjc.top, port: 37013, client-fingerprint: chrome, type: hysteria2, password: d8c03c4f-5f90-4bd7-b3ef-0795488446ba, auth: d8c03c4f-5f90-4bd7-b3ef-0795488446ba, sni: tw.foldjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 110, server: 45.144.174.60, port: 23175, client-fingerprint: chrome, type: vmess, uuid: ead8ef6c-ead8-43c2-85d6-e4ae34f4cdce, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇺🇸 美国 132, server: cokecloudjp.cokecloud.top, port: 17318, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, tfo: false}
+  - {name: 🇻🇳 越南 041, server: 103.186.154.246, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇺🇸 美国 172, server: 208.87.243.187, port: 22222, client-fingerprint: chrome, type: hysteria2, password: dongtaiwang.com, auth: dongtaiwang.com, sni: www.bing.com, skip-cert-verify: false}
+  - {name: 🇩🇪 德国 07, server: dg.xfy003.cfd, port: 26565, client-fingerprint: chrome, type: hysteria2, password: 38b215a8-a45a-4590-bb91-7fb7454fcf50, auth: 38b215a8-a45a-4590-bb91-7fb7454fcf50, sni: dg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇯🇵 日本 18, server: www.tiktok.com.jp3.viefast.net, port: 443, client-fingerprint: chrome, type: trojan, password: 9e76767d-4bfa-4f04-a800-42e2f63afed2, sni: www.linemo.jp, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 096, server: tw.foldjc.top, port: 37013, client-fingerprint: chrome, type: hysteria2, password: 0cfc3fcc-9d23-4177-9cf2-d7c1c7c9d627, auth: 0cfc3fcc-9d23-4177-9cf2-d7c1c7c9d627, sni: tw.foldjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 213, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 3c8af0e2-544a-4253-88d4-af8c877858f4, auth: 3c8af0e2-544a-4253-88d4-af8c877858f4, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 155, server: 45.144.174.60, port: 22113, client-fingerprint: chrome, type: vmess, uuid: ea691556-67cf-4198-a092-3dc2cdc6808b, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇩🇪 德国 03, server: dehub.xg-hub.icu, port: 25784, client-fingerprint: chrome, type: hysteria2, password: 03871437-6838-4ff4-9c6c-8f078d98039b, auth: 03871437-6838-4ff4-9c6c-8f078d98039b, sni: dehub.xg-hub.icu, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇭🇰 香港 119, server: 45.144.174.60, port: 31008, client-fingerprint: chrome, type: hysteria2, password: 2d69b6f0-ac9d-48fa-bafc-b369b69acea9, auth: 2d69b6f0-ac9d-48fa-bafc-b369b69acea9, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇻🇳 越南 085, server: 103.186.155.232, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇭🇰 香港 010, server: xg2.dimoyun.top, port: 40001, client-fingerprint: chrome, type: hysteria2, password: 86f65769-c0d9-4698-b69a-ea7c1aaba2b2, auth: 86f65769-c0d9-4698-b69a-ea7c1aaba2b2, sni: xg2.dimoyun.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 031, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 4b5daa7f-bfe4-4f8d-9c17-4ccc6419aea1, auth: 4b5daa7f-bfe4-4f8d-9c17-4ccc6419aea1, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 002, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 9596fba6-7f65-49b5-a36e-38571a549389, auth: 9596fba6-7f65-49b5-a36e-38571a549389, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 087, server: 103.186.155.223, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇭🇰 香港 122, server: 45.144.174.60, port: 31008, client-fingerprint: chrome, type: hysteria2, password: 2ecaf88b-6470-4b2f-81e8-b9aebd0cd35d, auth: 2ecaf88b-6470-4b2f-81e8-b9aebd0cd35d, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇮🇳 印度 01, server: 1036a5-33-co-in.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: 1036a5-33-co-in.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 067, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 37cb73f5-178e-4552-bbfd-12cd815f97dd, auth: 37cb73f5-178e-4552-bbfd-12cd815f97dd, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 057, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 9cb769d9-01f5-4b92-aa3a-a8752d18a3b5, auth: 9cb769d9-01f5-4b92-aa3a-a8752d18a3b5, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 044, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 3cd3fac3-7ace-4f60-8002-d2a1efe8db28, auth: 3cd3fac3-7ace-4f60-8002-d2a1efe8db28, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 271, server: yg.foldjc.top, port: 37011, client-fingerprint: chrome, type: hysteria2, password: a23bda4d-4fd2-4f9f-a88a-42b7c5762d4f, auth: a23bda4d-4fd2-4f9f-a88a-42b7c5762d4f, sni: yg.foldjc.top, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 031, server: 103.186.155.15, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇭🇰 香港 003, server: xg.xfy003.cfd, port: 21333, client-fingerprint: chrome, type: hysteria2, password: 8806b5fb-4dc2-4ff3-bb7b-0ec1f8108880, auth: 8806b5fb-4dc2-4ff3-bb7b-0ec1f8108880, sni: xg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇻🇳 越南 149, server: 103.186.154.22, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇭🇰 香港 116, server: tw.foldjc.top, port: 37013, client-fingerprint: chrome, type: hysteria2, password: 26a16b14-c0f9-42c7-ad90-c528da512a3e, auth: 26a16b14-c0f9-42c7-ad90-c528da512a3e, sni: tw.foldjc.top, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 093, server: tw.foldjc.top, port: 37013, client-fingerprint: chrome, type: hysteria2, password: 0fcdebd4-3be4-4227-a5f9-e22e2f2b6cd2, auth: 0fcdebd4-3be4-4227-a5f9-e22e2f2b6cd2, sni: tw.foldjc.top, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 023, server: 20f7cc-330-co-hk.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: 20f7cc-330-co-hk.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 009, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 331302eb-3f6c-48ab-bd67-5c747c6b5496, auth: 331302eb-3f6c-48ab-bd67-5c747c6b5496, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 227, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 9cb769d9-01f5-4b92-aa3a-a8752d18a3b5, auth: 9cb769d9-01f5-4b92-aa3a-a8752d18a3b5, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 263, server: mg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 49904f74-629c-40e4-ab64-19613e557ca8, auth: 49904f74-629c-40e4-ab64-19613e557ca8, sni: mg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 04, server: dv-sg.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: dv-sg.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 017, server: xg.xfy003.cfd, port: 21333, client-fingerprint: chrome, type: hysteria2, password: 95ebe0a7-5ae7-43f3-8581-bc13d7c72a29, auth: 95ebe0a7-5ae7-43f3-8581-bc13d7c72a29, sni: xg.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇺🇸 美国 192, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: b297b22e-e630-4d8a-81f4-fd0a811a37b2, auth: b297b22e-e630-4d8a-81f4-fd0a811a37b2, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 175, server: 45.144.174.60, port: 25158, client-fingerprint: chrome, type: vmess, uuid: 59300434-b69b-4163-a87f-3c852b8b0efe, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇺🇸 美国 108, server: 45.144.174.60, port: 23175, client-fingerprint: chrome, type: vmess, uuid: fb2eecb9-60cd-46f7-b9ba-5febabd2f00d, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇻🇳 越南 079, server: 103.186.154.18, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇯🇵 日本 09, server: rb1.xfy003.cfd, port: 44266, client-fingerprint: chrome, type: hysteria2, password: cf4d0a69-f4d1-4198-876e-cbd1c03e82ef, auth: cf4d0a69-f4d1-4198-876e-cbd1c03e82ef, sni: rb1.xfy003.cfd, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇷🇺 俄罗斯 09, server: yd.foldjc.top, port: 37014, client-fingerprint: chrome, type: hysteria2, password: 26a16b14-c0f9-42c7-ad90-c528da512a3e, auth: 26a16b14-c0f9-42c7-ad90-c528da512a3e, sni: yd.foldjc.top, skip-cert-verify: false}
+  - {name: 🇩🇪 德国 05, server: 5f6a56-20-co.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: 5f6a56-20-co.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 040, server: 103.186.155.145, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇭🇰 香港家宽 37, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: e93dc504-a894-4f70-94d5-b282361c7531, auth: e93dc504-a894-4f70-94d5-b282361c7531, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 174, server: gyus.aifjj.asia, port: 30248, client-fingerprint: chrome, type: hysteria2, password: 79dc600a-b63b-4406-bd79-f5f7fb0c0e52, auth: 79dc600a-b63b-4406-bd79-f5f7fb0c0e52, sni: gyus.aifjj.asia, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 104, server: xctransfer1st.cokecloud.top, port: 44489, client-fingerprint: chrome, type: vmess, uuid: 27a263cc-184b-4fb2-872b-5f8db6fc21aa, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 080, server: 103.186.154.53, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇭🇰 香港家宽 30, server: xg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 60b66af6-a235-4ca9-82cb-b2d331506beb, auth: 60b66af6-a235-4ca9-82cb-b2d331506beb, sni: xg1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 055, server: 103.186.154.145, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇺🇸 美国 016, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 6154dab6-3b26-454f-9bb4-276ff56738ed, auth: 6154dab6-3b26-454f-9bb4-276ff56738ed, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡家宽 01, server: sgmob222.asuscomm.com, port: 8899, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 03241, tfo: false}
+  - {name: 🇻🇳 越南 146, server: 103.186.154.141, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇻🇳 越南 033, server: 103.186.154.253, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
   - {name: 🇦🇺 AU澳大利亚(yz), server: 43.159.99.26, port: 443, client-fingerprint: chrome, type: vless, uuid: d8665d45-8103-46e9-9cb7-8902bb7559b4, tls: true, tfo: false, skip-cert-verify: false, servername: hk3.kaipi.link, network: ws, ws-opts: {path: /texaws, headers: {Host: hk3.kaipi.link}}}
   - {name: 🇦🇺 AU澳大利亚(yz) 2, server: 185.207.197.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: 6e433a29-22ac-4061-ae8b-f1731715d0d9, tls: true, tfo: false, skip-cert-verify: false, servername: vlesspro.llengcugit.sbs, network: ws, ws-opts: {path: "/Telegram@freecodes/?ed=2560", headers: {Host: vlesspro.llengcugit.sbs}}}
   - {name: 🇩🇪 DE德国(yz), server: 185.135.9.144, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
@@ -637,144 +588,95 @@ proxy-groups:
     type: select
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇺🇸 美国 008
-      - 🇺🇸 美国 099
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港家宽 13
-      - 🇺🇸 美国 063
-      - 🇭🇰 香港家宽 54
-      - 🇭🇰 香港 060
-      - 🇭🇰 香港家宽 17
-      - 🇺🇸 美国 215
-      - 🇬🇧 英国 06
-      - 🇺🇸 美国 231
-      - 🇧🇷 巴西 12
-      - 🇭🇰 香港 131
-      - 🇻🇳 越南 091
-      - 🇺🇸 美国 294
-      - 🇺🇸 美国 023
-      - 🇺🇸 美国 311
-      - 🇭🇰 香港 014
-      - 🇭🇰 香港 074
-      - 🇭🇰 香港 048
-      - 🇺🇸 美国 241
-      - 🇻🇳 越南 003
-      - 🇺🇸 美国 194
-      - 🇭🇰 香港家宽 46
-      - 🇭🇰 香港家宽 14
-      - 🇩🇪 德国 07
-      - 🇵🇭 菲律宾 01
-      - 🇺🇸 美国 102
-      - 🇺🇸 美国 121
-      - 🇺🇸 美国 116
-      - 🇺🇸 美国 150
-      - 🇭🇰 香港家宽 40
-      - 🇰🇷 韩国 04
-      - 🇭🇰 香港 006
-      - 🇭🇰 香港 080
-      - 🇺🇸 美国 167
-      - 🇭🇰 香港家宽 26
-      - 🇺🇸 美国 223
-      - 🇻🇳 越南 107
-      - 🇭🇰 香港家宽 30
-      - 🇻🇳 越南 045
-      - 🇭🇰 香港 025
-      - 🇭🇰 香港 138
-      - 🇸🇬 新加坡 10
-      - 🇺🇸 美国 082
-      - 🇭🇰 香港 061
-      - 🇺🇸 美国 035
-      - 🇭🇰 香港家宽 50
-      - 🇰🇷 韩国 06
-      - 🇻🇳 越南 074
-      - 🇭🇰 香港 102
-      - 🇺🇸 美国 154
-      - 🇺🇸 美国 062
-      - 🇻🇳 越南 061
-      - 🇺🇸 美国 165
-      - 🇺🇸 美国 073
-      - 🇭🇰 香港 045
-      - 🇺🇸 美国 030
-      - 🇺🇸 美国 097
-      - 🇻🇳 越南 129
-      - 🇭🇰 香港 023
-      - 🇻🇳 越南 095
-      - 🇭🇰 香港 070
-      - 🇭🇰 香港 053
-      - 🇫🇷 法国 03
-      - 🇺🇸 美国 198
-      - 🇹🇼 台湾家宽 01
-      - 🇺🇸 美国 181
-      - 🇺🇸 美国 049
-      - 🇳🇱 荷兰 11
-      - 🇭🇰 香港家宽 11
-      - 🇻🇳 越南 044
-      - 🇻🇳 越南 087
+      - 🇺🇸 美国 003
       - 🇺🇸 美国 216
-      - 🇻🇳 越南 132
-      - 🇺🇸 美国 042
-      - 🇺🇸 美国 345
-      - 🇺🇸 美国 143
-      - 🇻🇳 越南 098
-      - 🇯🇵 日本 12
-      - 🇻🇳 越南 099
-      - 🇷🇺 俄罗斯联邦 03
-      - 🇺🇸 美国 126
-      - 🇷🇺 俄罗斯联邦 01
-      - 🇺🇸 美国 277
-      - 🇭🇰 香港家宽 16
-      - 🇰🇷 韩国 01
-      - 🇺🇸 美国 209
-      - 🇺🇸 美国 114
-      - 🇯🇵 日本 10
-      - 🇺🇸 美国 043
-      - 🇻🇳 越南 057
-      - 🇺🇸 美国 337
-      - 🇭🇰 香港 087
-      - 🇭🇰 香港 122
-      - 🇷🇺 俄罗斯 20
-      - 🇺🇸 美国 052
-      - 🇺🇸 美国 050
-      - 🇭🇰 香港 042
-      - 🇺🇸 美国 081
-      - 🇭🇰 香港 120
-      - 🇺🇸 美国 280
-      - 🇺🇸 美国 333
-      - 🇦🇺 澳大利亚 01
-      - 🇩🇪 德国 03
-      - 🇺🇸 美国 079
-      - 🇻🇳 越南 027
+      - 🇭🇰 香港 012
+      - 🇺🇸 美国 086
+      - 🇭🇰 香港 084
       - 🇺🇸 美国 257
-      - 🇺🇸 美国 028
-      - 🇻🇳 越南 023
-      - 🇫🇷 法国 05
-      - 🇭🇰 香港 096
-      - 🇺🇸 美国 347
-      - 🇭🇰 香港家宽 10
-      - 🇭🇰 香港 107
-      - 🇺🇸 美国 197
-      - 🇷🇺 俄罗斯 09
-      - 🇭🇰 香港家宽 53
-      - 🇺🇸 美国 047
-      - 🇭🇰 香港 075
-      - 🇺🇸 美国 272
-      - 🇳🇱 荷兰 02
-      - 🇩🇪 德国 13
-      - 🇺🇸 美国 299
-      - 🇯🇵 日本 01
-      - 🇺🇸 美国 105
-      - 🇭🇰 香港 119
-      - 🇷🇺 俄罗斯联邦 05
-      - 🇹🇼 台湾 06
-      - 🇺🇸 美国 293
-      - 🇭🇰 香港 108
-      - 🇺🇸 美国 348
-      - 🇻🇳 越南 096
-      - 🇭🇰 香港家宽 06
-      - 🇻🇳 越南 019
-      - 🇺🇸 美国 163
+      - 🇺🇸 美国 193
+      - 🇺🇸 美国 199
+      - 🇻🇳 越南 136
+      - 🇭🇰 香港 020
+      - 🇭🇰 香港家宽 26
+      - 🇻🇳 越南 008
+      - 🇭🇰 香港家宽 33
+      - 🇺🇸 美国 214
+      - 🇺🇸 美国 209
+      - 🇻🇳 越南 113
+      - 🇻🇳 越南 145
+      - 🇺🇸 美国 119
+      - 🇭🇰 香港家宽 49
+      - 🇭🇰 香港家宽 14
+      - 🇬🇷 希腊 02
+      - 🇭🇰 香港 128
+      - 🇻🇳 越南 020
+      - 🇺🇸 美国 159
+      - 🇻🇳 越南 059
+      - 🇻🇳 越南 110
+      - 🇭🇰 香港家宽 23
+      - 🇺🇸 美国 011
+      - 🇨🇦 加拿大 07
+      - 🇭🇰 香港 041
+      - 🇺🇸 美国 212
+      - 🇺🇸 美国 118
+      - 🇯🇵 日本 06
+      - 🇭🇰 香港 039
+      - 🇺🇸 美国 169
+      - 🇷🇺 俄罗斯联邦 01
       - 🇭🇰 香港 101
-      - 🇺🇸 美国 234
+      - 🇭🇰 香港 130
+      - 🇺🇸 美国 110
+      - 🇺🇸 美国 132
+      - 🇻🇳 越南 041
+      - 🇺🇸 美国 172
+      - 🇩🇪 德国 07
+      - 🇯🇵 日本 18
+      - 🇭🇰 香港 096
+      - 🇺🇸 美国 213
+      - 🇺🇸 美国 155
+      - 🇩🇪 德国 03
+      - 🇭🇰 香港 119
+      - 🇻🇳 越南 085
+      - 🇭🇰 香港 010
+      - 🇺🇸 美国 031
+      - 🇺🇸 美国 002
+      - 🇻🇳 越南 087
+      - 🇭🇰 香港 122
+      - 🇮🇳 印度 01
+      - 🇭🇰 香港 067
+      - 🇭🇰 香港 057
+      - 🇺🇸 美国 044
+      - 🇺🇸 美国 271
+      - 🇻🇳 越南 031
+      - 🇭🇰 香港 003
+      - 🇻🇳 越南 149
+      - 🇭🇰 香港 116
+      - 🇭🇰 香港 093
+      - 🇭🇰 香港 023
+      - 🇺🇸 美国 009
+      - 🇺🇸 美国 227
+      - 🇺🇸 美国 263
+      - 🇸🇬 新加坡 04
+      - 🇭🇰 香港 017
+      - 🇺🇸 美国 192
+      - 🇺🇸 美国 175
+      - 🇺🇸 美国 108
+      - 🇻🇳 越南 079
+      - 🇯🇵 日本 09
+      - 🇷🇺 俄罗斯 09
+      - 🇩🇪 德国 05
+      - 🇻🇳 越南 040
+      - 🇭🇰 香港家宽 37
+      - 🇺🇸 美国 174
+      - 🇭🇰 香港 104
+      - 🇻🇳 越南 080
+      - 🇭🇰 香港家宽 30
+      - 🇻🇳 越南 055
+      - 🇺🇸 美国 016
+      - 🇸🇬 新加坡家宽 01
+      - 🇻🇳 越南 146
+      - 🇻🇳 越南 033
       - 🇦🇺 AU澳大利亚(yz)
       - 🇦🇺 AU澳大利亚(yz) 2
       - 🇩🇪 DE德国(yz)
@@ -1245,144 +1147,95 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇺🇸 美国 008
-      - 🇺🇸 美国 099
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港家宽 13
-      - 🇺🇸 美国 063
-      - 🇭🇰 香港家宽 54
-      - 🇭🇰 香港 060
-      - 🇭🇰 香港家宽 17
-      - 🇺🇸 美国 215
-      - 🇬🇧 英国 06
-      - 🇺🇸 美国 231
-      - 🇧🇷 巴西 12
-      - 🇭🇰 香港 131
-      - 🇻🇳 越南 091
-      - 🇺🇸 美国 294
-      - 🇺🇸 美国 023
-      - 🇺🇸 美国 311
-      - 🇭🇰 香港 014
-      - 🇭🇰 香港 074
-      - 🇭🇰 香港 048
-      - 🇺🇸 美国 241
-      - 🇻🇳 越南 003
-      - 🇺🇸 美国 194
-      - 🇭🇰 香港家宽 46
-      - 🇭🇰 香港家宽 14
-      - 🇩🇪 德国 07
-      - 🇵🇭 菲律宾 01
-      - 🇺🇸 美国 102
-      - 🇺🇸 美国 121
-      - 🇺🇸 美国 116
-      - 🇺🇸 美国 150
-      - 🇭🇰 香港家宽 40
-      - 🇰🇷 韩国 04
-      - 🇭🇰 香港 006
-      - 🇭🇰 香港 080
-      - 🇺🇸 美国 167
-      - 🇭🇰 香港家宽 26
-      - 🇺🇸 美国 223
-      - 🇻🇳 越南 107
-      - 🇭🇰 香港家宽 30
-      - 🇻🇳 越南 045
-      - 🇭🇰 香港 025
-      - 🇭🇰 香港 138
-      - 🇸🇬 新加坡 10
-      - 🇺🇸 美国 082
-      - 🇭🇰 香港 061
-      - 🇺🇸 美国 035
-      - 🇭🇰 香港家宽 50
-      - 🇰🇷 韩国 06
-      - 🇻🇳 越南 074
-      - 🇭🇰 香港 102
-      - 🇺🇸 美国 154
-      - 🇺🇸 美国 062
-      - 🇻🇳 越南 061
-      - 🇺🇸 美国 165
-      - 🇺🇸 美国 073
-      - 🇭🇰 香港 045
-      - 🇺🇸 美国 030
-      - 🇺🇸 美国 097
-      - 🇻🇳 越南 129
-      - 🇭🇰 香港 023
-      - 🇻🇳 越南 095
-      - 🇭🇰 香港 070
-      - 🇭🇰 香港 053
-      - 🇫🇷 法国 03
-      - 🇺🇸 美国 198
-      - 🇹🇼 台湾家宽 01
-      - 🇺🇸 美国 181
-      - 🇺🇸 美国 049
-      - 🇳🇱 荷兰 11
-      - 🇭🇰 香港家宽 11
-      - 🇻🇳 越南 044
-      - 🇻🇳 越南 087
+      - 🇺🇸 美国 003
       - 🇺🇸 美国 216
-      - 🇻🇳 越南 132
-      - 🇺🇸 美国 042
-      - 🇺🇸 美国 345
-      - 🇺🇸 美国 143
-      - 🇻🇳 越南 098
-      - 🇯🇵 日本 12
-      - 🇻🇳 越南 099
-      - 🇷🇺 俄罗斯联邦 03
-      - 🇺🇸 美国 126
-      - 🇷🇺 俄罗斯联邦 01
-      - 🇺🇸 美国 277
-      - 🇭🇰 香港家宽 16
-      - 🇰🇷 韩国 01
-      - 🇺🇸 美国 209
-      - 🇺🇸 美国 114
-      - 🇯🇵 日本 10
-      - 🇺🇸 美国 043
-      - 🇻🇳 越南 057
-      - 🇺🇸 美国 337
-      - 🇭🇰 香港 087
-      - 🇭🇰 香港 122
-      - 🇷🇺 俄罗斯 20
-      - 🇺🇸 美国 052
-      - 🇺🇸 美国 050
-      - 🇭🇰 香港 042
-      - 🇺🇸 美国 081
-      - 🇭🇰 香港 120
-      - 🇺🇸 美国 280
-      - 🇺🇸 美国 333
-      - 🇦🇺 澳大利亚 01
-      - 🇩🇪 德国 03
-      - 🇺🇸 美国 079
-      - 🇻🇳 越南 027
+      - 🇭🇰 香港 012
+      - 🇺🇸 美国 086
+      - 🇭🇰 香港 084
       - 🇺🇸 美国 257
-      - 🇺🇸 美国 028
-      - 🇻🇳 越南 023
-      - 🇫🇷 法国 05
-      - 🇭🇰 香港 096
-      - 🇺🇸 美国 347
-      - 🇭🇰 香港家宽 10
-      - 🇭🇰 香港 107
-      - 🇺🇸 美国 197
-      - 🇷🇺 俄罗斯 09
-      - 🇭🇰 香港家宽 53
-      - 🇺🇸 美国 047
-      - 🇭🇰 香港 075
-      - 🇺🇸 美国 272
-      - 🇳🇱 荷兰 02
-      - 🇩🇪 德国 13
-      - 🇺🇸 美国 299
-      - 🇯🇵 日本 01
-      - 🇺🇸 美国 105
-      - 🇭🇰 香港 119
-      - 🇷🇺 俄罗斯联邦 05
-      - 🇹🇼 台湾 06
-      - 🇺🇸 美国 293
-      - 🇭🇰 香港 108
-      - 🇺🇸 美国 348
-      - 🇻🇳 越南 096
-      - 🇭🇰 香港家宽 06
-      - 🇻🇳 越南 019
-      - 🇺🇸 美国 163
+      - 🇺🇸 美国 193
+      - 🇺🇸 美国 199
+      - 🇻🇳 越南 136
+      - 🇭🇰 香港 020
+      - 🇭🇰 香港家宽 26
+      - 🇻🇳 越南 008
+      - 🇭🇰 香港家宽 33
+      - 🇺🇸 美国 214
+      - 🇺🇸 美国 209
+      - 🇻🇳 越南 113
+      - 🇻🇳 越南 145
+      - 🇺🇸 美国 119
+      - 🇭🇰 香港家宽 49
+      - 🇭🇰 香港家宽 14
+      - 🇬🇷 希腊 02
+      - 🇭🇰 香港 128
+      - 🇻🇳 越南 020
+      - 🇺🇸 美国 159
+      - 🇻🇳 越南 059
+      - 🇻🇳 越南 110
+      - 🇭🇰 香港家宽 23
+      - 🇺🇸 美国 011
+      - 🇨🇦 加拿大 07
+      - 🇭🇰 香港 041
+      - 🇺🇸 美国 212
+      - 🇺🇸 美国 118
+      - 🇯🇵 日本 06
+      - 🇭🇰 香港 039
+      - 🇺🇸 美国 169
+      - 🇷🇺 俄罗斯联邦 01
       - 🇭🇰 香港 101
-      - 🇺🇸 美国 234
+      - 🇭🇰 香港 130
+      - 🇺🇸 美国 110
+      - 🇺🇸 美国 132
+      - 🇻🇳 越南 041
+      - 🇺🇸 美国 172
+      - 🇩🇪 德国 07
+      - 🇯🇵 日本 18
+      - 🇭🇰 香港 096
+      - 🇺🇸 美国 213
+      - 🇺🇸 美国 155
+      - 🇩🇪 德国 03
+      - 🇭🇰 香港 119
+      - 🇻🇳 越南 085
+      - 🇭🇰 香港 010
+      - 🇺🇸 美国 031
+      - 🇺🇸 美国 002
+      - 🇻🇳 越南 087
+      - 🇭🇰 香港 122
+      - 🇮🇳 印度 01
+      - 🇭🇰 香港 067
+      - 🇭🇰 香港 057
+      - 🇺🇸 美国 044
+      - 🇺🇸 美国 271
+      - 🇻🇳 越南 031
+      - 🇭🇰 香港 003
+      - 🇻🇳 越南 149
+      - 🇭🇰 香港 116
+      - 🇭🇰 香港 093
+      - 🇭🇰 香港 023
+      - 🇺🇸 美国 009
+      - 🇺🇸 美国 227
+      - 🇺🇸 美国 263
+      - 🇸🇬 新加坡 04
+      - 🇭🇰 香港 017
+      - 🇺🇸 美国 192
+      - 🇺🇸 美国 175
+      - 🇺🇸 美国 108
+      - 🇻🇳 越南 079
+      - 🇯🇵 日本 09
+      - 🇷🇺 俄罗斯 09
+      - 🇩🇪 德国 05
+      - 🇻🇳 越南 040
+      - 🇭🇰 香港家宽 37
+      - 🇺🇸 美国 174
+      - 🇭🇰 香港 104
+      - 🇻🇳 越南 080
+      - 🇭🇰 香港家宽 30
+      - 🇻🇳 越南 055
+      - 🇺🇸 美国 016
+      - 🇸🇬 新加坡家宽 01
+      - 🇻🇳 越南 146
+      - 🇻🇳 越南 033
       - 🇦🇺 AU澳大利亚(yz)
       - 🇦🇺 AU澳大利亚(yz) 2
       - 🇩🇪 DE德国(yz)
@@ -1853,144 +1706,95 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇺🇸 美国 008
-      - 🇺🇸 美国 099
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港家宽 13
-      - 🇺🇸 美国 063
-      - 🇭🇰 香港家宽 54
-      - 🇭🇰 香港 060
-      - 🇭🇰 香港家宽 17
-      - 🇺🇸 美国 215
-      - 🇬🇧 英国 06
-      - 🇺🇸 美国 231
-      - 🇧🇷 巴西 12
-      - 🇭🇰 香港 131
-      - 🇻🇳 越南 091
-      - 🇺🇸 美国 294
-      - 🇺🇸 美国 023
-      - 🇺🇸 美国 311
-      - 🇭🇰 香港 014
-      - 🇭🇰 香港 074
-      - 🇭🇰 香港 048
-      - 🇺🇸 美国 241
-      - 🇻🇳 越南 003
-      - 🇺🇸 美国 194
-      - 🇭🇰 香港家宽 46
-      - 🇭🇰 香港家宽 14
-      - 🇩🇪 德国 07
-      - 🇵🇭 菲律宾 01
-      - 🇺🇸 美国 102
-      - 🇺🇸 美国 121
-      - 🇺🇸 美国 116
-      - 🇺🇸 美国 150
-      - 🇭🇰 香港家宽 40
-      - 🇰🇷 韩国 04
-      - 🇭🇰 香港 006
-      - 🇭🇰 香港 080
-      - 🇺🇸 美国 167
-      - 🇭🇰 香港家宽 26
-      - 🇺🇸 美国 223
-      - 🇻🇳 越南 107
-      - 🇭🇰 香港家宽 30
-      - 🇻🇳 越南 045
-      - 🇭🇰 香港 025
-      - 🇭🇰 香港 138
-      - 🇸🇬 新加坡 10
-      - 🇺🇸 美国 082
-      - 🇭🇰 香港 061
-      - 🇺🇸 美国 035
-      - 🇭🇰 香港家宽 50
-      - 🇰🇷 韩国 06
-      - 🇻🇳 越南 074
-      - 🇭🇰 香港 102
-      - 🇺🇸 美国 154
-      - 🇺🇸 美国 062
-      - 🇻🇳 越南 061
-      - 🇺🇸 美国 165
-      - 🇺🇸 美国 073
-      - 🇭🇰 香港 045
-      - 🇺🇸 美国 030
-      - 🇺🇸 美国 097
-      - 🇻🇳 越南 129
-      - 🇭🇰 香港 023
-      - 🇻🇳 越南 095
-      - 🇭🇰 香港 070
-      - 🇭🇰 香港 053
-      - 🇫🇷 法国 03
-      - 🇺🇸 美国 198
-      - 🇹🇼 台湾家宽 01
-      - 🇺🇸 美国 181
-      - 🇺🇸 美国 049
-      - 🇳🇱 荷兰 11
-      - 🇭🇰 香港家宽 11
-      - 🇻🇳 越南 044
-      - 🇻🇳 越南 087
+      - 🇺🇸 美国 003
       - 🇺🇸 美国 216
-      - 🇻🇳 越南 132
-      - 🇺🇸 美国 042
-      - 🇺🇸 美国 345
-      - 🇺🇸 美国 143
-      - 🇻🇳 越南 098
-      - 🇯🇵 日本 12
-      - 🇻🇳 越南 099
-      - 🇷🇺 俄罗斯联邦 03
-      - 🇺🇸 美国 126
-      - 🇷🇺 俄罗斯联邦 01
-      - 🇺🇸 美国 277
-      - 🇭🇰 香港家宽 16
-      - 🇰🇷 韩国 01
-      - 🇺🇸 美国 209
-      - 🇺🇸 美国 114
-      - 🇯🇵 日本 10
-      - 🇺🇸 美国 043
-      - 🇻🇳 越南 057
-      - 🇺🇸 美国 337
-      - 🇭🇰 香港 087
-      - 🇭🇰 香港 122
-      - 🇷🇺 俄罗斯 20
-      - 🇺🇸 美国 052
-      - 🇺🇸 美国 050
-      - 🇭🇰 香港 042
-      - 🇺🇸 美国 081
-      - 🇭🇰 香港 120
-      - 🇺🇸 美国 280
-      - 🇺🇸 美国 333
-      - 🇦🇺 澳大利亚 01
-      - 🇩🇪 德国 03
-      - 🇺🇸 美国 079
-      - 🇻🇳 越南 027
+      - 🇭🇰 香港 012
+      - 🇺🇸 美国 086
+      - 🇭🇰 香港 084
       - 🇺🇸 美国 257
-      - 🇺🇸 美国 028
-      - 🇻🇳 越南 023
-      - 🇫🇷 法国 05
-      - 🇭🇰 香港 096
-      - 🇺🇸 美国 347
-      - 🇭🇰 香港家宽 10
-      - 🇭🇰 香港 107
-      - 🇺🇸 美国 197
-      - 🇷🇺 俄罗斯 09
-      - 🇭🇰 香港家宽 53
-      - 🇺🇸 美国 047
-      - 🇭🇰 香港 075
-      - 🇺🇸 美国 272
-      - 🇳🇱 荷兰 02
-      - 🇩🇪 德国 13
-      - 🇺🇸 美国 299
-      - 🇯🇵 日本 01
-      - 🇺🇸 美国 105
-      - 🇭🇰 香港 119
-      - 🇷🇺 俄罗斯联邦 05
-      - 🇹🇼 台湾 06
-      - 🇺🇸 美国 293
-      - 🇭🇰 香港 108
-      - 🇺🇸 美国 348
-      - 🇻🇳 越南 096
-      - 🇭🇰 香港家宽 06
-      - 🇻🇳 越南 019
-      - 🇺🇸 美国 163
+      - 🇺🇸 美国 193
+      - 🇺🇸 美国 199
+      - 🇻🇳 越南 136
+      - 🇭🇰 香港 020
+      - 🇭🇰 香港家宽 26
+      - 🇻🇳 越南 008
+      - 🇭🇰 香港家宽 33
+      - 🇺🇸 美国 214
+      - 🇺🇸 美国 209
+      - 🇻🇳 越南 113
+      - 🇻🇳 越南 145
+      - 🇺🇸 美国 119
+      - 🇭🇰 香港家宽 49
+      - 🇭🇰 香港家宽 14
+      - 🇬🇷 希腊 02
+      - 🇭🇰 香港 128
+      - 🇻🇳 越南 020
+      - 🇺🇸 美国 159
+      - 🇻🇳 越南 059
+      - 🇻🇳 越南 110
+      - 🇭🇰 香港家宽 23
+      - 🇺🇸 美国 011
+      - 🇨🇦 加拿大 07
+      - 🇭🇰 香港 041
+      - 🇺🇸 美国 212
+      - 🇺🇸 美国 118
+      - 🇯🇵 日本 06
+      - 🇭🇰 香港 039
+      - 🇺🇸 美国 169
+      - 🇷🇺 俄罗斯联邦 01
       - 🇭🇰 香港 101
-      - 🇺🇸 美国 234
+      - 🇭🇰 香港 130
+      - 🇺🇸 美国 110
+      - 🇺🇸 美国 132
+      - 🇻🇳 越南 041
+      - 🇺🇸 美国 172
+      - 🇩🇪 德国 07
+      - 🇯🇵 日本 18
+      - 🇭🇰 香港 096
+      - 🇺🇸 美国 213
+      - 🇺🇸 美国 155
+      - 🇩🇪 德国 03
+      - 🇭🇰 香港 119
+      - 🇻🇳 越南 085
+      - 🇭🇰 香港 010
+      - 🇺🇸 美国 031
+      - 🇺🇸 美国 002
+      - 🇻🇳 越南 087
+      - 🇭🇰 香港 122
+      - 🇮🇳 印度 01
+      - 🇭🇰 香港 067
+      - 🇭🇰 香港 057
+      - 🇺🇸 美国 044
+      - 🇺🇸 美国 271
+      - 🇻🇳 越南 031
+      - 🇭🇰 香港 003
+      - 🇻🇳 越南 149
+      - 🇭🇰 香港 116
+      - 🇭🇰 香港 093
+      - 🇭🇰 香港 023
+      - 🇺🇸 美国 009
+      - 🇺🇸 美国 227
+      - 🇺🇸 美国 263
+      - 🇸🇬 新加坡 04
+      - 🇭🇰 香港 017
+      - 🇺🇸 美国 192
+      - 🇺🇸 美国 175
+      - 🇺🇸 美国 108
+      - 🇻🇳 越南 079
+      - 🇯🇵 日本 09
+      - 🇷🇺 俄罗斯 09
+      - 🇩🇪 德国 05
+      - 🇻🇳 越南 040
+      - 🇭🇰 香港家宽 37
+      - 🇺🇸 美国 174
+      - 🇭🇰 香港 104
+      - 🇻🇳 越南 080
+      - 🇭🇰 香港家宽 30
+      - 🇻🇳 越南 055
+      - 🇺🇸 美国 016
+      - 🇸🇬 新加坡家宽 01
+      - 🇻🇳 越南 146
+      - 🇻🇳 越南 033
       - 🇦🇺 AU澳大利亚(yz)
       - 🇦🇺 AU澳大利亚(yz) 2
       - 🇩🇪 DE德国(yz)
@@ -2462,144 +2266,95 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇺🇸 美国 008
-      - 🇺🇸 美国 099
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港家宽 13
-      - 🇺🇸 美国 063
-      - 🇭🇰 香港家宽 54
-      - 🇭🇰 香港 060
-      - 🇭🇰 香港家宽 17
-      - 🇺🇸 美国 215
-      - 🇬🇧 英国 06
-      - 🇺🇸 美国 231
-      - 🇧🇷 巴西 12
-      - 🇭🇰 香港 131
-      - 🇻🇳 越南 091
-      - 🇺🇸 美国 294
-      - 🇺🇸 美国 023
-      - 🇺🇸 美国 311
-      - 🇭🇰 香港 014
-      - 🇭🇰 香港 074
-      - 🇭🇰 香港 048
-      - 🇺🇸 美国 241
-      - 🇻🇳 越南 003
-      - 🇺🇸 美国 194
-      - 🇭🇰 香港家宽 46
-      - 🇭🇰 香港家宽 14
-      - 🇩🇪 德国 07
-      - 🇵🇭 菲律宾 01
-      - 🇺🇸 美国 102
-      - 🇺🇸 美国 121
-      - 🇺🇸 美国 116
-      - 🇺🇸 美国 150
-      - 🇭🇰 香港家宽 40
-      - 🇰🇷 韩国 04
-      - 🇭🇰 香港 006
-      - 🇭🇰 香港 080
-      - 🇺🇸 美国 167
-      - 🇭🇰 香港家宽 26
-      - 🇺🇸 美国 223
-      - 🇻🇳 越南 107
-      - 🇭🇰 香港家宽 30
-      - 🇻🇳 越南 045
-      - 🇭🇰 香港 025
-      - 🇭🇰 香港 138
-      - 🇸🇬 新加坡 10
-      - 🇺🇸 美国 082
-      - 🇭🇰 香港 061
-      - 🇺🇸 美国 035
-      - 🇭🇰 香港家宽 50
-      - 🇰🇷 韩国 06
-      - 🇻🇳 越南 074
-      - 🇭🇰 香港 102
-      - 🇺🇸 美国 154
-      - 🇺🇸 美国 062
-      - 🇻🇳 越南 061
-      - 🇺🇸 美国 165
-      - 🇺🇸 美国 073
-      - 🇭🇰 香港 045
-      - 🇺🇸 美国 030
-      - 🇺🇸 美国 097
-      - 🇻🇳 越南 129
-      - 🇭🇰 香港 023
-      - 🇻🇳 越南 095
-      - 🇭🇰 香港 070
-      - 🇭🇰 香港 053
-      - 🇫🇷 法国 03
-      - 🇺🇸 美国 198
-      - 🇹🇼 台湾家宽 01
-      - 🇺🇸 美国 181
-      - 🇺🇸 美国 049
-      - 🇳🇱 荷兰 11
-      - 🇭🇰 香港家宽 11
-      - 🇻🇳 越南 044
-      - 🇻🇳 越南 087
+      - 🇺🇸 美国 003
       - 🇺🇸 美国 216
-      - 🇻🇳 越南 132
-      - 🇺🇸 美国 042
-      - 🇺🇸 美国 345
-      - 🇺🇸 美国 143
-      - 🇻🇳 越南 098
-      - 🇯🇵 日本 12
-      - 🇻🇳 越南 099
-      - 🇷🇺 俄罗斯联邦 03
-      - 🇺🇸 美国 126
-      - 🇷🇺 俄罗斯联邦 01
-      - 🇺🇸 美国 277
-      - 🇭🇰 香港家宽 16
-      - 🇰🇷 韩国 01
-      - 🇺🇸 美国 209
-      - 🇺🇸 美国 114
-      - 🇯🇵 日本 10
-      - 🇺🇸 美国 043
-      - 🇻🇳 越南 057
-      - 🇺🇸 美国 337
-      - 🇭🇰 香港 087
-      - 🇭🇰 香港 122
-      - 🇷🇺 俄罗斯 20
-      - 🇺🇸 美国 052
-      - 🇺🇸 美国 050
-      - 🇭🇰 香港 042
-      - 🇺🇸 美国 081
-      - 🇭🇰 香港 120
-      - 🇺🇸 美国 280
-      - 🇺🇸 美国 333
-      - 🇦🇺 澳大利亚 01
-      - 🇩🇪 德国 03
-      - 🇺🇸 美国 079
-      - 🇻🇳 越南 027
+      - 🇭🇰 香港 012
+      - 🇺🇸 美国 086
+      - 🇭🇰 香港 084
       - 🇺🇸 美国 257
-      - 🇺🇸 美国 028
-      - 🇻🇳 越南 023
-      - 🇫🇷 法国 05
-      - 🇭🇰 香港 096
-      - 🇺🇸 美国 347
-      - 🇭🇰 香港家宽 10
-      - 🇭🇰 香港 107
-      - 🇺🇸 美国 197
-      - 🇷🇺 俄罗斯 09
-      - 🇭🇰 香港家宽 53
-      - 🇺🇸 美国 047
-      - 🇭🇰 香港 075
-      - 🇺🇸 美国 272
-      - 🇳🇱 荷兰 02
-      - 🇩🇪 德国 13
-      - 🇺🇸 美国 299
-      - 🇯🇵 日本 01
-      - 🇺🇸 美国 105
-      - 🇭🇰 香港 119
-      - 🇷🇺 俄罗斯联邦 05
-      - 🇹🇼 台湾 06
-      - 🇺🇸 美国 293
-      - 🇭🇰 香港 108
-      - 🇺🇸 美国 348
-      - 🇻🇳 越南 096
-      - 🇭🇰 香港家宽 06
-      - 🇻🇳 越南 019
-      - 🇺🇸 美国 163
+      - 🇺🇸 美国 193
+      - 🇺🇸 美国 199
+      - 🇻🇳 越南 136
+      - 🇭🇰 香港 020
+      - 🇭🇰 香港家宽 26
+      - 🇻🇳 越南 008
+      - 🇭🇰 香港家宽 33
+      - 🇺🇸 美国 214
+      - 🇺🇸 美国 209
+      - 🇻🇳 越南 113
+      - 🇻🇳 越南 145
+      - 🇺🇸 美国 119
+      - 🇭🇰 香港家宽 49
+      - 🇭🇰 香港家宽 14
+      - 🇬🇷 希腊 02
+      - 🇭🇰 香港 128
+      - 🇻🇳 越南 020
+      - 🇺🇸 美国 159
+      - 🇻🇳 越南 059
+      - 🇻🇳 越南 110
+      - 🇭🇰 香港家宽 23
+      - 🇺🇸 美国 011
+      - 🇨🇦 加拿大 07
+      - 🇭🇰 香港 041
+      - 🇺🇸 美国 212
+      - 🇺🇸 美国 118
+      - 🇯🇵 日本 06
+      - 🇭🇰 香港 039
+      - 🇺🇸 美国 169
+      - 🇷🇺 俄罗斯联邦 01
       - 🇭🇰 香港 101
-      - 🇺🇸 美国 234
+      - 🇭🇰 香港 130
+      - 🇺🇸 美国 110
+      - 🇺🇸 美国 132
+      - 🇻🇳 越南 041
+      - 🇺🇸 美国 172
+      - 🇩🇪 德国 07
+      - 🇯🇵 日本 18
+      - 🇭🇰 香港 096
+      - 🇺🇸 美国 213
+      - 🇺🇸 美国 155
+      - 🇩🇪 德国 03
+      - 🇭🇰 香港 119
+      - 🇻🇳 越南 085
+      - 🇭🇰 香港 010
+      - 🇺🇸 美国 031
+      - 🇺🇸 美国 002
+      - 🇻🇳 越南 087
+      - 🇭🇰 香港 122
+      - 🇮🇳 印度 01
+      - 🇭🇰 香港 067
+      - 🇭🇰 香港 057
+      - 🇺🇸 美国 044
+      - 🇺🇸 美国 271
+      - 🇻🇳 越南 031
+      - 🇭🇰 香港 003
+      - 🇻🇳 越南 149
+      - 🇭🇰 香港 116
+      - 🇭🇰 香港 093
+      - 🇭🇰 香港 023
+      - 🇺🇸 美国 009
+      - 🇺🇸 美国 227
+      - 🇺🇸 美国 263
+      - 🇸🇬 新加坡 04
+      - 🇭🇰 香港 017
+      - 🇺🇸 美国 192
+      - 🇺🇸 美国 175
+      - 🇺🇸 美国 108
+      - 🇻🇳 越南 079
+      - 🇯🇵 日本 09
+      - 🇷🇺 俄罗斯 09
+      - 🇩🇪 德国 05
+      - 🇻🇳 越南 040
+      - 🇭🇰 香港家宽 37
+      - 🇺🇸 美国 174
+      - 🇭🇰 香港 104
+      - 🇻🇳 越南 080
+      - 🇭🇰 香港家宽 30
+      - 🇻🇳 越南 055
+      - 🇺🇸 美国 016
+      - 🇸🇬 新加坡家宽 01
+      - 🇻🇳 越南 146
+      - 🇻🇳 越南 033
       - 🇦🇺 AU澳大利亚(yz)
       - 🇦🇺 AU澳大利亚(yz) 2
       - 🇩🇪 DE德国(yz)
@@ -3244,45 +2999,33 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇭🇰 香港家宽 13
-      - 🇭🇰 香港家宽 54
-      - 🇭🇰 香港 060
-      - 🇭🇰 香港家宽 17
-      - 🇭🇰 香港 131
-      - 🇭🇰 香港 014
-      - 🇭🇰 香港 074
-      - 🇭🇰 香港 048
-      - 🇭🇰 香港家宽 46
-      - 🇭🇰 香港家宽 14
-      - 🇭🇰 香港家宽 40
-      - 🇭🇰 香港 006
-      - 🇭🇰 香港 080
+      - 🇭🇰 香港 012
+      - 🇭🇰 香港 084
+      - 🇭🇰 香港 020
       - 🇭🇰 香港家宽 26
-      - 🇭🇰 香港家宽 30
-      - 🇭🇰 香港 025
-      - 🇭🇰 香港 138
-      - 🇭🇰 香港 061
-      - 🇭🇰 香港家宽 50
-      - 🇭🇰 香港 102
-      - 🇭🇰 香港 045
-      - 🇭🇰 香港 023
-      - 🇭🇰 香港 070
-      - 🇭🇰 香港 053
-      - 🇭🇰 香港家宽 11
-      - 🇭🇰 香港家宽 16
-      - 🇭🇰 香港 087
-      - 🇭🇰 香港 122
-      - 🇭🇰 香港 042
-      - 🇭🇰 香港 120
-      - 🇭🇰 香港 096
-      - 🇭🇰 香港家宽 10
-      - 🇭🇰 香港 107
-      - 🇭🇰 香港家宽 53
-      - 🇭🇰 香港 075
-      - 🇭🇰 香港 119
-      - 🇭🇰 香港 108
-      - 🇭🇰 香港家宽 06
+      - 🇭🇰 香港家宽 33
+      - 🇭🇰 香港家宽 49
+      - 🇭🇰 香港家宽 14
+      - 🇭🇰 香港 128
+      - 🇭🇰 香港家宽 23
+      - 🇭🇰 香港 041
+      - 🇭🇰 香港 039
       - 🇭🇰 香港 101
+      - 🇭🇰 香港 130
+      - 🇭🇰 香港 096
+      - 🇭🇰 香港 119
+      - 🇭🇰 香港 010
+      - 🇭🇰 香港 122
+      - 🇭🇰 香港 067
+      - 🇭🇰 香港 057
+      - 🇭🇰 香港 003
+      - 🇭🇰 香港 116
+      - 🇭🇰 香港 093
+      - 🇭🇰 香港 023
+      - 🇭🇰 香港 017
+      - 🇭🇰 香港家宽 37
+      - 🇭🇰 香港 104
+      - 🇭🇰 香港家宽 30
       - 🇭🇰 HK香港(yz)
       - 🇭🇰 HK香港(yz) 2
       - 🇭🇰 HK香港(yz) 3
@@ -3299,9 +3042,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇯🇵 日本 12
-      - 🇯🇵 日本 10
-      - 🇯🇵 日本 01
+      - 🇯🇵 日本 06
+      - 🇯🇵 日本 18
+      - 🇯🇵 日本 09
       - 🇯🇵 JP日本(yz)
       - 🇯🇵 JP日本(yz) 2
       - 🇯🇵 JP日本(yz) 3
@@ -3322,74 +3065,42 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
-      - 🇺🇸 美国 008
-      - 🇺🇸 美国 099
-      - 🇺🇸 美国 001
-      - 🇺🇸 美国 063
-      - 🇺🇸 美国 215
-      - 🇬🇧 英国 06
-      - 🇺🇸 美国 231
-      - 🇺🇸 美国 294
-      - 🇺🇸 美国 023
-      - 🇺🇸 美国 311
-      - 🇺🇸 美国 241
-      - 🇺🇸 美国 194
-      - 🇩🇪 德国 07
-      - 🇺🇸 美国 102
-      - 🇺🇸 美国 121
-      - 🇺🇸 美国 116
-      - 🇺🇸 美国 150
-      - 🇺🇸 美国 167
-      - 🇺🇸 美国 223
-      - 🇺🇸 美国 082
-      - 🇺🇸 美国 035
-      - 🇺🇸 美国 154
-      - 🇺🇸 美国 062
-      - 🇺🇸 美国 165
-      - 🇺🇸 美国 073
-      - 🇺🇸 美国 030
-      - 🇺🇸 美国 097
-      - 🇫🇷 法国 03
-      - 🇺🇸 美国 198
-      - 🇺🇸 美国 181
-      - 🇺🇸 美国 049
+      - 🇺🇸 美国 003
       - 🇺🇸 美国 216
-      - 🇺🇸 美国 042
-      - 🇺🇸 美国 345
-      - 🇺🇸 美国 143
-      - 🇷🇺 俄罗斯联邦 03
-      - 🇺🇸 美国 126
-      - 🇷🇺 俄罗斯联邦 01
-      - 🇺🇸 美国 277
-      - 🇺🇸 美国 209
-      - 🇺🇸 美国 114
-      - 🇺🇸 美国 043
-      - 🇺🇸 美国 337
-      - 🇷🇺 俄罗斯 20
-      - 🇺🇸 美国 052
-      - 🇺🇸 美国 050
-      - 🇺🇸 美国 081
-      - 🇺🇸 美国 280
-      - 🇺🇸 美国 333
-      - 🇦🇺 澳大利亚 01
-      - 🇩🇪 德国 03
-      - 🇺🇸 美国 079
+      - 🇺🇸 美国 086
       - 🇺🇸 美国 257
-      - 🇺🇸 美国 028
-      - 🇫🇷 法国 05
-      - 🇺🇸 美国 347
-      - 🇺🇸 美国 197
+      - 🇺🇸 美国 193
+      - 🇺🇸 美国 199
+      - 🇺🇸 美国 214
+      - 🇺🇸 美国 209
+      - 🇺🇸 美国 119
+      - 🇺🇸 美国 159
+      - 🇺🇸 美国 011
+      - 🇺🇸 美国 212
+      - 🇺🇸 美国 118
+      - 🇺🇸 美国 169
+      - 🇷🇺 俄罗斯联邦 01
+      - 🇺🇸 美国 110
+      - 🇺🇸 美国 132
+      - 🇺🇸 美国 172
+      - 🇩🇪 德国 07
+      - 🇺🇸 美国 213
+      - 🇺🇸 美国 155
+      - 🇩🇪 德国 03
+      - 🇺🇸 美国 031
+      - 🇺🇸 美国 002
+      - 🇺🇸 美国 044
+      - 🇺🇸 美国 271
+      - 🇺🇸 美国 009
+      - 🇺🇸 美国 227
+      - 🇺🇸 美国 263
+      - 🇺🇸 美国 192
+      - 🇺🇸 美国 175
+      - 🇺🇸 美国 108
       - 🇷🇺 俄罗斯 09
-      - 🇺🇸 美国 047
-      - 🇺🇸 美国 272
-      - 🇩🇪 德国 13
-      - 🇺🇸 美国 299
-      - 🇺🇸 美国 105
-      - 🇷🇺 俄罗斯联邦 05
-      - 🇺🇸 美国 293
-      - 🇺🇸 美国 348
-      - 🇺🇸 美国 163
-      - 🇺🇸 美国 234
+      - 🇩🇪 德国 05
+      - 🇺🇸 美国 174
+      - 🇺🇸 美国 016
       - 🇦🇺 AU澳大利亚(yz)
       - 🇦🇺 AU澳大利亚(yz) 2
       - 🇩🇪 DE德国(yz)
@@ -3672,8 +3383,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇹🇼 台湾家宽 01
-      - 🇹🇼 台湾 06
+      - 🇮🇳 印度 01
       - 🇮🇳 www.85la.com 印度_3
       - 🇮🇳 www.85la.com 印度_2
       - 🇮🇳 www.85la.com 印度_1
@@ -3683,7 +3393,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇸🇬 新加坡 10
+      - 🇸🇬 新加坡 04
+      - 🇸🇬 新加坡家宽 01
       - 🇸🇬 SG新加坡(yz)
       - 🇸🇬 SG新加坡(yz) 2
       - 🇸🇬 SG新加坡(yz) 3
@@ -3700,10 +3411,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇧🇷 巴西 12
-      - 🇰🇷 韩国 04
-      - 🇰🇷 韩国 06
-      - 🇰🇷 韩国 01
       - 🇰🇷 KR韩国(yz)
       - 🇰🇷 KR韩国(yz) 2
       - 🇰🇷 KR韩国(yz) 3
