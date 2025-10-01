@@ -17,239 +17,185 @@ dns:
     - tls://dns.google:853
 proxies:
   - {name: 关注https://github.com/wzdnzd不迷路, server: 9.9.9.9, port: 54321, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: febf501b-e19d-4451-8071-aa6144bb8825, tfo: false}
-  - {name: 🇻🇳 越南 051, server: 103.186.155.205, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇩🇪 德国 05, server: 152.70.176.68, port: 1, client-fingerprint: chrome, type: hysteria2, password: 3abe69d9-20ed-49ae-9d18-8d4b9e050472, auth: 3abe69d9-20ed-49ae-9d18-8d4b9e050472, sni: www.bing.com, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 108, server: 103.186.154.179, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 135, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: b15f1706-dbd5-401c-934d-a3325b995875, auth: b15f1706-dbd5-401c-934d-a3325b995875, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 071, server: 103.186.154.241, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 105, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 7038e834-4587-425d-81af-a12d8779a6bd, auth: 7038e834-4587-425d-81af-a12d8779a6bd, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 36, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 6154dab6-3b26-454f-9bb4-276ff56738ed, auth: 6154dab6-3b26-454f-9bb4-276ff56738ed, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 005, server: 212.192.12.251, port: 33079, client-fingerprint: chrome, type: hysteria2, password: 54c7de29-2dc3-4792-91f9-62c11422e351, auth: 54c7de29-2dc3-4792-91f9-62c11422e351, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇬🇧 英国 03, server: uk-02.allhubb.info, port: 8443, client-fingerprint: chrome, type: trojan, password: 6448145a43e28cc4, sni: uk-02.allhubb.info, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 28, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 8d71d22c-5cc1-4568-b452-dbec812b12bc, auth: 8d71d22c-5cc1-4568-b452-dbec812b12bc, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 234, server: 1e3fb9-330-co-3.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: 1e3fb9-330-co.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇬🇧 英国 19, server: ydyh1.nanbeicloud.top, port: 26905, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 8148e864-9da5-40a5-b888-6c2014452865, tfo: false}
-  - {name: 🇺🇸 美国 172, server: v8.heduian.link, port: 30808, client-fingerprint: chrome, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /oooo, headers: {Host: v8.heduian.link}}}
-  - {name: 🇹🇼 台湾 05, server: tw065.jd.kunlunpx.com, port: 45916, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: cfc6f3f75f5ef7b2665c, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇺🇸 美国 117, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 7ac98096-d64e-4bfd-b08d-cd7d7545c4ad, auth: 7ac98096-d64e-4bfd-b08d-cd7d7545c4ad, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 11, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 8a60ebba-5ae6-488b-9f6e-ee5f8d25cba8, auth: 8a60ebba-5ae6-488b-9f6e-ee5f8d25cba8, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 017, server: 212.192.12.251, port: 23183, client-fingerprint: chrome, type: vmess, uuid: f98049dc-fb09-4c3e-bd02-a31716b95c64, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇸🇪 瑞典 04, server: 78.40.117.109, port: 37538, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: RP767jpZVarzQ0iI0vbTuA, tfo: false}
-  - {name: 🇺🇸 美国 146, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 7ac98096-d64e-4bfd-b08d-cd7d7545c4ad, auth: 7ac98096-d64e-4bfd-b08d-cd7d7545c4ad, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇹🇷 土耳其 08, server: a40dc7-20.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: a40dc7-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 073, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: c6cc43a9-20a4-43c3-aa26-758cd31161c7, auth: c6cc43a9-20a4-43c3-aa26-758cd31161c7, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇹🇷 土耳其 11, server: a40dc7-20-4.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: a40dc7-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 048, server: 103.186.155.230, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇮🇹 意大利 10, server: 5f6a56-20-3.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: 5f6a56-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 039, server: 103.186.155.141, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 016, server: 212.192.12.251, port: 23183, client-fingerprint: chrome, type: vmess, uuid: f1d309ef-7a6c-4557-856c-282083c45fd8, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇬🇧 英国 06, server: 20f7cc-330-co-uk1-2.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: 20f7cc-330-co-uk1.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 01, server: jp027.jd.kunlunpx.com, port: 45911, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 69dc0306f1bfb1af49a5, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇭🇰 香港 41, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 05bac355-24b7-4e14-9bc7-98b7bafa5fca, auth: 05bac355-24b7-4e14-9bc7-98b7bafa5fca, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 090, server: mf1.ylccloud.top, port: 16090, client-fingerprint: chrome, type: hysteria2, password: 61a24f49-9698-438f-8919-e13b6b0f208c, auth: 61a24f49-9698-438f-8919-e13b6b0f208c, sni: mf1.ylccloud.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 082, server: 103.186.154.252, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇻🇳 越南 133, server: vn2-4.9966662.xyz, port: 20223, reality-opts: {public-key: WWuWxGdNTeiOpHqEkrHfv4sepTP9z-09ZtK4p71o-yM, short-id: "583d93a1" }, client-fingerprint: chrome, type: vless, uuid: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
-  - {name: 🇨🇭 瑞士 03, server: f0ba91-20-5.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: f0ba91-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇳🇱 荷兰 10, server: yapc-1.adamhayward.co.uk, port: 35200, client-fingerprint: chrome, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇺🇸 美国 231, server: lsj3.mangshe.xyz, port: 2056, client-fingerprint: chrome, type: hysteria2, password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, auth: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, sni: lsj3.mangshe.xyz, skip-cert-verify: false}
-  - {name: 前南马其顿 03, server: mk4.9966662.xyz, port: 51423, reality-opts: {public-key: aTmRClRKFCvNi6aFQnmKt3CJ2hrLG3wQJ5WgrbWk1Xs, short-id: "b8ee759f" }, client-fingerprint: chrome, type: vless, uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
-  - {name: 🇺🇸 美国 260, server: www.digitalocean.com, port: 443, client-fingerprint: chrome, type: vmess, uuid: 6acd1528-42cc-43cf-93a4-f36bd859f6d2, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 20250927s15.goubi.ggff.net}}}
-  - {name: 🇨🇱 智利 03, server: c20d8f-20-5.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: c20d8f-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 07, server: yy3.vyunyunnode.top, port: 19010, client-fingerprint: chrome, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NzE1MThkYTQwYWMwYWJmMA==:ZTYzZTMyZmMtYzRkMi00Yw==, tfo: false}
-  - {name: 🇬🇷 希腊 08, server: gr1-3.9966662.xyz, port: 20223, reality-opts: {public-key: dRgK6_86Zkd_nFhiUxmrBjAbO_nis9zCEKZpiCl2Z2Q, short-id: "ec372208" }, client-fingerprint: chrome, type: vless, uuid: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
-  - {name: 🇻🇳 越南 004, server: vn2-5.9966662.xyz, port: 20223, reality-opts: {public-key: WWuWxGdNTeiOpHqEkrHfv4sepTP9z-09ZtK4p71o-yM, short-id: "583d93a1" }, client-fingerprint: chrome, type: vless, uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
-  - {name: 🇵🇱 波兰 01, server: yy3.vyunyunnode.top, port: 46502, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf, tfo: false}
-  - {name: 🇻🇳 越南 131, server: 103.186.154.169, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇳🇱 荷兰 08, server: 188.114.97.202, port: 8443, client-fingerprint: chrome, type: vless, uuid: c2e177d4-e610-4abd-85cd-1a869d158751, tls: true, tfo: false, skip-cert-verify: false, servername: teslakit1.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: teslakit1.pages.dev}}}
-  - {name: 🇹🇼 台湾 07, server: ydyh1.nanbeicloud.top, port: 26911, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 8148e864-9da5-40a5-b888-6c2014452865, tfo: false}
-  - {name: 🇺🇸 美国 247, server: 5f6a56-20-3.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: 5f6a56-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 027, server: 212.192.12.251, port: 23183, client-fingerprint: chrome, type: vmess, uuid: f60ba5f8-2fe5-4446-a00c-b5cf03383349, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇻🇳 越南 081, server: 103.186.154.202, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 050, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: aa57ea6d-0218-4e7d-bb8e-c7864f8e3e38, auth: aa57ea6d-0218-4e7d-bb8e-c7864f8e3e38, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇯🇵 日本家宽 03, server: 59.138.63.214, port: 20155, client-fingerprint: chrome, type: ss, cipher: 2022-blake3-aes-256-gcm, password: tvfJ1dskO7ZoSqNJL1ku516Z4SG3oFE31koW+wA+Ii0=:J6QRG9TfsabK4lRw+nvV0a9WVhF6hCqnUGObiSgvn+E=, tfo: false}
-  - {name: 🇷🇺 俄罗斯 04, server: ef6b4d-20-5.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: ef6b4d-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇮🇹 意大利 11, server: it091.jd.kunlunpx.com, port: 45587, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 6180d9dc7075e7fe509b, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇺🇸 美国 058, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: f2c5833a-d034-42e3-ad86-78a7fb273b21, auth: f2c5833a-d034-42e3-ad86-78a7fb273b21, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 169, server: 212.192.12.251, port: 31008, client-fingerprint: chrome, type: hysteria2, password: 07558080-2897-42a1-98f9-ac4503b36b02, auth: 07558080-2897-42a1-98f9-ac4503b36b02, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇹🇷 土耳其 01, server: a40dc7-20-2.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: a40dc7-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 171, server: csdn.usdone.one, port: 443, client-fingerprint: chrome, type: vmess, uuid: f89a6eaf-0436-414f-8811-0cf68d793f55, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /ddddddddd, headers: {Host: csdn.usdone.one}}}
-  - {name: 🇰🇿 哈萨克斯坦 01, server: kz092.jd.kunlunpx.com, port: 45588, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 05ff48fd41178ed790ec, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇧🇷 巴西 42, server: br093.jd.kunlunpx.com, port: 45589, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: e3d6f327d91656f89f07, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇳🇱 荷兰 11, server: yapc-1.adamhayward.co.uk, port: 35000, client-fingerprint: chrome, type: hysteria2, password: Yet-Another-Public-Config-1, auth: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇭🇰 香港 77, server: 46.3.26.12, port: 443, client-fingerprint: chrome, type: vmess, uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /aa, headers: {Host: hk.nbee.pp.ua}}}
-  - {name: 🇺🇸 美国 132, server: dg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 3c8af0e2-544a-4253-88d4-af8c877858f4, auth: 3c8af0e2-544a-4253-88d4-af8c877858f4, sni: dg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇦 乌克兰 01, server: ua085.jd.kunlunpx.com, port: 45583, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 4f308f8c43ae78a779f5, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇺🇸 美国 213, server: uszl3.vyunyunnode.top, port: 44007, client-fingerprint: chrome, type: hysteria2, password: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf, auth: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf, sni: uszl3.vyunyunnode.top, skip-cert-verify: false}
-  - {name: 🇹🇼 台湾 04, server: tw031.jd.kunlunpx.com, port: 45915, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: b74518fb49bd645e6ce7, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇻🇳 越南 117, server: 103.186.154.244, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 033, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 37cb73f5-178e-4552-bbfd-12cd815f97dd, auth: 37cb73f5-178e-4552-bbfd-12cd815f97dd, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 101, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 1a001e41-030b-46c1-ae5c-606710f9ae1d, auth: 1a001e41-030b-46c1-ae5c-606710f9ae1d, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 09, server: yy3.vyunyunnode.top, port: 34501, client-fingerprint: chrome, type: ss, cipher: 2022-blake3-aes-128-gcm, password: ZDdkZWM5M2E0ZDVkNmIwZA==:ZTYzZTMyZmMtYzRkMi00Yw==, tfo: false}
-  - {name: 🇵🇭 菲律宾 01, server: ph05.jd.kunlunpx.com, port: 45574, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 22046a35aa74890b48f5, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇺🇸 美国 191, server: www.csgo.com, port: 443, client-fingerprint: chrome, type: vmess, uuid: b190e9bd-e11e-4305-be17-2181588e7d30, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 20250927s15.goubi.ggff.net}}}
-  - {name: 🇻🇳 越南 070, server: 103.186.155.235, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇨🇱 智利 05, server: c20d8f-20-2.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: c20d8f-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 064, server: 103.186.154.232, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇭🇰 香港 08, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: e33b95f1-4363-40d4-afdd-1ce468882df4, auth: e33b95f1-4363-40d4-afdd-1ce468882df4, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 38, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 9cb769d9-01f5-4b92-aa3a-a8752d18a3b5, auth: 9cb769d9-01f5-4b92-aa3a-a8752d18a3b5, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 006, server: 212.192.12.251, port: 33079, client-fingerprint: chrome, type: hysteria2, password: 4e9a5998-5d8a-4b1e-98b2-b05e6c5564f0, auth: 4e9a5998-5d8a-4b1e-98b2-b05e6c5564f0, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇹🇷 土耳其 15, server: tr042.jd.kunlunpx.com, port: 45926, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 7452c550383bf60ac9d3, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇺🇸 美国 103, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 60b66af6-a235-4ca9-82cb-b2d331506beb, auth: 60b66af6-a235-4ca9-82cb-b2d331506beb, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港家宽 06, server: hk077.jd.kunlunpx.com, port: 45936, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: a643f6f3733c9962851d, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇭🇰 香港 13, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 1c001cea-2da9-455d-96ed-0e9b79d1644b, auth: 1c001cea-2da9-455d-96ed-0e9b79d1644b, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 056, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: b297b22e-e630-4d8a-81f4-fd0a811a37b2, auth: b297b22e-e630-4d8a-81f4-fd0a811a37b2, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 13, server: 141.11.138.192, port: 36003, client-fingerprint: chrome, type: vless, uuid: 6a08090f-4e15-49c8-c442-b9c4ab26d196, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 美国 181, server: icook.tw, port: 443, client-fingerprint: chrome, type: vmess, uuid: 8cc7c671-ef7b-4c0a-afa4-85afc6f196a0, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 20250927s15.goubi.ggff.net}}}
-  - {name: 🇻🇳 越南 041, server: 103.186.155.53, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇻🇳 越南 084, server: 103.186.154.222, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 001, server: 208.87.243.187, port: 22222, client-fingerprint: chrome, type: hysteria2, password: dongtaiwang.com, auth: dongtaiwang.com, sni: www.bing.com, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 10, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 1d73b668-deec-43bd-9348-83c314b6311d, auth: 1d73b668-deec-43bd-9348-83c314b6311d, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇬🇧 英国 09, server: 20f7cc-330-co-uk1.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: 20f7cc-330-co-uk1.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇺🇦 乌克兰 05, server: ua1.9966662.xyz, port: 20073, reality-opts: {public-key: ZWmuJMm4nOp6QgkYnwE04cb78sxa-Mt4c3fBlkuAYG4, short-id: "8d4d18f7" }, client-fingerprint: chrome, type: vless, uuid: a24c6851-2055-42c1-9c20-2d3bad97334f, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
-  - {name: 🇧🇷 巴西 07, server: afb4b1-20-5.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: afb4b1-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 195, server: mf1.ylccloud.top, port: 16090, client-fingerprint: chrome, type: hysteria2, password: 4ba4b49a-b5c6-4206-aaa1-edb34bfd64f0, auth: 4ba4b49a-b5c6-4206-aaa1-edb34bfd64f0, sni: mf1.ylccloud.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 077, server: 103.186.154.198, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇫🇷 法国 05, server: fr034.jd.kunlunpx.com, port: 45927, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 8141b20c775ce63fab96, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇭🇰 香港 24, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 77d9377f-c528-4d0c-94c2-11af286ebaab, auth: 77d9377f-c528-4d0c-94c2-11af286ebaab, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 011, server: 212.192.12.251, port: 33079, client-fingerprint: chrome, type: hysteria2, password: f1d309ef-7a6c-4557-856c-282083c45fd8, auth: f1d309ef-7a6c-4557-856c-282083c45fd8, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇻🇳 越南 008, server: vn2-3.9966662.xyz, port: 20223, reality-opts: {public-key: WWuWxGdNTeiOpHqEkrHfv4sepTP9z-09ZtK4p71o-yM, short-id: "583d93a1" }, client-fingerprint: chrome, type: vless, uuid: a24c6851-2055-42c1-9c20-2d3bad97334f, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
-  - {name: 🇺🇸 美国 168, server: 212.192.12.251, port: 31008, client-fingerprint: chrome, type: hysteria2, password: f98049dc-fb09-4c3e-bd02-a31716b95c64, auth: f98049dc-fb09-4c3e-bd02-a31716b95c64, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇮🇹 意大利 06, server: 5f6a56-20-2.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: 5f6a56-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇳🇱 荷兰 06, server: v30.heduian.link, port: 30830, client-fingerprint: chrome, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}}
-  - {name: 🇺🇸 美国 120, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 1c3c6df4-6e25-4a32-90d6-519832cfb746, auth: 1c3c6df4-6e25-4a32-90d6-519832cfb746, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 203, server: us025.jd.kunlunpx.com, port: 45908, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 97c3cf442df2d7099275, tfo: false, plugin: obfs, plugin-opts: {mode: http, host: 215996dd9f1c3db1e54b.microsoft.com}}
-  - {name: 🇮🇹 意大利 08, server: 5f6a56-20-3.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: 5f6a56-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇩🇪 德国 14, server: 94.131.111.195, port: 444, client-fingerprint: chrome, type: vmess, uuid: 8bbd9d8c-481b-49b6-8029-e4648f2ea31d, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
-  - {name: 🇸🇬 新加坡 03, server: yy1.vyunyunnode.top, port: 19088, client-fingerprint: chrome, type: ss, cipher: 2022-blake3-aes-128-gcm, password: ZTc2Y2VmOWMzOWI2ZDYyNg==:ZTYzZTMyZmMtYzRkMi00Yw==, tfo: false}
-  - {name: 🇹🇷 土耳其 10, server: a40dc7-20-5.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: a40dc7-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 14, server: c8217-b2a.h2.49d2.jse11.2.b297.djjsvip.cfd, port: 443, reality-opts: {public-key: uUZ8aWuDPUhZaUAng-IxXS_xOHLYJRXJ_IpRQJ7H8zo, short-id: "3bed557a" }, client-fingerprint: chrome, type: vless, uuid: 767ed51d-2358-4981-9447-a807c1419e93, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.delamer.co.jp, network: tcp}
-  - {name: 🇻🇳 越南 058, server: 103.186.155.239, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 002, server: 212.192.12.251, port: 33079, client-fingerprint: chrome, type: hysteria2, password: 5cb4de9a-0c10-4ee3-b526-db05df6a86ab, auth: 5cb4de9a-0c10-4ee3-b526-db05df6a86ab, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇭🇰 香港 16, server: hg1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: e542ea29-98e8-4043-941d-01d1f9d0dd45, auth: e542ea29-98e8-4043-941d-01d1f9d0dd45, sni: hg1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 076, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 8a60ebba-5ae6-488b-9f6e-ee5f8d25cba8, auth: 8a60ebba-5ae6-488b-9f6e-ee5f8d25cba8, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 173, server: 154.26.176.94, port: 444, client-fingerprint: chrome, type: vmess, uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /aa, headers: {Host: us.nbee.pp.ua}}}
-  - {name: 🇨🇦 加拿大 01, server: ydyh1.nanbeicloud.top, port: 26902, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 8148e864-9da5-40a5-b888-6c2014452865, tfo: false}
-  - {name: 🇺🇸 美国 095, server: rb1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: 756b0d5d-3829-4804-a5b8-cf957f5c2e5f, auth: 756b0d5d-3829-4804-a5b8-cf957f5c2e5f, sni: rb1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 019, server: 103.186.154.214, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 013, server: 212.192.12.251, port: 33079, client-fingerprint: chrome, type: hysteria2, password: fc00469f-a4d4-4901-8611-1457badc86c3, auth: fc00469f-a4d4-4901-8611-1457badc86c3, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇬🇧 英国 22, server: yy1.vyunyunnode.top, port: 19021, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: e63e32fc-c4d2-4cb5-9bbd-a5d51b1144bf, tfo: false}
-  - {name: 🇻🇳 越南 018, server: 103.186.155.137, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇮🇹 意大利 02, server: 5f6a56-20.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: 5f6a56-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 049, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: e33b95f1-4363-40d4-afdd-1ce468882df4, auth: e33b95f1-4363-40d4-afdd-1ce468882df4, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 189, server: www.csgo.com, port: 443, client-fingerprint: chrome, type: vmess, uuid: 149f4b38-0e1a-44b7-9831-006fe07287fa, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 20250927s15.goubi.ggff.net}}}
-  - {name: 🇬🇧 英国 13, server: 20f7cc-330-co-uk1-2.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: 20f7cc-330-co-uk1.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 170, server: 212.192.12.251, port: 31008, client-fingerprint: chrome, type: hysteria2, password: 4a5674b1-3964-46e3-a84d-d704b2662f11, auth: 4a5674b1-3964-46e3-a84d-d704b2662f11, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇺🇸 美国 249, server: c20d8f-20-2.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: c20d8f-20.9966661.xyz, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz), server: 185.193.31.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: 2456f90c-5183-476d-b069-16ae74ce120f, tls: true, tfo: false, skip-cert-verify: false, servername: fast01.0860852.xyz, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: fast01.0860852.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 2, server: 150.230.209.232, port: 8443, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇺🇸 US美国(yz) 3, server: 185.59.218.168, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇺🇸 US美国(yz) 4, server: 45.131.211.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: 2456f90c-5183-476d-b069-16ae74ce120f, tls: true, tfo: false, skip-cert-verify: false, servername: fast01.0860852.xyz, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: fast01.0860852.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 5, server: 104.129.167.161, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇺🇸 US美国(yz) 6, server: 167.68.11.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: 2456f90c-5183-476d-b069-16ae74ce120f, tls: true, tfo: false, skip-cert-verify: false, servername: fast01.0860852.xyz, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: fast01.0860852.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 7, server: 209.94.90.32, port: 2096, client-fingerprint: chrome, type: vless, uuid: b65f4df7-f6af-42b2-877a-cef33f21675e, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 8, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b2-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b2-cdn.682637.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 9, server: 198.71.191.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: 2456f90c-5183-476d-b069-16ae74ce120f, tls: true, tfo: false, skip-cert-verify: false, servername: fast01.0860852.xyz, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: fast01.0860852.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 10, server: 185.162.231.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: 2456f90c-5183-476d-b069-16ae74ce120f, tls: true, tfo: false, skip-cert-verify: false, servername: fast01.0860852.xyz, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: fast01.0860852.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 11, server: 72.167.241.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: 2456f90c-5183-476d-b069-16ae74ce120f, tls: true, tfo: false, skip-cert-verify: false, servername: fast01.0860852.xyz, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: fast01.0860852.xyz}}}
+  - {name: 🇺🇸 美国 128, server: wmg1.wanlidag.top, port: 5555, client-fingerprint: chrome, type: hysteria2, password: bcc06b10-fe23-41c2-b781-95a44cd952a1, auth: bcc06b10-fe23-41c2-b781-95a44cd952a1, sni: wmg1.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 194, server: www.visa.com.sg, port: 8880, client-fingerprint: chrome, type: vless, uuid: 66935ad3-b519-4593-a641-417a39f1ccfe, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ancient-mountain-3bc8.linqiang-d8e.workers.dev}}}
+  - {name: 🇺🇸 美国 160, server: els.ylccloud.top, port: 16090, client-fingerprint: chrome, type: hysteria2, password: 38dfd82f-5eb6-4b54-ad3e-167a9c4e6359, auth: 38dfd82f-5eb6-4b54-ad3e-167a9c4e6359, sni: els.ylccloud.top, skip-cert-verify: false}
+  - {name: 🇹🇷 土耳其 01, server: a40dc7-20.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: a40dc7-20.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇫🇮 芬兰 08, server: fi1-5.9966662.xyz, port: 20223, reality-opts: {public-key: 2hmTpdZk2JPHCIBM0ism_AAr9HjtnyMV9syarwvj-Q4, short-id: "587d20c4" }, client-fingerprint: chrome, type: vless, uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇺🇸 美国 043, server: us1-1.9966662.xyz, port: 20133, reality-opts: {public-key: GbNAnIWBHu4NRuaJsE5X1dIRLSWjmREoudx7TZltYS0, short-id: "4926f6d9" }, client-fingerprint: chrome, type: vless, uuid: a24c6851-2055-42c1-9c20-2d3bad97334f, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇺🇸 美国 195, server: us1-4.9966662.xyz, port: 20133, reality-opts: {public-key: GbNAnIWBHu4NRuaJsE5X1dIRLSWjmREoudx7TZltYS0, short-id: "4926f6d9" }, client-fingerprint: chrome, type: vless, uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇺🇸 美国 196, server: us1-5.9966662.xyz, port: 20133, reality-opts: {public-key: GbNAnIWBHu4NRuaJsE5X1dIRLSWjmREoudx7TZltYS0, short-id: "4926f6d9" }, client-fingerprint: chrome, type: vless, uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 巴林 03, server: 57bf2d-20-3.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: 57bf2d-20.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 149, server: els.ylccloud.top, port: 16090, client-fingerprint: chrome, type: hysteria2, password: b06dc287-412d-40fa-8253-92a687ecb151, auth: b06dc287-412d-40fa-8253-92a687ecb151, sni: els.ylccloud.top, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 045, server: 103.186.155.183, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇻🇳 越南 073, server: 103.186.154.211, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇫🇷 法国 05, server: 6a471e-20-4.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: 6a471e-20.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇬🇷 希腊 04, server: gr1-1.9966662.xyz, port: 20223, reality-opts: {public-key: dRgK6_86Zkd_nFhiUxmrBjAbO_nis9zCEKZpiCl2Z2Q, short-id: "ec372208" }, client-fingerprint: chrome, type: vless, uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇫🇷 法国 03, server: 6a471e-20.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: 6a471e-20.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 014, server: xg.jjzcloud.top, port: 57338, client-fingerprint: chrome, type: hysteria2, password: bc4b33b3-b706-40e9-a612-3c5a967ca1c9, auth: bc4b33b3-b706-40e9-a612-3c5a967ca1c9, sni: xg.jjzcloud.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 081, server: mf1.ylccloud.top, port: 16090, client-fingerprint: chrome, type: hysteria2, password: 0fe762b5-1b6f-4ff4-b4f4-9b2260f93b9f, auth: 0fe762b5-1b6f-4ff4-b4f4-9b2260f93b9f, sni: mf1.ylccloud.top, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 009, server: 103.186.155.35, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇻🇳 越南 039, server: 103.186.155.226, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇻🇳 越南 017, server: 103.186.154.73, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇮🇳 印度 09, server: 74c5a9-20-3.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: 74c5a9-20.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 059, server: 103.186.155.120, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇺🇸 美国 116, server: mg1.jjzcloud.top, port: 57238, client-fingerprint: chrome, type: hysteria2, password: bceae433-e84f-4c0a-b6d4-20f170c87a14, auth: bceae433-e84f-4c0a-b6d4-20f170c87a14, sni: mg1.jjzcloud.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 041, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: a3d9e79d-3a67-4a04-adc4-30ffa6518947, auth: a3d9e79d-3a67-4a04-adc4-30ffa6518947, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 07, server: dv-jp-4.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: dv-jp.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 098, server: mg1.jjzcloud.top, port: 57238, client-fingerprint: chrome, type: hysteria2, password: 9ce26ac2-edbf-45f4-9534-093a23766dfc, auth: 9ce26ac2-edbf-45f4-9534-093a23766dfc, sni: mg1.jjzcloud.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 134, server: 03e37e-330-co-3.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: 03e37e-330-co.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇫🇷 法国 04, server: 6a471e-20-5.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: 6a471e-20.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇹🇭 泰国 02, server: af01e9-330-4.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: af01e9-330.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 151, server: els.ylccloud.top, port: 16090, client-fingerprint: chrome, type: hysteria2, password: b356766b-edbf-417d-8ef3-1d9e8c7cec44, auth: b356766b-edbf-417d-8ef3-1d9e8c7cec44, sni: els.ylccloud.top, skip-cert-verify: false}
+  - {name: 🇳🇱 荷兰 06, server: fd0017-20.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: fd0017-20.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 12, server: 103.36.91.32, port: 8388, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf, password: asd123456, tfo: false}
+  - {name: 🇺🇸 美国 011, server: xg.jjzcloud.top, port: 57338, client-fingerprint: chrome, type: hysteria2, password: bbd27921-0581-47a7-b8be-4d873767bb3c, auth: bbd27921-0581-47a7-b8be-4d873767bb3c, sni: xg.jjzcloud.top, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 089, server: 103.186.155.204, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇺🇸 美国 061, server: mf1.ylccloud.top, port: 16090, client-fingerprint: chrome, type: hysteria2, password: 17f2aeda-0930-4a22-86f4-eca659abc776, auth: 17f2aeda-0930-4a22-86f4-eca659abc776, sni: mf1.ylccloud.top, skip-cert-verify: false}
+  - {name: 🇧🇩 孟加拉国家宽 08, server: kh1.9966662.xyz, port: 51423, reality-opts: {public-key: 2IbS5DAoAxEG9wEG99huRaHljbEDQdhpcKE9q9x52TE, short-id: "1ce76a90" }, client-fingerprint: chrome, type: vless, uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇹🇭 泰国 03, server: af01e9-330-5.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: af01e9-330.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 02, server: 162.159.43.92, port: 443, client-fingerprint: chrome, type: vless, uuid: 0c0537c3-f0fb-40e6-bd59-f5038e1855ed, tls: true, tfo: false, skip-cert-verify: false, servername: juzi.634676.xyz, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: juzi.634676.xyz}}}
+  - {name: 🇺🇸 美国 215, server: 20f7cc-330-co-uk1.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: 20f7cc-330-co-uk1.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 176, server: v24.heduian.link, port: 30824, client-fingerprint: chrome, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /oooo, headers: {Host: v24.heduian.link}}}
+  - {name: 🇻🇳 越南 101, server: vnvnnian-u-do-vn2-2.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: vnvnnian-u-do-vn2.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 146, server: xjp1.xiaohuolongjc.top, port: 37771, client-fingerprint: chrome, type: hysteria2, password: e0cc849a-3a46-4358-96ef-f7700984f7a7, auth: e0cc849a-3a46-4358-96ef-f7700984f7a7, sni: xjp1.xiaohuolongjc.top, skip-cert-verify: false}
+  - {name: 🇧🇩 孟加拉国家宽 06, server: kh3.9966662.xyz, port: 51423, reality-opts: {public-key: 2IbS5DAoAxEG9wEG99huRaHljbEDQdhpcKE9q9x52TE, short-id: "1ce76a90" }, client-fingerprint: chrome, type: vless, uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇯🇵 日本 08, server: w6.luoli.de, port: 443, client-fingerprint: chrome, type: vmess, uuid: 42a99644-b90b-3627-8809-a2d6c4078b59, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /v2ws, headers: {Host: w6.luoli.de}}}
+  - {name: 🇺🇸 美国 048, server: 03e37e-330-co.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: 03e37e-330-co.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇳🇱 荷兰 15, server: Ln2Ray@gavazn.lnmarketplace.net, port: 45000, client-fingerprint: chrome, type: hysteria2, password: Telegram-->, auth: Telegram-->, sni: gavazn.55994421.xyz, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇺🇸 美国 094, server: mg1.jjzcloud.top, port: 57238, client-fingerprint: chrome, type: hysteria2, password: 6cf6eebe-f0ff-48b5-8444-494fde397d0b, auth: 6cf6eebe-f0ff-48b5-8444-494fde397d0b, sni: mg1.jjzcloud.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 208, server: f0ba91-20.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: f0ba91-20.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 181, server: w8.luoli.de, port: 443, client-fingerprint: chrome, type: vmess, uuid: 42a99644-b90b-3627-8809-a2d6c4078b59, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /v2ws, headers: {Host: w8.luoli.de}}}
+  - {name: 🇯🇵 日本 04, server: dv-jp-2.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: dv-jp.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 185, server: us1-5.9966662.xyz, port: 20133, reality-opts: {public-key: GbNAnIWBHu4NRuaJsE5X1dIRLSWjmREoudx7TZltYS0, short-id: "4926f6d9" }, client-fingerprint: chrome, type: vless, uuid: a24c6851-2055-42c1-9c20-2d3bad97334f, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇺🇸 美国 154, server: els.ylccloud.top, port: 16090, client-fingerprint: chrome, type: hysteria2, password: b66c248f-1644-4c27-9fe1-23a5aca78800, auth: b66c248f-1644-4c27-9fe1-23a5aca78800, sni: els.ylccloud.top, skip-cert-verify: false}
+  - {name: 🇬🇷 希腊 06, server: gr1-2.9966662.xyz, port: 20223, reality-opts: {public-key: dRgK6_86Zkd_nFhiUxmrBjAbO_nis9zCEKZpiCl2Z2Q, short-id: "ec372208" }, client-fingerprint: chrome, type: vless, uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇺🇸 美国 102, server: mg1.jjzcloud.top, port: 57238, client-fingerprint: chrome, type: hysteria2, password: 4e5c855b-ce85-4362-9af1-183dfe5c9257, auth: 4e5c855b-ce85-4362-9af1-183dfe5c9257, sni: mg1.jjzcloud.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 178, server: w9.luoli.de, port: 443, client-fingerprint: chrome, type: vmess, uuid: 42a99644-b90b-3627-8809-a2d6c4078b59, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /v2ws, headers: {Host: w9.luoli.de}}}
+  - {name: 🇳🇱 荷兰 07, server: v30.heduian.link, port: 30830, client-fingerprint: chrome, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}}
+  - {name: 🇩🇪 德国 04, server: de1-3.9966662.xyz, port: 20133, reality-opts: {public-key: 65E6IjBrQMYqhrtISS0F2kUFIjT5aSxgNPKCf88fGFw, short-id: "3b03febe" }, client-fingerprint: chrome, type: vless, uuid: a24c6851-2055-42c1-9c20-2d3bad97334f, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇺🇸 美国 091, server: mf1.ylccloud.top, port: 16090, client-fingerprint: chrome, type: hysteria2, password: a523da1c-1dae-45d1-be4f-ccb800321315, auth: a523da1c-1dae-45d1-be4f-ccb800321315, sni: mf1.ylccloud.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 016, server: xg.jjzcloud.top, port: 57338, client-fingerprint: chrome, type: hysteria2, password: d9ecfba7-c435-44c6-a747-554fd476570a, auth: d9ecfba7-c435-44c6-a747-554fd476570a, sni: xg.jjzcloud.top, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 068, server: 103.186.154.13, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇺🇸 美国 039, server: 69.84.182.18, port: 443, client-fingerprint: chrome, type: vless, uuid: 93d6ba39-0f7d-4961-a414-2e393ec56499, tls: true, tfo: false, skip-cert-verify: false, servername: cdn-node-oss-93.paofu.de, network: ws, ws-opts: {path: /profile/telegram@ssrsub, headers: {Host: cdn-node-oss-93.paofu.de}}}
+  - {name: 🇺🇸 美国 187, server: 71.19.148.74, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: gqkUCvmeOTghYJXF1YIuk5, tfo: false}
+  - {name: 🇻🇳 越南 001, server: 103.186.155.45, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇺🇸 美国 184, server: us1-3.9966662.xyz, port: 20133, reality-opts: {public-key: GbNAnIWBHu4NRuaJsE5X1dIRLSWjmREoudx7TZltYS0, short-id: "4926f6d9" }, client-fingerprint: chrome, type: vless, uuid: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇻🇳 越南 070, server: 103.186.154.187, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇭🇰 香港 15, server: 742343-u-jv-hk2-5.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: 742343-u-jv-hk2.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 172, server: els.ylccloud.top, port: 16090, client-fingerprint: chrome, type: hysteria2, password: e9681ca4-4057-4cf9-880a-9f208cd45c8d, auth: e9681ca4-4057-4cf9-880a-9f208cd45c8d, sni: els.ylccloud.top, skip-cert-verify: false}
+  - {name: 🇨🇭 瑞士 01, server: f0ba91-20-5.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, sni: f0ba91-20.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 069, server: mf1.ylccloud.top, port: 16090, client-fingerprint: chrome, type: hysteria2, password: c86814b3-dcda-42ba-ae8f-75e9e94277bb, auth: c86814b3-dcda-42ba-ae8f-75e9e94277bb, sni: mf1.ylccloud.top, skip-cert-verify: false}
+  - {name: 🇳🇱 荷兰 20, server: pvt.moonop.tech, port: 443, client-fingerprint: chrome, type: vless, uuid: 45be1c2b-4bb1-44f4-89e4-c026ad211d04, tls: true, tfo: false, skip-cert-verify: false, servername: pvt.moonop.tech, network: ws, ws-opts: {path: /aws5, headers: {Host: pvt.moonop.tech}}}
+  - {name: 🇺🇸 美国 120, server: mg1.jjzcloud.top, port: 57238, client-fingerprint: chrome, type: hysteria2, password: 5053816f-e508-48ff-bb15-eecbc4401fd9, auth: 5053816f-e508-48ff-bb15-eecbc4401fd9, sni: mg1.jjzcloud.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 030, server: xg.jjzcloud.top, port: 57338, client-fingerprint: chrome, type: hysteria2, password: c91b3cf1-9780-4f0a-bf37-a376db8d18c9, auth: c91b3cf1-9780-4f0a-bf37-a376db8d18c9, sni: xg.jjzcloud.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 136, server: 03e37e-330-co.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: 03e37e-330-co.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 013, server: 103.186.154.75, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇻🇳 越南 091, server: vn2-1.9966662.xyz, port: 20223, reality-opts: {public-key: WWuWxGdNTeiOpHqEkrHfv4sepTP9z-09ZtK4p71o-yM, short-id: "583d93a1" }, client-fingerprint: chrome, type: vless, uuid: a24c6851-2055-42c1-9c20-2d3bad97334f, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇫🇮 芬兰 04, server: fi1-1.9966662.xyz, port: 20223, reality-opts: {public-key: 2hmTpdZk2JPHCIBM0ism_AAr9HjtnyMV9syarwvj-Q4, short-id: "587d20c4" }, client-fingerprint: chrome, type: vless, uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.cloudflare.com, network: tcp}
+  - {name: 🇳🇱 荷兰 10, server: fd0017-20-2.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, sni: fd0017-20.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 011, server: 103.186.154.232, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇻🇳 越南 075, server: 103.186.154.43, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇺🇸 美国 207, server: 6a471e-20.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: 6a471e-20.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 099, server: vnvn-u-do-vn1-2.9966661.xyz, port: 3000, client-fingerprint: chrome, type: hysteria2, password: a24c6851-2055-42c1-9c20-2d3bad97334f, auth: a24c6851-2055-42c1-9c20-2d3bad97334f, sni: vnvn-u-do-vn1.9966661.xyz, skip-cert-verify: false}
+  - {name: 🇦🇺 AU澳大利亚(yz), server: hk3.kaipi.link, port: 443, client-fingerprint: chrome, type: vless, uuid: d8665d45-8103-46e9-9cb7-8902bb7559b4, tls: true, tfo: false, skip-cert-verify: false, servername: hk3.kaipi.link, network: ws, ws-opts: {path: /texaws, headers: {Host: hk3.kaipi.link}}}
+  - {name: 🇭🇰 HK香港(yz), server: df.jieaq.xyz, port: 43731, client-fingerprint: chrome, type: vmess, uuid: ddbc6d66-a84d-4964-972e-7459ee2f0b06, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
+  - {name: 🇭🇰 HK香港(yz) 2, server: b.jieaq.xyz, port: 37442, client-fingerprint: chrome, type: vmess, uuid: ddbc6d66-a84d-4964-972e-7459ee2f0b06, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
+  - {name: 🇩🇪 DE德国(yz), server: 5.10.214.44, port: 2096, client-fingerprint: chrome, type: vless, uuid: 12345678-1234-1234-1234-123456789123, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
+  - {name: 🇫🇷 FR法国(yz), server: 2001:bc8:32d7:302::10, port: 44579, client-fingerprint: chrome, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇫🇷 FR法国(yz) 2, server: 94.140.0.141, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
   - {name: 🇬🇧 GB英国(yz), server: 188.244.122.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: e191ac99-e071-4e36-9a01-107eaf26a780, tls: true, tfo: false, skip-cert-verify: false, servername: krill.xfan01.sbs, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: krill.xfan01.sbs}}}
-  - {name: 🇺🇸 US美国(yz) 12, server: 72.167.25.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: f61a4285-7264-4d07-9408-7b9ba1922c26, tls: true, tfo: false, skip-cert-verify: false, servername: gaosir.unfeeling.sbs, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: gaosir.unfeeling.sbs}}}
-  - {name: 🇫🇷 FR法国(yz), server: 94.140.0.141, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇺🇸 US美国(yz) 13, server: 147.185.161.234, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇫🇷 FR法国(yz) 2, server: 2001:bc8:32d7:302::10, port: 44579, client-fingerprint: chrome, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 US美国(yz) 14, server: all.tellmethetrue.shop, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh24v6.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇬🇧 GB英国(yz) 2, server: 45.8.211.71, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇬🇧 GB英国(yz) 3, server: 45.8.211.86, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
   - {name: 🇯🇵 JP日本(yz), server: 156.238.19.95, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇪🇸 西班牙(yz), server: 185.251.81.96, port: 80, client-fingerprint: chrome, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560&freecodes@节点狂魔", headers: {Host: handsome-device.oneeat.co}}}
-  - {name: 🇩🇪 DE德国(yz), server: 185.135.9.223, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇺🇸 US美国(yz) 15, server: uk-02.allhubb.info, port: 8443, client-fingerprint: chrome, type: trojan, password: 6448145a43e28cc4, sni: uk-02.allhubb.info, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 16, server: 167.68.42.168, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇺🇸 US美国(yz) 17, server: pupas-shirting-unsung.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: p78naCf2EfOlRSLTX0wFVx, tfo: false}
-  - {name: 🇷🇺 RU俄罗斯(yz), server: 176.124.223.96, port: 80, client-fingerprint: chrome, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560&freecodes@节点狂魔", headers: {Host: handsome-device.oneeat.co}}}
-  - {name: 🇭🇰 HK香港(yz), server: 156.224.76.181, port: 12222, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇺🇦 乌克兰(yz), server: 31.43.179.38, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇦🇺 AU澳大利亚(yz), server: 103.133.1.227, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇺🇸 US美国(yz) 18, server: switcher-nick-croquet.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH, tfo: false}
-  - {name: 🇺🇸 US美国(yz) 19, server: 104.26.2.186, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇷🇺 俄罗斯(yz), server: 94.247.142.103, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇺🇸 US美国(yz) 20, server: 103.160.204.145, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇭🇰 HK香港(yz) 2, server: 43.128.111.158, port: 4439, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇭🇰 HK香港(yz) 3, server: 154.83.94.68, port: 58443, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇷🇺 俄罗斯(yz) 2, server: 92.53.188.32, port: 2096, client-fingerprint: chrome, type: vless, uuid: b65f4df7-f6af-42b2-877a-cef33f21675e, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
-  - {name: 🇩🇪 DE德国(yz) 2, server: 5.10.214.44, port: 2096, client-fingerprint: chrome, type: vless, uuid: 12345678-1234-1234-1234-123456789123, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
-  - {name: 🇹🇼 TW台湾(yz), server: 34.81.140.124, port: 10240, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇺🇸 US美国(yz) 21, server: narrow-passenger.oneeat.co, port: 80, client-fingerprint: chrome, type: vless, uuid: 5a12794b-2125-46d7-a748-927a989faa04, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: narrow-passenger.oneeat.co}}}
-  - {name: 🇬🇧 GB英国(yz) 2, server: 45.8.211.86, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇱🇹 立陶宛(yz), server: 183.240.179.94, port: 8080, client-fingerprint: chrome, type: vless, uuid: b1e5c3d2-7a49-4f88-8c3d-5a1e9b7c4d20, tls: false, tfo: false, skip-cert-verify: false, network: tcp}
-  - {name: 🇺🇸 US美国(yz) 22, server: 45.159.218.165, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇺🇸 US美国(yz) 23, server: wangcai194.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram@freecodes/?ed=2560", headers: {Host: wangcai194.cloudflare.182682.xyz}}}
-  - {name: 🇦🇺 AU澳大利亚(yz) 2, server: hk3.kaipi.link, port: 443, client-fingerprint: chrome, type: vless, uuid: d8665d45-8103-46e9-9cb7-8902bb7559b4, tls: true, tfo: false, skip-cert-verify: false, servername: hk3.kaipi.link, network: ws, ws-opts: {path: /texaws, headers: {Host: hk3.kaipi.link}}}
-  - {name: 🇺🇸 US美国(yz) 24, server: wangcai209.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram@freecodes/?ed=2560", headers: {Host: wangcai209.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 25, server: wangcai238.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram@freecodes/?ed=2560", headers: {Host: wangcai238.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 26, server: wangcai245.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram@freecodes/?ed=2560", headers: {Host: wangcai245.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 27, server: wangcai192.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram@freecodes/?ed=2560", headers: {Host: wangcai192.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 28, server: wangcai246.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram@freecodes/?ed=2560", headers: {Host: wangcai246.cloudflare.182682.xyz}}}
-  - {name: 🇬🇧 GB英国(yz) 3, server: 45.8.211.71, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇺🇸 US美国(yz) 29, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: a8-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /agraeabtegrrh, headers: {Host: a8-cdn.682637.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 30, server: 36.50.90.241, port: 35951, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇺🇸 US美国(yz) 31, server: fearless-change.oneeat.co, port: 80, client-fingerprint: chrome, type: vless, uuid: b055036a-2d81-4d46-ab18-4e1898b58cec, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fearless-change.oneeat.co}}}
-  - {name: 🇺🇸 US美国(yz) 32, server: wangcai215.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai215.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 33, server: wangcai201.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai201.cloudflare.182682.xyz}}}
-  - {name: 🇭🇰 HK香港(yz) 4, server: 103.115.64.38, port: 443, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇳🇱 NL荷兰(yz), server: 45.159.50.215, port: 30003, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇺🇸 US美国(yz) 34, server: wangcai217.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai217.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 35, server: wangcai231.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai231.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 36, server: wangcai230.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai230.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 37, server: wangcai202.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai202.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 38, server: wangcai209.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai209.cloudflare.182682.xyz}}}
-  - {name: 🇹🇼 TW台湾(yz) 2, server: 61.220.128.226, port: 43, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇹🇼 TW台湾(yz) 3, server: 211.75.189.101, port: 43, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇺🇸 US美国(yz) 39, server: wangcai238.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai238.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 40, server: wangcai246.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai246.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 41, server: wangcai229.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai229.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 42, server: wangcai234.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai234.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 43, server: wangcai237.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai237.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 44, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b8-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b8-cdn.682637.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 45, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: d4-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videomuaawe, headers: {Host: d4-cdn.682637.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 46, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b1-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b1-cdn.682637.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 47, server: wangcai194.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai194.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 48, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: a4-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /agraeabtegrrh, headers: {Host: a4-cdn.682637.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 49, server: wangcai245.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai245.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 50, server: wangcai192.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai192.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 51, server: switcher-nick-croquet.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm, tfo: false}
-  - {name: 🇺🇸 US美国(yz) 52, server: wangcai227.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai227.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 53, server: wangcai240.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai240.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 54, server: wangcai241.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai241.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 55, server: wangcai212.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai212.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 56, server: 147.79.20.239, port: 443, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇺🇸 US美国(yz) 57, server: wangcai247.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai247.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 58, server: wangcai254.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai254.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 59, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: d5-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videomuaawe, headers: {Host: d5-cdn.682637.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 60, server: wangcai205.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai205.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 61, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: a9-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /agraeabtegrrh, headers: {Host: a9-cdn.682637.xyz}}}
-  - {name: 🇷🇺 RU俄罗斯(yz) 2, server: 78.40.117.109, port: 37538, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: RP767jpZVarzQ0iI0vbTuA, tfo: false}
-  - {name: 🇺🇸 US美国(yz) 62, server: wangcai207.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai207.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 63, server: wangcai208.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai208.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 64, server: wangcai228.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai228.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 65, server: wangcai193.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai193.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 66, server: wangcai206.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai206.cloudflare.182682.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 67, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b6-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b6-cdn.682637.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 68, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: d3-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videomuaawe, headers: {Host: d3-cdn.682637.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 69, server: 46.62.156.154, port: 59594, client-fingerprint: chrome, type: vless, uuid: c5bcf3fb-eb77-4472-8750-55b56efef262, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 US美国(yz) 70, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b3-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b3-cdn.682637.xyz}}}
-  - {name: 🇹🇭 泰国(yz), server: 171.103.164.62, port: 30921, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇩🇪 DE德国(yz) 3, server: 5.10.214.44, port: 2096, client-fingerprint: chrome, type: vless, uuid: 12345678-1234-1234-1234-123456789123, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: "/snippets&freecodes@节点狂魔/?ed=2560", headers: {Host: kejiland.freewarp.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 71, server: 154.21.89.131, port: 8443, client-fingerprint: chrome, type: vless, uuid: 019993c8-6c4c-0095-edd8-46ba2167d424, tls: true, tfo: false, skip-cert-verify: false, servername: yy.wyhabc.ggff.net, network: ws, ws-opts: {path: "/snippets?ip=ProxyIP.Oracle.cmliussss.net&nat64=6to4", headers: {Host: yy.wyhabc.ggff.net}}}
-  - {name: 🇺🇸 US美国(yz) 72, server: 166.62.111.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: 2456f90c-5183-476d-b069-16ae74ce120f, tls: true, tfo: false, skip-cert-verify: false, servername: fast01.0860852.xyz, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: fast01.0860852.xyz}}}
-  - {name: 🇺🇸 US美国(yz) 73, server: wwwopensignalcom-goodspeed-8xx.pages.dev., port: 443, client-fingerprint: chrome, type: vless, uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9, tls: true, tfo: false, skip-cert-verify: false, servername: WwW.OPENSIgnaL.cOm.NaynaY09.dynv6.nET, network: ws, ws-opts: {path: //, headers: {Host: WwW.OPENSIgnaL.cOm.NaynaY09.dynv6.nET}}}
   - {name: 🇯🇵 JP日本(yz) 2, server: arxfw2b78fi2q9hzylhn.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: Nk9asglDzHzjktVzTkvhaA, tfo: false}
-  - {name: 🇷🇺 俄罗斯(yz) 3, server: 91.124.127.43, port: 2096, client-fingerprint: chrome, type: vless, uuid: 01997b9d-a1f7-e188-981a-c665b723cfef, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
-  - {name: 🇷🇺 俄罗斯(yz) 4, server: 46.232.108.217, port: 443, client-fingerprint: chrome, type: vless, uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a, tls: true, tfo: false, skip-cert-verify: false, servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn, network: ws, ws-opts: {path: "/snippets?ip=proxyip:port(443)", headers: {Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn}}}
-  - {name: 🇺🇸 US美国(yz) 74, server: 154.83.2.167, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇺🇸 US美国(yz) 75, server: 170.114.45.43, port: 2096, client-fingerprint: chrome, type: vless, uuid: 01997b9d-a1f7-e188-981a-c665b723cfef, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 76, server: 184.174.80.250, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇷🇺 俄罗斯(yz) 5, server: 185.59.218.43, port: 2096, client-fingerprint: chrome, type: vless, uuid: 01997b9d-a1f7-e188-981a-c665b723cfef, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
-  - {name: 🇪🇸 西班牙(yz) 2, server: 185.251.81.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: 2456f90c-5183-476d-b069-16ae74ce120f, tls: true, tfo: false, skip-cert-verify: false, servername: fast01.0860852.xyz, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: fast01.0860852.xyz}}}
-  - {name: 🇿🇦 南非(yz), server: 102.177.189.251, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
-  - {name: 🇺🇸 US美国(yz) 77, server: 92.53.188.36, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇷🇺 RU俄罗斯(yz), server: 176.124.223.96, port: 80, client-fingerprint: chrome, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560&freecodes@节点狂魔", headers: {Host: handsome-device.oneeat.co}}}
+  - {name: 🇷🇺 RU俄罗斯(yz) 2, server: 78.40.117.109, port: 37538, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: RP767jpZVarzQ0iI0vbTuA, tfo: false}
+  - {name: 🇺🇸 US美国(yz), server: all.tellmethetrue.shop, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v2.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 2, server: 69.84.182.18, port: 443, client-fingerprint: chrome, type: vless, uuid: 93d6ba39-0f7d-4961-a414-2e393ec56499, tls: true, tfo: false, skip-cert-verify: false, servername: cdn-node-oss-93.paofu.de, network: ws, ws-opts: {path: /profile/telegram@ssrsub, headers: {Host: cdn-node-oss-93.paofu.de}}}
+  - {name: 🇺🇸 US美国(yz) 3, server: 69.84.182.108, port: 443, client-fingerprint: chrome, type: vless, uuid: 93d6ba39-0f7d-4961-a414-2e393ec56499, tls: true, tfo: false, skip-cert-verify: false, servername: cdn-node-oss-93.paofu.de, network: ws, ws-opts: {path: /profile/telegram@ssrsub, headers: {Host: cdn-node-oss-93.paofu.de}}}
+  - {name: 🇺🇸 US美国(yz) 4, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b8-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b8-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 5, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b6-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b6-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 6, server: 209.94.90.32, port: 2096, client-fingerprint: chrome, type: vless, uuid: b65f4df7-f6af-42b2-877a-cef33f21675e, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 7, server: 104.26.2.186, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 8, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: d3-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videomuaawe, headers: {Host: d3-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 9, server: 103.160.204.145, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 10, server: 154.83.2.167, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 11, server: 147.185.161.234, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 12, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: a8-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /agraeabtegrrh, headers: {Host: a8-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 13, server: 167.68.42.168, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 14, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b3-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b3-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 15, server: 170.114.45.43, port: 2096, client-fingerprint: chrome, type: vless, uuid: 01997b9d-a1f7-e188-981a-c665b723cfef, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 16, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b2-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b2-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 17, server: 104.129.167.161, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 18, server: 185.59.218.168, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 19, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: d5-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videomuaawe, headers: {Host: d5-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 20, server: 45.159.218.165, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 21, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: d4-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videomuaawe, headers: {Host: d4-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 22, server: fearless-change.oneeat.co, port: 80, client-fingerprint: chrome, type: vless, uuid: b055036a-2d81-4d46-ab18-4e1898b58cec, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fearless-change.oneeat.co}}}
+  - {name: 🇺🇸 US美国(yz) 23, server: narrow-passenger.oneeat.co, port: 80, client-fingerprint: chrome, type: vless, uuid: 5a12794b-2125-46d7-a748-927a989faa04, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: narrow-passenger.oneeat.co}}}
+  - {name: 🇺🇸 US美国(yz) 24, server: wangcai228.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai228.cloudflare.182682.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 25, server: all.tellmethetrue.shop, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh24v6.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 26, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: a9-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /agraeabtegrrh, headers: {Host: a9-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 27, server: wangcai230.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai230.cloudflare.182682.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 28, server: switcher-nick-croquet.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm, tfo: false}
+  - {name: 🇺🇸 US美国(yz) 29, server: wangcai201.cloudflare.182682.xyz, port: 8880, client-fingerprint: chrome, type: vless, uuid: f64bdc57-0f54-4705-bf75-cfd646d98c06, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: wangcai201.cloudflare.182682.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 30, server: pupas-shirting-unsung.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: p78naCf2EfOlRSLTX0wFVx, tfo: false}
+  - {name: 🇺🇸 US美国(yz) 31, server: wwwopensignalcom-goodspeed-8xx.pages.dev., port: 443, client-fingerprint: chrome, type: vless, uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9, tls: true, tfo: false, skip-cert-verify: false, servername: WwW.OPENSIgnaL.cOm.NaynaY09.dynv6.nET, network: ws, ws-opts: {path: //, headers: {Host: WwW.OPENSIgnaL.cOm.NaynaY09.dynv6.nET}}}
+  - {name: 🇺🇸 US美国(yz) 32, server: switcher-nick-croquet.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH, tfo: false}
+  - {name: 🇺🇸 US美国(yz) 33, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b1-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b1-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 34, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: a4-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /agraeabtegrrh, headers: {Host: a4-cdn.682637.xyz}}}
+  - {name: 🇦🇺 AU澳大利亚(yz) 2, server: 185.207.196.41, port: 2096, client-fingerprint: chrome, type: vless, uuid: 563608cd-f135-4e64-938d-d9eb3be1ba77, tls: true, tfo: false, skip-cert-verify: false, servername: vless.keepfuck.me, network: ws, ws-opts: {path: /snippets, headers: {Host: vless.keepfuck.me}}}
+  - {name: 🇺🇸 US美国(yz) 35, server: v8.heduian.link, port: 30808, client-fingerprint: chrome, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /oooo, headers: {Host: v8.heduian.link}}}
+  - {name: 🇬🇧 GB英国(yz) 4, server: 5.10.214.44, port: 2096, client-fingerprint: chrome, type: vless, uuid: 12345678-1234-1234-1234-123456789123, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
+  - {name: 🇷🇺 俄罗斯(yz), server: 94.247.142.103, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇷🇺 俄罗斯(yz) 2, server: 185.59.218.43, port: 2096, client-fingerprint: chrome, type: vless, uuid: 01997b9d-a1f7-e188-981a-c665b723cfef, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
+  - {name: 🇷🇺 俄罗斯(yz) 3, server: 46.232.108.217, port: 443, client-fingerprint: chrome, type: vless, uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a, tls: true, tfo: false, skip-cert-verify: false, servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn, network: ws, ws-opts: {path: "/snippets?ip=proxyip:port(443)", headers: {Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn}}}
+  - {name: 🇷🇺 俄罗斯(yz) 4, server: 92.53.188.32, port: 2096, client-fingerprint: chrome, type: vless, uuid: b65f4df7-f6af-42b2-877a-cef33f21675e, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
+  - {name: 🇷🇺 俄罗斯(yz) 5, server: 91.124.127.43, port: 2096, client-fingerprint: chrome, type: vless, uuid: 01997b9d-a1f7-e188-981a-c665b723cfef, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 36, server: fearless-change.oneeat.co, port: 80, client-fingerprint: chrome, type: vless, uuid: b055036a-2d81-4d46-ab18-4e1898b58cec, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fearless-change.oneeat.co}}}
+  - {name: 🇱🇹 立陶宛(yz), server: 183.240.179.94, port: 8080, client-fingerprint: chrome, type: vless, uuid: b1e5c3d2-7a49-4f88-8c3d-5a1e9b7c4d20, tls: false, tfo: false, skip-cert-verify: false, network: tcp}
+  - {name: 🇺🇸 US美国(yz) 37, server: aio.zipzap.biz.id, port: 443, client-fingerprint: chrome, type: trojan, password: f282b878-8711-45a1-8c69-5564172123c1, sni: aio.zipzap.biz.id, skip-cert-verify: false, network: ws, ws-opts: {path: /aioproxybot/129.150.49.58-18650, headers: {Host: aio.zipzap.biz.id}}}
+  - {name: 🇺🇸 US美国(yz) 38, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: a8-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /agraeabtegrrh, headers: {Host: a8-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 39, server: 154.83.2.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: e191ac99-e071-4e36-9a01-107eaf26a780, tls: true, tfo: false, skip-cert-verify: false, servername: krill.xfan01.sbs, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: krill.xfan01.sbs}}}
+  - {name: 🇺🇸 US美国(yz) 40, server: 89.117.112.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: e191ac99-e071-4e36-9a01-107eaf26a780, tls: true, tfo: false, skip-cert-verify: false, servername: krill.xfan01.sbs, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: krill.xfan01.sbs}}}
+  - {name: 🇺🇸 US美国(yz) 41, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: d4-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videomuaawe, headers: {Host: d4-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 42, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: a9-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /agraeabtegrrh, headers: {Host: a9-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 43, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b3-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b3-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 44, server: 103.169.142.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: e191ac99-e071-4e36-9a01-107eaf26a780, tls: true, tfo: false, skip-cert-verify: false, servername: krill.xfan01.sbs, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: krill.xfan01.sbs}}}
+  - {name: 🇺🇸 US美国(yz) 45, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b8-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b8-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 46, server: 209.94.90.32, port: 2096, client-fingerprint: chrome, type: vless, uuid: b65f4df7-f6af-42b2-877a-cef33f21675e, tls: true, tfo: false, skip-cert-verify: false, servername: kejiland.freewarp.eu.org, network: ws, ws-opts: {path: /snippets, headers: {Host: kejiland.freewarp.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 47, server: 78.40.117.109, port: 37538, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: RP767jpZVarzQ0iI0vbTuA, tfo: false}
+  - {name: 🇺🇸 US美国(yz) 48, server: switcher-nick-croquet.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm, tfo: false}
+  - {name: 🇺🇸 US美国(yz) 49, server: all.tellmethetrue.shop, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], tfo: false, skip-cert-verify: false, servername: pqh29v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 50, server: all.tellmethetrue.shop, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], tfo: false, skip-cert-verify: false, servername: pqh28v8.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇺🇸 US美国(yz) 51, server: pupas-shirting-unsung.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: p78naCf2EfOlRSLTX0wFVx, tfo: false}
+  - {name: 🇺🇸 US美国(yz) 52, server: hackney-latest-strike.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: XUMTygEM1jVYIvysXKqA5T, tfo: false}
+  - {name: 🇺🇸 US美国(yz) 53, server: 108.165.152.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: e191ac99-e071-4e36-9a01-107eaf26a780, tls: true, tfo: false, skip-cert-verify: false, servername: krill.xfan01.sbs, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: krill.xfan01.sbs}}}
+  - {name: 🇺🇸 US美国(yz) 54, server: 183.240.179.94, port: 8080, client-fingerprint: chrome, type: vless, uuid: b1e5c3d2-7a49-4f88-8c3d-5a1e9b7c4d20, tls: false, tfo: false, skip-cert-verify: false, network: tcp}
+  - {name: 🇺🇸 US美国(yz) 55, server: narrow-passenger.oneeat.co, port: 80, client-fingerprint: chrome, type: vless, uuid: 5a12794b-2125-46d7-a748-927a989faa04, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: narrow-passenger.oneeat.co}}}
+  - {name: 🇺🇸 US美国(yz) 56, server: 72.167.25.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: f61a4285-7264-4d07-9408-7b9ba1922c26, tls: true, tfo: false, skip-cert-verify: false, servername: gaosir.unfeeling.sbs, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: gaosir.unfeeling.sbs}}}
+  - {name: 🇺🇸 US美国(yz) 57, server: sweet-combination.seotoolsforyou.co.uk, port: 80, client-fingerprint: chrome, type: vless, uuid: 05020a61-3c0c-4ead-b256-7851ff905a75, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: sweet-combination.seotoolsforyou.co.uk}}}
+  - {name: 🇺🇸 US美国(yz) 58, server: 46.232.108.217, port: 443, client-fingerprint: chrome, type: vless, uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a, tls: true, tfo: false, skip-cert-verify: false, servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn, network: ws, ws-opts: {path: "/snippets?ip=proxyip:port(443)", headers: {Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn}}}
+  - {name: 🇺🇸 US美国(yz) 59, server: sweet-combination.seotoolsforyou.co.uk, port: 80, client-fingerprint: chrome, type: vless, uuid: 05020a61-3c0c-4ead-b256-7851ff905a75, tls: false, tfo: false, skip-cert-verify: false, servername: sweet-combination.seotoolsforyou.co.uk, network: ws, ws-opts: {path: /, headers: {Host: sweet-combination.seotoolsforyou.co.uk}}}
+  - {name: 🇺🇸 US美国(yz) 60, server: whatismyipaddress.com, port: 80, client-fingerprint: chrome, type: vless, uuid: 18ff277a-3b9a-46a0-842e-290f2b0661d2, tls: false, tfo: false, skip-cert-verify: false, servername: hidden-base-217b.powas74490.workers.dev, network: ws, ws-opts: {path: /, headers: {Host: hidden-base-217b.powas74490.workers.dev}}}
+  - {name: 🇺🇸 US美国(yz) 61, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: a4-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /agraeabtegrrh, headers: {Host: a4-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 62, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b2-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b2-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 63, server: wwwopensignalcom-goodspeed-8xx.pages.dev., port: 443, client-fingerprint: chrome, type: vless, uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9, tls: true, tfo: false, skip-cert-verify: false, servername: WwW.OPENSIgnaL.cOm.NaynaY09.dynv6.nET, network: ws, ws-opts: {path: //, headers: {Host: WwW.OPENSIgnaL.cOm.NaynaY09.dynv6.nET}}}
+  - {name: 🇺🇸 US美国(yz) 64, server: 176.124.223.96, port: 80, client-fingerprint: chrome, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560&freecodes@节点狂魔", headers: {Host: handsome-device.oneeat.co}}}
+  - {name: 🇺🇸 US美国(yz) 65, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b1-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b1-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 66, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: d3-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videomuaawe, headers: {Host: d3-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 67, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: b6-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videommuaawe, headers: {Host: b6-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 68, server: switcher-nick-croquet.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH, tfo: false}
+  - {name: 🇺🇸 US美国(yz) 69, server: 185.159.247.36, port: 2096, client-fingerprint: chrome, type: vless, uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a, tls: true, tfo: false, skip-cert-verify: false, servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn, network: ws, ws-opts: {path: /snippets, headers: {Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn}}}
+  - {name: 🇺🇸 US美国(yz) 70, server: aio.zipzap.biz.id, port: 443, client-fingerprint: chrome, type: trojan, password: f282b878-8711-45a1-88c9-5564172123c1, sni: aio.zipzap.biz.id, skip-cert-verify: false, network: ws, ws-opts: {path: /aioproxybot/129.150.49.58-18650, headers: {Host: aio.zipzap.biz.id}}}
+  - {name: 🇺🇸 US美国(yz) 71, server: bestcdn1.682637.xyz, port: 443, client-fingerprint: chrome, type: trojan, password: ad9c84af-e5aa-43e2-88df-7cfd99d4d0a0, sni: d5-cdn.682637.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /videomuaawe, headers: {Host: d5-cdn.682637.xyz}}}
+  - {name: 🇺🇸 US美国(yz) 72, server: pvt.moonop.tech, port: 443, client-fingerprint: chrome, type: vless, uuid: 45be1c2b-4bb1-44f4-89e4-c026ad211d04, tls: true, tfo: false, skip-cert-verify: false, servername: pvt.moonop.tech, network: ws, ws-opts: {path: /aws5, headers: {Host: pvt.moonop.tech}}}
+  - {name: 🇯🇵 JP日本(yz) 3, server: arxfw2b78fi2q9hzylhn.freesocks.work, port: 443, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: Nk9asglDzHzjktVzTkvhaA, tfo: false}
+  - {name: 🇺🇦 乌克兰(yz), server: 31.43.179.38, port: 443, client-fingerprint: chrome, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], tfo: false, skip-cert-verify: false, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-service-name: /}}
+  - {name: 🇪🇸 西班牙(yz), server: 185.251.81.96, port: 80, client-fingerprint: chrome, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560&freecodes@节点狂魔", headers: {Host: handsome-device.oneeat.co}}}
+  - {name: 🇬🇧 GB英国(yz) 5, server: 188.244.122.253, port: 2096, client-fingerprint: chrome, type: vless, uuid: e191ac99-e071-4e36-9a01-107eaf26a780, tls: true, tfo: false, skip-cert-verify: false, servername: krill.xfan01.sbs, network: ws, ws-opts: {path: "/Telegram🇨🇳@WangCai2/?ed=2560", headers: {Host: krill.xfan01.sbs}}}
+  - {name: 🇬🇧 GB英国(yz) 6, server: 194.36.55.36, port: 2096, client-fingerprint: chrome, type: vless, uuid: 019931aa-8cba-3a74-6c77-cb288ae52f2a, tls: true, tfo: false, skip-cert-verify: false, servername: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn, network: ws, ws-opts: {path: /snippets, headers: {Host: 0000yhuxn8zf1sqvj1qx.x0uck1bfji4.8f25.dbhnjola4.bmj6yq1giy.ujwpeuoqhayd.pci8t1.paxljcy7c.u9v3a.a1s36uciu.2r11kwhbqtj9k5ix.neib.cn}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US_98|5.5MB/s|10%|TK-US|YT-GB|NF|GPT⁺, server: 172.67.131.76, port: 443, client-fingerprint: chrome, type: vless, uuid: afc9d688-520a-46fa-a98d-4511d1198cdd, tls: true, tfo: false, skip-cert-verify: false, servername: EEeE3.222767.xYz, network: ws, ws-opts: {path: /Bla4bwO5lnIT6TyxDFklcPSbclvX, headers: {Host: EEeE3.222767.xYz}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US_94|6.1MB/s|28%|TK-US|NF|GPT⁺, server: 172.67.187.28, port: 443, client-fingerprint: chrome, type: vless, uuid: a94fafdb-10d6-46c2-be8a-5c2e8358fbb0, tls: true, tfo: false, skip-cert-verify: false, servername: uuuuUuUuUUgGghHjU.iRAn2035.dpdNS.ORG, network: ws, ws-opts: {path: /xeg9Fvgzc4aVkracmjyiKVby2Lp, headers: {Host: uuuuUuUuUUgGghHjU.iRAn2035.dpdNS.ORG}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US_88|7.4MB/s|8%|TK-US|NF|D+|GPT⁺|GM, server: 188.114.97.3, port: 443, client-fingerprint: randomized, type: vless, uuid: f2e486f9-1697-4be6-be59-6c4fb42c7a24, tls: true, tfo: false, skip-cert-verify: false, servername: paS-kaLE-AGhA.pageS.deV, network: ws, ws-opts: {path: /, headers: {Host: paS-kaLE-AGhA.pageS.deV}}}
@@ -580,129 +526,100 @@ proxy-groups:
     type: select
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇻🇳 越南 051
-      - 🇩🇪 德国 05
-      - 🇻🇳 越南 108
-      - 🇺🇸 美国 135
-      - 🇻🇳 越南 071
-      - 🇺🇸 美国 105
-      - 🇭🇰 香港 36
-      - 🇺🇸 美国 005
-      - 🇬🇧 英国 03
-      - 🇭🇰 香港 28
-      - 🇺🇸 美国 234
-      - 🇬🇧 英国 19
-      - 🇺🇸 美国 172
-      - 🇹🇼 台湾 05
-      - 🇺🇸 美国 117
-      - 🇭🇰 香港 11
-      - 🇺🇸 美国 017
-      - 🇸🇪 瑞典 04
-      - 🇺🇸 美国 146
-      - 🇹🇷 土耳其 08
-      - 🇺🇸 美国 073
-      - 🇹🇷 土耳其 11
-      - 🇻🇳 越南 048
-      - 🇮🇹 意大利 10
-      - 🇻🇳 越南 039
-      - 🇺🇸 美国 016
-      - 🇬🇧 英国 06
-      - 🇯🇵 日本 01
-      - 🇭🇰 香港 41
-      - 🇺🇸 美国 090
-      - 🇻🇳 越南 082
-      - 🇻🇳 越南 133
-      - 🇨🇭 瑞士 03
-      - 🇳🇱 荷兰 10
-      - 🇺🇸 美国 231
-      - 前南马其顿 03
-      - 🇺🇸 美国 260
-      - 🇨🇱 智利 03
-      - 🇯🇵 日本 07
-      - 🇬🇷 希腊 08
-      - 🇻🇳 越南 004
-      - 🇵🇱 波兰 01
-      - 🇻🇳 越南 131
-      - 🇳🇱 荷兰 08
-      - 🇹🇼 台湾 07
-      - 🇺🇸 美国 247
-      - 🇺🇸 美国 027
-      - 🇻🇳 越南 081
-      - 🇺🇸 美国 050
-      - 🇯🇵 日本家宽 03
-      - 🇷🇺 俄罗斯 04
-      - 🇮🇹 意大利 11
-      - 🇺🇸 美国 058
-      - 🇺🇸 美国 169
+      - 🇺🇸 美国 128
+      - 🇺🇸 美国 194
+      - 🇺🇸 美国 160
       - 🇹🇷 土耳其 01
-      - 🇺🇸 美国 171
-      - 🇰🇿 哈萨克斯坦 01
-      - 🇧🇷 巴西 42
-      - 🇳🇱 荷兰 11
-      - 🇭🇰 香港 77
-      - 🇺🇸 美国 132
-      - 🇺🇦 乌克兰 01
-      - 🇺🇸 美国 213
-      - 🇹🇼 台湾 04
-      - 🇻🇳 越南 117
-      - 🇺🇸 美国 033
-      - 🇺🇸 美国 101
-      - 🇯🇵 日本 09
-      - 🇵🇭 菲律宾 01
-      - 🇺🇸 美国 191
-      - 🇻🇳 越南 070
-      - 🇨🇱 智利 05
-      - 🇻🇳 越南 064
-      - 🇭🇰 香港 08
-      - 🇭🇰 香港 38
-      - 🇺🇸 美国 006
-      - 🇹🇷 土耳其 15
-      - 🇺🇸 美国 103
-      - 🇭🇰 香港家宽 06
-      - 🇭🇰 香港 13
-      - 🇺🇸 美国 056
-      - 🇯🇵 日本 13
-      - 🇺🇸 美国 181
-      - 🇻🇳 越南 041
-      - 🇻🇳 越南 084
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港 10
-      - 🇬🇧 英国 09
-      - 🇺🇦 乌克兰 05
-      - 🇧🇷 巴西 07
+      - 🇫🇮 芬兰 08
+      - 🇺🇸 美国 043
       - 🇺🇸 美国 195
-      - 🇻🇳 越南 077
+      - 🇺🇸 美国 196
+      - 巴林 03
+      - 🇺🇸 美国 149
+      - 🇻🇳 越南 045
+      - 🇻🇳 越南 073
       - 🇫🇷 法国 05
-      - 🇭🇰 香港 24
-      - 🇺🇸 美国 011
-      - 🇻🇳 越南 008
-      - 🇺🇸 美国 168
-      - 🇮🇹 意大利 06
+      - 🇬🇷 希腊 04
+      - 🇫🇷 法国 03
+      - 🇺🇸 美国 014
+      - 🇺🇸 美国 081
+      - 🇻🇳 越南 009
+      - 🇻🇳 越南 039
+      - 🇻🇳 越南 017
+      - 🇮🇳 印度 09
+      - 🇻🇳 越南 059
+      - 🇺🇸 美国 116
+      - 🇺🇸 美国 041
+      - 🇯🇵 日本 07
+      - 🇺🇸 美国 098
+      - 🇺🇸 美国 134
+      - 🇫🇷 法国 04
+      - 🇹🇭 泰国 02
+      - 🇺🇸 美国 151
       - 🇳🇱 荷兰 06
+      - 🇸🇬 新加坡 12
+      - 🇺🇸 美国 011
+      - 🇻🇳 越南 089
+      - 🇺🇸 美国 061
+      - 🇧🇩 孟加拉国家宽 08
+      - 🇹🇭 泰国 03
+      - 🇸🇬 新加坡 02
+      - 🇺🇸 美国 215
+      - 🇺🇸 美国 176
+      - 🇻🇳 越南 101
+      - 🇺🇸 美国 146
+      - 🇧🇩 孟加拉国家宽 06
+      - 🇯🇵 日本 08
+      - 🇺🇸 美国 048
+      - 🇳🇱 荷兰 15
+      - 🇺🇸 美国 094
+      - 🇺🇸 美国 208
+      - 🇺🇸 美国 181
+      - 🇯🇵 日本 04
+      - 🇺🇸 美国 185
+      - 🇺🇸 美国 154
+      - 🇬🇷 希腊 06
+      - 🇺🇸 美国 102
+      - 🇺🇸 美国 178
+      - 🇳🇱 荷兰 07
+      - 🇩🇪 德国 04
+      - 🇺🇸 美国 091
+      - 🇺🇸 美国 016
+      - 🇻🇳 越南 068
+      - 🇺🇸 美国 039
+      - 🇺🇸 美国 187
+      - 🇻🇳 越南 001
+      - 🇺🇸 美国 184
+      - 🇻🇳 越南 070
+      - 🇭🇰 香港 15
+      - 🇺🇸 美国 172
+      - 🇨🇭 瑞士 01
+      - 🇺🇸 美国 069
+      - 🇳🇱 荷兰 20
       - 🇺🇸 美国 120
-      - 🇺🇸 美国 203
-      - 🇮🇹 意大利 08
-      - 🇩🇪 德国 14
-      - 🇸🇬 新加坡 03
-      - 🇹🇷 土耳其 10
-      - 🇯🇵 日本 14
-      - 🇻🇳 越南 058
-      - 🇺🇸 美国 002
-      - 🇭🇰 香港 16
-      - 🇺🇸 美国 076
-      - 🇺🇸 美国 173
-      - 🇨🇦 加拿大 01
-      - 🇺🇸 美国 095
-      - 🇻🇳 越南 019
-      - 🇺🇸 美国 013
-      - 🇬🇧 英国 22
-      - 🇻🇳 越南 018
-      - 🇮🇹 意大利 02
-      - 🇺🇸 美国 049
-      - 🇺🇸 美国 189
-      - 🇬🇧 英国 13
-      - 🇺🇸 美国 170
-      - 🇺🇸 美国 249
+      - 🇺🇸 美国 030
+      - 🇺🇸 美国 136
+      - 🇻🇳 越南 013
+      - 🇻🇳 越南 091
+      - 🇫🇮 芬兰 04
+      - 🇳🇱 荷兰 10
+      - 🇻🇳 越南 011
+      - 🇻🇳 越南 075
+      - 🇺🇸 美国 207
+      - 🇻🇳 越南 099
+      - 🇦🇺 AU澳大利亚(yz)
+      - 🇭🇰 HK香港(yz)
+      - 🇭🇰 HK香港(yz) 2
+      - 🇩🇪 DE德国(yz)
+      - 🇫🇷 FR法国(yz)
+      - 🇫🇷 FR法国(yz) 2
+      - 🇬🇧 GB英国(yz)
+      - 🇬🇧 GB英国(yz) 2
+      - 🇬🇧 GB英国(yz) 3
+      - 🇯🇵 JP日本(yz)
+      - 🇯🇵 JP日本(yz) 2
+      - 🇷🇺 RU俄罗斯(yz)
+      - 🇷🇺 RU俄罗斯(yz) 2
       - 🇺🇸 US美国(yz)
       - 🇺🇸 US美国(yz) 2
       - 🇺🇸 US美国(yz) 3
@@ -714,57 +631,41 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 9
       - 🇺🇸 US美国(yz) 10
       - 🇺🇸 US美国(yz) 11
-      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 12
-      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz) 13
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 14
-      - 🇯🇵 JP日本(yz)
-      - 🇪🇸 西班牙(yz)
-      - 🇩🇪 DE德国(yz)
       - 🇺🇸 US美国(yz) 15
       - 🇺🇸 US美国(yz) 16
       - 🇺🇸 US美国(yz) 17
-      - 🇷🇺 RU俄罗斯(yz)
-      - 🇭🇰 HK香港(yz)
-      - 🇺🇦 乌克兰(yz)
-      - 🇦🇺 AU澳大利亚(yz)
       - 🇺🇸 US美国(yz) 18
       - 🇺🇸 US美国(yz) 19
-      - 🇷🇺 俄罗斯(yz)
       - 🇺🇸 US美国(yz) 20
-      - 🇭🇰 HK香港(yz) 2
-      - 🇭🇰 HK香港(yz) 3
-      - 🇷🇺 俄罗斯(yz) 2
-      - 🇩🇪 DE德国(yz) 2
-      - 🇹🇼 TW台湾(yz)
       - 🇺🇸 US美国(yz) 21
-      - 🇬🇧 GB英国(yz) 2
-      - 🇱🇹 立陶宛(yz)
       - 🇺🇸 US美国(yz) 22
       - 🇺🇸 US美国(yz) 23
-      - 🇦🇺 AU澳大利亚(yz) 2
       - 🇺🇸 US美国(yz) 24
       - 🇺🇸 US美国(yz) 25
       - 🇺🇸 US美国(yz) 26
       - 🇺🇸 US美国(yz) 27
       - 🇺🇸 US美国(yz) 28
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 29
       - 🇺🇸 US美国(yz) 30
       - 🇺🇸 US美国(yz) 31
       - 🇺🇸 US美国(yz) 32
       - 🇺🇸 US美国(yz) 33
-      - 🇭🇰 HK香港(yz) 4
-      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz) 34
+      - 🇦🇺 AU澳大利亚(yz) 2
       - 🇺🇸 US美国(yz) 35
+      - 🇬🇧 GB英国(yz) 4
+      - 🇷🇺 俄罗斯(yz)
+      - 🇷🇺 俄罗斯(yz) 2
+      - 🇷🇺 俄罗斯(yz) 3
+      - 🇷🇺 俄罗斯(yz) 4
+      - 🇷🇺 俄罗斯(yz) 5
       - 🇺🇸 US美国(yz) 36
+      - 🇱🇹 立陶宛(yz)
       - 🇺🇸 US美国(yz) 37
       - 🇺🇸 US美国(yz) 38
-      - 🇹🇼 TW台湾(yz) 2
-      - 🇹🇼 TW台湾(yz) 3
       - 🇺🇸 US美国(yz) 39
       - 🇺🇸 US美国(yz) 40
       - 🇺🇸 US美国(yz) 41
@@ -788,7 +689,6 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 59
       - 🇺🇸 US美国(yz) 60
       - 🇺🇸 US美国(yz) 61
-      - 🇷🇺 RU俄罗斯(yz) 2
       - 🇺🇸 US美国(yz) 62
       - 🇺🇸 US美国(yz) 63
       - 🇺🇸 US美国(yz) 64
@@ -798,21 +698,13 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 68
       - 🇺🇸 US美国(yz) 69
       - 🇺🇸 US美国(yz) 70
-      - 🇹🇭 泰国(yz)
-      - 🇩🇪 DE德国(yz) 3
       - 🇺🇸 US美国(yz) 71
       - 🇺🇸 US美国(yz) 72
-      - 🇺🇸 US美国(yz) 73
-      - 🇯🇵 JP日本(yz) 2
-      - 🇷🇺 俄罗斯(yz) 3
-      - 🇷🇺 俄罗斯(yz) 4
-      - 🇺🇸 US美国(yz) 74
-      - 🇺🇸 US美国(yz) 75
-      - 🇺🇸 US美国(yz) 76
-      - 🇷🇺 俄罗斯(yz) 5
-      - 🇪🇸 西班牙(yz) 2
-      - 🇿🇦 南非(yz)
-      - 🇺🇸 US美国(yz) 77
+      - 🇯🇵 JP日本(yz) 3
+      - 🇺🇦 乌克兰(yz)
+      - 🇪🇸 西班牙(yz)
+      - 🇬🇧 GB英国(yz) 5
+      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 www.85la.com🇺🇸US_98|5.5MB/s|10%|TK-US|YT-GB|NF|GPT⁺
       - 🇺🇸 www.85la.com🇺🇸US_94|6.1MB/s|28%|TK-US|NF|GPT⁺
       - 🇺🇸 www.85la.com🇺🇸US_88|7.4MB/s|8%|TK-US|NF|D+|GPT⁺|GM
@@ -1131,129 +1023,100 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇻🇳 越南 051
-      - 🇩🇪 德国 05
-      - 🇻🇳 越南 108
-      - 🇺🇸 美国 135
-      - 🇻🇳 越南 071
-      - 🇺🇸 美国 105
-      - 🇭🇰 香港 36
-      - 🇺🇸 美国 005
-      - 🇬🇧 英国 03
-      - 🇭🇰 香港 28
-      - 🇺🇸 美国 234
-      - 🇬🇧 英国 19
-      - 🇺🇸 美国 172
-      - 🇹🇼 台湾 05
-      - 🇺🇸 美国 117
-      - 🇭🇰 香港 11
-      - 🇺🇸 美国 017
-      - 🇸🇪 瑞典 04
-      - 🇺🇸 美国 146
-      - 🇹🇷 土耳其 08
-      - 🇺🇸 美国 073
-      - 🇹🇷 土耳其 11
-      - 🇻🇳 越南 048
-      - 🇮🇹 意大利 10
-      - 🇻🇳 越南 039
-      - 🇺🇸 美国 016
-      - 🇬🇧 英国 06
-      - 🇯🇵 日本 01
-      - 🇭🇰 香港 41
-      - 🇺🇸 美国 090
-      - 🇻🇳 越南 082
-      - 🇻🇳 越南 133
-      - 🇨🇭 瑞士 03
-      - 🇳🇱 荷兰 10
-      - 🇺🇸 美国 231
-      - 前南马其顿 03
-      - 🇺🇸 美国 260
-      - 🇨🇱 智利 03
-      - 🇯🇵 日本 07
-      - 🇬🇷 希腊 08
-      - 🇻🇳 越南 004
-      - 🇵🇱 波兰 01
-      - 🇻🇳 越南 131
-      - 🇳🇱 荷兰 08
-      - 🇹🇼 台湾 07
-      - 🇺🇸 美国 247
-      - 🇺🇸 美国 027
-      - 🇻🇳 越南 081
-      - 🇺🇸 美国 050
-      - 🇯🇵 日本家宽 03
-      - 🇷🇺 俄罗斯 04
-      - 🇮🇹 意大利 11
-      - 🇺🇸 美国 058
-      - 🇺🇸 美国 169
+      - 🇺🇸 美国 128
+      - 🇺🇸 美国 194
+      - 🇺🇸 美国 160
       - 🇹🇷 土耳其 01
-      - 🇺🇸 美国 171
-      - 🇰🇿 哈萨克斯坦 01
-      - 🇧🇷 巴西 42
-      - 🇳🇱 荷兰 11
-      - 🇭🇰 香港 77
-      - 🇺🇸 美国 132
-      - 🇺🇦 乌克兰 01
-      - 🇺🇸 美国 213
-      - 🇹🇼 台湾 04
-      - 🇻🇳 越南 117
-      - 🇺🇸 美国 033
-      - 🇺🇸 美国 101
-      - 🇯🇵 日本 09
-      - 🇵🇭 菲律宾 01
-      - 🇺🇸 美国 191
-      - 🇻🇳 越南 070
-      - 🇨🇱 智利 05
-      - 🇻🇳 越南 064
-      - 🇭🇰 香港 08
-      - 🇭🇰 香港 38
-      - 🇺🇸 美国 006
-      - 🇹🇷 土耳其 15
-      - 🇺🇸 美国 103
-      - 🇭🇰 香港家宽 06
-      - 🇭🇰 香港 13
-      - 🇺🇸 美国 056
-      - 🇯🇵 日本 13
-      - 🇺🇸 美国 181
-      - 🇻🇳 越南 041
-      - 🇻🇳 越南 084
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港 10
-      - 🇬🇧 英国 09
-      - 🇺🇦 乌克兰 05
-      - 🇧🇷 巴西 07
+      - 🇫🇮 芬兰 08
+      - 🇺🇸 美国 043
       - 🇺🇸 美国 195
-      - 🇻🇳 越南 077
+      - 🇺🇸 美国 196
+      - 巴林 03
+      - 🇺🇸 美国 149
+      - 🇻🇳 越南 045
+      - 🇻🇳 越南 073
       - 🇫🇷 法国 05
-      - 🇭🇰 香港 24
-      - 🇺🇸 美国 011
-      - 🇻🇳 越南 008
-      - 🇺🇸 美国 168
-      - 🇮🇹 意大利 06
+      - 🇬🇷 希腊 04
+      - 🇫🇷 法国 03
+      - 🇺🇸 美国 014
+      - 🇺🇸 美国 081
+      - 🇻🇳 越南 009
+      - 🇻🇳 越南 039
+      - 🇻🇳 越南 017
+      - 🇮🇳 印度 09
+      - 🇻🇳 越南 059
+      - 🇺🇸 美国 116
+      - 🇺🇸 美国 041
+      - 🇯🇵 日本 07
+      - 🇺🇸 美国 098
+      - 🇺🇸 美国 134
+      - 🇫🇷 法国 04
+      - 🇹🇭 泰国 02
+      - 🇺🇸 美国 151
       - 🇳🇱 荷兰 06
+      - 🇸🇬 新加坡 12
+      - 🇺🇸 美国 011
+      - 🇻🇳 越南 089
+      - 🇺🇸 美国 061
+      - 🇧🇩 孟加拉国家宽 08
+      - 🇹🇭 泰国 03
+      - 🇸🇬 新加坡 02
+      - 🇺🇸 美国 215
+      - 🇺🇸 美国 176
+      - 🇻🇳 越南 101
+      - 🇺🇸 美国 146
+      - 🇧🇩 孟加拉国家宽 06
+      - 🇯🇵 日本 08
+      - 🇺🇸 美国 048
+      - 🇳🇱 荷兰 15
+      - 🇺🇸 美国 094
+      - 🇺🇸 美国 208
+      - 🇺🇸 美国 181
+      - 🇯🇵 日本 04
+      - 🇺🇸 美国 185
+      - 🇺🇸 美国 154
+      - 🇬🇷 希腊 06
+      - 🇺🇸 美国 102
+      - 🇺🇸 美国 178
+      - 🇳🇱 荷兰 07
+      - 🇩🇪 德国 04
+      - 🇺🇸 美国 091
+      - 🇺🇸 美国 016
+      - 🇻🇳 越南 068
+      - 🇺🇸 美国 039
+      - 🇺🇸 美国 187
+      - 🇻🇳 越南 001
+      - 🇺🇸 美国 184
+      - 🇻🇳 越南 070
+      - 🇭🇰 香港 15
+      - 🇺🇸 美国 172
+      - 🇨🇭 瑞士 01
+      - 🇺🇸 美国 069
+      - 🇳🇱 荷兰 20
       - 🇺🇸 美国 120
-      - 🇺🇸 美国 203
-      - 🇮🇹 意大利 08
-      - 🇩🇪 德国 14
-      - 🇸🇬 新加坡 03
-      - 🇹🇷 土耳其 10
-      - 🇯🇵 日本 14
-      - 🇻🇳 越南 058
-      - 🇺🇸 美国 002
-      - 🇭🇰 香港 16
-      - 🇺🇸 美国 076
-      - 🇺🇸 美国 173
-      - 🇨🇦 加拿大 01
-      - 🇺🇸 美国 095
-      - 🇻🇳 越南 019
-      - 🇺🇸 美国 013
-      - 🇬🇧 英国 22
-      - 🇻🇳 越南 018
-      - 🇮🇹 意大利 02
-      - 🇺🇸 美国 049
-      - 🇺🇸 美国 189
-      - 🇬🇧 英国 13
-      - 🇺🇸 美国 170
-      - 🇺🇸 美国 249
+      - 🇺🇸 美国 030
+      - 🇺🇸 美国 136
+      - 🇻🇳 越南 013
+      - 🇻🇳 越南 091
+      - 🇫🇮 芬兰 04
+      - 🇳🇱 荷兰 10
+      - 🇻🇳 越南 011
+      - 🇻🇳 越南 075
+      - 🇺🇸 美国 207
+      - 🇻🇳 越南 099
+      - 🇦🇺 AU澳大利亚(yz)
+      - 🇭🇰 HK香港(yz)
+      - 🇭🇰 HK香港(yz) 2
+      - 🇩🇪 DE德国(yz)
+      - 🇫🇷 FR法国(yz)
+      - 🇫🇷 FR法国(yz) 2
+      - 🇬🇧 GB英国(yz)
+      - 🇬🇧 GB英国(yz) 2
+      - 🇬🇧 GB英国(yz) 3
+      - 🇯🇵 JP日本(yz)
+      - 🇯🇵 JP日本(yz) 2
+      - 🇷🇺 RU俄罗斯(yz)
+      - 🇷🇺 RU俄罗斯(yz) 2
       - 🇺🇸 US美国(yz)
       - 🇺🇸 US美国(yz) 2
       - 🇺🇸 US美国(yz) 3
@@ -1265,57 +1128,41 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 9
       - 🇺🇸 US美国(yz) 10
       - 🇺🇸 US美国(yz) 11
-      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 12
-      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz) 13
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 14
-      - 🇯🇵 JP日本(yz)
-      - 🇪🇸 西班牙(yz)
-      - 🇩🇪 DE德国(yz)
       - 🇺🇸 US美国(yz) 15
       - 🇺🇸 US美国(yz) 16
       - 🇺🇸 US美国(yz) 17
-      - 🇷🇺 RU俄罗斯(yz)
-      - 🇭🇰 HK香港(yz)
-      - 🇺🇦 乌克兰(yz)
-      - 🇦🇺 AU澳大利亚(yz)
       - 🇺🇸 US美国(yz) 18
       - 🇺🇸 US美国(yz) 19
-      - 🇷🇺 俄罗斯(yz)
       - 🇺🇸 US美国(yz) 20
-      - 🇭🇰 HK香港(yz) 2
-      - 🇭🇰 HK香港(yz) 3
-      - 🇷🇺 俄罗斯(yz) 2
-      - 🇩🇪 DE德国(yz) 2
-      - 🇹🇼 TW台湾(yz)
       - 🇺🇸 US美国(yz) 21
-      - 🇬🇧 GB英国(yz) 2
-      - 🇱🇹 立陶宛(yz)
       - 🇺🇸 US美国(yz) 22
       - 🇺🇸 US美国(yz) 23
-      - 🇦🇺 AU澳大利亚(yz) 2
       - 🇺🇸 US美国(yz) 24
       - 🇺🇸 US美国(yz) 25
       - 🇺🇸 US美国(yz) 26
       - 🇺🇸 US美国(yz) 27
       - 🇺🇸 US美国(yz) 28
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 29
       - 🇺🇸 US美国(yz) 30
       - 🇺🇸 US美国(yz) 31
       - 🇺🇸 US美国(yz) 32
       - 🇺🇸 US美国(yz) 33
-      - 🇭🇰 HK香港(yz) 4
-      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz) 34
+      - 🇦🇺 AU澳大利亚(yz) 2
       - 🇺🇸 US美国(yz) 35
+      - 🇬🇧 GB英国(yz) 4
+      - 🇷🇺 俄罗斯(yz)
+      - 🇷🇺 俄罗斯(yz) 2
+      - 🇷🇺 俄罗斯(yz) 3
+      - 🇷🇺 俄罗斯(yz) 4
+      - 🇷🇺 俄罗斯(yz) 5
       - 🇺🇸 US美国(yz) 36
+      - 🇱🇹 立陶宛(yz)
       - 🇺🇸 US美国(yz) 37
       - 🇺🇸 US美国(yz) 38
-      - 🇹🇼 TW台湾(yz) 2
-      - 🇹🇼 TW台湾(yz) 3
       - 🇺🇸 US美国(yz) 39
       - 🇺🇸 US美国(yz) 40
       - 🇺🇸 US美国(yz) 41
@@ -1339,7 +1186,6 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 59
       - 🇺🇸 US美国(yz) 60
       - 🇺🇸 US美国(yz) 61
-      - 🇷🇺 RU俄罗斯(yz) 2
       - 🇺🇸 US美国(yz) 62
       - 🇺🇸 US美国(yz) 63
       - 🇺🇸 US美国(yz) 64
@@ -1349,21 +1195,13 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 68
       - 🇺🇸 US美国(yz) 69
       - 🇺🇸 US美国(yz) 70
-      - 🇹🇭 泰国(yz)
-      - 🇩🇪 DE德国(yz) 3
       - 🇺🇸 US美国(yz) 71
       - 🇺🇸 US美国(yz) 72
-      - 🇺🇸 US美国(yz) 73
-      - 🇯🇵 JP日本(yz) 2
-      - 🇷🇺 俄罗斯(yz) 3
-      - 🇷🇺 俄罗斯(yz) 4
-      - 🇺🇸 US美国(yz) 74
-      - 🇺🇸 US美国(yz) 75
-      - 🇺🇸 US美国(yz) 76
-      - 🇷🇺 俄罗斯(yz) 5
-      - 🇪🇸 西班牙(yz) 2
-      - 🇿🇦 南非(yz)
-      - 🇺🇸 US美国(yz) 77
+      - 🇯🇵 JP日本(yz) 3
+      - 🇺🇦 乌克兰(yz)
+      - 🇪🇸 西班牙(yz)
+      - 🇬🇧 GB英国(yz) 5
+      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 www.85la.com🇺🇸US_98|5.5MB/s|10%|TK-US|YT-GB|NF|GPT⁺
       - 🇺🇸 www.85la.com🇺🇸US_94|6.1MB/s|28%|TK-US|NF|GPT⁺
       - 🇺🇸 www.85la.com🇺🇸US_88|7.4MB/s|8%|TK-US|NF|D+|GPT⁺|GM
@@ -1682,129 +1520,100 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇻🇳 越南 051
-      - 🇩🇪 德国 05
-      - 🇻🇳 越南 108
-      - 🇺🇸 美国 135
-      - 🇻🇳 越南 071
-      - 🇺🇸 美国 105
-      - 🇭🇰 香港 36
-      - 🇺🇸 美国 005
-      - 🇬🇧 英国 03
-      - 🇭🇰 香港 28
-      - 🇺🇸 美国 234
-      - 🇬🇧 英国 19
-      - 🇺🇸 美国 172
-      - 🇹🇼 台湾 05
-      - 🇺🇸 美国 117
-      - 🇭🇰 香港 11
-      - 🇺🇸 美国 017
-      - 🇸🇪 瑞典 04
-      - 🇺🇸 美国 146
-      - 🇹🇷 土耳其 08
-      - 🇺🇸 美国 073
-      - 🇹🇷 土耳其 11
-      - 🇻🇳 越南 048
-      - 🇮🇹 意大利 10
-      - 🇻🇳 越南 039
-      - 🇺🇸 美国 016
-      - 🇬🇧 英国 06
-      - 🇯🇵 日本 01
-      - 🇭🇰 香港 41
-      - 🇺🇸 美国 090
-      - 🇻🇳 越南 082
-      - 🇻🇳 越南 133
-      - 🇨🇭 瑞士 03
-      - 🇳🇱 荷兰 10
-      - 🇺🇸 美国 231
-      - 前南马其顿 03
-      - 🇺🇸 美国 260
-      - 🇨🇱 智利 03
-      - 🇯🇵 日本 07
-      - 🇬🇷 希腊 08
-      - 🇻🇳 越南 004
-      - 🇵🇱 波兰 01
-      - 🇻🇳 越南 131
-      - 🇳🇱 荷兰 08
-      - 🇹🇼 台湾 07
-      - 🇺🇸 美国 247
-      - 🇺🇸 美国 027
-      - 🇻🇳 越南 081
-      - 🇺🇸 美国 050
-      - 🇯🇵 日本家宽 03
-      - 🇷🇺 俄罗斯 04
-      - 🇮🇹 意大利 11
-      - 🇺🇸 美国 058
-      - 🇺🇸 美国 169
+      - 🇺🇸 美国 128
+      - 🇺🇸 美国 194
+      - 🇺🇸 美国 160
       - 🇹🇷 土耳其 01
-      - 🇺🇸 美国 171
-      - 🇰🇿 哈萨克斯坦 01
-      - 🇧🇷 巴西 42
-      - 🇳🇱 荷兰 11
-      - 🇭🇰 香港 77
-      - 🇺🇸 美国 132
-      - 🇺🇦 乌克兰 01
-      - 🇺🇸 美国 213
-      - 🇹🇼 台湾 04
-      - 🇻🇳 越南 117
-      - 🇺🇸 美国 033
-      - 🇺🇸 美国 101
-      - 🇯🇵 日本 09
-      - 🇵🇭 菲律宾 01
-      - 🇺🇸 美国 191
-      - 🇻🇳 越南 070
-      - 🇨🇱 智利 05
-      - 🇻🇳 越南 064
-      - 🇭🇰 香港 08
-      - 🇭🇰 香港 38
-      - 🇺🇸 美国 006
-      - 🇹🇷 土耳其 15
-      - 🇺🇸 美国 103
-      - 🇭🇰 香港家宽 06
-      - 🇭🇰 香港 13
-      - 🇺🇸 美国 056
-      - 🇯🇵 日本 13
-      - 🇺🇸 美国 181
-      - 🇻🇳 越南 041
-      - 🇻🇳 越南 084
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港 10
-      - 🇬🇧 英国 09
-      - 🇺🇦 乌克兰 05
-      - 🇧🇷 巴西 07
+      - 🇫🇮 芬兰 08
+      - 🇺🇸 美国 043
       - 🇺🇸 美国 195
-      - 🇻🇳 越南 077
+      - 🇺🇸 美国 196
+      - 巴林 03
+      - 🇺🇸 美国 149
+      - 🇻🇳 越南 045
+      - 🇻🇳 越南 073
       - 🇫🇷 法国 05
-      - 🇭🇰 香港 24
-      - 🇺🇸 美国 011
-      - 🇻🇳 越南 008
-      - 🇺🇸 美国 168
-      - 🇮🇹 意大利 06
+      - 🇬🇷 希腊 04
+      - 🇫🇷 法国 03
+      - 🇺🇸 美国 014
+      - 🇺🇸 美国 081
+      - 🇻🇳 越南 009
+      - 🇻🇳 越南 039
+      - 🇻🇳 越南 017
+      - 🇮🇳 印度 09
+      - 🇻🇳 越南 059
+      - 🇺🇸 美国 116
+      - 🇺🇸 美国 041
+      - 🇯🇵 日本 07
+      - 🇺🇸 美国 098
+      - 🇺🇸 美国 134
+      - 🇫🇷 法国 04
+      - 🇹🇭 泰国 02
+      - 🇺🇸 美国 151
       - 🇳🇱 荷兰 06
+      - 🇸🇬 新加坡 12
+      - 🇺🇸 美国 011
+      - 🇻🇳 越南 089
+      - 🇺🇸 美国 061
+      - 🇧🇩 孟加拉国家宽 08
+      - 🇹🇭 泰国 03
+      - 🇸🇬 新加坡 02
+      - 🇺🇸 美国 215
+      - 🇺🇸 美国 176
+      - 🇻🇳 越南 101
+      - 🇺🇸 美国 146
+      - 🇧🇩 孟加拉国家宽 06
+      - 🇯🇵 日本 08
+      - 🇺🇸 美国 048
+      - 🇳🇱 荷兰 15
+      - 🇺🇸 美国 094
+      - 🇺🇸 美国 208
+      - 🇺🇸 美国 181
+      - 🇯🇵 日本 04
+      - 🇺🇸 美国 185
+      - 🇺🇸 美国 154
+      - 🇬🇷 希腊 06
+      - 🇺🇸 美国 102
+      - 🇺🇸 美国 178
+      - 🇳🇱 荷兰 07
+      - 🇩🇪 德国 04
+      - 🇺🇸 美国 091
+      - 🇺🇸 美国 016
+      - 🇻🇳 越南 068
+      - 🇺🇸 美国 039
+      - 🇺🇸 美国 187
+      - 🇻🇳 越南 001
+      - 🇺🇸 美国 184
+      - 🇻🇳 越南 070
+      - 🇭🇰 香港 15
+      - 🇺🇸 美国 172
+      - 🇨🇭 瑞士 01
+      - 🇺🇸 美国 069
+      - 🇳🇱 荷兰 20
       - 🇺🇸 美国 120
-      - 🇺🇸 美国 203
-      - 🇮🇹 意大利 08
-      - 🇩🇪 德国 14
-      - 🇸🇬 新加坡 03
-      - 🇹🇷 土耳其 10
-      - 🇯🇵 日本 14
-      - 🇻🇳 越南 058
-      - 🇺🇸 美国 002
-      - 🇭🇰 香港 16
-      - 🇺🇸 美国 076
-      - 🇺🇸 美国 173
-      - 🇨🇦 加拿大 01
-      - 🇺🇸 美国 095
-      - 🇻🇳 越南 019
-      - 🇺🇸 美国 013
-      - 🇬🇧 英国 22
-      - 🇻🇳 越南 018
-      - 🇮🇹 意大利 02
-      - 🇺🇸 美国 049
-      - 🇺🇸 美国 189
-      - 🇬🇧 英国 13
-      - 🇺🇸 美国 170
-      - 🇺🇸 美国 249
+      - 🇺🇸 美国 030
+      - 🇺🇸 美国 136
+      - 🇻🇳 越南 013
+      - 🇻🇳 越南 091
+      - 🇫🇮 芬兰 04
+      - 🇳🇱 荷兰 10
+      - 🇻🇳 越南 011
+      - 🇻🇳 越南 075
+      - 🇺🇸 美国 207
+      - 🇻🇳 越南 099
+      - 🇦🇺 AU澳大利亚(yz)
+      - 🇭🇰 HK香港(yz)
+      - 🇭🇰 HK香港(yz) 2
+      - 🇩🇪 DE德国(yz)
+      - 🇫🇷 FR法国(yz)
+      - 🇫🇷 FR法国(yz) 2
+      - 🇬🇧 GB英国(yz)
+      - 🇬🇧 GB英国(yz) 2
+      - 🇬🇧 GB英国(yz) 3
+      - 🇯🇵 JP日本(yz)
+      - 🇯🇵 JP日本(yz) 2
+      - 🇷🇺 RU俄罗斯(yz)
+      - 🇷🇺 RU俄罗斯(yz) 2
       - 🇺🇸 US美国(yz)
       - 🇺🇸 US美国(yz) 2
       - 🇺🇸 US美国(yz) 3
@@ -1816,57 +1625,41 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 9
       - 🇺🇸 US美国(yz) 10
       - 🇺🇸 US美国(yz) 11
-      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 12
-      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz) 13
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 14
-      - 🇯🇵 JP日本(yz)
-      - 🇪🇸 西班牙(yz)
-      - 🇩🇪 DE德国(yz)
       - 🇺🇸 US美国(yz) 15
       - 🇺🇸 US美国(yz) 16
       - 🇺🇸 US美国(yz) 17
-      - 🇷🇺 RU俄罗斯(yz)
-      - 🇭🇰 HK香港(yz)
-      - 🇺🇦 乌克兰(yz)
-      - 🇦🇺 AU澳大利亚(yz)
       - 🇺🇸 US美国(yz) 18
       - 🇺🇸 US美国(yz) 19
-      - 🇷🇺 俄罗斯(yz)
       - 🇺🇸 US美国(yz) 20
-      - 🇭🇰 HK香港(yz) 2
-      - 🇭🇰 HK香港(yz) 3
-      - 🇷🇺 俄罗斯(yz) 2
-      - 🇩🇪 DE德国(yz) 2
-      - 🇹🇼 TW台湾(yz)
       - 🇺🇸 US美国(yz) 21
-      - 🇬🇧 GB英国(yz) 2
-      - 🇱🇹 立陶宛(yz)
       - 🇺🇸 US美国(yz) 22
       - 🇺🇸 US美国(yz) 23
-      - 🇦🇺 AU澳大利亚(yz) 2
       - 🇺🇸 US美国(yz) 24
       - 🇺🇸 US美国(yz) 25
       - 🇺🇸 US美国(yz) 26
       - 🇺🇸 US美国(yz) 27
       - 🇺🇸 US美国(yz) 28
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 29
       - 🇺🇸 US美国(yz) 30
       - 🇺🇸 US美国(yz) 31
       - 🇺🇸 US美国(yz) 32
       - 🇺🇸 US美国(yz) 33
-      - 🇭🇰 HK香港(yz) 4
-      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz) 34
+      - 🇦🇺 AU澳大利亚(yz) 2
       - 🇺🇸 US美国(yz) 35
+      - 🇬🇧 GB英国(yz) 4
+      - 🇷🇺 俄罗斯(yz)
+      - 🇷🇺 俄罗斯(yz) 2
+      - 🇷🇺 俄罗斯(yz) 3
+      - 🇷🇺 俄罗斯(yz) 4
+      - 🇷🇺 俄罗斯(yz) 5
       - 🇺🇸 US美国(yz) 36
+      - 🇱🇹 立陶宛(yz)
       - 🇺🇸 US美国(yz) 37
       - 🇺🇸 US美国(yz) 38
-      - 🇹🇼 TW台湾(yz) 2
-      - 🇹🇼 TW台湾(yz) 3
       - 🇺🇸 US美国(yz) 39
       - 🇺🇸 US美国(yz) 40
       - 🇺🇸 US美国(yz) 41
@@ -1890,7 +1683,6 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 59
       - 🇺🇸 US美国(yz) 60
       - 🇺🇸 US美国(yz) 61
-      - 🇷🇺 RU俄罗斯(yz) 2
       - 🇺🇸 US美国(yz) 62
       - 🇺🇸 US美国(yz) 63
       - 🇺🇸 US美国(yz) 64
@@ -1900,21 +1692,13 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 68
       - 🇺🇸 US美国(yz) 69
       - 🇺🇸 US美国(yz) 70
-      - 🇹🇭 泰国(yz)
-      - 🇩🇪 DE德国(yz) 3
       - 🇺🇸 US美国(yz) 71
       - 🇺🇸 US美国(yz) 72
-      - 🇺🇸 US美国(yz) 73
-      - 🇯🇵 JP日本(yz) 2
-      - 🇷🇺 俄罗斯(yz) 3
-      - 🇷🇺 俄罗斯(yz) 4
-      - 🇺🇸 US美国(yz) 74
-      - 🇺🇸 US美国(yz) 75
-      - 🇺🇸 US美国(yz) 76
-      - 🇷🇺 俄罗斯(yz) 5
-      - 🇪🇸 西班牙(yz) 2
-      - 🇿🇦 南非(yz)
-      - 🇺🇸 US美国(yz) 77
+      - 🇯🇵 JP日本(yz) 3
+      - 🇺🇦 乌克兰(yz)
+      - 🇪🇸 西班牙(yz)
+      - 🇬🇧 GB英国(yz) 5
+      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 www.85la.com🇺🇸US_98|5.5MB/s|10%|TK-US|YT-GB|NF|GPT⁺
       - 🇺🇸 www.85la.com🇺🇸US_94|6.1MB/s|28%|TK-US|NF|GPT⁺
       - 🇺🇸 www.85la.com🇺🇸US_88|7.4MB/s|8%|TK-US|NF|D+|GPT⁺|GM
@@ -2234,129 +2018,100 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇻🇳 越南 051
-      - 🇩🇪 德国 05
-      - 🇻🇳 越南 108
-      - 🇺🇸 美国 135
-      - 🇻🇳 越南 071
-      - 🇺🇸 美国 105
-      - 🇭🇰 香港 36
-      - 🇺🇸 美国 005
-      - 🇬🇧 英国 03
-      - 🇭🇰 香港 28
-      - 🇺🇸 美国 234
-      - 🇬🇧 英国 19
-      - 🇺🇸 美国 172
-      - 🇹🇼 台湾 05
-      - 🇺🇸 美国 117
-      - 🇭🇰 香港 11
-      - 🇺🇸 美国 017
-      - 🇸🇪 瑞典 04
-      - 🇺🇸 美国 146
-      - 🇹🇷 土耳其 08
-      - 🇺🇸 美国 073
-      - 🇹🇷 土耳其 11
-      - 🇻🇳 越南 048
-      - 🇮🇹 意大利 10
-      - 🇻🇳 越南 039
-      - 🇺🇸 美国 016
-      - 🇬🇧 英国 06
-      - 🇯🇵 日本 01
-      - 🇭🇰 香港 41
-      - 🇺🇸 美国 090
-      - 🇻🇳 越南 082
-      - 🇻🇳 越南 133
-      - 🇨🇭 瑞士 03
-      - 🇳🇱 荷兰 10
-      - 🇺🇸 美国 231
-      - 前南马其顿 03
-      - 🇺🇸 美国 260
-      - 🇨🇱 智利 03
-      - 🇯🇵 日本 07
-      - 🇬🇷 希腊 08
-      - 🇻🇳 越南 004
-      - 🇵🇱 波兰 01
-      - 🇻🇳 越南 131
-      - 🇳🇱 荷兰 08
-      - 🇹🇼 台湾 07
-      - 🇺🇸 美国 247
-      - 🇺🇸 美国 027
-      - 🇻🇳 越南 081
-      - 🇺🇸 美国 050
-      - 🇯🇵 日本家宽 03
-      - 🇷🇺 俄罗斯 04
-      - 🇮🇹 意大利 11
-      - 🇺🇸 美国 058
-      - 🇺🇸 美国 169
+      - 🇺🇸 美国 128
+      - 🇺🇸 美国 194
+      - 🇺🇸 美国 160
       - 🇹🇷 土耳其 01
-      - 🇺🇸 美国 171
-      - 🇰🇿 哈萨克斯坦 01
-      - 🇧🇷 巴西 42
-      - 🇳🇱 荷兰 11
-      - 🇭🇰 香港 77
-      - 🇺🇸 美国 132
-      - 🇺🇦 乌克兰 01
-      - 🇺🇸 美国 213
-      - 🇹🇼 台湾 04
-      - 🇻🇳 越南 117
-      - 🇺🇸 美国 033
-      - 🇺🇸 美国 101
-      - 🇯🇵 日本 09
-      - 🇵🇭 菲律宾 01
-      - 🇺🇸 美国 191
-      - 🇻🇳 越南 070
-      - 🇨🇱 智利 05
-      - 🇻🇳 越南 064
-      - 🇭🇰 香港 08
-      - 🇭🇰 香港 38
-      - 🇺🇸 美国 006
-      - 🇹🇷 土耳其 15
-      - 🇺🇸 美国 103
-      - 🇭🇰 香港家宽 06
-      - 🇭🇰 香港 13
-      - 🇺🇸 美国 056
-      - 🇯🇵 日本 13
-      - 🇺🇸 美国 181
-      - 🇻🇳 越南 041
-      - 🇻🇳 越南 084
-      - 🇺🇸 美国 001
-      - 🇭🇰 香港 10
-      - 🇬🇧 英国 09
-      - 🇺🇦 乌克兰 05
-      - 🇧🇷 巴西 07
+      - 🇫🇮 芬兰 08
+      - 🇺🇸 美国 043
       - 🇺🇸 美国 195
-      - 🇻🇳 越南 077
+      - 🇺🇸 美国 196
+      - 巴林 03
+      - 🇺🇸 美国 149
+      - 🇻🇳 越南 045
+      - 🇻🇳 越南 073
       - 🇫🇷 法国 05
-      - 🇭🇰 香港 24
-      - 🇺🇸 美国 011
-      - 🇻🇳 越南 008
-      - 🇺🇸 美国 168
-      - 🇮🇹 意大利 06
+      - 🇬🇷 希腊 04
+      - 🇫🇷 法国 03
+      - 🇺🇸 美国 014
+      - 🇺🇸 美国 081
+      - 🇻🇳 越南 009
+      - 🇻🇳 越南 039
+      - 🇻🇳 越南 017
+      - 🇮🇳 印度 09
+      - 🇻🇳 越南 059
+      - 🇺🇸 美国 116
+      - 🇺🇸 美国 041
+      - 🇯🇵 日本 07
+      - 🇺🇸 美国 098
+      - 🇺🇸 美国 134
+      - 🇫🇷 法国 04
+      - 🇹🇭 泰国 02
+      - 🇺🇸 美国 151
       - 🇳🇱 荷兰 06
+      - 🇸🇬 新加坡 12
+      - 🇺🇸 美国 011
+      - 🇻🇳 越南 089
+      - 🇺🇸 美国 061
+      - 🇧🇩 孟加拉国家宽 08
+      - 🇹🇭 泰国 03
+      - 🇸🇬 新加坡 02
+      - 🇺🇸 美国 215
+      - 🇺🇸 美国 176
+      - 🇻🇳 越南 101
+      - 🇺🇸 美国 146
+      - 🇧🇩 孟加拉国家宽 06
+      - 🇯🇵 日本 08
+      - 🇺🇸 美国 048
+      - 🇳🇱 荷兰 15
+      - 🇺🇸 美国 094
+      - 🇺🇸 美国 208
+      - 🇺🇸 美国 181
+      - 🇯🇵 日本 04
+      - 🇺🇸 美国 185
+      - 🇺🇸 美国 154
+      - 🇬🇷 希腊 06
+      - 🇺🇸 美国 102
+      - 🇺🇸 美国 178
+      - 🇳🇱 荷兰 07
+      - 🇩🇪 德国 04
+      - 🇺🇸 美国 091
+      - 🇺🇸 美国 016
+      - 🇻🇳 越南 068
+      - 🇺🇸 美国 039
+      - 🇺🇸 美国 187
+      - 🇻🇳 越南 001
+      - 🇺🇸 美国 184
+      - 🇻🇳 越南 070
+      - 🇭🇰 香港 15
+      - 🇺🇸 美国 172
+      - 🇨🇭 瑞士 01
+      - 🇺🇸 美国 069
+      - 🇳🇱 荷兰 20
       - 🇺🇸 美国 120
-      - 🇺🇸 美国 203
-      - 🇮🇹 意大利 08
-      - 🇩🇪 德国 14
-      - 🇸🇬 新加坡 03
-      - 🇹🇷 土耳其 10
-      - 🇯🇵 日本 14
-      - 🇻🇳 越南 058
-      - 🇺🇸 美国 002
-      - 🇭🇰 香港 16
-      - 🇺🇸 美国 076
-      - 🇺🇸 美国 173
-      - 🇨🇦 加拿大 01
-      - 🇺🇸 美国 095
-      - 🇻🇳 越南 019
-      - 🇺🇸 美国 013
-      - 🇬🇧 英国 22
-      - 🇻🇳 越南 018
-      - 🇮🇹 意大利 02
-      - 🇺🇸 美国 049
-      - 🇺🇸 美国 189
-      - 🇬🇧 英国 13
-      - 🇺🇸 美国 170
-      - 🇺🇸 美国 249
+      - 🇺🇸 美国 030
+      - 🇺🇸 美国 136
+      - 🇻🇳 越南 013
+      - 🇻🇳 越南 091
+      - 🇫🇮 芬兰 04
+      - 🇳🇱 荷兰 10
+      - 🇻🇳 越南 011
+      - 🇻🇳 越南 075
+      - 🇺🇸 美国 207
+      - 🇻🇳 越南 099
+      - 🇦🇺 AU澳大利亚(yz)
+      - 🇭🇰 HK香港(yz)
+      - 🇭🇰 HK香港(yz) 2
+      - 🇩🇪 DE德国(yz)
+      - 🇫🇷 FR法国(yz)
+      - 🇫🇷 FR法国(yz) 2
+      - 🇬🇧 GB英国(yz)
+      - 🇬🇧 GB英国(yz) 2
+      - 🇬🇧 GB英国(yz) 3
+      - 🇯🇵 JP日本(yz)
+      - 🇯🇵 JP日本(yz) 2
+      - 🇷🇺 RU俄罗斯(yz)
+      - 🇷🇺 RU俄罗斯(yz) 2
       - 🇺🇸 US美国(yz)
       - 🇺🇸 US美国(yz) 2
       - 🇺🇸 US美国(yz) 3
@@ -2368,57 +2123,41 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 9
       - 🇺🇸 US美国(yz) 10
       - 🇺🇸 US美国(yz) 11
-      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 12
-      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz) 13
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 14
-      - 🇯🇵 JP日本(yz)
-      - 🇪🇸 西班牙(yz)
-      - 🇩🇪 DE德国(yz)
       - 🇺🇸 US美国(yz) 15
       - 🇺🇸 US美国(yz) 16
       - 🇺🇸 US美国(yz) 17
-      - 🇷🇺 RU俄罗斯(yz)
-      - 🇭🇰 HK香港(yz)
-      - 🇺🇦 乌克兰(yz)
-      - 🇦🇺 AU澳大利亚(yz)
       - 🇺🇸 US美国(yz) 18
       - 🇺🇸 US美国(yz) 19
-      - 🇷🇺 俄罗斯(yz)
       - 🇺🇸 US美国(yz) 20
-      - 🇭🇰 HK香港(yz) 2
-      - 🇭🇰 HK香港(yz) 3
-      - 🇷🇺 俄罗斯(yz) 2
-      - 🇩🇪 DE德国(yz) 2
-      - 🇹🇼 TW台湾(yz)
       - 🇺🇸 US美国(yz) 21
-      - 🇬🇧 GB英国(yz) 2
-      - 🇱🇹 立陶宛(yz)
       - 🇺🇸 US美国(yz) 22
       - 🇺🇸 US美国(yz) 23
-      - 🇦🇺 AU澳大利亚(yz) 2
       - 🇺🇸 US美国(yz) 24
       - 🇺🇸 US美国(yz) 25
       - 🇺🇸 US美国(yz) 26
       - 🇺🇸 US美国(yz) 27
       - 🇺🇸 US美国(yz) 28
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 29
       - 🇺🇸 US美国(yz) 30
       - 🇺🇸 US美国(yz) 31
       - 🇺🇸 US美国(yz) 32
       - 🇺🇸 US美国(yz) 33
-      - 🇭🇰 HK香港(yz) 4
-      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz) 34
+      - 🇦🇺 AU澳大利亚(yz) 2
       - 🇺🇸 US美国(yz) 35
+      - 🇬🇧 GB英国(yz) 4
+      - 🇷🇺 俄罗斯(yz)
+      - 🇷🇺 俄罗斯(yz) 2
+      - 🇷🇺 俄罗斯(yz) 3
+      - 🇷🇺 俄罗斯(yz) 4
+      - 🇷🇺 俄罗斯(yz) 5
       - 🇺🇸 US美国(yz) 36
+      - 🇱🇹 立陶宛(yz)
       - 🇺🇸 US美国(yz) 37
       - 🇺🇸 US美国(yz) 38
-      - 🇹🇼 TW台湾(yz) 2
-      - 🇹🇼 TW台湾(yz) 3
       - 🇺🇸 US美国(yz) 39
       - 🇺🇸 US美国(yz) 40
       - 🇺🇸 US美国(yz) 41
@@ -2442,7 +2181,6 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 59
       - 🇺🇸 US美国(yz) 60
       - 🇺🇸 US美国(yz) 61
-      - 🇷🇺 RU俄罗斯(yz) 2
       - 🇺🇸 US美国(yz) 62
       - 🇺🇸 US美国(yz) 63
       - 🇺🇸 US美国(yz) 64
@@ -2452,21 +2190,13 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 68
       - 🇺🇸 US美国(yz) 69
       - 🇺🇸 US美国(yz) 70
-      - 🇹🇭 泰国(yz)
-      - 🇩🇪 DE德国(yz) 3
       - 🇺🇸 US美国(yz) 71
       - 🇺🇸 US美国(yz) 72
-      - 🇺🇸 US美国(yz) 73
-      - 🇯🇵 JP日本(yz) 2
-      - 🇷🇺 俄罗斯(yz) 3
-      - 🇷🇺 俄罗斯(yz) 4
-      - 🇺🇸 US美国(yz) 74
-      - 🇺🇸 US美国(yz) 75
-      - 🇺🇸 US美国(yz) 76
-      - 🇷🇺 俄罗斯(yz) 5
-      - 🇪🇸 西班牙(yz) 2
-      - 🇿🇦 南非(yz)
-      - 🇺🇸 US美国(yz) 77
+      - 🇯🇵 JP日本(yz) 3
+      - 🇺🇦 乌克兰(yz)
+      - 🇪🇸 西班牙(yz)
+      - 🇬🇧 GB英国(yz) 5
+      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 www.85la.com🇺🇸US_98|5.5MB/s|10%|TK-US|YT-GB|NF|GPT⁺
       - 🇺🇸 www.85la.com🇺🇸US_94|6.1MB/s|28%|TK-US|NF|GPT⁺
       - 🇺🇸 www.85la.com🇺🇸US_88|7.4MB/s|8%|TK-US|NF|D+|GPT⁺|GM
@@ -2959,36 +2689,21 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇭🇰 香港 36
-      - 🇭🇰 香港 28
-      - 🇭🇰 香港 11
-      - 🇭🇰 香港 41
-      - 🇭🇰 香港 77
-      - 🇭🇰 香港 08
-      - 🇭🇰 香港 38
-      - 🇭🇰 香港家宽 06
-      - 🇭🇰 香港 13
-      - 🇭🇰 香港 10
-      - 🇭🇰 香港 24
-      - 🇭🇰 香港 16
+      - 🇭🇰 香港 15
       - 🇭🇰 HK香港(yz)
       - 🇭🇰 HK香港(yz) 2
-      - 🇭🇰 HK香港(yz) 3
-      - 🇭🇰 HK香港(yz) 4
   - name: 🇯🇵 日本节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇯🇵 日本 01
       - 🇯🇵 日本 07
-      - 🇯🇵 日本家宽 03
-      - 🇯🇵 日本 09
-      - 🇯🇵 日本 13
-      - 🇯🇵 日本 14
+      - 🇯🇵 日本 08
+      - 🇯🇵 日本 04
       - 🇯🇵 JP日本(yz)
       - 🇯🇵 JP日本(yz) 2
+      - 🇯🇵 JP日本(yz) 3
       - 🇯🇵 www.85la.com 日本_1
       - 🇯🇵 www.85la.com 日本_2
   - name: 🇺🇲 美国节点
@@ -2997,59 +2712,57 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
-      - 🇩🇪 德国 05
-      - 🇺🇸 美国 135
-      - 🇺🇸 美国 105
-      - 🇺🇸 美国 005
-      - 🇬🇧 英国 03
-      - 🇺🇸 美国 234
-      - 🇬🇧 英国 19
-      - 🇺🇸 美国 172
-      - 🇺🇸 美国 117
-      - 🇺🇸 美国 017
-      - 🇺🇸 美国 146
-      - 🇺🇸 美国 073
-      - 🇺🇸 美国 016
-      - 🇬🇧 英国 06
-      - 🇺🇸 美国 090
-      - 🇺🇸 美国 231
-      - 🇺🇸 美国 260
-      - 🇺🇸 美国 247
-      - 🇺🇸 美国 027
-      - 🇺🇸 美国 050
-      - 🇷🇺 俄罗斯 04
-      - 🇺🇸 美国 058
-      - 🇺🇸 美国 169
-      - 🇺🇸 美国 171
-      - 🇺🇸 美国 132
-      - 🇺🇸 美国 213
-      - 🇺🇸 美国 033
-      - 🇺🇸 美国 101
-      - 🇺🇸 美国 191
-      - 🇺🇸 美国 006
-      - 🇺🇸 美国 103
-      - 🇺🇸 美国 056
-      - 🇺🇸 美国 181
-      - 🇺🇸 美国 001
-      - 🇬🇧 英国 09
+      - 🇺🇸 美国 128
+      - 🇺🇸 美国 194
+      - 🇺🇸 美国 160
+      - 🇺🇸 美国 043
       - 🇺🇸 美国 195
+      - 🇺🇸 美国 196
+      - 🇺🇸 美国 149
       - 🇫🇷 法国 05
+      - 🇫🇷 法国 03
+      - 🇺🇸 美国 014
+      - 🇺🇸 美国 081
+      - 🇺🇸 美国 116
+      - 🇺🇸 美国 041
+      - 🇺🇸 美国 098
+      - 🇺🇸 美国 134
+      - 🇫🇷 法国 04
+      - 🇺🇸 美国 151
       - 🇺🇸 美国 011
-      - 🇺🇸 美国 168
+      - 🇺🇸 美国 061
+      - 🇺🇸 美国 215
+      - 🇺🇸 美国 176
+      - 🇺🇸 美国 146
+      - 🇺🇸 美国 048
+      - 🇺🇸 美国 094
+      - 🇺🇸 美国 208
+      - 🇺🇸 美国 181
+      - 🇺🇸 美国 185
+      - 🇺🇸 美国 154
+      - 🇺🇸 美国 102
+      - 🇺🇸 美国 178
+      - 🇩🇪 德国 04
+      - 🇺🇸 美国 091
+      - 🇺🇸 美国 016
+      - 🇺🇸 美国 039
+      - 🇺🇸 美国 187
+      - 🇺🇸 美国 184
+      - 🇺🇸 美国 172
+      - 🇺🇸 美国 069
       - 🇺🇸 美国 120
-      - 🇺🇸 美国 203
-      - 🇩🇪 德国 14
-      - 🇺🇸 美国 002
-      - 🇺🇸 美国 076
-      - 🇺🇸 美国 173
-      - 🇺🇸 美国 095
-      - 🇺🇸 美国 013
-      - 🇬🇧 英国 22
-      - 🇺🇸 美国 049
-      - 🇺🇸 美国 189
-      - 🇬🇧 英国 13
-      - 🇺🇸 美国 170
-      - 🇺🇸 美国 249
+      - 🇺🇸 美国 030
+      - 🇺🇸 美国 136
+      - 🇺🇸 美国 207
+      - 🇦🇺 AU澳大利亚(yz)
+      - 🇩🇪 DE德国(yz)
+      - 🇫🇷 FR法国(yz)
+      - 🇫🇷 FR法国(yz) 2
+      - 🇬🇧 GB英国(yz)
+      - 🇬🇧 GB英国(yz) 2
+      - 🇬🇧 GB英国(yz) 3
+      - 🇷🇺 RU俄罗斯(yz)
+      - 🇷🇺 RU俄罗斯(yz) 2
       - 🇺🇸 US美国(yz)
       - 🇺🇸 US美国(yz) 2
       - 🇺🇸 US美国(yz) 3
@@ -3061,42 +2774,37 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 9
       - 🇺🇸 US美国(yz) 10
       - 🇺🇸 US美国(yz) 11
-      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 12
-      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz) 13
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 14
-      - 🇩🇪 DE德国(yz)
       - 🇺🇸 US美国(yz) 15
       - 🇺🇸 US美国(yz) 16
       - 🇺🇸 US美国(yz) 17
-      - 🇷🇺 RU俄罗斯(yz)
-      - 🇦🇺 AU澳大利亚(yz)
       - 🇺🇸 US美国(yz) 18
       - 🇺🇸 US美国(yz) 19
-      - 🇷🇺 俄罗斯(yz)
       - 🇺🇸 US美国(yz) 20
-      - 🇷🇺 俄罗斯(yz) 2
-      - 🇩🇪 DE德国(yz) 2
       - 🇺🇸 US美国(yz) 21
-      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 22
       - 🇺🇸 US美国(yz) 23
-      - 🇦🇺 AU澳大利亚(yz) 2
       - 🇺🇸 US美国(yz) 24
       - 🇺🇸 US美国(yz) 25
       - 🇺🇸 US美国(yz) 26
       - 🇺🇸 US美国(yz) 27
       - 🇺🇸 US美国(yz) 28
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 29
       - 🇺🇸 US美国(yz) 30
       - 🇺🇸 US美国(yz) 31
       - 🇺🇸 US美国(yz) 32
       - 🇺🇸 US美国(yz) 33
       - 🇺🇸 US美国(yz) 34
+      - 🇦🇺 AU澳大利亚(yz) 2
       - 🇺🇸 US美国(yz) 35
+      - 🇬🇧 GB英国(yz) 4
+      - 🇷🇺 俄罗斯(yz)
+      - 🇷🇺 俄罗斯(yz) 2
+      - 🇷🇺 俄罗斯(yz) 3
+      - 🇷🇺 俄罗斯(yz) 4
+      - 🇷🇺 俄罗斯(yz) 5
       - 🇺🇸 US美国(yz) 36
       - 🇺🇸 US美国(yz) 37
       - 🇺🇸 US美国(yz) 38
@@ -3123,7 +2831,6 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 59
       - 🇺🇸 US美国(yz) 60
       - 🇺🇸 US美国(yz) 61
-      - 🇷🇺 RU俄罗斯(yz) 2
       - 🇺🇸 US美国(yz) 62
       - 🇺🇸 US美国(yz) 63
       - 🇺🇸 US美国(yz) 64
@@ -3133,17 +2840,10 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 68
       - 🇺🇸 US美国(yz) 69
       - 🇺🇸 US美国(yz) 70
-      - 🇩🇪 DE德国(yz) 3
       - 🇺🇸 US美国(yz) 71
       - 🇺🇸 US美国(yz) 72
-      - 🇺🇸 US美国(yz) 73
-      - 🇷🇺 俄罗斯(yz) 3
-      - 🇷🇺 俄罗斯(yz) 4
-      - 🇺🇸 US美国(yz) 74
-      - 🇺🇸 US美国(yz) 75
-      - 🇺🇸 US美国(yz) 76
-      - 🇷🇺 俄罗斯(yz) 5
-      - 🇺🇸 US美国(yz) 77
+      - 🇬🇧 GB英国(yz) 5
+      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 www.85la.com🇺🇸US_98|5.5MB/s|10%|TK-US|YT-GB|NF|GPT⁺
       - 🇺🇸 www.85la.com🇺🇸US_94|6.1MB/s|28%|TK-US|NF|GPT⁺
       - 🇺🇸 www.85la.com🇺🇸US_88|7.4MB/s|8%|TK-US|NF|D+|GPT⁺|GM
@@ -3372,12 +3072,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇹🇼 台湾 05
-      - 🇹🇼 台湾 07
-      - 🇹🇼 台湾 04
-      - 🇹🇼 TW台湾(yz)
-      - 🇹🇼 TW台湾(yz) 2
-      - 🇹🇼 TW台湾(yz) 3
+      - 🇮🇳 印度 09
       - 🇮🇩 www.85la.com 印度尼西亚
   - name: 🇸🇬 狮城节点
     type: url-test
@@ -3385,15 +3080,14 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇸🇬 新加坡 03
+      - 🇸🇬 新加坡 12
+      - 🇸🇬 新加坡 02
   - name: 🇰🇷 韩国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇧🇷 巴西 42
-      - 🇧🇷 巴西 07
       - 🇧🇷 www.85la.com 巴西_1
       - 🇧🇷 www.85la.com 巴西_2
       - 🇧🇷 www.85la.com 巴西_3
