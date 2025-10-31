@@ -40,7 +40,7 @@ jobs:
           python MB.py
           python 58LA.py
           python sub.py
-        # python yz.py
+          python yz.py
 
       - name: Sync to Cloudflare KV
         env:
