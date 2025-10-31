@@ -38,7 +38,7 @@ def save_cache_content(url, content):
         f.write(content)
 
 # 设置请求超时时间（秒）
-TIMEOUT = 15  # 缩短超时时间，提高响应速度
+TIMEOUT = 60  # 缩短超时时间，提高响应速度
 
 # 创建带重试机制的Session
 SESSION = requests.Session()
