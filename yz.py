@@ -20,7 +20,7 @@ def read_links(file_path):
             unique_links.append(link)
     return unique_links
 
-def check_link_valid(link, timeout=10):
+def check_link_valid(link, timeout=60):
     """检测单个链接是否有效（返回数据非空）"""
     try:
         response = requests.get(link, timeout=timeout)
