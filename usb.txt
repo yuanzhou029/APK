@@ -17,86 +17,85 @@ dns:
     - tls://dns.google:853
 proxies:
   - {name: 关注https://github.com/wzdnzd不迷路, server: 9.9.9.9, port: 54321, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: febf501b-e19d-4451-8071-aa6144bb8825, tfo: false}
-  - {name: 🇭🇰 香港 19, server: 212.192.13.86, port: 25170, client-fingerprint: chrome, type: vmess, uuid: 8fbc6e1e-e5ca-4015-b532-eede97ce6edf, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 美国 846, server: sfjmg4.sufujia.top, port: 57300, client-fingerprint: chrome, type: hysteria2, password: e59f7414-17f1-4403-a567-3faf838fcf63, auth: e59f7414-17f1-4403-a567-3faf838fcf63, sni: sfjmg4.sufujia.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 777, server: 103.116.7.1, port: 443, client-fingerprint: chrome, type: trojan, password: trojan, sni: wahaha.yingyangkuaixian.dpdns.org, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: wahaha.yingyangkuaixian.dpdns.org}}}
-  - {name: 🇺🇸 美国 066, server: tw1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 13c45514-1d29-4124-a2dd-315c1d0ee5e1, auth: 13c45514-1d29-4124-a2dd-315c1d0ee5e1, sni: tw1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 806, server: rb1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 87aeaf7e-1fd4-4f62-88c8-d9c8fbf48925, auth: 87aeaf7e-1fd4-4f62-88c8-d9c8fbf48925, sni: rb1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 367, server: yg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 6e074827-17d2-465d-a015-91167e66c90b, auth: 6e074827-17d2-465d-a015-91167e66c90b, sni: yg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇭🇰 香港 18, server: 212.192.13.86, port: 25170, client-fingerprint: chrome, type: vmess, uuid: 4dd745ee-9a60-43a4-b1cf-6a0f46579723, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 美国 941, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 3fe32f0c-4e0f-4834-b546-13bbb96191f3, auth: 3fe32f0c-4e0f-4834-b546-13bbb96191f3, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 739, server: 212.192.13.86, port: 33079, client-fingerprint: chrome, type: hysteria2, password: bd553cce-309c-482f-8e9f-1ef26c480159, auth: bd553cce-309c-482f-8e9f-1ef26c480159, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇯🇵 日本 36, server: y2dxs-g05.jp03-j7-vm0.entry.fr0528.art, port: 21585, client-fingerprint: chrome, type: vmess, uuid: 8133667f-a211-30d9-8aec-bf1034c6e11e, alterId: 1, cipher: auto, tls: true, tfo: false, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 106, server: tw2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 5c595001-0ff9-43b4-a16d-f1403179bc36, auth: 5c595001-0ff9-43b4-a16d-f1403179bc36, sni: tw2.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 922, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: fd690df6-6f5e-4268-9e6c-c7f095042675, auth: fd690df6-6f5e-4268-9e6c-c7f095042675, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 184, server: 69.84.182.18, port: 443, client-fingerprint: chrome, type: vless, uuid: a25ff90c-964c-485a-b72a-858864a27dc0, tls: true, tfo: false, skip-cert-verify: false, servername: cdn-node-oss-63.paofu.de, network: ws, ws-opts: {path: /profile/sharenode, headers: {Host: cdn-node-oss-63.paofu.de}}}
-  - {name: 🇺🇸 美国 690, server: us1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 21b25680-a408-4fb3-916c-e8d0b9e2983f, auth: 21b25680-a408-4fb3-916c-e8d0b9e2983f, sni: us1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 967, server: tw.dreamlinkc.top, port: 47301, client-fingerprint: chrome, type: hysteria2, password: 55148967-7659-418e-9614-576256aff318, auth: 55148967-7659-418e-9614-576256aff318, sni: tw.dreamlinkc.top, skip-cert-verify: false}
-  - {name: 🇩🇪 德国 04, server: v33.heduian.link, port: 30833, client-fingerprint: chrome, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
-  - {name: 🇭🇰 香港家宽 416, server: 36.151.192.242, port: 4556, client-fingerprint: chrome, type: trojan, password: BxceQaOe, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 944, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 32144368-62c4-46e1-90f7-4f3b9505eaa8, auth: 32144368-62c4-46e1-90f7-4f3b9505eaa8, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 324, server: us2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: c3e86c50-6906-41dc-99d0-482238405f07, auth: c3e86c50-6906-41dc-99d0-482238405f07, sni: us2.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 160, server: xjp1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 8161cbdf-4bed-4018-9b08-410c620e1d33, auth: 8161cbdf-4bed-4018-9b08-410c620e1d33, sni: xjp1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 798, server: tw2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: d8ead9a0-3c8b-411d-92ef-dd366543197b, auth: d8ead9a0-3c8b-411d-92ef-dd366543197b, sni: tw2.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 287, server: tw1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 448bd471-9659-4b6c-a648-c330f71599a3, auth: 448bd471-9659-4b6c-a648-c330f71599a3, sni: tw1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 804, server: rb1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: e8b0e431-2a0a-4b48-b37c-20525ce1278f, auth: e8b0e431-2a0a-4b48-b37c-20525ce1278f, sni: rb1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 741, server: 212.192.13.86, port: 33079, client-fingerprint: chrome, type: hysteria2, password: e03f070a-f01f-4192-900c-11468e8a6e1a, auth: e03f070a-f01f-4192-900c-11468e8a6e1a, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇺🇸 美国 853, server: xjp1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: af411408-cefc-4b33-b7b6-ef43fe944001, auth: af411408-cefc-4b33-b7b6-ef43fe944001, sni: xjp1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 376, server: us2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 80538b74-de70-4d95-90bf-5eb0a7785996, auth: 80538b74-de70-4d95-90bf-5eb0a7785996, sni: us2.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 271, server: xjp1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: d8ead9a0-3c8b-411d-92ef-dd366543197b, auth: d8ead9a0-3c8b-411d-92ef-dd366543197b, sni: xjp1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 471, server: hg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 83a975a6-37c4-4b7a-9458-a7ebd99b6d71, auth: 83a975a6-37c4-4b7a-9458-a7ebd99b6d71, sni: hg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 109, server: tw1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 53048057-1b02-409c-8037-a390ec12193f, auth: 53048057-1b02-409c-8037-a390ec12193f, sni: tw1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇷🇺 俄罗斯联邦 16, server: els.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 001883c4-2084-4557-a6c8-806537826682, auth: 001883c4-2084-4557-a6c8-806537826682, sni: els.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 237, server: hg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 47781afc-389d-41cb-82c6-6fe8d3505ca6, auth: 47781afc-389d-41cb-82c6-6fe8d3505ca6, sni: hg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 779, server: 104.18.109.147, port: 80, client-fingerprint: chrome, type: vless, uuid: c29d39bd-92a4-45db-bb61-56013998617c, tls: false, tfo: false, skip-cert-verify: false, servername: www.speedtest.net.www.1google.com.bing.com.visa.com.tls.xv98.ip-ddns.com, network: ws, ws-opts: {path: "/Telegram-XV2ry2?ed=2048&?q=V2rayJOKERRVPNJoin_Bade_Channel@JOKERRVPNTELEGRAM----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN", headers: {Host: www.speedtest.net.www.1google.com.bing.com.visa.com.tls.xv98.ip-ddns.com}}}
-  - {name: 🇻🇳 越南 01, server: 103.186.155.149, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 850, server: xjp1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 13c45514-1d29-4124-a2dd-315c1d0ee5e1, auth: 13c45514-1d29-4124-a2dd-315c1d0ee5e1, sni: xjp1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 277, server: tw2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 409843f5-3e2b-4e24-8d41-5d5dde496420, auth: 409843f5-3e2b-4e24-8d41-5d5dde496420, sni: tw2.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 383, server: xjp1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 6e074827-17d2-465d-a015-91167e66c90b, auth: 6e074827-17d2-465d-a015-91167e66c90b, sni: xjp1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 120, server: rb1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 448bd471-9659-4b6c-a648-c330f71599a3, auth: 448bd471-9659-4b6c-a648-c330f71599a3, sni: rb1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 278, server: yg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 448bd471-9659-4b6c-a648-c330f71599a3, auth: 448bd471-9659-4b6c-a648-c330f71599a3, sni: yg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 904, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: c689428b-ee4f-4cd7-a8d1-13adc99e0163, auth: c689428b-ee4f-4cd7-a8d1-13adc99e0163, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 407, server: hg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 80538b74-de70-4d95-90bf-5eb0a7785996, auth: 80538b74-de70-4d95-90bf-5eb0a7785996, sni: hg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 970, server: mg2.dreamlinkc.top, port: 47301, client-fingerprint: chrome, type: hysteria2, password: 3aae3faf-3891-45a0-ac43-99df4d3eec8b, auth: 3aae3faf-3891-45a0-ac43-99df4d3eec8b, sni: mg2.dreamlinkc.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 070, server: yg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 4623af89-13d4-4a7f-8972-1ebbe2bae142, auth: 4623af89-13d4-4a7f-8972-1ebbe2bae142, sni: yg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 934, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 84038c3f-0073-4f9c-b2c5-9cb27834a3c9, auth: 84038c3f-0073-4f9c-b2c5-9cb27834a3c9, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 126, server: hg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: c7a10d95-ac5a-4ae6-8aec-d3f36670e91f, auth: c7a10d95-ac5a-4ae6-8aec-d3f36670e91f, sni: hg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 387, server: tw2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 335344bb-2768-4a8c-a94f-231241ccb0f8, auth: 335344bb-2768-4a8c-a94f-231241ccb0f8, sni: tw2.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 360, server: us2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 8161cbdf-4bed-4018-9b08-410c620e1d33, auth: 8161cbdf-4bed-4018-9b08-410c620e1d33, sni: us2.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 932, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: b6661857-2c11-445a-9a74-c18077a21b04, auth: b6661857-2c11-445a-9a74-c18077a21b04, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 034, server: hg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 87aeaf7e-1fd4-4f62-88c8-d9c8fbf48925, auth: 87aeaf7e-1fd4-4f62-88c8-d9c8fbf48925, sni: hg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 923, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 2c2d5e69-2b56-4f37-9872-d7261f4f82b9, auth: 2c2d5e69-2b56-4f37-9872-d7261f4f82b9, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 534, server: tw1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 335344bb-2768-4a8c-a94f-231241ccb0f8, auth: 335344bb-2768-4a8c-a94f-231241ccb0f8, sni: tw1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 885, server: 3d2c11f1-t52o00-tdw2ye-2gok.la.shifen.uk, port: 1743, client-fingerprint: chrome, type: hysteria2, password: 17cdeb6c-f046-11ee-bdac-f23c93141fad, auth: 17cdeb6c-f046-11ee-bdac-f23c93141fad, sni: 3d2c11f1-t52o00-tdw2ye-2gok.la.shifen.uk, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 744, server: banmabanmabanmabanmabanmabanma5.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 027d85d2-3152-438b-b697-5552a52d3bc0, auth: 027d85d2-3152-438b-b697-5552a52d3bc0, sni: banmabanmabanmabanmabanmabanma5.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 905, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 321df928-fbb9-4a1e-b675-e291f5c3674c, auth: 321df928-fbb9-4a1e-b675-e291f5c3674c, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 701, server: us1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: f31b0af4-8b46-4bb9-8141-8c66d156d3de, auth: f31b0af4-8b46-4bb9-8141-8c66d156d3de, sni: us1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 910, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 7806159d-60c5-48ad-82f5-907bf9b1b766, auth: 7806159d-60c5-48ad-82f5-907bf9b1b766, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 524, server: tw2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 9e8af28b-7489-42e7-bb76-375d84bbf04e, auth: 9e8af28b-7489-42e7-bb76-375d84bbf04e, sni: tw2.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 202, server: xjp1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 228575ae-2ac6-488d-8a0f-1787b8db452b, auth: 228575ae-2ac6-488d-8a0f-1787b8db452b, sni: xjp1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇷🇺 俄罗斯联邦 12, server: els.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 3eec7894-1fd0-45c6-85a1-54a7871c0d07, auth: 3eec7894-1fd0-45c6-85a1-54a7871c0d07, sni: els.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 449, server: yg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 96399c64-052a-4fcf-a8cc-82577bcf8361, auth: 96399c64-052a-4fcf-a8cc-82577bcf8361, sni: yg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 431, server: 360311d5-t4v9c0-tcm6ys-deip.la.shifen.uk, port: 1743, client-fingerprint: chrome, type: hysteria2, password: 7a2512b4-09ee-11f0-8d46-f23c9313b177, auth: 7a2512b4-09ee-11f0-8d46-f23c9313b177, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 157, server: tw2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: bfef1ed1-5fb7-48bf-8230-b28b21d91437, auth: bfef1ed1-5fb7-48bf-8230-b28b21d91437, sni: tw2.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 072, server: yg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 34589107-af36-4e17-8f5e-b203aa2ba6bc, auth: 34589107-af36-4e17-8f5e-b203aa2ba6bc, sni: yg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 036, server: xjp1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 45ae81a7-d63b-452c-962d-de00a95c5478, auth: 45ae81a7-d63b-452c-962d-de00a95c5478, sni: xjp1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 913, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: a2573e46-ef76-46e3-bd69-fc1d8ebd0659, auth: a2573e46-ef76-46e3-bd69-fc1d8ebd0659, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 945, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 2d4ad024-958b-44ea-80b3-8d712a6d05b5, auth: 2d4ad024-958b-44ea-80b3-8d712a6d05b5, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 936, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: a32458d1-4bd3-416a-bdfb-73178e36eb38, auth: a32458d1-4bd3-416a-bdfb-73178e36eb38, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 476, server: us2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 4efbdf2e-733d-466a-a41b-9c87ed2ab041, auth: 4efbdf2e-733d-466a-a41b-9c87ed2ab041, sni: us2.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 679, server: us1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 4efbdf2e-733d-466a-a41b-9c87ed2ab041, auth: 4efbdf2e-733d-466a-a41b-9c87ed2ab041, sni: us1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇻🇳 越南 15, server: 103.186.154.25, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇭🇰 香港 07, server: 212.192.13.86, port: 80, client-fingerprint: chrome, type: hysteria2, password: 24e26246-08ad-4b8b-a146-34632b356796, auth: 24e26246-08ad-4b8b-a146-34632b356796, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
-  - {name: 🇺🇸 美国 924, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 1c4a05b0-f6bc-4256-98a4-79a2db4056d2, auth: 1c4a05b0-f6bc-4256-98a4-79a2db4056d2, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 364, server: us2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: ebfb57a9-caf0-425a-9240-9bdc92a7e1f2, auth: ebfb57a9-caf0-425a-9240-9bdc92a7e1f2, sni: us2.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 108, server: hg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 48090ef9-7ff0-41b6-be54-a831cb9bb1a0, auth: 48090ef9-7ff0-41b6-be54-a831cb9bb1a0, sni: hg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇳🇱 荷兰 02, server: v30.heduian.link, port: 30830, client-fingerprint: chrome, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}}
-  - {name: 🇻🇳 越南 14, server: 103.186.154.21, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: 🇺🇸 美国 022, server: hg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 61e269ed-0fbd-4b35-8435-db61d1da2afd, auth: 61e269ed-0fbd-4b35-8435-db61d1da2afd, sni: hg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇯🇵 日本 51, server: jp01.333210.xyz, port: 40000, client-fingerprint: firefox, type: vless, uuid: aae0b5f4-cdb1-48b4-a497-d6d0c89d2576, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: 400567.xyz, network: tcp}
-  - {name: 🇺🇸 美国 446, server: hg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 8a342ee4-26a5-4014-a7ad-1d14cdd4ef39, auth: 8a342ee4-26a5-4014-a7ad-1d14cdd4ef39, sni: hg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 238, server: yg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 67b6c870-ff4a-4260-9d61-b61a3d251743, auth: 67b6c870-ff4a-4260-9d61-b61a3d251743, sni: yg1.oxdtangx.top, skip-cert-verify: false}
-  - {name: 🇺🇸 美国 834, server: us2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 9e8af28b-7489-42e7-bb76-375d84bbf04e, auth: 9e8af28b-7489-42e7-bb76-375d84bbf04e, sni: us2.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 056, server: yg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: ebfb57a9-caf0-425a-9240-9bdc92a7e1f2, auth: ebfb57a9-caf0-425a-9240-9bdc92a7e1f2, sni: yg1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 142, server: 212.192.13.86, port: 33079, client-fingerprint: chrome, type: hysteria2, password: 7c3b5e7f-366a-4861-ba4f-d8092a275f2e, auth: 7c3b5e7f-366a-4861-ba4f-d8092a275f2e, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇹🇭 泰国 09, server: n002.xunxunmimisbs.sbs, port: 28300, client-fingerprint: chrome, type: trojan, password: e79ee1df-47ba-451a-9061-13ad2e4f2b0a, sni: tai01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇬🇧 英国 15, server: n002.xunxunmimisbs.sbs, port: 23100, client-fingerprint: chrome, type: trojan, password: df9590eb-f3c0-475f-9930-0187e379878b, sni: uk01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇬🇧 英国 27, server: 18.130.171.251, port: 443, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: amazonskr05, tfo: false}
+  - {name: 🇺🇸 美国 525, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 7ca3f901-2bf0-405a-b24d-91805373044c, auth: 7ca3f901-2bf0-405a-b24d-91805373044c, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 023, server: xjp1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: a0c0a773-a127-4cf2-9238-a2c85095d661, auth: a0c0a773-a127-4cf2-9238-a2c85095d661, sni: xjp1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 46, server: 38.150.2.108, port: 57649, client-fingerprint: chrome, type: vless, uuid: df3afb84-b065-4223-ae9a-53345dc29c0d, tls: true, tfo: false, packet-encoding: xudp, skip-cert-verify: false, servername: sg.alice.cloudns.pro, network: ws, ws-opts: {path: /huiasdgyhuigyhuisefgyhisedfgbyhisdefbyhui, headers: {Host: sg.alice.cloudns.pro}}}
+  - {name: 🇺🇸 美国 499, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 4781c248-c986-454f-8624-082f769bc62b, auth: 4781c248-c986-454f-8624-082f769bc62b, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 381, server: xjp1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: f508daac-003a-4005-bbdb-03e28841206b, auth: f508daac-003a-4005-bbdb-03e28841206b, sni: xjp1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 172, server: hg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: fd52230e-cb71-4e8b-b6bc-ea940bf6be29, auth: fd52230e-cb71-4e8b-b6bc-ea940bf6be29, sni: hg1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 80, server: f92a4a6b-sv2sg0-swkmdk-1imi4.hk3.p5pv.com, port: 80, client-fingerprint: chrome, type: vmess, uuid: 40fb1315-191a-11ed-b0ca-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: f92a4a6b-sv2sg0-swkmdk-1imi4.hk3.p5pv.com}}}
+  - {name: 🇮🇳 印度 03, server: n001.xunxunmimisbs.sbs, port: 27100, client-fingerprint: chrome, type: trojan, password: df9590eb-f3c0-475f-9930-0187e379878b, sni: in01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 845, server: www.fbi.gov, port: 2095, client-fingerprint: randomized, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: sbfangbinxing.fuckingfangbinxing.workers.dev}}}
+  - {name: 🇸🇬 新加坡 08, server: g72oiqhd.tun.nodeflex.cc, port: 30865, reality-opts: {public-key: RQGgenaHaaros5JI8XOnAuv4k7t43Gug_mpHjQTRdjE, short-id: "a242c9aa" }, client-fingerprint: safari, type: vless, uuid: 604254a9-91d8-4998-92ed-3c26f8df0dad, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: www.varejaodasmaquinas.com, network: tcp}
+  - {name: 🇭🇰 香港家宽 499, server: 17ffa538-t59gg0-t7enwo-1f1f1.hk3.p5pv.com, port: 80, client-fingerprint: chrome, type: vmess, uuid: 61c4be90-6235-11ec-a8bf-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: broadcastlv.chat.bilibili.com}}}
+  - {name: 🇺🇸 美国 557, server: us1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: c3e86c50-6906-41dc-99d0-482238405f07, auth: c3e86c50-6906-41dc-99d0-482238405f07, sni: us1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇬🇧 英国 23, server: m.cnmjin.net, port: 16645, client-fingerprint: chrome, type: vmess, uuid: f219dbf4-afb2-4331-bc39-bfc50e67edb7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 056358269ed8c15a3fedfd3cc64a55ae.mobgslb.tbcache.com}}}
+  - {name: 🇺🇸 美国 523, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 2ad98db4-5e99-4cb5-a672-b22bca2dbd2f, auth: 2ad98db4-5e99-4cb5-a672-b22bca2dbd2f, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 869, server: aac01b5.d1.glados-config.net, port: 2377, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, tfo: false, plugin: obfs, plugin-opts: {mode: tls, host: aac01b5.dl.mozilla.net.net:170735}}
+  - {name: 🇺🇸 美国 822, server: aac01b5.db.glados-config.net, port: 2377, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, tfo: false, plugin: obfs, plugin-opts: {mode: tls, host: aac01b5.dl.nintendo.be:170735}}
+  - {name: 🇹🇭 泰国 15, server: n001.xunxunmimisbs.sbs, port: 28300, client-fingerprint: chrome, type: trojan, password: cef3bd0a-f298-4e79-b389-ddce8086a63e, sni: tai01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 779, server: rb1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: f508daac-003a-4005-bbdb-03e28841206b, auth: f508daac-003a-4005-bbdb-03e28841206b, sni: rb1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 762, server: 227fd503-t4ssg0-t5vo4i-4550.la.shifen.uk, port: 1743, client-fingerprint: chrome, type: hysteria2, password: 6286105c-fb6d-11ef-be96-f23c93136cb3, auth: 6286105c-fb6d-11ef-be96-f23c93136cb3, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 18, server: n002.xunxunmimisbs.sbs, port: 31201, client-fingerprint: chrome, type: trojan, password: a62422be-c129-4d5e-ba49-27c5230b556a, sni: sg02.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 83, server: hk04.bbnd.baby, port: 33808, client-fingerprint: chrome, type: trojan, password: 94722710-0cbe-4e62-a6a0-40ade378a993, sni: hk04.bbnd.baby, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 27, server: n002.xunxunmimisbs.sbs, port: 31200, client-fingerprint: chrome, type: trojan, password: a62422be-c129-4d5e-ba49-27c5230b556a, sni: sg01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 746, server: banmabanmabanmabanmabanmabanma6.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 2ad98db4-5e99-4cb5-a672-b22bca2dbd2f, auth: 2ad98db4-5e99-4cb5-a672-b22bca2dbd2f, sni: banmabanmabanmabanmabanmabanma6.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇦🇪 阿联酋 10, server: n001.xunxunmimisbs.sbs, port: 49100, client-fingerprint: chrome, type: trojan, password: e347742d-4599-4d77-ab99-9be7b2a13c2a, sni: db01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 16, server: n001.xunxunmimisbs.sbs, port: 28200, client-fingerprint: chrome, type: trojan, password: df9590eb-f3c0-475f-9930-0187e379878b, sni: vn01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 14, server: n001.xunxunmimisbs.sbs, port: 31200, client-fingerprint: chrome, type: trojan, password: 948cd216-8356-49ff-9b10-31412d34e299, sni: sg01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 585, server: banmabanmabanmabanmabanmabanma5.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 2ad98db4-5e99-4cb5-a672-b22bca2dbd2f, auth: 2ad98db4-5e99-4cb5-a672-b22bca2dbd2f, sni: banmabanmabanmabanmabanmabanma5.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 028, server: us2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: f31b0af4-8b46-4bb9-8141-8c66d156d3de, auth: f31b0af4-8b46-4bb9-8141-8c66d156d3de, sni: us2.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇫🇷 法国 07, server: n001.xunxunmimisbs.sbs, port: 26100, client-fingerprint: chrome, type: trojan, password: df9590eb-f3c0-475f-9930-0187e379878b, sni: fr01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇦🇺 澳大利亚 01, server: haa.dashuai.cyou, port: 45062, client-fingerprint: chrome, type: vmess, uuid: c0084eb6-7488-4d3e-8ec9-8778586d4bd1, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 14, server: n001.xunxunmimisbs.sbs, port: 28200, client-fingerprint: chrome, type: trojan, password: cef3bd0a-f298-4e79-b389-ddce8086a63e, sni: vn01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 246, server: rb1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 560c00f3-11eb-4f08-a1f5-b6a7cd78affb, auth: 560c00f3-11eb-4f08-a1f5-b6a7cd78affb, sni: rb1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 579, server: us1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 87aeaf7e-1fd4-4f62-88c8-d9c8fbf48925, auth: 87aeaf7e-1fd4-4f62-88c8-d9c8fbf48925, sni: us1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇫🇷 法国 25, server: n002.xunxunmimisbs.sbs, port: 26100, client-fingerprint: chrome, type: trojan, password: 3973590e-86ec-4ad7-ad11-ca1f1d108b36, sni: fr01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇩🇪 德国 09, server: n002.xunxunmimisbs.sbs, port: 25100, client-fingerprint: chrome, type: trojan, password: 6c8f771f-db08-4639-a68c-97078aab18c8, sni: de01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 543, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 0ce9fbb9-705b-4ecf-8b4b-8255557d7f53, auth: 0ce9fbb9-705b-4ecf-8b4b-8255557d7f53, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 578, server: us1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 5c595001-0ff9-43b4-a16d-f1403179bc36, auth: 5c595001-0ff9-43b4-a16d-f1403179bc36, sni: us1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇹🇭 泰国 14, server: n001.xunxunmimisbs.sbs, port: 28300, client-fingerprint: chrome, type: trojan, password: 948cd216-8356-49ff-9b10-31412d34e299, sni: tai01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇦🇪 阿联酋 09, server: n001.xunxunmimisbs.sbs, port: 28100, client-fingerprint: chrome, type: trojan, password: a62422be-c129-4d5e-ba49-27c5230b556a, sni: db01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 507, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: cdfd64a7-8211-4007-938d-dc32c80d671f, auth: cdfd64a7-8211-4007-938d-dc32c80d671f, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 748, server: banmabanmabanmabanmabanmabanma6.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: d1d3a565-5659-45bb-a83a-63e60746c9c4, auth: d1d3a565-5659-45bb-a83a-63e60746c9c4, sni: banmabanmabanmabanmabanmabanma6.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇰🇷 韩国 22, server: n002.xunxunmimisbs.sbs, port: 22100, client-fingerprint: chrome, type: trojan, password: 74f68a67-b3d8-4243-b1e5-ac015c004805, sni: kr01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 556, server: 212.192.13.86, port: 23187, client-fingerprint: chrome, type: vmess, uuid: b2b26df5-0b0c-4703-bbd7-52a35e7b47a0, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇹🇭 泰国 17, server: n001.xunxunmimisbs.sbs, port: 49120, client-fingerprint: chrome, type: trojan, password: 3fa0fb1b-bb0b-4bbe-8b92-e5f40dc7c921, sni: tai01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 541, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 2c2d5e69-2b56-4f37-9872-d7261f4f82b9, auth: 2c2d5e69-2b56-4f37-9872-d7261f4f82b9, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 360, server: hg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: c3e86c50-6906-41dc-99d0-482238405f07, auth: c3e86c50-6906-41dc-99d0-482238405f07, sni: hg1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇹🇭 泰国 01, server: n002.xunxunmimisbs.sbs, port: 28300, client-fingerprint: chrome, type: trojan, password: a62422be-c129-4d5e-ba49-27c5230b556a, sni: tai01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 48, server: cdnfire.xiaomispeed.com, port: 21104, client-fingerprint: chrome, type: trojan, password: 106fd3f1-aceb-43f6-a46e-ccdf7fa63ba7, sni: cdnfire.xiaomispeed.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 497, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 57bd699f-1a16-4c8f-a9c6-481c47a6421e, auth: 57bd699f-1a16-4c8f-a9c6-481c47a6421e, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 029, server: yg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: af411408-cefc-4b33-b7b6-ef43fe944001, auth: af411408-cefc-4b33-b7b6-ef43fe944001, sni: yg1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 518, server: banmabanmabanmabanmabanmabanma1.wanlidag.top, port: 54265, client-fingerprint: chrome, type: hysteria2, password: 32d1a565-a72e-486a-b2f9-e46a045f51b2, auth: 32d1a565-a72e-486a-b2f9-e46a045f51b2, sni: banmabanmabanmabanmabanmabanma1.wanlidag.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 239, server: n001.xunxunmimisbs.sbs, port: 45100, client-fingerprint: chrome, type: trojan, password: 3fa0fb1b-bb0b-4bbe-8b92-e5f40dc7c921, sni: us01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇬🇧 英国 04, server: n002.xunxunmimisbs.sbs, port: 23100, client-fingerprint: chrome, type: trojan, password: e2eb2faa-2185-42cd-88e1-bd33d35c4c89, sni: uk01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 20, server: n002.xunxunmimisbs.sbs, port: 21200, client-fingerprint: chrome, type: trojan, password: cef3bd0a-f298-4e79-b389-ddce8086a63e, sni: hk01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 46, server: m.cnmjin.net, port: 16632, client-fingerprint: chrome, type: vmess, uuid: f219dbf4-afb2-4331-bc39-bfc50e67edb7, alterId: 0, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 056358269ed8c15a3fedfd3cc64a55ae.mobgslb.tbcache.com}}}
+  - {name: 🇭🇰 香港 82, server: hk02.bbnd.baby, port: 33808, client-fingerprint: chrome, type: trojan, password: 94722710-0cbe-4e62-a6a0-40ade378a993, sni: hk02.bbnd.baby, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾家宽 04, server: aac01b5.t1.glados-config.net, port: 2377, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, tfo: false, plugin: obfs, plugin-opts: {mode: tls, host: aac01b5.dl.microsoft.lu:170735}}
+  - {name: 🇺🇸 美国 807, server: www.speedtest.net, port: 2096, client-fingerprint: chrome, type: trojan, password: "HdihUYuf&72826:33+4hshdiu&6562+2;Jvsjdjr", sni: NEt-ACCounT1.pAGEs.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: "/trNrffpXBCqDOiLjok?ed=2560", headers: {Host: NEt-ACCounT1.pAGEs.Dev}}}
+  - {name: 🇺🇸 美国 468, server: yg1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: f6d7d5ce-3e9e-4379-9c46-486f97de4475, auth: f6d7d5ce-3e9e-4379-9c46-486f97de4475, sni: yg1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇩🇪 德国 27, server: cdnjs.com, port: 2095, client-fingerprint: randomized, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: sbfangbinxing.fuckingfangbinxing.workers.dev}}}
+  - {name: 🇭🇰 香港家宽 475, server: 40f12f37-t59gg0-tm3dx0-1r9dt.hk3.p5pv.com, port: 80, client-fingerprint: chrome, type: vmess, uuid: de003c72-0157-11ef-86da-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: broadcastlv.chat.bilibili.com}}}
+  - {name: 🇯🇵 日本 09, server: n002.xunxunmimisbs.sbs, port: 42100, client-fingerprint: chrome, type: trojan, password: 3fa0fb1b-bb0b-4bbe-8b92-e5f40dc7c921, sni: jp01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇮🇳 印度 17, server: n002.xunxunmimisbs.sbs, port: 27100, client-fingerprint: chrome, type: trojan, password: e79ee1df-47ba-451a-9061-13ad2e4f2b0a, sni: in01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 886, server: rb1.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: e8b0e431-2a0a-4b48-b37c-20525ce1278f, auth: e8b0e431-2a0a-4b48-b37c-20525ce1278f, sni: rb1.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 875, server: tw1.xinlancloud.top, port: 2222, client-fingerprint: chrome, type: hysteria2, password: e2c4b8ed-5968-4c23-aeb5-60551c09c9a6, auth: e2c4b8ed-5968-4c23-aeb5-60551c09c9a6, sni: tw1.xinlancloud.top, skip-cert-verify: false}
+  - {name: 🇭🇰 香港家宽 479, server: 05c87c7b-t59gg0-t6i4q0-1j3zm.hk3.p5pv.com, port: 80, client-fingerprint: chrome, type: vmess, uuid: 6ce63b80-8b5b-11ef-b635-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: broadcastlv.chat.bilibili.com}}}
+  - {name: 🇩🇪 德国 29, server: 3.127.136.134, port: 443, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: amazonskr05, tfo: false}
+  - {name: 🇬🇧 英国 14, server: n001.xunxunmimisbs.sbs, port: 44100, client-fingerprint: chrome, type: trojan, password: 3fa0fb1b-bb0b-4bbe-8b92-e5f40dc7c921, sni: uk01.xxxxyyyysbs.sbs, skip-cert-verify: false}
+  - {name: 🇭🇰 香港家宽 508, server: 58.152.53.3, port: 443, client-fingerprint: chrome, type: trojan, password: BxceQaOe, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 416, server: us2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: 2bf56837-998b-4e2d-a801-c16fd8e86be1, auth: 2bf56837-998b-4e2d-a801-c16fd8e86be1, sni: us2.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇭🇰 香港 17, server: 43.154.231.72, port: 23989, client-fingerprint: chrome, type: vless, uuid: 6082f5df-1038-4f30-9fb0-4f16038dc1e2, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇺🇸 美国 190, server: us2.oxdtangx.top, port: 11112, client-fingerprint: chrome, type: hysteria2, password: f508daac-003a-4005-bbdb-03e28841206b, auth: f508daac-003a-4005-bbdb-03e28841206b, sni: us2.oxdtangx.top, skip-cert-verify: false}
+  - {name: 🇻🇳 越南 20, server: 103.186.154.14, port: 38388, client-fingerprint: chrome, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: 🇭🇰 香港 01, server: n001.xunxunmimisbs.sbs, port: 21101, client-fingerprint: chrome, type: trojan, password: e347742d-4599-4d77-ab99-9be7b2a13c2a, sni: hk02.xxxxyyyysbs.sbs, skip-cert-verify: false}
   - {name: "🇺🇸 www.85la.com🇺🇸US²_95|1.6MB/s|27%|GPT⁺|GM|TK|YT|NF|D+|X|KeepHistory\r", server: 216.133.148.215, port: 36987, client-fingerprint: chrome, type: vless, uuid: 0f4f3a75-ae36-4992-8cb5-6638f45afcb2, tls: false, tfo: false, skip-cert-verify: false, network: tcp}
   - {name: "🇺🇸 www.85la.com🇺🇸US²_90|0.4MB/s|34%|GPT⁺|YT-RU|NF|X\r", server: 89.185.80.207, port: 443, reality-opts: {public-key: OckqA_hf9xp6RUADMaRpkBM6b_qlYeoIVZakJVKXXRA, short-id: "239efe76" }, client-fingerprint: chrome, type: vless, uuid: 677615f7-87d5-5019-a44d-4fc3ff8d59d7, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, servername: vk.cc, network: tcp}
   - {name: "🇺🇸 www.85la.com🇺🇸US²_87|1.7MB/s|31%|GPT⁺|GM|TK|YT|NF|X\r", server: us8.candyfans.win, port: 443, client-fingerprint: chrome, type: vless, uuid: 852650c3-8ae5-4b75-8613-02a197a89309, tls: true, tfo: false, skip-cert-verify: false, servername: us8.candyfans.win, network: ws, ws-opts: {path: /zonnws, headers: {Host: us8.candyfans.win}}}
@@ -417,86 +416,85 @@ proxy-groups:
     type: select
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇭🇰 香港 19
-      - 🇺🇸 美国 846
-      - 🇺🇸 美国 777
-      - 🇺🇸 美国 066
-      - 🇺🇸 美国 806
-      - 🇺🇸 美国 367
-      - 🇭🇰 香港 18
-      - 🇺🇸 美国 941
-      - 🇺🇸 美国 739
-      - 🇯🇵 日本 36
-      - 🇺🇸 美国 106
-      - 🇺🇸 美国 922
-      - 🇺🇸 美国 184
-      - 🇺🇸 美国 690
-      - 🇺🇸 美国 967
-      - 🇩🇪 德国 04
-      - 🇭🇰 香港家宽 416
-      - 🇺🇸 美国 944
-      - 🇺🇸 美国 324
-      - 🇺🇸 美国 160
-      - 🇺🇸 美国 798
-      - 🇺🇸 美国 287
-      - 🇺🇸 美国 804
-      - 🇺🇸 美国 741
-      - 🇺🇸 美国 853
-      - 🇺🇸 美国 376
-      - 🇺🇸 美国 271
-      - 🇺🇸 美国 471
-      - 🇺🇸 美国 109
-      - 🇷🇺 俄罗斯联邦 16
-      - 🇺🇸 美国 237
+      - 🇺🇸 美国 056
+      - 🇺🇸 美国 142
+      - 🇹🇭 泰国 09
+      - 🇬🇧 英国 15
+      - 🇬🇧 英国 27
+      - 🇺🇸 美国 525
+      - 🇺🇸 美国 023
+      - 🇸🇬 新加坡 46
+      - 🇺🇸 美国 499
+      - 🇺🇸 美国 381
+      - 🇺🇸 美国 172
+      - 🇭🇰 香港 80
+      - 🇮🇳 印度 03
+      - 🇺🇸 美国 845
+      - 🇸🇬 新加坡 08
+      - 🇭🇰 香港家宽 499
+      - 🇺🇸 美国 557
+      - 🇬🇧 英国 23
+      - 🇺🇸 美国 523
+      - 🇺🇸 美国 869
+      - 🇺🇸 美国 822
+      - 🇹🇭 泰国 15
       - 🇺🇸 美国 779
-      - 🇻🇳 越南 01
-      - 🇺🇸 美国 850
-      - 🇺🇸 美国 277
-      - 🇺🇸 美国 383
-      - 🇺🇸 美国 120
-      - 🇺🇸 美国 278
-      - 🇺🇸 美国 904
-      - 🇺🇸 美国 407
-      - 🇺🇸 美国 970
-      - 🇺🇸 美国 070
-      - 🇺🇸 美国 934
-      - 🇺🇸 美国 126
-      - 🇺🇸 美国 387
-      - 🇺🇸 美国 360
-      - 🇺🇸 美国 932
-      - 🇺🇸 美国 034
-      - 🇺🇸 美国 923
-      - 🇺🇸 美国 534
-      - 🇺🇸 美国 885
-      - 🇺🇸 美国 744
-      - 🇺🇸 美国 905
-      - 🇺🇸 美国 701
-      - 🇺🇸 美国 910
-      - 🇺🇸 美国 524
-      - 🇺🇸 美国 202
-      - 🇷🇺 俄罗斯联邦 12
-      - 🇺🇸 美国 449
-      - 🇺🇸 美国 431
-      - 🇺🇸 美国 157
-      - 🇺🇸 美国 072
-      - 🇺🇸 美国 036
-      - 🇺🇸 美国 913
-      - 🇺🇸 美国 945
-      - 🇺🇸 美国 936
-      - 🇺🇸 美国 476
-      - 🇺🇸 美国 679
-      - 🇻🇳 越南 15
-      - 🇭🇰 香港 07
-      - 🇺🇸 美国 924
-      - 🇺🇸 美国 364
-      - 🇺🇸 美国 108
-      - 🇳🇱 荷兰 02
+      - 🇺🇸 美国 762
+      - 🇸🇬 新加坡 18
+      - 🇭🇰 香港 83
+      - 🇸🇬 新加坡 27
+      - 🇺🇸 美国 746
+      - 🇦🇪 阿联酋 10
+      - 🇻🇳 越南 16
+      - 🇸🇬 新加坡 14
+      - 🇺🇸 美国 585
+      - 🇺🇸 美国 028
+      - 🇫🇷 法国 07
+      - 🇦🇺 澳大利亚 01
       - 🇻🇳 越南 14
-      - 🇺🇸 美国 022
-      - 🇯🇵 日本 51
-      - 🇺🇸 美国 446
-      - 🇺🇸 美国 238
-      - 🇺🇸 美国 834
+      - 🇺🇸 美国 246
+      - 🇺🇸 美国 579
+      - 🇫🇷 法国 25
+      - 🇩🇪 德国 09
+      - 🇺🇸 美国 543
+      - 🇺🇸 美国 578
+      - 🇹🇭 泰国 14
+      - 🇦🇪 阿联酋 09
+      - 🇺🇸 美国 507
+      - 🇺🇸 美国 748
+      - 🇰🇷 韩国 22
+      - 🇺🇸 美国 556
+      - 🇹🇭 泰国 17
+      - 🇺🇸 美国 541
+      - 🇺🇸 美国 360
+      - 🇹🇭 泰国 01
+      - 🇭🇰 香港 48
+      - 🇺🇸 美国 497
+      - 🇺🇸 美国 029
+      - 🇺🇸 美国 518
+      - 🇺🇸 美国 239
+      - 🇬🇧 英国 04
+      - 🇭🇰 香港 20
+      - 🇭🇰 香港 46
+      - 🇭🇰 香港 82
+      - 🇹🇼 台湾家宽 04
+      - 🇺🇸 美国 807
+      - 🇺🇸 美国 468
+      - 🇩🇪 德国 27
+      - 🇭🇰 香港家宽 475
+      - 🇯🇵 日本 09
+      - 🇮🇳 印度 17
+      - 🇺🇸 美国 886
+      - 🇺🇸 美国 875
+      - 🇭🇰 香港家宽 479
+      - 🇩🇪 德国 29
+      - 🇬🇧 英国 14
+      - 🇭🇰 香港家宽 508
+      - 🇺🇸 美国 416
+      - 🇭🇰 香港 17
+      - 🇺🇸 美国 190
+      - 🇻🇳 越南 20
+      - 🇭🇰 香港 01
       - "🇺🇸 www.85la.com🇺🇸US²_95|1.6MB/s|27%|GPT⁺|GM|TK|YT|NF|D+|X|KeepHistory\r"
       - "🇺🇸 www.85la.com🇺🇸US²_90|0.4MB/s|34%|GPT⁺|YT-RU|NF|X\r"
       - "🇺🇸 www.85la.com🇺🇸US²_87|1.7MB/s|31%|GPT⁺|GM|TK|YT|NF|X\r"
@@ -805,86 +803,85 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇭🇰 香港 19
-      - 🇺🇸 美国 846
-      - 🇺🇸 美国 777
-      - 🇺🇸 美国 066
-      - 🇺🇸 美国 806
-      - 🇺🇸 美国 367
-      - 🇭🇰 香港 18
-      - 🇺🇸 美国 941
-      - 🇺🇸 美国 739
-      - 🇯🇵 日本 36
-      - 🇺🇸 美国 106
-      - 🇺🇸 美国 922
-      - 🇺🇸 美国 184
-      - 🇺🇸 美国 690
-      - 🇺🇸 美国 967
-      - 🇩🇪 德国 04
-      - 🇭🇰 香港家宽 416
-      - 🇺🇸 美国 944
-      - 🇺🇸 美国 324
-      - 🇺🇸 美国 160
-      - 🇺🇸 美国 798
-      - 🇺🇸 美国 287
-      - 🇺🇸 美国 804
-      - 🇺🇸 美国 741
-      - 🇺🇸 美国 853
-      - 🇺🇸 美国 376
-      - 🇺🇸 美国 271
-      - 🇺🇸 美国 471
-      - 🇺🇸 美国 109
-      - 🇷🇺 俄罗斯联邦 16
-      - 🇺🇸 美国 237
+      - 🇺🇸 美国 056
+      - 🇺🇸 美国 142
+      - 🇹🇭 泰国 09
+      - 🇬🇧 英国 15
+      - 🇬🇧 英国 27
+      - 🇺🇸 美国 525
+      - 🇺🇸 美国 023
+      - 🇸🇬 新加坡 46
+      - 🇺🇸 美国 499
+      - 🇺🇸 美国 381
+      - 🇺🇸 美国 172
+      - 🇭🇰 香港 80
+      - 🇮🇳 印度 03
+      - 🇺🇸 美国 845
+      - 🇸🇬 新加坡 08
+      - 🇭🇰 香港家宽 499
+      - 🇺🇸 美国 557
+      - 🇬🇧 英国 23
+      - 🇺🇸 美国 523
+      - 🇺🇸 美国 869
+      - 🇺🇸 美国 822
+      - 🇹🇭 泰国 15
       - 🇺🇸 美国 779
-      - 🇻🇳 越南 01
-      - 🇺🇸 美国 850
-      - 🇺🇸 美国 277
-      - 🇺🇸 美国 383
-      - 🇺🇸 美国 120
-      - 🇺🇸 美国 278
-      - 🇺🇸 美国 904
-      - 🇺🇸 美国 407
-      - 🇺🇸 美国 970
-      - 🇺🇸 美国 070
-      - 🇺🇸 美国 934
-      - 🇺🇸 美国 126
-      - 🇺🇸 美国 387
-      - 🇺🇸 美国 360
-      - 🇺🇸 美国 932
-      - 🇺🇸 美国 034
-      - 🇺🇸 美国 923
-      - 🇺🇸 美国 534
-      - 🇺🇸 美国 885
-      - 🇺🇸 美国 744
-      - 🇺🇸 美国 905
-      - 🇺🇸 美国 701
-      - 🇺🇸 美国 910
-      - 🇺🇸 美国 524
-      - 🇺🇸 美国 202
-      - 🇷🇺 俄罗斯联邦 12
-      - 🇺🇸 美国 449
-      - 🇺🇸 美国 431
-      - 🇺🇸 美国 157
-      - 🇺🇸 美国 072
-      - 🇺🇸 美国 036
-      - 🇺🇸 美国 913
-      - 🇺🇸 美国 945
-      - 🇺🇸 美国 936
-      - 🇺🇸 美国 476
-      - 🇺🇸 美国 679
-      - 🇻🇳 越南 15
-      - 🇭🇰 香港 07
-      - 🇺🇸 美国 924
-      - 🇺🇸 美国 364
-      - 🇺🇸 美国 108
-      - 🇳🇱 荷兰 02
+      - 🇺🇸 美国 762
+      - 🇸🇬 新加坡 18
+      - 🇭🇰 香港 83
+      - 🇸🇬 新加坡 27
+      - 🇺🇸 美国 746
+      - 🇦🇪 阿联酋 10
+      - 🇻🇳 越南 16
+      - 🇸🇬 新加坡 14
+      - 🇺🇸 美国 585
+      - 🇺🇸 美国 028
+      - 🇫🇷 法国 07
+      - 🇦🇺 澳大利亚 01
       - 🇻🇳 越南 14
-      - 🇺🇸 美国 022
-      - 🇯🇵 日本 51
-      - 🇺🇸 美国 446
-      - 🇺🇸 美国 238
-      - 🇺🇸 美国 834
+      - 🇺🇸 美国 246
+      - 🇺🇸 美国 579
+      - 🇫🇷 法国 25
+      - 🇩🇪 德国 09
+      - 🇺🇸 美国 543
+      - 🇺🇸 美国 578
+      - 🇹🇭 泰国 14
+      - 🇦🇪 阿联酋 09
+      - 🇺🇸 美国 507
+      - 🇺🇸 美国 748
+      - 🇰🇷 韩国 22
+      - 🇺🇸 美国 556
+      - 🇹🇭 泰国 17
+      - 🇺🇸 美国 541
+      - 🇺🇸 美国 360
+      - 🇹🇭 泰国 01
+      - 🇭🇰 香港 48
+      - 🇺🇸 美国 497
+      - 🇺🇸 美国 029
+      - 🇺🇸 美国 518
+      - 🇺🇸 美国 239
+      - 🇬🇧 英国 04
+      - 🇭🇰 香港 20
+      - 🇭🇰 香港 46
+      - 🇭🇰 香港 82
+      - 🇹🇼 台湾家宽 04
+      - 🇺🇸 美国 807
+      - 🇺🇸 美国 468
+      - 🇩🇪 德国 27
+      - 🇭🇰 香港家宽 475
+      - 🇯🇵 日本 09
+      - 🇮🇳 印度 17
+      - 🇺🇸 美国 886
+      - 🇺🇸 美国 875
+      - 🇭🇰 香港家宽 479
+      - 🇩🇪 德国 29
+      - 🇬🇧 英国 14
+      - 🇭🇰 香港家宽 508
+      - 🇺🇸 美国 416
+      - 🇭🇰 香港 17
+      - 🇺🇸 美国 190
+      - 🇻🇳 越南 20
+      - 🇭🇰 香港 01
       - "🇺🇸 www.85la.com🇺🇸US²_95|1.6MB/s|27%|GPT⁺|GM|TK|YT|NF|D+|X|KeepHistory\r"
       - "🇺🇸 www.85la.com🇺🇸US²_90|0.4MB/s|34%|GPT⁺|YT-RU|NF|X\r"
       - "🇺🇸 www.85la.com🇺🇸US²_87|1.7MB/s|31%|GPT⁺|GM|TK|YT|NF|X\r"
@@ -1193,86 +1190,85 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇭🇰 香港 19
-      - 🇺🇸 美国 846
-      - 🇺🇸 美国 777
-      - 🇺🇸 美国 066
-      - 🇺🇸 美国 806
-      - 🇺🇸 美国 367
-      - 🇭🇰 香港 18
-      - 🇺🇸 美国 941
-      - 🇺🇸 美国 739
-      - 🇯🇵 日本 36
-      - 🇺🇸 美国 106
-      - 🇺🇸 美国 922
-      - 🇺🇸 美国 184
-      - 🇺🇸 美国 690
-      - 🇺🇸 美国 967
-      - 🇩🇪 德国 04
-      - 🇭🇰 香港家宽 416
-      - 🇺🇸 美国 944
-      - 🇺🇸 美国 324
-      - 🇺🇸 美国 160
-      - 🇺🇸 美国 798
-      - 🇺🇸 美国 287
-      - 🇺🇸 美国 804
-      - 🇺🇸 美国 741
-      - 🇺🇸 美国 853
-      - 🇺🇸 美国 376
-      - 🇺🇸 美国 271
-      - 🇺🇸 美国 471
-      - 🇺🇸 美国 109
-      - 🇷🇺 俄罗斯联邦 16
-      - 🇺🇸 美国 237
+      - 🇺🇸 美国 056
+      - 🇺🇸 美国 142
+      - 🇹🇭 泰国 09
+      - 🇬🇧 英国 15
+      - 🇬🇧 英国 27
+      - 🇺🇸 美国 525
+      - 🇺🇸 美国 023
+      - 🇸🇬 新加坡 46
+      - 🇺🇸 美国 499
+      - 🇺🇸 美国 381
+      - 🇺🇸 美国 172
+      - 🇭🇰 香港 80
+      - 🇮🇳 印度 03
+      - 🇺🇸 美国 845
+      - 🇸🇬 新加坡 08
+      - 🇭🇰 香港家宽 499
+      - 🇺🇸 美国 557
+      - 🇬🇧 英国 23
+      - 🇺🇸 美国 523
+      - 🇺🇸 美国 869
+      - 🇺🇸 美国 822
+      - 🇹🇭 泰国 15
       - 🇺🇸 美国 779
-      - 🇻🇳 越南 01
-      - 🇺🇸 美国 850
-      - 🇺🇸 美国 277
-      - 🇺🇸 美国 383
-      - 🇺🇸 美国 120
-      - 🇺🇸 美国 278
-      - 🇺🇸 美国 904
-      - 🇺🇸 美国 407
-      - 🇺🇸 美国 970
-      - 🇺🇸 美国 070
-      - 🇺🇸 美国 934
-      - 🇺🇸 美国 126
-      - 🇺🇸 美国 387
-      - 🇺🇸 美国 360
-      - 🇺🇸 美国 932
-      - 🇺🇸 美国 034
-      - 🇺🇸 美国 923
-      - 🇺🇸 美国 534
-      - 🇺🇸 美国 885
-      - 🇺🇸 美国 744
-      - 🇺🇸 美国 905
-      - 🇺🇸 美国 701
-      - 🇺🇸 美国 910
-      - 🇺🇸 美国 524
-      - 🇺🇸 美国 202
-      - 🇷🇺 俄罗斯联邦 12
-      - 🇺🇸 美国 449
-      - 🇺🇸 美国 431
-      - 🇺🇸 美国 157
-      - 🇺🇸 美国 072
-      - 🇺🇸 美国 036
-      - 🇺🇸 美国 913
-      - 🇺🇸 美国 945
-      - 🇺🇸 美国 936
-      - 🇺🇸 美国 476
-      - 🇺🇸 美国 679
-      - 🇻🇳 越南 15
-      - 🇭🇰 香港 07
-      - 🇺🇸 美国 924
-      - 🇺🇸 美国 364
-      - 🇺🇸 美国 108
-      - 🇳🇱 荷兰 02
+      - 🇺🇸 美国 762
+      - 🇸🇬 新加坡 18
+      - 🇭🇰 香港 83
+      - 🇸🇬 新加坡 27
+      - 🇺🇸 美国 746
+      - 🇦🇪 阿联酋 10
+      - 🇻🇳 越南 16
+      - 🇸🇬 新加坡 14
+      - 🇺🇸 美国 585
+      - 🇺🇸 美国 028
+      - 🇫🇷 法国 07
+      - 🇦🇺 澳大利亚 01
       - 🇻🇳 越南 14
-      - 🇺🇸 美国 022
-      - 🇯🇵 日本 51
-      - 🇺🇸 美国 446
-      - 🇺🇸 美国 238
-      - 🇺🇸 美国 834
+      - 🇺🇸 美国 246
+      - 🇺🇸 美国 579
+      - 🇫🇷 法国 25
+      - 🇩🇪 德国 09
+      - 🇺🇸 美国 543
+      - 🇺🇸 美国 578
+      - 🇹🇭 泰国 14
+      - 🇦🇪 阿联酋 09
+      - 🇺🇸 美国 507
+      - 🇺🇸 美国 748
+      - 🇰🇷 韩国 22
+      - 🇺🇸 美国 556
+      - 🇹🇭 泰国 17
+      - 🇺🇸 美国 541
+      - 🇺🇸 美国 360
+      - 🇹🇭 泰国 01
+      - 🇭🇰 香港 48
+      - 🇺🇸 美国 497
+      - 🇺🇸 美国 029
+      - 🇺🇸 美国 518
+      - 🇺🇸 美国 239
+      - 🇬🇧 英国 04
+      - 🇭🇰 香港 20
+      - 🇭🇰 香港 46
+      - 🇭🇰 香港 82
+      - 🇹🇼 台湾家宽 04
+      - 🇺🇸 美国 807
+      - 🇺🇸 美国 468
+      - 🇩🇪 德国 27
+      - 🇭🇰 香港家宽 475
+      - 🇯🇵 日本 09
+      - 🇮🇳 印度 17
+      - 🇺🇸 美国 886
+      - 🇺🇸 美国 875
+      - 🇭🇰 香港家宽 479
+      - 🇩🇪 德国 29
+      - 🇬🇧 英国 14
+      - 🇭🇰 香港家宽 508
+      - 🇺🇸 美国 416
+      - 🇭🇰 香港 17
+      - 🇺🇸 美国 190
+      - 🇻🇳 越南 20
+      - 🇭🇰 香港 01
       - "🇺🇸 www.85la.com🇺🇸US²_95|1.6MB/s|27%|GPT⁺|GM|TK|YT|NF|D+|X|KeepHistory\r"
       - "🇺🇸 www.85la.com🇺🇸US²_90|0.4MB/s|34%|GPT⁺|YT-RU|NF|X\r"
       - "🇺🇸 www.85la.com🇺🇸US²_87|1.7MB/s|31%|GPT⁺|GM|TK|YT|NF|X\r"
@@ -1582,86 +1578,85 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 关注https://github.com/wzdnzd不迷路
-      - 🇭🇰 香港 19
-      - 🇺🇸 美国 846
-      - 🇺🇸 美国 777
-      - 🇺🇸 美国 066
-      - 🇺🇸 美国 806
-      - 🇺🇸 美国 367
-      - 🇭🇰 香港 18
-      - 🇺🇸 美国 941
-      - 🇺🇸 美国 739
-      - 🇯🇵 日本 36
-      - 🇺🇸 美国 106
-      - 🇺🇸 美国 922
-      - 🇺🇸 美国 184
-      - 🇺🇸 美国 690
-      - 🇺🇸 美国 967
-      - 🇩🇪 德国 04
-      - 🇭🇰 香港家宽 416
-      - 🇺🇸 美国 944
-      - 🇺🇸 美国 324
-      - 🇺🇸 美国 160
-      - 🇺🇸 美国 798
-      - 🇺🇸 美国 287
-      - 🇺🇸 美国 804
-      - 🇺🇸 美国 741
-      - 🇺🇸 美国 853
-      - 🇺🇸 美国 376
-      - 🇺🇸 美国 271
-      - 🇺🇸 美国 471
-      - 🇺🇸 美国 109
-      - 🇷🇺 俄罗斯联邦 16
-      - 🇺🇸 美国 237
+      - 🇺🇸 美国 056
+      - 🇺🇸 美国 142
+      - 🇹🇭 泰国 09
+      - 🇬🇧 英国 15
+      - 🇬🇧 英国 27
+      - 🇺🇸 美国 525
+      - 🇺🇸 美国 023
+      - 🇸🇬 新加坡 46
+      - 🇺🇸 美国 499
+      - 🇺🇸 美国 381
+      - 🇺🇸 美国 172
+      - 🇭🇰 香港 80
+      - 🇮🇳 印度 03
+      - 🇺🇸 美国 845
+      - 🇸🇬 新加坡 08
+      - 🇭🇰 香港家宽 499
+      - 🇺🇸 美国 557
+      - 🇬🇧 英国 23
+      - 🇺🇸 美国 523
+      - 🇺🇸 美国 869
+      - 🇺🇸 美国 822
+      - 🇹🇭 泰国 15
       - 🇺🇸 美国 779
-      - 🇻🇳 越南 01
-      - 🇺🇸 美国 850
-      - 🇺🇸 美国 277
-      - 🇺🇸 美国 383
-      - 🇺🇸 美国 120
-      - 🇺🇸 美国 278
-      - 🇺🇸 美国 904
-      - 🇺🇸 美国 407
-      - 🇺🇸 美国 970
-      - 🇺🇸 美国 070
-      - 🇺🇸 美国 934
-      - 🇺🇸 美国 126
-      - 🇺🇸 美国 387
-      - 🇺🇸 美国 360
-      - 🇺🇸 美国 932
-      - 🇺🇸 美国 034
-      - 🇺🇸 美国 923
-      - 🇺🇸 美国 534
-      - 🇺🇸 美国 885
-      - 🇺🇸 美国 744
-      - 🇺🇸 美国 905
-      - 🇺🇸 美国 701
-      - 🇺🇸 美国 910
-      - 🇺🇸 美国 524
-      - 🇺🇸 美国 202
-      - 🇷🇺 俄罗斯联邦 12
-      - 🇺🇸 美国 449
-      - 🇺🇸 美国 431
-      - 🇺🇸 美国 157
-      - 🇺🇸 美国 072
-      - 🇺🇸 美国 036
-      - 🇺🇸 美国 913
-      - 🇺🇸 美国 945
-      - 🇺🇸 美国 936
-      - 🇺🇸 美国 476
-      - 🇺🇸 美国 679
-      - 🇻🇳 越南 15
-      - 🇭🇰 香港 07
-      - 🇺🇸 美国 924
-      - 🇺🇸 美国 364
-      - 🇺🇸 美国 108
-      - 🇳🇱 荷兰 02
+      - 🇺🇸 美国 762
+      - 🇸🇬 新加坡 18
+      - 🇭🇰 香港 83
+      - 🇸🇬 新加坡 27
+      - 🇺🇸 美国 746
+      - 🇦🇪 阿联酋 10
+      - 🇻🇳 越南 16
+      - 🇸🇬 新加坡 14
+      - 🇺🇸 美国 585
+      - 🇺🇸 美国 028
+      - 🇫🇷 法国 07
+      - 🇦🇺 澳大利亚 01
       - 🇻🇳 越南 14
-      - 🇺🇸 美国 022
-      - 🇯🇵 日本 51
-      - 🇺🇸 美国 446
-      - 🇺🇸 美国 238
-      - 🇺🇸 美国 834
+      - 🇺🇸 美国 246
+      - 🇺🇸 美国 579
+      - 🇫🇷 法国 25
+      - 🇩🇪 德国 09
+      - 🇺🇸 美国 543
+      - 🇺🇸 美国 578
+      - 🇹🇭 泰国 14
+      - 🇦🇪 阿联酋 09
+      - 🇺🇸 美国 507
+      - 🇺🇸 美国 748
+      - 🇰🇷 韩国 22
+      - 🇺🇸 美国 556
+      - 🇹🇭 泰国 17
+      - 🇺🇸 美国 541
+      - 🇺🇸 美国 360
+      - 🇹🇭 泰国 01
+      - 🇭🇰 香港 48
+      - 🇺🇸 美国 497
+      - 🇺🇸 美国 029
+      - 🇺🇸 美国 518
+      - 🇺🇸 美国 239
+      - 🇬🇧 英国 04
+      - 🇭🇰 香港 20
+      - 🇭🇰 香港 46
+      - 🇭🇰 香港 82
+      - 🇹🇼 台湾家宽 04
+      - 🇺🇸 美国 807
+      - 🇺🇸 美国 468
+      - 🇩🇪 德国 27
+      - 🇭🇰 香港家宽 475
+      - 🇯🇵 日本 09
+      - 🇮🇳 印度 17
+      - 🇺🇸 美国 886
+      - 🇺🇸 美国 875
+      - 🇭🇰 香港家宽 479
+      - 🇩🇪 德国 29
+      - 🇬🇧 英国 14
+      - 🇭🇰 香港家宽 508
+      - 🇺🇸 美国 416
+      - 🇭🇰 香港 17
+      - 🇺🇸 美国 190
+      - 🇻🇳 越南 20
+      - 🇭🇰 香港 01
       - "🇺🇸 www.85la.com🇺🇸US²_95|1.6MB/s|27%|GPT⁺|GM|TK|YT|NF|D+|X|KeepHistory\r"
       - "🇺🇸 www.85la.com🇺🇸US²_90|0.4MB/s|34%|GPT⁺|YT-RU|NF|X\r"
       - "🇺🇸 www.85la.com🇺🇸US²_87|1.7MB/s|31%|GPT⁺|GM|TK|YT|NF|X\r"
@@ -2144,10 +2139,18 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇭🇰 香港 19
-      - 🇭🇰 香港 18
-      - 🇭🇰 香港家宽 416
-      - 🇭🇰 香港 07
+      - 🇭🇰 香港 80
+      - 🇭🇰 香港家宽 499
+      - 🇭🇰 香港 83
+      - 🇭🇰 香港 48
+      - 🇭🇰 香港 20
+      - 🇭🇰 香港 46
+      - 🇭🇰 香港 82
+      - 🇭🇰 香港家宽 475
+      - 🇭🇰 香港家宽 479
+      - 🇭🇰 香港家宽 508
+      - 🇭🇰 香港 17
+      - 🇭🇰 香港 01
       - 🇭🇰 www.85la.com🇭🇰HK²_99|1.6MB/s|3%|GPT|YT|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK²_98|0.9MB/s|3%|GPT⁺|YT|X
       - 🇭🇰 www.85la.com🇭🇰HK²_97|0.5MB/s|3%|GPT⁺|YT|NF|D+|X
@@ -2273,8 +2276,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇯🇵 日本 36
-      - 🇯🇵 日本 51
+      - 🇯🇵 日本 09
       - "🇯🇵 www.85la.com🇺🇸US¹-JP⁰_5|30.0MB/s|3%|GPT⁺|GM|TK-JP|YT-JP|NF|D+|X|KeepHistory\r"
       - "🇯🇵 www.85la.com🇺🇸US¹-JP⁰_4|5.6MB/s|13%|GPT|GM|TK|YT|NF|D+|X|KeepSucced\r"
       - "🇯🇵 www.85la.com🇺🇸US¹-JP⁰_3|11.7MB/s|3%|GPT⁺|GM|TK|YT-JP|NF|D+|X\r"
@@ -2311,76 +2313,53 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
-      - 🇺🇸 美国 846
-      - 🇺🇸 美国 777
-      - 🇺🇸 美国 066
-      - 🇺🇸 美国 806
-      - 🇺🇸 美国 367
-      - 🇺🇸 美国 941
-      - 🇺🇸 美国 739
-      - 🇺🇸 美国 106
-      - 🇺🇸 美国 922
-      - 🇺🇸 美国 184
-      - 🇺🇸 美国 690
-      - 🇺🇸 美国 967
-      - 🇩🇪 德国 04
-      - 🇺🇸 美国 944
-      - 🇺🇸 美国 324
-      - 🇺🇸 美国 160
-      - 🇺🇸 美国 798
-      - 🇺🇸 美国 287
-      - 🇺🇸 美国 804
-      - 🇺🇸 美国 741
-      - 🇺🇸 美国 853
-      - 🇺🇸 美国 376
-      - 🇺🇸 美国 271
-      - 🇺🇸 美国 471
-      - 🇺🇸 美国 109
-      - 🇷🇺 俄罗斯联邦 16
-      - 🇺🇸 美国 237
+      - 🇺🇸 美国 056
+      - 🇺🇸 美国 142
+      - 🇬🇧 英国 15
+      - 🇬🇧 英国 27
+      - 🇺🇸 美国 525
+      - 🇺🇸 美国 023
+      - 🇺🇸 美国 499
+      - 🇺🇸 美国 381
+      - 🇺🇸 美国 172
+      - 🇺🇸 美国 845
+      - 🇺🇸 美国 557
+      - 🇬🇧 英国 23
+      - 🇺🇸 美国 523
+      - 🇺🇸 美国 869
+      - 🇺🇸 美国 822
       - 🇺🇸 美国 779
-      - 🇺🇸 美国 850
-      - 🇺🇸 美国 277
-      - 🇺🇸 美国 383
-      - 🇺🇸 美国 120
-      - 🇺🇸 美国 278
-      - 🇺🇸 美国 904
-      - 🇺🇸 美国 407
-      - 🇺🇸 美国 970
-      - 🇺🇸 美国 070
-      - 🇺🇸 美国 934
-      - 🇺🇸 美国 126
-      - 🇺🇸 美国 387
+      - 🇺🇸 美国 762
+      - 🇺🇸 美国 746
+      - 🇺🇸 美国 585
+      - 🇺🇸 美国 028
+      - 🇫🇷 法国 07
+      - 🇦🇺 澳大利亚 01
+      - 🇺🇸 美国 246
+      - 🇺🇸 美国 579
+      - 🇫🇷 法国 25
+      - 🇩🇪 德国 09
+      - 🇺🇸 美国 543
+      - 🇺🇸 美国 578
+      - 🇺🇸 美国 507
+      - 🇺🇸 美国 748
+      - 🇺🇸 美国 556
+      - 🇺🇸 美国 541
       - 🇺🇸 美国 360
-      - 🇺🇸 美国 932
-      - 🇺🇸 美国 034
-      - 🇺🇸 美国 923
-      - 🇺🇸 美国 534
-      - 🇺🇸 美国 885
-      - 🇺🇸 美国 744
-      - 🇺🇸 美国 905
-      - 🇺🇸 美国 701
-      - 🇺🇸 美国 910
-      - 🇺🇸 美国 524
-      - 🇺🇸 美国 202
-      - 🇷🇺 俄罗斯联邦 12
-      - 🇺🇸 美国 449
-      - 🇺🇸 美国 431
-      - 🇺🇸 美国 157
-      - 🇺🇸 美国 072
-      - 🇺🇸 美国 036
-      - 🇺🇸 美国 913
-      - 🇺🇸 美国 945
-      - 🇺🇸 美国 936
-      - 🇺🇸 美国 476
-      - 🇺🇸 美国 679
-      - 🇺🇸 美国 924
-      - 🇺🇸 美国 364
-      - 🇺🇸 美国 108
-      - 🇺🇸 美国 022
-      - 🇺🇸 美国 446
-      - 🇺🇸 美国 238
-      - 🇺🇸 美国 834
+      - 🇺🇸 美国 497
+      - 🇺🇸 美国 029
+      - 🇺🇸 美国 518
+      - 🇺🇸 美国 239
+      - 🇬🇧 英国 04
+      - 🇺🇸 美国 807
+      - 🇺🇸 美国 468
+      - 🇩🇪 德国 27
+      - 🇺🇸 美国 886
+      - 🇺🇸 美国 875
+      - 🇩🇪 德国 29
+      - 🇬🇧 英国 14
+      - 🇺🇸 美国 416
+      - 🇺🇸 美国 190
       - "🇺🇸 www.85la.com🇺🇸US²_95|1.6MB/s|27%|GPT⁺|GM|TK|YT|NF|D+|X|KeepHistory\r"
       - "🇺🇸 www.85la.com🇺🇸US²_90|0.4MB/s|34%|GPT⁺|YT-RU|NF|X\r"
       - "🇺🇸 www.85la.com🇺🇸US²_87|1.7MB/s|31%|GPT⁺|GM|TK|YT|NF|X\r"
@@ -2501,6 +2480,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇮🇳 印度 03
+      - 🇹🇼 台湾家宽 04
+      - 🇮🇳 印度 17
       - "🇹🇼 www.85la.com 台湾 01\r"
   - name: 🇸🇬 狮城节点
     type: url-test
@@ -2508,6 +2490,11 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇸🇬 新加坡 46
+      - 🇸🇬 新加坡 08
+      - 🇸🇬 新加坡 18
+      - 🇸🇬 新加坡 27
+      - 🇸🇬 新加坡 14
       - "🇸🇬 www.85la.com🇺🇸US¹-SG⁰_1|5.1MB/s|GPT⁺|GM|TK|YT|NF|D+|X\r"
       - "🇸🇬 www.85la.com🇸🇬SG²_4|10.9MB/s|GPT⁺|GM|YT|NF|X\r"
       - 🇸🇬 www.85la.com🇸🇬SG²_2|33.1MB/s|GPT⁺|GM|TK|YT|NF|D+|X
@@ -2519,6 +2506,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇰🇷 韩国 22
       - 🇰🇷 www.85la.com🇰🇷KR²_2|12.8MB/s|7%|TK|YT-NL|NF|D+|X
       - 🇰🇷 www.85la.com🇰🇷KR²_1|5.4MB/s|7%|TK|YT-NL|NF|X
       - "🇰🇷 www.85la.com🇰🇷KR¹-US⁰_10|0.6MB/s|GM|TK|YT|NF|D+|X|KeepSucced\r"
