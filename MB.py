@@ -90,7 +90,7 @@ def request_with_retry(session, url, max_retries=5, base_delay=3):
 
 def extract_subscription_links(page_content):
     # 正则匹配目标格式：https://mm.mibei77.com/YYYYMM/DD.随机字符.txt
-    pattern = re.compile(r'https?://(?:mm\.mibei77\.com/\d+/\d+\.[a-zA-Z0-9]+|fs\.v2rayse\.com/share/\d+/[a-zA-Z0-9]+)\.txt')
+    pattern = re.compile(r'(https?://mm\.mibei77\.com/\d{4}\.\d{2}/\d{2}\.[a-zA-Z0-9]+\.(?:txt|yaml))')
     return pattern.findall(page_content)
 
 # 替换原create_session和request_with_retry函数
