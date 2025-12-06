@@ -4,18 +4,7 @@ socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: :9090
-dns:
-  enable: true
-  nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
-  fallback:
-    - 8.8.8.8
-    - 8.8.4.4
-    - 1.1.1.1
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
+external-controller: 127.0.0.1:9090
 proxies:
   - {name: 关注https://github.com/wzdnzd不迷路, server: 9.9.9.9, port: 54321, type: ss, cipher: aes-256-cfb, password: febf501b-e19d-4451-8071-aa6144bb8825}
   - {name: 🇩🇪 德国 05, server: 151.243.171.156, port: 443, type: vless, uuid: 669be00c-67b4-4b87-b08f-311c45abced2, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, reality-opts: {public-key: FscaEWx0paNBzL7GWHj4Fll7Xc-KxdhKgTthBAnByWI}, servername: pingless.com, client-fingerprint: chrome, network: tcp}
@@ -63,7 +52,7 @@ proxies:
   - {name: 🇰🇷 韩国 04, server: 121.166.226.161, port: 50001, type: vless, uuid: 78fc9ba9-9c68-4b49-891f-ea9e38bd3b56, tls: true, tfo: false, skip-cert-verify: false, servername: ak.suoni.nyc.mn, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=sjc.o00o.ooo, headers: {Host: ak.suoni.nyc.mn}}}
   - {name: 🇭🇰 香港 35, server: cdnfire.xiaomispeed.com, port: 21104, type: trojan, password: 09aef9c5-faa0-4e3d-9af7-a7a8a0799db0, sni: cdnfire.xiaomispeed.com, skip-cert-verify: false}
   - {name: 🇭🇰 香港 27, server: green2.cdntencentmusic.com, port: 31101, type: trojan, password: 089f7556-3434-424d-9585-ae20b06b8392, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
-  - {name: 🇹🇼 台湾 01, server: yh.miloli.cn, port: 11371, type: ss, cipher: chacha20-ietf-poly1305, password: 86dedd54-f46a-448f-b95a-52ee58f811b1}
+  - {name: 🇨🇳 台湾 01, server: yh.miloli.cn, port: 11371, type: ss, cipher: chacha20-ietf-poly1305, password: 86dedd54-f46a-448f-b95a-52ee58f811b1}
   - {name: 🇭🇰 香港 29, server: green2.cdntencentmusic.com, port: 31101, type: trojan, password: 099ccc15-65b6-44db-8394-6dfeba9e40bb, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
   - {name: 🇸🇬 新加坡 10, server: green2.cdntencentmusic.com, port: 33301, type: trojan, password: ef263daf-b2ed-4d9e-98fa-a193fddabf1c, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
   - {name: 🇭🇰 香港家宽 210, server: 5b2c09e0-suvds0-t2oosc-xm0q.hk3.p5pv.com, port: 80, type: vmess, uuid: 3437f34e-1b77-11eb-8684-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 5b2c09e0-suvds0-t2oosc-xm0q.hk3.p5pv.com}}}
@@ -105,221 +94,112 @@ proxies:
   - {name: 🇺🇸 美国 09, server: 193.124.18.238, port: 2053, type: vless, uuid: 78fc9ba9-9c68-4b49-891f-ea9e38bd3b56, tls: true, tfo: false, skip-cert-verify: false, servername: ak.suoni.nyc.mn, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=sjc.o00o.ooo, headers: {Host: ak.suoni.nyc.mn}}}
   - {name: 🇭🇰 香港家宽 002, server: 5771a208-t6uv40-tbcla6-194tt.hk3.p5pv.com, port: 80, type: vmess, uuid: 602e99aa-718d-11eb-b77b-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: broadcastlv.chat.bilibili.com}}}
   - {name: 🇺🇸 美国 36, server: 185.193.48.157, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: zwBLM6bBE5YxvwvnKgxAq3ErXpqMYv20}
-  - {name: 🇫🇷 FR法国(yz), server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN"}}
-  - {name: 🇺🇦 乌克兰(yz), server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
-  - {name: 🇭🇰 HK香港(yz), server: 112.186.67.102, port: 18788, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: mot.luyuju.dpdns.org, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: mot.luyuju.dpdns.org}}}
-  - {name: 🇹🇼 TW台湾(yz), server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇳🇱 NL荷兰(yz), server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz), server: 45.83.22.118, port: 5223, type: ss, cipher: chacha20-ietf-poly1305, password: NS8BriBL9gcPEHTXiN66aT}
-  - {name: 🇺🇸 US美国(yz) 2, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&telegram🇨🇳@wangcai2", headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇬🇧 GB英国(yz), server: 25.25.25.253, port: 2096, type: vless, uuid: 38021ff2-6778-4363-92b1-d70ac11acf51, tls: true, tfo: false, skip-cert-verify: false, servername: alanconf.info, network: ws, ws-opts: {path: /, headers: {Host: alanconf.info}}}
-  - {name: 🇧🇬 保加利亚(yz), server: 178.239.123.216, port: 24443, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: /, headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇬🇧 GB英国(yz) 2, server: 25.25.25.253, port: 2096, type: vless, uuid: 38021ff2-6778-4363-92b1-d70ac11acf51, tls: true, tfo: false, skip-cert-verify: false, servername: alanconf.info, network: ws, ws-opts: {path: /, headers: {Host: alanconf.info}}}
-  - {name: 🇺🇸 US美国(yz) 3, server: 23.247.137.64, port: 443, type: trojan, password: 3c4e10af98c30972, sni: n2.gladns.com, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-service-name: db}}
-  - {name: 🇹🇼 TW台湾(yz) 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇹🇼 TW台湾(yz) 3, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇺🇸 US美国(yz) 4, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10"}}
-  - {name: 🇭🇰 HK香港(yz) 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 5, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇸🇬 SG新加坡(yz), server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&telegram🇨🇳@wangcai2", headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇺🇸 US美国(yz) 6, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "?ed=2048"}}
-  - {name: 🇺🇸 US美国(yz) 7, server: zyipv6.pai50288.uk, port: 55588, type: ss, cipher: aes-128-gcm, password: XMj65epCcyjN6DSqz0W0VLlZWaW+XLQdMftFQIXff6s=}
-  - {name: 🇺🇸 US美国(yz) 8, server: 185.103.110.67, port: 18282, type: ss, cipher: aes-128-gcm, password: 1z6g07dsgi2jv8s8jss4}
-  - {name: 🇺🇸 US美国(yz) 9, server: 2001:41d0:20a:800::11ca, port: 11847, type: vless, uuid: b59d1dbd-be55-4978-b51e-4e85df641b7b, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
-  - {name: 🇭🇰 HK香港(yz) 3, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz), server: 154.21.85.156, port: 10210, type: vless, uuid: 69310d96-7045-c206-a2d0-f8ae6e49b726, tls: true, tfo: false, skip-cert-verify: false, servername: act12.sni565.netlib.re, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: act12.sni565.netlib.re}}}
+  - {name: 🇫🇷 FR法国(yz), server: 2001:41d0:20a:800::11ca, port: 11847, type: vless, uuid: b59d1dbd-be55-4978-b51e-4e85df641b7b, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
+  - {name: 🇯🇵 JP日本(yz), server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&telegram@wangcai2", headers: {Host: vless3.datatestvless.click}}}
+  - {name: 🇳🇱 NL荷兰(yz), server: clyde.ns.cloudflare.com, port: 443, type: vless, uuid: 02e46039-200d-4ae4-ac90-b0d619f72034, tls: true, tfo: false, skip-cert-verify: false, servername: redlabell.info, network: ws, ws-opts: {path: /aafeuws, headers: {Host: redlabell.info}}}
+  - {name: 🇺🇸 US美国(yz) 2, server: 2001:41d0:20a:800::11ca, port: 11847, type: vless, uuid: b59d1dbd-be55-4978-b51e-4e85df641b7b, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
+  - {name: 🇺🇸 US美国(yz) 3, server: 45.83.22.118, port: 5223, type: ss, cipher: chacha20-ietf-poly1305, password: NS8BriBL9gcPEHTXiN66aT}
+  - {name: 🇭🇰 HK香港(yz), server: fbi.gov, port: 8080, type: vless, uuid: 379e6e2a-761b-4e4d-8c9b-00e020acb051, tls: false, tfo: false, skip-cert-verify: false, servername: daWn-hILl-7BC8.exhume-SKirt-SMIrK.woRKERs.dev, network: ws, ws-opts: {path: /WeSC6uBZUBAU3UhXT0, headers: {Host: daWn-hILl-7BC8.exhume-SKirt-SMIrK.woRKERs.dev}}}
+  - {name: 🇯🇵 JP日本(yz) 2, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: /, headers: {Host: vless3.datatestvless.click}}}
+  - {name: 🇸🇬 SG新加坡(yz), server: fbi.gov, port: 8080, type: vless, uuid: 379e6e2a-761b-4e4d-8c9b-00e020acb051, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /WeSC6uBZUBAU3UhXT0, headers: {Host: dawn-hill-7bc8.exhume-skirt-smirk.workers.dev}}}
+  - {name: 🇺🇸 US美国(yz) 4, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
+  - {name: 🇭🇰 HK香港(yz) 2, server: www.udacity.com, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
+  - {name: 🇯🇵 JP日本(yz) 3, server: 112.186.67.102, port: 18788, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: zybs.worker.ddns-ip.net, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: zybs.worker.ddns-ip.net}}}
+  - {name: 🇺🇸 US美国(yz) 5, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
+  - {name: 🇭🇰 HK香港(yz) 3, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&telegram@freecodes", headers: {Host: vless3.datatestvless.click}}}
+  - {name: 🇺🇸 US美国(yz) 6, server: 38.59.241.155, port: 443, type: vless, uuid: 69310d96-7045-c206-a2d0-f8ae6e49b726, tls: true, tfo: false, skip-cert-verify: false, servername: act12.sni565.netlib.re, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: act12.sni565.netlib.re}}}
   - {name: 🇸🇬 SG新加坡(yz) 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
-  - {name: 🇭🇰 HK香港(yz) 4, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 4, server: 154.21.203.45, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu---jp.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu---jp.netlib.re}}}
+  - {name: 🇭🇰 HK香港(yz) 5, server: 43.161.222.97, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu---jp.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu---jp.netlib.re}}}
+  - {name: 🇭🇰 HK香港(yz) 6, server: 8.212.57.67, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
+  - {name: 🇭🇰 HK香港(yz) 7, server: n1761184273.mv7wh.tech, port: 443, type: vless, uuid: a4c6bbd7-6ea5-44b2-9829-08f5ae615d49, tls: true, tfo: false, skip-cert-verify: false, servername: n1761184273.mv7wh.tech, network: ws, ws-opts: {path: /a4c6bbd7-6ea5-44b2-9829-08f5ae615d49, headers: {Host: n1761184273.mv7wh.tech}}}
+  - {name: 🇭🇰 HK香港(yz) 8, server: 43.161.222.233, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu---jp.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu---jp.netlib.re}}}
+  - {name: 🇭🇰 HK香港(yz) 9, server: 154.21.203.45, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
+  - {name: 🇺🇸 US美国(yz) 7, server: 141.227.140.217, port: 23990, type: vless, uuid: 5afe0624-a873-4cb8-b4eb-cea6c41a9e52, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
+  - {name: 🇺🇦 乌克兰(yz), server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
+  - {name: 🇭🇰 HK香港(yz) 10, server: 8.212.57.67, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu---jp.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu---jp.netlib.re}}}
+  - {name: 🇺🇸 US美国(yz) 8, server: 23.247.137.64, port: 443, type: trojan, password: 3c4e10af98c30972, sni: n2.gladns.com, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-service-name: db}}
+  - {name: 🇯🇵 JP日本(yz) 4, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&telegram@wangcai2", headers: {Host: vless3.datatestvless.click}}}
+  - {name: 🇭🇰 HK香港(yz) 11, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&Telegram@freecodes", headers: {Host: vless3.datatestvless.click}}}
+  - {name: 🇭🇰 HK香港(yz) 12, server: 43.161.222.233, port: 443, type: vless, uuid: 69310d96-7045-c206-a2d0-f8ae6e49b726, tls: true, tfo: false, skip-cert-verify: false, servername: act12.sni565.netlib.re, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: act12.sni565.netlib.re}}}
+  - {name: 🇭🇰 HK香港(yz) 13, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 9, server: all.tellmethetrue.shop, port: 443, type: vless, uuid: e4824193-4f54-453b-d037-88368e85ef0e, tls: true, tfo: false, skip-cert-verify: false, servername: pqh30v5.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}}
+  - {name: 🇭🇰 HK香港(yz) 14, server: 8.218.189.27, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
+  - {name: 🇭🇰 HK香港(yz) 15, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇸🇬 SG新加坡(yz) 3, server: 46.3.193.56, port: 9999, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
+  - {name: 🇯🇵 JP日本(yz) 5, server: 116.206.93.131, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
   - {name: 🇺🇸 US美国(yz) 10, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&telegram@wangcai2", headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇺🇸 US美国(yz) 11, server: 2001:41d0:ab02::2:0:3b5, port: 53025, type: vless, uuid: 4ba7deb3-83a9-48d2-ad8a-e115183b1e6d, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
-  - {name: 🇹🇼 TW台湾(yz) 4, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
+  - {name: 🇨🇳 TW台湾(yz), server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
+  - {name: 🇫🇷 FR法国(yz) 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048"}}
+  - {name: 🇫🇷 FR法国(yz) 3, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇯🇵 JP日本(yz) 6, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&Telegram@freecodes", headers: {Host: vless3.datatestvless.click}}}
+  - {name: 🇫🇷 FR法国(yz) 4, server: 2001:41d0:701:1000::3aff, port: 48108, type: vless, uuid: fb0f51c7-07c0-42dc-9fa5-2b7b609a152d, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
+  - {name: 🇺🇸 US美国(yz) 11, server: 2001:41d0:701:1000::275, port: 58067, type: vless, uuid: 43763d8b-b1a3-4101-9ccb-84d2c0c53847, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
   - {name: 🇺🇸 US美国(yz) 12, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: /, headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇺🇸 US美国(yz) 13, server: 25.25.25.253, port: 2096, type: vless, uuid: 38021ff2-6778-4363-92b1-d70ac11acf51, tls: true, tfo: false, skip-cert-verify: false, servername: alanconf.info, network: ws, ws-opts: {path: /, headers: {Host: alanconf.info}}}
-  - {name: 🇫🇷 FR法国(yz) 2, server: zyipv6.pai50288.uk, port: 55588, type: ss, cipher: aes-128-gcm, password: XMj65epCcyjN6DSqz0W0VLlZWaW+XLQdMftFQIXff6s=}
-  - {name: 🇰🇷 KR韩国(yz), server: 112.186.67.102, port: 18788, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: mot.luyuju.dpdns.org, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: mot.luyuju.dpdns.org}}}
-  - {name: 🇺🇸 US美国(yz) 14, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: /, headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇺🇸 US美国(yz) 15, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
-  - {name: 🇭🇰 HK香港(yz) 5, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇰🇷 KR韩国(yz) 2, server: 112.186.67.102, port: 18788, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: mot.luyuju.dpdns.org, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: mot.luyuju.dpdns.org}}}
-  - {name: 🇭🇰 HK香港(yz) 6, server: 43.165.190.11, port: 42841, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: mot.luyuju.dpdns.org, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: mot.luyuju.dpdns.org}}}
-  - {name: 🇺🇸 US美国(yz) 16, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&telegram@freecodes", headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇹🇼 TW台湾(yz) 5, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇳🇱 NL荷兰(yz) 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 3, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 17, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 18, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 19, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 20, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 3, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 7, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 4, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 5, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 21, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 8, server: 43.165.190.11, port: 42841, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: mot.luyuju.dpdns.org, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: mot.luyuju.dpdns.org}}}
-  - {name: 🇺🇸 US美国(yz) 22, server: 74.117.196.232, port: 37934, type: vmess, uuid: 54a0bf6d-f2b5-4b2a-942c-798fb129527e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /speedtest, headers: {Host: imafake.locker}}}
-  - {name: 🇳🇱 NL荷兰(yz) 6, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 4, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 7, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 9, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 23, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 10, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 8, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 11, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&telegram@freecodes", headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇺🇸 US美国(yz) 24, server: 2001:41d0:701:1000::3aff, port: 48108, type: vless, uuid: fb0f51c7-07c0-42dc-9fa5-2b7b609a152d, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
-  - {name: 🇺🇸 US美国(yz) 25, server: 2001:41d0:701:1000::275, port: 58067, type: vless, uuid: 43763d8b-b1a3-4101-9ccb-84d2c0c53847, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
-  - {name: 🇳🇱 NL荷兰(yz) 9, server: zyipv6.pai50288.uk, port: 55588, type: ss, cipher: aes-128-gcm, password: XMj65epCcyjN6DSqz0W0VLlZWaW+XLQdMftFQIXff6s=}
-  - {name: 🇺🇸 US美国(yz) 26, server: 45.83.20.206, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: g5RQoxQuVtnFv3Xxsa8edPisXNPnyWKy}
-  - {name: 🇺🇸 US美国(yz) 27, server: v33.hdacd.com, port: 30833, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 12, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&Telegram@freecodes", headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇯🇵 JP日本(yz), server: 43.165.190.11, port: 42841, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: mot.luyuju.dpdns.org, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: mot.luyuju.dpdns.org}}}
-  - {name: 🇸🇬 SG新加坡(yz) 3, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&Telegram🇨🇳@WangCai2", headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇹🇼 TW台湾(yz) 6, server: 45.83.20.206, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: g5RQoxQuVtnFv3Xxsa8edPisXNPnyWKy}
-  - {name: 🇺🇸 US美国(yz) 28, server: 45.83.20.206, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: g5RQoxQuVtnFv3Xxsa8edPisXNPnyWKy}
-  - {name: 🇸🇬 SG新加坡(yz) 4, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&telegram@wangcai2", headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇭🇰 HK香港(yz) 13, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&Telegram🇨🇳@WangCai2", headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇫🇷 FR法国(yz) 5, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 29, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048"}}
-  - {name: 🇺🇸 US美国(yz) 30, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇧🇬 保加利亚(yz) 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
-  - {name: 🇭🇰 HK香港(yz) 14, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇫🇷 FR法国(yz) 6, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇫🇷 FR法国(yz) 7, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "?ed=2048"}}
-  - {name: 🇭🇰 HK香港(yz) 15, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
+  - {name: 🇺🇸 US美国(yz) 13, server: 2001:41d0:701:1000::3aff, port: 48108, type: vless, uuid: fb0f51c7-07c0-42dc-9fa5-2b7b609a152d, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
+  - {name: 🇭🇰 HK香港(yz) 16, server: x.cf.090227.xyz, port: 2096, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
+  - {name: 🇺🇸 US美国(yz) 14, server: 2001:41d0:701:1000::275, port: 58067, type: vless, uuid: 43763d8b-b1a3-4101-9ccb-84d2c0c53847, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
+  - {name: 🇯🇵 JP日本(yz) 7, server: 43.165.190.11, port: 42841, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: mot.morisi.ggff.net, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: mot.morisi.ggff.net}}}
+  - {name: 🇨🇳 TW台湾(yz) 2, server: 175.205.95.168, port: 50001, type: vless, uuid: 69310d96-7045-c206-a2d0-f8ae6e49b726, tls: true, tfo: false, skip-cert-verify: false, servername: act12.sni565.netlib.re, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: act12.sni565.netlib.re}}}
+  - {name: 🇺🇸 US美国(yz) 15, server: 45.83.22.118, port: 8443, type: ss, cipher: aes-256-gcm, password: 6af24790-76c9-49d3-bbe0-01285239e57d}
+  - {name: 🇭🇰 HK香港(yz) 17, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 5, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10"}}
+  - {name: 🇫🇷 FR法国(yz) 6, server: 2001:bc8:32d7:13a::2, port: 55009, type: vmess, uuid: 093e2946-aa16-492a-a139-4c6038ad3e1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: www.bing.com}}}
+  - {name: 🇫🇷 FR法国(yz) 7, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1"}}
   - {name: 🇫🇷 FR法国(yz) 8, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇳🇱 NL荷兰(yz) 10, server: 158.101.11.204, port: 15805, type: trojan, password: iwangjie, sni: nodes.830901.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: nodes.830901.xyz}}}
-  - {name: 🇳🇱 NL荷兰(yz) 11, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048"}}
-  - {name: 🇺🇸 US美国(yz) 31, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇬🇧 GB英国(yz) 3, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 32, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 16, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 17, server: 25.25.25.253, port: 2096, type: vless, uuid: 38021ff2-6778-4363-92b1-d70ac11acf51, tls: true, tfo: false, skip-cert-verify: false, servername: alanconf.info, network: ws, ws-opts: {path: /, headers: {Host: alanconf.info}}}
-  - {name: 🇬🇧 GB英国(yz) 4, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 5, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 18, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 19, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 6, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 33, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 34, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇯🇵 JP日本(yz) 2, server: 43.165.190.11, port: 42841, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: mot.luyuju.dpdns.org, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: mot.luyuju.dpdns.org}}}
-  - {name: 🇫🇷 FR法国(yz) 9, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 7, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
-  - {name: 🇬🇧 GB英国(yz) 7, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 10, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇳🇱 NL荷兰(yz) 12, server: 45.83.22.118, port: 8443, type: ss, cipher: aes-256-gcm, password: 6af24790-76c9-49d3-bbe0-01285239e57d}
-  - {name: 🇺🇸 US美国(yz) 35, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇭🇰 HK香港(yz) 20, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
-  - {name: 🇺🇸 US美国(yz) 36, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10"}}
-  - {name: 🇩🇪 DE德国(yz), server: 141.227.172.96, port: 56089, type: vless, uuid: 2d535288-d08e-4de4-b674-fd8cb3c6e4d3, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
-  - {name: 🇺🇸 US美国(yz) 37, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
-  - {name: 🇺🇸 US美国(yz) 38, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
-  - {name: 🇧🇬 保加利亚(yz) 3, server: 178.239.123.216, port: 24443, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: vless3.datatestvless.click}}}
-  - {name: 🇺🇸 US美国(yz) 39, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇺🇸 US美国(yz) 40, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇷🇺 RU俄罗斯(yz), server: 45.14.245.2, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP}
-  - {name: 🇺🇸 US美国(yz) 41, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 42, server: 2001:bc8:32d7:13a::2, port: 55009, type: vmess, uuid: 093e2946-aa16-492a-a139-4c6038ad3e1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: www.bing.com}}}
-  - {name: 🇺🇸 US美国(yz) 43, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 44, server: 45.83.22.118, port: 8443, type: ss, cipher: aes-256-gcm, password: 6af24790-76c9-49d3-bbe0-01285239e57d}
-  - {name: 🇺🇸 US美国(yz) 45, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
-  - {name: 🇺🇸 US美国(yz) 46, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 US美国(yz) 47, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN"}}
-  - {name: 🇺🇸 US美国(yz) 48, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 49, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 50, server: 2001:bc8:32d7:13a::2, port: 55009, type: vmess, uuid: 093e2946-aa16-492a-a139-4c6038ad3e1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: www.bing.com}}}
-  - {name: 🇺🇸 US美国(yz) 51, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
-  - {name: 🇫🇷 FR法国(yz) 11, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: 2001:bc8:32d7:302::10, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇫🇷 FR法国(yz) 12, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇯🇵 JP日本(yz) 8, server: 20.247.137.183, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu---jp.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu---jp.netlib.re}}}
+  - {name: 🇫🇷 FR法国(yz) 9, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 10, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 11, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 12, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
+  - {name: 🇺🇸 US美国(yz) 16, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
+  - {name: 🇫🇷 FR法国(yz) 13, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "?ed=2048"}}
+  - {name: 🇬🇧 GB英国(yz), server: 185.138.164.228, port: 700, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: zybs.worker.ddns-ip.net, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: zybs.worker.ddns-ip.net}}}
+  - {name: 🇸🇬 SG新加坡(yz) 4, server: 34.92.187.216, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
+  - {name: 🇭🇰 HK香港(yz) 18, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇩🇪 DE德国(yz), server: npmjs.com, port: 80, type: vless, uuid: 82de262c-cd5e-402f-a709-f6979fc7c93e, tls: false, tfo: false, skip-cert-verify: false, servername: fragrant-star-ebf2.daheg47484.workers.dev, network: ws, ws-opts: {path: /, headers: {Host: fragrant-star-ebf2.daheg47484.workers.dev}}}
+  - {name: 🇺🇸 US美国(yz) 17, server: www.udacity.com, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-s-g.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-s-g.netlib.re}}}
+  - {name: 🇯🇵 JP日本(yz) 9, server: x.cf.090227.xyz, port: 2096, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu---jp.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu---jp.netlib.re}}}
+  - {name: 🇭🇰 HK香港(yz) 19, server: www.udacity.com, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu---jp.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu---jp.netlib.re}}}
+  - {name: 🇺🇸 US美国(yz) 18, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&telegram🇨🇳@wangcai2", headers: {Host: vless3.datatestvless.click}}}
+  - {name: 🇫🇷 FR法国(yz) 14, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: 2001:bc8:32d7:302::10, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇯🇵 JP日本(yz) 10, server: 46.3.193.14, port: 30003, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu---jp.netlib.re, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu---jp.netlib.re}}}
+  - {name: 🇫🇷 FR法国(yz) 15, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN"}}
+  - {name: 🇫🇷 FR法国(yz) 16, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
+  - {name: 🇯🇵 JP日本(yz) 11, server: 154.17.24.128, port: 1028, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: ennyfe.zipgd3vx91o.ddns-ip.net, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: ennyfe.zipgd3vx91o.ddns-ip.net}}}
+  - {name: 🇸🇬 SG新加坡(yz) 5, server: 210.87.111.61, port: 39738, type: vless, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, tls: true, tfo: false, skip-cert-verify: false, servername: vless3.datatestvless.click, network: ws, ws-opts: {path: "/?ed=2560&Telegram🇨🇳@WangCai2", headers: {Host: vless3.datatestvless.click}}}
+  - {name: 🇫🇷 FR法国(yz) 17, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇳🇱 NL荷兰(yz) 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 19, server: 45.83.22.118, port: 5223, type: ss, cipher: chacha20-ietf-poly1305, password: NS8BriBL9gcPEHTXiN66aT}
+  - {name: 🇺🇸 US美国(yz) 2 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
+  - {name: 🇺🇸 US美国(yz) 3 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
+  - {name: 🇸🇬 SG新加坡(yz) 6, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
   - {name: 🇺🇦 乌克兰(yz) 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
-  - {name: 🇹🇼 TW台湾(yz) 8, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇳🇱 NL荷兰(yz) 13, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 52, server: 45.83.22.118, port: 5223, type: ss, cipher: chacha20-ietf-poly1305, password: NS8BriBL9gcPEHTXiN66aT}
-  - {name: 🇺🇸 US美国(yz) 2 2, server: 23.247.137.64, port: 443, type: trojan, password: 3c4e10af98c30972, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 2 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇹🇼 TW台湾(yz) 3 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇺🇸 US美国(yz) 3 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇭🇰 HK香港(yz) 21, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 4 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 5 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 6 2, server: zyipv6.pai50288.uk, port: 55588, type: ss, cipher: aes-128-gcm, password: XMj65epCcyjN6DSqz0W0VLlZWaW+XLQdMftFQIXff6s=}
-  - {name: 🇺🇸 US美国(yz) 7 2, server: 185.103.110.67, port: 18282, type: ss, cipher: aes-128-gcm, password: 1z6g07dsgi2jv8s8jss4}
+  - {name: 🇺🇸 US美国(yz) 4 2, server: 23.247.137.64, port: 443, type: trojan, password: 3c4e10af98c30972, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 20, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇭🇰 HK香港(yz) 2 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇸🇬 SG新加坡(yz) 5, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
-  - {name: 🇭🇰 HK香港(yz) 3 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 4 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
-  - {name: 🇫🇷 FR法国(yz) 2 2, server: zyipv6.pai50288.uk, port: 55588, type: ss, cipher: aes-128-gcm, password: XMj65epCcyjN6DSqz0W0VLlZWaW+XLQdMftFQIXff6s=}
-  - {name: 🇺🇸 US美国(yz) 8 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
-  - {name: 🇭🇰 HK香港(yz) 4 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 5 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇳🇱 NL荷兰(yz) 2 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 3 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 9 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 10 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 11 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 12 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 3 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 5 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 4 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 5 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 13 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 14 2, server: 74.117.196.232, port: 37934, type: vmess, uuid: 54a0bf6d-f2b5-4b2a-942c-798fb129527e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /speedtest, headers: {Host: imafake.locker}}}
-  - {name: 🇳🇱 NL荷兰(yz) 6 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 4 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 7 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 6 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 15 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 7 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 8 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 9 2, server: zyipv6.pai50288.uk, port: 55588, type: ss, cipher: aes-128-gcm, password: XMj65epCcyjN6DSqz0W0VLlZWaW+XLQdMftFQIXff6s=}
-  - {name: 🇺🇸 US美国(yz) 16 2, server: 45.83.20.206, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: g5RQoxQuVtnFv3Xxsa8edPisXNPnyWKy}
-  - {name: 🇺🇸 US美国(yz) 17 2, server: v33.hdacd.com, port: 30833, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 6 2, server: 45.83.20.206, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: g5RQoxQuVtnFv3Xxsa8edPisXNPnyWKy}
-  - {name: 🇺🇸 US美国(yz) 18 2, server: 45.83.20.206, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: g5RQoxQuVtnFv3Xxsa8edPisXNPnyWKy}
-  - {name: 🇫🇷 FR法国(yz) 5 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 19 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 20 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇧🇬 保加利亚(yz) 4, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
-  - {name: 🇭🇰 HK香港(yz) 8 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇨🇳 TW台湾(yz) 3, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
+  - {name: 🇫🇷 FR法国(yz) 18, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 2 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 5 2, server: 45.83.22.118, port: 8443, type: ss, cipher: aes-256-gcm, password: 6af24790-76c9-49d3-bbe0-01285239e57d}
+  - {name: 🇭🇰 HK香港(yz) 3 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 3 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 4 2, server: 2001:bc8:32d7:13a::2, port: 55009, type: vmess, uuid: 093e2946-aa16-492a-a139-4c6038ad3e1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: www.bing.com}}}
+  - {name: 🇫🇷 FR法国(yz) 5 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: 2001:bc8:32d7:302::10}}}
   - {name: 🇫🇷 FR法国(yz) 6 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇫🇷 FR法国(yz) 7 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇭🇰 HK香港(yz) 9 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 7 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
   - {name: 🇫🇷 FR法国(yz) 8 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇳🇱 NL荷兰(yz) 10 2, server: 158.101.11.204, port: 15805, type: trojan, password: iwangjie, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 11 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 21 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇬🇧 GB英国(yz) 8, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 22 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 10 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 2 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 3 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 11 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 12 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 4 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 23 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 24 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 9 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 7 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
-  - {name: 🇬🇧 GB英国(yz) 5 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 10 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇳🇱 NL荷兰(yz) 12 2, server: 45.83.22.118, port: 8443, type: ss, cipher: aes-256-gcm, password: 6af24790-76c9-49d3-bbe0-01285239e57d}
-  - {name: 🇺🇸 US美国(yz) 25 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇭🇰 HK香港(yz) 13 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
-  - {name: 🇺🇸 US美国(yz) 26 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 27 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
-  - {name: 🇺🇸 US美国(yz) 28 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
-  - {name: 🇺🇸 US美国(yz) 29 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇺🇸 US美国(yz) 30 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇷🇺 RU俄罗斯(yz) 2, server: 45.14.245.2, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP}
-  - {name: 🇺🇸 US美国(yz) 31 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 32 2, server: 2001:bc8:32d7:13a::2, port: 55009, type: vmess, uuid: 093e2946-aa16-492a-a139-4c6038ad3e1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: www.bing.com}}}
-  - {name: 🇺🇸 US美国(yz) 33 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 34 2, server: 45.83.22.118, port: 8443, type: ss, cipher: aes-256-gcm, password: 6af24790-76c9-49d3-bbe0-01285239e57d}
-  - {name: 🇺🇸 US美国(yz) 35 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
-  - {name: 🇺🇸 US美国(yz) 36 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 37 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 38 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 39 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 40 2, server: 2001:bc8:32d7:13a::2, port: 55009, type: vmess, uuid: 093e2946-aa16-492a-a139-4c6038ad3e1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: www.bing.com}}}
-  - {name: 🇺🇸 US美国(yz) 41 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
-  - {name: 🇫🇷 FR法国(yz) 11 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 9 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 10 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
+  - {name: 🇺🇸 US美国(yz) 6 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
+  - {name: 🇫🇷 FR法国(yz) 11 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇭🇰 HK香港(yz) 4 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 12 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 13 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 14 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 15 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇳🇱 NL荷兰(yz) 3, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇫🇷 www.85la.com🇫🇷FR²_4|0.1MB/s|GPT⁺|TK|NF|X|KeepHistory, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
   - {name: 🇫🇷 www.85la.com🇫🇷FR²_10|0.6MB/s|GPT⁺|YT|TK|NF|X, server: 2001:bc8:32d7:13a::2, port: 55009, type: vmess, uuid: 093e2946-aa16-492a-a139-4c6038ad3e1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: www.bing.com}}}
   - {name: 🇫🇷 www.85la.com🇫🇷FR²_16|0.2MB/s|GPT⁺|YT|TK|NF|X|KeepHistory, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
@@ -396,7 +276,7 @@ proxies:
   - {name: 🇺🇸 www.85la.com🇺🇸US²_4|4.6MB/s|33%|YT, server: 89.116.193.40, port: 34045, type: vless, uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a, tls: true, tfo: false, skip-cert-verify: false, reality-opts: {public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA, short-id: "e8ab71d0" }, servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me, client-fingerprint: chrome, network: tcp}
   - {name: 🇫🇷 www.85la.com🇫🇷FR²_20|5.6MB/s|41%|GPT⁺|YT|TK|NF|X, server: 141.227.132.7, port: 21425, type: vless, uuid: 4c3e4950-5c09-4a19-a25f-ce6294115275, tls: false, tfo: false, skip-cert-verify: false, client-fingerprint: chrome, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
   - {name: 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_1|6.8MB/s|NF, server: 162.159.3.210, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
-  - {name: 🇹🇼 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK, server: 175.205.95.168, port: 50001, type: vless, uuid: 69310d96-7045-c206-a2d0-f8ae6e49b726, tls: true, alpn: [h3], tfo: false, skip-cert-verify: false, servername: act12.sni565.netlib.re, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: act12.sni565.netlib.re}}}
+  - {name: 🇨🇳 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK, server: 175.205.95.168, port: 50001, type: vless, uuid: 69310d96-7045-c206-a2d0-f8ae6e49b726, tls: true, alpn: [h3], tfo: false, skip-cert-verify: false, servername: act12.sni565.netlib.re, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: act12.sni565.netlib.re}}}
   - {name: 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_2|0.2MB/s|TK|NF|D+|X, server: 104.19.173.47, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
   - {name: www.85la.com🇮🇹IT²_1|10.0MB/s|4%|GPT⁺|YT|TK|NF|D+|X|KeepHistory, server: 141.227.140.217, port: 23990, type: vless, uuid: 5afe0624-a873-4cb8-b4eb-cea6c41a9e52, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
   - {name: 🇺🇸 www.85la.com🇺🇸US⁻¹_1|4.9MB/s, server: 104.16.45.135, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
@@ -462,7 +342,7 @@ proxies:
   - {name: 🇺🇸 www.85la.com🇳🇱NL²_6|0.3MB/s|0%|GPT⁺|YT-US|TK|NF|D+|X|sinspired/subs-check, server: delilah.ns.cloudflare.com, port: 443, type: vless, uuid: d37d61da-e50d-4f7f-9969-7f0136f97953, tls: true, tfo: false, skip-cert-verify: false, servername: hazmkardan.info, client-fingerprint: chrome, network: ws, ws-opts: {path: /fwgisws, headers: {Host: hazmkardan.info}}}
   - {name: www.85la.com🇰🇿KZ²_1|0.1MB/s|0%|KeepHistory, server: 178.236.16.98, port: 35728, type: vless, uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93, tls: true, tfo: false, skip-cert-verify: false, reality-opts: {public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng, short-id: "69a2" }, servername: yahoo.com, client-fingerprint: chrome, network: tcp}
   - {name: 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_2|2.4MB/s|YT|TK|NF|D+, server: 104.21.30.124, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-s-g.netlib.re, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-s-g.netlib.re}}}
-  - {name: 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X, server: 38.59.241.155, port: 443, type: vless, uuid: 69310d96-7045-c206-a2d0-f8ae6e49b726, tls: true, alpn: [h3], tfo: false, skip-cert-verify: false, servername: act12.sni565.netlib.re, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: act12.sni565.netlib.re}}}
+  - {name: 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X, server: 38.59.241.155, port: 443, type: vless, uuid: 69310d96-7045-c206-a2d0-f8ae6e49b726, tls: true, alpn: [h3], tfo: false, skip-cert-verify: false, servername: act12.sni565.netlib.re, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: act12.sni565.netlib.re}}}
   - {name: 🇭🇰 www.85la.com🇭🇰HK⁻¹_1|22.8MB/s|YT|D+|X, server: download.yunzhongzhuan.com, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
   - {name: www.85la.com|4.9MB/s|YT|TK|X|sinspired/subs-check, server: wolfy.ufavpn.ru, port: 52900, type: vless, uuid: 97e7c83c-9346-49b4-85a5-1e3bbf7488b9, tls: true, tfo: false, skip-cert-verify: false, reality-opts: {public-key: AjYSCSFHfqOg-NbP_ngiRvJkKNKZXuHNDa1sJd4TRRQ, short-id: "1fbc" }, servername: ozon.ru, client-fingerprint: chrome, network: tcp}
   - {name: 🇺🇸 www.85la.com🇫🇷FR²_2|0.6MB/s|0%|GPT⁺|YT-US|TK|NF|X|KeepHistory, server: 141.227.172.96, port: 56089, type: vless, uuid: 2d535288-d08e-4de4-b674-fd8cb3c6e4d3, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
@@ -481,7 +361,7 @@ proxies:
   - {name: 🇸🇬 www.85la.com🇸🇬SG⁻¹_1|0.5MB/s|KeepHistory, server: 46.3.193.14, port: 30003, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu---jp.netlib.re, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu---jp.netlib.re}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US⁻¹_1|0.6MB/s|KeepHistory, server: 162.159.62.132, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu---jp.netlib.re, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu---jp.netlib.re}}}
   - {name: 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_1|7.5MB/s|D+, server: 162.159.4.126, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
-  - {name: 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF, server: 154.21.85.156, port: 10210, type: vless, uuid: 69310d96-7045-c206-a2d0-f8ae6e49b726, tls: true, alpn: [h3], tfo: false, skip-cert-verify: false, servername: act12.sni565.netlib.re, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: act12.sni565.netlib.re}}}
+  - {name: 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF, server: 154.21.85.156, port: 10210, type: vless, uuid: 69310d96-7045-c206-a2d0-f8ae6e49b726, tls: true, alpn: [h3], tfo: false, skip-cert-verify: false, servername: act12.sni565.netlib.re, client-fingerprint: random, network: ws, ws-opts: {path: /proxyip=tw.sni2025.netlib.re, headers: {Host: act12.sni565.netlib.re}}}
   - {name: 🇭🇰 www.85la.com🇭🇰HK¹⁺_2|10.6MB/s|D+, server: www.shopify.com, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu-h-k.netlib.re, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu-h-k.netlib.re}}}
   - {name: 🇬🇧 www.85la.com🇬🇧GB¹-NL⁰_1|0.3MB/s, server: 172.67.203.94, port: 2086, type: vless, uuid: 7890ce31-9a25-4fd4-90e7-80e5823ff510, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: iioo.iioou.workers.dev}}}
   - {name: 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_2|5.0MB/s|12%|GM|YT|D+, server: 162.159.7.100, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.x-aniu---jp.netlib.re, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.x-aniu---jp.netlib.re}}}
@@ -722,7 +602,7 @@ proxy-groups:
       - 🇰🇷 韩国 04
       - 🇭🇰 香港 35
       - 🇭🇰 香港 27
-      - 🇹🇼 台湾 01
+      - 🇨🇳 台湾 01
       - 🇭🇰 香港 29
       - 🇸🇬 新加坡 10
       - 🇭🇰 香港家宽 210
@@ -764,221 +644,112 @@ proxy-groups:
       - 🇺🇸 美国 09
       - 🇭🇰 香港家宽 002
       - 🇺🇸 美国 36
-      - 🇫🇷 FR法国(yz)
-      - 🇺🇦 乌克兰(yz)
-      - 🇭🇰 HK香港(yz)
-      - 🇹🇼 TW台湾(yz)
-      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz)
+      - 🇫🇷 FR法国(yz)
+      - 🇯🇵 JP日本(yz)
+      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz) 2
-      - 🇬🇧 GB英国(yz)
-      - 🇧🇬 保加利亚(yz)
-      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 3
-      - 🇹🇼 TW台湾(yz) 2
-      - 🇹🇼 TW台湾(yz) 3
+      - 🇭🇰 HK香港(yz)
+      - 🇯🇵 JP日本(yz) 2
+      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz) 4
       - 🇭🇰 HK香港(yz) 2
+      - 🇯🇵 JP日本(yz) 3
       - 🇺🇸 US美国(yz) 5
-      - 🇸🇬 SG新加坡(yz)
-      - 🇺🇸 US美国(yz) 6
-      - 🇺🇸 US美国(yz) 7
-      - 🇺🇸 US美国(yz) 8
-      - 🇺🇸 US美国(yz) 9
       - 🇭🇰 HK香港(yz) 3
+      - 🇺🇸 US美国(yz) 6
       - 🇸🇬 SG新加坡(yz) 2
       - 🇭🇰 HK香港(yz) 4
+      - 🇭🇰 HK香港(yz) 5
+      - 🇭🇰 HK香港(yz) 6
+      - 🇭🇰 HK香港(yz) 7
+      - 🇭🇰 HK香港(yz) 8
+      - 🇭🇰 HK香港(yz) 9
+      - 🇺🇸 US美国(yz) 7
+      - 🇺🇦 乌克兰(yz)
+      - 🇭🇰 HK香港(yz) 10
+      - 🇺🇸 US美国(yz) 8
+      - 🇯🇵 JP日本(yz) 4
+      - 🇭🇰 HK香港(yz) 11
+      - 🇭🇰 HK香港(yz) 12
+      - 🇭🇰 HK香港(yz) 13
+      - 🇺🇸 US美国(yz) 9
+      - 🇭🇰 HK香港(yz) 14
+      - 🇭🇰 HK香港(yz) 15
+      - 🇸🇬 SG新加坡(yz) 3
+      - 🇯🇵 JP日本(yz) 5
       - 🇺🇸 US美国(yz) 10
+      - 🇨🇳 TW台湾(yz)
+      - 🇫🇷 FR法国(yz) 2
+      - 🇫🇷 FR法国(yz) 3
+      - 🇯🇵 JP日本(yz) 6
+      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 11
-      - 🇹🇼 TW台湾(yz) 4
       - 🇺🇸 US美国(yz) 12
       - 🇺🇸 US美国(yz) 13
-      - 🇫🇷 FR法国(yz) 2
-      - 🇰🇷 KR韩国(yz)
+      - 🇭🇰 HK香港(yz) 16
       - 🇺🇸 US美国(yz) 14
+      - 🇯🇵 JP日本(yz) 7
+      - 🇨🇳 TW台湾(yz) 2
       - 🇺🇸 US美国(yz) 15
-      - 🇭🇰 HK香港(yz) 5
-      - 🇰🇷 KR韩国(yz) 2
-      - 🇭🇰 HK香港(yz) 6
-      - 🇺🇸 US美国(yz) 16
-      - 🇹🇼 TW台湾(yz) 5
-      - 🇳🇱 NL荷兰(yz) 2
-      - 🇳🇱 NL荷兰(yz) 3
-      - 🇺🇸 US美国(yz) 17
-      - 🇺🇸 US美国(yz) 18
-      - 🇺🇸 US美国(yz) 19
-      - 🇺🇸 US美国(yz) 20
-      - 🇫🇷 FR法国(yz) 3
-      - 🇭🇰 HK香港(yz) 7
-      - 🇳🇱 NL荷兰(yz) 4
-      - 🇳🇱 NL荷兰(yz) 5
-      - 🇺🇸 US美国(yz) 21
-      - 🇭🇰 HK香港(yz) 8
-      - 🇺🇸 US美国(yz) 22
-      - 🇳🇱 NL荷兰(yz) 6
-      - 🇫🇷 FR法国(yz) 4
-      - 🇳🇱 NL荷兰(yz) 7
-      - 🇭🇰 HK香港(yz) 9
-      - 🇺🇸 US美国(yz) 23
-      - 🇭🇰 HK香港(yz) 10
-      - 🇳🇱 NL荷兰(yz) 8
-      - 🇭🇰 HK香港(yz) 11
-      - 🇺🇸 US美国(yz) 24
-      - 🇺🇸 US美国(yz) 25
-      - 🇳🇱 NL荷兰(yz) 9
-      - 🇺🇸 US美国(yz) 26
-      - 🇺🇸 US美国(yz) 27
-      - 🇭🇰 HK香港(yz) 12
-      - 🇯🇵 JP日本(yz)
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇹🇼 TW台湾(yz) 6
-      - 🇺🇸 US美国(yz) 28
-      - 🇸🇬 SG新加坡(yz) 4
-      - 🇭🇰 HK香港(yz) 13
+      - 🇭🇰 HK香港(yz) 17
       - 🇫🇷 FR法国(yz) 5
-      - 🇺🇸 US美国(yz) 29
-      - 🇺🇸 US美国(yz) 30
-      - 🇧🇬 保加利亚(yz) 2
-      - 🇭🇰 HK香港(yz) 14
       - 🇫🇷 FR法国(yz) 6
       - 🇫🇷 FR法国(yz) 7
-      - 🇭🇰 HK香港(yz) 15
       - 🇫🇷 FR法国(yz) 8
-      - 🇳🇱 NL荷兰(yz) 10
-      - 🇳🇱 NL荷兰(yz) 11
-      - 🇺🇸 US美国(yz) 31
-      - 🇬🇧 GB英国(yz) 3
-      - 🇺🇸 US美国(yz) 32
-      - 🇭🇰 HK香港(yz) 16
-      - 🇭🇰 HK香港(yz) 17
-      - 🇬🇧 GB英国(yz) 4
-      - 🇬🇧 GB英国(yz) 5
-      - 🇭🇰 HK香港(yz) 18
-      - 🇭🇰 HK香港(yz) 19
-      - 🇬🇧 GB英国(yz) 6
-      - 🇺🇸 US美国(yz) 33
-      - 🇺🇸 US美国(yz) 34
-      - 🇯🇵 JP日本(yz) 2
+      - 🇯🇵 JP日本(yz) 8
       - 🇫🇷 FR法国(yz) 9
-      - 🇹🇼 TW台湾(yz) 7
-      - 🇬🇧 GB英国(yz) 7
       - 🇫🇷 FR法国(yz) 10
-      - 🇳🇱 NL荷兰(yz) 12
-      - 🇺🇸 US美国(yz) 35
-      - 🇭🇰 HK香港(yz) 20
-      - 🇺🇸 US美国(yz) 36
-      - 🇩🇪 DE德国(yz)
-      - 🇺🇸 US美国(yz) 37
-      - 🇺🇸 US美国(yz) 38
-      - 🇧🇬 保加利亚(yz) 3
-      - 🇺🇸 US美国(yz) 39
-      - 🇺🇸 US美国(yz) 40
-      - 🇷🇺 RU俄罗斯(yz)
-      - 🇺🇸 US美国(yz) 41
-      - 🇺🇸 US美国(yz) 42
-      - 🇺🇸 US美国(yz) 43
-      - 🇺🇸 US美国(yz) 44
-      - 🇺🇸 US美国(yz) 45
-      - 🇺🇸 US美国(yz) 46
-      - 🇺🇸 US美国(yz) 47
-      - 🇺🇸 US美国(yz) 48
-      - 🇺🇸 US美国(yz) 49
-      - 🇺🇸 US美国(yz) 50
-      - 🇺🇸 US美国(yz) 51
       - 🇫🇷 FR法国(yz) 11
       - 🇫🇷 FR法国(yz) 12
-      - 🇺🇦 乌克兰(yz) 2
-      - 🇹🇼 TW台湾(yz) 8
-      - 🇳🇱 NL荷兰(yz) 13
-      - 🇺🇸 US美国(yz) 52
-      - 🇺🇸 US美国(yz) 2 2
-      - 🇹🇼 TW台湾(yz) 2 2
-      - 🇹🇼 TW台湾(yz) 3 2
-      - 🇺🇸 US美国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 21
-      - 🇺🇸 US美国(yz) 4 2
-      - 🇺🇸 US美国(yz) 5 2
-      - 🇺🇸 US美国(yz) 6 2
-      - 🇺🇸 US美国(yz) 7 2
-      - 🇭🇰 HK香港(yz) 2 2
+      - 🇺🇸 US美国(yz) 16
+      - 🇫🇷 FR法国(yz) 13
+      - 🇬🇧 GB英国(yz)
+      - 🇸🇬 SG新加坡(yz) 4
+      - 🇭🇰 HK香港(yz) 18
+      - 🇩🇪 DE德国(yz)
+      - 🇺🇸 US美国(yz) 17
+      - 🇯🇵 JP日本(yz) 9
+      - 🇭🇰 HK香港(yz) 19
+      - 🇺🇸 US美国(yz) 18
+      - 🇫🇷 FR法国(yz) 14
+      - 🇯🇵 JP日本(yz) 10
+      - 🇫🇷 FR法国(yz) 15
+      - 🇫🇷 FR法国(yz) 16
+      - 🇯🇵 JP日本(yz) 11
       - 🇸🇬 SG新加坡(yz) 5
-      - 🇭🇰 HK香港(yz) 3 2
-      - 🇹🇼 TW台湾(yz) 4 2
+      - 🇫🇷 FR法国(yz) 17
+      - 🇳🇱 NL荷兰(yz) 2
+      - 🇺🇸 US美国(yz) 19
+      - 🇺🇸 US美国(yz) 2 2
+      - 🇺🇸 US美国(yz) 3 2
+      - 🇸🇬 SG新加坡(yz) 6
+      - 🇺🇦 乌克兰(yz) 2
+      - 🇺🇸 US美国(yz) 4 2
+      - 🇭🇰 HK香港(yz) 20
+      - 🇭🇰 HK香港(yz) 2 2
+      - 🇨🇳 TW台湾(yz) 3
+      - 🇫🇷 FR法国(yz) 18
       - 🇫🇷 FR法国(yz) 2 2
-      - 🇺🇸 US美国(yz) 8 2
-      - 🇭🇰 HK香港(yz) 4 2
-      - 🇹🇼 TW台湾(yz) 5 2
-      - 🇳🇱 NL荷兰(yz) 2 2
-      - 🇳🇱 NL荷兰(yz) 3 2
-      - 🇺🇸 US美国(yz) 9 2
-      - 🇺🇸 US美国(yz) 10 2
-      - 🇺🇸 US美国(yz) 11 2
-      - 🇺🇸 US美国(yz) 12 2
+      - 🇺🇸 US美国(yz) 5 2
+      - 🇭🇰 HK香港(yz) 3 2
       - 🇫🇷 FR法国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 5 2
-      - 🇳🇱 NL荷兰(yz) 4 2
-      - 🇳🇱 NL荷兰(yz) 5 2
-      - 🇺🇸 US美国(yz) 13 2
-      - 🇺🇸 US美国(yz) 14 2
-      - 🇳🇱 NL荷兰(yz) 6 2
       - 🇫🇷 FR法国(yz) 4 2
-      - 🇳🇱 NL荷兰(yz) 7 2
-      - 🇭🇰 HK香港(yz) 6 2
-      - 🇺🇸 US美国(yz) 15 2
-      - 🇭🇰 HK香港(yz) 7 2
-      - 🇳🇱 NL荷兰(yz) 8 2
-      - 🇳🇱 NL荷兰(yz) 9 2
-      - 🇺🇸 US美国(yz) 16 2
-      - 🇺🇸 US美国(yz) 17 2
-      - 🇹🇼 TW台湾(yz) 6 2
-      - 🇺🇸 US美国(yz) 18 2
       - 🇫🇷 FR法国(yz) 5 2
-      - 🇺🇸 US美国(yz) 19 2
-      - 🇺🇸 US美国(yz) 20 2
-      - 🇧🇬 保加利亚(yz) 4
-      - 🇭🇰 HK香港(yz) 8 2
       - 🇫🇷 FR法国(yz) 6 2
       - 🇫🇷 FR法国(yz) 7 2
-      - 🇭🇰 HK香港(yz) 9 2
       - 🇫🇷 FR法国(yz) 8 2
-      - 🇳🇱 NL荷兰(yz) 10 2
-      - 🇳🇱 NL荷兰(yz) 11 2
-      - 🇺🇸 US美国(yz) 21 2
-      - 🇬🇧 GB英国(yz) 8
-      - 🇺🇸 US美国(yz) 22 2
-      - 🇭🇰 HK香港(yz) 10 2
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇬🇧 GB英国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 11 2
-      - 🇭🇰 HK香港(yz) 12 2
-      - 🇬🇧 GB英国(yz) 4 2
-      - 🇺🇸 US美国(yz) 23 2
-      - 🇺🇸 US美国(yz) 24 2
       - 🇫🇷 FR法国(yz) 9 2
-      - 🇹🇼 TW台湾(yz) 7 2
-      - 🇬🇧 GB英国(yz) 5 2
       - 🇫🇷 FR法国(yz) 10 2
-      - 🇳🇱 NL荷兰(yz) 12 2
-      - 🇺🇸 US美国(yz) 25 2
-      - 🇭🇰 HK香港(yz) 13 2
-      - 🇺🇸 US美国(yz) 26 2
-      - 🇺🇸 US美国(yz) 27 2
-      - 🇺🇸 US美国(yz) 28 2
-      - 🇺🇸 US美国(yz) 29 2
-      - 🇺🇸 US美国(yz) 30 2
-      - 🇷🇺 RU俄罗斯(yz) 2
-      - 🇺🇸 US美国(yz) 31 2
-      - 🇺🇸 US美国(yz) 32 2
-      - 🇺🇸 US美国(yz) 33 2
-      - 🇺🇸 US美国(yz) 34 2
-      - 🇺🇸 US美国(yz) 35 2
-      - 🇺🇸 US美国(yz) 36 2
-      - 🇺🇸 US美国(yz) 37 2
-      - 🇺🇸 US美国(yz) 38 2
-      - 🇺🇸 US美国(yz) 39 2
-      - 🇺🇸 US美国(yz) 40 2
-      - 🇺🇸 US美国(yz) 41 2
+      - 🇺🇸 US美国(yz) 6 2
       - 🇫🇷 FR法国(yz) 11 2
+      - 🇭🇰 HK香港(yz) 4 2
+      - 🇫🇷 FR法国(yz) 12 2
+      - 🇫🇷 FR法国(yz) 13 2
+      - 🇫🇷 FR法国(yz) 14 2
+      - 🇫🇷 FR法国(yz) 15 2
+      - 🇳🇱 NL荷兰(yz) 3
       - 🇫🇷 www.85la.com🇫🇷FR²_4|0.1MB/s|GPT⁺|TK|NF|X|KeepHistory
       - 🇫🇷 www.85la.com🇫🇷FR²_10|0.6MB/s|GPT⁺|YT|TK|NF|X
       - 🇫🇷 www.85la.com🇫🇷FR²_16|0.2MB/s|GPT⁺|YT|TK|NF|X|KeepHistory
@@ -1055,7 +826,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_4|4.6MB/s|33%|YT
       - 🇫🇷 www.85la.com🇫🇷FR²_20|5.6MB/s|41%|GPT⁺|YT|TK|NF|X
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_1|6.8MB/s|NF
-      - 🇹🇼 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
+      - 🇨🇳 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_2|0.2MB/s|TK|NF|D+|X
       - www.85la.com🇮🇹IT²_1|10.0MB/s|4%|GPT⁺|YT|TK|NF|D+|X|KeepHistory
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|4.9MB/s
@@ -1121,7 +892,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇳🇱NL²_6|0.3MB/s|0%|GPT⁺|YT-US|TK|NF|D+|X|sinspired/subs-check
       - www.85la.com🇰🇿KZ²_1|0.1MB/s|0%|KeepHistory
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_2|2.4MB/s|YT|TK|NF|D+
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
       - 🇭🇰 www.85la.com🇭🇰HK⁻¹_1|22.8MB/s|YT|D+|X
       - www.85la.com|4.9MB/s|YT|TK|X|sinspired/subs-check
       - 🇺🇸 www.85la.com🇫🇷FR²_2|0.6MB/s|0%|GPT⁺|YT-US|TK|NF|X|KeepHistory
@@ -1140,7 +911,7 @@ proxy-groups:
       - 🇸🇬 www.85la.com🇸🇬SG⁻¹_1|0.5MB/s|KeepHistory
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|0.6MB/s|KeepHistory
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_1|7.5MB/s|D+
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
       - 🇭🇰 www.85la.com🇭🇰HK¹⁺_2|10.6MB/s|D+
       - 🇬🇧 www.85la.com🇬🇧GB¹-NL⁰_1|0.3MB/s
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_2|5.0MB/s|12%|GM|YT|D+
@@ -1369,7 +1140,7 @@ proxy-groups:
       - 🇰🇷 韩国 04
       - 🇭🇰 香港 35
       - 🇭🇰 香港 27
-      - 🇹🇼 台湾 01
+      - 🇨🇳 台湾 01
       - 🇭🇰 香港 29
       - 🇸🇬 新加坡 10
       - 🇭🇰 香港家宽 210
@@ -1411,221 +1182,112 @@ proxy-groups:
       - 🇺🇸 美国 09
       - 🇭🇰 香港家宽 002
       - 🇺🇸 美国 36
-      - 🇫🇷 FR法国(yz)
-      - 🇺🇦 乌克兰(yz)
-      - 🇭🇰 HK香港(yz)
-      - 🇹🇼 TW台湾(yz)
-      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz)
+      - 🇫🇷 FR法国(yz)
+      - 🇯🇵 JP日本(yz)
+      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz) 2
-      - 🇬🇧 GB英国(yz)
-      - 🇧🇬 保加利亚(yz)
-      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 3
-      - 🇹🇼 TW台湾(yz) 2
-      - 🇹🇼 TW台湾(yz) 3
+      - 🇭🇰 HK香港(yz)
+      - 🇯🇵 JP日本(yz) 2
+      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz) 4
       - 🇭🇰 HK香港(yz) 2
+      - 🇯🇵 JP日本(yz) 3
       - 🇺🇸 US美国(yz) 5
-      - 🇸🇬 SG新加坡(yz)
-      - 🇺🇸 US美国(yz) 6
-      - 🇺🇸 US美国(yz) 7
-      - 🇺🇸 US美国(yz) 8
-      - 🇺🇸 US美国(yz) 9
       - 🇭🇰 HK香港(yz) 3
+      - 🇺🇸 US美国(yz) 6
       - 🇸🇬 SG新加坡(yz) 2
       - 🇭🇰 HK香港(yz) 4
+      - 🇭🇰 HK香港(yz) 5
+      - 🇭🇰 HK香港(yz) 6
+      - 🇭🇰 HK香港(yz) 7
+      - 🇭🇰 HK香港(yz) 8
+      - 🇭🇰 HK香港(yz) 9
+      - 🇺🇸 US美国(yz) 7
+      - 🇺🇦 乌克兰(yz)
+      - 🇭🇰 HK香港(yz) 10
+      - 🇺🇸 US美国(yz) 8
+      - 🇯🇵 JP日本(yz) 4
+      - 🇭🇰 HK香港(yz) 11
+      - 🇭🇰 HK香港(yz) 12
+      - 🇭🇰 HK香港(yz) 13
+      - 🇺🇸 US美国(yz) 9
+      - 🇭🇰 HK香港(yz) 14
+      - 🇭🇰 HK香港(yz) 15
+      - 🇸🇬 SG新加坡(yz) 3
+      - 🇯🇵 JP日本(yz) 5
       - 🇺🇸 US美国(yz) 10
+      - 🇨🇳 TW台湾(yz)
+      - 🇫🇷 FR法国(yz) 2
+      - 🇫🇷 FR法国(yz) 3
+      - 🇯🇵 JP日本(yz) 6
+      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 11
-      - 🇹🇼 TW台湾(yz) 4
       - 🇺🇸 US美国(yz) 12
       - 🇺🇸 US美国(yz) 13
-      - 🇫🇷 FR法国(yz) 2
-      - 🇰🇷 KR韩国(yz)
+      - 🇭🇰 HK香港(yz) 16
       - 🇺🇸 US美国(yz) 14
+      - 🇯🇵 JP日本(yz) 7
+      - 🇨🇳 TW台湾(yz) 2
       - 🇺🇸 US美国(yz) 15
-      - 🇭🇰 HK香港(yz) 5
-      - 🇰🇷 KR韩国(yz) 2
-      - 🇭🇰 HK香港(yz) 6
-      - 🇺🇸 US美国(yz) 16
-      - 🇹🇼 TW台湾(yz) 5
-      - 🇳🇱 NL荷兰(yz) 2
-      - 🇳🇱 NL荷兰(yz) 3
-      - 🇺🇸 US美国(yz) 17
-      - 🇺🇸 US美国(yz) 18
-      - 🇺🇸 US美国(yz) 19
-      - 🇺🇸 US美国(yz) 20
-      - 🇫🇷 FR法国(yz) 3
-      - 🇭🇰 HK香港(yz) 7
-      - 🇳🇱 NL荷兰(yz) 4
-      - 🇳🇱 NL荷兰(yz) 5
-      - 🇺🇸 US美国(yz) 21
-      - 🇭🇰 HK香港(yz) 8
-      - 🇺🇸 US美国(yz) 22
-      - 🇳🇱 NL荷兰(yz) 6
-      - 🇫🇷 FR法国(yz) 4
-      - 🇳🇱 NL荷兰(yz) 7
-      - 🇭🇰 HK香港(yz) 9
-      - 🇺🇸 US美国(yz) 23
-      - 🇭🇰 HK香港(yz) 10
-      - 🇳🇱 NL荷兰(yz) 8
-      - 🇭🇰 HK香港(yz) 11
-      - 🇺🇸 US美国(yz) 24
-      - 🇺🇸 US美国(yz) 25
-      - 🇳🇱 NL荷兰(yz) 9
-      - 🇺🇸 US美国(yz) 26
-      - 🇺🇸 US美国(yz) 27
-      - 🇭🇰 HK香港(yz) 12
-      - 🇯🇵 JP日本(yz)
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇹🇼 TW台湾(yz) 6
-      - 🇺🇸 US美国(yz) 28
-      - 🇸🇬 SG新加坡(yz) 4
-      - 🇭🇰 HK香港(yz) 13
+      - 🇭🇰 HK香港(yz) 17
       - 🇫🇷 FR法国(yz) 5
-      - 🇺🇸 US美国(yz) 29
-      - 🇺🇸 US美国(yz) 30
-      - 🇧🇬 保加利亚(yz) 2
-      - 🇭🇰 HK香港(yz) 14
       - 🇫🇷 FR法国(yz) 6
       - 🇫🇷 FR法国(yz) 7
-      - 🇭🇰 HK香港(yz) 15
       - 🇫🇷 FR法国(yz) 8
-      - 🇳🇱 NL荷兰(yz) 10
-      - 🇳🇱 NL荷兰(yz) 11
-      - 🇺🇸 US美国(yz) 31
-      - 🇬🇧 GB英国(yz) 3
-      - 🇺🇸 US美国(yz) 32
-      - 🇭🇰 HK香港(yz) 16
-      - 🇭🇰 HK香港(yz) 17
-      - 🇬🇧 GB英国(yz) 4
-      - 🇬🇧 GB英国(yz) 5
-      - 🇭🇰 HK香港(yz) 18
-      - 🇭🇰 HK香港(yz) 19
-      - 🇬🇧 GB英国(yz) 6
-      - 🇺🇸 US美国(yz) 33
-      - 🇺🇸 US美国(yz) 34
-      - 🇯🇵 JP日本(yz) 2
+      - 🇯🇵 JP日本(yz) 8
       - 🇫🇷 FR法国(yz) 9
-      - 🇹🇼 TW台湾(yz) 7
-      - 🇬🇧 GB英国(yz) 7
       - 🇫🇷 FR法国(yz) 10
-      - 🇳🇱 NL荷兰(yz) 12
-      - 🇺🇸 US美国(yz) 35
-      - 🇭🇰 HK香港(yz) 20
-      - 🇺🇸 US美国(yz) 36
-      - 🇩🇪 DE德国(yz)
-      - 🇺🇸 US美国(yz) 37
-      - 🇺🇸 US美国(yz) 38
-      - 🇧🇬 保加利亚(yz) 3
-      - 🇺🇸 US美国(yz) 39
-      - 🇺🇸 US美国(yz) 40
-      - 🇷🇺 RU俄罗斯(yz)
-      - 🇺🇸 US美国(yz) 41
-      - 🇺🇸 US美国(yz) 42
-      - 🇺🇸 US美国(yz) 43
-      - 🇺🇸 US美国(yz) 44
-      - 🇺🇸 US美国(yz) 45
-      - 🇺🇸 US美国(yz) 46
-      - 🇺🇸 US美国(yz) 47
-      - 🇺🇸 US美国(yz) 48
-      - 🇺🇸 US美国(yz) 49
-      - 🇺🇸 US美国(yz) 50
-      - 🇺🇸 US美国(yz) 51
       - 🇫🇷 FR法国(yz) 11
       - 🇫🇷 FR法国(yz) 12
-      - 🇺🇦 乌克兰(yz) 2
-      - 🇹🇼 TW台湾(yz) 8
-      - 🇳🇱 NL荷兰(yz) 13
-      - 🇺🇸 US美国(yz) 52
-      - 🇺🇸 US美国(yz) 2 2
-      - 🇹🇼 TW台湾(yz) 2 2
-      - 🇹🇼 TW台湾(yz) 3 2
-      - 🇺🇸 US美国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 21
-      - 🇺🇸 US美国(yz) 4 2
-      - 🇺🇸 US美国(yz) 5 2
-      - 🇺🇸 US美国(yz) 6 2
-      - 🇺🇸 US美国(yz) 7 2
-      - 🇭🇰 HK香港(yz) 2 2
+      - 🇺🇸 US美国(yz) 16
+      - 🇫🇷 FR法国(yz) 13
+      - 🇬🇧 GB英国(yz)
+      - 🇸🇬 SG新加坡(yz) 4
+      - 🇭🇰 HK香港(yz) 18
+      - 🇩🇪 DE德国(yz)
+      - 🇺🇸 US美国(yz) 17
+      - 🇯🇵 JP日本(yz) 9
+      - 🇭🇰 HK香港(yz) 19
+      - 🇺🇸 US美国(yz) 18
+      - 🇫🇷 FR法国(yz) 14
+      - 🇯🇵 JP日本(yz) 10
+      - 🇫🇷 FR法国(yz) 15
+      - 🇫🇷 FR法国(yz) 16
+      - 🇯🇵 JP日本(yz) 11
       - 🇸🇬 SG新加坡(yz) 5
-      - 🇭🇰 HK香港(yz) 3 2
-      - 🇹🇼 TW台湾(yz) 4 2
+      - 🇫🇷 FR法国(yz) 17
+      - 🇳🇱 NL荷兰(yz) 2
+      - 🇺🇸 US美国(yz) 19
+      - 🇺🇸 US美国(yz) 2 2
+      - 🇺🇸 US美国(yz) 3 2
+      - 🇸🇬 SG新加坡(yz) 6
+      - 🇺🇦 乌克兰(yz) 2
+      - 🇺🇸 US美国(yz) 4 2
+      - 🇭🇰 HK香港(yz) 20
+      - 🇭🇰 HK香港(yz) 2 2
+      - 🇨🇳 TW台湾(yz) 3
+      - 🇫🇷 FR法国(yz) 18
       - 🇫🇷 FR法国(yz) 2 2
-      - 🇺🇸 US美国(yz) 8 2
-      - 🇭🇰 HK香港(yz) 4 2
-      - 🇹🇼 TW台湾(yz) 5 2
-      - 🇳🇱 NL荷兰(yz) 2 2
-      - 🇳🇱 NL荷兰(yz) 3 2
-      - 🇺🇸 US美国(yz) 9 2
-      - 🇺🇸 US美国(yz) 10 2
-      - 🇺🇸 US美国(yz) 11 2
-      - 🇺🇸 US美国(yz) 12 2
+      - 🇺🇸 US美国(yz) 5 2
+      - 🇭🇰 HK香港(yz) 3 2
       - 🇫🇷 FR法国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 5 2
-      - 🇳🇱 NL荷兰(yz) 4 2
-      - 🇳🇱 NL荷兰(yz) 5 2
-      - 🇺🇸 US美国(yz) 13 2
-      - 🇺🇸 US美国(yz) 14 2
-      - 🇳🇱 NL荷兰(yz) 6 2
       - 🇫🇷 FR法国(yz) 4 2
-      - 🇳🇱 NL荷兰(yz) 7 2
-      - 🇭🇰 HK香港(yz) 6 2
-      - 🇺🇸 US美国(yz) 15 2
-      - 🇭🇰 HK香港(yz) 7 2
-      - 🇳🇱 NL荷兰(yz) 8 2
-      - 🇳🇱 NL荷兰(yz) 9 2
-      - 🇺🇸 US美国(yz) 16 2
-      - 🇺🇸 US美国(yz) 17 2
-      - 🇹🇼 TW台湾(yz) 6 2
-      - 🇺🇸 US美国(yz) 18 2
       - 🇫🇷 FR法国(yz) 5 2
-      - 🇺🇸 US美国(yz) 19 2
-      - 🇺🇸 US美国(yz) 20 2
-      - 🇧🇬 保加利亚(yz) 4
-      - 🇭🇰 HK香港(yz) 8 2
       - 🇫🇷 FR法国(yz) 6 2
       - 🇫🇷 FR法国(yz) 7 2
-      - 🇭🇰 HK香港(yz) 9 2
       - 🇫🇷 FR法国(yz) 8 2
-      - 🇳🇱 NL荷兰(yz) 10 2
-      - 🇳🇱 NL荷兰(yz) 11 2
-      - 🇺🇸 US美国(yz) 21 2
-      - 🇬🇧 GB英国(yz) 8
-      - 🇺🇸 US美国(yz) 22 2
-      - 🇭🇰 HK香港(yz) 10 2
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇬🇧 GB英国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 11 2
-      - 🇭🇰 HK香港(yz) 12 2
-      - 🇬🇧 GB英国(yz) 4 2
-      - 🇺🇸 US美国(yz) 23 2
-      - 🇺🇸 US美国(yz) 24 2
       - 🇫🇷 FR法国(yz) 9 2
-      - 🇹🇼 TW台湾(yz) 7 2
-      - 🇬🇧 GB英国(yz) 5 2
       - 🇫🇷 FR法国(yz) 10 2
-      - 🇳🇱 NL荷兰(yz) 12 2
-      - 🇺🇸 US美国(yz) 25 2
-      - 🇭🇰 HK香港(yz) 13 2
-      - 🇺🇸 US美国(yz) 26 2
-      - 🇺🇸 US美国(yz) 27 2
-      - 🇺🇸 US美国(yz) 28 2
-      - 🇺🇸 US美国(yz) 29 2
-      - 🇺🇸 US美国(yz) 30 2
-      - 🇷🇺 RU俄罗斯(yz) 2
-      - 🇺🇸 US美国(yz) 31 2
-      - 🇺🇸 US美国(yz) 32 2
-      - 🇺🇸 US美国(yz) 33 2
-      - 🇺🇸 US美国(yz) 34 2
-      - 🇺🇸 US美国(yz) 35 2
-      - 🇺🇸 US美国(yz) 36 2
-      - 🇺🇸 US美国(yz) 37 2
-      - 🇺🇸 US美国(yz) 38 2
-      - 🇺🇸 US美国(yz) 39 2
-      - 🇺🇸 US美国(yz) 40 2
-      - 🇺🇸 US美国(yz) 41 2
+      - 🇺🇸 US美国(yz) 6 2
       - 🇫🇷 FR法国(yz) 11 2
+      - 🇭🇰 HK香港(yz) 4 2
+      - 🇫🇷 FR法国(yz) 12 2
+      - 🇫🇷 FR法国(yz) 13 2
+      - 🇫🇷 FR法国(yz) 14 2
+      - 🇫🇷 FR法国(yz) 15 2
+      - 🇳🇱 NL荷兰(yz) 3
       - 🇫🇷 www.85la.com🇫🇷FR²_4|0.1MB/s|GPT⁺|TK|NF|X|KeepHistory
       - 🇫🇷 www.85la.com🇫🇷FR²_10|0.6MB/s|GPT⁺|YT|TK|NF|X
       - 🇫🇷 www.85la.com🇫🇷FR²_16|0.2MB/s|GPT⁺|YT|TK|NF|X|KeepHistory
@@ -1702,7 +1364,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_4|4.6MB/s|33%|YT
       - 🇫🇷 www.85la.com🇫🇷FR²_20|5.6MB/s|41%|GPT⁺|YT|TK|NF|X
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_1|6.8MB/s|NF
-      - 🇹🇼 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
+      - 🇨🇳 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_2|0.2MB/s|TK|NF|D+|X
       - www.85la.com🇮🇹IT²_1|10.0MB/s|4%|GPT⁺|YT|TK|NF|D+|X|KeepHistory
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|4.9MB/s
@@ -1768,7 +1430,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇳🇱NL²_6|0.3MB/s|0%|GPT⁺|YT-US|TK|NF|D+|X|sinspired/subs-check
       - www.85la.com🇰🇿KZ²_1|0.1MB/s|0%|KeepHistory
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_2|2.4MB/s|YT|TK|NF|D+
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
       - 🇭🇰 www.85la.com🇭🇰HK⁻¹_1|22.8MB/s|YT|D+|X
       - www.85la.com|4.9MB/s|YT|TK|X|sinspired/subs-check
       - 🇺🇸 www.85la.com🇫🇷FR²_2|0.6MB/s|0%|GPT⁺|YT-US|TK|NF|X|KeepHistory
@@ -1787,7 +1449,7 @@ proxy-groups:
       - 🇸🇬 www.85la.com🇸🇬SG⁻¹_1|0.5MB/s|KeepHistory
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|0.6MB/s|KeepHistory
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_1|7.5MB/s|D+
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
       - 🇭🇰 www.85la.com🇭🇰HK¹⁺_2|10.6MB/s|D+
       - 🇬🇧 www.85la.com🇬🇧GB¹-NL⁰_1|0.3MB/s
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_2|5.0MB/s|12%|GM|YT|D+
@@ -2016,7 +1678,7 @@ proxy-groups:
       - 🇰🇷 韩国 04
       - 🇭🇰 香港 35
       - 🇭🇰 香港 27
-      - 🇹🇼 台湾 01
+      - 🇨🇳 台湾 01
       - 🇭🇰 香港 29
       - 🇸🇬 新加坡 10
       - 🇭🇰 香港家宽 210
@@ -2058,221 +1720,112 @@ proxy-groups:
       - 🇺🇸 美国 09
       - 🇭🇰 香港家宽 002
       - 🇺🇸 美国 36
-      - 🇫🇷 FR法国(yz)
-      - 🇺🇦 乌克兰(yz)
-      - 🇭🇰 HK香港(yz)
-      - 🇹🇼 TW台湾(yz)
-      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz)
+      - 🇫🇷 FR法国(yz)
+      - 🇯🇵 JP日本(yz)
+      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz) 2
-      - 🇬🇧 GB英国(yz)
-      - 🇧🇬 保加利亚(yz)
-      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 3
-      - 🇹🇼 TW台湾(yz) 2
-      - 🇹🇼 TW台湾(yz) 3
+      - 🇭🇰 HK香港(yz)
+      - 🇯🇵 JP日本(yz) 2
+      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz) 4
       - 🇭🇰 HK香港(yz) 2
+      - 🇯🇵 JP日本(yz) 3
       - 🇺🇸 US美国(yz) 5
-      - 🇸🇬 SG新加坡(yz)
-      - 🇺🇸 US美国(yz) 6
-      - 🇺🇸 US美国(yz) 7
-      - 🇺🇸 US美国(yz) 8
-      - 🇺🇸 US美国(yz) 9
       - 🇭🇰 HK香港(yz) 3
+      - 🇺🇸 US美国(yz) 6
       - 🇸🇬 SG新加坡(yz) 2
       - 🇭🇰 HK香港(yz) 4
+      - 🇭🇰 HK香港(yz) 5
+      - 🇭🇰 HK香港(yz) 6
+      - 🇭🇰 HK香港(yz) 7
+      - 🇭🇰 HK香港(yz) 8
+      - 🇭🇰 HK香港(yz) 9
+      - 🇺🇸 US美国(yz) 7
+      - 🇺🇦 乌克兰(yz)
+      - 🇭🇰 HK香港(yz) 10
+      - 🇺🇸 US美国(yz) 8
+      - 🇯🇵 JP日本(yz) 4
+      - 🇭🇰 HK香港(yz) 11
+      - 🇭🇰 HK香港(yz) 12
+      - 🇭🇰 HK香港(yz) 13
+      - 🇺🇸 US美国(yz) 9
+      - 🇭🇰 HK香港(yz) 14
+      - 🇭🇰 HK香港(yz) 15
+      - 🇸🇬 SG新加坡(yz) 3
+      - 🇯🇵 JP日本(yz) 5
       - 🇺🇸 US美国(yz) 10
+      - 🇨🇳 TW台湾(yz)
+      - 🇫🇷 FR法国(yz) 2
+      - 🇫🇷 FR法国(yz) 3
+      - 🇯🇵 JP日本(yz) 6
+      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 11
-      - 🇹🇼 TW台湾(yz) 4
       - 🇺🇸 US美国(yz) 12
       - 🇺🇸 US美国(yz) 13
-      - 🇫🇷 FR法国(yz) 2
-      - 🇰🇷 KR韩国(yz)
+      - 🇭🇰 HK香港(yz) 16
       - 🇺🇸 US美国(yz) 14
+      - 🇯🇵 JP日本(yz) 7
+      - 🇨🇳 TW台湾(yz) 2
       - 🇺🇸 US美国(yz) 15
-      - 🇭🇰 HK香港(yz) 5
-      - 🇰🇷 KR韩国(yz) 2
-      - 🇭🇰 HK香港(yz) 6
-      - 🇺🇸 US美国(yz) 16
-      - 🇹🇼 TW台湾(yz) 5
-      - 🇳🇱 NL荷兰(yz) 2
-      - 🇳🇱 NL荷兰(yz) 3
-      - 🇺🇸 US美国(yz) 17
-      - 🇺🇸 US美国(yz) 18
-      - 🇺🇸 US美国(yz) 19
-      - 🇺🇸 US美国(yz) 20
-      - 🇫🇷 FR法国(yz) 3
-      - 🇭🇰 HK香港(yz) 7
-      - 🇳🇱 NL荷兰(yz) 4
-      - 🇳🇱 NL荷兰(yz) 5
-      - 🇺🇸 US美国(yz) 21
-      - 🇭🇰 HK香港(yz) 8
-      - 🇺🇸 US美国(yz) 22
-      - 🇳🇱 NL荷兰(yz) 6
-      - 🇫🇷 FR法国(yz) 4
-      - 🇳🇱 NL荷兰(yz) 7
-      - 🇭🇰 HK香港(yz) 9
-      - 🇺🇸 US美国(yz) 23
-      - 🇭🇰 HK香港(yz) 10
-      - 🇳🇱 NL荷兰(yz) 8
-      - 🇭🇰 HK香港(yz) 11
-      - 🇺🇸 US美国(yz) 24
-      - 🇺🇸 US美国(yz) 25
-      - 🇳🇱 NL荷兰(yz) 9
-      - 🇺🇸 US美国(yz) 26
-      - 🇺🇸 US美国(yz) 27
-      - 🇭🇰 HK香港(yz) 12
-      - 🇯🇵 JP日本(yz)
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇹🇼 TW台湾(yz) 6
-      - 🇺🇸 US美国(yz) 28
-      - 🇸🇬 SG新加坡(yz) 4
-      - 🇭🇰 HK香港(yz) 13
+      - 🇭🇰 HK香港(yz) 17
       - 🇫🇷 FR法国(yz) 5
-      - 🇺🇸 US美国(yz) 29
-      - 🇺🇸 US美国(yz) 30
-      - 🇧🇬 保加利亚(yz) 2
-      - 🇭🇰 HK香港(yz) 14
       - 🇫🇷 FR法国(yz) 6
       - 🇫🇷 FR法国(yz) 7
-      - 🇭🇰 HK香港(yz) 15
       - 🇫🇷 FR法国(yz) 8
-      - 🇳🇱 NL荷兰(yz) 10
-      - 🇳🇱 NL荷兰(yz) 11
-      - 🇺🇸 US美国(yz) 31
-      - 🇬🇧 GB英国(yz) 3
-      - 🇺🇸 US美国(yz) 32
-      - 🇭🇰 HK香港(yz) 16
-      - 🇭🇰 HK香港(yz) 17
-      - 🇬🇧 GB英国(yz) 4
-      - 🇬🇧 GB英国(yz) 5
-      - 🇭🇰 HK香港(yz) 18
-      - 🇭🇰 HK香港(yz) 19
-      - 🇬🇧 GB英国(yz) 6
-      - 🇺🇸 US美国(yz) 33
-      - 🇺🇸 US美国(yz) 34
-      - 🇯🇵 JP日本(yz) 2
+      - 🇯🇵 JP日本(yz) 8
       - 🇫🇷 FR法国(yz) 9
-      - 🇹🇼 TW台湾(yz) 7
-      - 🇬🇧 GB英国(yz) 7
       - 🇫🇷 FR法国(yz) 10
-      - 🇳🇱 NL荷兰(yz) 12
-      - 🇺🇸 US美国(yz) 35
-      - 🇭🇰 HK香港(yz) 20
-      - 🇺🇸 US美国(yz) 36
-      - 🇩🇪 DE德国(yz)
-      - 🇺🇸 US美国(yz) 37
-      - 🇺🇸 US美国(yz) 38
-      - 🇧🇬 保加利亚(yz) 3
-      - 🇺🇸 US美国(yz) 39
-      - 🇺🇸 US美国(yz) 40
-      - 🇷🇺 RU俄罗斯(yz)
-      - 🇺🇸 US美国(yz) 41
-      - 🇺🇸 US美国(yz) 42
-      - 🇺🇸 US美国(yz) 43
-      - 🇺🇸 US美国(yz) 44
-      - 🇺🇸 US美国(yz) 45
-      - 🇺🇸 US美国(yz) 46
-      - 🇺🇸 US美国(yz) 47
-      - 🇺🇸 US美国(yz) 48
-      - 🇺🇸 US美国(yz) 49
-      - 🇺🇸 US美国(yz) 50
-      - 🇺🇸 US美国(yz) 51
       - 🇫🇷 FR法国(yz) 11
       - 🇫🇷 FR法国(yz) 12
-      - 🇺🇦 乌克兰(yz) 2
-      - 🇹🇼 TW台湾(yz) 8
-      - 🇳🇱 NL荷兰(yz) 13
-      - 🇺🇸 US美国(yz) 52
-      - 🇺🇸 US美国(yz) 2 2
-      - 🇹🇼 TW台湾(yz) 2 2
-      - 🇹🇼 TW台湾(yz) 3 2
-      - 🇺🇸 US美国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 21
-      - 🇺🇸 US美国(yz) 4 2
-      - 🇺🇸 US美国(yz) 5 2
-      - 🇺🇸 US美国(yz) 6 2
-      - 🇺🇸 US美国(yz) 7 2
-      - 🇭🇰 HK香港(yz) 2 2
+      - 🇺🇸 US美国(yz) 16
+      - 🇫🇷 FR法国(yz) 13
+      - 🇬🇧 GB英国(yz)
+      - 🇸🇬 SG新加坡(yz) 4
+      - 🇭🇰 HK香港(yz) 18
+      - 🇩🇪 DE德国(yz)
+      - 🇺🇸 US美国(yz) 17
+      - 🇯🇵 JP日本(yz) 9
+      - 🇭🇰 HK香港(yz) 19
+      - 🇺🇸 US美国(yz) 18
+      - 🇫🇷 FR法国(yz) 14
+      - 🇯🇵 JP日本(yz) 10
+      - 🇫🇷 FR法国(yz) 15
+      - 🇫🇷 FR法国(yz) 16
+      - 🇯🇵 JP日本(yz) 11
       - 🇸🇬 SG新加坡(yz) 5
-      - 🇭🇰 HK香港(yz) 3 2
-      - 🇹🇼 TW台湾(yz) 4 2
+      - 🇫🇷 FR法国(yz) 17
+      - 🇳🇱 NL荷兰(yz) 2
+      - 🇺🇸 US美国(yz) 19
+      - 🇺🇸 US美国(yz) 2 2
+      - 🇺🇸 US美国(yz) 3 2
+      - 🇸🇬 SG新加坡(yz) 6
+      - 🇺🇦 乌克兰(yz) 2
+      - 🇺🇸 US美国(yz) 4 2
+      - 🇭🇰 HK香港(yz) 20
+      - 🇭🇰 HK香港(yz) 2 2
+      - 🇨🇳 TW台湾(yz) 3
+      - 🇫🇷 FR法国(yz) 18
       - 🇫🇷 FR法国(yz) 2 2
-      - 🇺🇸 US美国(yz) 8 2
-      - 🇭🇰 HK香港(yz) 4 2
-      - 🇹🇼 TW台湾(yz) 5 2
-      - 🇳🇱 NL荷兰(yz) 2 2
-      - 🇳🇱 NL荷兰(yz) 3 2
-      - 🇺🇸 US美国(yz) 9 2
-      - 🇺🇸 US美国(yz) 10 2
-      - 🇺🇸 US美国(yz) 11 2
-      - 🇺🇸 US美国(yz) 12 2
+      - 🇺🇸 US美国(yz) 5 2
+      - 🇭🇰 HK香港(yz) 3 2
       - 🇫🇷 FR法国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 5 2
-      - 🇳🇱 NL荷兰(yz) 4 2
-      - 🇳🇱 NL荷兰(yz) 5 2
-      - 🇺🇸 US美国(yz) 13 2
-      - 🇺🇸 US美国(yz) 14 2
-      - 🇳🇱 NL荷兰(yz) 6 2
       - 🇫🇷 FR法国(yz) 4 2
-      - 🇳🇱 NL荷兰(yz) 7 2
-      - 🇭🇰 HK香港(yz) 6 2
-      - 🇺🇸 US美国(yz) 15 2
-      - 🇭🇰 HK香港(yz) 7 2
-      - 🇳🇱 NL荷兰(yz) 8 2
-      - 🇳🇱 NL荷兰(yz) 9 2
-      - 🇺🇸 US美国(yz) 16 2
-      - 🇺🇸 US美国(yz) 17 2
-      - 🇹🇼 TW台湾(yz) 6 2
-      - 🇺🇸 US美国(yz) 18 2
       - 🇫🇷 FR法国(yz) 5 2
-      - 🇺🇸 US美国(yz) 19 2
-      - 🇺🇸 US美国(yz) 20 2
-      - 🇧🇬 保加利亚(yz) 4
-      - 🇭🇰 HK香港(yz) 8 2
       - 🇫🇷 FR法国(yz) 6 2
       - 🇫🇷 FR法国(yz) 7 2
-      - 🇭🇰 HK香港(yz) 9 2
       - 🇫🇷 FR法国(yz) 8 2
-      - 🇳🇱 NL荷兰(yz) 10 2
-      - 🇳🇱 NL荷兰(yz) 11 2
-      - 🇺🇸 US美国(yz) 21 2
-      - 🇬🇧 GB英国(yz) 8
-      - 🇺🇸 US美国(yz) 22 2
-      - 🇭🇰 HK香港(yz) 10 2
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇬🇧 GB英国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 11 2
-      - 🇭🇰 HK香港(yz) 12 2
-      - 🇬🇧 GB英国(yz) 4 2
-      - 🇺🇸 US美国(yz) 23 2
-      - 🇺🇸 US美国(yz) 24 2
       - 🇫🇷 FR法国(yz) 9 2
-      - 🇹🇼 TW台湾(yz) 7 2
-      - 🇬🇧 GB英国(yz) 5 2
       - 🇫🇷 FR法国(yz) 10 2
-      - 🇳🇱 NL荷兰(yz) 12 2
-      - 🇺🇸 US美国(yz) 25 2
-      - 🇭🇰 HK香港(yz) 13 2
-      - 🇺🇸 US美国(yz) 26 2
-      - 🇺🇸 US美国(yz) 27 2
-      - 🇺🇸 US美国(yz) 28 2
-      - 🇺🇸 US美国(yz) 29 2
-      - 🇺🇸 US美国(yz) 30 2
-      - 🇷🇺 RU俄罗斯(yz) 2
-      - 🇺🇸 US美国(yz) 31 2
-      - 🇺🇸 US美国(yz) 32 2
-      - 🇺🇸 US美国(yz) 33 2
-      - 🇺🇸 US美国(yz) 34 2
-      - 🇺🇸 US美国(yz) 35 2
-      - 🇺🇸 US美国(yz) 36 2
-      - 🇺🇸 US美国(yz) 37 2
-      - 🇺🇸 US美国(yz) 38 2
-      - 🇺🇸 US美国(yz) 39 2
-      - 🇺🇸 US美国(yz) 40 2
-      - 🇺🇸 US美国(yz) 41 2
+      - 🇺🇸 US美国(yz) 6 2
       - 🇫🇷 FR法国(yz) 11 2
+      - 🇭🇰 HK香港(yz) 4 2
+      - 🇫🇷 FR法国(yz) 12 2
+      - 🇫🇷 FR法国(yz) 13 2
+      - 🇫🇷 FR法国(yz) 14 2
+      - 🇫🇷 FR法国(yz) 15 2
+      - 🇳🇱 NL荷兰(yz) 3
       - 🇫🇷 www.85la.com🇫🇷FR²_4|0.1MB/s|GPT⁺|TK|NF|X|KeepHistory
       - 🇫🇷 www.85la.com🇫🇷FR²_10|0.6MB/s|GPT⁺|YT|TK|NF|X
       - 🇫🇷 www.85la.com🇫🇷FR²_16|0.2MB/s|GPT⁺|YT|TK|NF|X|KeepHistory
@@ -2349,7 +1902,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_4|4.6MB/s|33%|YT
       - 🇫🇷 www.85la.com🇫🇷FR²_20|5.6MB/s|41%|GPT⁺|YT|TK|NF|X
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_1|6.8MB/s|NF
-      - 🇹🇼 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
+      - 🇨🇳 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_2|0.2MB/s|TK|NF|D+|X
       - www.85la.com🇮🇹IT²_1|10.0MB/s|4%|GPT⁺|YT|TK|NF|D+|X|KeepHistory
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|4.9MB/s
@@ -2415,7 +1968,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇳🇱NL²_6|0.3MB/s|0%|GPT⁺|YT-US|TK|NF|D+|X|sinspired/subs-check
       - www.85la.com🇰🇿KZ²_1|0.1MB/s|0%|KeepHistory
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_2|2.4MB/s|YT|TK|NF|D+
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
       - 🇭🇰 www.85la.com🇭🇰HK⁻¹_1|22.8MB/s|YT|D+|X
       - www.85la.com|4.9MB/s|YT|TK|X|sinspired/subs-check
       - 🇺🇸 www.85la.com🇫🇷FR²_2|0.6MB/s|0%|GPT⁺|YT-US|TK|NF|X|KeepHistory
@@ -2434,7 +1987,7 @@ proxy-groups:
       - 🇸🇬 www.85la.com🇸🇬SG⁻¹_1|0.5MB/s|KeepHistory
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|0.6MB/s|KeepHistory
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_1|7.5MB/s|D+
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
       - 🇭🇰 www.85la.com🇭🇰HK¹⁺_2|10.6MB/s|D+
       - 🇬🇧 www.85la.com🇬🇧GB¹-NL⁰_1|0.3MB/s
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_2|5.0MB/s|12%|GM|YT|D+
@@ -2664,7 +2217,7 @@ proxy-groups:
       - 🇰🇷 韩国 04
       - 🇭🇰 香港 35
       - 🇭🇰 香港 27
-      - 🇹🇼 台湾 01
+      - 🇨🇳 台湾 01
       - 🇭🇰 香港 29
       - 🇸🇬 新加坡 10
       - 🇭🇰 香港家宽 210
@@ -2706,221 +2259,112 @@ proxy-groups:
       - 🇺🇸 美国 09
       - 🇭🇰 香港家宽 002
       - 🇺🇸 美国 36
-      - 🇫🇷 FR法国(yz)
-      - 🇺🇦 乌克兰(yz)
-      - 🇭🇰 HK香港(yz)
-      - 🇹🇼 TW台湾(yz)
-      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz)
+      - 🇫🇷 FR法国(yz)
+      - 🇯🇵 JP日本(yz)
+      - 🇳🇱 NL荷兰(yz)
       - 🇺🇸 US美国(yz) 2
-      - 🇬🇧 GB英国(yz)
-      - 🇧🇬 保加利亚(yz)
-      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 3
-      - 🇹🇼 TW台湾(yz) 2
-      - 🇹🇼 TW台湾(yz) 3
+      - 🇭🇰 HK香港(yz)
+      - 🇯🇵 JP日本(yz) 2
+      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz) 4
       - 🇭🇰 HK香港(yz) 2
+      - 🇯🇵 JP日本(yz) 3
       - 🇺🇸 US美国(yz) 5
-      - 🇸🇬 SG新加坡(yz)
-      - 🇺🇸 US美国(yz) 6
-      - 🇺🇸 US美国(yz) 7
-      - 🇺🇸 US美国(yz) 8
-      - 🇺🇸 US美国(yz) 9
       - 🇭🇰 HK香港(yz) 3
+      - 🇺🇸 US美国(yz) 6
       - 🇸🇬 SG新加坡(yz) 2
       - 🇭🇰 HK香港(yz) 4
+      - 🇭🇰 HK香港(yz) 5
+      - 🇭🇰 HK香港(yz) 6
+      - 🇭🇰 HK香港(yz) 7
+      - 🇭🇰 HK香港(yz) 8
+      - 🇭🇰 HK香港(yz) 9
+      - 🇺🇸 US美国(yz) 7
+      - 🇺🇦 乌克兰(yz)
+      - 🇭🇰 HK香港(yz) 10
+      - 🇺🇸 US美国(yz) 8
+      - 🇯🇵 JP日本(yz) 4
+      - 🇭🇰 HK香港(yz) 11
+      - 🇭🇰 HK香港(yz) 12
+      - 🇭🇰 HK香港(yz) 13
+      - 🇺🇸 US美国(yz) 9
+      - 🇭🇰 HK香港(yz) 14
+      - 🇭🇰 HK香港(yz) 15
+      - 🇸🇬 SG新加坡(yz) 3
+      - 🇯🇵 JP日本(yz) 5
       - 🇺🇸 US美国(yz) 10
+      - 🇨🇳 TW台湾(yz)
+      - 🇫🇷 FR法国(yz) 2
+      - 🇫🇷 FR法国(yz) 3
+      - 🇯🇵 JP日本(yz) 6
+      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 11
-      - 🇹🇼 TW台湾(yz) 4
       - 🇺🇸 US美国(yz) 12
       - 🇺🇸 US美国(yz) 13
-      - 🇫🇷 FR法国(yz) 2
-      - 🇰🇷 KR韩国(yz)
+      - 🇭🇰 HK香港(yz) 16
       - 🇺🇸 US美国(yz) 14
+      - 🇯🇵 JP日本(yz) 7
+      - 🇨🇳 TW台湾(yz) 2
       - 🇺🇸 US美国(yz) 15
-      - 🇭🇰 HK香港(yz) 5
-      - 🇰🇷 KR韩国(yz) 2
-      - 🇭🇰 HK香港(yz) 6
-      - 🇺🇸 US美国(yz) 16
-      - 🇹🇼 TW台湾(yz) 5
-      - 🇳🇱 NL荷兰(yz) 2
-      - 🇳🇱 NL荷兰(yz) 3
-      - 🇺🇸 US美国(yz) 17
-      - 🇺🇸 US美国(yz) 18
-      - 🇺🇸 US美国(yz) 19
-      - 🇺🇸 US美国(yz) 20
-      - 🇫🇷 FR法国(yz) 3
-      - 🇭🇰 HK香港(yz) 7
-      - 🇳🇱 NL荷兰(yz) 4
-      - 🇳🇱 NL荷兰(yz) 5
-      - 🇺🇸 US美国(yz) 21
-      - 🇭🇰 HK香港(yz) 8
-      - 🇺🇸 US美国(yz) 22
-      - 🇳🇱 NL荷兰(yz) 6
-      - 🇫🇷 FR法国(yz) 4
-      - 🇳🇱 NL荷兰(yz) 7
-      - 🇭🇰 HK香港(yz) 9
-      - 🇺🇸 US美国(yz) 23
-      - 🇭🇰 HK香港(yz) 10
-      - 🇳🇱 NL荷兰(yz) 8
-      - 🇭🇰 HK香港(yz) 11
-      - 🇺🇸 US美国(yz) 24
-      - 🇺🇸 US美国(yz) 25
-      - 🇳🇱 NL荷兰(yz) 9
-      - 🇺🇸 US美国(yz) 26
-      - 🇺🇸 US美国(yz) 27
-      - 🇭🇰 HK香港(yz) 12
-      - 🇯🇵 JP日本(yz)
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇹🇼 TW台湾(yz) 6
-      - 🇺🇸 US美国(yz) 28
-      - 🇸🇬 SG新加坡(yz) 4
-      - 🇭🇰 HK香港(yz) 13
+      - 🇭🇰 HK香港(yz) 17
       - 🇫🇷 FR法国(yz) 5
-      - 🇺🇸 US美国(yz) 29
-      - 🇺🇸 US美国(yz) 30
-      - 🇧🇬 保加利亚(yz) 2
-      - 🇭🇰 HK香港(yz) 14
       - 🇫🇷 FR法国(yz) 6
       - 🇫🇷 FR法国(yz) 7
-      - 🇭🇰 HK香港(yz) 15
       - 🇫🇷 FR法国(yz) 8
-      - 🇳🇱 NL荷兰(yz) 10
-      - 🇳🇱 NL荷兰(yz) 11
-      - 🇺🇸 US美国(yz) 31
-      - 🇬🇧 GB英国(yz) 3
-      - 🇺🇸 US美国(yz) 32
-      - 🇭🇰 HK香港(yz) 16
-      - 🇭🇰 HK香港(yz) 17
-      - 🇬🇧 GB英国(yz) 4
-      - 🇬🇧 GB英国(yz) 5
-      - 🇭🇰 HK香港(yz) 18
-      - 🇭🇰 HK香港(yz) 19
-      - 🇬🇧 GB英国(yz) 6
-      - 🇺🇸 US美国(yz) 33
-      - 🇺🇸 US美国(yz) 34
-      - 🇯🇵 JP日本(yz) 2
+      - 🇯🇵 JP日本(yz) 8
       - 🇫🇷 FR法国(yz) 9
-      - 🇹🇼 TW台湾(yz) 7
-      - 🇬🇧 GB英国(yz) 7
       - 🇫🇷 FR法国(yz) 10
-      - 🇳🇱 NL荷兰(yz) 12
-      - 🇺🇸 US美国(yz) 35
-      - 🇭🇰 HK香港(yz) 20
-      - 🇺🇸 US美国(yz) 36
-      - 🇩🇪 DE德国(yz)
-      - 🇺🇸 US美国(yz) 37
-      - 🇺🇸 US美国(yz) 38
-      - 🇧🇬 保加利亚(yz) 3
-      - 🇺🇸 US美国(yz) 39
-      - 🇺🇸 US美国(yz) 40
-      - 🇷🇺 RU俄罗斯(yz)
-      - 🇺🇸 US美国(yz) 41
-      - 🇺🇸 US美国(yz) 42
-      - 🇺🇸 US美国(yz) 43
-      - 🇺🇸 US美国(yz) 44
-      - 🇺🇸 US美国(yz) 45
-      - 🇺🇸 US美国(yz) 46
-      - 🇺🇸 US美国(yz) 47
-      - 🇺🇸 US美国(yz) 48
-      - 🇺🇸 US美国(yz) 49
-      - 🇺🇸 US美国(yz) 50
-      - 🇺🇸 US美国(yz) 51
       - 🇫🇷 FR法国(yz) 11
       - 🇫🇷 FR法国(yz) 12
-      - 🇺🇦 乌克兰(yz) 2
-      - 🇹🇼 TW台湾(yz) 8
-      - 🇳🇱 NL荷兰(yz) 13
-      - 🇺🇸 US美国(yz) 52
-      - 🇺🇸 US美国(yz) 2 2
-      - 🇹🇼 TW台湾(yz) 2 2
-      - 🇹🇼 TW台湾(yz) 3 2
-      - 🇺🇸 US美国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 21
-      - 🇺🇸 US美国(yz) 4 2
-      - 🇺🇸 US美国(yz) 5 2
-      - 🇺🇸 US美国(yz) 6 2
-      - 🇺🇸 US美国(yz) 7 2
-      - 🇭🇰 HK香港(yz) 2 2
+      - 🇺🇸 US美国(yz) 16
+      - 🇫🇷 FR法国(yz) 13
+      - 🇬🇧 GB英国(yz)
+      - 🇸🇬 SG新加坡(yz) 4
+      - 🇭🇰 HK香港(yz) 18
+      - 🇩🇪 DE德国(yz)
+      - 🇺🇸 US美国(yz) 17
+      - 🇯🇵 JP日本(yz) 9
+      - 🇭🇰 HK香港(yz) 19
+      - 🇺🇸 US美国(yz) 18
+      - 🇫🇷 FR法国(yz) 14
+      - 🇯🇵 JP日本(yz) 10
+      - 🇫🇷 FR法国(yz) 15
+      - 🇫🇷 FR法国(yz) 16
+      - 🇯🇵 JP日本(yz) 11
       - 🇸🇬 SG新加坡(yz) 5
-      - 🇭🇰 HK香港(yz) 3 2
-      - 🇹🇼 TW台湾(yz) 4 2
+      - 🇫🇷 FR法国(yz) 17
+      - 🇳🇱 NL荷兰(yz) 2
+      - 🇺🇸 US美国(yz) 19
+      - 🇺🇸 US美国(yz) 2 2
+      - 🇺🇸 US美国(yz) 3 2
+      - 🇸🇬 SG新加坡(yz) 6
+      - 🇺🇦 乌克兰(yz) 2
+      - 🇺🇸 US美国(yz) 4 2
+      - 🇭🇰 HK香港(yz) 20
+      - 🇭🇰 HK香港(yz) 2 2
+      - 🇨🇳 TW台湾(yz) 3
+      - 🇫🇷 FR法国(yz) 18
       - 🇫🇷 FR法国(yz) 2 2
-      - 🇺🇸 US美国(yz) 8 2
-      - 🇭🇰 HK香港(yz) 4 2
-      - 🇹🇼 TW台湾(yz) 5 2
-      - 🇳🇱 NL荷兰(yz) 2 2
-      - 🇳🇱 NL荷兰(yz) 3 2
-      - 🇺🇸 US美国(yz) 9 2
-      - 🇺🇸 US美国(yz) 10 2
-      - 🇺🇸 US美国(yz) 11 2
-      - 🇺🇸 US美国(yz) 12 2
+      - 🇺🇸 US美国(yz) 5 2
+      - 🇭🇰 HK香港(yz) 3 2
       - 🇫🇷 FR法国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 5 2
-      - 🇳🇱 NL荷兰(yz) 4 2
-      - 🇳🇱 NL荷兰(yz) 5 2
-      - 🇺🇸 US美国(yz) 13 2
-      - 🇺🇸 US美国(yz) 14 2
-      - 🇳🇱 NL荷兰(yz) 6 2
       - 🇫🇷 FR法国(yz) 4 2
-      - 🇳🇱 NL荷兰(yz) 7 2
-      - 🇭🇰 HK香港(yz) 6 2
-      - 🇺🇸 US美国(yz) 15 2
-      - 🇭🇰 HK香港(yz) 7 2
-      - 🇳🇱 NL荷兰(yz) 8 2
-      - 🇳🇱 NL荷兰(yz) 9 2
-      - 🇺🇸 US美国(yz) 16 2
-      - 🇺🇸 US美国(yz) 17 2
-      - 🇹🇼 TW台湾(yz) 6 2
-      - 🇺🇸 US美国(yz) 18 2
       - 🇫🇷 FR法国(yz) 5 2
-      - 🇺🇸 US美国(yz) 19 2
-      - 🇺🇸 US美国(yz) 20 2
-      - 🇧🇬 保加利亚(yz) 4
-      - 🇭🇰 HK香港(yz) 8 2
       - 🇫🇷 FR法国(yz) 6 2
       - 🇫🇷 FR法国(yz) 7 2
-      - 🇭🇰 HK香港(yz) 9 2
       - 🇫🇷 FR法国(yz) 8 2
-      - 🇳🇱 NL荷兰(yz) 10 2
-      - 🇳🇱 NL荷兰(yz) 11 2
-      - 🇺🇸 US美国(yz) 21 2
-      - 🇬🇧 GB英国(yz) 8
-      - 🇺🇸 US美国(yz) 22 2
-      - 🇭🇰 HK香港(yz) 10 2
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇬🇧 GB英国(yz) 3 2
-      - 🇭🇰 HK香港(yz) 11 2
-      - 🇭🇰 HK香港(yz) 12 2
-      - 🇬🇧 GB英国(yz) 4 2
-      - 🇺🇸 US美国(yz) 23 2
-      - 🇺🇸 US美国(yz) 24 2
       - 🇫🇷 FR法国(yz) 9 2
-      - 🇹🇼 TW台湾(yz) 7 2
-      - 🇬🇧 GB英国(yz) 5 2
       - 🇫🇷 FR法国(yz) 10 2
-      - 🇳🇱 NL荷兰(yz) 12 2
-      - 🇺🇸 US美国(yz) 25 2
-      - 🇭🇰 HK香港(yz) 13 2
-      - 🇺🇸 US美国(yz) 26 2
-      - 🇺🇸 US美国(yz) 27 2
-      - 🇺🇸 US美国(yz) 28 2
-      - 🇺🇸 US美国(yz) 29 2
-      - 🇺🇸 US美国(yz) 30 2
-      - 🇷🇺 RU俄罗斯(yz) 2
-      - 🇺🇸 US美国(yz) 31 2
-      - 🇺🇸 US美国(yz) 32 2
-      - 🇺🇸 US美国(yz) 33 2
-      - 🇺🇸 US美国(yz) 34 2
-      - 🇺🇸 US美国(yz) 35 2
-      - 🇺🇸 US美国(yz) 36 2
-      - 🇺🇸 US美国(yz) 37 2
-      - 🇺🇸 US美国(yz) 38 2
-      - 🇺🇸 US美国(yz) 39 2
-      - 🇺🇸 US美国(yz) 40 2
-      - 🇺🇸 US美国(yz) 41 2
+      - 🇺🇸 US美国(yz) 6 2
       - 🇫🇷 FR法国(yz) 11 2
+      - 🇭🇰 HK香港(yz) 4 2
+      - 🇫🇷 FR法国(yz) 12 2
+      - 🇫🇷 FR法国(yz) 13 2
+      - 🇫🇷 FR法国(yz) 14 2
+      - 🇫🇷 FR法国(yz) 15 2
+      - 🇳🇱 NL荷兰(yz) 3
       - 🇫🇷 www.85la.com🇫🇷FR²_4|0.1MB/s|GPT⁺|TK|NF|X|KeepHistory
       - 🇫🇷 www.85la.com🇫🇷FR²_10|0.6MB/s|GPT⁺|YT|TK|NF|X
       - 🇫🇷 www.85la.com🇫🇷FR²_16|0.2MB/s|GPT⁺|YT|TK|NF|X|KeepHistory
@@ -2997,7 +2441,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_4|4.6MB/s|33%|YT
       - 🇫🇷 www.85la.com🇫🇷FR²_20|5.6MB/s|41%|GPT⁺|YT|TK|NF|X
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_1|6.8MB/s|NF
-      - 🇹🇼 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
+      - 🇨🇳 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_2|0.2MB/s|TK|NF|D+|X
       - www.85la.com🇮🇹IT²_1|10.0MB/s|4%|GPT⁺|YT|TK|NF|D+|X|KeepHistory
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|4.9MB/s
@@ -3063,7 +2507,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇳🇱NL²_6|0.3MB/s|0%|GPT⁺|YT-US|TK|NF|D+|X|sinspired/subs-check
       - www.85la.com🇰🇿KZ²_1|0.1MB/s|0%|KeepHistory
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_2|2.4MB/s|YT|TK|NF|D+
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
       - 🇭🇰 www.85la.com🇭🇰HK⁻¹_1|22.8MB/s|YT|D+|X
       - www.85la.com|4.9MB/s|YT|TK|X|sinspired/subs-check
       - 🇺🇸 www.85la.com🇫🇷FR²_2|0.6MB/s|0%|GPT⁺|YT-US|TK|NF|X|KeepHistory
@@ -3082,7 +2526,7 @@ proxy-groups:
       - 🇸🇬 www.85la.com🇸🇬SG⁻¹_1|0.5MB/s|KeepHistory
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|0.6MB/s|KeepHistory
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_1|7.5MB/s|D+
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
       - 🇭🇰 www.85la.com🇭🇰HK¹⁺_2|10.6MB/s|D+
       - 🇬🇧 www.85la.com🇬🇧GB¹-NL⁰_1|0.3MB/s
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_2|5.0MB/s|12%|GM|YT|D+
@@ -3502,19 +2946,9 @@ proxy-groups:
       - 🇭🇰 HK香港(yz) 18
       - 🇭🇰 HK香港(yz) 19
       - 🇭🇰 HK香港(yz) 20
-      - 🇭🇰 HK香港(yz) 21
       - 🇭🇰 HK香港(yz) 2 2
       - 🇭🇰 HK香港(yz) 3 2
       - 🇭🇰 HK香港(yz) 4 2
-      - 🇭🇰 HK香港(yz) 5 2
-      - 🇭🇰 HK香港(yz) 6 2
-      - 🇭🇰 HK香港(yz) 7 2
-      - 🇭🇰 HK香港(yz) 8 2
-      - 🇭🇰 HK香港(yz) 9 2
-      - 🇭🇰 HK香港(yz) 10 2
-      - 🇭🇰 HK香港(yz) 11 2
-      - 🇭🇰 HK香港(yz) 12 2
-      - 🇭🇰 HK香港(yz) 13 2
       - 🇭🇰 www.85la.com🇭🇰HK²_11|0.1MB/s|2%|KeepHistory
       - 🇭🇰 www.85la.com🇭🇰HK²_13|1.2MB/s|2%|GPT⁺|NF|D+|X|KeepHistory
       - 🇭🇰 www.85la.com🇭🇰HK²_22|0.1MB/s|D+|KeepHistory
@@ -3688,6 +3122,15 @@ proxy-groups:
     proxies:
       - 🇯🇵 JP日本(yz)
       - 🇯🇵 JP日本(yz) 2
+      - 🇯🇵 JP日本(yz) 3
+      - 🇯🇵 JP日本(yz) 4
+      - 🇯🇵 JP日本(yz) 5
+      - 🇯🇵 JP日本(yz) 6
+      - 🇯🇵 JP日本(yz) 7
+      - 🇯🇵 JP日本(yz) 8
+      - 🇯🇵 JP日本(yz) 9
+      - 🇯🇵 JP日本(yz) 10
+      - 🇯🇵 JP日本(yz) 11
       - 🇯🇵 www.85la.com🇯🇵JP²_3|0.3MB/s|56%|GPT⁺|GM|YT|TK|NF|X|KeepSucceed
       - 🇭🇰 www.85la.com🇯🇵JP¹-HK⁰_1|0.2MB/s
       - 🇯🇵 www.85la.com🇯🇵JP⁻¹_1|0.2MB/s|NF
@@ -3756,11 +3199,9 @@ proxy-groups:
       - 🇺🇸 美国 15
       - 🇺🇸 美国 09
       - 🇺🇸 美国 36
-      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz)
+      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz) 2
-      - 🇬🇧 GB英国(yz)
-      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 3
       - 🇺🇸 US美国(yz) 4
       - 🇺🇸 US美国(yz) 5
@@ -3769,122 +3210,53 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 8
       - 🇺🇸 US美国(yz) 9
       - 🇺🇸 US美国(yz) 10
+      - 🇫🇷 FR法国(yz) 2
+      - 🇫🇷 FR法国(yz) 3
+      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 11
       - 🇺🇸 US美国(yz) 12
       - 🇺🇸 US美国(yz) 13
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 14
       - 🇺🇸 US美国(yz) 15
-      - 🇺🇸 US美国(yz) 16
-      - 🇺🇸 US美国(yz) 17
-      - 🇺🇸 US美国(yz) 18
-      - 🇺🇸 US美国(yz) 19
-      - 🇺🇸 US美国(yz) 20
-      - 🇫🇷 FR法国(yz) 3
-      - 🇺🇸 US美国(yz) 21
-      - 🇺🇸 US美国(yz) 22
-      - 🇫🇷 FR法国(yz) 4
-      - 🇺🇸 US美国(yz) 23
-      - 🇺🇸 US美国(yz) 24
-      - 🇺🇸 US美国(yz) 25
-      - 🇺🇸 US美国(yz) 26
-      - 🇺🇸 US美国(yz) 27
-      - 🇺🇸 US美国(yz) 28
       - 🇫🇷 FR法国(yz) 5
-      - 🇺🇸 US美国(yz) 29
-      - 🇺🇸 US美国(yz) 30
       - 🇫🇷 FR法国(yz) 6
       - 🇫🇷 FR法国(yz) 7
       - 🇫🇷 FR法国(yz) 8
-      - 🇺🇸 US美国(yz) 31
-      - 🇬🇧 GB英国(yz) 3
-      - 🇺🇸 US美国(yz) 32
-      - 🇬🇧 GB英国(yz) 4
-      - 🇬🇧 GB英国(yz) 5
-      - 🇬🇧 GB英国(yz) 6
-      - 🇺🇸 US美国(yz) 33
-      - 🇺🇸 US美国(yz) 34
       - 🇫🇷 FR法国(yz) 9
-      - 🇬🇧 GB英国(yz) 7
       - 🇫🇷 FR法国(yz) 10
-      - 🇺🇸 US美国(yz) 35
-      - 🇺🇸 US美国(yz) 36
-      - 🇩🇪 DE德国(yz)
-      - 🇺🇸 US美国(yz) 37
-      - 🇺🇸 US美国(yz) 38
-      - 🇺🇸 US美国(yz) 39
-      - 🇺🇸 US美国(yz) 40
-      - 🇷🇺 RU俄罗斯(yz)
-      - 🇺🇸 US美国(yz) 41
-      - 🇺🇸 US美国(yz) 42
-      - 🇺🇸 US美国(yz) 43
-      - 🇺🇸 US美国(yz) 44
-      - 🇺🇸 US美国(yz) 45
-      - 🇺🇸 US美国(yz) 46
-      - 🇺🇸 US美国(yz) 47
-      - 🇺🇸 US美国(yz) 48
-      - 🇺🇸 US美国(yz) 49
-      - 🇺🇸 US美国(yz) 50
-      - 🇺🇸 US美国(yz) 51
       - 🇫🇷 FR法国(yz) 11
       - 🇫🇷 FR法国(yz) 12
-      - 🇺🇸 US美国(yz) 52
+      - 🇺🇸 US美国(yz) 16
+      - 🇫🇷 FR法国(yz) 13
+      - 🇬🇧 GB英国(yz)
+      - 🇩🇪 DE德国(yz)
+      - 🇺🇸 US美国(yz) 17
+      - 🇺🇸 US美国(yz) 18
+      - 🇫🇷 FR法国(yz) 14
+      - 🇫🇷 FR法国(yz) 15
+      - 🇫🇷 FR法国(yz) 16
+      - 🇫🇷 FR法国(yz) 17
+      - 🇺🇸 US美国(yz) 19
       - 🇺🇸 US美国(yz) 2 2
       - 🇺🇸 US美国(yz) 3 2
       - 🇺🇸 US美国(yz) 4 2
-      - 🇺🇸 US美国(yz) 5 2
-      - 🇺🇸 US美国(yz) 6 2
-      - 🇺🇸 US美国(yz) 7 2
+      - 🇫🇷 FR法国(yz) 18
       - 🇫🇷 FR法国(yz) 2 2
-      - 🇺🇸 US美国(yz) 8 2
-      - 🇺🇸 US美国(yz) 9 2
-      - 🇺🇸 US美国(yz) 10 2
-      - 🇺🇸 US美国(yz) 11 2
-      - 🇺🇸 US美国(yz) 12 2
+      - 🇺🇸 US美国(yz) 5 2
       - 🇫🇷 FR法国(yz) 3 2
-      - 🇺🇸 US美国(yz) 13 2
-      - 🇺🇸 US美国(yz) 14 2
       - 🇫🇷 FR法国(yz) 4 2
-      - 🇺🇸 US美国(yz) 15 2
-      - 🇺🇸 US美国(yz) 16 2
-      - 🇺🇸 US美国(yz) 17 2
-      - 🇺🇸 US美国(yz) 18 2
       - 🇫🇷 FR法国(yz) 5 2
-      - 🇺🇸 US美国(yz) 19 2
-      - 🇺🇸 US美国(yz) 20 2
       - 🇫🇷 FR法国(yz) 6 2
       - 🇫🇷 FR法国(yz) 7 2
       - 🇫🇷 FR法国(yz) 8 2
-      - 🇺🇸 US美国(yz) 21 2
-      - 🇬🇧 GB英国(yz) 8
-      - 🇺🇸 US美国(yz) 22 2
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇬🇧 GB英国(yz) 3 2
-      - 🇬🇧 GB英国(yz) 4 2
-      - 🇺🇸 US美国(yz) 23 2
-      - 🇺🇸 US美国(yz) 24 2
       - 🇫🇷 FR法国(yz) 9 2
-      - 🇬🇧 GB英国(yz) 5 2
       - 🇫🇷 FR法国(yz) 10 2
-      - 🇺🇸 US美国(yz) 25 2
-      - 🇺🇸 US美国(yz) 26 2
-      - 🇺🇸 US美国(yz) 27 2
-      - 🇺🇸 US美国(yz) 28 2
-      - 🇺🇸 US美国(yz) 29 2
-      - 🇺🇸 US美国(yz) 30 2
-      - 🇷🇺 RU俄罗斯(yz) 2
-      - 🇺🇸 US美国(yz) 31 2
-      - 🇺🇸 US美国(yz) 32 2
-      - 🇺🇸 US美国(yz) 33 2
-      - 🇺🇸 US美国(yz) 34 2
-      - 🇺🇸 US美国(yz) 35 2
-      - 🇺🇸 US美国(yz) 36 2
-      - 🇺🇸 US美国(yz) 37 2
-      - 🇺🇸 US美国(yz) 38 2
-      - 🇺🇸 US美国(yz) 39 2
-      - 🇺🇸 US美国(yz) 40 2
-      - 🇺🇸 US美国(yz) 41 2
+      - 🇺🇸 US美国(yz) 6 2
       - 🇫🇷 FR法国(yz) 11 2
+      - 🇫🇷 FR法国(yz) 12 2
+      - 🇫🇷 FR法国(yz) 13 2
+      - 🇫🇷 FR法国(yz) 14 2
+      - 🇫🇷 FR法国(yz) 15 2
       - 🇫🇷 www.85.com 法国
       - 🇫🇷 www.85.com 法国 2
       - 🇫🇷 www.85.com 法国 3
@@ -3946,14 +3318,14 @@ proxy-groups:
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_8|0.3MB/s|12%|X
       - 🇺🇸 www.85la.com🇳🇱NL²_6|0.3MB/s|0%|GPT⁺|YT-US|TK|NF|D+|X|sinspired/subs-check
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_2|2.4MB/s|YT|TK|NF|D+
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
       - 🇺🇸 www.85la.com🇫🇷FR²_2|0.6MB/s|0%|GPT⁺|YT-US|TK|NF|X|KeepHistory
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_1|1.1MB/s|YT|D+|X
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_3|3.2MB/s|X
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|5.0MB/s|GM|YT|TK|NF|D+
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|0.6MB/s|KeepHistory
       - 🇭🇰 www.85la.com🇺🇸US¹-HK⁰_1|7.5MB/s|D+
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_2|5.0MB/s|12%|GM|YT|D+
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|0.4MB/s|X
       - 🇺🇸 www.85la.com🇺🇸US²_2|0.3MB/s
@@ -3979,24 +3351,13 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇹🇼 台湾 01
-      - 🇹🇼 TW台湾(yz)
-      - 🇹🇼 TW台湾(yz) 2
-      - 🇹🇼 TW台湾(yz) 3
-      - 🇹🇼 TW台湾(yz) 4
-      - 🇹🇼 TW台湾(yz) 5
-      - 🇹🇼 TW台湾(yz) 6
-      - 🇹🇼 TW台湾(yz) 7
-      - 🇹🇼 TW台湾(yz) 8
-      - 🇹🇼 TW台湾(yz) 2 2
-      - 🇹🇼 TW台湾(yz) 3 2
-      - 🇹🇼 TW台湾(yz) 4 2
-      - 🇹🇼 TW台湾(yz) 5 2
-      - 🇹🇼 TW台湾(yz) 6 2
-      - 🇹🇼 TW台湾(yz) 7 2
-      - 🇹🇼 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
+      - 🇨🇳 台湾 01
+      - 🇨🇳 TW台湾(yz)
+      - 🇨🇳 TW台湾(yz) 2
+      - 🇨🇳 TW台湾(yz) 3
+      - 🇨🇳 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|3.3MB/s|GM|X
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
       - 🇭🇰 www.85la.com🇭🇰HK¹-TW⁰_1|6.2MB/s|D+
   - name: 🇸🇬 狮城节点
     type: url-test
@@ -4011,6 +3372,7 @@ proxy-groups:
       - 🇸🇬 SG新加坡(yz) 3
       - 🇸🇬 SG新加坡(yz) 4
       - 🇸🇬 SG新加坡(yz) 5
+      - 🇸🇬 SG新加坡(yz) 6
       - 🇸🇬 www.85la.com🇸🇬SG²_3|1.3MB/s|0%|GPT|GM|NF|X|KeepHistory
       - 🇭🇰 www.85la.com🇸🇬SG¹-HK⁰_1|1.3MB/s|X
       - 🇭🇰 www.85la.com🇸🇬SG¹-HK⁰_2|4.2MB/s|YT|D+|X
@@ -4041,9 +3403,7 @@ proxy-groups:
       - 🇰🇷 韩国 01
       - 🇰🇷 韩国 04
       - 🇰🇷 韩国 08
-      - 🇰🇷 KR韩国(yz)
-      - 🇰🇷 KR韩国(yz) 2
-      - 🇹🇼 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
+      - 🇨🇳 www.85la.com🇰🇷KR¹-TW⁰_1|3.5MB/s|TK
       - 🇯🇵 www.85la.com🇰🇷KR¹-JP⁰_1|2.3MB/s|GM|YT|TK|KeepHistory
       - 🇰🇷 www.85la.com🇰🇷KR²_1|0.2MB/s|4%
   - name: 🎥 奈飞节点
@@ -4114,7 +3474,7 @@ proxy-groups:
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_2|2.4MB/s|YT|TK|NF|D+
       - 🇺🇸 www.85la.com🇫🇷FR²_2|0.6MB/s|0%|GPT⁺|YT-US|TK|NF|X|KeepHistory
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_1|5.0MB/s|GM|YT|TK|NF|D+
-      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
+      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_1|4.9MB/s|GM|YT|TK|NF
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_2|0.4MB/s|GM|NF|D+|sinspired/subs-check
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_2|1.1MB/s|12%|NF|X
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_4|0.5MB/s|12%|GPT⁺|GM|YT|TK|NF|D+|X
@@ -4176,6 +3536,7 @@ rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
+  - DOMAIN-SUFFIX,internal,🎯 全球直连
   - DOMAIN-SUFFIX,lan,🎯 全球直连
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - DOMAIN-SUFFIX,localhost,🎯 全球直连
@@ -4183,6 +3544,7 @@ rules:
   - IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
   - IP-CIDR,100.64.0.0/10,🎯 全球直连,no-resolve
   - IP-CIDR,127.0.0.0/8,🎯 全球直连,no-resolve
+  - IP-CIDR,169.254.0.0/16,🎯 全球直连,no-resolve
   - IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
   - IP-CIDR,198.18.0.0/16,🎯 全球直连,no-resolve
@@ -4556,7 +3918,6 @@ rules:
   - DOMAIN-SUFFIX,scupio.com,🛑 广告拦截
   - DOMAIN-SUFFIX,shuiguo.com,🛑 广告拦截
   - DOMAIN-SUFFIX,shuzilm.cn,🛑 广告拦截
-  - DOMAIN-SUFFIX,similarweb.com,🛑 广告拦截
   - DOMAIN-SUFFIX,sitemeter.com,🛑 广告拦截
   - DOMAIN-SUFFIX,sitescout.com,🛑 广告拦截
   - DOMAIN-SUFFIX,sitetag.us,🛑 广告拦截
@@ -5408,9 +4769,7 @@ rules:
   - DOMAIN-SUFFIX,log.mix.sina.com.cn,🍃 应用净化
   - DOMAIN-SUFFIX,mobileads.dx.cn,🍃 应用净化
   - DOMAIN-SUFFIX,newspush.sinajs.cn,🍃 应用净化
-  - DOMAIN-SUFFIX,pay.mobile.sina.cn,🍃 应用净化
   - DOMAIN-SUFFIX,sax.mobile.sina.cn,🍃 应用净化
-  - DOMAIN-SUFFIX,sax.sina.com.cn,🍃 应用净化
   - DOMAIN-SUFFIX,saxd.sina.com.cn,🍃 应用净化
   - DOMAIN-SUFFIX,sdkapp.mobile.sina.cn,🍃 应用净化
   - DOMAIN-SUFFIX,sdkapp.uve.weibo.com,🍃 应用净化
@@ -5811,7 +5170,6 @@ rules:
   - DOMAIN-SUFFIX,dol.tianyaui.cn,🍃 应用净化
   - DOMAIN-SUFFIX,dw.xcar.com.cn,🍃 应用净化
   - DOMAIN-SUFFIX,e.nexac.com,🍃 应用净化
-  - DOMAIN-SUFFIX,eq.10jqka.com.cn,🍃 应用净化
   - DOMAIN-SUFFIX,exp.17wo.cn,🍃 应用净化
   - DOMAIN-SUFFIX,game.51yund.com,🍃 应用净化
   - DOMAIN-SUFFIX,ganjituiguang.ganji.com,🍃 应用净化
@@ -5828,7 +5186,6 @@ rules:
   - DOMAIN-SUFFIX,mobileads.msn.com,🍃 应用净化
   - DOMAIN-SUFFIX,n.cosbot.cn,🍃 应用净化
   - DOMAIN-SUFFIX,newton-api.ele.me,🍃 应用净化
-  - DOMAIN-SUFFIX,ozone.10jqka.com.cn,🍃 应用净化
   - DOMAIN-SUFFIX,pdl.gionee.com,🍃 应用净化
   - DOMAIN-SUFFIX,pica-juicy.picacomic.com,🍃 应用净化
   - DOMAIN-SUFFIX,pixel.wp.com,🍃 应用净化
@@ -5841,7 +5198,6 @@ rules:
   - DOMAIN-SUFFIX,res.gwifi.com.cn,🍃 应用净化
   - DOMAIN-SUFFIX,ssp.kssws.ks-cdn.com,🍃 应用净化
   - DOMAIN-SUFFIX,sta.ganji.com,🍃 应用净化
-  - DOMAIN-SUFFIX,stat.10jqka.com.cn,🍃 应用净化
   - DOMAIN-SUFFIX,stat.it168.com,🍃 应用净化
   - DOMAIN-SUFFIX,stats.chinaz.com,🍃 应用净化
   - DOMAIN-SUFFIX,stats.developingperspective.com,🍃 应用净化
@@ -5849,7 +5205,6 @@ rules:
   - DOMAIN-SUFFIX,tracker.yhd.com,🍃 应用净化
   - DOMAIN-SUFFIX,tralog.ganji.com,🍃 应用净化
   - DOMAIN-SUFFIX,up.qingdaonews.com,🍃 应用净化
-  - DOMAIN-SUFFIX,vaserviece.10jqka.com.cn,🍃 应用净化
   - DOMAIN,alt1-mtalk.google.com,📢 谷歌FCM
   - DOMAIN,alt2-mtalk.google.com,📢 谷歌FCM
   - DOMAIN,alt3-mtalk.google.com,📢 谷歌FCM
@@ -5949,6 +5304,7 @@ rules:
   - DOMAIN-SUFFIX,spoprod-a.akamaihd.net,Ⓜ️ 微软云盘
   - DOMAIN-SUFFIX,storage.live.com,Ⓜ️ 微软云盘
   - DOMAIN-SUFFIX,storage.msn.com,Ⓜ️ 微软云盘
+  - DOMAIN-SUFFIX,microsoftpersonalcontent.com,Ⓜ️ 微软云盘
   - DOMAIN-KEYWORD,1drv,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,microsoft,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,aadrm.com,Ⓜ️ 微软服务
@@ -6083,6 +5439,7 @@ rules:
   - DOMAIN,copilot-proxy.githubusercontent.com,💬 Ai平台
   - DOMAIN,gemini.google.com,💬 Ai平台
   - DOMAIN,generativelanguage.googleapis.com,💬 Ai平台
+  - DOMAIN,notebooklm.google.com,💬 Ai平台
   - DOMAIN,sydney.bing.com,💬 Ai平台
   - DOMAIN-SUFFIX,ai.azure.com,💬 Ai平台
   - DOMAIN-SUFFIX,anthropic.com,💬 Ai平台
@@ -6090,6 +5447,7 @@ rules:
   - DOMAIN-SUFFIX,bard.google.com,💬 Ai平台
   - DOMAIN-SUFFIX,chatgpt.com,💬 Ai平台
   - DOMAIN-SUFFIX,claude.ai,💬 Ai平台
+  - DOMAIN-SUFFIX,claude.com,💬 Ai平台
   - DOMAIN-SUFFIX,claudeusercontent.com,💬 Ai平台
   - DOMAIN-SUFFIX,client-api.arkoselabs.com,💬 Ai平台
   - DOMAIN-SUFFIX,copilot.cloud.microsoft,💬 Ai平台
@@ -6104,6 +5462,7 @@ rules:
   - DOMAIN-SUFFIX,identrust.com,💬 Ai平台
   - DOMAIN-SUFFIX,intercom.io,💬 Ai平台
   - DOMAIN-SUFFIX,intercomcdn.com,💬 Ai平台
+  - DOMAIN-SUFFIX,jetbrains.ai,💬 Ai平台
   - DOMAIN-SUFFIX,makersuite.google.com,💬 Ai平台
   - DOMAIN-SUFFIX,meta.ai,💬 Ai平台
   - DOMAIN-SUFFIX,mistral.ai,💬 Ai平台
@@ -6113,6 +5472,7 @@ rules:
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,💬 Ai平台
   - DOMAIN-SUFFIX,perplexity.ai,💬 Ai平台
   - DOMAIN-SUFFIX,sora.com,💬 Ai平台
+  - DOMAIN-SUFFIX,x.ai,💬 Ai平台
   - DOMAIN-KEYWORD,openai,💬 Ai平台
   - DOMAIN-SUFFIX,auth0.com,💬 Ai平台
   - DOMAIN-SUFFIX,challenges.cloudflare.com,💬 Ai平台
@@ -6221,16 +5581,25 @@ rules:
   - IP-CIDR,203.75.84.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,207.45.72.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,208.75.76.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,1.178.1.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,1.178.4.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,1.178.8.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,1.178.64.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,1.178.72.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,1.178.88.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,1.178.92.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,1.178.94.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,1.178.174.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.0.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.2.0.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.2.4.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.2.8.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.2.48.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.2.56.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,3.2.60.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,3.2.64.0/19,🎥 奈飞视频,no-resolve
+  - IP-CIDR,3.2.96.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,3.2.98.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.3.0.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.3.2.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.3.5.0/24,🎥 奈飞视频,no-resolve
@@ -6268,10 +5637,12 @@ rules:
   - IP-CIDR,3.4.16.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.4.32.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.5.0.0/18,🎥 奈飞视频,no-resolve
-  - IP-CIDR,3.5.64.0/21,🎥 奈飞视频,no-resolve
-  - IP-CIDR,3.5.72.0/23,🎥 奈飞视频,no-resolve
-  - IP-CIDR,3.5.76.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,3.5.64.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.5.80.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,3.5.88.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,3.5.92.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,3.5.120.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,3.5.126.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.5.128.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.5.160.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.5.168.0/23,🎥 奈飞视频,no-resolve
@@ -6293,7 +5664,7 @@ rules:
   - IP-CIDR,3.36.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.40.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.44.0.0/16,🎥 奈飞视频,no-resolve
-  - IP-CIDR,3.45.0.0/18,🎥 奈飞视频,no-resolve
+  - IP-CIDR,3.45.0.0/17,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.64.0.0/11,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.96.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,3.101.0.0/16,🎥 奈飞视频,no-resolve
@@ -6345,7 +5716,7 @@ rules:
   - IP-CIDR,13.248.72.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,13.248.75.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,13.248.76.0/22,🎥 奈飞视频,no-resolve
-  - IP-CIDR,13.248.80.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,13.248.80.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,13.248.96.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,13.248.128.0/17,🎥 奈飞视频,no-resolve
   - IP-CIDR,13.249.0.0/16,🎥 奈飞视频,no-resolve
@@ -6369,8 +5740,7 @@ rules:
   - IP-CIDR,15.177.96.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.177.100.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.177.102.0/23,🎥 奈飞视频,no-resolve
-  - IP-CIDR,15.177.104.0/23,🎥 奈飞视频,no-resolve
-  - IP-CIDR,15.177.106.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,15.177.104.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.181.0.0/17,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.181.128.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.181.192.0/19,🎥 奈飞视频,no-resolve
@@ -6388,9 +5758,11 @@ rules:
   - IP-CIDR,15.190.80.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.190.96.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.190.128.0/19,🎥 奈飞视频,no-resolve
-  - IP-CIDR,15.190.236.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,15.190.160.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,15.190.232.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.190.240.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.193.0.0/19,🎥 奈飞视频,no-resolve
+  - IP-CIDR,15.193.32.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.193.128.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.193.160.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.193.176.0/22,🎥 奈飞视频,no-resolve
@@ -6579,8 +5951,11 @@ rules:
   - IP-CIDR,15.248.128.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.248.136.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.248.138.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,15.248.139.1/32,🎥 奈飞视频,no-resolve
+  - IP-CIDR,15.248.139.2/32,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.248.140.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.248.144.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,15.248.168.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.251.0.0/28,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.251.0.20/30,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.251.0.24/30,🎥 奈飞视频,no-resolve
@@ -6591,10 +5966,7 @@ rules:
   - IP-CIDR,15.251.0.48/32,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.253.0.0/16,🎥 奈飞视频,no-resolve
   - IP-CIDR,15.254.0.0/16,🎥 奈飞视频,no-resolve
-  - IP-CIDR,16.12.0.0/23,🎥 奈飞视频,no-resolve
-  - IP-CIDR,16.12.2.0/24,🎥 奈飞视频,no-resolve
-  - IP-CIDR,16.12.4.0/22,🎥 奈飞视频,no-resolve
-  - IP-CIDR,16.12.8.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,16.12.0.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.12.16.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.12.20.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.12.24.0/21,🎥 奈飞视频,no-resolve
@@ -6608,8 +5980,14 @@ rules:
   - IP-CIDR,16.12.80.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.12.84.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.12.86.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,16.12.88.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,16.12.96.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,16.12.112.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,16.12.120.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.15.0.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.15.16.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,16.15.24.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,16.15.32.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.15.176.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.15.192.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.16.0.0/16,🎥 奈飞视频,no-resolve
@@ -6624,7 +6002,7 @@ rules:
   - IP-CIDR,16.64.0.0/17,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.65.0.0/16,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.66.0.0/15,🎥 奈飞视频,no-resolve
-  - IP-CIDR,16.71.0.0/18,🎥 奈飞视频,no-resolve
+  - IP-CIDR,16.71.0.0/17,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.76.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.106.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,16.112.0.0/15,🎥 奈飞视频,no-resolve
@@ -6657,8 +6035,7 @@ rules:
   - IP-CIDR,18.88.128.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,18.89.0.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,18.89.128.0/18,🎥 奈飞视频,no-resolve
-  - IP-CIDR,18.96.0.0/23,🎥 奈飞视频,no-resolve
-  - IP-CIDR,18.96.2.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,18.96.0.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,18.96.8.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,18.96.16.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,18.96.32.0/19,🎥 奈飞视频,no-resolve
@@ -6694,15 +6071,23 @@ rules:
   - IP-CIDR,23.20.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,23.91.0.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,23.160.0.0/24,🎥 奈飞视频,no-resolve
-  - IP-CIDR,23.228.192.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,23.228.194.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,23.228.196.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,23.228.198.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,23.228.219.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,23.228.220.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,23.228.228.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,23.254.0.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,23.254.16.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,23.254.24.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,23.254.120.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,24.110.16.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,24.110.32.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,27.0.0.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,31.220.220.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,31.220.235.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,31.220.236.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,31.220.247.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,32.192.0.0/12,🎥 奈飞视频,no-resolve
   - IP-CIDR,32.236.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,32.240.0.0/15,🎥 奈飞视频,no-resolve
@@ -6714,6 +6099,9 @@ rules:
   - IP-CIDR,35.44.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.48.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.50.128.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.50.137.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.50.139.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.50.141.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.50.142.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.50.144.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.50.176.0/23,🎥 奈飞视频,no-resolve
@@ -6729,6 +6117,11 @@ rules:
   - IP-CIDR,35.50.228.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.50.232.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.52.0.0/15,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.54.32.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.54.48.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.54.56.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.54.60.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.54.62.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.55.0.0/17,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.56.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.60.0.0/15,🎥 奈飞视频,no-resolve
@@ -6740,17 +6133,19 @@ rules:
   - IP-CIDR,35.71.128.0/17,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.72.0.0/13,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.80.0.0/12,🎥 奈飞视频,no-resolve
-  - IP-CIDR,35.96.0.0/22,🎥 奈飞视频,no-resolve
-  - IP-CIDR,35.96.4.0/24,🎥 奈飞视频,no-resolve
-  - IP-CIDR,35.96.6.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.96.0.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.96.8.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.96.12.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.96.14.0/23,🎥 奈飞视频,no-resolve
-  - IP-CIDR,35.96.16.0/20,🎥 奈飞视频,no-resolve
-  - IP-CIDR,35.96.32.0/21,🎥 奈飞视频,no-resolve
-  - IP-CIDR,35.96.40.0/22,🎥 奈飞视频,no-resolve
-  - IP-CIDR,35.96.44.0/23,🎥 奈飞视频,no-resolve
-  - IP-CIDR,35.96.48.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.96.16.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.96.22.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.96.24.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.96.28.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.96.32.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.96.48.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.96.56.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.96.58.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.96.60.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.96.64.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.96.128.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.96.240.0/22,🎥 奈飞视频,no-resolve
@@ -6758,6 +6153,10 @@ rules:
   - IP-CIDR,35.96.246.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.96.248.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.97.0.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.97.128.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.111.128.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.111.136.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,35.111.252.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.152.0.0/13,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.160.0.0/12,🎥 奈飞视频,no-resolve
   - IP-CIDR,35.176.0.0/13,🎥 奈飞视频,no-resolve
@@ -6765,6 +6164,7 @@ rules:
   - IP-CIDR,36.103.232.128/26,🎥 奈飞视频,no-resolve
   - IP-CIDR,40.38.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,40.164.0.0/14,🎥 奈飞视频,no-resolve
+  - IP-CIDR,40.168.224.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,40.172.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,40.176.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,40.180.0.0/15,🎥 奈飞视频,no-resolve
@@ -6775,6 +6175,7 @@ rules:
   - IP-CIDR,43.193.0.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,43.193.64.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,43.194.0.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,43.194.16.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,43.195.0.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,43.196.0.0/16,🎥 奈飞视频,no-resolve
   - IP-CIDR,43.198.0.0/15,🎥 奈飞视频,no-resolve
@@ -6805,6 +6206,7 @@ rules:
   - IP-CIDR,51.0.28.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.0.29.0/28,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.0.29.128/28,🎥 奈飞视频,no-resolve
+  - IP-CIDR,51.0.31.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.0.80.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.0.96.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.0.112.0/21,🎥 奈飞视频,no-resolve
@@ -6816,6 +6218,9 @@ rules:
   - IP-CIDR,51.34.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.44.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.48.0.0/15,🎥 奈飞视频,no-resolve
+  - IP-CIDR,51.72.0.0/15,🎥 奈飞视频,no-resolve
+  - IP-CIDR,51.74.0.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,51.74.16.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.84.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.92.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.96.0.0/16,🎥 奈飞视频,no-resolve
@@ -6825,7 +6230,7 @@ rules:
   - IP-CIDR,51.164.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.168.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,51.200.0.0/13,🎥 奈飞视频,no-resolve
-  - IP-CIDR,51.224.0.0/14,🎥 奈飞视频,no-resolve
+  - IP-CIDR,51.224.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.0.0.0/11,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.32.0.0/13,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.40.0.0/14,🎥 奈飞视频,no-resolve
@@ -6834,8 +6239,7 @@ rules:
   - IP-CIDR,52.46.128.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.46.164.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.46.168.0/21,🎥 奈飞视频,no-resolve
-  - IP-CIDR,52.46.176.0/21,🎥 奈飞视频,no-resolve
-  - IP-CIDR,52.46.184.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,52.46.176.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.46.192.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.46.224.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.46.240.0/22,🎥 奈飞视频,no-resolve
@@ -6852,7 +6256,6 @@ rules:
   - IP-CIDR,52.82.168.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.82.169.0/27,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.82.170.0/23,🎥 奈飞视频,no-resolve
-  - IP-CIDR,52.82.176.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.82.184.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.82.187.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.82.188.0/22,🎥 奈飞视频,no-resolve
@@ -7089,8 +6492,7 @@ rules:
   - IP-CIDR,52.94.250.0/26,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.94.250.80/28,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.94.250.96/27,🎥 奈飞视频,no-resolve
-  - IP-CIDR,52.94.250.128/27,🎥 奈飞视频,no-resolve
-  - IP-CIDR,52.94.250.160/28,🎥 奈飞视频,no-resolve
+  - IP-CIDR,52.94.250.128/26,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.94.252.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.95.0.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.95.16.0/21,🎥 奈飞视频,no-resolve
@@ -7189,7 +6591,7 @@ rules:
   - IP-CIDR,52.218.0.0/16,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.219.0.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.219.16.0/22,🎥 奈飞视频,no-resolve
-  - IP-CIDR,52.219.20.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,52.219.20.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.219.24.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.219.32.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,52.219.56.0/21,🎥 奈飞视频,no-resolve
@@ -7230,14 +6632,11 @@ rules:
   - IP-CIDR,54.216.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,54.220.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,54.222.0.0/19,🎥 奈飞视频,no-resolve
-  - IP-CIDR,54.222.32.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,54.222.48.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,54.222.57.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,54.222.58.0/28,🎥 奈飞视频,no-resolve
   - IP-CIDR,54.222.58.32/27,🎥 奈飞视频,no-resolve
-  - IP-CIDR,54.222.64.0/24,🎥 奈飞视频,no-resolve
-  - IP-CIDR,54.222.66.0/23,🎥 奈飞视频,no-resolve
-  - IP-CIDR,54.222.68.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,54.222.64.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,54.222.76.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,54.222.80.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,54.222.88.0/24,🎥 奈飞视频,no-resolve
@@ -7373,12 +6772,12 @@ rules:
   - IP-CIDR,65.8.0.0/16,🎥 奈飞视频,no-resolve
   - IP-CIDR,65.9.0.0/17,🎥 奈飞视频,no-resolve
   - IP-CIDR,65.9.128.0/18,🎥 奈飞视频,no-resolve
-  - IP-CIDR,65.176.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,66.7.0.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,67.202.0.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,67.220.224.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,68.66.112.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,68.79.0.0/18,🎥 奈飞视频,no-resolve
+  - IP-CIDR,69.0.136.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,69.107.3.176/28,🎥 奈飞视频,no-resolve
   - IP-CIDR,69.107.6.112/28,🎥 奈飞视频,no-resolve
   - IP-CIDR,69.107.6.160/28,🎥 奈飞视频,no-resolve
@@ -7391,6 +6790,11 @@ rules:
   - IP-CIDR,69.107.7.64/26,🎥 奈飞视频,no-resolve
   - IP-CIDR,69.107.7.128/28,🎥 奈飞视频,no-resolve
   - IP-CIDR,69.107.9.128/28,🎥 奈飞视频,no-resolve
+  - IP-CIDR,69.107.9.176/28,🎥 奈飞视频,no-resolve
+  - IP-CIDR,69.107.9.192/26,🎥 奈飞视频,no-resolve
+  - IP-CIDR,69.107.10.0/25,🎥 奈飞视频,no-resolve
+  - IP-CIDR,69.107.10.128/26,🎥 奈飞视频,no-resolve
+  - IP-CIDR,69.107.10.192/28,🎥 奈飞视频,no-resolve
   - IP-CIDR,69.230.192.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,69.231.128.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,69.234.192.0/18,🎥 奈飞视频,no-resolve
@@ -7411,7 +6815,9 @@ rules:
   - IP-CIDR,75.2.128.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,75.3.0.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,75.3.128.0/18,🎥 奈飞视频,no-resolve
+  - IP-CIDR,75.22.192.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,75.45.128.0/18,🎥 奈飞视频,no-resolve
+  - IP-CIDR,75.47.0.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,75.79.0.0/16,🎥 奈飞视频,no-resolve
   - IP-CIDR,75.101.128.0/17,🎥 奈飞视频,no-resolve
   - IP-CIDR,76.223.0.0/17,🎥 奈飞视频,no-resolve
@@ -7419,6 +6825,7 @@ rules:
   - IP-CIDR,76.223.170.0/28,🎥 奈飞视频,no-resolve
   - IP-CIDR,76.223.170.32/27,🎥 奈飞视频,no-resolve
   - IP-CIDR,76.223.170.64/26,🎥 奈飞视频,no-resolve
+  - IP-CIDR,76.223.170.128/28,🎥 奈飞视频,no-resolve
   - IP-CIDR,76.223.172.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,77.112.0.0/14,🎥 奈飞视频,no-resolve
   - IP-CIDR,78.12.0.0/14,🎥 奈飞视频,no-resolve
@@ -7448,6 +6855,7 @@ rules:
   - IP-CIDR,96.127.0.0/17,🎥 奈飞视频,no-resolve
   - IP-CIDR,98.80.0.0/12,🎥 奈飞视频,no-resolve
   - IP-CIDR,98.130.0.0/15,🎥 奈飞视频,no-resolve
+  - IP-CIDR,99.10.0.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,99.77.0.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,99.77.128.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,99.77.232.0/21,🎥 奈飞视频,no-resolve
@@ -7472,7 +6880,8 @@ rules:
   - IP-CIDR,99.82.128.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,99.83.64.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,99.83.96.0/21,🎥 奈飞视频,no-resolve
-  - IP-CIDR,99.83.104.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,99.83.104.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,99.83.108.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,99.83.112.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,99.83.120.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,99.83.128.0/17,🎥 奈飞视频,no-resolve
@@ -7498,6 +6907,8 @@ rules:
   - IP-CIDR,104.153.116.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.153.118.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.216.0.0/15,🎥 奈飞视频,no-resolve
+  - IP-CIDR,104.255.56.0/32,🎥 奈飞视频,no-resolve
+  - IP-CIDR,104.255.56.3/32,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.255.56.11/32,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.255.56.12/32,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.255.56.15/32,🎥 奈飞视频,no-resolve
@@ -7507,8 +6918,16 @@ rules:
   - IP-CIDR,104.255.56.24/31,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.255.56.26/32,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.255.56.29/32,🎥 奈飞视频,no-resolve
+  - IP-CIDR,104.255.57.0/32,🎥 奈飞视频,no-resolve
+  - IP-CIDR,104.255.57.41/32,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.255.57.98/32,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.255.57.100/30,🎥 奈飞视频,no-resolve
+  - IP-CIDR,104.255.57.164/30,🎥 奈飞视频,no-resolve
+  - IP-CIDR,104.255.57.168/29,🎥 奈飞视频,no-resolve
+  - IP-CIDR,104.255.58.0/32,🎥 奈飞视频,no-resolve
+  - IP-CIDR,104.255.58.43/32,🎥 奈飞视频,no-resolve
+  - IP-CIDR,104.255.58.44/32,🎥 奈飞视频,no-resolve
+  - IP-CIDR,104.255.58.63/32,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.255.59.81/32,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.255.59.82/31,🎥 奈飞视频,no-resolve
   - IP-CIDR,104.255.59.85/32,🎥 奈飞视频,no-resolve
@@ -7563,6 +6982,7 @@ rules:
   - IP-CIDR,120.253.241.160/27,🎥 奈飞视频,no-resolve
   - IP-CIDR,120.253.245.128/26,🎥 奈飞视频,no-resolve
   - IP-CIDR,120.253.245.192/27,🎥 奈飞视频,no-resolve
+  - IP-CIDR,122.200.61.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,122.248.192.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,130.176.0.0/17,🎥 奈飞视频,no-resolve
   - IP-CIDR,130.176.128.0/18,🎥 奈飞视频,no-resolve
@@ -7589,6 +7009,7 @@ rules:
   - IP-CIDR,142.4.180.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,143.204.0.0/16,🎥 奈飞视频,no-resolve
   - IP-CIDR,144.220.0.0/16,🎥 奈飞视频,no-resolve
+  - IP-CIDR,149.128.64.0/18,🎥 奈飞视频,no-resolve
   - IP-CIDR,150.102.0.0/15,🎥 奈飞视频,no-resolve
   - IP-CIDR,150.222.0.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,150.222.8.0/22,🎥 奈飞视频,no-resolve
@@ -7612,6 +7033,8 @@ rules:
   - IP-CIDR,150.222.48.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,150.222.52.0/23,🎥 奈飞视频,no-resolve
   - IP-CIDR,150.222.54.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,150.222.55.0/26,🎥 奈飞视频,no-resolve
+  - IP-CIDR,150.222.55.64/27,🎥 奈飞视频,no-resolve
   - IP-CIDR,150.222.64.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,150.222.68.116/31,🎥 奈飞视频,no-resolve
   - IP-CIDR,150.222.69.0/24,🎥 奈飞视频,no-resolve
@@ -7669,8 +7092,7 @@ rules:
   - IP-CIDR,150.222.245.122/31,🎥 奈飞视频,no-resolve
   - IP-CIDR,150.222.252.244/30,🎥 奈飞视频,no-resolve
   - IP-CIDR,150.222.252.248/30,🎥 奈飞视频,no-resolve
-  - IP-CIDR,150.247.32.0/23,🎥 奈飞视频,no-resolve
-  - IP-CIDR,150.247.34.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,150.247.32.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,151.148.8.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,151.148.16.0/30,🎥 奈飞视频,no-resolve
   - IP-CIDR,151.148.16.4/31,🎥 奈飞视频,no-resolve
@@ -7686,7 +7108,6 @@ rules:
   - IP-CIDR,157.175.0.0/16,🎥 奈飞视频,no-resolve
   - IP-CIDR,157.241.0.0/16,🎥 奈飞视频,no-resolve
   - IP-CIDR,158.252.0.0/15,🎥 奈飞视频,no-resolve
-  - IP-CIDR,159.248.0.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,159.248.133.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,159.248.200.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,159.248.216.0/21,🎥 奈飞视频,no-resolve
@@ -7760,6 +7181,7 @@ rules:
   - IP-CIDR,198.99.2.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,199.9.248.0/21,🎥 奈飞视频,no-resolve
   - IP-CIDR,199.127.232.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,202.174.132.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,203.83.220.0/22,🎥 奈飞视频,no-resolve
   - IP-CIDR,204.87.185.0/24,🎥 奈飞视频,no-resolve
   - IP-CIDR,204.236.128.0/17,🎥 奈飞视频,no-resolve
@@ -7784,9 +7206,14 @@ rules:
   - IP-CIDR,216.39.160.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,216.137.32.0/19,🎥 奈飞视频,no-resolve
   - IP-CIDR,216.182.224.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,216.198.192.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,216.198.194.0/24,🎥 奈飞视频,no-resolve
+  - IP-CIDR,216.198.196.0/22,🎥 奈飞视频,no-resolve
+  - IP-CIDR,216.198.200.0/21,🎥 奈飞视频,no-resolve
+  - IP-CIDR,216.198.208.0/20,🎥 奈飞视频,no-resolve
+  - IP-CIDR,216.198.224.0/20,🎥 奈飞视频,no-resolve
   - IP-CIDR,216.216.0.0/15,🎥 奈飞视频,no-resolve
-  - IP-CIDR,216.244.0.0/21,🎥 奈飞视频,no-resolve
-  - IP-CIDR,216.244.8.0/23,🎥 奈飞视频,no-resolve
+  - IP-CIDR,216.244.0.0/18,🎥 奈飞视频,no-resolve
   - DOMAIN,bahamut.akamaized.net,📺 巴哈姆特
   - DOMAIN,gamer-cds.cdn.hinet.net,📺 巴哈姆特
   - DOMAIN,gamer2-cds.cdn.hinet.net,📺 巴哈姆特
@@ -7885,6 +7312,7 @@ rules:
   - DOMAIN,copilot-proxy.githubusercontent.com,🌍 国外媒体
   - DOMAIN,gemini.google.com,🌍 国外媒体
   - DOMAIN,generativelanguage.googleapis.com,🌍 国外媒体
+  - DOMAIN,notebooklm.google.com,🌍 国外媒体
   - DOMAIN,sydney.bing.com,🌍 国外媒体
   - DOMAIN-SUFFIX,ai.azure.com,🌍 国外媒体
   - DOMAIN-SUFFIX,anthropic.com,🌍 国外媒体
@@ -7892,6 +7320,7 @@ rules:
   - DOMAIN-SUFFIX,bard.google.com,🌍 国外媒体
   - DOMAIN-SUFFIX,chatgpt.com,🌍 国外媒体
   - DOMAIN-SUFFIX,claude.ai,🌍 国外媒体
+  - DOMAIN-SUFFIX,claude.com,🌍 国外媒体
   - DOMAIN-SUFFIX,claudeusercontent.com,🌍 国外媒体
   - DOMAIN-SUFFIX,client-api.arkoselabs.com,🌍 国外媒体
   - DOMAIN-SUFFIX,copilot.cloud.microsoft,🌍 国外媒体
@@ -7906,6 +7335,7 @@ rules:
   - DOMAIN-SUFFIX,identrust.com,🌍 国外媒体
   - DOMAIN-SUFFIX,intercom.io,🌍 国外媒体
   - DOMAIN-SUFFIX,intercomcdn.com,🌍 国外媒体
+  - DOMAIN-SUFFIX,jetbrains.ai,🌍 国外媒体
   - DOMAIN-SUFFIX,makersuite.google.com,🌍 国外媒体
   - DOMAIN-SUFFIX,meta.ai,🌍 国外媒体
   - DOMAIN-SUFFIX,mistral.ai,🌍 国外媒体
@@ -7915,6 +7345,7 @@ rules:
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🌍 国外媒体
   - DOMAIN-SUFFIX,perplexity.ai,🌍 国外媒体
   - DOMAIN-SUFFIX,sora.com,🌍 国外媒体
+  - DOMAIN-SUFFIX,x.ai,🌍 国外媒体
   - DOMAIN-KEYWORD,abematv.akamaized.net,🌍 国外媒体
   - DOMAIN-SUFFIX,abema.io,🌍 国外媒体
   - DOMAIN-SUFFIX,abema.tv,🌍 国外媒体
@@ -8434,6 +7865,7 @@ rules:
   - DOMAIN-SUFFIX,91vps.club,🚀 节点选择
   - DOMAIN-SUFFIX,92ccav.com,🚀 节点选择
   - DOMAIN-SUFFIX,991.com,🚀 节点选择
+  - DOMAIN-SUFFIX,996.icu,🚀 节点选择
   - DOMAIN-SUFFIX,99btgc01.com,🚀 节点选择
   - DOMAIN-SUFFIX,99cn.info,🚀 节点选择
   - DOMAIN-SUFFIX,9bis.com,🚀 节点选择
@@ -8478,6 +7910,7 @@ rules:
   - DOMAIN-SUFFIX,addictedtocoffee.de,🚀 节点选择
   - DOMAIN-SUFFIX,addyoutube.com,🚀 节点选择
   - DOMAIN-SUFFIX,adelaidebbs.com,🚀 节点选择
+  - DOMAIN-SUFFIX,adguard-vpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,admob.com,🚀 节点选择
   - DOMAIN-SUFFIX,adpl.org.hk,🚀 节点选择
   - DOMAIN-SUFFIX,ads-twitter.com,🚀 节点选择
@@ -8501,6 +7934,7 @@ rules:
   - DOMAIN-SUFFIX,agro.hk,🚀 节点选择
   - DOMAIN-SUFFIX,ai-kan.net,🚀 节点选择
   - DOMAIN-SUFFIX,ai-wen.net,🚀 节点选择
+  - DOMAIN-SUFFIX,ai.dev,🚀 节点选择
   - DOMAIN-SUFFIX,ai.google,🚀 节点选择
   - DOMAIN-SUFFIX,aiosearch.com,🚀 节点选择
   - DOMAIN-SUFFIX,aiph.net,🚀 节点选择
@@ -8638,6 +8072,7 @@ rules:
   - DOMAIN-SUFFIX,aolnews.com,🚀 节点选择
   - DOMAIN-SUFFIX,aomedia.org,🚀 节点选择
   - DOMAIN-SUFFIX,aomiwang.com,🚀 节点选择
+  - DOMAIN-SUFFIX,aoxvpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,ap.org,🚀 节点选择
   - DOMAIN-SUFFIX,apartmentratings.com,🚀 节点选择
   - DOMAIN-SUFFIX,apartments.com,🚀 节点选择
@@ -8704,6 +8139,7 @@ rules:
   - DOMAIN-SUFFIX,asiaharvest.org,🚀 节点选择
   - DOMAIN-SUFFIX,asianage.com,🚀 节点选择
   - DOMAIN-SUFFIX,asianews.it,🚀 节点选择
+  - DOMAIN-SUFFIX,asianfanfics.com,🚀 节点选择
   - DOMAIN-SUFFIX,asiansexdiary.com,🚀 节点选择
   - DOMAIN-SUFFIX,asianspiss.com,🚀 节点选择
   - DOMAIN-SUFFIX,asianwomensfilm.de,🚀 节点选择
@@ -8859,6 +8295,8 @@ rules:
   - DOMAIN-SUFFIX,bet365.com,🚀 节点选择
   - DOMAIN-SUFFIX,betaclouds.net,🚀 节点选择
   - DOMAIN-SUFFIX,betfair.com,🚀 节点选择
+  - DOMAIN-SUFFIX,bettergpt.chat,🚀 节点选择
+  - DOMAIN-SUFFIX,betterhash.net,🚀 节点选择
   - DOMAIN-SUFFIX,betternet.co,🚀 节点选择
   - DOMAIN-SUFFIX,bettervpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,bettween.com,🚀 节点选择
@@ -8890,6 +8328,7 @@ rules:
   - DOMAIN-SUFFIX,biliworld.com,🚀 节点选择
   - DOMAIN-SUFFIX,billypan.com,🚀 节点选择
   - DOMAIN-SUFFIX,binance.com,🚀 节点选择
+  - DOMAIN-SUFFIX,binance.org,🚀 节点选择
   - DOMAIN-SUFFIX,binance.us,🚀 节点选择
   - DOMAIN-SUFFIX,binancezh.cc,🚀 节点选择
   - DOMAIN-SUFFIX,bing.com,🚀 节点选择
@@ -9035,6 +8474,8 @@ rules:
   - DOMAIN-SUFFIX,bsky.network,🚀 节点选择
   - DOMAIN-SUFFIX,bsky.social,🚀 节点选择
   - DOMAIN-SUFFIX,bt2mag.com,🚀 节点选择
+  - DOMAIN-SUFFIX,bt4g.org,🚀 节点选择
+  - DOMAIN-SUFFIX,bt4gprx.com,🚀 节点选择
   - DOMAIN-SUFFIX,bt95.com,🚀 节点选择
   - DOMAIN-SUFFIX,btaia.com,🚀 节点选择
   - DOMAIN-SUFFIX,btbit.net,🚀 节点选择
@@ -9121,6 +8562,7 @@ rules:
   - DOMAIN-SUFFIX,canadameet.com,🚀 节点选择
   - DOMAIN-SUFFIX,canalporno.com,🚀 节点选择
   - DOMAIN-SUFFIX,cantonese.asia,🚀 节点选择
+  - DOMAIN-SUFFIX,canva.com,🚀 节点选择
   - DOMAIN-SUFFIX,canyu.org,🚀 节点选择
   - DOMAIN-SUFFIX,cao.im,🚀 节点选择
   - DOMAIN-SUFFIX,caobian.info,🚀 节点选择
@@ -9163,6 +8605,7 @@ rules:
   - DOMAIN-SUFFIX,ccdtr.org,🚀 节点选择
   - DOMAIN-SUFFIX,ccfd.org.tw,🚀 节点选择
   - DOMAIN-SUFFIX,cchere.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cchostvps.xyz,🚀 节点选择
   - DOMAIN-SUFFIX,ccim.org,🚀 节点选择
   - DOMAIN-SUFFIX,cclife.ca,🚀 节点选择
   - DOMAIN-SUFFIX,cclife.org,🚀 节点选择
@@ -9225,8 +8668,10 @@ rules:
   - DOMAIN-SUFFIX,chaos.social,🚀 节点选择
   - DOMAIN-SUFFIX,chapm25.com,🚀 节点选择
   - DOMAIN-SUFFIX,character.ai,🚀 节点选择
+  - DOMAIN-SUFFIX,chat.com,🚀 节点选择
   - DOMAIN-SUFFIX,chatgpt.com,🚀 节点选择
   - DOMAIN-SUFFIX,chatnook.com,🚀 节点选择
+  - DOMAIN-SUFFIX,chatpdf.com,🚀 节点选择
   - DOMAIN-SUFFIX,chaturbate.com,🚀 节点选择
   - DOMAIN-SUFFIX,checkgfw.com,🚀 节点选择
   - DOMAIN-SUFFIX,chengmingmag.com,🚀 节点选择
@@ -9378,6 +8823,7 @@ rules:
   - DOMAIN-SUFFIX,cloudcone.com,🚀 节点选择
   - DOMAIN-SUFFIX,cloudflare-dns.com,🚀 节点选择
   - DOMAIN-SUFFIX,cloudflare-ipfs.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cloudflarestatus.com,🚀 节点选择
   - DOMAIN-SUFFIX,cloudfront.net,🚀 节点选择
   - DOMAIN-SUFFIX,cloudfunctions.net,🚀 节点选择
   - DOMAIN-SUFFIX,club1069.com,🚀 节点选择
@@ -9461,6 +8907,7 @@ rules:
   - DOMAIN-SUFFIX,cotweet.com,🚀 节点选择
   - DOMAIN-SUFFIX,counter.social,🚀 节点选择
   - DOMAIN-SUFFIX,coursehero.com,🚀 节点选择
+  - DOMAIN-SUFFIX,covenantswatch.org.tw,🚀 节点选择
   - DOMAIN-SUFFIX,coze.com,🚀 节点选择
   - DOMAIN-SUFFIX,cpj.org,🚀 节点选择
   - DOMAIN-SUFFIX,cpu-monkey.com,🚀 节点选择
@@ -9497,6 +8944,7 @@ rules:
   - DOMAIN-SUFFIX,ct.org.tw,🚀 节点选择
   - DOMAIN-SUFFIX,ctao.org,🚀 节点选择
   - DOMAIN-SUFFIX,ctfriend.net,🚀 节点选择
+  - DOMAIN-SUFFIX,ctinets.com,🚀 节点选择
   - DOMAIN-SUFFIX,ctinews.com,🚀 节点选择
   - DOMAIN-SUFFIX,ctitv.com.tw,🚀 节点选择
   - DOMAIN-SUFFIX,ctowc.org,🚀 节点选择
@@ -9574,6 +9022,7 @@ rules:
   - DOMAIN-SUFFIX,daozhongxing.org,🚀 节点选择
   - DOMAIN-SUFFIX,darktech.org,🚀 节点选择
   - DOMAIN-SUFFIX,darktoy.net,🚀 节点选择
+  - DOMAIN-SUFFIX,darmau.co,🚀 节点选择
   - DOMAIN-SUFFIX,darpa.mil,🚀 节点选择
   - DOMAIN-SUFFIX,darrenliuwei.com,🚀 节点选择
   - DOMAIN-SUFFIX,dashlane.com,🚀 节点选择
@@ -9620,6 +9069,8 @@ rules:
   - DOMAIN-SUFFIX,demo.opera-mini.net,🚀 节点选择
   - DOMAIN-SUFFIX,democrats.org,🚀 节点选择
   - DOMAIN-SUFFIX,demosisto.hk,🚀 节点选择
+  - DOMAIN-SUFFIX,deno.com,🚀 节点选择
+  - DOMAIN-SUFFIX,deno.dev,🚀 节点选择
   - DOMAIN-SUFFIX,depositphotos.com,🚀 节点选择
   - DOMAIN-SUFFIX,derekhsu.homeip.net,🚀 节点选择
   - DOMAIN-SUFFIX,desc.se,🚀 节点选择
@@ -9696,6 +9147,7 @@ rules:
   - DOMAIN-SUFFIX,doc.new,🚀 节点选择
   - DOMAIN-SUFFIX,docker.com,🚀 节点选择
   - DOMAIN-SUFFIX,docker.io,🚀 节点选择
+  - DOMAIN-SUFFIX,dockerstatus.com,🚀 节点选择
   - DOMAIN-SUFFIX,docs.cfw.lbyczf.com,🚀 节点选择
   - DOMAIN-SUFFIX,docs.new,🚀 节点选择
   - DOMAIN-SUFFIX,doctorvoice.org,🚀 节点选择
@@ -10137,6 +9589,7 @@ rules:
   - DOMAIN-SUFFIX,flecheinthepeche.fr,🚀 节点选择
   - DOMAIN-SUFFIX,fleshbot.com,🚀 节点选择
   - DOMAIN-SUFFIX,fleursdeslettres.com,🚀 节点选择
+  - DOMAIN-SUFFIX,flexclip.com,🚀 节点选择
   - DOMAIN-SUFFIX,flexpool.io,🚀 节点选择
   - DOMAIN-SUFFIX,flgg.us,🚀 节点选择
   - DOMAIN-SUFFIX,flgjustice.org,🚀 节点选择
@@ -10149,6 +9602,7 @@ rules:
   - DOMAIN-SUFFIX,flitto.com,🚀 节点选择
   - DOMAIN-SUFFIX,flnet.org,🚀 节点选择
   - DOMAIN-SUFFIX,flog.tw,🚀 节点选择
+  - DOMAIN-SUFFIX,flowgpt.com,🚀 节点选择
   - DOMAIN-SUFFIX,flowhongkong.net,🚀 节点选择
   - DOMAIN-SUFFIX,flurry.com,🚀 节点选择
   - DOMAIN-SUFFIX,flypool.org,🚀 节点选择
@@ -10168,6 +9622,7 @@ rules:
   - DOMAIN-SUFFIX,fooooo.com,🚀 节点选择
   - DOMAIN-SUFFIX,footwiball.com,🚀 节点选择
   - DOMAIN-SUFFIX,forbes.com,🚀 节点选择
+  - DOMAIN-SUFFIX,forefront.ai,🚀 节点选择
   - DOMAIN-SUFFIX,foreignaffairs.com,🚀 节点选择
   - DOMAIN-SUFFIX,foreignpolicy.com,🚀 节点选择
   - DOMAIN-SUFFIX,form.new,🚀 节点选择
@@ -10223,6 +9678,8 @@ rules:
   - DOMAIN-SUFFIX,freefq.com,🚀 节点选择
   - DOMAIN-SUFFIX,freefuckvids.com,🚀 节点选择
   - DOMAIN-SUFFIX,freegao.com,🚀 节点选择
+  - DOMAIN-SUFFIX,freegpt.es,🚀 节点选择
+  - DOMAIN-SUFFIX,freegpt.tech,🚀 节点选择
   - DOMAIN-SUFFIX,freehongkong.org,🚀 节点选择
   - DOMAIN-SUFFIX,freeilhamtohti.org,🚀 节点选择
   - DOMAIN-SUFFIX,freekazakhs.org,🚀 节点选择
@@ -10288,6 +9745,8 @@ rules:
   - DOMAIN-SUFFIX,ftx.com,🚀 节点选择
   - DOMAIN-SUFFIX,fucd.com,🚀 节点选择
   - DOMAIN-SUFFIX,fuchsia.dev,🚀 节点选择
+  - DOMAIN-SUFFIX,fuckccp.com,🚀 节点选择
+  - DOMAIN-SUFFIX,fuckccp.xyz,🚀 节点选择
   - DOMAIN-SUFFIX,fuckcnnic.net,🚀 节点选择
   - DOMAIN-SUFFIX,fuckgfw.org,🚀 节点选择
   - DOMAIN-SUFFIX,fuckgfw233.org,🚀 节点选择
@@ -10304,6 +9763,7 @@ rules:
   - DOMAIN-SUFFIX,furhhdl.org,🚀 节点选择
   - DOMAIN-SUFFIX,furinkan.com,🚀 节点选择
   - DOMAIN-SUFFIX,furl.net,🚀 节点选择
+  - DOMAIN-SUFFIX,furrybar.com,🚀 节点选择
   - DOMAIN-SUFFIX,futurechinaforum.org,🚀 节点选择
   - DOMAIN-SUFFIX,futuremessage.org,🚀 节点选择
   - DOMAIN-SUFFIX,fux.com,🚀 节点选择
@@ -10348,6 +9808,7 @@ rules:
   - DOMAIN-SUFFIX,gardennetworks.com,🚀 节点选择
   - DOMAIN-SUFFIX,gardennetworks.org,🚀 节点选择
   - DOMAIN-SUFFIX,gartlive.com,🚀 节点选择
+  - DOMAIN-SUFFIX,garudalinux.org,🚀 节点选择
   - DOMAIN-SUFFIX,gate-project.com,🚀 节点选择
   - DOMAIN-SUFFIX,gate.io,🚀 节点选择
   - DOMAIN-SUFFIX,gatecoin.com,🚀 节点选择
@@ -10437,6 +9898,7 @@ rules:
   - DOMAIN-SUFFIX,githubcopilot.com,🚀 节点选择
   - DOMAIN-SUFFIX,githubmemory.com,🚀 节点选择
   - DOMAIN-SUFFIX,githubusercontent.com,🚀 节点选择
+  - DOMAIN-SUFFIX,gitlab.com,🚀 节点选择
   - DOMAIN-SUFFIX,gitlab.net,🚀 节点选择
   - DOMAIN-SUFFIX,gitmemory.com,🚀 节点选择
   - DOMAIN-SUFFIX,gizlen.net,🚀 节点选择
@@ -10806,6 +10268,7 @@ rules:
   - DOMAIN-SUFFIX,great-firewall.com,🚀 节点选择
   - DOMAIN-SUFFIX,great-roc.org,🚀 节点选择
   - DOMAIN-SUFFIX,greatfire.org,🚀 节点选择
+  - DOMAIN-SUFFIX,greatfirevpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,greatfirewall.biz,🚀 节点选择
   - DOMAIN-SUFFIX,greatfirewallofchina.net,🚀 节点选择
   - DOMAIN-SUFFIX,greatfirewallofchina.org,🚀 节点选择
@@ -10895,6 +10358,7 @@ rules:
   - DOMAIN-SUFFIX,have8.com,🚀 节点选择
   - DOMAIN-SUFFIX,hbg.com,🚀 节点选择
   - DOMAIN-SUFFIX,hbo.com,🚀 节点选择
+  - DOMAIN-SUFFIX,hbomax.com,🚀 节点选择
   - DOMAIN-SUFFIX,hcaptcha.com,🚀 节点选择
   - DOMAIN-SUFFIX,hclips.com,🚀 节点选择
   - DOMAIN-SUFFIX,hdlt.me,🚀 节点选择
@@ -10929,6 +10393,7 @@ rules:
   - DOMAIN-SUFFIX,heritage.org,🚀 节点选择
   - DOMAIN-SUFFIX,heroku.com,🚀 节点选择
   - DOMAIN-SUFFIX,herokuapp.com,🚀 节点选择
+  - DOMAIN-SUFFIX,herominers.com,🚀 节点选择
   - DOMAIN-SUFFIX,heungkongdiscuss.com,🚀 节点选择
   - DOMAIN-SUFFIX,hexieshe.com,🚀 节点选择
   - DOMAIN-SUFFIX,hexieshe.xyz,🚀 节点选择
@@ -10939,6 +10404,7 @@ rules:
   - DOMAIN-SUFFIX,hhdcb3office.org,🚀 节点选择
   - DOMAIN-SUFFIX,hhthesakyatrizin.org,🚀 节点选择
   - DOMAIN-SUFFIX,hi-on.org.tw,🚀 节点选择
+  - DOMAIN-SUFFIX,hicairo.com,🚀 节点选择
   - DOMAIN-SUFFIX,hiccears.com,🚀 节点选择
   - DOMAIN-SUFFIX,hidden-advent.org,🚀 节点选择
   - DOMAIN-SUFFIX,hide.me,🚀 节点选择
@@ -11145,6 +10611,7 @@ rules:
   - DOMAIN-SUFFIX,hxwk.org,🚀 节点选择
   - DOMAIN-SUFFIX,hxwq.org,🚀 节点选择
   - DOMAIN-SUFFIX,hybrid-analysis.com,🚀 节点选择
+  - DOMAIN-SUFFIX,hyperbeam.com,🚀 节点选择
   - DOMAIN-SUFFIX,hyperrate.com,🚀 节点选择
   - DOMAIN-SUFFIX,hypothes.is,🚀 节点选择
   - DOMAIN-SUFFIX,hyread.com.tw,🚀 节点选择
@@ -11258,6 +10725,7 @@ rules:
   - DOMAIN-SUFFIX,indsr.org.tw,🚀 节点选择
   - DOMAIN-SUFFIX,info-graf.fr,🚀 节点选择
   - DOMAIN-SUFFIX,informer.com,🚀 节点选择
+  - DOMAIN-SUFFIX,infura.io,🚀 节点选择
   - DOMAIN-SUFFIX,inherit.live,🚀 节点选择
   - DOMAIN-SUFFIX,initiativesforchina.org,🚀 节点选择
   - DOMAIN-SUFFIX,inkbunny.net,🚀 节点选择
@@ -11278,6 +10746,7 @@ rules:
   - DOMAIN-SUFFIX,internetdefenseleague.org,🚀 节点选择
   - DOMAIN-SUFFIX,internetfreedom.org,🚀 节点选择
   - DOMAIN-SUFFIX,internetpopculture.com,🚀 节点选择
+  - DOMAIN-SUFFIX,interseclab.org,🚀 节点选择
   - DOMAIN-SUFFIX,inthenameofconfuciusmovie.com,🚀 节点选择
   - DOMAIN-SUFFIX,invidio.us,🚀 节点选择
   - DOMAIN-SUFFIX,inxian.com,🚀 节点选择
@@ -11292,6 +10761,7 @@ rules:
   - DOMAIN-SUFFIX,iphonetaiwan.org,🚀 节点选择
   - DOMAIN-SUFFIX,iphonix.fr,🚀 节点选择
   - DOMAIN-SUFFIX,ipicture.ru,🚀 节点选择
+  - DOMAIN-SUFFIX,ipify.org,🚀 节点选择
   - DOMAIN-SUFFIX,ipinfo.io,🚀 节点选择
   - DOMAIN-SUFFIX,ipjetable.net,🚀 节点选择
   - DOMAIN-SUFFIX,ipobar.com,🚀 节点选择
@@ -11339,9 +10809,11 @@ rules:
   - DOMAIN-SUFFIX,itaboo.info,🚀 节点选择
   - DOMAIN-SUFFIX,italiatibet.org,🚀 节点选择
   - DOMAIN-SUFFIX,itasoftware.com,🚀 节点选择
+  - DOMAIN-SUFFIX,itch.io,🚀 节点选择
   - DOMAIN-SUFFIX,itemdb.com,🚀 节点选择
   - DOMAIN-SUFFIX,itemfix.com,🚀 节点选择
   - DOMAIN-SUFFIX,ithome.com.tw,🚀 节点选择
+  - DOMAIN-SUFFIX,itiger.com,🚀 节点选择
   - DOMAIN-SUFFIX,itsaol.com,🚀 节点选择
   - DOMAIN-SUFFIX,itshidden.com,🚀 节点选择
   - DOMAIN-SUFFIX,itsky.it,🚀 节点选择
@@ -11411,7 +10883,6 @@ rules:
   - DOMAIN-SUFFIX,jgoodies.com,🚀 节点选择
   - DOMAIN-SUFFIX,jiangweiping.com,🚀 节点选择
   - DOMAIN-SUFFIX,jiaoyou8.com,🚀 节点选择
-  - DOMAIN-SUFFIX,jichangtj.com,🚀 节点选择
   - DOMAIN-SUFFIX,jiehua.cz,🚀 节点选择
   - DOMAIN-SUFFIX,jiepang.com,🚀 节点选择
   - DOMAIN-SUFFIX,jieshibaobao.com,🚀 节点选择
@@ -11636,6 +11107,7 @@ rules:
   - DOMAIN-SUFFIX,lester850.info,🚀 节点选择
   - DOMAIN-SUFFIX,letou.com,🚀 节点选择
   - DOMAIN-SUFFIX,letscorp.net,🚀 节点选择
+  - DOMAIN-SUFFIX,lexica.art,🚀 节点选择
   - DOMAIN-SUFFIX,lflink.com,🚀 节点选择
   - DOMAIN-SUFFIX,lflinkup.com,🚀 节点选择
   - DOMAIN-SUFFIX,lflinkup.net,🚀 节点选择
@@ -11651,6 +11123,7 @@ rules:
   - DOMAIN-SUFFIX,liberal.org.hk,🚀 节点选择
   - DOMAIN-SUFFIX,libertysculpturepark.com,🚀 节点选择
   - DOMAIN-SUFFIX,libertytimes.com.tw,🚀 节点选择
+  - DOMAIN-SUFFIX,library-access.sk,🚀 节点选择
   - DOMAIN-SUFFIX,libraryinformationtechnology.com,🚀 节点选择
   - DOMAIN-SUFFIX,libredd.it,🚀 节点选择
   - DOMAIN-SUFFIX,lidecheng.com,🚀 节点选择
@@ -11677,6 +11150,7 @@ rules:
   - DOMAIN-SUFFIX,linktr.ee,🚀 节点选择
   - DOMAIN-SUFFIX,linkuswell.com,🚀 节点选择
   - DOMAIN-SUFFIX,linpie.com,🚀 节点选择
+  - DOMAIN-SUFFIX,linux.do,🚀 节点选择
   - DOMAIN-SUFFIX,linux.org.hk,🚀 节点选择
   - DOMAIN-SUFFIX,linuxtoy.org,🚀 节点选择
   - DOMAIN-SUFFIX,lionsroar.com,🚀 节点选择
@@ -11709,6 +11183,7 @@ rules:
   - DOMAIN-SUFFIX,lizhizhuangbi.com,🚀 节点选择
   - DOMAIN-SUFFIX,lkcn.net,🚀 节点选择
   - DOMAIN-SUFFIX,llss.me,🚀 节点选择
+  - DOMAIN-SUFFIX,lmarena.ai,🚀 节点选择
   - DOMAIN-SUFFIX,lmsys.org,🚀 节点选择
   - DOMAIN-SUFFIX,load.to,🚀 节点选择
   - DOMAIN-SUFFIX,lobsangwangyal.com,🚀 节点选择
@@ -11746,6 +11221,7 @@ rules:
   - DOMAIN-SUFFIX,lsxszzg.com,🚀 节点选择
   - DOMAIN-SUFFIX,ltn.com.tw,🚀 节点选择
   - DOMAIN-SUFFIX,luckydesigner.space,🚀 节点选择
+  - DOMAIN-SUFFIX,luckymobile.ca,🚀 节点选择
   - DOMAIN-SUFFIX,ludepress.com,🚀 节点选择
   - DOMAIN-SUFFIX,luke54.com,🚀 节点选择
   - DOMAIN-SUFFIX,luke54.org,🚀 节点选择
@@ -11758,7 +11234,6 @@ rules:
   - DOMAIN-SUFFIX,lzjscript.com,🚀 节点选择
   - DOMAIN-SUFFIX,lzmtnews.org,🚀 节点选择
   - DOMAIN-SUFFIX,m-sport.co.uk,🚀 节点选择
-  - DOMAIN-SUFFIX,m-team.cc,🚀 节点选择
   - DOMAIN-SUFFIX,m.me,🚀 节点选择
   - DOMAIN-SUFFIX,m.plixi.com,🚀 节点选择
   - DOMAIN-SUFFIX,m.slandr.net,🚀 节点选择
@@ -11834,6 +11309,7 @@ rules:
   - DOMAIN-SUFFIX,mcaf.ee,🚀 节点选择
   - DOMAIN-SUFFIX,mcfog.com,🚀 节点选择
   - DOMAIN-SUFFIX,mcreasite.com,🚀 节点选择
+  - DOMAIN-SUFFIX,mcusercontent.com,🚀 节点选择
   - DOMAIN-SUFFIX,md-t.org,🚀 节点选择
   - DOMAIN-SUFFIX,me.me,🚀 节点选择
   - DOMAIN-SUFFIX,meansys.com,🚀 节点选择
@@ -11886,6 +11362,7 @@ rules:
   - DOMAIN-SUFFIX,metacafe.com,🚀 节点选择
   - DOMAIN-SUFFIX,metacubex.one,🚀 节点选择
   - DOMAIN-SUFFIX,metafilter.com,🚀 节点选择
+  - DOMAIN-SUFFIX,metamask.io,🚀 节点选择
   - DOMAIN-SUFFIX,metart.com,🚀 节点选择
   - DOMAIN-SUFFIX,metarthunter.com,🚀 节点选择
   - DOMAIN-SUFFIX,meteorshowersonline.com,🚀 节点选择
@@ -11908,6 +11385,7 @@ rules:
   - DOMAIN-SUFFIX,mihk.hk,🚀 节点选择
   - DOMAIN-SUFFIX,mihr.com,🚀 节点选择
   - DOMAIN-SUFFIX,mihua.org,🚀 节点选择
+  - DOMAIN-SUFFIX,mij.rip,🚀 节点选择
   - DOMAIN-SUFFIX,mikanani.me,🚀 节点选择
   - DOMAIN-SUFFIX,mikesoltys.com,🚀 节点选择
   - DOMAIN-SUFFIX,mikocon.com,🚀 节点选择
@@ -11961,6 +11439,8 @@ rules:
   - DOMAIN-SUFFIX,mixpod.com,🚀 节点选择
   - DOMAIN-SUFFIX,mixx.com,🚀 节点选择
   - DOMAIN-SUFFIX,mizzmona.com,🚀 节点选择
+  - DOMAIN-SUFFIX,mji.rip,🚀 节点选择
+  - DOMAIN-SUFFIX,mjj.rip,🚀 节点选择
   - DOMAIN-SUFFIX,mk5000.com,🚀 节点选择
   - DOMAIN-SUFFIX,mlc.ai,🚀 节点选择
   - DOMAIN-SUFFIX,mlcool.com,🚀 节点选择
@@ -12130,6 +11610,7 @@ rules:
   - DOMAIN-SUFFIX,nalandawest.org,🚀 节点选择
   - DOMAIN-SUFFIX,namgyal.org,🚀 节点选择
   - DOMAIN-SUFFIX,namgyalmonastery.org,🚀 节点选择
+  - DOMAIN-SUFFIX,namu.wiki,🚀 节点选择
   - DOMAIN-SUFFIX,nanopool.org,🚀 节点选择
   - DOMAIN-SUFFIX,nanyang.com,🚀 节点选择
   - DOMAIN-SUFFIX,nanyangpost.com,🚀 节点选择
@@ -12148,6 +11629,7 @@ rules:
   - DOMAIN-SUFFIX,nationsonline.org,🚀 节点选择
   - DOMAIN-SUFFIX,nationwide.com,🚀 节点选择
   - DOMAIN-SUFFIX,naughtyamerica.com,🚀 节点选择
+  - DOMAIN-SUFFIX,naver.com,🚀 节点选择
   - DOMAIN-SUFFIX,naver.jp,🚀 节点选择
   - DOMAIN-SUFFIX,navy.mil,🚀 节点选择
   - DOMAIN-SUFFIX,naweeklytimes.com,🚀 节点选择
@@ -12256,6 +11738,7 @@ rules:
   - DOMAIN-SUFFIX,ninjaproxy.ninja,🚀 节点选择
   - DOMAIN-SUFFIX,nintendium.com,🚀 节点选择
   - DOMAIN-SUFFIX,ninth.biz,🚀 节点选择
+  - DOMAIN-SUFFIX,nirsoft.net,🚀 节点选择
   - DOMAIN-SUFFIX,nitter.cc,🚀 节点选择
   - DOMAIN-SUFFIX,nitter.net,🚀 节点选择
   - DOMAIN-SUFFIX,niu.moe,🚀 节点选择
@@ -12357,6 +11840,7 @@ rules:
   - DOMAIN-SUFFIX,nzchinese.com,🚀 节点选择
   - DOMAIN-SUFFIX,nzchinese.net.nz,🚀 节点选择
   - DOMAIN-SUFFIX,o3o.ca,🚀 节点选择
+  - DOMAIN-SUFFIX,oaiusercontent.com,🚀 节点选择
   - DOMAIN-SUFFIX,oanda.com,🚀 节点选择
   - DOMAIN-SUFFIX,oann.com,🚀 节点选择
   - DOMAIN-SUFFIX,oauth.net,🚀 节点选择
@@ -12370,6 +11854,7 @@ rules:
   - DOMAIN-SUFFIX,ocry.com,🚀 节点选择
   - DOMAIN-SUFFIX,ocsp.int-x3.letsencrypt.org,🚀 节点选择
   - DOMAIN-SUFFIX,october-review.org,🚀 节点选择
+  - DOMAIN-SUFFIX,octocaptcha.com,🚀 节点选择
   - DOMAIN-SUFFIX,oculus.com,🚀 节点选择
   - DOMAIN-SUFFIX,oculuscdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,odysee.com,🚀 节点选择
@@ -12503,6 +11988,8 @@ rules:
   - DOMAIN-SUFFIX,paljorpublications.com,🚀 节点选择
   - DOMAIN-SUFFIX,palmislife.com,🚀 节点选择
   - DOMAIN-SUFFIX,paltalk.com,🚀 节点选择
+  - DOMAIN-SUFFIX,palworldgame.com,🚀 节点选择
+  - DOMAIN-SUFFIX,pancakeswap.finance,🚀 节点选择
   - DOMAIN-SUFFIX,pandafan.pub,🚀 节点选择
   - DOMAIN-SUFFIX,pandapow.co,🚀 节点选择
   - DOMAIN-SUFFIX,pandapow.net,🚀 节点选择
@@ -12576,6 +12063,7 @@ rules:
   - DOMAIN-SUFFIX,perplexity.ai,🚀 节点选择
   - DOMAIN-SUFFIX,persecutionblog.com,🚀 节点选择
   - DOMAIN-SUFFIX,persiankitty.com,🚀 节点选择
+  - DOMAIN-SUFFIX,pewresearch.org,🚀 节点选择
   - DOMAIN-SUFFIX,pfd.org.hk,🚀 节点选择
   - DOMAIN-SUFFIX,phapluan.org,🚀 节点选择
   - DOMAIN-SUFFIX,phayul.com,🚀 节点选择
@@ -12596,6 +12084,7 @@ rules:
   - DOMAIN-SUFFIX,picasaweb.com,🚀 节点选择
   - DOMAIN-SUFFIX,picgo.net,🚀 节点选择
   - DOMAIN-SUFFIX,picidae.net,🚀 节点选择
+  - DOMAIN-SUFFIX,picsart.com,🚀 节点选择
   - DOMAIN-SUFFIX,picturedip.com,🚀 节点选择
   - DOMAIN-SUFFIX,picturesocial.com,🚀 节点选择
   - DOMAIN-SUFFIX,picuki.com,🚀 节点选择
@@ -12730,9 +12219,11 @@ rules:
   - DOMAIN-SUFFIX,primevideo.com,🚀 节点选择
   - DOMAIN-SUFFIX,printfriendly.com,🚀 节点选择
   - DOMAIN-SUFFIX,prism-break.org,🚀 节点选择
+  - DOMAIN-SUFFIX,prismic.io,🚀 节点选择
   - DOMAIN-SUFFIX,prisoneralert.com,🚀 节点选择
   - DOMAIN-SUFFIX,pritunl.com,🚀 节点选择
   - DOMAIN-SUFFIX,privacybox.de,🚀 节点选择
+  - DOMAIN-SUFFIX,privacyguides.org,🚀 节点选择
   - DOMAIN-SUFFIX,private.com,🚀 节点选择
   - DOMAIN-SUFFIX,privateinternetaccess.com,🚀 节点选择
   - DOMAIN-SUFFIX,privatepaste.com,🚀 节点选择
@@ -12931,6 +12422,7 @@ rules:
   - DOMAIN-SUFFIX,religionnews.com,🚀 节点选择
   - DOMAIN-SUFFIX,religioustolerance.org,🚀 节点选择
   - DOMAIN-SUFFIX,renminbao.com,🚀 节点选择
+  - DOMAIN-SUFFIX,rentry.co,🚀 节点选择
   - DOMAIN-SUFFIX,renyurenquan.org,🚀 节点选择
   - DOMAIN-SUFFIX,research.google,🚀 节点选择
   - DOMAIN-SUFFIX,resilio.com,🚀 节点选择
@@ -13003,6 +12495,7 @@ rules:
   - DOMAIN-SUFFIX,rumble.com,🚀 节点选择
   - DOMAIN-SUFFIX,runbtx.com,🚀 节点选择
   - DOMAIN-SUFFIX,rushbee.com,🚀 节点选择
+  - DOMAIN-SUFFIX,rustdesk.com,🚀 节点选择
   - DOMAIN-SUFFIX,rusvpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,ruten.com.tw,🚀 节点选择
   - DOMAIN-SUFFIX,rutracker.net,🚀 节点选择
@@ -13276,6 +12769,7 @@ rules:
   - DOMAIN-SUFFIX,sndcdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,sneakme.net,🚀 节点选择
   - DOMAIN-SUFFIX,snowlionpub.com,🚀 节点选择
+  - DOMAIN-SUFFIX,sntp.uk,🚀 节点选择
   - DOMAIN-SUFFIX,sobees.com,🚀 节点选择
   - DOMAIN-SUFFIX,soc.mil,🚀 节点选择
   - DOMAIN-SUFFIX,social.edu.ci,🚀 节点选择
@@ -13305,6 +12799,7 @@ rules:
   - DOMAIN-SUFFIX,solana.com,🚀 节点选择
   - DOMAIN-SUFFIX,solidaritetibet.org,🚀 节点选择
   - DOMAIN-SUFFIX,solidfiles.com,🚀 节点选择
+  - DOMAIN-SUFFIX,solscan.io,🚀 节点选择
   - DOMAIN-SUFFIX,solv.finance,🚀 节点选择
   - DOMAIN-SUFFIX,somee.com,🚀 节点选择
   - DOMAIN-SUFFIX,songjianjun.com,🚀 节点选择
@@ -13313,6 +12808,7 @@ rules:
   - DOMAIN-SUFFIX,sopcast.com,🚀 节点选择
   - DOMAIN-SUFFIX,sopcast.org,🚀 节点选择
   - DOMAIN-SUFFIX,sophos.com,🚀 节点选择
+  - DOMAIN-SUFFIX,sora.com,🚀 节点选择
   - DOMAIN-SUFFIX,sorazone.net,🚀 节点选择
   - DOMAIN-SUFFIX,sorting-algorithms.com,🚀 节点选择
   - DOMAIN-SUFFIX,sos.org,🚀 节点选择
@@ -13483,6 +12979,7 @@ rules:
   - DOMAIN-SUFFIX,suyangg.com,🚀 节点选择
   - DOMAIN-SUFFIX,svsfx.com,🚀 节点选择
   - DOMAIN-SUFFIX,swagbucks.com,🚀 节点选择
+  - DOMAIN-SUFFIX,swapspace.co,🚀 节点选择
   - DOMAIN-SUFFIX,swissinfo.ch,🚀 节点选择
   - DOMAIN-SUFFIX,swissvpn.net,🚀 节点选择
   - DOMAIN-SUFFIX,switch1.jp,🚀 节点选择
@@ -13538,6 +13035,7 @@ rules:
   - DOMAIN-SUFFIX,taiwanus.net,🚀 节点选择
   - DOMAIN-SUFFIX,taiwanyes.com,🚀 节点选择
   - DOMAIN-SUFFIX,talk853.com,🚀 节点选择
+  - DOMAIN-SUFFIX,talkatone.com,🚀 节点选择
   - DOMAIN-SUFFIX,talkboxapp.com,🚀 节点选择
   - DOMAIN-SUFFIX,talkcc.com,🚀 节点选择
   - DOMAIN-SUFFIX,talkonly.net,🚀 节点选择
@@ -13545,10 +13043,13 @@ rules:
   - DOMAIN-SUFFIX,tanc.org,🚀 节点选择
   - DOMAIN-SUFFIX,tangben.com,🚀 节点选择
   - DOMAIN-SUFFIX,tangren.us,🚀 节点选择
+  - DOMAIN-SUFFIX,tanks.gg,🚀 节点选择
   - DOMAIN-SUFFIX,taoism.net,🚀 节点选择
   - DOMAIN-SUFFIX,taolun.info,🚀 节点选择
+  - DOMAIN-SUFFIX,tap.io,🚀 节点选择
   - DOMAIN-SUFFIX,tapanwap.com,🚀 节点选择
   - DOMAIN-SUFFIX,tapatalk.com,🚀 节点选择
+  - DOMAIN-SUFFIX,taptap.io,🚀 节点选择
   - DOMAIN-SUFFIX,taragana.com,🚀 节点选择
   - DOMAIN-SUFFIX,tardigrade.io,🚀 节点选择
   - DOMAIN-SUFFIX,target.com,🚀 节点选择
@@ -13606,11 +13107,13 @@ rules:
   - DOMAIN-SUFFIX,telesco.pe,🚀 节点选择
   - DOMAIN-SUFFIX,tellapart.com,🚀 节点选择
   - DOMAIN-SUFFIX,tellme.pw,🚀 节点选择
+  - DOMAIN-SUFFIX,temu.com,🚀 节点选择
   - DOMAIN-SUFFIX,tenacy.com,🚀 节点选择
   - DOMAIN-SUFFIX,tenor.com,🚀 节点选择
   - DOMAIN-SUFFIX,tensorflow.org,🚀 节点选择
   - DOMAIN-SUFFIX,tenzinpalmo.com,🚀 节点选择
   - DOMAIN-SUFFIX,terabox.com,🚀 节点选择
+  - DOMAIN-SUFFIX,terobox.com,🚀 节点选择
   - DOMAIN-SUFFIX,tew.org,🚀 节点选择
   - DOMAIN-SUFFIX,textnow.com,🚀 节点选择
   - DOMAIN-SUFFIX,textnow.me,🚀 节点选择
@@ -13892,6 +13395,7 @@ rules:
   - DOMAIN-SUFFIX,truenas.com,🚀 节点选择
   - DOMAIN-SUFFIX,truesocial.media,🚀 节点选择
   - DOMAIN-SUFFIX,trulyergonomic.com,🚀 节点选择
+  - DOMAIN-SUFFIX,trustwallet.com,🚀 节点选择
   - DOMAIN-SUFFIX,truth101.co.tv,🚀 节点选择
   - DOMAIN-SUFFIX,truthontour.org,🚀 节点选择
   - DOMAIN-SUFFIX,truthsocial.com,🚀 节点选择
@@ -14084,6 +13588,7 @@ rules:
   - DOMAIN-SUFFIX,udn.com.tw,🚀 节点选择
   - DOMAIN-SUFFIX,udnbkk.com,🚀 节点选择
   - DOMAIN-SUFFIX,udndata.com,🚀 节点选择
+  - DOMAIN-SUFFIX,udomain.hk,🚀 节点选择
   - DOMAIN-SUFFIX,uforadio.com.tw,🚀 节点选择
   - DOMAIN-SUFFIX,ufreevpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,ugo.com,🚀 节点选择
@@ -14329,6 +13834,7 @@ rules:
   - DOMAIN-SUFFIX,vpnworldwide.com,🚀 节点选择
   - DOMAIN-SUFFIX,vporn.com,🚀 节点选择
   - DOMAIN-SUFFIX,vpser.net,🚀 节点选择
+  - DOMAIN-SUFFIX,vpsxb.net,🚀 节点选择
   - DOMAIN-SUFFIX,vraiesagesse.net,🚀 节点选择
   - DOMAIN-SUFFIX,vrchat.com,🚀 节点选择
   - DOMAIN-SUFFIX,vrmtr.com,🚀 节点选择
@@ -14405,6 +13911,7 @@ rules:
   - DOMAIN-SUFFIX,webrtc.org,🚀 节点选择
   - DOMAIN-SUFFIX,webrush.net,🚀 节点选择
   - DOMAIN-SUFFIX,webs-tv.net,🚀 节点选择
+  - DOMAIN-SUFFIX,websdr.org,🚀 节点选择
   - DOMAIN-SUFFIX,website.new,🚀 节点选择
   - DOMAIN-SUFFIX,websitepulse.com,🚀 节点选择
   - DOMAIN-SUFFIX,websnapr.com,🚀 节点选择
@@ -14481,9 +13988,11 @@ rules:
   - DOMAIN-SUFFIX,wikimapia.org,🚀 节点选择
   - DOMAIN-SUFFIX,wikimedia.org,🚀 节点选择
   - DOMAIN-SUFFIX,wikinews.org,🚀 节点选择
+  - DOMAIN-SUFFIX,wikipedia.com,🚀 节点选择
   - DOMAIN-SUFFIX,wikipedia.org,🚀 节点选择
   - DOMAIN-SUFFIX,wikiquote.org,🚀 节点选择
   - DOMAIN-SUFFIX,wikisource.org,🚀 节点选择
+  - DOMAIN-SUFFIX,wikiunblocked.org,🚀 节点选择
   - DOMAIN-SUFFIX,wikiversity.org,🚀 节点选择
   - DOMAIN-SUFFIX,wikivoyage.org,🚀 节点选择
   - DOMAIN-SUFFIX,wikiwand.com,🚀 节点选择
@@ -14642,6 +14151,7 @@ rules:
   - DOMAIN-SUFFIX,xn--11xs86f.icu,🚀 节点选择
   - DOMAIN-SUFFIX,xn--4gq171p.com,🚀 节点选择
   - DOMAIN-SUFFIX,xn--90wwvt03e.com,🚀 节点选择
+  - DOMAIN-SUFFIX,xn--9iqy04a7fi01l.com,🚀 节点选择
   - DOMAIN-SUFFIX,xn--9pr62r24a.com,🚀 节点选择
   - DOMAIN-SUFFIX,xn--czq75pvv1aj5c.org,🚀 节点选择
   - DOMAIN-SUFFIX,xn--i2ru8q2qg.com,🚀 节点选择
@@ -14649,6 +14159,7 @@ rules:
   - DOMAIN-SUFFIX,xn--noss43i.com,🚀 节点选择
   - DOMAIN-SUFFIX,xn--oiq.cc,🚀 节点选择
   - DOMAIN-SUFFIX,xn--p8j9a0d9c9a.xn--q9jyb4c,🚀 节点选择
+  - DOMAIN-SUFFIX,xn--u2u927b.com,🚀 节点选择
   - DOMAIN-SUFFIX,xnpool.com,🚀 节点选择
   - DOMAIN-SUFFIX,xnxx-cdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,xnxx.com,🚀 节点选择
@@ -14796,6 +14307,7 @@ rules:
   - DOMAIN-SUFFIX,z-lib.gl,🚀 节点选择
   - DOMAIN-SUFFIX,z-lib.io,🚀 节点选择
   - DOMAIN-SUFFIX,z-lib.org,🚀 节点选择
+  - DOMAIN-SUFFIX,z-library.ec,🚀 节点选择
   - DOMAIN-SUFFIX,z-library.sk,🚀 节点选择
   - DOMAIN-SUFFIX,zacebook.com,🚀 节点选择
   - DOMAIN-SUFFIX,zalmos.com,🚀 节点选择
@@ -14803,6 +14315,7 @@ rules:
   - DOMAIN-SUFFIX,zannel.com,🚀 节点选择
   - DOMAIN-SUFFIX,zaobao.com,🚀 节点选择
   - DOMAIN-SUFFIX,zaobao.com.sg,🚀 节点选择
+  - DOMAIN-SUFFIX,zaochenbao.com,🚀 节点选择
   - DOMAIN-SUFFIX,zaozon.com,🚀 节点选择
   - DOMAIN-SUFFIX,zapto.org,🚀 节点选择
   - DOMAIN-SUFFIX,zattoo.com,🚀 节点选择
@@ -15195,6 +14708,7 @@ rules:
   - DOMAIN-SUFFIX,aliapp.org,🎯 全球直连
   - DOMAIN-SUFFIX,alibaba.com,🎯 全球直连
   - DOMAIN-SUFFIX,alibabacloud.com,🎯 全球直连
+  - DOMAIN-SUFFIX,alibabachengdun.com,🎯 全球直连
   - DOMAIN-SUFFIX,alibabausercontent.com,🎯 全球直连
   - DOMAIN-SUFFIX,alicdn.com,🎯 全球直连
   - DOMAIN-SUFFIX,alicloudccp.com,🎯 全球直连
@@ -15213,6 +14727,7 @@ rules:
   - DOMAIN-SUFFIX,autonavi.com,🎯 全球直连
   - DOMAIN-SUFFIX,dingtalk.com,🎯 全球直连
   - DOMAIN-SUFFIX,ele.me,🎯 全球直连
+  - DOMAIN-SUFFIX,elemecdn.com,🎯 全球直连
   - DOMAIN-SUFFIX,hichina.com,🎯 全球直连
   - DOMAIN-SUFFIX,mmstat.com,🎯 全球直连
   - DOMAIN-SUFFIX,mxhichina.com,🎯 全球直连
@@ -15220,6 +14735,7 @@ rules:
   - DOMAIN-SUFFIX,taobao.com,🎯 全球直连
   - DOMAIN-SUFFIX,taobaocdn.com,🎯 全球直连
   - DOMAIN-SUFFIX,tbcache.com,🎯 全球直连
+  - DOMAIN-SUFFIX,tbcdn.cn,🎯 全球直连
   - DOMAIN-SUFFIX,tbcdn.com,🎯 全球直连
   - DOMAIN-SUFFIX,tmall.com,🎯 全球直连
   - DOMAIN-SUFFIX,tmall.hk,🎯 全球直连
@@ -15549,6 +15065,7 @@ rules:
   - DOMAIN-SUFFIX,air-matters.io,🎯 全球直连
   - DOMAIN-SUFFIX,aixifan.com,🎯 全球直连
   - DOMAIN-SUFFIX,algocasts.io,🎯 全球直连
+  - DOMAIN-SUFFIX,asklink.com,🎯 全球直连
   - DOMAIN-SUFFIX,babytree.com,🎯 全球直连
   - DOMAIN-SUFFIX,babytreeimg.com,🎯 全球直连
   - DOMAIN-SUFFIX,baicizhan.com,🎯 全球直连
