@@ -17,307 +17,211 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - {name: 🇹🇼 TW台湾(yz), server: green2.cdntencentmusic.com, port: 31104, type: trojan, password: 3846a29b-57d5-40f2-8acd-13855aa025cd, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 2, server: 172.67.189.148, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz), server: ccc.922922.shop, port: 80, type: vmess, uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /RkUUbqhA9GJZBROjL3Q5vTymr, headers: {Host: cCc.922922.ShOp}}}
-  - {name: 🇯🇵 JP日本(yz), server: 173.245.59.111, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 3, server: 119.59.98.58, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3}
-  - {name: 🇯🇵 JP日本(yz) 2, server: 172.64.34.130, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 4, server: 104.25.63.32, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇳🇱 NL荷兰(yz), server: mfyousheng.nl.eu.org, port: 443, type: trojan, password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q, sni: mfyousheng.nl.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /tjwsLhx0SFASG4l9FERJ1g, headers: {Host: mfyousheng.nl.eu.org}}}
-  - {name: 🇹🇼 TW台湾(yz) 5, server: green2.cdntencentmusic.com, port: 33301, type: trojan, password: 17d3bf89-d2f0-4827-bcd0-c199fe54cd2a, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
-  - {name: 🇯🇵 JP日本(yz) 3, server: www.udacity.com, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz), server: 104.25.127.147, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 2, server: x.cf.090227.xyz, port: 2096, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 6, server: 162.159.25.249, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 7, server: 104.25.127.147, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 4, server: 8.223.63.150, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 3, server: 108.162.195.59, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 5, server: 104.27.29.22, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz), server: 162.159.1.142, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 6, server: 172.64.40.1, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 2, server: freeyx.cloudflare88.eu.org, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇸🇬 SG新加坡(yz) 2, server: 172.67.173.133, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 8, server: 104.27.29.22, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 3, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 4, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇯🇵 JP日本(yz) 7, server: 104.21.29.56, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 5, server: cdnjs.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇹🇼 TW台湾(yz) 9, server: 104.16.29.98, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 3, server: 108.162.195.59, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇰🇷 KR韩国(yz), server: 89.221.225.15, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: yCbQ4bry4otfifK7oel71NaXpPL9pYJb}
-  - {name: 🇸🇬 SG新加坡(yz) 4, server: 104.21.238.247, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 8, server: 172.67.173.133, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 5, server: 104.19.173.161, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 6, server: 104.17.253.113, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 6, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇭🇰 HK香港(yz) 4, server: 3.115.3.90, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 7, server: www.temu.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇹🇼 TW台湾(yz) 10, server: 34.92.183.2, port: 6443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 8, server: 194.246.114.101, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: HaNqw9pIE4jcx98sg7UQgHeGNTM4R2pk}
-  - {name: 🇺🇸 US美国(yz) 9, server: 185.138.164.228, port: 700, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: zybs.worker.ddns-ip.net, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: zybs.worker.ddns-ip.net}}}
-  - {name: 🇺🇸 US美国(yz) 10, server: mfyousheng.nl.eu.org, port: 443, type: trojan, password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q, sni: mfyousheng.nl.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /tjwsLhx0SFASG4l9FERJ1g, headers: {Host: mfyousheng.nl.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 11, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇯🇵 JP日本(yz) 9, server: 35.78.161.211, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 10, server: 3.115.3.90, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 11, server: 220.130.58.138, port: 33301, type: trojan, password: a213e1a5-3c5a-40f2-b70e-98ffa63ffc8e, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
-  - {name: 🇯🇵 JP日本(yz) 11, server: 13.115.8.228, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 12, server: 3.114.34.118, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 5, server: 52.68.106.34, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇳🇱 NL荷兰(yz) 2, server: ali.nonull.pp.ua, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 12, server: green2.cdntencentmusic.com, port: 31103, type: trojan, password: 3846a29b-57d5-40f2-8acd-13855aa025cd, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 13, server: v36.hdacd.com, port: 30836, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 3, server: 57.180.50.81, port: 37390, type: vless, uuid: b52fac66-fd92-47ae-b1f6-332aa1c353d9, tls: true, tfo: false, skip-cert-verify: false, servername: xxh.ipipip.im, network: ws, ws-opts: {path: /xxhjphome, headers: {Host: xxh.ipipip.im}}}
+  - {name: 🇸🇬 SG新加坡(yz), server: 104.18.63.72, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 2, server: 104.18.63.103, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz), server: 172.67.78.223, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 2, server: 104.16.45.99, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz), server: 104.21.29.56, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 3, server: 172.67.173.133, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 2, server: 104.16.61.13, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇫🇷 FR法国(yz), server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
+  - {name: 🇸🇬 SG新加坡(yz) 4, server: 104.18.63.116, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇫🇷 FR法国(yz) 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 3, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1"}}
+  - {name: 🇹🇼 TW台湾(yz), server: 172.67.173.133, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 2, server: 104.21.237.253, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇳🇱 NL荷兰(yz), server: 104.19.173.161, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 3, server: 108.162.198.185, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 4, server: 104.26.1.110, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇷🇺 RU俄罗斯(yz), server: 162.159.1.142, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 3, server: 104.18.63.116, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 5, server: 104.25.63.32, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇳🇱 NL荷兰(yz) 2, server: 162.159.3.119, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 3, server: 162.159.1.142, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 4, server: zyipv6.pai50288.uk, port: 55588, type: ss, cipher: aes-128-gcm, password: XMj65epCcyjN6DSqz0W0VLlZWaW+XLQdMftFQIXff6s=}
+  - {name: 🇹🇼 TW台湾(yz) 4, server: 104.16.29.98, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 6, server: 104.21.29.56, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 5, server: 104.25.127.147, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 5, server: www.whatismyip.net, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
+  - {name: 🇺🇸 US美国(yz) 6, server: ns.cloudflare.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
+  - {name: 🇭🇰 HK香港(yz) 6, server: 104.19.29.53, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 5, server: 172.64.34.130, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 7, server: 104.16.61.13, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 7, server: 172.67.173.133, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 8, server: 162.159.15.93, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 7, server: 162.159.235.26, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇸🇬 SG新加坡(yz) 9, server: 162.159.35.140, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇩🇪 DE德国(yz), server: 104.16.29.98, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 8, server: 162.159.20.56, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 9, server: 104.27.29.22, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 10, server: 162.159.25.249, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 8, server: 173.245.59.111, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 11, server: 162.159.18.203, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇩🇪 DE德国(yz) 2, server: 162.159.11.235, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 12, server: 104.25.127.147, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 10, server: 173.245.59.84, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 13, server: 172.64.40.1, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 11, server: 172.67.189.148, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 6, server: 104.19.254.30, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 14, server: 162.159.3.119, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 7, server: 193.203.203.66, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: S6jUK9Fw5fMHgNqlqXObHZWv8Tf4nEkm}
+  - {name: 🇸🇬 SG新加坡(yz) 15, server: 108.162.195.59, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 12, server: www.fbi.gov, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
+  - {name: 🇸🇬 SG新加坡(yz) 16, server: www.udacity.com, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇳🇱 NL荷兰(yz) 3, server: x.cf.090227.xyz, port: 2096, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 13, server: www.fbi.gov, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
+  - {name: 🇺🇸 US美国(yz) 14, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 15, server: 172.64.42.136, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 8, server: 162.159.25.249, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 9, server: x.cf.090227.xyz, port: 2096, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇷🇺 RU俄罗斯(yz) 2, server: 162.159.11.235, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇳🇱 NL荷兰(yz) 4, server: 104.21.45.135, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 17, server: 172.64.42.136, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇯🇵 JP日本(yz), server: 104.25.63.32, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 10, server: 108.162.195.59, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 18, server: 104.24.254.62, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 19, server: www.wto.org, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 9, server: 95.164.116.33, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pQmnC03JObbPhdh5FBJHgD6jnTLchsRA}
+  - {name: 🇺🇸 US美国(yz) 16, server: 162.159.18.203, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇷🇺 RU俄罗斯(yz) 3, server: 162.159.12.187, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 17, server: cloudflare-dns.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
+  - {name: 🇩🇪 DE德国(yz) 3, server: creativecommons.org, port: 2086, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /PdgTMW8NBNZYo6L23v, headers: {Host: index.0x15.workers.dev}}}
+  - {name: 🇺🇸 US美国(yz) 18, server: support.cloudflare.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
+  - {name: 🇭🇰 HK香港(yz) 10, server: 172.64.34.130, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇷🇺 RU俄罗斯(yz) 4, server: 104.18.63.116, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 19, server: 104.19.220.22, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 20, server: 172.67.79.235, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇳🇱 NL荷兰(yz) 5, server: ali.nonull.pp.ua, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 21, server: mfyousheng.nl.eu.org, port: 443, type: trojan, password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q, sni: mfyousheng.nl.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /tjwsLhx0SFASG4l9FERJ1g, headers: {Host: mfyousheng.nl.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 22, server: 104.19.212.207, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 23, server: 104.16.65.1, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 24, server: 104.17.202.10, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 25, server: 172.64.53.226, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 26, server: 104.26.1.110, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: //, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 27, server: 104.19.220.22, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇳🇱 NL荷兰(yz) 6, server: nrtcfdns.zone.id, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 28, server: 104.17.69.244, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 29, server: 172.64.154.61, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 11, server: 104.18.47.154, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 12, server: 172.64.154.61, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 13, server: 172.64.154.30, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 30, server: 104.26.6.89, port: 80, type: vless, uuid: c5b129d7-f133-4b34-a9c6-68c9a8f70248, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed", headers: {Host: EMotioNaL-peRMIsSiONf1bs65u5f4.EcOTOuRISs.Co.uK}}}
+  - {name: 🇸🇬 SG新加坡(yz) 20, server: 43.134.174.114, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 31, server: download.yunzhongzhuan.com, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 32, server: 104.18.47.154, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 33, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, sni: epge.muarua.filegear-sg.me, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: epge.muarua.filegear-sg.me}}}
+  - {name: 🇭🇰 HK香港(yz) 11, server: cf.0sm.com, port: 443, type: trojan, password: 7418004a-0ecd-41c0-a062-42bf966d3fb2, sni: vd.vmy2024.dpdns.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: vd.vmy2024.dpdns.org}}}
+  - {name: 🇭🇰 HK香港(yz) 12, server: one.cf.cdn.hyli.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 34, server: 162.159.24.131, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 35, server: cf.zhetengsha.eu.org, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇭🇰 HK香港(yz) 13, server: 104.18.45.192, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 36, server: openai.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
+  - {name: 🇹🇼 TW台湾(yz) 14, server: 104.17.162.3, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 37, server: 172.64.154.30, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 38, server: www.shopify.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
   - {name: 🇨🇦 CA加拿大(yz), server: 104.26.6.89, port: 80, type: vless, uuid: c5b129d7-f133-4b34-a9c6-68c9a8f70248, tls: false, tfo: false, skip-cert-verify: false, servername: EMotioNaL-peRMIsSiONf1bs65u5f4.EcOTOuRISs.Co.uK, network: ws, ws-opts: {path: "/?ed", headers: {Host: EMotioNaL-peRMIsSiONf1bs65u5f4.EcOTOuRISs.Co.uK}}}
-  - {name: 🇭🇰 HK香港(yz) 6, server: 8.223.63.150, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇬🇧 GB英国(yz), server: n1747624280.lie5d.cyou, port: 443, type: vmess, uuid: 49dcf4b4-81eb-4fe2-91d3-86dc2e27ced5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1747624280.lie5d.cyou}}}
-  - {name: 🇸🇬 SG新加坡(yz) 7, server: 3.114.34.118, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 14, server: 162.159.235.26, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 15, server: 777.ai7777777.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇯🇵 JP日本(yz) 13, server: 47.79.84.90, port: 8500, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 7, server: n1761214906.wpg27.xyz, port: 443, type: vmess, uuid: c28a6258-7baa-40fc-8a51-87f59c847cd7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1761214906.wpg27.xyz}}}
-  - {name: 🇫🇷 FR法国(yz), server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇯🇵 JP日本(yz) 14, server: 176.126.114.92, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 12, server: 3.115.3.90, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 8, server: 13.230.34.30, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 15, server: 47.79.35.149, port: 50006, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 9, server: 47.79.89.145, port: 8433, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 16, server: 172.66.156.81, port: 80, type: vless, uuid: 0bb4b732-62e7-46c3-b7d6-082a103dfc9f, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy, headers: {Host: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.skylinkserver.site.}}}
-  - {name: 🇸🇬 SG新加坡(yz) 10, server: 47.79.35.149, port: 50006, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 11, server: 38.55.106.199, port: 20000, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 17, server: 104.19.49.192, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇹🇼 TW台湾(yz) 13, server: 47.79.35.149, port: 50006, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 8, server: 103.238.227.87, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 14, server: 172.64.154.61, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 12, server: 43.161.222.97, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 18, server: cdn.204910.best, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇯🇵 JP日本(yz) 16, server: 18.183.149.18, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 17, server: 38.147.178.207, port: 12579, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 19, server: 104.17.167.134, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 20, server: zyipv6.pai50288.uk, port: 55588, type: ss, cipher: aes-128-gcm, password: XMj65epCcyjN6DSqz0W0VLlZWaW+XLQdMftFQIXff6s=}
-  - {name: 🇹🇼 TW台湾(yz) 15, server: 104.17.162.3, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇭🇰 HK香港(yz) 9, server: 172.64.154.30, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 10, server: download.yunzhongzhuan.com, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 18, server: 8.210.93.168, port: 20060, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 19, server: hj.xmm1993.top, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 21, server: 172.64.229.205, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 22, server: bbbbbbbbb.222769.xyz, port: 80, type: vmess, uuid: 2e65577e-8fdb-4bb1-a495-96f3122099a7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /f6taOMcOSZb9TPR, headers: {Host: bbbbbbbbb.222769.xyz}}}
-  - {name: 🇭🇰 HK香港(yz) 11, server: 104.18.47.154, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 20, server: 172.64.158.216, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇳🇱 NL荷兰(yz) 4, server: 104.19.39.97, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 23, server: 198.41.208.234, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇯🇵 JP日本(yz) 21, server: download.yunzhongzhuan.com, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇫🇷 FR法国(yz) 2, server: nrtcfdns.zone.id, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇹🇼 TW台湾(yz) 16, server: 172.64.144.51, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 17, server: hj.xmm1993.top, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 18, server: 176.126.114.92, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 13, server: 103.238.227.87, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 14, server: 172.64.154.113, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 15, server: 172.64.144.51, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 22, server: 172.64.147.98, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 23, server: 172.64.154.30, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 24, server: www.shopify.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇸🇬 SG新加坡(yz) 16, server: 8.210.93.168, port: 20060, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 19, server: download.yunzhongzhuan.com, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 12, server: 8.210.93.168, port: 20060, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 17, server: 104.18.47.154, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 18, server: 172.64.159.203, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 13, server: 104.18.46.36, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 24, server: hj.xmm1993.top, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 20, server: 172.64.154.30, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 14, server: 172.64.154.113, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 21, server: 104.17.167.134, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: //, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇭🇰 HK香港(yz) 15, server: 172.64.154.113, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 25, server: 43.161.217.205, port: 1443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 26, server: 104.18.44.155, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 22, server: 43.161.222.97, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 23, server: 172.64.229.205, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇸🇬 SG新加坡(yz) 19, server: malo.mbetaa.site, port: 443, type: vless, uuid: 1cf4fd3b-7a87-4684-b4ba-e64cf3b24203, tls: false, tfo: false, skip-cert-verify: false, network: tcp}
-  - {name: 🇺🇸 US美国(yz) 25, server: openai.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇹🇼 TW台湾(yz) 24, server: 103.238.227.87, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 25, server: 104.18.47.154, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 16, server: 38.147.178.207, port: 12579, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 26, server: 104.19.55.205, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇭🇰 HK香港(yz) 17, server: 172.64.154.61, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 20, server: hj.xmm1993.top, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 18, server: download.yunzhongzhuan.com, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 21, server: 104.18.45.192, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇫🇷 FR法国(yz) 3, server: 172.64.53.226, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 26, server: 104.17.69.244, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇯🇵 JP日本(yz) 27, server: 172.64.154.61, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇬🇧 GB英国(yz) 2, server: 209.38.168.122, port: 21252, type: vless, uuid: 0750ee6b-bb75-4646-899f-1ce534ed9905, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
-  - {name: 🇺🇸 US美国(yz) 27, server: 104.26.6.89, port: 80, type: vless, uuid: c5b129d7-f133-4b34-a9c6-68c9a8f70248, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: EMotioNaL-peRMIsSiONf1bs65u5f4.EcOTOuRISs.Co.uK}}}
-  - {name: 🇳🇱 NL荷兰(yz) 5, server: 185.236.232.108, port: 80, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}}
-  - {name: 🇸🇬 SG新加坡(yz) 22, server: 172.64.154.30, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇨🇦 CA加拿大(yz) 2, server: 104.26.6.89, port: 80, type: vless, uuid: c5b129d7-f133-4b34-a9c6-68c9a8f70248, tls: false, tfo: false, skip-cert-verify: false, servername: EMotioNaL-peRMIsSiONf1bs65u5f4.EcOTOuRISs.Co.uK, network: ws, ws-opts: {path: /, headers: {Host: EMotioNaL-peRMIsSiONf1bs65u5f4.EcOTOuRISs.Co.uK}}}
-  - {name: 🇸🇬 SG新加坡(yz) 23, server: 172.64.158.216, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇳🇱 NL荷兰(yz) 6, server: 143.244.197.90, port: 40191, type: vless, uuid: c4c65266-80fb-4bf4-87ce-fb9e3deb3429, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
-  - {name: 🇸🇬 SG新加坡(yz) 24, server: 43.134.174.114, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇰🇷 KR韩国(yz) 2, server: 104.26.1.110, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 28, server: 104.16.65.1, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇬🇧 GB英国(yz) 3, server: 134.122.94.36, port: 53480, type: vless, uuid: f5c918d9-8534-45ed-8cb7-562c4a3f56c6, tls: false, tfo: false, skip-cert-verify: false, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}}
-  - {name: 🇺🇸 US美国(yz) 29, server: 162.159.24.131, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇩🇪 DE德国(yz), server: 104.27.29.22, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇫🇷 FR法国(yz) 4, server: 108.162.198.185, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 30, server: 104.17.202.10, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇳🇱 NL荷兰(yz) 7, server: cf.0sm.com, port: 443, type: trojan, password: 7418004a-0ecd-41c0-a062-42bf966d3fb2, sni: vd.vmy2024.dpdns.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: vd.vmy2024.dpdns.org}}}
-  - {name: 🇺🇸 US美国(yz) 31, server: 104.19.220.22, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 32, server: 104.26.6.89, port: 80, type: vless, uuid: c5b129d7-f133-4b34-a9c6-68c9a8f70248, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed", headers: {Host: EMotioNaL-peRMIsSiONf1bs65u5f4.EcOTOuRISs.Co.uK}}}
-  - {name: 🇺🇸 US美国(yz) 33, server: 104.19.220.22, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 34, server: 95.164.116.33, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pQmnC03JObbPhdh5FBJHgD6jnTLchsRA}
-  - {name: 🇹🇼 TW台湾(yz) 27, server: 173.245.59.84, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 28, server: 162.159.10.122, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 35, server: 172.67.79.235, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇺🇸 US美国(yz) 36, server: 104.19.212.207, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇯🇵 JP日本(yz) 28, server: 8.223.63.189, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 19, server: 172.64.151.220, port: 2096, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 20, server: n1761214911.74qxv.top, port: 443, type: vmess, uuid: 372c1939-299d-4946-9633-5ffa971f8b67, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1761214911.74qxv.top}}}
-  - {name: 🇭🇰 HK香港(yz) 21, server: www.udacity.com, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 29, server: x.cf.090227.xyz, port: 2096, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 25, server: 104.25.63.32, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 22, server: 43.165.7.71, port: 19751, type: vmess, uuid: 6cfa6103-5d06-40cb-f452-b563db578288, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 23, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
-  - {name: 🇹🇼 TW台湾(yz) 30, server: green2.cdntencentmusic.com, port: 34411, type: trojan, password: a5049baa-eadf-4523-bcac-33139e4a99ea, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 8, server: www.wto.org, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 29, server: 104.18.63.103, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 30, server: 172.64.42.136, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 37, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, sni: epge.muarua.filegear-sg.me, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: epge.muarua.filegear-sg.me}}}
-  - {name: 🇺🇸 US美国(yz) 38, server: 208.67.106.73, port: 44884, type: ss, cipher: chacha20-ietf-poly1305, password: 2DGq3jvVRg5n3CcxmysGK2kmrgJeSNof12A76cZvVxqPpetyC1XEciCFufq5xKvRWGGnKVembpThuUSQhbZ7GMsZY4UVxEBw}
-  - {name: 🇹🇼 TW台湾(yz) 31, server: 220.130.58.138, port: 34411, type: trojan, password: 17d3bf89-d2f0-4827-bcd0-c199fe54cd2a, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 32, server: www.wto.org, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 26, server: www.wto.org, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 31, server: 108.162.194.99, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 27, server: 104.25.127.147, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 33, server: 108.162.195.59, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇩🇪 DE德国(yz) 2, server: 108.162.194.99, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 28, server: 162.159.12.187, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 34, server: 172.67.173.133, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 35, server: 162.159.1.142, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 36, server: 172.64.40.1, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 32, server: 162.159.25.249, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 37, server: 172.64.34.130, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 33, server: 162.159.1.142, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 24, server: 172.67.78.223, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 25, server: www.wto.org, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 29, server: 172.64.42.136, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 26, server: 162.159.15.93, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 34, server: x.cf.090227.xyz, port: 2096, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 35, server: 104.24.254.62, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 38, server: 162.159.18.203, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 36, server: 104.25.63.32, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 37, server: 104.25.127.147, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 38, server: 162.159.0.4, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 30, server: 162.159.25.249, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 39, server: one.cf.cdn.hyli.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇹🇼 TW台湾(yz) 39, server: 162.159.3.119, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇩🇪 DE德国(yz) 3, server: 104.16.29.98, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 27, server: 104.18.63.116, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 40, server: 172.64.42.136, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 40, server: ns.cloudflare.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇭🇰 HK香港(yz) 28, server: 104.21.29.56, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 31, server: 172.64.40.1, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 29, server: 162.159.1.142, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 32, server: 162.159.18.203, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 33, server: 162.159.15.93, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 34, server: 104.18.63.116, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 35, server: 104.19.29.53, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 39, server: 104.21.237.222, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 36, server: 162.159.11.235, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 41, server: 104.21.29.56, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 41, server: 2001:bc8:32d7:2013::8, port: 62211, type: vmess, uuid: e1786d49-ccba-466b-a0dd-e1ab59bd83bb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: www.bing.com}}}
-  - {name: 🇹🇼 TW台湾(yz) 42, server: 162.159.11.235, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 42, server: www.fbi.gov, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇺🇸 US美国(yz) 43, server: 188.114.97.0, port: 8080, type: vless, uuid: 7235ac4c-b73b-45d1-8727-53e147f3744a, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/eyJqdW5rIjoiOXNidTA2d2VzejYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed", headers: {Host: 064wfsk6shr7mq573bgm675z7h1a1s25.z2mzf6rq9i.workers.dev}}}
-  - {name: 🇺🇸 US美国(yz) 44, server: 104.26.1.221, port: 443, type: vless, uuid: 3f9c8463-8610-3ed8-86c8-a26713067825, tls: true, tfo: false, skip-cert-verify: false, servername: dabaius2.sylu.net, network: ws, ws-opts: {path: /db10240eb751d6ab, headers: {Host: dabaius2.sylu.net}}}
-  - {name: 🇯🇵 JP日本(yz) 40, server: 162.159.18.203, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 30, server: 172.64.34.130, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 45, server: 104.16.45.99, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 46, server: www.udemy.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇸🇬 SG新加坡(yz) 37, server: 104.16.29.98, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 38, server: 173.245.59.111, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 41, server: 104.18.63.72, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 47, server: 104.17.253.113, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 39, server: 162.159.0.4, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇩🇪 DE德国(yz) 4, server: 162.159.11.235, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 43, server: 172.67.158.84, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇩🇪 DE德国(yz) 5, server: 104.21.237.253, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇳🇱 NL荷兰(yz) 9, server: 104.25.95.79, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 48, server: cf.zhetengsha.eu.org, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇸🇬 SG新加坡(yz) 40, server: 162.159.35.140, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 41, server: 162.159.3.119, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 44, server: 104.16.61.13, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 49, server: cloudflare-dns.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇳🇱 NL荷兰(yz) 10, server: 104.21.237.222, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 50, server: www.npmjs.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇺🇸 US美国(yz) 51, server: www.wto.org, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇯🇵 JP日本(yz) 42, server: 104.16.29.98, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 42, server: 104.16.61.13, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 43, server: 104.24.254.62, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 52, server: developers.cloudflare.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇹🇼 TW台湾(yz) 45, server: 104.18.63.103, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇭🇰 HK香港(yz) 31, server: 172.67.173.133, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 43, server: 104.19.254.30, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 44, server: 104.19.173.161, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 46, server: 104.18.63.116, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 39, server: download.yunzhongzhuan.com, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 40, server: download.yunzhongzhuan.com, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇳🇱 NL荷兰(yz) 7, server: 104.18.46.36, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 41, server: 172.64.158.216, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 42, server: 104.26.6.89, port: 80, type: vless, uuid: c5b129d7-f133-4b34-a9c6-68c9a8f70248, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: EMotioNaL-peRMIsSiONf1bs65u5f4.EcOTOuRISs.Co.uK}}}
+  - {name: 🇺🇸 US美国(yz) 43, server: hj.xmm1993.top, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 44, server: dddffgthyu.922922.shop, port: 80, type: vmess, uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /RkUUbqhA9GJZBROjL3Q5vTymr, headers: {Host: dDdFfGTHYU.922922.SHOP}}}
+  - {name: 🇺🇸 US美国(yz) 45, server: 104.19.39.97, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 46, server: 104.17.167.134, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 47, server: hj.xmm1993.top, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 21, server: 172.64.154.30, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 48, server: 172.64.229.205, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇸🇬 SG新加坡(yz) 22, server: 172.64.159.203, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 49, server: 104.19.49.192, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇳🇱 NL荷兰(yz) 8, server: www.gov.se, port: 2053, type: vless, uuid: 694899b7-3e90-f695-efde-abe17d0bb1da, tls: true, tfo: false, skip-cert-verify: false, servername: saasorg.saaas.ccwu.cc, network: ws, ws-opts: {path: /proxyip=sjc.o00o.ooo, headers: {Host: saasorg.saaas.ccwu.cc}}}
+  - {name: 🇳🇱 NL荷兰(yz) 9, server: 104.26.6.89, port: 80, type: vless, uuid: c5b129d7-f133-4b34-a9c6-68c9a8f70248, tls: false, tfo: false, skip-cert-verify: false, servername: EMotioNaL-peRMIsSiONf1bs65u5f4.EcOTOuRISs.Co.uK, network: ws, ws-opts: {path: /, headers: {Host: EMotioNaL-peRMIsSiONf1bs65u5f4.EcOTOuRISs.Co.uK}}}
+  - {name: 🇺🇸 US美国(yz) 50, server: dDdFfGTHYU.922922.SHOP, port: 80, type: vmess, uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /RkUUbqhA9GJZBROjL3Q5vTymr, headers: {Host: dDdFfGTHYU.922922.SHOP}}}
+  - {name: 🇺🇸 US美国(yz) 51, server: freeyx.cloudflare88.eu.org, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇭🇰 HK香港(yz) 14, server: 8.210.93.168, port: 20060, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 15, server: 172.64.229.205, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 US美国(yz) 52, server: 777.ai7777777.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 TW台湾(yz) 16, server: 104.19.55.205, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇭🇰 HK香港(yz) 15, server: 104.18.47.154, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 53, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 54, server: 172.64.154.113, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇯🇵 JP日本(yz) 2, server: hj.xmm1993.top, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 16, server: n1761214902.wpg27.xyz, port: 443, type: vmess, uuid: 469e9a38-b64e-46c3-9793-234158942d3b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: n1761214902.wpg27.xyz, network: ws, ws-opts: {path: /, headers: {Host: n1761214902.wpg27.xyz}}}
+  - {name: 🇹🇼 TW台湾(yz) 17, server: 2001:bc8:32d7:2013::8, port: 62211, type: vmess, uuid: e1786d49-ccba-466b-a0dd-e1ab59bd83bb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: www.bing.com}}}
+  - {name: 🇭🇰 HK香港(yz) 17, server: zoom.seaseus.pp.ua, port: 443, type: vless, uuid: fba4e0e0-118c-431f-9f6a-4cfc99f39de8, tls: true, tfo: false, skip-cert-verify: false, servername: zoom.seaseus.pp.ua, network: ws, ws-opts: {path: /seaseus, headers: {Host: zoom.seaseus.pp.ua}}}
+  - {name: 🇺🇸 US美国(yz) 55, server: 172.86.94.7, port: 10443, type: vless, uuid: 00000000-0000-4000-8000-000000000000, tls: true, tfo: false, skip-cert-verify: false, servername: mot.gike.dpdns.org, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: mot.gike.dpdns.org}}}
+  - {name: 🇸🇬 SG新加坡(yz) 23, server: 172.64.154.113, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇳🇱 NL荷兰(yz) 10, server: mfyousheng.nl.eu.org, port: 443, type: trojan, password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q, sni: mfyousheng.nl.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /tjwsLhx0SFASG4l9FERJ1g, headers: {Host: mfyousheng.nl.eu.org}}}
+  - {name: 🇭🇰 HK香港(yz) 18, server: n1761214907.74qxv.top, port: 443, type: vmess, uuid: 4c17399f-c93d-4527-8ace-5bdc2f0901f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1761214907.74qxv.top}}}
+  - {name: 🇭🇰 HK香港(yz) 19, server: n1761214911.74qxv.top, port: 443, type: vmess, uuid: 372c1939-299d-4946-9633-5ffa971f8b67, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1761214911.74qxv.top}}}
+  - {name: 🇺🇸 US美国(yz) 56, server: zoom.seaseus.pp.ua, port: 443, type: vless, uuid: fba4e0e0-118c-431f-9f6a-4cfc99f39de8, tls: true, tfo: false, skip-cert-verify: false, servername: zoom.seaseus.pp.ua, network: ws, ws-opts: {path: /seaseus, headers: {Host: zoom.seaseus.pp.ua}}}
+  - {name: 🇺🇸 US美国(yz) 57, server: liubu9.singdns.com, port: 17459, type: ss, cipher: aes-128-gcm, password: 57bc0c04-8184-48f5-906b-897d095ed445}
+  - {name: 🇺🇸 US美国(yz) 58, server: 154.21.86.48, port: 27507, type: vless, uuid: 32d17ec8-d1c0-4db3-91c8-dad98bcf81a8, tls: true, tfo: false, skip-cert-verify: false, servername: madcity.123123123.shop, network: ws, ws-opts: {path: /, headers: {Host: madcity.123123123.shop}}}
+  - {name: 🇺🇸 US美国(yz) 59, server: 104.18.189.102, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 24, server: 104.19.254.30, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 18, server: 162.159.11.235, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 25, server: 104.16.29.98, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 19, server: 162.159.1.142, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇸🇬 SG新加坡(yz) 26, server: 173.245.59.111, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇫🇷 FR法国(yz) 4, server: 104.24.254.62, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇩🇪 DE德国(yz) 4, server: 104.27.29.22, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 60, server: www.npmjs.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
+  - {name: 🇹🇼 TW台湾(yz) 20, server: 162.159.0.4, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 61, server: 162.159.15.93, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 62, server: www.udemy.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
+  - {name: 🇸🇬 SG新加坡(yz) 27, server: 162.159.0.4, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 21, server: 172.64.40.1, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 20, server: www.wto.org, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇨🇦 CA加拿大(yz) 2, server: www.udacity.com, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
   - {name: 🇫🇷 FR法国(yz) 5, server: 173.245.59.84, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 44, server: 104.19.254.30, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇹🇼 TW台湾(yz) 47, server: 104.19.254.30, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
-  - {name: 🇳🇱 NL荷兰(yz) 11, server: 193.203.203.66, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: S6jUK9Fw5fMHgNqlqXObHZWv8Tf4nEkm}
-  - {name: 🇺🇸 US美国(yz) 53, server: 104.26.1.110, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: //, headers: {Host: snippets.kkii.eu.org}}}
-  - {name: 🇯🇵 JP日本(yz) 45, server: 104.25.63.32, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 54, server: www.whatismyip.net, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: fuckingfangbinxing.cnm-fangbinxing-cnm.workers.dev}}}
-  - {name: 🇺🇸 US美国(yz) 55, server: pupas-shirting-unsung.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: p78naCf2EfOlRSLTX0wFVx}
-  - {name: 🇬🇧 GB英国(yz) 4, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
-  - {name: 🇭🇰 HK香港(yz) 32, server: 104.18.63.72, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
-  - {name: 🇸🇬 SG新加坡(yz) 45, server: 104.18.63.72, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
-  - {name: 🇯🇵 JP日本(yz) 46, server: 104.16.46.249, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniujp.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniujp.qzz.io}}}
-  - {name: 🇺🇸 US美国(yz) 56, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 48, server: green2.cdntencentmusic.com, port: 31104, type: trojan, password: 3846a29b-57d5-40f2-8acd-13855aa025cd, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 57, server: ccc.922922.shop, port: 80, type: vmess, uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /RkUUbqhA9GJZBROjL3Q5vTymr, headers: {Host: cCc.922922.ShOp}}}
-  - {name: 🇹🇼 TW台湾(yz) 2 2, server: 119.59.98.58, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3}
-  - {name: 🇳🇱 NL荷兰(yz) 12, server: mfyousheng.nl.eu.org, port: 443, type: trojan, password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q, sni: mfyousheng.nl.eu.org, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 3 2, server: green2.cdntencentmusic.com, port: 33301, type: trojan, password: 17d3bf89-d2f0-4827-bcd0-c199fe54cd2a, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 2 2, server: freeyx.cloudflare88.eu.org, port: 443, type: trojan, password: 5a2c16f9, sni: freeyx.cloudflare88.eu.org, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 3 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 4 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇰🇷 KR韩国(yz) 3, server: 89.221.225.15, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: yCbQ4bry4otfifK7oel71NaXpPL9pYJb}
-  - {name: 🇺🇸 US美国(yz) 5 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇺🇸 US美国(yz) 6 2, server: 194.246.114.101, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: HaNqw9pIE4jcx98sg7UQgHeGNTM4R2pk}
-  - {name: 🇺🇸 US美国(yz) 7 2, server: mfyousheng.nl.eu.org, port: 443, type: trojan, password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q, sni: mfyousheng.nl.eu.org, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 8 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 4 2, server: 220.130.58.138, port: 33301, type: trojan, password: a213e1a5-3c5a-40f2-b70e-98ffa63ffc8e, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 9 2, server: green2.cdntencentmusic.com, port: 31103, type: trojan, password: 3846a29b-57d5-40f2-8acd-13855aa025cd, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 10 2, server: v36.hdacd.com, port: 30836, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 5, server: n1747624280.lie5d.cyou, port: 443, type: vmess, uuid: 49dcf4b4-81eb-4fe2-91d3-86dc2e27ced5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1747624280.lie5d.cyou}}}
-  - {name: 🇺🇸 US美国(yz) 11 2, server: 777.ai7777777.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: 777.ai7777777.xyz, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 33, server: n1761214906.wpg27.xyz, port: 443, type: vmess, uuid: c28a6258-7baa-40fc-8a51-87f59c847cd7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1761214906.wpg27.xyz}}}
-  - {name: 🇫🇷 FR法国(yz) 6, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 12 2, server: 104.17.167.134, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 13 2, server: zyipv6.pai50288.uk, port: 55588, type: ss, cipher: aes-128-gcm, password: XMj65epCcyjN6DSqz0W0VLlZWaW+XLQdMftFQIXff6s=}
-  - {name: 🇹🇼 TW台湾(yz) 5 2, server: 104.17.162.3, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 14 2, server: bbbbbbbbb.222769.xyz, port: 80, type: vmess, uuid: 2e65577e-8fdb-4bb1-a495-96f3122099a7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /f6taOMcOSZb9TPR, headers: {Host: bbbbbbbbb.222769.xyz}}}
-  - {name: 🇹🇼 TW台湾(yz) 6 2, server: 104.17.167.134, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 7 2, server: 172.64.229.205, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
-  - {name: 🇹🇼 TW台湾(yz) 8 2, server: 104.19.55.205, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
-  - {name: 🇰🇷 KR韩国(yz) 2 2, server: 104.26.1.110, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 15 2, server: 162.159.24.131, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
-  - {name: 🇳🇱 NL荷兰(yz) 2 2, server: cf.0sm.com, port: 443, type: trojan, password: 7418004a-0ecd-41c0-a062-42bf966d3fb2, sni: cf.0sm.com, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 16 2, server: 104.19.220.22, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 17 2, server: 95.164.116.33, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pQmnC03JObbPhdh5FBJHgD6jnTLchsRA}
-  - {name: 🇭🇰 HK香港(yz) 2 2, server: n1761214911.74qxv.top, port: 443, type: vmess, uuid: 372c1939-299d-4946-9633-5ffa971f8b67, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1761214911.74qxv.top}}}
-  - {name: 🇭🇰 HK香港(yz) 3 2, server: 43.165.7.71, port: 19751, type: vmess, uuid: 6cfa6103-5d06-40cb-f452-b563db578288, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 4 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
-  - {name: 🇹🇼 TW台湾(yz) 9 2, server: green2.cdntencentmusic.com, port: 34411, type: trojan, password: a5049baa-eadf-4523-bcac-33139e4a99ea, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 18 2, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 19 2, server: 208.67.106.73, port: 44884, type: ss, cipher: chacha20-ietf-poly1305, password: 2DGq3jvVRg5n3CcxmysGK2kmrgJeSNof12A76cZvVxqPpetyC1XEciCFufq5xKvRWGGnKVembpThuUSQhbZ7GMsZY4UVxEBw}
-  - {name: 🇹🇼 TW台湾(yz) 10 2, server: 220.130.58.138, port: 34411, type: trojan, password: 17d3bf89-d2f0-4827-bcd0-c199fe54cd2a, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 20 2, server: one.cf.cdn.hyli.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: one.cf.cdn.hyli.xyz, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 21 2, server: 2001:bc8:32d7:2013::8, port: 62211, type: vmess, uuid: e1786d49-ccba-466b-a0dd-e1ab59bd83bb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: www.bing.com}}}
-  - {name: 🇳🇱 NL荷兰(yz) 3 2, server: 193.203.203.66, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: S6jUK9Fw5fMHgNqlqXObHZWv8Tf4nEkm}
-  - {name: 🇺🇸 US美国(yz) 22 2, server: 104.26.1.110, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 23 2, server: pupas-shirting-unsung.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: p78naCf2EfOlRSLTX0wFVx}
-  - {name: 🇬🇧 GB英国(yz) 2 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
-  - {name: 🇺🇸 US美国(yz) 24 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 63, server: 172.67.158.84, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 21, server: www.udacity.com, port: 8443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 22, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 23, server: www.wto.org, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 64, server: 104.19.29.53, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 22, server: 104.25.127.147, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 23, server: 104.27.29.22, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 24, server: 172.64.151.220, port: 2096, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 24, server: 104.21.29.56, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniutw.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniutw.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 65, server: 188.114.97.0, port: 8080, type: vless, uuid: 7235ac4c-b73b-45d1-8727-53e147f3744a, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/eyJqdW5rIjoiOXNidTA2d2VzejYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed", headers: {Host: 064wfsk6shr7mq573bgm675z7h1a1s25.z2mzf6rq9i.workers.dev}}}
+  - {name: 🇺🇸 US美国(yz) 66, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇸🇬 SG新加坡(yz) 28, server: 104.21.237.222, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇺🇸 US美国(yz) 67, server: 104.17.253.113, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniusg1.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniusg1.qzz.io}}}
+  - {name: 🇭🇰 HK香港(yz) 25, server: 104.18.63.72, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.xaniuhk.qzz.io, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.xaniuhk.qzz.io}}}
+  - {name: 🇹🇼 TW台湾(yz) 25, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇫🇷 FR法国(yz) 6, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 2 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 3 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 68, server: 104.26.1.110, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 26, server: zyipv6.pai50288.uk, port: 55588, type: ss, cipher: aes-128-gcm, password: XMj65epCcyjN6DSqz0W0VLlZWaW+XLQdMftFQIXff6s=}
+  - {name: 🇹🇼 TW台湾(yz) 26, server: 193.203.203.66, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: S6jUK9Fw5fMHgNqlqXObHZWv8Tf4nEkm}
+  - {name: 🇺🇸 US美国(yz) 2 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 2 2, server: 95.164.116.33, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pQmnC03JObbPhdh5FBJHgD6jnTLchsRA}
+  - {name: 🇺🇸 US美国(yz) 3 2, server: 104.19.220.22, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 4 2, server: mfyousheng.nl.eu.org, port: 443, type: trojan, password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q, sni: mfyousheng.nl.eu.org, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 5 2, server: 104.26.1.110, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 6 2, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 3 2, server: cf.0sm.com, port: 443, type: trojan, password: 7418004a-0ecd-41c0-a062-42bf966d3fb2, sni: cf.0sm.com, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 4 2, server: one.cf.cdn.hyli.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: one.cf.cdn.hyli.xyz, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 7 2, server: 162.159.24.131, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
+  - {name: 🇹🇼 TW台湾(yz) 2 2, server: 104.17.162.3, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 8 2, server: dddffgthyu.922922.shop, port: 80, type: vmess, uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /RkUUbqhA9GJZBROjL3Q5vTymr, headers: {Host: dDdFfGTHYU.922922.SHOP}}}
+  - {name: 🇺🇸 US美国(yz) 9 2, server: 104.17.167.134, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 10 2, server: dDdFfGTHYU.922922.SHOP, port: 80, type: vmess, uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /RkUUbqhA9GJZBROjL3Q5vTymr, headers: {Host: dDdFfGTHYU.922922.SHOP}}}
+  - {name: 🇺🇸 US美国(yz) 11 2, server: freeyx.cloudflare88.eu.org, port: 443, type: trojan, password: 5a2c16f9, sni: freeyx.cloudflare88.eu.org, skip-cert-verify: false}
+  - {name: 🇹🇼 TW台湾(yz) 3 2, server: 172.64.229.205, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 12 2, server: 777.ai7777777.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: 777.ai7777777.xyz, skip-cert-verify: false}
+  - {name: 🇹🇼 TW台湾(yz) 4 2, server: 104.19.55.205, port: 443, type: trojan, password: 5a2c16f9, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 13 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 5 2, server: n1761214902.wpg27.xyz, port: 443, type: vmess, uuid: 469e9a38-b64e-46c3-9793-234158942d3b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1761214902.wpg27.xyz}}}
+  - {name: 🇹🇼 TW台湾(yz) 5 2, server: 2001:bc8:32d7:2013::8, port: 62211, type: vmess, uuid: e1786d49-ccba-466b-a0dd-e1ab59bd83bb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: www.bing.com}}}
+  - {name: 🇳🇱 NL荷兰(yz) 11, server: mfyousheng.nl.eu.org, port: 443, type: trojan, password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q, sni: mfyousheng.nl.eu.org, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 6 2, server: n1761214907.74qxv.top, port: 443, type: vmess, uuid: 4c17399f-c93d-4527-8ace-5bdc2f0901f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1761214907.74qxv.top}}}
+  - {name: 🇭🇰 HK香港(yz) 7 2, server: n1761214911.74qxv.top, port: 443, type: vmess, uuid: 372c1939-299d-4946-9633-5ffa971f8b67, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1761214911.74qxv.top}}}
+  - {name: 🇺🇸 US美国(yz) 14 2, server: liubu9.singdns.com, port: 17459, type: ss, cipher: aes-128-gcm, password: 57bc0c04-8184-48f5-906b-897d095ed445}
+  - {name: 🇭🇰 HK香港(yz) 8 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 15 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇹🇼 TW台湾(yz) 6 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US²_92|8.6MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed, server: ZzXxdE.922922.sHOp, port: 80, type: vmess, uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /RkUUbqhA9GJZBROjL3Q5vTymr, headers: {Host: ZzXxdE.922922.sHOp}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US²_8|0.2MB/s|0%|GPT⁺|YT-CN|X, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 www.85la.com🇺🇸US²_701|3.9MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed, server: dddffgthyu.922922.shop, port: 80, type: vmess, uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /RkUUbqhA9GJZBROjL3Q5vTymr, headers: {Host: dDdFfGTHYU.922922.SHOP}}}
@@ -915,307 +819,211 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     proxies:
+      - 🇸🇬 SG新加坡(yz)
+      - 🇸🇬 SG新加坡(yz) 2
+      - 🇺🇸 US美国(yz)
+      - 🇺🇸 US美国(yz) 2
+      - 🇭🇰 HK香港(yz)
+      - 🇸🇬 SG新加坡(yz) 3
+      - 🇭🇰 HK香港(yz) 2
+      - 🇫🇷 FR法国(yz)
+      - 🇸🇬 SG新加坡(yz) 4
+      - 🇫🇷 FR法国(yz) 2
+      - 🇫🇷 FR法国(yz) 3
       - 🇹🇼 TW台湾(yz)
       - 🇹🇼 TW台湾(yz) 2
-      - 🇺🇸 US美国(yz)
-      - 🇯🇵 JP日本(yz)
-      - 🇹🇼 TW台湾(yz) 3
-      - 🇯🇵 JP日本(yz) 2
-      - 🇹🇼 TW台湾(yz) 4
       - 🇳🇱 NL荷兰(yz)
-      - 🇹🇼 TW台湾(yz) 5
-      - 🇯🇵 JP日本(yz) 3
-      - 🇭🇰 HK香港(yz)
-      - 🇭🇰 HK香港(yz) 2
-      - 🇹🇼 TW台湾(yz) 6
-      - 🇹🇼 TW台湾(yz) 7
-      - 🇯🇵 JP日本(yz) 4
-      - 🇭🇰 HK香港(yz) 3
-      - 🇯🇵 JP日本(yz) 5
-      - 🇸🇬 SG新加坡(yz)
-      - 🇯🇵 JP日本(yz) 6
-      - 🇺🇸 US美国(yz) 2
-      - 🇸🇬 SG新加坡(yz) 2
-      - 🇹🇼 TW台湾(yz) 8
       - 🇺🇸 US美国(yz) 3
       - 🇺🇸 US美国(yz) 4
-      - 🇯🇵 JP日本(yz) 7
-      - 🇺🇸 US美国(yz) 5
-      - 🇹🇼 TW台湾(yz) 9
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇰🇷 KR韩国(yz)
-      - 🇸🇬 SG新加坡(yz) 4
-      - 🇯🇵 JP日本(yz) 8
+      - 🇷🇺 RU俄罗斯(yz)
+      - 🇹🇼 TW台湾(yz) 3
       - 🇸🇬 SG新加坡(yz) 5
-      - 🇸🇬 SG新加坡(yz) 6
-      - 🇺🇸 US美国(yz) 6
+      - 🇳🇱 NL荷兰(yz) 2
+      - 🇭🇰 HK香港(yz) 3
       - 🇭🇰 HK香港(yz) 4
+      - 🇹🇼 TW台湾(yz) 4
+      - 🇸🇬 SG新加坡(yz) 6
+      - 🇭🇰 HK香港(yz) 5
+      - 🇺🇸 US美国(yz) 5
+      - 🇺🇸 US美国(yz) 6
+      - 🇭🇰 HK香港(yz) 6
+      - 🇹🇼 TW台湾(yz) 5
+      - 🇸🇬 SG新加坡(yz) 7
+      - 🇭🇰 HK香港(yz) 7
+      - 🇸🇬 SG新加坡(yz) 8
       - 🇺🇸 US美国(yz) 7
-      - 🇹🇼 TW台湾(yz) 10
+      - 🇸🇬 SG新加坡(yz) 9
+      - 🇩🇪 DE德国(yz)
       - 🇺🇸 US美国(yz) 8
       - 🇺🇸 US美国(yz) 9
+      - 🇸🇬 SG新加坡(yz) 10
+      - 🇭🇰 HK香港(yz) 8
+      - 🇸🇬 SG新加坡(yz) 11
+      - 🇩🇪 DE德国(yz) 2
+      - 🇸🇬 SG新加坡(yz) 12
       - 🇺🇸 US美国(yz) 10
+      - 🇸🇬 SG新加坡(yz) 13
       - 🇺🇸 US美国(yz) 11
-      - 🇯🇵 JP日本(yz) 9
-      - 🇯🇵 JP日本(yz) 10
-      - 🇹🇼 TW台湾(yz) 11
-      - 🇯🇵 JP日本(yz) 11
-      - 🇯🇵 JP日本(yz) 12
-      - 🇭🇰 HK香港(yz) 5
-      - 🇳🇱 NL荷兰(yz) 2
+      - 🇹🇼 TW台湾(yz) 6
+      - 🇸🇬 SG新加坡(yz) 14
+      - 🇹🇼 TW台湾(yz) 7
+      - 🇸🇬 SG新加坡(yz) 15
       - 🇺🇸 US美国(yz) 12
-      - 🇺🇸 US美国(yz) 13
+      - 🇸🇬 SG新加坡(yz) 16
       - 🇳🇱 NL荷兰(yz) 3
-      - 🇨🇦 CA加拿大(yz)
-      - 🇭🇰 HK香港(yz) 6
-      - 🇬🇧 GB英国(yz)
-      - 🇸🇬 SG新加坡(yz) 7
+      - 🇺🇸 US美国(yz) 13
       - 🇺🇸 US美国(yz) 14
       - 🇺🇸 US美国(yz) 15
-      - 🇯🇵 JP日本(yz) 13
-      - 🇭🇰 HK香港(yz) 7
-      - 🇫🇷 FR法国(yz)
-      - 🇯🇵 JP日本(yz) 14
-      - 🇹🇼 TW台湾(yz) 12
-      - 🇸🇬 SG新加坡(yz) 8
-      - 🇯🇵 JP日本(yz) 15
-      - 🇸🇬 SG新加坡(yz) 9
+      - 🇹🇼 TW台湾(yz) 8
+      - 🇹🇼 TW台湾(yz) 9
+      - 🇷🇺 RU俄罗斯(yz) 2
+      - 🇳🇱 NL荷兰(yz) 4
+      - 🇸🇬 SG新加坡(yz) 17
+      - 🇯🇵 JP日本(yz)
+      - 🇹🇼 TW台湾(yz) 10
+      - 🇸🇬 SG新加坡(yz) 18
+      - 🇸🇬 SG新加坡(yz) 19
+      - 🇭🇰 HK香港(yz) 9
       - 🇺🇸 US美国(yz) 16
-      - 🇸🇬 SG新加坡(yz) 10
-      - 🇸🇬 SG新加坡(yz) 11
+      - 🇷🇺 RU俄罗斯(yz) 3
       - 🇺🇸 US美国(yz) 17
-      - 🇹🇼 TW台湾(yz) 13
-      - 🇭🇰 HK香港(yz) 8
-      - 🇹🇼 TW台湾(yz) 14
-      - 🇸🇬 SG新加坡(yz) 12
+      - 🇩🇪 DE德国(yz) 3
       - 🇺🇸 US美国(yz) 18
-      - 🇯🇵 JP日本(yz) 16
-      - 🇯🇵 JP日本(yz) 17
+      - 🇭🇰 HK香港(yz) 10
+      - 🇷🇺 RU俄罗斯(yz) 4
       - 🇺🇸 US美国(yz) 19
       - 🇺🇸 US美国(yz) 20
-      - 🇹🇼 TW台湾(yz) 15
-      - 🇭🇰 HK香港(yz) 9
-      - 🇭🇰 HK香港(yz) 10
-      - 🇯🇵 JP日本(yz) 18
-      - 🇯🇵 JP日本(yz) 19
+      - 🇳🇱 NL荷兰(yz) 5
       - 🇺🇸 US美国(yz) 21
       - 🇺🇸 US美国(yz) 22
-      - 🇭🇰 HK香港(yz) 11
-      - 🇯🇵 JP日本(yz) 20
-      - 🇳🇱 NL荷兰(yz) 4
       - 🇺🇸 US美国(yz) 23
-      - 🇯🇵 JP日本(yz) 21
-      - 🇫🇷 FR法国(yz) 2
-      - 🇹🇼 TW台湾(yz) 16
-      - 🇹🇼 TW台湾(yz) 17
-      - 🇹🇼 TW台湾(yz) 18
-      - 🇸🇬 SG新加坡(yz) 13
-      - 🇸🇬 SG新加坡(yz) 14
-      - 🇸🇬 SG新加坡(yz) 15
-      - 🇯🇵 JP日本(yz) 22
-      - 🇯🇵 JP日本(yz) 23
       - 🇺🇸 US美国(yz) 24
-      - 🇸🇬 SG新加坡(yz) 16
-      - 🇹🇼 TW台湾(yz) 19
-      - 🇭🇰 HK香港(yz) 12
-      - 🇸🇬 SG新加坡(yz) 17
-      - 🇸🇬 SG新加坡(yz) 18
-      - 🇭🇰 HK香港(yz) 13
-      - 🇯🇵 JP日本(yz) 24
-      - 🇹🇼 TW台湾(yz) 20
-      - 🇭🇰 HK香港(yz) 14
-      - 🇹🇼 TW台湾(yz) 21
-      - 🇭🇰 HK香港(yz) 15
-      - 🇯🇵 JP日本(yz) 25
-      - 🇯🇵 JP日本(yz) 26
-      - 🇹🇼 TW台湾(yz) 22
-      - 🇹🇼 TW台湾(yz) 23
-      - 🇸🇬 SG新加坡(yz) 19
       - 🇺🇸 US美国(yz) 25
-      - 🇹🇼 TW台湾(yz) 24
-      - 🇹🇼 TW台湾(yz) 25
-      - 🇭🇰 HK香港(yz) 16
-      - 🇹🇼 TW台湾(yz) 26
-      - 🇭🇰 HK香港(yz) 17
-      - 🇸🇬 SG新加坡(yz) 20
-      - 🇭🇰 HK香港(yz) 18
-      - 🇸🇬 SG新加坡(yz) 21
-      - 🇫🇷 FR法国(yz) 3
       - 🇺🇸 US美国(yz) 26
-      - 🇯🇵 JP日本(yz) 27
-      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 27
-      - 🇳🇱 NL荷兰(yz) 5
-      - 🇸🇬 SG新加坡(yz) 22
-      - 🇨🇦 CA加拿大(yz) 2
-      - 🇸🇬 SG新加坡(yz) 23
       - 🇳🇱 NL荷兰(yz) 6
-      - 🇸🇬 SG新加坡(yz) 24
-      - 🇰🇷 KR韩国(yz) 2
       - 🇺🇸 US美国(yz) 28
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 29
-      - 🇩🇪 DE德国(yz)
-      - 🇫🇷 FR法国(yz) 4
+      - 🇹🇼 TW台湾(yz) 11
+      - 🇹🇼 TW台湾(yz) 12
+      - 🇹🇼 TW台湾(yz) 13
       - 🇺🇸 US美国(yz) 30
-      - 🇳🇱 NL荷兰(yz) 7
+      - 🇸🇬 SG新加坡(yz) 20
       - 🇺🇸 US美国(yz) 31
       - 🇺🇸 US美国(yz) 32
       - 🇺🇸 US美国(yz) 33
+      - 🇭🇰 HK香港(yz) 11
+      - 🇭🇰 HK香港(yz) 12
       - 🇺🇸 US美国(yz) 34
-      - 🇹🇼 TW台湾(yz) 27
-      - 🇹🇼 TW台湾(yz) 28
       - 🇺🇸 US美国(yz) 35
+      - 🇭🇰 HK香港(yz) 13
       - 🇺🇸 US美国(yz) 36
-      - 🇯🇵 JP日本(yz) 28
-      - 🇭🇰 HK香港(yz) 19
-      - 🇭🇰 HK香港(yz) 20
-      - 🇭🇰 HK香港(yz) 21
-      - 🇹🇼 TW台湾(yz) 29
-      - 🇸🇬 SG新加坡(yz) 25
-      - 🇭🇰 HK香港(yz) 22
-      - 🇭🇰 HK香港(yz) 23
-      - 🇹🇼 TW台湾(yz) 30
-      - 🇳🇱 NL荷兰(yz) 8
-      - 🇯🇵 JP日本(yz) 29
-      - 🇯🇵 JP日本(yz) 30
+      - 🇹🇼 TW台湾(yz) 14
       - 🇺🇸 US美国(yz) 37
       - 🇺🇸 US美国(yz) 38
-      - 🇹🇼 TW台湾(yz) 31
-      - 🇹🇼 TW台湾(yz) 32
-      - 🇸🇬 SG新加坡(yz) 26
-      - 🇯🇵 JP日本(yz) 31
-      - 🇸🇬 SG新加坡(yz) 27
-      - 🇹🇼 TW台湾(yz) 33
-      - 🇩🇪 DE德国(yz) 2
-      - 🇸🇬 SG新加坡(yz) 28
-      - 🇹🇼 TW台湾(yz) 34
-      - 🇹🇼 TW台湾(yz) 35
-      - 🇹🇼 TW台湾(yz) 36
-      - 🇯🇵 JP日本(yz) 32
-      - 🇹🇼 TW台湾(yz) 37
-      - 🇯🇵 JP日本(yz) 33
-      - 🇭🇰 HK香港(yz) 24
-      - 🇭🇰 HK香港(yz) 25
-      - 🇸🇬 SG新加坡(yz) 29
-      - 🇭🇰 HK香港(yz) 26
-      - 🇯🇵 JP日本(yz) 34
-      - 🇯🇵 JP日本(yz) 35
-      - 🇹🇼 TW台湾(yz) 38
-      - 🇯🇵 JP日本(yz) 36
-      - 🇯🇵 JP日本(yz) 37
-      - 🇯🇵 JP日本(yz) 38
-      - 🇸🇬 SG新加坡(yz) 30
+      - 🇨🇦 CA加拿大(yz)
       - 🇺🇸 US美国(yz) 39
-      - 🇹🇼 TW台湾(yz) 39
-      - 🇩🇪 DE德国(yz) 3
-      - 🇭🇰 HK香港(yz) 27
-      - 🇹🇼 TW台湾(yz) 40
       - 🇺🇸 US美国(yz) 40
-      - 🇭🇰 HK香港(yz) 28
-      - 🇸🇬 SG新加坡(yz) 31
-      - 🇭🇰 HK香港(yz) 29
-      - 🇸🇬 SG新加坡(yz) 32
-      - 🇸🇬 SG新加坡(yz) 33
-      - 🇸🇬 SG新加坡(yz) 34
-      - 🇸🇬 SG新加坡(yz) 35
-      - 🇯🇵 JP日本(yz) 39
-      - 🇸🇬 SG新加坡(yz) 36
-      - 🇹🇼 TW台湾(yz) 41
+      - 🇳🇱 NL荷兰(yz) 7
       - 🇺🇸 US美国(yz) 41
-      - 🇹🇼 TW台湾(yz) 42
       - 🇺🇸 US美国(yz) 42
       - 🇺🇸 US美国(yz) 43
       - 🇺🇸 US美国(yz) 44
-      - 🇯🇵 JP日本(yz) 40
-      - 🇭🇰 HK香港(yz) 30
       - 🇺🇸 US美国(yz) 45
       - 🇺🇸 US美国(yz) 46
-      - 🇸🇬 SG新加坡(yz) 37
-      - 🇸🇬 SG新加坡(yz) 38
-      - 🇯🇵 JP日本(yz) 41
       - 🇺🇸 US美国(yz) 47
-      - 🇸🇬 SG新加坡(yz) 39
-      - 🇩🇪 DE德国(yz) 4
-      - 🇹🇼 TW台湾(yz) 43
-      - 🇩🇪 DE德国(yz) 5
-      - 🇳🇱 NL荷兰(yz) 9
+      - 🇸🇬 SG新加坡(yz) 21
       - 🇺🇸 US美国(yz) 48
-      - 🇸🇬 SG新加坡(yz) 40
-      - 🇸🇬 SG新加坡(yz) 41
-      - 🇹🇼 TW台湾(yz) 44
+      - 🇸🇬 SG新加坡(yz) 22
       - 🇺🇸 US美国(yz) 49
-      - 🇳🇱 NL荷兰(yz) 10
+      - 🇳🇱 NL荷兰(yz) 8
+      - 🇳🇱 NL荷兰(yz) 9
       - 🇺🇸 US美国(yz) 50
       - 🇺🇸 US美国(yz) 51
-      - 🇯🇵 JP日本(yz) 42
-      - 🇸🇬 SG新加坡(yz) 42
-      - 🇸🇬 SG新加坡(yz) 43
+      - 🇭🇰 HK香港(yz) 14
+      - 🇹🇼 TW台湾(yz) 15
       - 🇺🇸 US美国(yz) 52
-      - 🇹🇼 TW台湾(yz) 45
-      - 🇭🇰 HK香港(yz) 31
-      - 🇯🇵 JP日本(yz) 43
-      - 🇯🇵 JP日本(yz) 44
-      - 🇹🇼 TW台湾(yz) 46
-      - 🇫🇷 FR法国(yz) 5
-      - 🇸🇬 SG新加坡(yz) 44
-      - 🇹🇼 TW台湾(yz) 47
-      - 🇳🇱 NL荷兰(yz) 11
+      - 🇹🇼 TW台湾(yz) 16
+      - 🇭🇰 HK香港(yz) 15
       - 🇺🇸 US美国(yz) 53
-      - 🇯🇵 JP日本(yz) 45
       - 🇺🇸 US美国(yz) 54
+      - 🇯🇵 JP日本(yz) 2
+      - 🇭🇰 HK香港(yz) 16
+      - 🇹🇼 TW台湾(yz) 17
+      - 🇭🇰 HK香港(yz) 17
       - 🇺🇸 US美国(yz) 55
-      - 🇬🇧 GB英国(yz) 4
-      - 🇭🇰 HK香港(yz) 32
-      - 🇸🇬 SG新加坡(yz) 45
-      - 🇯🇵 JP日本(yz) 46
+      - 🇸🇬 SG新加坡(yz) 23
+      - 🇳🇱 NL荷兰(yz) 10
+      - 🇭🇰 HK香港(yz) 18
+      - 🇭🇰 HK香港(yz) 19
       - 🇺🇸 US美国(yz) 56
-      - 🇹🇼 TW台湾(yz) 48
       - 🇺🇸 US美国(yz) 57
-      - 🇹🇼 TW台湾(yz) 2 2
-      - 🇳🇱 NL荷兰(yz) 12
-      - 🇹🇼 TW台湾(yz) 3 2
+      - 🇺🇸 US美国(yz) 58
+      - 🇺🇸 US美国(yz) 59
+      - 🇸🇬 SG新加坡(yz) 24
+      - 🇹🇼 TW台湾(yz) 18
+      - 🇸🇬 SG新加坡(yz) 25
+      - 🇹🇼 TW台湾(yz) 19
+      - 🇸🇬 SG新加坡(yz) 26
+      - 🇫🇷 FR法国(yz) 4
+      - 🇩🇪 DE德国(yz) 4
+      - 🇺🇸 US美国(yz) 60
+      - 🇹🇼 TW台湾(yz) 20
+      - 🇺🇸 US美国(yz) 61
+      - 🇺🇸 US美国(yz) 62
+      - 🇸🇬 SG新加坡(yz) 27
+      - 🇹🇼 TW台湾(yz) 21
+      - 🇭🇰 HK香港(yz) 20
+      - 🇨🇦 CA加拿大(yz) 2
+      - 🇫🇷 FR法国(yz) 5
+      - 🇺🇸 US美国(yz) 63
+      - 🇭🇰 HK香港(yz) 21
+      - 🇭🇰 HK香港(yz) 22
+      - 🇭🇰 HK香港(yz) 23
+      - 🇺🇸 US美国(yz) 64
+      - 🇹🇼 TW台湾(yz) 22
+      - 🇹🇼 TW台湾(yz) 23
+      - 🇭🇰 HK香港(yz) 24
+      - 🇹🇼 TW台湾(yz) 24
+      - 🇺🇸 US美国(yz) 65
+      - 🇺🇸 US美国(yz) 66
+      - 🇸🇬 SG新加坡(yz) 28
+      - 🇺🇸 US美国(yz) 67
+      - 🇭🇰 HK香港(yz) 25
+      - 🇹🇼 TW台湾(yz) 25
+      - 🇫🇷 FR法国(yz) 6
+      - 🇫🇷 FR法国(yz) 2 2
+      - 🇫🇷 FR法国(yz) 3 2
+      - 🇺🇸 US美国(yz) 68
+      - 🇭🇰 HK香港(yz) 26
+      - 🇹🇼 TW台湾(yz) 26
       - 🇺🇸 US美国(yz) 2 2
+      - 🇭🇰 HK香港(yz) 2 2
       - 🇺🇸 US美国(yz) 3 2
       - 🇺🇸 US美国(yz) 4 2
-      - 🇰🇷 KR韩国(yz) 3
       - 🇺🇸 US美国(yz) 5 2
       - 🇺🇸 US美国(yz) 6 2
-      - 🇺🇸 US美国(yz) 7 2
-      - 🇺🇸 US美国(yz) 8 2
-      - 🇹🇼 TW台湾(yz) 4 2
-      - 🇺🇸 US美国(yz) 9 2
-      - 🇺🇸 US美国(yz) 10 2
-      - 🇬🇧 GB英国(yz) 5
-      - 🇺🇸 US美国(yz) 11 2
-      - 🇭🇰 HK香港(yz) 33
-      - 🇫🇷 FR法国(yz) 6
-      - 🇺🇸 US美国(yz) 12 2
-      - 🇺🇸 US美国(yz) 13 2
-      - 🇹🇼 TW台湾(yz) 5 2
-      - 🇺🇸 US美国(yz) 14 2
-      - 🇹🇼 TW台湾(yz) 6 2
-      - 🇹🇼 TW台湾(yz) 7 2
-      - 🇹🇼 TW台湾(yz) 8 2
-      - 🇰🇷 KR韩国(yz) 2 2
-      - 🇺🇸 US美国(yz) 15 2
-      - 🇳🇱 NL荷兰(yz) 2 2
-      - 🇺🇸 US美国(yz) 16 2
-      - 🇺🇸 US美国(yz) 17 2
-      - 🇭🇰 HK香港(yz) 2 2
       - 🇭🇰 HK香港(yz) 3 2
       - 🇭🇰 HK香港(yz) 4 2
-      - 🇹🇼 TW台湾(yz) 9 2
-      - 🇺🇸 US美国(yz) 18 2
-      - 🇺🇸 US美国(yz) 19 2
-      - 🇹🇼 TW台湾(yz) 10 2
-      - 🇺🇸 US美国(yz) 20 2
-      - 🇺🇸 US美国(yz) 21 2
-      - 🇳🇱 NL荷兰(yz) 3 2
-      - 🇺🇸 US美国(yz) 22 2
-      - 🇺🇸 US美国(yz) 23 2
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇺🇸 US美国(yz) 24 2
+      - 🇺🇸 US美国(yz) 7 2
+      - 🇹🇼 TW台湾(yz) 2 2
+      - 🇺🇸 US美国(yz) 8 2
+      - 🇺🇸 US美国(yz) 9 2
+      - 🇺🇸 US美国(yz) 10 2
+      - 🇺🇸 US美国(yz) 11 2
+      - 🇹🇼 TW台湾(yz) 3 2
+      - 🇺🇸 US美国(yz) 12 2
+      - 🇹🇼 TW台湾(yz) 4 2
+      - 🇺🇸 US美国(yz) 13 2
+      - 🇭🇰 HK香港(yz) 5 2
+      - 🇹🇼 TW台湾(yz) 5 2
+      - 🇳🇱 NL荷兰(yz) 11
+      - 🇭🇰 HK香港(yz) 6 2
+      - 🇭🇰 HK香港(yz) 7 2
+      - 🇺🇸 US美国(yz) 14 2
+      - 🇭🇰 HK香港(yz) 8 2
+      - 🇺🇸 US美国(yz) 15 2
+      - 🇹🇼 TW台湾(yz) 6 2
       - 🇺🇸 www.85la.com🇺🇸US²_92|8.6MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed
       - 🇺🇸 www.85la.com🇺🇸US²_8|0.2MB/s|0%|GPT⁺|YT-CN|X
       - 🇺🇸 www.85la.com🇺🇸US²_701|3.9MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed
@@ -1801,307 +1609,211 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇸🇬 SG新加坡(yz)
+      - 🇸🇬 SG新加坡(yz) 2
+      - 🇺🇸 US美国(yz)
+      - 🇺🇸 US美国(yz) 2
+      - 🇭🇰 HK香港(yz)
+      - 🇸🇬 SG新加坡(yz) 3
+      - 🇭🇰 HK香港(yz) 2
+      - 🇫🇷 FR法国(yz)
+      - 🇸🇬 SG新加坡(yz) 4
+      - 🇫🇷 FR法国(yz) 2
+      - 🇫🇷 FR法国(yz) 3
       - 🇹🇼 TW台湾(yz)
       - 🇹🇼 TW台湾(yz) 2
-      - 🇺🇸 US美国(yz)
-      - 🇯🇵 JP日本(yz)
-      - 🇹🇼 TW台湾(yz) 3
-      - 🇯🇵 JP日本(yz) 2
-      - 🇹🇼 TW台湾(yz) 4
       - 🇳🇱 NL荷兰(yz)
-      - 🇹🇼 TW台湾(yz) 5
-      - 🇯🇵 JP日本(yz) 3
-      - 🇭🇰 HK香港(yz)
-      - 🇭🇰 HK香港(yz) 2
-      - 🇹🇼 TW台湾(yz) 6
-      - 🇹🇼 TW台湾(yz) 7
-      - 🇯🇵 JP日本(yz) 4
-      - 🇭🇰 HK香港(yz) 3
-      - 🇯🇵 JP日本(yz) 5
-      - 🇸🇬 SG新加坡(yz)
-      - 🇯🇵 JP日本(yz) 6
-      - 🇺🇸 US美国(yz) 2
-      - 🇸🇬 SG新加坡(yz) 2
-      - 🇹🇼 TW台湾(yz) 8
       - 🇺🇸 US美国(yz) 3
       - 🇺🇸 US美国(yz) 4
-      - 🇯🇵 JP日本(yz) 7
-      - 🇺🇸 US美国(yz) 5
-      - 🇹🇼 TW台湾(yz) 9
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇰🇷 KR韩国(yz)
-      - 🇸🇬 SG新加坡(yz) 4
-      - 🇯🇵 JP日本(yz) 8
+      - 🇷🇺 RU俄罗斯(yz)
+      - 🇹🇼 TW台湾(yz) 3
       - 🇸🇬 SG新加坡(yz) 5
-      - 🇸🇬 SG新加坡(yz) 6
-      - 🇺🇸 US美国(yz) 6
+      - 🇳🇱 NL荷兰(yz) 2
+      - 🇭🇰 HK香港(yz) 3
       - 🇭🇰 HK香港(yz) 4
+      - 🇹🇼 TW台湾(yz) 4
+      - 🇸🇬 SG新加坡(yz) 6
+      - 🇭🇰 HK香港(yz) 5
+      - 🇺🇸 US美国(yz) 5
+      - 🇺🇸 US美国(yz) 6
+      - 🇭🇰 HK香港(yz) 6
+      - 🇹🇼 TW台湾(yz) 5
+      - 🇸🇬 SG新加坡(yz) 7
+      - 🇭🇰 HK香港(yz) 7
+      - 🇸🇬 SG新加坡(yz) 8
       - 🇺🇸 US美国(yz) 7
-      - 🇹🇼 TW台湾(yz) 10
+      - 🇸🇬 SG新加坡(yz) 9
+      - 🇩🇪 DE德国(yz)
       - 🇺🇸 US美国(yz) 8
       - 🇺🇸 US美国(yz) 9
+      - 🇸🇬 SG新加坡(yz) 10
+      - 🇭🇰 HK香港(yz) 8
+      - 🇸🇬 SG新加坡(yz) 11
+      - 🇩🇪 DE德国(yz) 2
+      - 🇸🇬 SG新加坡(yz) 12
       - 🇺🇸 US美国(yz) 10
+      - 🇸🇬 SG新加坡(yz) 13
       - 🇺🇸 US美国(yz) 11
-      - 🇯🇵 JP日本(yz) 9
-      - 🇯🇵 JP日本(yz) 10
-      - 🇹🇼 TW台湾(yz) 11
-      - 🇯🇵 JP日本(yz) 11
-      - 🇯🇵 JP日本(yz) 12
-      - 🇭🇰 HK香港(yz) 5
-      - 🇳🇱 NL荷兰(yz) 2
+      - 🇹🇼 TW台湾(yz) 6
+      - 🇸🇬 SG新加坡(yz) 14
+      - 🇹🇼 TW台湾(yz) 7
+      - 🇸🇬 SG新加坡(yz) 15
       - 🇺🇸 US美国(yz) 12
-      - 🇺🇸 US美国(yz) 13
+      - 🇸🇬 SG新加坡(yz) 16
       - 🇳🇱 NL荷兰(yz) 3
-      - 🇨🇦 CA加拿大(yz)
-      - 🇭🇰 HK香港(yz) 6
-      - 🇬🇧 GB英国(yz)
-      - 🇸🇬 SG新加坡(yz) 7
+      - 🇺🇸 US美国(yz) 13
       - 🇺🇸 US美国(yz) 14
       - 🇺🇸 US美国(yz) 15
-      - 🇯🇵 JP日本(yz) 13
-      - 🇭🇰 HK香港(yz) 7
-      - 🇫🇷 FR法国(yz)
-      - 🇯🇵 JP日本(yz) 14
-      - 🇹🇼 TW台湾(yz) 12
-      - 🇸🇬 SG新加坡(yz) 8
-      - 🇯🇵 JP日本(yz) 15
-      - 🇸🇬 SG新加坡(yz) 9
+      - 🇹🇼 TW台湾(yz) 8
+      - 🇹🇼 TW台湾(yz) 9
+      - 🇷🇺 RU俄罗斯(yz) 2
+      - 🇳🇱 NL荷兰(yz) 4
+      - 🇸🇬 SG新加坡(yz) 17
+      - 🇯🇵 JP日本(yz)
+      - 🇹🇼 TW台湾(yz) 10
+      - 🇸🇬 SG新加坡(yz) 18
+      - 🇸🇬 SG新加坡(yz) 19
+      - 🇭🇰 HK香港(yz) 9
       - 🇺🇸 US美国(yz) 16
-      - 🇸🇬 SG新加坡(yz) 10
-      - 🇸🇬 SG新加坡(yz) 11
+      - 🇷🇺 RU俄罗斯(yz) 3
       - 🇺🇸 US美国(yz) 17
-      - 🇹🇼 TW台湾(yz) 13
-      - 🇭🇰 HK香港(yz) 8
-      - 🇹🇼 TW台湾(yz) 14
-      - 🇸🇬 SG新加坡(yz) 12
+      - 🇩🇪 DE德国(yz) 3
       - 🇺🇸 US美国(yz) 18
-      - 🇯🇵 JP日本(yz) 16
-      - 🇯🇵 JP日本(yz) 17
+      - 🇭🇰 HK香港(yz) 10
+      - 🇷🇺 RU俄罗斯(yz) 4
       - 🇺🇸 US美国(yz) 19
       - 🇺🇸 US美国(yz) 20
-      - 🇹🇼 TW台湾(yz) 15
-      - 🇭🇰 HK香港(yz) 9
-      - 🇭🇰 HK香港(yz) 10
-      - 🇯🇵 JP日本(yz) 18
-      - 🇯🇵 JP日本(yz) 19
+      - 🇳🇱 NL荷兰(yz) 5
       - 🇺🇸 US美国(yz) 21
       - 🇺🇸 US美国(yz) 22
-      - 🇭🇰 HK香港(yz) 11
-      - 🇯🇵 JP日本(yz) 20
-      - 🇳🇱 NL荷兰(yz) 4
       - 🇺🇸 US美国(yz) 23
-      - 🇯🇵 JP日本(yz) 21
-      - 🇫🇷 FR法国(yz) 2
-      - 🇹🇼 TW台湾(yz) 16
-      - 🇹🇼 TW台湾(yz) 17
-      - 🇹🇼 TW台湾(yz) 18
-      - 🇸🇬 SG新加坡(yz) 13
-      - 🇸🇬 SG新加坡(yz) 14
-      - 🇸🇬 SG新加坡(yz) 15
-      - 🇯🇵 JP日本(yz) 22
-      - 🇯🇵 JP日本(yz) 23
       - 🇺🇸 US美国(yz) 24
-      - 🇸🇬 SG新加坡(yz) 16
-      - 🇹🇼 TW台湾(yz) 19
-      - 🇭🇰 HK香港(yz) 12
-      - 🇸🇬 SG新加坡(yz) 17
-      - 🇸🇬 SG新加坡(yz) 18
-      - 🇭🇰 HK香港(yz) 13
-      - 🇯🇵 JP日本(yz) 24
-      - 🇹🇼 TW台湾(yz) 20
-      - 🇭🇰 HK香港(yz) 14
-      - 🇹🇼 TW台湾(yz) 21
-      - 🇭🇰 HK香港(yz) 15
-      - 🇯🇵 JP日本(yz) 25
-      - 🇯🇵 JP日本(yz) 26
-      - 🇹🇼 TW台湾(yz) 22
-      - 🇹🇼 TW台湾(yz) 23
-      - 🇸🇬 SG新加坡(yz) 19
       - 🇺🇸 US美国(yz) 25
-      - 🇹🇼 TW台湾(yz) 24
-      - 🇹🇼 TW台湾(yz) 25
-      - 🇭🇰 HK香港(yz) 16
-      - 🇹🇼 TW台湾(yz) 26
-      - 🇭🇰 HK香港(yz) 17
-      - 🇸🇬 SG新加坡(yz) 20
-      - 🇭🇰 HK香港(yz) 18
-      - 🇸🇬 SG新加坡(yz) 21
-      - 🇫🇷 FR法国(yz) 3
       - 🇺🇸 US美国(yz) 26
-      - 🇯🇵 JP日本(yz) 27
-      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 27
-      - 🇳🇱 NL荷兰(yz) 5
-      - 🇸🇬 SG新加坡(yz) 22
-      - 🇨🇦 CA加拿大(yz) 2
-      - 🇸🇬 SG新加坡(yz) 23
       - 🇳🇱 NL荷兰(yz) 6
-      - 🇸🇬 SG新加坡(yz) 24
-      - 🇰🇷 KR韩国(yz) 2
       - 🇺🇸 US美国(yz) 28
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 29
-      - 🇩🇪 DE德国(yz)
-      - 🇫🇷 FR法国(yz) 4
+      - 🇹🇼 TW台湾(yz) 11
+      - 🇹🇼 TW台湾(yz) 12
+      - 🇹🇼 TW台湾(yz) 13
       - 🇺🇸 US美国(yz) 30
-      - 🇳🇱 NL荷兰(yz) 7
+      - 🇸🇬 SG新加坡(yz) 20
       - 🇺🇸 US美国(yz) 31
       - 🇺🇸 US美国(yz) 32
       - 🇺🇸 US美国(yz) 33
+      - 🇭🇰 HK香港(yz) 11
+      - 🇭🇰 HK香港(yz) 12
       - 🇺🇸 US美国(yz) 34
-      - 🇹🇼 TW台湾(yz) 27
-      - 🇹🇼 TW台湾(yz) 28
       - 🇺🇸 US美国(yz) 35
+      - 🇭🇰 HK香港(yz) 13
       - 🇺🇸 US美国(yz) 36
-      - 🇯🇵 JP日本(yz) 28
-      - 🇭🇰 HK香港(yz) 19
-      - 🇭🇰 HK香港(yz) 20
-      - 🇭🇰 HK香港(yz) 21
-      - 🇹🇼 TW台湾(yz) 29
-      - 🇸🇬 SG新加坡(yz) 25
-      - 🇭🇰 HK香港(yz) 22
-      - 🇭🇰 HK香港(yz) 23
-      - 🇹🇼 TW台湾(yz) 30
-      - 🇳🇱 NL荷兰(yz) 8
-      - 🇯🇵 JP日本(yz) 29
-      - 🇯🇵 JP日本(yz) 30
+      - 🇹🇼 TW台湾(yz) 14
       - 🇺🇸 US美国(yz) 37
       - 🇺🇸 US美国(yz) 38
-      - 🇹🇼 TW台湾(yz) 31
-      - 🇹🇼 TW台湾(yz) 32
-      - 🇸🇬 SG新加坡(yz) 26
-      - 🇯🇵 JP日本(yz) 31
-      - 🇸🇬 SG新加坡(yz) 27
-      - 🇹🇼 TW台湾(yz) 33
-      - 🇩🇪 DE德国(yz) 2
-      - 🇸🇬 SG新加坡(yz) 28
-      - 🇹🇼 TW台湾(yz) 34
-      - 🇹🇼 TW台湾(yz) 35
-      - 🇹🇼 TW台湾(yz) 36
-      - 🇯🇵 JP日本(yz) 32
-      - 🇹🇼 TW台湾(yz) 37
-      - 🇯🇵 JP日本(yz) 33
-      - 🇭🇰 HK香港(yz) 24
-      - 🇭🇰 HK香港(yz) 25
-      - 🇸🇬 SG新加坡(yz) 29
-      - 🇭🇰 HK香港(yz) 26
-      - 🇯🇵 JP日本(yz) 34
-      - 🇯🇵 JP日本(yz) 35
-      - 🇹🇼 TW台湾(yz) 38
-      - 🇯🇵 JP日本(yz) 36
-      - 🇯🇵 JP日本(yz) 37
-      - 🇯🇵 JP日本(yz) 38
-      - 🇸🇬 SG新加坡(yz) 30
+      - 🇨🇦 CA加拿大(yz)
       - 🇺🇸 US美国(yz) 39
-      - 🇹🇼 TW台湾(yz) 39
-      - 🇩🇪 DE德国(yz) 3
-      - 🇭🇰 HK香港(yz) 27
-      - 🇹🇼 TW台湾(yz) 40
       - 🇺🇸 US美国(yz) 40
-      - 🇭🇰 HK香港(yz) 28
-      - 🇸🇬 SG新加坡(yz) 31
-      - 🇭🇰 HK香港(yz) 29
-      - 🇸🇬 SG新加坡(yz) 32
-      - 🇸🇬 SG新加坡(yz) 33
-      - 🇸🇬 SG新加坡(yz) 34
-      - 🇸🇬 SG新加坡(yz) 35
-      - 🇯🇵 JP日本(yz) 39
-      - 🇸🇬 SG新加坡(yz) 36
-      - 🇹🇼 TW台湾(yz) 41
+      - 🇳🇱 NL荷兰(yz) 7
       - 🇺🇸 US美国(yz) 41
-      - 🇹🇼 TW台湾(yz) 42
       - 🇺🇸 US美国(yz) 42
       - 🇺🇸 US美国(yz) 43
       - 🇺🇸 US美国(yz) 44
-      - 🇯🇵 JP日本(yz) 40
-      - 🇭🇰 HK香港(yz) 30
       - 🇺🇸 US美国(yz) 45
       - 🇺🇸 US美国(yz) 46
-      - 🇸🇬 SG新加坡(yz) 37
-      - 🇸🇬 SG新加坡(yz) 38
-      - 🇯🇵 JP日本(yz) 41
       - 🇺🇸 US美国(yz) 47
-      - 🇸🇬 SG新加坡(yz) 39
-      - 🇩🇪 DE德国(yz) 4
-      - 🇹🇼 TW台湾(yz) 43
-      - 🇩🇪 DE德国(yz) 5
-      - 🇳🇱 NL荷兰(yz) 9
+      - 🇸🇬 SG新加坡(yz) 21
       - 🇺🇸 US美国(yz) 48
-      - 🇸🇬 SG新加坡(yz) 40
-      - 🇸🇬 SG新加坡(yz) 41
-      - 🇹🇼 TW台湾(yz) 44
+      - 🇸🇬 SG新加坡(yz) 22
       - 🇺🇸 US美国(yz) 49
-      - 🇳🇱 NL荷兰(yz) 10
+      - 🇳🇱 NL荷兰(yz) 8
+      - 🇳🇱 NL荷兰(yz) 9
       - 🇺🇸 US美国(yz) 50
       - 🇺🇸 US美国(yz) 51
-      - 🇯🇵 JP日本(yz) 42
-      - 🇸🇬 SG新加坡(yz) 42
-      - 🇸🇬 SG新加坡(yz) 43
+      - 🇭🇰 HK香港(yz) 14
+      - 🇹🇼 TW台湾(yz) 15
       - 🇺🇸 US美国(yz) 52
-      - 🇹🇼 TW台湾(yz) 45
-      - 🇭🇰 HK香港(yz) 31
-      - 🇯🇵 JP日本(yz) 43
-      - 🇯🇵 JP日本(yz) 44
-      - 🇹🇼 TW台湾(yz) 46
-      - 🇫🇷 FR法国(yz) 5
-      - 🇸🇬 SG新加坡(yz) 44
-      - 🇹🇼 TW台湾(yz) 47
-      - 🇳🇱 NL荷兰(yz) 11
+      - 🇹🇼 TW台湾(yz) 16
+      - 🇭🇰 HK香港(yz) 15
       - 🇺🇸 US美国(yz) 53
-      - 🇯🇵 JP日本(yz) 45
       - 🇺🇸 US美国(yz) 54
+      - 🇯🇵 JP日本(yz) 2
+      - 🇭🇰 HK香港(yz) 16
+      - 🇹🇼 TW台湾(yz) 17
+      - 🇭🇰 HK香港(yz) 17
       - 🇺🇸 US美国(yz) 55
-      - 🇬🇧 GB英国(yz) 4
-      - 🇭🇰 HK香港(yz) 32
-      - 🇸🇬 SG新加坡(yz) 45
-      - 🇯🇵 JP日本(yz) 46
+      - 🇸🇬 SG新加坡(yz) 23
+      - 🇳🇱 NL荷兰(yz) 10
+      - 🇭🇰 HK香港(yz) 18
+      - 🇭🇰 HK香港(yz) 19
       - 🇺🇸 US美国(yz) 56
-      - 🇹🇼 TW台湾(yz) 48
       - 🇺🇸 US美国(yz) 57
-      - 🇹🇼 TW台湾(yz) 2 2
-      - 🇳🇱 NL荷兰(yz) 12
-      - 🇹🇼 TW台湾(yz) 3 2
+      - 🇺🇸 US美国(yz) 58
+      - 🇺🇸 US美国(yz) 59
+      - 🇸🇬 SG新加坡(yz) 24
+      - 🇹🇼 TW台湾(yz) 18
+      - 🇸🇬 SG新加坡(yz) 25
+      - 🇹🇼 TW台湾(yz) 19
+      - 🇸🇬 SG新加坡(yz) 26
+      - 🇫🇷 FR法国(yz) 4
+      - 🇩🇪 DE德国(yz) 4
+      - 🇺🇸 US美国(yz) 60
+      - 🇹🇼 TW台湾(yz) 20
+      - 🇺🇸 US美国(yz) 61
+      - 🇺🇸 US美国(yz) 62
+      - 🇸🇬 SG新加坡(yz) 27
+      - 🇹🇼 TW台湾(yz) 21
+      - 🇭🇰 HK香港(yz) 20
+      - 🇨🇦 CA加拿大(yz) 2
+      - 🇫🇷 FR法国(yz) 5
+      - 🇺🇸 US美国(yz) 63
+      - 🇭🇰 HK香港(yz) 21
+      - 🇭🇰 HK香港(yz) 22
+      - 🇭🇰 HK香港(yz) 23
+      - 🇺🇸 US美国(yz) 64
+      - 🇹🇼 TW台湾(yz) 22
+      - 🇹🇼 TW台湾(yz) 23
+      - 🇭🇰 HK香港(yz) 24
+      - 🇹🇼 TW台湾(yz) 24
+      - 🇺🇸 US美国(yz) 65
+      - 🇺🇸 US美国(yz) 66
+      - 🇸🇬 SG新加坡(yz) 28
+      - 🇺🇸 US美国(yz) 67
+      - 🇭🇰 HK香港(yz) 25
+      - 🇹🇼 TW台湾(yz) 25
+      - 🇫🇷 FR法国(yz) 6
+      - 🇫🇷 FR法国(yz) 2 2
+      - 🇫🇷 FR法国(yz) 3 2
+      - 🇺🇸 US美国(yz) 68
+      - 🇭🇰 HK香港(yz) 26
+      - 🇹🇼 TW台湾(yz) 26
       - 🇺🇸 US美国(yz) 2 2
+      - 🇭🇰 HK香港(yz) 2 2
       - 🇺🇸 US美国(yz) 3 2
       - 🇺🇸 US美国(yz) 4 2
-      - 🇰🇷 KR韩国(yz) 3
       - 🇺🇸 US美国(yz) 5 2
       - 🇺🇸 US美国(yz) 6 2
-      - 🇺🇸 US美国(yz) 7 2
-      - 🇺🇸 US美国(yz) 8 2
-      - 🇹🇼 TW台湾(yz) 4 2
-      - 🇺🇸 US美国(yz) 9 2
-      - 🇺🇸 US美国(yz) 10 2
-      - 🇬🇧 GB英国(yz) 5
-      - 🇺🇸 US美国(yz) 11 2
-      - 🇭🇰 HK香港(yz) 33
-      - 🇫🇷 FR法国(yz) 6
-      - 🇺🇸 US美国(yz) 12 2
-      - 🇺🇸 US美国(yz) 13 2
-      - 🇹🇼 TW台湾(yz) 5 2
-      - 🇺🇸 US美国(yz) 14 2
-      - 🇹🇼 TW台湾(yz) 6 2
-      - 🇹🇼 TW台湾(yz) 7 2
-      - 🇹🇼 TW台湾(yz) 8 2
-      - 🇰🇷 KR韩国(yz) 2 2
-      - 🇺🇸 US美国(yz) 15 2
-      - 🇳🇱 NL荷兰(yz) 2 2
-      - 🇺🇸 US美国(yz) 16 2
-      - 🇺🇸 US美国(yz) 17 2
-      - 🇭🇰 HK香港(yz) 2 2
       - 🇭🇰 HK香港(yz) 3 2
       - 🇭🇰 HK香港(yz) 4 2
-      - 🇹🇼 TW台湾(yz) 9 2
-      - 🇺🇸 US美国(yz) 18 2
-      - 🇺🇸 US美国(yz) 19 2
-      - 🇹🇼 TW台湾(yz) 10 2
-      - 🇺🇸 US美国(yz) 20 2
-      - 🇺🇸 US美国(yz) 21 2
-      - 🇳🇱 NL荷兰(yz) 3 2
-      - 🇺🇸 US美国(yz) 22 2
-      - 🇺🇸 US美国(yz) 23 2
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇺🇸 US美国(yz) 24 2
+      - 🇺🇸 US美国(yz) 7 2
+      - 🇹🇼 TW台湾(yz) 2 2
+      - 🇺🇸 US美国(yz) 8 2
+      - 🇺🇸 US美国(yz) 9 2
+      - 🇺🇸 US美国(yz) 10 2
+      - 🇺🇸 US美国(yz) 11 2
+      - 🇹🇼 TW台湾(yz) 3 2
+      - 🇺🇸 US美国(yz) 12 2
+      - 🇹🇼 TW台湾(yz) 4 2
+      - 🇺🇸 US美国(yz) 13 2
+      - 🇭🇰 HK香港(yz) 5 2
+      - 🇹🇼 TW台湾(yz) 5 2
+      - 🇳🇱 NL荷兰(yz) 11
+      - 🇭🇰 HK香港(yz) 6 2
+      - 🇭🇰 HK香港(yz) 7 2
+      - 🇺🇸 US美国(yz) 14 2
+      - 🇭🇰 HK香港(yz) 8 2
+      - 🇺🇸 US美国(yz) 15 2
+      - 🇹🇼 TW台湾(yz) 6 2
       - 🇺🇸 www.85la.com🇺🇸US²_92|8.6MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed
       - 🇺🇸 www.85la.com🇺🇸US²_8|0.2MB/s|0%|GPT⁺|YT-CN|X
       - 🇺🇸 www.85la.com🇺🇸US²_701|3.9MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed
@@ -2687,307 +2399,211 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇸🇬 SG新加坡(yz)
+      - 🇸🇬 SG新加坡(yz) 2
+      - 🇺🇸 US美国(yz)
+      - 🇺🇸 US美国(yz) 2
+      - 🇭🇰 HK香港(yz)
+      - 🇸🇬 SG新加坡(yz) 3
+      - 🇭🇰 HK香港(yz) 2
+      - 🇫🇷 FR法国(yz)
+      - 🇸🇬 SG新加坡(yz) 4
+      - 🇫🇷 FR法国(yz) 2
+      - 🇫🇷 FR法国(yz) 3
       - 🇹🇼 TW台湾(yz)
       - 🇹🇼 TW台湾(yz) 2
-      - 🇺🇸 US美国(yz)
-      - 🇯🇵 JP日本(yz)
-      - 🇹🇼 TW台湾(yz) 3
-      - 🇯🇵 JP日本(yz) 2
-      - 🇹🇼 TW台湾(yz) 4
       - 🇳🇱 NL荷兰(yz)
-      - 🇹🇼 TW台湾(yz) 5
-      - 🇯🇵 JP日本(yz) 3
-      - 🇭🇰 HK香港(yz)
-      - 🇭🇰 HK香港(yz) 2
-      - 🇹🇼 TW台湾(yz) 6
-      - 🇹🇼 TW台湾(yz) 7
-      - 🇯🇵 JP日本(yz) 4
-      - 🇭🇰 HK香港(yz) 3
-      - 🇯🇵 JP日本(yz) 5
-      - 🇸🇬 SG新加坡(yz)
-      - 🇯🇵 JP日本(yz) 6
-      - 🇺🇸 US美国(yz) 2
-      - 🇸🇬 SG新加坡(yz) 2
-      - 🇹🇼 TW台湾(yz) 8
       - 🇺🇸 US美国(yz) 3
       - 🇺🇸 US美国(yz) 4
-      - 🇯🇵 JP日本(yz) 7
-      - 🇺🇸 US美国(yz) 5
-      - 🇹🇼 TW台湾(yz) 9
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇰🇷 KR韩国(yz)
-      - 🇸🇬 SG新加坡(yz) 4
-      - 🇯🇵 JP日本(yz) 8
+      - 🇷🇺 RU俄罗斯(yz)
+      - 🇹🇼 TW台湾(yz) 3
       - 🇸🇬 SG新加坡(yz) 5
-      - 🇸🇬 SG新加坡(yz) 6
-      - 🇺🇸 US美国(yz) 6
+      - 🇳🇱 NL荷兰(yz) 2
+      - 🇭🇰 HK香港(yz) 3
       - 🇭🇰 HK香港(yz) 4
+      - 🇹🇼 TW台湾(yz) 4
+      - 🇸🇬 SG新加坡(yz) 6
+      - 🇭🇰 HK香港(yz) 5
+      - 🇺🇸 US美国(yz) 5
+      - 🇺🇸 US美国(yz) 6
+      - 🇭🇰 HK香港(yz) 6
+      - 🇹🇼 TW台湾(yz) 5
+      - 🇸🇬 SG新加坡(yz) 7
+      - 🇭🇰 HK香港(yz) 7
+      - 🇸🇬 SG新加坡(yz) 8
       - 🇺🇸 US美国(yz) 7
-      - 🇹🇼 TW台湾(yz) 10
+      - 🇸🇬 SG新加坡(yz) 9
+      - 🇩🇪 DE德国(yz)
       - 🇺🇸 US美国(yz) 8
       - 🇺🇸 US美国(yz) 9
+      - 🇸🇬 SG新加坡(yz) 10
+      - 🇭🇰 HK香港(yz) 8
+      - 🇸🇬 SG新加坡(yz) 11
+      - 🇩🇪 DE德国(yz) 2
+      - 🇸🇬 SG新加坡(yz) 12
       - 🇺🇸 US美国(yz) 10
+      - 🇸🇬 SG新加坡(yz) 13
       - 🇺🇸 US美国(yz) 11
-      - 🇯🇵 JP日本(yz) 9
-      - 🇯🇵 JP日本(yz) 10
-      - 🇹🇼 TW台湾(yz) 11
-      - 🇯🇵 JP日本(yz) 11
-      - 🇯🇵 JP日本(yz) 12
-      - 🇭🇰 HK香港(yz) 5
-      - 🇳🇱 NL荷兰(yz) 2
+      - 🇹🇼 TW台湾(yz) 6
+      - 🇸🇬 SG新加坡(yz) 14
+      - 🇹🇼 TW台湾(yz) 7
+      - 🇸🇬 SG新加坡(yz) 15
       - 🇺🇸 US美国(yz) 12
-      - 🇺🇸 US美国(yz) 13
+      - 🇸🇬 SG新加坡(yz) 16
       - 🇳🇱 NL荷兰(yz) 3
-      - 🇨🇦 CA加拿大(yz)
-      - 🇭🇰 HK香港(yz) 6
-      - 🇬🇧 GB英国(yz)
-      - 🇸🇬 SG新加坡(yz) 7
+      - 🇺🇸 US美国(yz) 13
       - 🇺🇸 US美国(yz) 14
       - 🇺🇸 US美国(yz) 15
-      - 🇯🇵 JP日本(yz) 13
-      - 🇭🇰 HK香港(yz) 7
-      - 🇫🇷 FR法国(yz)
-      - 🇯🇵 JP日本(yz) 14
-      - 🇹🇼 TW台湾(yz) 12
-      - 🇸🇬 SG新加坡(yz) 8
-      - 🇯🇵 JP日本(yz) 15
-      - 🇸🇬 SG新加坡(yz) 9
+      - 🇹🇼 TW台湾(yz) 8
+      - 🇹🇼 TW台湾(yz) 9
+      - 🇷🇺 RU俄罗斯(yz) 2
+      - 🇳🇱 NL荷兰(yz) 4
+      - 🇸🇬 SG新加坡(yz) 17
+      - 🇯🇵 JP日本(yz)
+      - 🇹🇼 TW台湾(yz) 10
+      - 🇸🇬 SG新加坡(yz) 18
+      - 🇸🇬 SG新加坡(yz) 19
+      - 🇭🇰 HK香港(yz) 9
       - 🇺🇸 US美国(yz) 16
-      - 🇸🇬 SG新加坡(yz) 10
-      - 🇸🇬 SG新加坡(yz) 11
+      - 🇷🇺 RU俄罗斯(yz) 3
       - 🇺🇸 US美国(yz) 17
-      - 🇹🇼 TW台湾(yz) 13
-      - 🇭🇰 HK香港(yz) 8
-      - 🇹🇼 TW台湾(yz) 14
-      - 🇸🇬 SG新加坡(yz) 12
+      - 🇩🇪 DE德国(yz) 3
       - 🇺🇸 US美国(yz) 18
-      - 🇯🇵 JP日本(yz) 16
-      - 🇯🇵 JP日本(yz) 17
+      - 🇭🇰 HK香港(yz) 10
+      - 🇷🇺 RU俄罗斯(yz) 4
       - 🇺🇸 US美国(yz) 19
       - 🇺🇸 US美国(yz) 20
-      - 🇹🇼 TW台湾(yz) 15
-      - 🇭🇰 HK香港(yz) 9
-      - 🇭🇰 HK香港(yz) 10
-      - 🇯🇵 JP日本(yz) 18
-      - 🇯🇵 JP日本(yz) 19
+      - 🇳🇱 NL荷兰(yz) 5
       - 🇺🇸 US美国(yz) 21
       - 🇺🇸 US美国(yz) 22
-      - 🇭🇰 HK香港(yz) 11
-      - 🇯🇵 JP日本(yz) 20
-      - 🇳🇱 NL荷兰(yz) 4
       - 🇺🇸 US美国(yz) 23
-      - 🇯🇵 JP日本(yz) 21
-      - 🇫🇷 FR法国(yz) 2
-      - 🇹🇼 TW台湾(yz) 16
-      - 🇹🇼 TW台湾(yz) 17
-      - 🇹🇼 TW台湾(yz) 18
-      - 🇸🇬 SG新加坡(yz) 13
-      - 🇸🇬 SG新加坡(yz) 14
-      - 🇸🇬 SG新加坡(yz) 15
-      - 🇯🇵 JP日本(yz) 22
-      - 🇯🇵 JP日本(yz) 23
       - 🇺🇸 US美国(yz) 24
-      - 🇸🇬 SG新加坡(yz) 16
-      - 🇹🇼 TW台湾(yz) 19
-      - 🇭🇰 HK香港(yz) 12
-      - 🇸🇬 SG新加坡(yz) 17
-      - 🇸🇬 SG新加坡(yz) 18
-      - 🇭🇰 HK香港(yz) 13
-      - 🇯🇵 JP日本(yz) 24
-      - 🇹🇼 TW台湾(yz) 20
-      - 🇭🇰 HK香港(yz) 14
-      - 🇹🇼 TW台湾(yz) 21
-      - 🇭🇰 HK香港(yz) 15
-      - 🇯🇵 JP日本(yz) 25
-      - 🇯🇵 JP日本(yz) 26
-      - 🇹🇼 TW台湾(yz) 22
-      - 🇹🇼 TW台湾(yz) 23
-      - 🇸🇬 SG新加坡(yz) 19
       - 🇺🇸 US美国(yz) 25
-      - 🇹🇼 TW台湾(yz) 24
-      - 🇹🇼 TW台湾(yz) 25
-      - 🇭🇰 HK香港(yz) 16
-      - 🇹🇼 TW台湾(yz) 26
-      - 🇭🇰 HK香港(yz) 17
-      - 🇸🇬 SG新加坡(yz) 20
-      - 🇭🇰 HK香港(yz) 18
-      - 🇸🇬 SG新加坡(yz) 21
-      - 🇫🇷 FR法国(yz) 3
       - 🇺🇸 US美国(yz) 26
-      - 🇯🇵 JP日本(yz) 27
-      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 27
-      - 🇳🇱 NL荷兰(yz) 5
-      - 🇸🇬 SG新加坡(yz) 22
-      - 🇨🇦 CA加拿大(yz) 2
-      - 🇸🇬 SG新加坡(yz) 23
       - 🇳🇱 NL荷兰(yz) 6
-      - 🇸🇬 SG新加坡(yz) 24
-      - 🇰🇷 KR韩国(yz) 2
       - 🇺🇸 US美国(yz) 28
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 29
-      - 🇩🇪 DE德国(yz)
-      - 🇫🇷 FR法国(yz) 4
+      - 🇹🇼 TW台湾(yz) 11
+      - 🇹🇼 TW台湾(yz) 12
+      - 🇹🇼 TW台湾(yz) 13
       - 🇺🇸 US美国(yz) 30
-      - 🇳🇱 NL荷兰(yz) 7
+      - 🇸🇬 SG新加坡(yz) 20
       - 🇺🇸 US美国(yz) 31
       - 🇺🇸 US美国(yz) 32
       - 🇺🇸 US美国(yz) 33
+      - 🇭🇰 HK香港(yz) 11
+      - 🇭🇰 HK香港(yz) 12
       - 🇺🇸 US美国(yz) 34
-      - 🇹🇼 TW台湾(yz) 27
-      - 🇹🇼 TW台湾(yz) 28
       - 🇺🇸 US美国(yz) 35
+      - 🇭🇰 HK香港(yz) 13
       - 🇺🇸 US美国(yz) 36
-      - 🇯🇵 JP日本(yz) 28
-      - 🇭🇰 HK香港(yz) 19
-      - 🇭🇰 HK香港(yz) 20
-      - 🇭🇰 HK香港(yz) 21
-      - 🇹🇼 TW台湾(yz) 29
-      - 🇸🇬 SG新加坡(yz) 25
-      - 🇭🇰 HK香港(yz) 22
-      - 🇭🇰 HK香港(yz) 23
-      - 🇹🇼 TW台湾(yz) 30
-      - 🇳🇱 NL荷兰(yz) 8
-      - 🇯🇵 JP日本(yz) 29
-      - 🇯🇵 JP日本(yz) 30
+      - 🇹🇼 TW台湾(yz) 14
       - 🇺🇸 US美国(yz) 37
       - 🇺🇸 US美国(yz) 38
-      - 🇹🇼 TW台湾(yz) 31
-      - 🇹🇼 TW台湾(yz) 32
-      - 🇸🇬 SG新加坡(yz) 26
-      - 🇯🇵 JP日本(yz) 31
-      - 🇸🇬 SG新加坡(yz) 27
-      - 🇹🇼 TW台湾(yz) 33
-      - 🇩🇪 DE德国(yz) 2
-      - 🇸🇬 SG新加坡(yz) 28
-      - 🇹🇼 TW台湾(yz) 34
-      - 🇹🇼 TW台湾(yz) 35
-      - 🇹🇼 TW台湾(yz) 36
-      - 🇯🇵 JP日本(yz) 32
-      - 🇹🇼 TW台湾(yz) 37
-      - 🇯🇵 JP日本(yz) 33
-      - 🇭🇰 HK香港(yz) 24
-      - 🇭🇰 HK香港(yz) 25
-      - 🇸🇬 SG新加坡(yz) 29
-      - 🇭🇰 HK香港(yz) 26
-      - 🇯🇵 JP日本(yz) 34
-      - 🇯🇵 JP日本(yz) 35
-      - 🇹🇼 TW台湾(yz) 38
-      - 🇯🇵 JP日本(yz) 36
-      - 🇯🇵 JP日本(yz) 37
-      - 🇯🇵 JP日本(yz) 38
-      - 🇸🇬 SG新加坡(yz) 30
+      - 🇨🇦 CA加拿大(yz)
       - 🇺🇸 US美国(yz) 39
-      - 🇹🇼 TW台湾(yz) 39
-      - 🇩🇪 DE德国(yz) 3
-      - 🇭🇰 HK香港(yz) 27
-      - 🇹🇼 TW台湾(yz) 40
       - 🇺🇸 US美国(yz) 40
-      - 🇭🇰 HK香港(yz) 28
-      - 🇸🇬 SG新加坡(yz) 31
-      - 🇭🇰 HK香港(yz) 29
-      - 🇸🇬 SG新加坡(yz) 32
-      - 🇸🇬 SG新加坡(yz) 33
-      - 🇸🇬 SG新加坡(yz) 34
-      - 🇸🇬 SG新加坡(yz) 35
-      - 🇯🇵 JP日本(yz) 39
-      - 🇸🇬 SG新加坡(yz) 36
-      - 🇹🇼 TW台湾(yz) 41
+      - 🇳🇱 NL荷兰(yz) 7
       - 🇺🇸 US美国(yz) 41
-      - 🇹🇼 TW台湾(yz) 42
       - 🇺🇸 US美国(yz) 42
       - 🇺🇸 US美国(yz) 43
       - 🇺🇸 US美国(yz) 44
-      - 🇯🇵 JP日本(yz) 40
-      - 🇭🇰 HK香港(yz) 30
       - 🇺🇸 US美国(yz) 45
       - 🇺🇸 US美国(yz) 46
-      - 🇸🇬 SG新加坡(yz) 37
-      - 🇸🇬 SG新加坡(yz) 38
-      - 🇯🇵 JP日本(yz) 41
       - 🇺🇸 US美国(yz) 47
-      - 🇸🇬 SG新加坡(yz) 39
-      - 🇩🇪 DE德国(yz) 4
-      - 🇹🇼 TW台湾(yz) 43
-      - 🇩🇪 DE德国(yz) 5
-      - 🇳🇱 NL荷兰(yz) 9
+      - 🇸🇬 SG新加坡(yz) 21
       - 🇺🇸 US美国(yz) 48
-      - 🇸🇬 SG新加坡(yz) 40
-      - 🇸🇬 SG新加坡(yz) 41
-      - 🇹🇼 TW台湾(yz) 44
+      - 🇸🇬 SG新加坡(yz) 22
       - 🇺🇸 US美国(yz) 49
-      - 🇳🇱 NL荷兰(yz) 10
+      - 🇳🇱 NL荷兰(yz) 8
+      - 🇳🇱 NL荷兰(yz) 9
       - 🇺🇸 US美国(yz) 50
       - 🇺🇸 US美国(yz) 51
-      - 🇯🇵 JP日本(yz) 42
-      - 🇸🇬 SG新加坡(yz) 42
-      - 🇸🇬 SG新加坡(yz) 43
+      - 🇭🇰 HK香港(yz) 14
+      - 🇹🇼 TW台湾(yz) 15
       - 🇺🇸 US美国(yz) 52
-      - 🇹🇼 TW台湾(yz) 45
-      - 🇭🇰 HK香港(yz) 31
-      - 🇯🇵 JP日本(yz) 43
-      - 🇯🇵 JP日本(yz) 44
-      - 🇹🇼 TW台湾(yz) 46
-      - 🇫🇷 FR法国(yz) 5
-      - 🇸🇬 SG新加坡(yz) 44
-      - 🇹🇼 TW台湾(yz) 47
-      - 🇳🇱 NL荷兰(yz) 11
+      - 🇹🇼 TW台湾(yz) 16
+      - 🇭🇰 HK香港(yz) 15
       - 🇺🇸 US美国(yz) 53
-      - 🇯🇵 JP日本(yz) 45
       - 🇺🇸 US美国(yz) 54
+      - 🇯🇵 JP日本(yz) 2
+      - 🇭🇰 HK香港(yz) 16
+      - 🇹🇼 TW台湾(yz) 17
+      - 🇭🇰 HK香港(yz) 17
       - 🇺🇸 US美国(yz) 55
-      - 🇬🇧 GB英国(yz) 4
-      - 🇭🇰 HK香港(yz) 32
-      - 🇸🇬 SG新加坡(yz) 45
-      - 🇯🇵 JP日本(yz) 46
+      - 🇸🇬 SG新加坡(yz) 23
+      - 🇳🇱 NL荷兰(yz) 10
+      - 🇭🇰 HK香港(yz) 18
+      - 🇭🇰 HK香港(yz) 19
       - 🇺🇸 US美国(yz) 56
-      - 🇹🇼 TW台湾(yz) 48
       - 🇺🇸 US美国(yz) 57
-      - 🇹🇼 TW台湾(yz) 2 2
-      - 🇳🇱 NL荷兰(yz) 12
-      - 🇹🇼 TW台湾(yz) 3 2
+      - 🇺🇸 US美国(yz) 58
+      - 🇺🇸 US美国(yz) 59
+      - 🇸🇬 SG新加坡(yz) 24
+      - 🇹🇼 TW台湾(yz) 18
+      - 🇸🇬 SG新加坡(yz) 25
+      - 🇹🇼 TW台湾(yz) 19
+      - 🇸🇬 SG新加坡(yz) 26
+      - 🇫🇷 FR法国(yz) 4
+      - 🇩🇪 DE德国(yz) 4
+      - 🇺🇸 US美国(yz) 60
+      - 🇹🇼 TW台湾(yz) 20
+      - 🇺🇸 US美国(yz) 61
+      - 🇺🇸 US美国(yz) 62
+      - 🇸🇬 SG新加坡(yz) 27
+      - 🇹🇼 TW台湾(yz) 21
+      - 🇭🇰 HK香港(yz) 20
+      - 🇨🇦 CA加拿大(yz) 2
+      - 🇫🇷 FR法国(yz) 5
+      - 🇺🇸 US美国(yz) 63
+      - 🇭🇰 HK香港(yz) 21
+      - 🇭🇰 HK香港(yz) 22
+      - 🇭🇰 HK香港(yz) 23
+      - 🇺🇸 US美国(yz) 64
+      - 🇹🇼 TW台湾(yz) 22
+      - 🇹🇼 TW台湾(yz) 23
+      - 🇭🇰 HK香港(yz) 24
+      - 🇹🇼 TW台湾(yz) 24
+      - 🇺🇸 US美国(yz) 65
+      - 🇺🇸 US美国(yz) 66
+      - 🇸🇬 SG新加坡(yz) 28
+      - 🇺🇸 US美国(yz) 67
+      - 🇭🇰 HK香港(yz) 25
+      - 🇹🇼 TW台湾(yz) 25
+      - 🇫🇷 FR法国(yz) 6
+      - 🇫🇷 FR法国(yz) 2 2
+      - 🇫🇷 FR法国(yz) 3 2
+      - 🇺🇸 US美国(yz) 68
+      - 🇭🇰 HK香港(yz) 26
+      - 🇹🇼 TW台湾(yz) 26
       - 🇺🇸 US美国(yz) 2 2
+      - 🇭🇰 HK香港(yz) 2 2
       - 🇺🇸 US美国(yz) 3 2
       - 🇺🇸 US美国(yz) 4 2
-      - 🇰🇷 KR韩国(yz) 3
       - 🇺🇸 US美国(yz) 5 2
       - 🇺🇸 US美国(yz) 6 2
-      - 🇺🇸 US美国(yz) 7 2
-      - 🇺🇸 US美国(yz) 8 2
-      - 🇹🇼 TW台湾(yz) 4 2
-      - 🇺🇸 US美国(yz) 9 2
-      - 🇺🇸 US美国(yz) 10 2
-      - 🇬🇧 GB英国(yz) 5
-      - 🇺🇸 US美国(yz) 11 2
-      - 🇭🇰 HK香港(yz) 33
-      - 🇫🇷 FR法国(yz) 6
-      - 🇺🇸 US美国(yz) 12 2
-      - 🇺🇸 US美国(yz) 13 2
-      - 🇹🇼 TW台湾(yz) 5 2
-      - 🇺🇸 US美国(yz) 14 2
-      - 🇹🇼 TW台湾(yz) 6 2
-      - 🇹🇼 TW台湾(yz) 7 2
-      - 🇹🇼 TW台湾(yz) 8 2
-      - 🇰🇷 KR韩国(yz) 2 2
-      - 🇺🇸 US美国(yz) 15 2
-      - 🇳🇱 NL荷兰(yz) 2 2
-      - 🇺🇸 US美国(yz) 16 2
-      - 🇺🇸 US美国(yz) 17 2
-      - 🇭🇰 HK香港(yz) 2 2
       - 🇭🇰 HK香港(yz) 3 2
       - 🇭🇰 HK香港(yz) 4 2
-      - 🇹🇼 TW台湾(yz) 9 2
-      - 🇺🇸 US美国(yz) 18 2
-      - 🇺🇸 US美国(yz) 19 2
-      - 🇹🇼 TW台湾(yz) 10 2
-      - 🇺🇸 US美国(yz) 20 2
-      - 🇺🇸 US美国(yz) 21 2
-      - 🇳🇱 NL荷兰(yz) 3 2
-      - 🇺🇸 US美国(yz) 22 2
-      - 🇺🇸 US美国(yz) 23 2
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇺🇸 US美国(yz) 24 2
+      - 🇺🇸 US美国(yz) 7 2
+      - 🇹🇼 TW台湾(yz) 2 2
+      - 🇺🇸 US美国(yz) 8 2
+      - 🇺🇸 US美国(yz) 9 2
+      - 🇺🇸 US美国(yz) 10 2
+      - 🇺🇸 US美国(yz) 11 2
+      - 🇹🇼 TW台湾(yz) 3 2
+      - 🇺🇸 US美国(yz) 12 2
+      - 🇹🇼 TW台湾(yz) 4 2
+      - 🇺🇸 US美国(yz) 13 2
+      - 🇭🇰 HK香港(yz) 5 2
+      - 🇹🇼 TW台湾(yz) 5 2
+      - 🇳🇱 NL荷兰(yz) 11
+      - 🇭🇰 HK香港(yz) 6 2
+      - 🇭🇰 HK香港(yz) 7 2
+      - 🇺🇸 US美国(yz) 14 2
+      - 🇭🇰 HK香港(yz) 8 2
+      - 🇺🇸 US美国(yz) 15 2
+      - 🇹🇼 TW台湾(yz) 6 2
       - 🇺🇸 www.85la.com🇺🇸US²_92|8.6MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed
       - 🇺🇸 www.85la.com🇺🇸US²_8|0.2MB/s|0%|GPT⁺|YT-CN|X
       - 🇺🇸 www.85la.com🇺🇸US²_701|3.9MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed
@@ -3574,307 +3190,211 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇸🇬 SG新加坡(yz)
+      - 🇸🇬 SG新加坡(yz) 2
+      - 🇺🇸 US美国(yz)
+      - 🇺🇸 US美国(yz) 2
+      - 🇭🇰 HK香港(yz)
+      - 🇸🇬 SG新加坡(yz) 3
+      - 🇭🇰 HK香港(yz) 2
+      - 🇫🇷 FR法国(yz)
+      - 🇸🇬 SG新加坡(yz) 4
+      - 🇫🇷 FR法国(yz) 2
+      - 🇫🇷 FR法国(yz) 3
       - 🇹🇼 TW台湾(yz)
       - 🇹🇼 TW台湾(yz) 2
-      - 🇺🇸 US美国(yz)
-      - 🇯🇵 JP日本(yz)
-      - 🇹🇼 TW台湾(yz) 3
-      - 🇯🇵 JP日本(yz) 2
-      - 🇹🇼 TW台湾(yz) 4
       - 🇳🇱 NL荷兰(yz)
-      - 🇹🇼 TW台湾(yz) 5
-      - 🇯🇵 JP日本(yz) 3
-      - 🇭🇰 HK香港(yz)
-      - 🇭🇰 HK香港(yz) 2
-      - 🇹🇼 TW台湾(yz) 6
-      - 🇹🇼 TW台湾(yz) 7
-      - 🇯🇵 JP日本(yz) 4
-      - 🇭🇰 HK香港(yz) 3
-      - 🇯🇵 JP日本(yz) 5
-      - 🇸🇬 SG新加坡(yz)
-      - 🇯🇵 JP日本(yz) 6
-      - 🇺🇸 US美国(yz) 2
-      - 🇸🇬 SG新加坡(yz) 2
-      - 🇹🇼 TW台湾(yz) 8
       - 🇺🇸 US美国(yz) 3
       - 🇺🇸 US美国(yz) 4
-      - 🇯🇵 JP日本(yz) 7
-      - 🇺🇸 US美国(yz) 5
-      - 🇹🇼 TW台湾(yz) 9
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇰🇷 KR韩国(yz)
-      - 🇸🇬 SG新加坡(yz) 4
-      - 🇯🇵 JP日本(yz) 8
+      - 🇷🇺 RU俄罗斯(yz)
+      - 🇹🇼 TW台湾(yz) 3
       - 🇸🇬 SG新加坡(yz) 5
-      - 🇸🇬 SG新加坡(yz) 6
-      - 🇺🇸 US美国(yz) 6
+      - 🇳🇱 NL荷兰(yz) 2
+      - 🇭🇰 HK香港(yz) 3
       - 🇭🇰 HK香港(yz) 4
+      - 🇹🇼 TW台湾(yz) 4
+      - 🇸🇬 SG新加坡(yz) 6
+      - 🇭🇰 HK香港(yz) 5
+      - 🇺🇸 US美国(yz) 5
+      - 🇺🇸 US美国(yz) 6
+      - 🇭🇰 HK香港(yz) 6
+      - 🇹🇼 TW台湾(yz) 5
+      - 🇸🇬 SG新加坡(yz) 7
+      - 🇭🇰 HK香港(yz) 7
+      - 🇸🇬 SG新加坡(yz) 8
       - 🇺🇸 US美国(yz) 7
-      - 🇹🇼 TW台湾(yz) 10
+      - 🇸🇬 SG新加坡(yz) 9
+      - 🇩🇪 DE德国(yz)
       - 🇺🇸 US美国(yz) 8
       - 🇺🇸 US美国(yz) 9
+      - 🇸🇬 SG新加坡(yz) 10
+      - 🇭🇰 HK香港(yz) 8
+      - 🇸🇬 SG新加坡(yz) 11
+      - 🇩🇪 DE德国(yz) 2
+      - 🇸🇬 SG新加坡(yz) 12
       - 🇺🇸 US美国(yz) 10
+      - 🇸🇬 SG新加坡(yz) 13
       - 🇺🇸 US美国(yz) 11
-      - 🇯🇵 JP日本(yz) 9
-      - 🇯🇵 JP日本(yz) 10
-      - 🇹🇼 TW台湾(yz) 11
-      - 🇯🇵 JP日本(yz) 11
-      - 🇯🇵 JP日本(yz) 12
-      - 🇭🇰 HK香港(yz) 5
-      - 🇳🇱 NL荷兰(yz) 2
+      - 🇹🇼 TW台湾(yz) 6
+      - 🇸🇬 SG新加坡(yz) 14
+      - 🇹🇼 TW台湾(yz) 7
+      - 🇸🇬 SG新加坡(yz) 15
       - 🇺🇸 US美国(yz) 12
-      - 🇺🇸 US美国(yz) 13
+      - 🇸🇬 SG新加坡(yz) 16
       - 🇳🇱 NL荷兰(yz) 3
-      - 🇨🇦 CA加拿大(yz)
-      - 🇭🇰 HK香港(yz) 6
-      - 🇬🇧 GB英国(yz)
-      - 🇸🇬 SG新加坡(yz) 7
+      - 🇺🇸 US美国(yz) 13
       - 🇺🇸 US美国(yz) 14
       - 🇺🇸 US美国(yz) 15
-      - 🇯🇵 JP日本(yz) 13
-      - 🇭🇰 HK香港(yz) 7
-      - 🇫🇷 FR法国(yz)
-      - 🇯🇵 JP日本(yz) 14
-      - 🇹🇼 TW台湾(yz) 12
-      - 🇸🇬 SG新加坡(yz) 8
-      - 🇯🇵 JP日本(yz) 15
-      - 🇸🇬 SG新加坡(yz) 9
+      - 🇹🇼 TW台湾(yz) 8
+      - 🇹🇼 TW台湾(yz) 9
+      - 🇷🇺 RU俄罗斯(yz) 2
+      - 🇳🇱 NL荷兰(yz) 4
+      - 🇸🇬 SG新加坡(yz) 17
+      - 🇯🇵 JP日本(yz)
+      - 🇹🇼 TW台湾(yz) 10
+      - 🇸🇬 SG新加坡(yz) 18
+      - 🇸🇬 SG新加坡(yz) 19
+      - 🇭🇰 HK香港(yz) 9
       - 🇺🇸 US美国(yz) 16
-      - 🇸🇬 SG新加坡(yz) 10
-      - 🇸🇬 SG新加坡(yz) 11
+      - 🇷🇺 RU俄罗斯(yz) 3
       - 🇺🇸 US美国(yz) 17
-      - 🇹🇼 TW台湾(yz) 13
-      - 🇭🇰 HK香港(yz) 8
-      - 🇹🇼 TW台湾(yz) 14
-      - 🇸🇬 SG新加坡(yz) 12
+      - 🇩🇪 DE德国(yz) 3
       - 🇺🇸 US美国(yz) 18
-      - 🇯🇵 JP日本(yz) 16
-      - 🇯🇵 JP日本(yz) 17
+      - 🇭🇰 HK香港(yz) 10
+      - 🇷🇺 RU俄罗斯(yz) 4
       - 🇺🇸 US美国(yz) 19
       - 🇺🇸 US美国(yz) 20
-      - 🇹🇼 TW台湾(yz) 15
-      - 🇭🇰 HK香港(yz) 9
-      - 🇭🇰 HK香港(yz) 10
-      - 🇯🇵 JP日本(yz) 18
-      - 🇯🇵 JP日本(yz) 19
+      - 🇳🇱 NL荷兰(yz) 5
       - 🇺🇸 US美国(yz) 21
       - 🇺🇸 US美国(yz) 22
-      - 🇭🇰 HK香港(yz) 11
-      - 🇯🇵 JP日本(yz) 20
-      - 🇳🇱 NL荷兰(yz) 4
       - 🇺🇸 US美国(yz) 23
-      - 🇯🇵 JP日本(yz) 21
-      - 🇫🇷 FR法国(yz) 2
-      - 🇹🇼 TW台湾(yz) 16
-      - 🇹🇼 TW台湾(yz) 17
-      - 🇹🇼 TW台湾(yz) 18
-      - 🇸🇬 SG新加坡(yz) 13
-      - 🇸🇬 SG新加坡(yz) 14
-      - 🇸🇬 SG新加坡(yz) 15
-      - 🇯🇵 JP日本(yz) 22
-      - 🇯🇵 JP日本(yz) 23
       - 🇺🇸 US美国(yz) 24
-      - 🇸🇬 SG新加坡(yz) 16
-      - 🇹🇼 TW台湾(yz) 19
-      - 🇭🇰 HK香港(yz) 12
-      - 🇸🇬 SG新加坡(yz) 17
-      - 🇸🇬 SG新加坡(yz) 18
-      - 🇭🇰 HK香港(yz) 13
-      - 🇯🇵 JP日本(yz) 24
-      - 🇹🇼 TW台湾(yz) 20
-      - 🇭🇰 HK香港(yz) 14
-      - 🇹🇼 TW台湾(yz) 21
-      - 🇭🇰 HK香港(yz) 15
-      - 🇯🇵 JP日本(yz) 25
-      - 🇯🇵 JP日本(yz) 26
-      - 🇹🇼 TW台湾(yz) 22
-      - 🇹🇼 TW台湾(yz) 23
-      - 🇸🇬 SG新加坡(yz) 19
       - 🇺🇸 US美国(yz) 25
-      - 🇹🇼 TW台湾(yz) 24
-      - 🇹🇼 TW台湾(yz) 25
-      - 🇭🇰 HK香港(yz) 16
-      - 🇹🇼 TW台湾(yz) 26
-      - 🇭🇰 HK香港(yz) 17
-      - 🇸🇬 SG新加坡(yz) 20
-      - 🇭🇰 HK香港(yz) 18
-      - 🇸🇬 SG新加坡(yz) 21
-      - 🇫🇷 FR法国(yz) 3
       - 🇺🇸 US美国(yz) 26
-      - 🇯🇵 JP日本(yz) 27
-      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 27
-      - 🇳🇱 NL荷兰(yz) 5
-      - 🇸🇬 SG新加坡(yz) 22
-      - 🇨🇦 CA加拿大(yz) 2
-      - 🇸🇬 SG新加坡(yz) 23
       - 🇳🇱 NL荷兰(yz) 6
-      - 🇸🇬 SG新加坡(yz) 24
-      - 🇰🇷 KR韩国(yz) 2
       - 🇺🇸 US美国(yz) 28
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 29
-      - 🇩🇪 DE德国(yz)
-      - 🇫🇷 FR法国(yz) 4
+      - 🇹🇼 TW台湾(yz) 11
+      - 🇹🇼 TW台湾(yz) 12
+      - 🇹🇼 TW台湾(yz) 13
       - 🇺🇸 US美国(yz) 30
-      - 🇳🇱 NL荷兰(yz) 7
+      - 🇸🇬 SG新加坡(yz) 20
       - 🇺🇸 US美国(yz) 31
       - 🇺🇸 US美国(yz) 32
       - 🇺🇸 US美国(yz) 33
+      - 🇭🇰 HK香港(yz) 11
+      - 🇭🇰 HK香港(yz) 12
       - 🇺🇸 US美国(yz) 34
-      - 🇹🇼 TW台湾(yz) 27
-      - 🇹🇼 TW台湾(yz) 28
       - 🇺🇸 US美国(yz) 35
+      - 🇭🇰 HK香港(yz) 13
       - 🇺🇸 US美国(yz) 36
-      - 🇯🇵 JP日本(yz) 28
-      - 🇭🇰 HK香港(yz) 19
-      - 🇭🇰 HK香港(yz) 20
-      - 🇭🇰 HK香港(yz) 21
-      - 🇹🇼 TW台湾(yz) 29
-      - 🇸🇬 SG新加坡(yz) 25
-      - 🇭🇰 HK香港(yz) 22
-      - 🇭🇰 HK香港(yz) 23
-      - 🇹🇼 TW台湾(yz) 30
-      - 🇳🇱 NL荷兰(yz) 8
-      - 🇯🇵 JP日本(yz) 29
-      - 🇯🇵 JP日本(yz) 30
+      - 🇹🇼 TW台湾(yz) 14
       - 🇺🇸 US美国(yz) 37
       - 🇺🇸 US美国(yz) 38
-      - 🇹🇼 TW台湾(yz) 31
-      - 🇹🇼 TW台湾(yz) 32
-      - 🇸🇬 SG新加坡(yz) 26
-      - 🇯🇵 JP日本(yz) 31
-      - 🇸🇬 SG新加坡(yz) 27
-      - 🇹🇼 TW台湾(yz) 33
-      - 🇩🇪 DE德国(yz) 2
-      - 🇸🇬 SG新加坡(yz) 28
-      - 🇹🇼 TW台湾(yz) 34
-      - 🇹🇼 TW台湾(yz) 35
-      - 🇹🇼 TW台湾(yz) 36
-      - 🇯🇵 JP日本(yz) 32
-      - 🇹🇼 TW台湾(yz) 37
-      - 🇯🇵 JP日本(yz) 33
-      - 🇭🇰 HK香港(yz) 24
-      - 🇭🇰 HK香港(yz) 25
-      - 🇸🇬 SG新加坡(yz) 29
-      - 🇭🇰 HK香港(yz) 26
-      - 🇯🇵 JP日本(yz) 34
-      - 🇯🇵 JP日本(yz) 35
-      - 🇹🇼 TW台湾(yz) 38
-      - 🇯🇵 JP日本(yz) 36
-      - 🇯🇵 JP日本(yz) 37
-      - 🇯🇵 JP日本(yz) 38
-      - 🇸🇬 SG新加坡(yz) 30
+      - 🇨🇦 CA加拿大(yz)
       - 🇺🇸 US美国(yz) 39
-      - 🇹🇼 TW台湾(yz) 39
-      - 🇩🇪 DE德国(yz) 3
-      - 🇭🇰 HK香港(yz) 27
-      - 🇹🇼 TW台湾(yz) 40
       - 🇺🇸 US美国(yz) 40
-      - 🇭🇰 HK香港(yz) 28
-      - 🇸🇬 SG新加坡(yz) 31
-      - 🇭🇰 HK香港(yz) 29
-      - 🇸🇬 SG新加坡(yz) 32
-      - 🇸🇬 SG新加坡(yz) 33
-      - 🇸🇬 SG新加坡(yz) 34
-      - 🇸🇬 SG新加坡(yz) 35
-      - 🇯🇵 JP日本(yz) 39
-      - 🇸🇬 SG新加坡(yz) 36
-      - 🇹🇼 TW台湾(yz) 41
+      - 🇳🇱 NL荷兰(yz) 7
       - 🇺🇸 US美国(yz) 41
-      - 🇹🇼 TW台湾(yz) 42
       - 🇺🇸 US美国(yz) 42
       - 🇺🇸 US美国(yz) 43
       - 🇺🇸 US美国(yz) 44
-      - 🇯🇵 JP日本(yz) 40
-      - 🇭🇰 HK香港(yz) 30
       - 🇺🇸 US美国(yz) 45
       - 🇺🇸 US美国(yz) 46
-      - 🇸🇬 SG新加坡(yz) 37
-      - 🇸🇬 SG新加坡(yz) 38
-      - 🇯🇵 JP日本(yz) 41
       - 🇺🇸 US美国(yz) 47
-      - 🇸🇬 SG新加坡(yz) 39
-      - 🇩🇪 DE德国(yz) 4
-      - 🇹🇼 TW台湾(yz) 43
-      - 🇩🇪 DE德国(yz) 5
-      - 🇳🇱 NL荷兰(yz) 9
+      - 🇸🇬 SG新加坡(yz) 21
       - 🇺🇸 US美国(yz) 48
-      - 🇸🇬 SG新加坡(yz) 40
-      - 🇸🇬 SG新加坡(yz) 41
-      - 🇹🇼 TW台湾(yz) 44
+      - 🇸🇬 SG新加坡(yz) 22
       - 🇺🇸 US美国(yz) 49
-      - 🇳🇱 NL荷兰(yz) 10
+      - 🇳🇱 NL荷兰(yz) 8
+      - 🇳🇱 NL荷兰(yz) 9
       - 🇺🇸 US美国(yz) 50
       - 🇺🇸 US美国(yz) 51
-      - 🇯🇵 JP日本(yz) 42
-      - 🇸🇬 SG新加坡(yz) 42
-      - 🇸🇬 SG新加坡(yz) 43
+      - 🇭🇰 HK香港(yz) 14
+      - 🇹🇼 TW台湾(yz) 15
       - 🇺🇸 US美国(yz) 52
-      - 🇹🇼 TW台湾(yz) 45
-      - 🇭🇰 HK香港(yz) 31
-      - 🇯🇵 JP日本(yz) 43
-      - 🇯🇵 JP日本(yz) 44
-      - 🇹🇼 TW台湾(yz) 46
-      - 🇫🇷 FR法国(yz) 5
-      - 🇸🇬 SG新加坡(yz) 44
-      - 🇹🇼 TW台湾(yz) 47
-      - 🇳🇱 NL荷兰(yz) 11
+      - 🇹🇼 TW台湾(yz) 16
+      - 🇭🇰 HK香港(yz) 15
       - 🇺🇸 US美国(yz) 53
-      - 🇯🇵 JP日本(yz) 45
       - 🇺🇸 US美国(yz) 54
+      - 🇯🇵 JP日本(yz) 2
+      - 🇭🇰 HK香港(yz) 16
+      - 🇹🇼 TW台湾(yz) 17
+      - 🇭🇰 HK香港(yz) 17
       - 🇺🇸 US美国(yz) 55
-      - 🇬🇧 GB英国(yz) 4
-      - 🇭🇰 HK香港(yz) 32
-      - 🇸🇬 SG新加坡(yz) 45
-      - 🇯🇵 JP日本(yz) 46
+      - 🇸🇬 SG新加坡(yz) 23
+      - 🇳🇱 NL荷兰(yz) 10
+      - 🇭🇰 HK香港(yz) 18
+      - 🇭🇰 HK香港(yz) 19
       - 🇺🇸 US美国(yz) 56
-      - 🇹🇼 TW台湾(yz) 48
       - 🇺🇸 US美国(yz) 57
-      - 🇹🇼 TW台湾(yz) 2 2
-      - 🇳🇱 NL荷兰(yz) 12
-      - 🇹🇼 TW台湾(yz) 3 2
+      - 🇺🇸 US美国(yz) 58
+      - 🇺🇸 US美国(yz) 59
+      - 🇸🇬 SG新加坡(yz) 24
+      - 🇹🇼 TW台湾(yz) 18
+      - 🇸🇬 SG新加坡(yz) 25
+      - 🇹🇼 TW台湾(yz) 19
+      - 🇸🇬 SG新加坡(yz) 26
+      - 🇫🇷 FR法国(yz) 4
+      - 🇩🇪 DE德国(yz) 4
+      - 🇺🇸 US美国(yz) 60
+      - 🇹🇼 TW台湾(yz) 20
+      - 🇺🇸 US美国(yz) 61
+      - 🇺🇸 US美国(yz) 62
+      - 🇸🇬 SG新加坡(yz) 27
+      - 🇹🇼 TW台湾(yz) 21
+      - 🇭🇰 HK香港(yz) 20
+      - 🇨🇦 CA加拿大(yz) 2
+      - 🇫🇷 FR法国(yz) 5
+      - 🇺🇸 US美国(yz) 63
+      - 🇭🇰 HK香港(yz) 21
+      - 🇭🇰 HK香港(yz) 22
+      - 🇭🇰 HK香港(yz) 23
+      - 🇺🇸 US美国(yz) 64
+      - 🇹🇼 TW台湾(yz) 22
+      - 🇹🇼 TW台湾(yz) 23
+      - 🇭🇰 HK香港(yz) 24
+      - 🇹🇼 TW台湾(yz) 24
+      - 🇺🇸 US美国(yz) 65
+      - 🇺🇸 US美国(yz) 66
+      - 🇸🇬 SG新加坡(yz) 28
+      - 🇺🇸 US美国(yz) 67
+      - 🇭🇰 HK香港(yz) 25
+      - 🇹🇼 TW台湾(yz) 25
+      - 🇫🇷 FR法国(yz) 6
+      - 🇫🇷 FR法国(yz) 2 2
+      - 🇫🇷 FR法国(yz) 3 2
+      - 🇺🇸 US美国(yz) 68
+      - 🇭🇰 HK香港(yz) 26
+      - 🇹🇼 TW台湾(yz) 26
       - 🇺🇸 US美国(yz) 2 2
+      - 🇭🇰 HK香港(yz) 2 2
       - 🇺🇸 US美国(yz) 3 2
       - 🇺🇸 US美国(yz) 4 2
-      - 🇰🇷 KR韩国(yz) 3
       - 🇺🇸 US美国(yz) 5 2
       - 🇺🇸 US美国(yz) 6 2
-      - 🇺🇸 US美国(yz) 7 2
-      - 🇺🇸 US美国(yz) 8 2
-      - 🇹🇼 TW台湾(yz) 4 2
-      - 🇺🇸 US美国(yz) 9 2
-      - 🇺🇸 US美国(yz) 10 2
-      - 🇬🇧 GB英国(yz) 5
-      - 🇺🇸 US美国(yz) 11 2
-      - 🇭🇰 HK香港(yz) 33
-      - 🇫🇷 FR法国(yz) 6
-      - 🇺🇸 US美国(yz) 12 2
-      - 🇺🇸 US美国(yz) 13 2
-      - 🇹🇼 TW台湾(yz) 5 2
-      - 🇺🇸 US美国(yz) 14 2
-      - 🇹🇼 TW台湾(yz) 6 2
-      - 🇹🇼 TW台湾(yz) 7 2
-      - 🇹🇼 TW台湾(yz) 8 2
-      - 🇰🇷 KR韩国(yz) 2 2
-      - 🇺🇸 US美国(yz) 15 2
-      - 🇳🇱 NL荷兰(yz) 2 2
-      - 🇺🇸 US美国(yz) 16 2
-      - 🇺🇸 US美国(yz) 17 2
-      - 🇭🇰 HK香港(yz) 2 2
       - 🇭🇰 HK香港(yz) 3 2
       - 🇭🇰 HK香港(yz) 4 2
-      - 🇹🇼 TW台湾(yz) 9 2
-      - 🇺🇸 US美国(yz) 18 2
-      - 🇺🇸 US美国(yz) 19 2
-      - 🇹🇼 TW台湾(yz) 10 2
-      - 🇺🇸 US美国(yz) 20 2
-      - 🇺🇸 US美国(yz) 21 2
-      - 🇳🇱 NL荷兰(yz) 3 2
-      - 🇺🇸 US美国(yz) 22 2
-      - 🇺🇸 US美国(yz) 23 2
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇺🇸 US美国(yz) 24 2
+      - 🇺🇸 US美国(yz) 7 2
+      - 🇹🇼 TW台湾(yz) 2 2
+      - 🇺🇸 US美国(yz) 8 2
+      - 🇺🇸 US美国(yz) 9 2
+      - 🇺🇸 US美国(yz) 10 2
+      - 🇺🇸 US美国(yz) 11 2
+      - 🇹🇼 TW台湾(yz) 3 2
+      - 🇺🇸 US美国(yz) 12 2
+      - 🇹🇼 TW台湾(yz) 4 2
+      - 🇺🇸 US美国(yz) 13 2
+      - 🇭🇰 HK香港(yz) 5 2
+      - 🇹🇼 TW台湾(yz) 5 2
+      - 🇳🇱 NL荷兰(yz) 11
+      - 🇭🇰 HK香港(yz) 6 2
+      - 🇭🇰 HK香港(yz) 7 2
+      - 🇺🇸 US美国(yz) 14 2
+      - 🇭🇰 HK香港(yz) 8 2
+      - 🇺🇸 US美国(yz) 15 2
+      - 🇹🇼 TW台湾(yz) 6 2
       - 🇺🇸 www.85la.com🇺🇸US²_92|8.6MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed
       - 🇺🇸 www.85la.com🇺🇸US²_8|0.2MB/s|0%|GPT⁺|YT-CN|X
       - 🇺🇸 www.85la.com🇺🇸US²_701|3.9MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed
@@ -4661,16 +4181,13 @@ proxy-groups:
       - 🇭🇰 HK香港(yz) 24
       - 🇭🇰 HK香港(yz) 25
       - 🇭🇰 HK香港(yz) 26
-      - 🇭🇰 HK香港(yz) 27
-      - 🇭🇰 HK香港(yz) 28
-      - 🇭🇰 HK香港(yz) 29
-      - 🇭🇰 HK香港(yz) 30
-      - 🇭🇰 HK香港(yz) 31
-      - 🇭🇰 HK香港(yz) 32
-      - 🇭🇰 HK香港(yz) 33
       - 🇭🇰 HK香港(yz) 2 2
       - 🇭🇰 HK香港(yz) 3 2
       - 🇭🇰 HK香港(yz) 4 2
+      - 🇭🇰 HK香港(yz) 5 2
+      - 🇭🇰 HK香港(yz) 6 2
+      - 🇭🇰 HK香港(yz) 7 2
+      - 🇭🇰 HK香港(yz) 8 2
       - 🇭🇰 www.85la.com🇺🇸US¹-TW⁰_51|1.1MB/s|GPT⁺|YT-HK|NF|D+|X
       - 🇭🇰 www.85la.com🇺🇸US¹-SG⁰_66|0.7MB/s|GPT⁺|YT-HK|NF|D+|X
       - 🇭🇰 www.85la.com🇺🇸US¹-JP⁰_42|0.5MB/s|3%|GPT⁺|YT-HK|NF|D+|X
@@ -4825,50 +4342,6 @@ proxy-groups:
     proxies:
       - 🇯🇵 JP日本(yz)
       - 🇯🇵 JP日本(yz) 2
-      - 🇯🇵 JP日本(yz) 3
-      - 🇯🇵 JP日本(yz) 4
-      - 🇯🇵 JP日本(yz) 5
-      - 🇯🇵 JP日本(yz) 6
-      - 🇯🇵 JP日本(yz) 7
-      - 🇯🇵 JP日本(yz) 8
-      - 🇯🇵 JP日本(yz) 9
-      - 🇯🇵 JP日本(yz) 10
-      - 🇯🇵 JP日本(yz) 11
-      - 🇯🇵 JP日本(yz) 12
-      - 🇯🇵 JP日本(yz) 13
-      - 🇯🇵 JP日本(yz) 14
-      - 🇯🇵 JP日本(yz) 15
-      - 🇯🇵 JP日本(yz) 16
-      - 🇯🇵 JP日本(yz) 17
-      - 🇯🇵 JP日本(yz) 18
-      - 🇯🇵 JP日本(yz) 19
-      - 🇯🇵 JP日本(yz) 20
-      - 🇯🇵 JP日本(yz) 21
-      - 🇯🇵 JP日本(yz) 22
-      - 🇯🇵 JP日本(yz) 23
-      - 🇯🇵 JP日本(yz) 24
-      - 🇯🇵 JP日本(yz) 25
-      - 🇯🇵 JP日本(yz) 26
-      - 🇯🇵 JP日本(yz) 27
-      - 🇯🇵 JP日本(yz) 28
-      - 🇯🇵 JP日本(yz) 29
-      - 🇯🇵 JP日本(yz) 30
-      - 🇯🇵 JP日本(yz) 31
-      - 🇯🇵 JP日本(yz) 32
-      - 🇯🇵 JP日本(yz) 33
-      - 🇯🇵 JP日本(yz) 34
-      - 🇯🇵 JP日本(yz) 35
-      - 🇯🇵 JP日本(yz) 36
-      - 🇯🇵 JP日本(yz) 37
-      - 🇯🇵 JP日本(yz) 38
-      - 🇯🇵 JP日本(yz) 39
-      - 🇯🇵 JP日本(yz) 40
-      - 🇯🇵 JP日本(yz) 41
-      - 🇯🇵 JP日本(yz) 42
-      - 🇯🇵 JP日本(yz) 43
-      - 🇯🇵 JP日本(yz) 44
-      - 🇯🇵 JP日本(yz) 45
-      - 🇯🇵 JP日本(yz) 46
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_16|0.2MB/s|3%|GPT⁺|GM|YT-JP|TK-JP|NF|D+|X
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_51|2.8MB/s|GPT⁺|GM|YT-JP|TK|NF|D+|X
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_90|6.8MB/s|3%|GPT|YT|TK|NF|D+|X|KeepHistory
@@ -5005,41 +4478,43 @@ proxy-groups:
     proxies:
       - 🇺🇸 US美国(yz)
       - 🇺🇸 US美国(yz) 2
+      - 🇫🇷 FR法国(yz)
+      - 🇫🇷 FR法国(yz) 2
+      - 🇫🇷 FR法国(yz) 3
       - 🇺🇸 US美国(yz) 3
       - 🇺🇸 US美国(yz) 4
+      - 🇷🇺 RU俄罗斯(yz)
       - 🇺🇸 US美国(yz) 5
       - 🇺🇸 US美国(yz) 6
       - 🇺🇸 US美国(yz) 7
+      - 🇩🇪 DE德国(yz)
       - 🇺🇸 US美国(yz) 8
       - 🇺🇸 US美国(yz) 9
+      - 🇩🇪 DE德国(yz) 2
       - 🇺🇸 US美国(yz) 10
       - 🇺🇸 US美国(yz) 11
       - 🇺🇸 US美国(yz) 12
       - 🇺🇸 US美国(yz) 13
-      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 14
       - 🇺🇸 US美国(yz) 15
-      - 🇫🇷 FR法国(yz)
+      - 🇷🇺 RU俄罗斯(yz) 2
       - 🇺🇸 US美国(yz) 16
+      - 🇷🇺 RU俄罗斯(yz) 3
       - 🇺🇸 US美国(yz) 17
+      - 🇩🇪 DE德国(yz) 3
       - 🇺🇸 US美国(yz) 18
+      - 🇷🇺 RU俄罗斯(yz) 4
       - 🇺🇸 US美国(yz) 19
       - 🇺🇸 US美国(yz) 20
       - 🇺🇸 US美国(yz) 21
       - 🇺🇸 US美国(yz) 22
       - 🇺🇸 US美国(yz) 23
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 24
       - 🇺🇸 US美国(yz) 25
-      - 🇫🇷 FR法国(yz) 3
       - 🇺🇸 US美国(yz) 26
-      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 27
       - 🇺🇸 US美国(yz) 28
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 29
-      - 🇩🇪 DE德国(yz)
-      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 30
       - 🇺🇸 US美国(yz) 31
       - 🇺🇸 US美国(yz) 32
@@ -5049,9 +4524,7 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 36
       - 🇺🇸 US美国(yz) 37
       - 🇺🇸 US美国(yz) 38
-      - 🇩🇪 DE德国(yz) 2
       - 🇺🇸 US美国(yz) 39
-      - 🇩🇪 DE德国(yz) 3
       - 🇺🇸 US美国(yz) 40
       - 🇺🇸 US美国(yz) 41
       - 🇺🇸 US美国(yz) 42
@@ -5060,20 +4533,33 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 45
       - 🇺🇸 US美国(yz) 46
       - 🇺🇸 US美国(yz) 47
-      - 🇩🇪 DE德国(yz) 4
-      - 🇩🇪 DE德国(yz) 5
       - 🇺🇸 US美国(yz) 48
       - 🇺🇸 US美国(yz) 49
       - 🇺🇸 US美国(yz) 50
       - 🇺🇸 US美国(yz) 51
       - 🇺🇸 US美国(yz) 52
-      - 🇫🇷 FR法国(yz) 5
       - 🇺🇸 US美国(yz) 53
       - 🇺🇸 US美国(yz) 54
       - 🇺🇸 US美国(yz) 55
-      - 🇬🇧 GB英国(yz) 4
       - 🇺🇸 US美国(yz) 56
       - 🇺🇸 US美国(yz) 57
+      - 🇺🇸 US美国(yz) 58
+      - 🇺🇸 US美国(yz) 59
+      - 🇫🇷 FR法国(yz) 4
+      - 🇩🇪 DE德国(yz) 4
+      - 🇺🇸 US美国(yz) 60
+      - 🇺🇸 US美国(yz) 61
+      - 🇺🇸 US美国(yz) 62
+      - 🇫🇷 FR法国(yz) 5
+      - 🇺🇸 US美国(yz) 63
+      - 🇺🇸 US美国(yz) 64
+      - 🇺🇸 US美国(yz) 65
+      - 🇺🇸 US美国(yz) 66
+      - 🇺🇸 US美国(yz) 67
+      - 🇫🇷 FR法国(yz) 6
+      - 🇫🇷 FR法国(yz) 2 2
+      - 🇫🇷 FR法国(yz) 3 2
+      - 🇺🇸 US美国(yz) 68
       - 🇺🇸 US美国(yz) 2 2
       - 🇺🇸 US美国(yz) 3 2
       - 🇺🇸 US美国(yz) 4 2
@@ -5083,23 +4569,11 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 8 2
       - 🇺🇸 US美国(yz) 9 2
       - 🇺🇸 US美国(yz) 10 2
-      - 🇬🇧 GB英国(yz) 5
       - 🇺🇸 US美国(yz) 11 2
-      - 🇫🇷 FR法国(yz) 6
       - 🇺🇸 US美国(yz) 12 2
       - 🇺🇸 US美国(yz) 13 2
       - 🇺🇸 US美国(yz) 14 2
       - 🇺🇸 US美国(yz) 15 2
-      - 🇺🇸 US美国(yz) 16 2
-      - 🇺🇸 US美国(yz) 17 2
-      - 🇺🇸 US美国(yz) 18 2
-      - 🇺🇸 US美国(yz) 19 2
-      - 🇺🇸 US美国(yz) 20 2
-      - 🇺🇸 US美国(yz) 21 2
-      - 🇺🇸 US美国(yz) 22 2
-      - 🇺🇸 US美国(yz) 23 2
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇺🇸 US美国(yz) 24 2
       - 🇺🇸 www.85la.com🇺🇸US²_92|8.6MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed
       - 🇺🇸 www.85la.com🇺🇸US²_8|0.2MB/s|0%|GPT⁺|YT-CN|X
       - 🇺🇸 www.85la.com🇺🇸US²_701|3.9MB/s|40%|GPT⁺|YT-RU|TK|NF|X|KeepSucceed
@@ -5483,37 +4957,11 @@ proxy-groups:
       - 🇹🇼 TW台湾(yz) 24
       - 🇹🇼 TW台湾(yz) 25
       - 🇹🇼 TW台湾(yz) 26
-      - 🇹🇼 TW台湾(yz) 27
-      - 🇹🇼 TW台湾(yz) 28
-      - 🇹🇼 TW台湾(yz) 29
-      - 🇹🇼 TW台湾(yz) 30
-      - 🇹🇼 TW台湾(yz) 31
-      - 🇹🇼 TW台湾(yz) 32
-      - 🇹🇼 TW台湾(yz) 33
-      - 🇹🇼 TW台湾(yz) 34
-      - 🇹🇼 TW台湾(yz) 35
-      - 🇹🇼 TW台湾(yz) 36
-      - 🇹🇼 TW台湾(yz) 37
-      - 🇹🇼 TW台湾(yz) 38
-      - 🇹🇼 TW台湾(yz) 39
-      - 🇹🇼 TW台湾(yz) 40
-      - 🇹🇼 TW台湾(yz) 41
-      - 🇹🇼 TW台湾(yz) 42
-      - 🇹🇼 TW台湾(yz) 43
-      - 🇹🇼 TW台湾(yz) 44
-      - 🇹🇼 TW台湾(yz) 45
-      - 🇹🇼 TW台湾(yz) 46
-      - 🇹🇼 TW台湾(yz) 47
-      - 🇹🇼 TW台湾(yz) 48
       - 🇹🇼 TW台湾(yz) 2 2
       - 🇹🇼 TW台湾(yz) 3 2
       - 🇹🇼 TW台湾(yz) 4 2
       - 🇹🇼 TW台湾(yz) 5 2
       - 🇹🇼 TW台湾(yz) 6 2
-      - 🇹🇼 TW台湾(yz) 7 2
-      - 🇹🇼 TW台湾(yz) 8 2
-      - 🇹🇼 TW台湾(yz) 9 2
-      - 🇹🇼 TW台湾(yz) 10 2
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_99|8.3MB/s|3%|GPT⁺|GM|YT|TK|NF|D+|X|KeepHistory
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_98|5.8MB/s|GPT⁺|GM|YT|TK|NF|D+|X
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_94|5.5MB/s|3%|GPT⁺|GM|YT|TK|NF|D+|X
@@ -5655,23 +5103,6 @@ proxy-groups:
       - 🇸🇬 SG新加坡(yz) 26
       - 🇸🇬 SG新加坡(yz) 27
       - 🇸🇬 SG新加坡(yz) 28
-      - 🇸🇬 SG新加坡(yz) 29
-      - 🇸🇬 SG新加坡(yz) 30
-      - 🇸🇬 SG新加坡(yz) 31
-      - 🇸🇬 SG新加坡(yz) 32
-      - 🇸🇬 SG新加坡(yz) 33
-      - 🇸🇬 SG新加坡(yz) 34
-      - 🇸🇬 SG新加坡(yz) 35
-      - 🇸🇬 SG新加坡(yz) 36
-      - 🇸🇬 SG新加坡(yz) 37
-      - 🇸🇬 SG新加坡(yz) 38
-      - 🇸🇬 SG新加坡(yz) 39
-      - 🇸🇬 SG新加坡(yz) 40
-      - 🇸🇬 SG新加坡(yz) 41
-      - 🇸🇬 SG新加坡(yz) 42
-      - 🇸🇬 SG新加坡(yz) 43
-      - 🇸🇬 SG新加坡(yz) 44
-      - 🇸🇬 SG新加坡(yz) 45
       - 🇸🇬 www.85la.com🇺🇸US²_146|5.9MB/s|GPT⁺|GM|YT-SG|TK|X|KeepSucceed
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_91|5.3MB/s|GPT⁺|GM|YT|TK|NF|D+|X
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_90|3.8MB/s|3%|GPT⁺|GM|YT|TK|NF|D+|X|KeepSucceed
@@ -5777,10 +5208,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇰🇷 KR韩国(yz)
-      - 🇰🇷 KR韩国(yz) 2
-      - 🇰🇷 KR韩国(yz) 3
-      - 🇰🇷 KR韩国(yz) 2 2
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_8|2.5MB/s|3%|GPT⁺|GM|YT|TK|NF|D+|X|KeepHistory
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_7|3.3MB/s|3%|GPT⁺|GM|YT-CA|TK-CA|NF|D+|X|KeepSucceed
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_6|4.6MB/s|3%|GPT⁺|GM|YT|TK|NF|D+|X|KeepHistory
