@@ -61,7 +61,7 @@ def extract_unified_token() -> str | None:
     match = re.search(r'<td><code class="notranslate">([a-z0-9]{16,20})</code></td>', html_content)
     if match:
         token = match.group(1)
-        print(f"成功提取到token: {token[:4]}****{token[-4:]}")  # 隐藏中间部分
+        #print(f"成功提取到token: {token[:4]}****{token[-4:]}")  # 隐藏中间部分
         return token
     print("未找到符合格式的token")
     return None
@@ -89,7 +89,7 @@ def extract_service_url() -> str:
         parsed_url = urlparse(full_url)
         domain = f"{parsed_url.scheme}://{parsed_url.netloc}"
 
-        print(f"成功提取到域名: {domain}")
+        #print(f"成功提取到域名: {domain}")
         return domain
 
     # 如果没有匹配到，则打印一次默认值信息
@@ -114,7 +114,7 @@ def generate_subscribe_url(token: str) -> str:
     # 固定的后半部分
     fixed_path = "/api/v1/subscribe?token={}&target=v2ray&list=true"
     subscribe_url = base_url + fixed_path.format(token)
-    print(f"生成订阅URL: {subscribe_url}")
+    #print(f"生成订阅URL: {subscribe_url}")
     return subscribe_url
 
 
@@ -158,3 +158,4 @@ def main():
 if __name__ == "__main__":
     print("===== 程序开始执行 =====")
     main()
+
