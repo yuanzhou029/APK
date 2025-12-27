@@ -160,7 +160,7 @@
         }
     },
     "update": {
-        "cron_schedule": "0 3 * * *"
+        "cron_schedule": "0 5 * * *"
     },
     "storage": {
         "engine": "xxx",
