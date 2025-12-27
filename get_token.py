@@ -114,7 +114,7 @@ def generate_subscribe_url(token: str) -> str:
     # 固定的后半部分
     fixed_path = "/api/v1/subscribe?token={}&target=v2ray&list=true"
     subscribe_url = base_url + fixed_path.format(token)
-    #print(f"生成订阅URL: {subscribe_url}")
+    #sprint(f"生成订阅URL: {subscribe_url}")
     return subscribe_url
 
 
@@ -158,4 +158,3 @@ def main():
 if __name__ == "__main__":
     print("===== 程序开始执行 =====")
     main()
-
