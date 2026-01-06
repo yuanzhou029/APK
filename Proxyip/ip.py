@@ -50,7 +50,7 @@ except ImportError:
 #   "source_ips" - 从 source_ips 目录读取（download_and_extract.py 生成的文件）
 #   "file" - 从本地文件读取（使用 INPUT_SOURCE 指定的文件）
 #   "url" - 从远程URL读取（使用 INPUT_SOURCE 指定的URL）
-#   "auto" - 自动检测：优先使用 INPUT_SOURCE 文件，如果不存在则使用 source_ips 目录
+#   "auto" - 自动检测：优先使用 INPUT_SOURCE 文件，如果不存在则使用 source_ips 目录   现在 auto 模式会合并两个来源的IP
 INPUT_MODE = "auto"
 
 # 输入源文件或URL（当 INPUT_MODE 为 "file"、"url" 或 "auto" 时使用）
@@ -170,6 +170,10 @@ def load_mixed_input(source):
         item = item.strip()
         if not item:
             continue
+        
+        # 跳过注释行
+        if item.startswith("#"):
+            continue
             
         if item.startswith("http://") or item.startswith("https://"):
             urls.append(item)
@@ -178,12 +182,16 @@ def load_mixed_input(source):
             if is_valid_ip(ip_part):
                 ips.append(item)
             else:
-                domains.append(item)
+                # 确保不是注释或无效内容
+                if not item.startswith("#") and "." in item:
+                    domains.append(item)
         else:
             if is_valid_ip(item):
                 ips.append(item)
             else:
-                domains.append(item)
+                # 确保是有效域名格式
+                if "." in item and not item.startswith("#"):
+                    domains.append(item)
     
     # 处理URL列表
     for url in urls:
@@ -483,14 +491,30 @@ def main():
     
     # ========== 阶段 1: 加载IP ==========
     if INPUT_MODE == "auto":
-        # 自动模式：优先使用 INPUT_SOURCE 文件，如果不存在则使用 source_ips 目录
+        # 自动模式：合并 INPUT_SOURCE 文件和 source_ips 目录的IP
+        all_ips = set()
+        domains = []
+        
+        # 1. 尝试从 INPUT_SOURCE 文件加载
         if os.path.exists(INPUT_SOURCE):
-            print(f"[{get_timestamp()}] 🔄 自动模式: 检测到 {INPUT_SOURCE} 文件，使用文件模式")
-            unique_ips, domains = load_mixed_input(INPUT_SOURCE)
-        else:
-            print(f"[{get_timestamp()}] 🔄 自动模式: 未找到 {INPUT_SOURCE}，使用 source_ips 目录")
-            unique_ips = load_from_source_ips()
-            domains = []
+            print(f"[{get_timestamp()}] 🔄 自动模式: 检测到 {INPUT_SOURCE} 文件")
+            file_ips, file_domains = load_mixed_input(INPUT_SOURCE)
+            all_ips.update(file_ips)
+            domains.extend(file_domains)
+            print(f"[{get_timestamp()}] 📊 从文件加载: {len(file_ips)} 个IP")
+        
+        # 2. 尝试从 source_ips 目录加载
+        script_dir = Path(__file__).parent
+        source_dir = script_dir / IP_SOURCE_DIR
+        if source_dir.exists():
+            print(f"[{get_timestamp()}] 🔄 自动模式: 检测到 {IP_SOURCE_DIR} 目录")
+            source_ips = load_from_source_ips()
+            all_ips.update(source_ips)
+            print(f"[{get_timestamp()}] 📊 从目录加载: {len(source_ips)} 个IP")
+        
+        unique_ips = list(all_ips)
+        print(f"[{get_timestamp()}] 📊 合并去重后总IP数: {len(unique_ips)}")
+        
     elif INPUT_MODE == "source_ips":
         unique_ips = load_from_source_ips()
         domains = []
