@@ -17,7 +17,7 @@
 ## 文件结构
 
 ```
-ProxyIP/
+Proxyip/
 ├── ip.py                 # 主检测脚本
 ├── reverse_dns.py        # CF域名解析脚本
 ├── Proxyip.txt           # 输入文件（IP/域名/URL混合）
