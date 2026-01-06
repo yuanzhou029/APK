@@ -42,6 +42,9 @@ API_TIMEOUT = 5                   # API 响应超时秒数
 # 是否进行二次验证
 ENABLE_SECOND_VERIFY = True
 
+# 是否输出每个IP的检测结果（设为False则只输出最终汇总True全部输出）
+VERBOSE_OUTPUT = False
+
 # ==================== 配置区结束 ====================
 
 # 线程安全的锁
@@ -239,8 +242,9 @@ def check_proxy(proxy_str):
                 "isp": location_info["isp"]
             }
             
-            with print_lock:
-                print(f"[{get_timestamp()}] ✅ {ip}:{port} | {country} - {location_info['city']} ({colo}) | 延迟: {resp_time}ms")
+            if VERBOSE_OUTPUT:
+                with print_lock:
+                    print(f"[{get_timestamp()}] ✅ {ip}:{port} | {country} - {location_info['city']} ({colo}) | 延迟: {resp_time}ms")
             
             return result
     except Exception as e:
@@ -255,8 +259,9 @@ def verify_proxy(proxy_info):
     
     # TCP 预检
     if not tcp_ping(ip, port):
-        with print_lock:
-            print(f"[{get_timestamp()}] ❌ {ip}:{port} - 二次验证失败")
+        if VERBOSE_OUTPUT:
+            with print_lock:
+                print(f"[{get_timestamp()}] ❌ {ip}:{port} - 二次验证失败")
         return None
 
     # API 验证
@@ -267,14 +272,16 @@ def verify_proxy(proxy_info):
 
         if data.get("success"):
             proxy_info["responseTime"] = data.get("responseTime", proxy_info["responseTime"])
-            with print_lock:
-                print(f"[{get_timestamp()}] ✅ {ip}:{port} - 二次验证通过 | 延迟: {proxy_info['responseTime']}ms")
+            if VERBOSE_OUTPUT:
+                with print_lock:
+                    print(f"[{get_timestamp()}] ✅ {ip}:{port} - 二次验证通过 | 延迟: {proxy_info['responseTime']}ms")
             return proxy_info
     except:
         pass
     
-    with print_lock:
-        print(f"[{get_timestamp()}] ❌ {ip}:{port} - 二次验证失败")
+    if VERBOSE_OUTPUT:
+        with print_lock:
+            print(f"[{get_timestamp()}] ❌ {ip}:{port} - 二次验证失败")
     return None
 
 def clear_output_dir():
@@ -285,7 +292,10 @@ def clear_output_dir():
     os.makedirs(OUTPUT_DIR)
 
 def save_by_country(valid_ips):
-    """按国家保存有效 IP（不带端口号）"""
+    """按国家保存有效 IP（不带端口号），按延时排序"""
+    # 先按延时排序（延时低的在前）
+    valid_ips_sorted = sorted(valid_ips, key=lambda x: x.get("responseTime", 9999))
+    
     country_groups = defaultdict(list)
     
     # 国家代码映射
@@ -337,7 +347,7 @@ def save_by_country(valid_ips):
         "新西兰": "NZ", "新西兰": "NZ", "New Zealand": "NZ"
     }
     
-    for ip_info in valid_ips:
+    for ip_info in valid_ips_sorted:
         country = ip_info["country"]
         # 使用国家代码映射
         country_code = country_code_map.get(country, country)
@@ -348,7 +358,13 @@ def save_by_country(valid_ips):
         with open(filename, "w", encoding="utf-8") as f:
             for ip_info in ips:
                 f.write(f"{ip_info['ip']}\n")
-        print(f"[{get_timestamp()}] 💾 {country_code}: {len(ips)} 个 IP 已保存")
+        print(f"[{get_timestamp()}] 💾 {country_code}: {len(ips)} 个 IP 已保存（按延时排序）")
+    
+    # 同时保存到临时文件（所有IP按延时排序）
+    with open(TEMP_IP_FILE, "w", encoding="utf-8") as f:
+        for ip_info in valid_ips_sorted:
+            f.write(f"{ip_info['ip']}:{ip_info['port']}\n")
+    print(f"[{get_timestamp()}] 💾 临时文件: {len(valid_ips_sorted)} 个 IP 已保存到 {TEMP_IP_FILE}（按延时排序）")
 
 def display_statistics(valid_ips):
     """显示统计信息"""
@@ -399,6 +415,7 @@ def main():
         print(f"🔍 筛选国家: 全部保留")
     print(f"⚡ 并发线程: {MAX_THREADS}")
     print(f"🔄 二次验证: {'开启' if ENABLE_SECOND_VERIFY else '关闭'}")
+    print(f"📝 详细输出: {'开启' if VERBOSE_OUTPUT else '关闭'}")
     
     # ========== 阶段 1: 加载混合输入（IP、域名、URL） ==========
     unique_ips, domains = load_mixed_input(INPUT_SOURCE)
