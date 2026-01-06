@@ -39,6 +39,7 @@ jobs:
       env:
         CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+        CF_REVERSE_DOMAIN: ${{ secrets.CF_REVERSE_DOMAIN }}
 
     - name: 获取统计信息
       id: stats
