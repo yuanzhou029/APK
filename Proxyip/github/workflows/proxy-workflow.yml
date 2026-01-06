@@ -1,0 +1,64 @@
+name: Proxy IP检测和CF域名解析
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天UTC时间0点运行
+  workflow_dispatch:     # 手动触发
+
+jobs:
+  proxy-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+
+    - name: 设置Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r Proxyip/requirements.txt
+
+    - name: 运行代理检测
+      run: |
+        cd Proxyip && python ip.py
+
+    - name: 运行CF域名解析
+      run: |
+        cd Proxyip && python reverse_dns.py
+
+    - name: 获取统计信息
+      id: stats
+      run: |
+        echo "start_time=$(date -u +%s)" >> $GITHUB_ENV
+        cd Proxyip
+        python get_stats.py
+
+    - name: 发送Telegram通知
+      if: always()
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        to: ${{ secrets.TELEGRAM_CHAT_ID }}
+        token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        message: |
+          📊 Proxy检测任务完成！
+          
+          🕐 运行时长: ${{ steps.stats.outputs.execution_time }}秒
+          
+          🌍 检测结果:
+            台湾(TW): ${{ steps.stats.outputs.tw_count }}个有效IP
+            香港(HK): ${{ steps.stats.outputs.hk_count }}个有效IP
+            日本(JP): ${{ steps.stats.outputs.jp_count }}个有效IP
+            新加坡(SG): ${{ steps.stats.outputs.sg_count }}个有效IP
+          
+          .cloudflare域名解析:
+            总域名数: ${{ steps.stats.outputs.total_domains }}
+            总IP数: ${{ steps.stats.outputs.total_ips }}
+          
+          ${{ steps.stats.outputs.report }}
+          
+          ✅ 任务执行成功！
