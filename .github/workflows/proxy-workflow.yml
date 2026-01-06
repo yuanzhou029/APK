@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: 记录开始时间
+      id: start_time
+      run: echo "start=$(date +%s)" >> $GITHUB_OUTPUT
+
     - name: 检出代码
       uses: actions/checkout@v4
 
@@ -52,6 +56,13 @@ jobs:
       run: |
         cd Proxyip
         python get_stats.py
+        # 计算运行时长
+        END_TIME=$(date +%s)
+        START_TIME=${{ steps.start_time.outputs.start }}
+        DURATION=$((END_TIME - START_TIME))
+        MINUTES=$((DURATION / 60))
+        SECONDS=$((DURATION % 60))
+        echo "run_time=${MINUTES}分${SECONDS}秒" >> $GITHUB_OUTPUT
       continue-on-error: true
 
     - name: 发送Telegram通知
@@ -63,7 +74,7 @@ jobs:
         message: |
           📊 Proxy检测任务完成！
           
-          🕐 运行时长: ${{ steps.stats.outputs.RUN_TIME || 'N/A' }}秒
+          🕐 运行时长: ${{ steps.stats.outputs.run_time || 'N/A' }}
           
           🌍 检测结果:
           总有效代理: ${{ steps.stats.outputs.total_proxies || '0' }}个
