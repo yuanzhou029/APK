@@ -19,7 +19,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
 # Virtual Environment
 venv/
@@ -37,19 +36,39 @@ ENV/
 Thumbs.db
 desktop.ini
 
-# Temporary files
-*.tmp
-*.temp
-temp_*.txt
-
-# Log files
+# Logs
 *.log
 logs/
 
-# Local configuration
-.env
-.local
+# Temporary files
+*.tmp
+*.temp
+temp/
 
-# Output directories
-valid_proxies/
-cf_domains/
+# Cache
+.cache/
+*.cache
+
+# Stats
+stats.json
+
+# Temporary IP files
+temp_ips.txt
+
+# Environment variables
+.env
+.env.local
+
+# Large files
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+.apdisk

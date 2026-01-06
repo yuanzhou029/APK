@@ -1,0 +1,31 @@
+{
+  "main_domain": "your-domain.com",
+  "proxy_detection": {
+    "input_source": "Proxyip.txt",
+    "domains_source": "domains.txt",
+    "filter_countries": [
+      "台湾",
+      "日本",
+      "香港",
+      "新加坡"
+    ],
+    "max_threads": 30,
+    "check_api": "https://cf.090227.xyz/check",
+    "timeout": 10,
+    "max_retries": 3
+  },
+  "subdomain_generation": {
+    "mode": "filename",
+    "input_directory": "valid_proxies",
+    "output_directory": "subdomain_domains",
+    "filename_pattern": "{country_code}.{main_domain}",
+    "content_pattern": "{country_code}-{identifier}.{main_domain}"
+  },
+  "github_actions": {
+    "schedule": "0 0 * * *",
+    "telegram": {
+      "bot_token_secret": "TELEGRAM_BOT_TOKEN",
+      "chat_id_secret": "TELEGRAM_CHAT_ID"
+    }
+  }
+}
