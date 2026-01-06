@@ -2,7 +2,7 @@ name: Proxy IP检测和CF域名解析
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天UTC时间0点运行
+    - cron: '30 2 */3 * *'  # 每三天UTC时间2点30分运行（等效于北京时间上午10点30分）
   workflow_dispatch:     # 手动触发
 
 jobs:
@@ -116,3 +116,4 @@ jobs:
             curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
               "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
           done
+
