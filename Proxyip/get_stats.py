@@ -78,12 +78,24 @@ def main():
     
     print_stats(stats)
     
-    # 将统计信息输出到环境变量，供GitHub Actions使用
-    print(f"::set-output name=RUN_TIME::{stats['execution_time']:.2f}")
-    print(f"::set-output name=total_proxies::{stats['total_valid_proxies']}")
-    print(f"::set-output name=total_countries::{len(stats['countries'])}")
-    print(f"::set-output name=total_subdomains::{stats['subdomain_stats']['total_subdomains']}")
-    print(f"::set-output name=subdomain_files::{stats['subdomain_stats']['total_files']}")
+    # 将统计信息输出到GitHub Actions环境文件（新方式）
+    github_output = os.environ.get('GITHUB_OUTPUT')
+    if github_output:
+        with open(github_output, 'a', encoding='utf-8') as f:
+            f.write(f"RUN_TIME={stats['execution_time']:.2f}\n")
+            f.write(f"total_proxies={stats['total_valid_proxies']}\n")
+            f.write(f"total_countries={len(stats['countries'])}\n")
+            f.write(f"total_subdomains={stats['subdomain_stats']['total_subdomains']}\n")
+            f.write(f"subdomain_files={stats['subdomain_stats']['total_files']}\n")
+        print("✅ 统计信息已写入GitHub Actions输出")
+    else:
+        # 本地运行时打印输出
+        print(f"\n📤 GitHub Actions输出变量:")
+        print(f"  RUN_TIME={stats['execution_time']:.2f}")
+        print(f"  total_proxies={stats['total_valid_proxies']}")
+        print(f"  total_countries={len(stats['countries'])}")
+        print(f"  total_subdomains={stats['subdomain_stats']['total_subdomains']}")
+        print(f"  subdomain_files={stats['subdomain_stats']['total_files']}")
     
     # 保存统计信息到JSON文件
     with open('stats.json', 'w', encoding='utf-8') as f:
