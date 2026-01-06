@@ -47,14 +47,6 @@ jobs:
       run: |
         cd Proxyip && python ip.py
 
-    - name: 运行子域名生成（上传到Cloudflare）
-      run: |
-        cd Proxyip && python reverse_dns.py
-      env:
-        CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-        CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
-        CF_REVERSE_DOMAIN: ${{ secrets.CF_REVERSE_DOMAIN }}
-
     - name: 获取统计信息
       id: stats
       run: |
@@ -74,12 +66,10 @@ jobs:
           🕐 运行时长: ${{ steps.stats.outputs.RUN_TIME || 'N/A' }}秒
           
           🌍 检测结果:
-            总有效代理数: ${{ steps.stats.outputs.total_proxies || 'N/A' }}个
-            国家数量: ${{ steps.stats.outputs.total_countries || 'N/A' }}个
+          总有效代理: ${{ steps.stats.outputs.total_proxies || '0' }}个
           
-          🌐 子域名生成:
-            总子域名数: ${{ steps.stats.outputs.total_subdomains || 'N/A' }}个
-            文件数: ${{ steps.stats.outputs.subdomain_files || 'N/A' }}个
+          📈 按国家分类:
+          ${{ steps.stats.outputs.country_stats || '无数据' }}
           
           ✅ 任务执行成功！
 
