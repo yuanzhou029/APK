@@ -1,2 +1,5 @@
 # 域名输入文件示例
+proxyip.hk.cmliussss.net
+proxyip.jp.cmliussss.net
+
 
