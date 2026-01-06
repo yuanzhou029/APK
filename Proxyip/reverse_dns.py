@@ -6,7 +6,7 @@ from pathlib import Path
 # ==================== 配置区 ====================
 
 # 是否输出每个DNS记录的详细操作信息（设为False则只输出最终汇总True全部输出）
-VERBOSE_OUTPUT = True
+VERBOSE_OUTPUT = False
 
 # 默认反向DNS域名（留空，必须通过环境变量 CF_REVERSE_DOMAIN 或配置文件设置）
 DEFAULT_REVERSE_DOMAIN = ""
@@ -346,4 +346,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
