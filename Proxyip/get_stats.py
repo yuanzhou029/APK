@@ -3,6 +3,55 @@ import json
 from datetime import datetime
 import time
 
+# 国家代码到中文名称的映射
+COUNTRY_NAME_MAP = {
+    "TW": "台湾",
+    "JP": "日本",
+    "HK": "香港",
+    "SG": "新加坡",
+    "US": "美国",
+    "KR": "韩国",
+    "UK": "英国",
+    "DE": "德国",
+    "FR": "法国",
+    "AU": "澳大利亚",
+    "CA": "加拿大",
+    "RU": "俄罗斯",
+    "IN": "印度",
+    "BR": "巴西",
+    "MX": "墨西哥",
+    "IT": "意大利",
+    "ES": "西班牙",
+    "NL": "荷兰",
+    "CH": "瑞士",
+    "SE": "瑞典",
+    "NO": "挪威",
+    "DK": "丹麦",
+    "FI": "芬兰",
+    "PL": "波兰",
+    "BE": "比利时",
+    "AT": "奥地利",
+    "TH": "泰国",
+    "MY": "马来西亚",
+    "ID": "印尼",
+    "PH": "菲律宾",
+    "VN": "越南",
+    "AE": "阿联酋",
+    "SA": "沙特",
+    "TR": "土耳其",
+    "ZA": "南非",
+    "EG": "埃及",
+    "IL": "以色列",
+    "GR": "希腊",
+    "PT": "葡萄牙",
+    "CZ": "捷克",
+    "HU": "匈牙利",
+    "UA": "乌克兰",
+    "CL": "智利",
+    "AR": "阿根廷",
+    "NZ": "新西兰",
+}
+
 def get_proxy_stats():
     """获取代理检测统计信息"""
     stats = {
@@ -78,17 +127,21 @@ def main():
     
     print_stats(stats)
     
-    # 生成按国家分类的统计字符串
+    # 生成按国家分类的统计字符串（带中文名称）
     country_stats_lines = []
-    for country, count in sorted(stats['countries'].items()):
-        country_stats_lines.append(f"{country}: {count}")
+    for country_code, count in sorted(stats['countries'].items(), key=lambda x: -x[1]):
+        # 获取中文名称，如果没有则显示国家代码
+        country_name = COUNTRY_NAME_MAP.get(country_code, "")
+        if country_name:
+            country_stats_lines.append(f"{country_code}（{country_name}）: {count}")
+        else:
+            country_stats_lines.append(f"{country_code}: {count}")
     country_stats_str = "\n".join(country_stats_lines) if country_stats_lines else "无数据"
     
     # 将统计信息输出到GitHub Actions环境文件（新方式）
     github_output = os.environ.get('GITHUB_OUTPUT')
     if github_output:
         with open(github_output, 'a', encoding='utf-8') as f:
-            f.write(f"RUN_TIME={stats['execution_time']:.2f}\n")
             f.write(f"total_proxies={stats['total_valid_proxies']}\n")
             f.write(f"total_countries={len(stats['countries'])}\n")
             # 使用 EOF 分隔符处理多行输出
@@ -97,7 +150,6 @@ def main():
     else:
         # 本地运行时打印输出
         print(f"\n📤 GitHub Actions输出变量:")
-        print(f"  RUN_TIME={stats['execution_time']:.2f}")
         print(f"  total_proxies={stats['total_valid_proxies']}")
         print(f"  total_countries={len(stats['countries'])}")
         print(f"  country_stats=\n{country_stats_str}")
