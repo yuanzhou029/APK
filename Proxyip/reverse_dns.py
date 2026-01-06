@@ -105,19 +105,72 @@ def delete_existing_records(cf_token, zone_id, record_name):
     except:
         return 0
 
+# 国家代码到中文名称的映射
+COUNTRY_NAME_MAP = {
+    "TW": "台湾",
+    "JP": "日本",
+    "HK": "香港",
+    "SG": "新加坡",
+    "US": "美国",
+    "KR": "韩国",
+    "UK": "英国",
+    "DE": "德国",
+    "FR": "法国",
+    "AU": "澳大利亚",
+    "CA": "加拿大",
+    "RU": "俄罗斯",
+    "IN": "印度",
+    "BR": "巴西",
+    "MX": "墨西哥",
+    "IT": "意大利",
+    "ES": "西班牙",
+    "NL": "荷兰",
+    "CH": "瑞士",
+    "SE": "瑞典",
+    "NO": "挪威",
+    "DK": "丹麦",
+    "FI": "芬兰",
+    "PL": "波兰",
+    "BE": "比利时",
+    "AT": "奥地利",
+    "TH": "泰国",
+    "MY": "马来西亚",
+    "ID": "印尼",
+    "PH": "菲律宾",
+    "VN": "越南",
+    "AE": "阿联酋",
+    "SA": "沙特",
+    "TR": "土耳其",
+    "ZA": "南非",
+    "EG": "埃及",
+    "IL": "以色列",
+    "GR": "希腊",
+    "PT": "葡萄牙",
+    "CZ": "捷克",
+    "HU": "匈牙利",
+    "UA": "乌克兰",
+    "CL": "智利",
+    "AR": "阿根廷",
+    "NZ": "新西兰",
+}
+
 def upload_ips_to_cf(input_dir, reverse_domain, cf_token, zone_id, max_ips=30):
     """将IP上传到Cloudflare DNS"""
     if not all([reverse_domain, cf_token, zone_id]):
         print("❌ 缺少必要配置（CF_API_TOKEN, CF_ZONE_ID, CF_REVERSE_DOMAIN）")
-        return False
+        return None
     
     if not os.path.exists(input_dir):
         print(f"❌ 目录不存在: {input_dir}")
-        return False
+        return None
     
     total_created = 0
+    total_failed = 0
     total_deleted = 0
     processed_files = 0
+    
+    # 按国家统计
+    country_stats = {}
     
     print(f"🔄 处理目录: {input_dir}")
     print(f"🎯 域名: {mask_domain(reverse_domain)}")
@@ -145,19 +198,37 @@ def upload_ips_to_cf(input_dir, reverse_domain, cf_token, zone_id, max_ips=30):
         total_deleted += delete_existing_records(cf_token, zone_id, record_name)
         
         created = 0
+        failed = 0
         for ip in ips:
             record_type = "AAAA" if ':' in ip else "A"
             if create_dns_record(cf_token, zone_id, record_name, ip, record_type):
                 created += 1
+            else:
+                failed += 1
         
         total_created += created
+        total_failed += failed
         processed_files += 1
+        
+        # 记录国家统计
+        country_stats[subdomain] = {
+            'success': created,
+            'failed': failed,
+            'total': len(ips)
+        }
         
         if VERBOSE_OUTPUT:
             print(f"✅ {filename}: {created} 条记录")
     
-    print(f"\n✅ 完成！文件: {processed_files}, 删除: {total_deleted}, 创建: {total_created}")
-    return True
+    print(f"\n✅ 完成！文件: {processed_files}, 删除: {total_deleted}, 创建: {total_created}, 失败: {total_failed}")
+    
+    return {
+        'total_created': total_created,
+        'total_failed': total_failed,
+        'total_deleted': total_deleted,
+        'processed_files': processed_files,
+        'country_stats': country_stats
+    }
 
 def main():
     print("🔄 Cloudflare DNS上传工具")
@@ -177,12 +248,55 @@ def main():
     
     print(f"🎯 域名: {mask_domain(reverse_domain)}")
     
-    upload_ips_to_cf(
+    result = upload_ips_to_cf(
         input_dir="valid_proxies",
         reverse_domain=reverse_domain,
         cf_token=cf_token,
         zone_id=zone_id
     )
+    
+    # 输出统计信息到 GitHub Actions
+    if result:
+        # 生成按国家分类的统计字符串（按成功数量降序排列）
+        country_stats_lines = []
+        sorted_countries = sorted(
+            result['country_stats'].items(),
+            key=lambda x: x[1]['success'],
+            reverse=True
+        )
+        
+        for country_code, stats in sorted_countries:
+            country_name = COUNTRY_NAME_MAP.get(country_code, "")
+            success = stats['success']
+            failed = stats['failed']
+            
+            if country_name:
+                if failed > 0:
+                    country_stats_lines.append(f"{country_code}（{country_name}）: ✅{success} ❌{failed}")
+                else:
+                    country_stats_lines.append(f"{country_code}（{country_name}）: ✅{success}")
+            else:
+                if failed > 0:
+                    country_stats_lines.append(f"{country_code}: ✅{success} ❌{failed}")
+                else:
+                    country_stats_lines.append(f"{country_code}: ✅{success}")
+        
+        country_stats_str = "\n".join(country_stats_lines) if country_stats_lines else "无数据"
+        
+        # 输出到 GitHub Actions
+        github_output = os.environ.get('GITHUB_OUTPUT')
+        if github_output:
+            with open(github_output, 'a', encoding='utf-8') as f:
+                f.write(f"cf_total_created={result['total_created']}\n")
+                f.write(f"cf_total_failed={result['total_failed']}\n")
+                f.write(f"cf_country_stats<<EOF\n{country_stats_str}\nEOF\n")
+            print("✅ CF统计信息已写入GitHub Actions输出")
+        else:
+            # 本地运行时打印输出
+            print(f"\n📤 GitHub Actions输出变量:")
+            print(f"  cf_total_created={result['total_created']}")
+            print(f"  cf_total_failed={result['total_failed']}")
+            print(f"  cf_country_stats=\n{country_stats_str}")
 
 if __name__ == "__main__":
     main()
