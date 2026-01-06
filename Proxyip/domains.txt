@@ -1,0 +1,5 @@
+# 示例域名列表
+# 每行一个域名，支持多级域名
+example.com
+test.com
+proxy.example.com
