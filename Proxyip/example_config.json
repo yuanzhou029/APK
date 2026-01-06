@@ -21,6 +21,17 @@
     "filename_pattern": "{country_code}.{main_domain}",
     "content_pattern": "{country_code}-{identifier}.{main_domain}"
   },
+  "reverse_dns": {
+    "mode": "reverse_dns",
+    "input_directory": "valid_proxies",
+    "output_directory": "reverse_dns_domains",
+    "reverse_domain": "5.a.9.f.0.7.4.0.1.0.0.2.ip6.arpa",
+    "ipv4_reverse_domain": "in-addr.arpa"
+  },
+  "cloudflare": {
+    "api_token": "your_cf_api_token_here",
+    "zone_id": "your_zone_id_here"
+  },
   "github_actions": {
     "schedule": "0 0 * * *",
     "telegram": {

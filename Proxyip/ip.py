@@ -8,13 +8,51 @@ import dns.resolver
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from collections import defaultdict
+from pathlib import Path
 
-# ==================== 配置区 ====================
+# ==================== 导入共享配置 ====================
+try:
+    from config import (
+        PROXY_PORTS,
+        COUNTRY_CONFIG,
+        FILTER_COUNTRIES,
+        COUNTRY_CODES,
+        IP_SOURCE_DIR,
+        OUTPUT_DIR,
+        CHECK_API,
+        MAX_THREADS,
+        TCP_TIMEOUT,
+        API_TIMEOUT,
+        ENABLE_SECOND_VERIFY,
+        VERBOSE_OUTPUT
+    )
+    USE_CONFIG = True
+except ImportError:
+    print("⚠️ 未找到 config.py，使用默认配置")
+    USE_CONFIG = False
+    # 默认配置
+    PROXY_PORTS = [443]
+    COUNTRY_CONFIG = {"TW": "台湾", "JP": "日本", "HK": "香港", "SG": "新加坡"}
+    FILTER_COUNTRIES = ["台湾", "日本", "香港", "新加坡"]
+    COUNTRY_CODES = ["TW", "JP", "HK", "SG"]
+    IP_SOURCE_DIR = "source_ips"
+    OUTPUT_DIR = "valid_proxies"
+    CHECK_API = "https://cf.090227.xyz/check"
+    MAX_THREADS = 30
+    TCP_TIMEOUT = 2
+    API_TIMEOUT = 5
+    ENABLE_SECOND_VERIFY = True
+    VERBOSE_OUTPUT = False
 
-# 输入源：可以是本地文件路径，也可以是远程 URL
-# 示例：
-#   INPUT_SOURCE = "Proxyip.txt"                           # 本地文件
-#   INPUT_SOURCE = "https://example.com/proxy_list.txt"    # 远程 URL
+# ==================== 本地配置（可覆盖共享配置） ====================
+
+# 输入源模式：
+#   "source_ips" - 从 source_ips 目录读取（download_and_extract.py 生成的文件）
+#   "file" - 从本地文件读取
+#   "url" - 从远程URL读取
+INPUT_MODE = "source_ips"
+
+# 当 INPUT_MODE 为 "file" 或 "url" 时使用
 INPUT_SOURCE = "Proxyip.txt"
 
 # 域名输入文件
@@ -22,28 +60,6 @@ DOMAINS_SOURCE = "domains.txt"
 
 # 临时IP文件
 TEMP_IP_FILE = "temp_ips.txt"
-
-# 输出目录
-OUTPUT_DIR = "valid_proxies"
-
-# 需要筛选的国家列表（留空则保留所有国家）
-# 示例：FILTER_COUNTRIES = ["台湾", "日本", "美国", "新加坡"]
-# 留空表示不筛选：FILTER_COUNTRIES = []
-FILTER_COUNTRIES = ["台湾", "日本", "香港", "新加坡"]
-
-# API 配置
-CHECK_API = "https://cf.090227.xyz/check"
-
-# 性能配置
-MAX_THREADS = 30                  # 并发线程数
-TCP_TIMEOUT = 2                   # TCP 握手超时秒数
-API_TIMEOUT = 5                   # API 响应超时秒数
-
-# 是否进行二次验证
-ENABLE_SECOND_VERIFY = True
-
-# 是否输出每个IP的检测结果（设为False则只输出最终汇总True全部输出）
-VERBOSE_OUTPUT = False
 
 # ==================== 配置区结束 ====================
 
@@ -75,6 +91,46 @@ def load_domains_from_file(filename):
     with open(filename, "r", encoding="utf-8") as f:
         domains = [line.strip() for line in f if line.strip() and not line.strip().startswith('#')]
     return domains
+
+def load_from_source_ips():
+    """从 source_ips 目录加载IP（使用配置的端口和国家）"""
+    print(f"[{get_timestamp()}] 📥 从 {IP_SOURCE_DIR} 目录加载IP...")
+    
+    script_dir = Path(__file__).parent
+    source_dir = script_dir / IP_SOURCE_DIR
+    
+    if not source_dir.exists():
+        print(f"[{get_timestamp()}] ❌ 错误: {IP_SOURCE_DIR} 目录不存在")
+        print(f"[{get_timestamp()}] 💡 请先运行 download_and_extract.py 下载IP源数据")
+        return []
+    
+    all_ips = set()
+    files_loaded = 0
+    
+    # 遍历配置的国家代码文件
+    for country_code in COUNTRY_CODES:
+        file_path = source_dir / f"{country_code}.txt"
+        if not file_path.exists():
+            continue
+        
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    ip = line.strip()
+                    if ip and is_valid_ip(ip):
+                        # 为每个配置的端口添加IP
+                        for port in PROXY_PORTS:
+                            all_ips.add(f"{ip}:{port}")
+            files_loaded += 1
+            country_name = COUNTRY_CONFIG.get(country_code, country_code)
+            print(f"[{get_timestamp()}] 📂 已加载 {country_code} ({country_name})")
+        except Exception as e:
+            print(f"[{get_timestamp()}] ❌ 读取文件失败 {file_path}: {e}")
+    
+    unique_ips = list(all_ips)
+    print(f"[{get_timestamp()}] 📊 加载文件数: {files_loaded} | 端口数: {len(PROXY_PORTS)} | 总IP数: {len(unique_ips)}")
+    
+    return unique_ips
 
 def load_mixed_input(source):
     """加载混合输入（IP、域名、URL）"""
@@ -298,20 +354,20 @@ def save_by_country(valid_ips):
     
     country_groups = defaultdict(list)
     
-    # 国家代码映射
+    # 国家代码映射（中文名称 -> 国家代码）
     country_code_map = {
         "台湾": "TW", "台湾省": "TW", "中国台湾": "TW",
         "香港": "HK", "香港特别行政区": "HK", "中国香港": "HK", 
         "日本": "JP", "日本国": "JP", "日本列岛": "JP",
         "新加坡": "SG", "新加坡共和国": "SG", "狮城": "SG",
         "美国": "US", "美利坚": "US", "USA": "US",
-        "韩国": "KR", "大韩民国": "KR", "韩国": "KR",
-        "英国": "UK", "联合王国": "UK", "英国": "UK",
-        "德国": "DE", "德意志": "DE", "德国": "DE",
-        "法国": "FR", "法兰西": "FR", "法国": "FR",
+        "韩国": "KR", "大韩民国": "KR",
+        "英国": "UK", "联合王国": "UK",
+        "德国": "DE", "德意志": "DE",
+        "法国": "FR", "法兰西": "FR",
         "澳大利亚": "AU", "澳洲": "AU", "Australia": "AU",
-        "加拿大": "CA", "Canada": "CA", "加拿大": "CA",
-        "俄罗斯": "RU", "俄联邦": "RU", "俄罗斯": "RU",
+        "加拿大": "CA", "Canada": "CA",
+        "俄罗斯": "RU", "俄联邦": "RU",
         "印度": "IN", "印度共和国": "IN", "India": "IN",
         "巴西": "BR", "巴西联邦共和国": "BR", "Brazil": "BR",
         "墨西哥": "MX", "墨西哥合众国": "MX", "Mexico": "MX",
@@ -340,11 +396,11 @@ def save_by_country(valid_ips):
         "希腊": "GR", "希腊共和国": "GR", "Greece": "GR",
         "葡萄牙": "PT", "葡萄牙共和国": "PT", "Portugal": "PT",
         "捷克": "CZ", "捷克共和国": "CZ", "Czech Republic": "CZ",
-        "匈牙利": "HU", "匈牙利": "HU", "Hungary": "HU",
-        "乌克兰": "UA", "乌克兰": "UA", "Ukraine": "UA",
+        "匈牙利": "HU", "Hungary": "HU",
+        "乌克兰": "UA", "Ukraine": "UA",
         "智利": "CL", "智利共和国": "CL", "Chile": "CL",
         "阿根廷": "AR", "阿根廷共和国": "AR", "Argentina": "AR",
-        "新西兰": "NZ", "新西兰": "NZ", "New Zealand": "NZ"
+        "新西兰": "NZ", "New Zealand": "NZ"
     }
     
     for ip_info in valid_ips_sorted:
@@ -375,14 +431,15 @@ def display_statistics(valid_ips):
     
     # 按国家统计
     country_stats = defaultdict(int)
+    country_code_map = {
+        "台湾": "TW", "台湾省": "TW", "中国台湾": "TW",
+        "香港": "HK", "香港特别行政区": "HK", "中国香港": "HK", 
+        "日本": "JP", "日本国": "JP", "日本列岛": "JP",
+        "新加坡": "SG", "新加坡共和国": "SG", "狮城": "SG"
+    }
+    
     for ip_info in valid_ips:
         country = ip_info["country"]
-        country_code_map = {
-            "台湾": "TW", "台湾省": "TW", "中国台湾": "TW",
-            "香港": "HK", "香港特别行政区": "HK", "中国香港": "HK", 
-            "日本": "JP", "日本国": "JP", "日本列岛": "JP",
-            "新加坡": "SG", "新加坡共和国": "SG", "狮城": "SG"
-        }
         country_code = country_code_map.get(country, country)
         country_stats[country_code] += 1
     
@@ -402,12 +459,18 @@ def display_statistics(valid_ips):
 
 def main():
     print("=" * 60)
-    print("🚀 ProxyIP 批量检测工具 v4.0")
+    print("🚀 ProxyIP 批量检测工具 v5.0")
     print("=" * 60)
     
     # 显示配置信息
-    print(f"📂 输入源: {INPUT_SOURCE}")
-    print(f"🌐 域名源: {DOMAINS_SOURCE}")
+    print(f"📂 输入模式: {INPUT_MODE}")
+    if INPUT_MODE == "source_ips":
+        print(f"📁 IP源目录: {IP_SOURCE_DIR}")
+        print(f"🔌 检测端口: {PROXY_PORTS}")
+        print(f"🌍 检测国家: {', '.join([f'{k}({v})' for k, v in COUNTRY_CONFIG.items()])}")
+    else:
+        print(f"📂 输入源: {INPUT_SOURCE}")
+        print(f"🌐 域名源: {DOMAINS_SOURCE}")
     print(f"📁 输出目录: {OUTPUT_DIR}")
     if FILTER_COUNTRIES:
         print(f"🔍 筛选国家: {', '.join(FILTER_COUNTRIES)}")
@@ -417,8 +480,13 @@ def main():
     print(f"🔄 二次验证: {'开启' if ENABLE_SECOND_VERIFY else '关闭'}")
     print(f"📝 详细输出: {'开启' if VERBOSE_OUTPUT else '关闭'}")
     
-    # ========== 阶段 1: 加载混合输入（IP、域名、URL） ==========
-    unique_ips, domains = load_mixed_input(INPUT_SOURCE)
+    # ========== 阶段 1: 加载IP ==========
+    if INPUT_MODE == "source_ips":
+        unique_ips = load_from_source_ips()
+        domains = []
+    else:
+        unique_ips, domains = load_mixed_input(INPUT_SOURCE)
+    
     if not unique_ips:
         print("❌ 未加载到任何 IP，任务结束。")
         return

@@ -1,2 +1,12 @@
-https://raw.githubusercontent.com/ymyuuu/IPDB/refs/heads/main/BestProxy/proxy.txt
+# Proxy IP 输入文件示例
+# 支持多种格式
 
+# IP地址格式
+1.2.3.4:8080
+5.6.7.8:3128
+
+# 远程URL（自动下载IP列表）
+# https://raw.githubusercontent.com/user/proxy-list/main/ips.txt
+
+# 域名格式（自动DNS解析）
+# example.com:3128

@@ -1,5 +1,4 @@
 # 域名输入文件示例
-proxyip.hk.cmliussss.net
-proxyip.jp.cmliussss.net
-
-
+google.com
+github.com
+example.com
