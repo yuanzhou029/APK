@@ -1,4 +1,4 @@
-name: Proxy IP检测和CF域名解析
+name: Proxy IP检测
 
 on:
   schedule:
@@ -98,3 +98,4 @@ jobs:
             curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
               "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
           done
+
