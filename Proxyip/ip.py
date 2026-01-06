@@ -48,11 +48,12 @@ except ImportError:
 
 # 输入源模式：
 #   "source_ips" - 从 source_ips 目录读取（download_and_extract.py 生成的文件）
-#   "file" - 从本地文件读取
-#   "url" - 从远程URL读取
-INPUT_MODE = "source_ips"
+#   "file" - 从本地文件读取（使用 INPUT_SOURCE 指定的文件）
+#   "url" - 从远程URL读取（使用 INPUT_SOURCE 指定的URL）
+#   "auto" - 自动检测：优先使用 INPUT_SOURCE 文件，如果不存在则使用 source_ips 目录
+INPUT_MODE = "auto"
 
-# 当 INPUT_MODE 为 "file" 或 "url" 时使用
+# 输入源文件或URL（当 INPUT_MODE 为 "file"、"url" 或 "auto" 时使用）
 INPUT_SOURCE = "Proxyip.txt"
 
 # 域名输入文件
@@ -481,10 +482,20 @@ def main():
     print(f"📝 详细输出: {'开启' if VERBOSE_OUTPUT else '关闭'}")
     
     # ========== 阶段 1: 加载IP ==========
-    if INPUT_MODE == "source_ips":
+    if INPUT_MODE == "auto":
+        # 自动模式：优先使用 INPUT_SOURCE 文件，如果不存在则使用 source_ips 目录
+        if os.path.exists(INPUT_SOURCE):
+            print(f"[{get_timestamp()}] 🔄 自动模式: 检测到 {INPUT_SOURCE} 文件，使用文件模式")
+            unique_ips, domains = load_mixed_input(INPUT_SOURCE)
+        else:
+            print(f"[{get_timestamp()}] 🔄 自动模式: 未找到 {INPUT_SOURCE}，使用 source_ips 目录")
+            unique_ips = load_from_source_ips()
+            domains = []
+    elif INPUT_MODE == "source_ips":
         unique_ips = load_from_source_ips()
         domains = []
     else:
+        # file 或 url 模式
         unique_ips, domains = load_mixed_input(INPUT_SOURCE)
     
     if not unique_ips:
