@@ -78,6 +78,12 @@ def main():
     
     print_stats(stats)
     
+    # 生成按国家分类的统计字符串
+    country_stats_lines = []
+    for country, count in sorted(stats['countries'].items()):
+        country_stats_lines.append(f"{country}: {count}")
+    country_stats_str = "\n".join(country_stats_lines) if country_stats_lines else "无数据"
+    
     # 将统计信息输出到GitHub Actions环境文件（新方式）
     github_output = os.environ.get('GITHUB_OUTPUT')
     if github_output:
@@ -85,8 +91,8 @@ def main():
             f.write(f"RUN_TIME={stats['execution_time']:.2f}\n")
             f.write(f"total_proxies={stats['total_valid_proxies']}\n")
             f.write(f"total_countries={len(stats['countries'])}\n")
-            f.write(f"total_subdomains={stats['subdomain_stats']['total_subdomains']}\n")
-            f.write(f"subdomain_files={stats['subdomain_stats']['total_files']}\n")
+            # 使用 EOF 分隔符处理多行输出
+            f.write(f"country_stats<<EOF\n{country_stats_str}\nEOF\n")
         print("✅ 统计信息已写入GitHub Actions输出")
     else:
         # 本地运行时打印输出
@@ -94,8 +100,7 @@ def main():
         print(f"  RUN_TIME={stats['execution_time']:.2f}")
         print(f"  total_proxies={stats['total_valid_proxies']}")
         print(f"  total_countries={len(stats['countries'])}")
-        print(f"  total_subdomains={stats['subdomain_stats']['total_subdomains']}")
-        print(f"  subdomain_files={stats['subdomain_stats']['total_files']}")
+        print(f"  country_stats=\n{country_stats_str}")
     
     # 保存统计信息到JSON文件
     with open('stats.json', 'w', encoding='utf-8') as f:
