@@ -52,6 +52,7 @@ jobs:
         cd Proxyip && python ip.py
 
     - name: 运行子域名生成（上传到Cloudflare）
+      id: cf_upload
       run: |
         cd Proxyip && python reverse_dns.py
       env:
@@ -84,11 +85,12 @@ jobs:
           
           🕐 运行时长: ${{ steps.stats.outputs.run_time || 'N/A' }}
           
-          🌍 检测结果:
-          总有效代理: ${{ steps.stats.outputs.total_proxies || '0' }}个
+          🌍 CF解析结果:
+          ✅ 成功: ${{ steps.cf_upload.outputs.cf_total_created || '0' }}个
+          ❌ 失败: ${{ steps.cf_upload.outputs.cf_total_failed || '0' }}个
           
           📈 按国家分类:
-          ${{ steps.stats.outputs.country_stats || '无数据' }}
+          ${{ steps.cf_upload.outputs.cf_country_stats || '无数据' }}
           
           ✅ 任务执行成功！
 
