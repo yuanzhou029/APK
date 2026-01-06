@@ -1,4 +1,2 @@
 # 域名输入文件示例
-google.com
-github.com
-example.com
+
