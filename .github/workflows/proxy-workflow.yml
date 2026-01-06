@@ -27,12 +27,6 @@ jobs:
       run: |
         cd Proxyip && python ip.py
 
-    - name: 配置主域名
-      run: |
-        cd Proxyip && echo '{"main_domain": "${{ secrets.MAIN_DOMAIN }}", "subdomain_generation": {"mode": "filename"}}' > example_config.json
-      env:
-        MAIN_DOMAIN: ${{ secrets.MAIN_DOMAIN }}
-      if: env.MAIN_DOMAIN != ''
     - name: 运行子域名生成（上传到Cloudflare）
       run: |
         cd Proxyip && python reverse_dns.py
