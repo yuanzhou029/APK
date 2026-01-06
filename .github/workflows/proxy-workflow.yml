@@ -23,6 +23,19 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r Proxyip/requirements.txt
 
+    - name: 清理历史数据
+      run: |
+        cd Proxyip
+        echo "🧹 清理历史数据..."
+        # 清理valid_proxies目录下的所有txt文件
+        rm -f valid_proxies/*.txt 2>/dev/null || true
+        # 清理临时文件
+        rm -f temp_ips.txt 2>/dev/null || true
+        # 清理可能的缓存文件
+        rm -f *.log 2>/dev/null || true
+        rm -f __pycache__/*.pyc 2>/dev/null || true
+        echo "✅ 历史数据清理完成"
+
     - name: 运行代理检测
       run: |
         cd Proxyip && python ip.py
@@ -62,3 +75,26 @@ jobs:
             文件数: ${{ steps.stats.outputs.subdomain_files || 'N/A' }}个
           
           ✅ 任务执行成功！
+
+  cleanup-workflow-runs:
+    runs-on: ubuntu-latest
+    needs: proxy-check
+    if: always()
+
+    steps:
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Delete completed workflow runs
+        env:
+          GH_TOKEN: ${{ secrets.GT_TOKEN }}
+        run: |
+          echo "Fetching completed workflow runs..."
+          RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
+            | jq '.workflow_runs[] | select(.status == "completed") | .id')
+          for run_id in $RUN_IDS; do
+            echo "Deleting run ID: $run_id"
+            curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
+          done
