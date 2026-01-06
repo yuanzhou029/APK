@@ -14,7 +14,8 @@ ProxyIP 项目共享配置文件
 # 检测端口列表
 # - download_and_extract.py: 从这些端口目录读取IP文件
 # - ip.py: 使用这些端口进行代理检测
-PROXY_PORTS = [443, 2053, 2083, 2087, 2096, 8443]
+# - PROXY_PORTS = [443, 2053, 2083, 2087, 2096, 8443]
+PROXY_PORTS = [443]
 
 # ==================== 国家配置 ====================
 # 国家筛选配置
@@ -66,3 +67,4 @@ ENABLE_SECOND_VERIFY = True
 
 # 是否输出每个IP的检测结果
 VERBOSE_OUTPUT = False
+
