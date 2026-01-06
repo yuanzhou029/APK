@@ -33,9 +33,12 @@ jobs:
       env:
         MAIN_DOMAIN: ${{ secrets.MAIN_DOMAIN }}
       if: env.MAIN_DOMAIN != ''
-    - name: 运行子域名生成
+    - name: 运行子域名生成（上传到Cloudflare）
       run: |
         cd Proxyip && python reverse_dns.py
+      env:
+        CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
 
     - name: 获取统计信息
       id: stats
