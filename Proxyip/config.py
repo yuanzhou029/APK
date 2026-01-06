@@ -24,10 +24,11 @@ PROXY_PORTS = [443]
 #
 # 如果要添加新国家，只需在此添加映射即可
 COUNTRY_CONFIG = {
-    "TW": "台湾",
+    "KR": "韩国",
     "JP": "日本",
     "HK": "香港",
     "SG": "新加坡",
+    "US": "美国",
 }
 
 # 从配置生成筛选列表（供ip.py使用）
@@ -67,4 +68,5 @@ ENABLE_SECOND_VERIFY = True
 
 # 是否输出每个IP的检测结果
 VERBOSE_OUTPUT = False
+
 
