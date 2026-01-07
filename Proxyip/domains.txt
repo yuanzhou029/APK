@@ -1,4 +1,9 @@
 # 域名输入文件示例
 proxyip.jp.cmliussss.net
+jp.5.a.9.f.0.7.4.0.1.0.0.2.ip6.arpa
+us.5.a.9.f.0.7.4.0.1.0.0.2.ip6.arpa
+sg.5.a.9.f.0.7.4.0.1.0.0.2.ip6.arpa
+kr.5.a.9.f.0.7.4.0.1.0.0.2.ip6.arpa
+hk.5.a.9.f.0.7.4.0.1.0.0.2.ip6.arpa
 proxyip.hk.cmliussss.net
 
