@@ -17,6 +17,127 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
+  - {name: 关注https://github.com/wzdnzd不迷路, server: 9.9.9.9, port: 54321, type: ss, cipher: aes-256-cfb, password: febf501b-e19d-4451-8071-aa6144bb8825}
+  - {name: 🇯🇵 日本 03, server: 8.222.81.32, port: 433, type: vless, uuid: 75bc2f7a-0e6c-46ad-8639-283deaa701c3, tls: true, tfo: false, skip-cert-verify: false, servername: new7370.h2333.ggff.net, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: new7370.h2333.ggff.net}}}
+  - {name: 🇺🇸 美国 282, server: docker.1panel.live, port: 2053, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: true, tfo: false, skip-cert-verify: false, servername: news2.f1w.de5.net, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=sjc.o00o.ooo, headers: {Host: news2.f1w.de5.net}}}
+  - {name: 🇺🇸 亚美尼亚 03, server: 85.90.207.104, port: 18791, type: ss, cipher: chacha20-ietf-poly1305, password: e716d7bbae4bdd14}
+  - {name: 🇺🇸 美国 250, server: 91.209.253.238, port: 2096, type: trojan, password: 554f139b-f31f-41c4-99f9-73d60647db26, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇸🇬 新加坡 09, server: jry.izenny.com, port: 57884, type: ss, cipher: chacha20-ietf-poly1305, password: 047a76a6-683b-43eb-a632-e5c849a39b54}
+  - {name: 🇯🇵 日本 18, server: 154.205.139.9, port: 11205, type: ss, cipher: chacha20-ietf-poly1305, password: 303ac65e30f28b0b}
+  - {name: 🇸🇬 新加坡 29, server: 139.162.8.21, port: 444, type: vless, uuid: 75bc2f7a-0e6c-46ad-8639-283deaa701c3, tls: true, tfo: false, skip-cert-verify: false, servername: new7370.h2333.ggff.net, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: new7370.h2333.ggff.net}}}
+  - {name: 🇺🇸 美国 296, server: cloudflare.seeck.cn, port: 443, type: vless, uuid: 75bc2f7a-0e6c-46ad-8639-283deaa701c3, tls: true, tfo: false, skip-cert-verify: false, servername: new7370.h2333.ggff.net, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: new7370.h2333.ggff.net}}}
+  - {name: 🇺🇸 美国 224, server: 172.64.53.226, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇰🇷 韩国 06, server: 211.106.184.129, port: 11300, type: vless, uuid: 75bc2f7a-0e6c-46ad-8639-283deaa701c3, tls: true, tfo: false, skip-cert-verify: false, servername: new7370.h2333.ggff.net, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: new7370.h2333.ggff.net}}}
+  - {name: 🇺🇸 美国 297, server: 104.26.12.27, port: 2053, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: true, tfo: false, skip-cert-verify: false, servername: news2.f1w.de5.net, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=sjc.o00o.ooo, headers: {Host: news2.f1w.de5.net}}}
+  - {name: 🇺🇸 美国 196, server: 172.64.145.254, port: 2096, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 美国 178, server: v3.dabache.top, port: 2083, type: trojan, password: ff1dbbc9-ddf2-4d6c-a315-61ecd4223bc0, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇸🇬 新加坡 10, server: gtm1.ktmwan.net, port: 12901, type: vmess, uuid: 81a5821c-b354-4c29-a4b3-3c9747cc674f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: baidu.com}}}
+  - {name: 🇫🇷 法国 28, server: 15.236.130.93, port: 22223, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾 007, server: green2.cdntencentmusic.com, port: 35502, type: trojan, password: a7fe570b-b4e6-427d-b220-a05456106a43, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾 003, server: freea.glyphara.com, port: 30202, type: vless, uuid: 81de7516-65c2-4e81-a887-9a01d7e97b6e, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, reality-opts: {public-key: 9ahErgB4NKffqiZe3HHRx7Wb5br086fhnI75YuCdN0U, short-id: "10fa499e" }, servername: www.samsung.com, client-fingerprint: firefox, network: tcp}
+  - {name: 🇰🇷 韩国 31, server: 218.38.103.150, port: 39502, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@}
+  - {name: 🇺🇸 美国 130, server: www.epicgames.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, client-fingerprint: randomized, network: ws, ws-opts: {path: /, headers: {Host: cnmfangbinxingnmsl.cnmfangbinxing.workers.dev}}}
+  - {name: 🇩🇪 德国 51, server: 194.164.205.110, port: 8443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 美国 290, server: 172.64.147.211, port: 2096, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 美国 023, server: freea.glyphara.com, port: 30701, type: vless, uuid: 7ced6a06-2677-4d82-b0d2-96abd2007711, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, reality-opts: {public-key: cgGav3P_PeaM4grdSECGj4Tt9IsCmSqhGo_EJ0_KdWY, short-id: "e62db878" }, servername: www.amd.com, client-fingerprint: firefox, network: tcp}
+  - {name: 🇸🇬 新加坡 14, server: freea.glyphara.com, port: 30401, type: vless, uuid: 81de7516-65c2-4e81-a887-9a01d7e97b6e, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, reality-opts: {public-key: ZeXA8rcM3TV466jK83J157gY7U2JTI9KP9nmn_Nbawk, short-id: "105a652c" }, servername: learn.microsoft.com, client-fingerprint: firefox, network: tcp}
+  - {name: 🇩🇪 德国 68, server: 85.209.132.85, port: 8443, type: trojan, password: 554f139b-f31f-41c4-99f9-73d60647db26, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇸🇬 新加坡 02, server: freea.glyphara.com, port: 30402, type: vless, uuid: 7ced6a06-2677-4d82-b0d2-96abd2007711, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, reality-opts: {public-key: uTOYAGREMpfEr3cQFcLwgMAWwwxjS3e2Yw32kCdN3Ew, short-id: "f5f6e6f4" }, servername: itunes.apple.com, client-fingerprint: firefox, network: tcp}
+  - {name: 🇹🇼 台湾 006, server: gtm1.ktmwan.net, port: 12888, type: vmess, uuid: 81a5821c-b354-4c29-a4b3-3c9747cc674f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: baidu.com}}}
+  - {name: 🇯🇵 日本 10, server: vm1.as7akp.cn, port: 23919, type: vmess, uuid: 72aaf68b-fca5-48fa-9ba3-b0a6fb9990d2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 156, server: 172.64.147.2, port: 2096, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 台湾 043, server: cdnfire.xiaomispeed.com, port: 21103, type: trojan, password: ccd46d7d-0e2d-4ea0-aa45-f0c4c76098b7, sni: cdnfire.xiaomispeed.com, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾 039, server: green2.cdntencentmusic.com, port: 31102, type: trojan, password: a7fe570b-b4e6-427d-b220-a05456106a43, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 36, server: cf.008500.xyz, port: 443, type: vless, uuid: 75bc2f7a-0e6c-46ad-8639-283deaa701c3, tls: true, tfo: false, skip-cert-verify: false, servername: new7370.h2333.ggff.net, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: new7370.h2333.ggff.net}}}
+  - {name: 🇺🇸 美国 248, server: join.my.telegram.channel.cmliussss.to.unlock.more.premium.nodes.cf.090227.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2F", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 台湾 001, server: jry.izenny.com, port: 27689, type: ss, cipher: chacha20-ietf-poly1305, password: 8e8c86fc-263b-4d62-b0b5-5bdf6c5a9aad}
+  - {name: 🇹🇼 台湾 090, server: green2.cdntencentmusic.com, port: 31102, type: trojan, password: eab777de-fef2-4794-9a9f-fa63ed7b1360, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 131, server: www.ntu.edu.sg, port: 443, type: vless, uuid: 75bc2f7a-0e6c-46ad-8639-283deaa701c3, tls: true, tfo: false, skip-cert-verify: false, servername: new7370.h2333.ggff.net, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: new7370.h2333.ggff.net}}}
+  - {name: 🇬🇧 英国 13, server: 147.75.236.96, port: 443, type: trojan, password: 554f139b-f31f-41c4-99f9-73d60647db26, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇩🇪 德国 47, server: 87.120.216.157, port: 443, type: trojan, password: ff1dbbc9-ddf2-4d6c-a315-61ecd4223bc0, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇬🇧 英国 03, server: 38.60.196.27, port: 443, type: vless, uuid: e64c5bbb-a4b8-498e-b374-4462d961c8a2, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, reality-opts: {public-key: j_b7jaRqL2-82XSGRL0IYkNJ2Y3hrhhgq5kIBIK76lk}, servername: www.cloudflare.com, client-fingerprint: chrome, network: tcp}
+  - {name: 🇹🇼 台湾家宽 03, server: freea.glyphara.com, port: 30201, type: vless, uuid: f4192363-d147-44b3-8664-df3378ed97f9, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, reality-opts: {public-key: kb5IP7-mBUXwW7zszu-grmOgNEWmqDiCvf1NRfbF3AQ, short-id: "c1e12817" }, servername: lol.secure.dyn.riotcdn.net, client-fingerprint: firefox, network: tcp}
+  - {name: 🇺🇸 美国 175, server: cf.zhetengsha.eu.org, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, network: ws, ws-opts: {path: /, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 台湾 011, server: green2.cdntencentmusic.com, port: 35502, type: trojan, password: 40043c1e-e9b7-465f-af32-40d429b9763e, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾 034, server: green2.cdntencentmusic.com, port: 31102, type: trojan, password: df70a345-44f9-4af3-9305-09deb216b4ee, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇺🇦 乌克兰 01, server: 163.171.137.72, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: d27faed8a9b98bd0}
+  - {name: 🇺🇸 美国 186, server: 172.64.147.19, port: 2096, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇫🇷 法国 15, server: 141.95.193.15, port: 8443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇨🇿 捷克 01, server: 193.108.112.6, port: 50163, type: hysteria2, password: S1XZDIaoUX, auth: S1XZDIaoUX, skip-cert-verify: false, obfs: salamander, obfs-password: salamander}
+  - {name: 🇺🇸 美国 164, server: 104.19.73.126, port: 2053, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: true, tfo: false, skip-cert-verify: false, servername: news2.f1w.de5.net, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=sjc.o00o.ooo, headers: {Host: news2.f1w.de5.net}}}
+  - {name: 🇫🇷 法国 10, server: 51.75.24.59, port: 8443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 美国 215, server: one.cf.cdn.hyli.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2F%2F", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 美国 022, server: freea.glyphara.com, port: 30701, type: vless, uuid: f4192363-d147-44b3-8664-df3378ed97f9, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, reality-opts: {public-key: cgGav3P_PeaM4grdSECGj4Tt9IsCmSqhGo_EJ0_KdWY, short-id: "e62db878" }, servername: www.amd.com, client-fingerprint: firefox, network: tcp}
+  - {name: 🇭🇰 香港 27, server: 223.16.138.113, port: 12457, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%252FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 台湾 101, server: cdnfire.xiaomispeed.com, port: 21101, type: trojan, password: ccd46d7d-0e2d-4ea0-aa45-f0c4c76098b7, sni: cdnfire.xiaomispeed.com, skip-cert-verify: false}
+  - {name: 🇰🇷 韩国 27, server: 112.185.223.152, port: 50001, type: trojan, password: ff1dbbc9-ddf2-4d6c-a315-61ecd4223bc0, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2F%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇲🇽 墨西哥 02, server: slur.izenny.com, port: 48907, type: ss, cipher: chacha20-ietf-poly1305, password: 7663c0e1-cb8b-4e0b-bda9-f9dde22013c8}
+  - {name: 🇺🇸 美国 157, server: 104.19.220.22, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2F", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 台湾 027, server: green2.cdntencentmusic.com, port: 31101, type: trojan, password: 86558621-899b-4c51-89ce-7ef44f247226, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 206, server: 188.244.122.238, port: 2096, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%252FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 台湾 079, server: green2.cdntencentmusic.com, port: 31101, type: trojan, password: 8bee0710-8f64-4c05-acca-a49b10e30bb8, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 195, server: 172.64.147.79, port: 2096, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇳🇱 荷兰 04, server: 89.110.107.69, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 美国 234, server: 172.64.229.205, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2F", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 台湾 013, server: cdnfire.xiaomispeed.com, port: 25502, type: trojan, password: 5395d488-d6ab-4b5d-b323-fc53e0d7e424, sni: cdnfire.xiaomispeed.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 138, server: 185.176.26.236, port: 2096, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇫🇷 法国 16, server: 57.128.183.196, port: 8443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 美国 016, server: vm1.as7akp.cn, port: 23903, type: vmess, uuid: 72aaf68b-fca5-48fa-9ba3-b0a6fb9990d2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇰🇷 韩国 05, server: 220.77.18.195, port: 12133, type: vless, uuid: 75bc2f7a-0e6c-46ad-8639-283deaa701c3, tls: true, tfo: false, skip-cert-verify: false, servername: new7370.h2333.ggff.net, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: new7370.h2333.ggff.net}}}
+  - {name: 🇦🇺 澳大利亚 02, server: 154.26.156.99, port: 47387, type: ss, cipher: chacha20-ietf-poly1305, password: 78322e4b934870b6}
+  - {name: 🇰🇷 韩国 33, server: 14.32.3.193, port: 16058, type: trojan, password: 554f139b-f31f-41c4-99f9-73d60647db26, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇻🇳 越南 03, server: 103.186.154.182, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: 🇹🇼 台湾 063, server: green2.cdntencentmusic.com, port: 31101, type: trojan, password: a7fe570b-b4e6-427d-b220-a05456106a43, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇦🇺 澳大利亚 03, server: 154.26.156.99, port: 47385, type: ss, cipher: chacha20-ietf-poly1305, password: 78322e4b934870b6}
+  - {name: 🇺🇸 美国 159, server: pages.cloudflare.com, port: 2053, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: true, tfo: false, skip-cert-verify: false, servername: news2.f1w.de5.net, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=sjc.o00o.ooo, headers: {Host: news2.f1w.de5.net}}}
+  - {name: 🇭🇰 香港 24, server: 43.161.222.97, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 美国 269, server: singapore.com, port: 2053, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: true, tfo: false, skip-cert-verify: false, servername: news2.f1w.de5.net, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=sjc.o00o.ooo, headers: {Host: news2.f1w.de5.net}}}
+  - {name: 🇺🇸 美国 063, server: 143.20.213.100, port: 8443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%252FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 台湾 038, server: green2.cdntencentmusic.com, port: 31101, type: trojan, password: 40043c1e-e9b7-465f-af32-40d429b9763e, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 293, server: 104.17.162.3, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2F", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇮🇱 以色列 02, server: 163.171.213.46, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: d121385f700a6915}
+  - {name: 🇩🇪 德国 74, server: 80.66.85.115, port: 8443, type: trojan, password: ff1dbbc9-ddf2-4d6c-a315-61ecd4223bc0, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 台湾 033, server: green2.cdntencentmusic.com, port: 31102, type: trojan, password: 36c872c1-0d25-4a3f-894e-a1d8b0c66248, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 15, server: freea.glyphara.com, port: 30301, type: vless, uuid: 81de7516-65c2-4e81-a887-9a01d7e97b6e, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, reality-opts: {public-key: IoW1RqD-BzW9oxaM4KtHx5ap6haIENhYyZt_oMZqlCM, short-id: "950cee8a" }, servername: lol.secure.dyn.riotcdn.net, client-fingerprint: firefox, network: tcp}
+  - {name: 🇯🇵 日本 20, server: 185.18.222.208, port: 2053, type: trojan, password: 554f139b-f31f-41c4-99f9-73d60647db26, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: Telegram%F0%9F%87%A8%F0%9F%87%B3WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇭🇰 香港 10, server: 8.223.63.150, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: www.sgxaniu.qzz.io, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: www.sgxaniu.qzz.io}}}
+  - {name: 🇸🇬 新加坡 04, server: vm1.as7akp.cn, port: 23910, type: vmess, uuid: 72aaf68b-fca5-48fa-9ba3-b0a6fb9990d2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 14, server: gtm1.ktmwan.net, port: 12883, type: vmess, uuid: 81a5821c-b354-4c29-a4b3-3c9747cc674f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: baidu.com}}}
+  - {name: 🇹🇼 台湾 023, server: green2.cdntencentmusic.com, port: 31102, type: trojan, password: a8862f1e-01d8-4782-a120-9e01c372c669, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 32, server: 20.247.137.183, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%252FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇻🇳 越南 02, server: 38.54.14.156, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: a94f0b6916f67bdc}
+  - {name: 🇺🇸 美国 307, server: 172.66.156.81, port: 80, type: vless, uuid: 240081a0-80f0-4ef8-b834-52d8df75bad3, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy, headers: {Host: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.skylinkserver.site.vegaskala.com.}}}
+  - {name: 🇸🇬 新加坡 06, server: 159.223.68.162, port: 443, type: vless, uuid: 75bc2f7a-0e6c-46ad-8639-283deaa701c3, tls: true, tfo: false, skip-cert-verify: false, servername: new7370.h2333.ggff.net, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: new7370.h2333.ggff.net}}}
+  - {name: 🇺🇸 美国 245, server: 172.64.229.73, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2F", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 美国 299, server: www.temu.com, port: 2095, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: false, tfo: false, skip-cert-verify: false, client-fingerprint: randomized, network: ws, ws-opts: {path: /, headers: {Host: cnmfangbinxingnmsl.cnmfangbinxing.workers.dev}}}
+  - {name: 🇺🇸 美国 171, server: 172.64.229.68, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2F", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇭🇰 香港 18, server: jry.izenny.com, port: 26535, type: ss, cipher: chacha20-ietf-poly1305, password: 8e8c86fc-263b-4d62-b0b5-5bdf6c5a9aad}
+  - {name: 🇺🇸 美国 267, server: www.aapanel.com, port: 2053, type: vless, uuid: d342d11e-d424-4583-b36e-524ab1f0afa4, tls: true, tfo: false, skip-cert-verify: false, servername: news2.f1w.de5.net, client-fingerprint: chrome, network: ws, ws-opts: {path: /proxyip=sjc.o00o.ooo, headers: {Host: news2.f1w.de5.net}}}
+  - {name: 🇲🇾 马来西亚 02, server: 202.122.145.125, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 46d46fd902d485e8}
+  - {name: 🇫🇷 法国 01, server: 54.37.78.252, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: caac660070728d6c}
+  - {name: 🇳🇱 荷兰 03, server: 77.238.242.168, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇰🇷 韩国 16, server: 106.245.165.137, port: 50001, type: trojan, password: 554f139b-f31f-41c4-99f9-73d60647db26, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇭🇰 香港 35, server: 58.152.25.236, port: 443, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false}
+  - {name: 🇹🇼 台湾 044, server: green2.cdntencentmusic.com, port: 31103, type: trojan, password: 7882a049-8d73-4c30-9c71-20ef57909cb2, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 271, server: 172.66.156.81, port: 80, type: vless, uuid: 48c0613e-44b2-4331-acda-64ba72128a07, tls: false, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy, headers: {Host: www.speedtest.net.www.zula.ir.cloudflare.com.www.parsvds.ir.myblog.org.tr.}}}
+  - {name: 🇺🇸 美国 166, server: 172.64.229.60, port: 443, type: trojan, password: 5a2c16f9, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2F", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇷🇺 俄罗斯联邦 02, server: 178.130.46.148, port: 47345, type: ss, cipher: chacha20-ietf-poly1305, password: nGSRvZ5IsYcRNDpDtNVrkV}
+  - {name: 🇰🇷 韩国 34, server: 211.201.169.70, port: 19307, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@}
+  - {name: 🇺🇸 美国 257, server: 94.140.0.238, port: 2096, type: trojan, password: 554f139b-f31f-41c4-99f9-73d60647db26, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇫🇷 法国 21, server: 51.91.252.200, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇫🇷 法国 18, server: 193.233.133.77, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 亚美尼亚 02, server: 85.90.207.104, port: 18794, type: ss, cipher: chacha20-ietf-poly1305, password: e716d7bbae4bdd14}
+  - {name: 🇹🇼 台湾 055, server: green2.cdntencentmusic.com, port: 35502, type: trojan, password: df70a345-44f9-4af3-9305-09deb216b4ee, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇺🇸 美国 253, server: saas.sin.fan, port: 443, type: vless, uuid: 75bc2f7a-0e6c-46ad-8639-283deaa701c3, tls: true, tfo: false, skip-cert-verify: false, servername: new7370.h2333.ggff.net, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: new7370.h2333.ggff.net}}}
+  - {name: 🇭🇰 香港 20, server: 38.54.85.242, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 3ff6d2f0563891a4}
+  - {name: 🇺🇸 美国 051, server: 50.62.89.236, port: 2096, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 美国 139, server: 188.244.122.238, port: 2096, type: trojan, password: ff1dbbc9-ddf2-4d6c-a315-61ecd4223bc0, sni: snippets.kkii.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: "%2F%2FTelegram%F0%9F%87%A8%F0%9F%87%B3WangCai2", headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇺🇸 美国 012, server: freea.glyphara.com, port: 30703, type: vless, uuid: f4192363-d147-44b3-8664-df3378ed97f9, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, reality-opts: {public-key: Fpcp8ed_KjL5rnn0gstMa0AQPL8GcYMtArb--r1AhnI, short-id: "845532fa" }, servername: mensura.cdn-apple.com, client-fingerprint: firefox, network: tcp}
+  - {name: 🇺🇸 美国 149, server: 213.219.247.236, port: 2096, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 台湾 075, server: cdnfire.xiaomispeed.com, port: 21103, type: trojan, password: 74994c1b-e37c-4795-8130-d3470547e674, sni: cdnfire.xiaomispeed.com, skip-cert-verify: false}
+  - {name: 🇷🇴 罗马尼亚 02, server: 188.241.241.29, port: 2053, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.kkii.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /Telegram🇨🇳WangCai2, headers: {Host: snippets.kkii.eu.org}}}
+  - {name: 🇹🇼 台湾 036, server: green2.cdntencentmusic.com, port: 31101, type: trojan, password: ba91a84a-6b81-4aef-be19-a76f64a790d1, sni: green2.cdntencentmusic.com, skip-cert-verify: false}
+  - {name: 🇯🇵 日本 08, server: freea.glyphara.com, port: 30303, type: vless, uuid: 81de7516-65c2-4e81-a887-9a01d7e97b6e, tls: true, tfo: false, flow: xtls-rprx-vision, skip-cert-verify: false, reality-opts: {public-key: RuNAMARjcI4VNAkqWazbFm4sa3Kc-uViiruuByx2TiM, short-id: "4d77021d" }, servername: mensura.cdn-apple.com, client-fingerprint: firefox, network: tcp}
   - {name: 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_10|0.8MB/s|GPT⁺|GM|YT|TK|NF|D+|X, server: hj.xmm1993.top, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: tw.aniusnippets.qzz.io, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tw.aniusnippets.qzz.io}}}
   - {name: 🇭🇰 www.85la.com🇭🇰HK¹-KR⁰_1|1.0MB/s|3%|NF|D+|X, server: 172.64.154.148, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: ww1.allxniu.qzz.io, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ww1.allxniu.qzz.io}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US¹-NL⁰_18|0.9MB/s|3%|GPT⁺|GM|YT|TK|NF|D+|X|KeepSucceed, server: hj.xmm1993.top, port: 2087, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: jp.xaniusg2.qzz.io, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: jp.xaniusg2.qzz.io}}}
@@ -1167,6 +1288,127 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     proxies:
+      - 关注https://github.com/wzdnzd不迷路
+      - 🇯🇵 日本 03
+      - 🇺🇸 美国 282
+      - 🇺🇸 亚美尼亚 03
+      - 🇺🇸 美国 250
+      - 🇸🇬 新加坡 09
+      - 🇯🇵 日本 18
+      - 🇸🇬 新加坡 29
+      - 🇺🇸 美国 296
+      - 🇺🇸 美国 224
+      - 🇰🇷 韩国 06
+      - 🇺🇸 美国 297
+      - 🇺🇸 美国 196
+      - 🇺🇸 美国 178
+      - 🇸🇬 新加坡 10
+      - 🇫🇷 法国 28
+      - 🇹🇼 台湾 007
+      - 🇹🇼 台湾 003
+      - 🇰🇷 韩国 31
+      - 🇺🇸 美国 130
+      - 🇩🇪 德国 51
+      - 🇺🇸 美国 290
+      - 🇺🇸 美国 023
+      - 🇸🇬 新加坡 14
+      - 🇩🇪 德国 68
+      - 🇸🇬 新加坡 02
+      - 🇹🇼 台湾 006
+      - 🇯🇵 日本 10
+      - 🇺🇸 美国 156
+      - 🇹🇼 台湾 043
+      - 🇹🇼 台湾 039
+      - 🇸🇬 新加坡 36
+      - 🇺🇸 美国 248
+      - 🇹🇼 台湾 001
+      - 🇹🇼 台湾 090
+      - 🇺🇸 美国 131
+      - 🇬🇧 英国 13
+      - 🇩🇪 德国 47
+      - 🇬🇧 英国 03
+      - 🇹🇼 台湾家宽 03
+      - 🇺🇸 美国 175
+      - 🇹🇼 台湾 011
+      - 🇹🇼 台湾 034
+      - 🇺🇦 乌克兰 01
+      - 🇺🇸 美国 186
+      - 🇫🇷 法国 15
+      - 🇨🇿 捷克 01
+      - 🇺🇸 美国 164
+      - 🇫🇷 法国 10
+      - 🇺🇸 美国 215
+      - 🇺🇸 美国 022
+      - 🇭🇰 香港 27
+      - 🇹🇼 台湾 101
+      - 🇰🇷 韩国 27
+      - 🇲🇽 墨西哥 02
+      - 🇺🇸 美国 157
+      - 🇹🇼 台湾 027
+      - 🇺🇸 美国 206
+      - 🇹🇼 台湾 079
+      - 🇺🇸 美国 195
+      - 🇳🇱 荷兰 04
+      - 🇺🇸 美国 234
+      - 🇹🇼 台湾 013
+      - 🇺🇸 美国 138
+      - 🇫🇷 法国 16
+      - 🇺🇸 美国 016
+      - 🇰🇷 韩国 05
+      - 🇦🇺 澳大利亚 02
+      - 🇰🇷 韩国 33
+      - 🇻🇳 越南 03
+      - 🇹🇼 台湾 063
+      - 🇦🇺 澳大利亚 03
+      - 🇺🇸 美国 159
+      - 🇭🇰 香港 24
+      - 🇺🇸 美国 269
+      - 🇺🇸 美国 063
+      - 🇹🇼 台湾 038
+      - 🇺🇸 美国 293
+      - 🇮🇱 以色列 02
+      - 🇩🇪 德国 74
+      - 🇹🇼 台湾 033
+      - 🇯🇵 日本 15
+      - 🇯🇵 日本 20
+      - 🇭🇰 香港 10
+      - 🇸🇬 新加坡 04
+      - 🇯🇵 日本 14
+      - 🇹🇼 台湾 023
+      - 🇸🇬 新加坡 32
+      - 🇻🇳 越南 02
+      - 🇺🇸 美国 307
+      - 🇸🇬 新加坡 06
+      - 🇺🇸 美国 245
+      - 🇺🇸 美国 299
+      - 🇺🇸 美国 171
+      - 🇭🇰 香港 18
+      - 🇺🇸 美国 267
+      - 🇲🇾 马来西亚 02
+      - 🇫🇷 法国 01
+      - 🇳🇱 荷兰 03
+      - 🇰🇷 韩国 16
+      - 🇭🇰 香港 35
+      - 🇹🇼 台湾 044
+      - 🇺🇸 美国 271
+      - 🇺🇸 美国 166
+      - 🇷🇺 俄罗斯联邦 02
+      - 🇰🇷 韩国 34
+      - 🇺🇸 美国 257
+      - 🇫🇷 法国 21
+      - 🇫🇷 法国 18
+      - 🇺🇸 亚美尼亚 02
+      - 🇹🇼 台湾 055
+      - 🇺🇸 美国 253
+      - 🇭🇰 香港 20
+      - 🇺🇸 美国 051
+      - 🇺🇸 美国 139
+      - 🇺🇸 美国 012
+      - 🇺🇸 美国 149
+      - 🇹🇼 台湾 075
+      - 🇷🇴 罗马尼亚 02
+      - 🇹🇼 台湾 036
+      - 🇯🇵 日本 08
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_10|0.8MB/s|GPT⁺|GM|YT|TK|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-KR⁰_1|1.0MB/s|3%|NF|D+|X
       - 🇺🇸 www.85la.com🇺🇸US¹-NL⁰_18|0.9MB/s|3%|GPT⁺|GM|YT|TK|NF|D+|X|KeepSucceed
@@ -2305,6 +2547,127 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 关注https://github.com/wzdnzd不迷路
+      - 🇯🇵 日本 03
+      - 🇺🇸 美国 282
+      - 🇺🇸 亚美尼亚 03
+      - 🇺🇸 美国 250
+      - 🇸🇬 新加坡 09
+      - 🇯🇵 日本 18
+      - 🇸🇬 新加坡 29
+      - 🇺🇸 美国 296
+      - 🇺🇸 美国 224
+      - 🇰🇷 韩国 06
+      - 🇺🇸 美国 297
+      - 🇺🇸 美国 196
+      - 🇺🇸 美国 178
+      - 🇸🇬 新加坡 10
+      - 🇫🇷 法国 28
+      - 🇹🇼 台湾 007
+      - 🇹🇼 台湾 003
+      - 🇰🇷 韩国 31
+      - 🇺🇸 美国 130
+      - 🇩🇪 德国 51
+      - 🇺🇸 美国 290
+      - 🇺🇸 美国 023
+      - 🇸🇬 新加坡 14
+      - 🇩🇪 德国 68
+      - 🇸🇬 新加坡 02
+      - 🇹🇼 台湾 006
+      - 🇯🇵 日本 10
+      - 🇺🇸 美国 156
+      - 🇹🇼 台湾 043
+      - 🇹🇼 台湾 039
+      - 🇸🇬 新加坡 36
+      - 🇺🇸 美国 248
+      - 🇹🇼 台湾 001
+      - 🇹🇼 台湾 090
+      - 🇺🇸 美国 131
+      - 🇬🇧 英国 13
+      - 🇩🇪 德国 47
+      - 🇬🇧 英国 03
+      - 🇹🇼 台湾家宽 03
+      - 🇺🇸 美国 175
+      - 🇹🇼 台湾 011
+      - 🇹🇼 台湾 034
+      - 🇺🇦 乌克兰 01
+      - 🇺🇸 美国 186
+      - 🇫🇷 法国 15
+      - 🇨🇿 捷克 01
+      - 🇺🇸 美国 164
+      - 🇫🇷 法国 10
+      - 🇺🇸 美国 215
+      - 🇺🇸 美国 022
+      - 🇭🇰 香港 27
+      - 🇹🇼 台湾 101
+      - 🇰🇷 韩国 27
+      - 🇲🇽 墨西哥 02
+      - 🇺🇸 美国 157
+      - 🇹🇼 台湾 027
+      - 🇺🇸 美国 206
+      - 🇹🇼 台湾 079
+      - 🇺🇸 美国 195
+      - 🇳🇱 荷兰 04
+      - 🇺🇸 美国 234
+      - 🇹🇼 台湾 013
+      - 🇺🇸 美国 138
+      - 🇫🇷 法国 16
+      - 🇺🇸 美国 016
+      - 🇰🇷 韩国 05
+      - 🇦🇺 澳大利亚 02
+      - 🇰🇷 韩国 33
+      - 🇻🇳 越南 03
+      - 🇹🇼 台湾 063
+      - 🇦🇺 澳大利亚 03
+      - 🇺🇸 美国 159
+      - 🇭🇰 香港 24
+      - 🇺🇸 美国 269
+      - 🇺🇸 美国 063
+      - 🇹🇼 台湾 038
+      - 🇺🇸 美国 293
+      - 🇮🇱 以色列 02
+      - 🇩🇪 德国 74
+      - 🇹🇼 台湾 033
+      - 🇯🇵 日本 15
+      - 🇯🇵 日本 20
+      - 🇭🇰 香港 10
+      - 🇸🇬 新加坡 04
+      - 🇯🇵 日本 14
+      - 🇹🇼 台湾 023
+      - 🇸🇬 新加坡 32
+      - 🇻🇳 越南 02
+      - 🇺🇸 美国 307
+      - 🇸🇬 新加坡 06
+      - 🇺🇸 美国 245
+      - 🇺🇸 美国 299
+      - 🇺🇸 美国 171
+      - 🇭🇰 香港 18
+      - 🇺🇸 美国 267
+      - 🇲🇾 马来西亚 02
+      - 🇫🇷 法国 01
+      - 🇳🇱 荷兰 03
+      - 🇰🇷 韩国 16
+      - 🇭🇰 香港 35
+      - 🇹🇼 台湾 044
+      - 🇺🇸 美国 271
+      - 🇺🇸 美国 166
+      - 🇷🇺 俄罗斯联邦 02
+      - 🇰🇷 韩国 34
+      - 🇺🇸 美国 257
+      - 🇫🇷 法国 21
+      - 🇫🇷 法国 18
+      - 🇺🇸 亚美尼亚 02
+      - 🇹🇼 台湾 055
+      - 🇺🇸 美国 253
+      - 🇭🇰 香港 20
+      - 🇺🇸 美国 051
+      - 🇺🇸 美国 139
+      - 🇺🇸 美国 012
+      - 🇺🇸 美国 149
+      - 🇹🇼 台湾 075
+      - 🇷🇴 罗马尼亚 02
+      - 🇹🇼 台湾 036
+      - 🇯🇵 日本 08
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_10|0.8MB/s|GPT⁺|GM|YT|TK|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-KR⁰_1|1.0MB/s|3%|NF|D+|X
       - 🇺🇸 www.85la.com🇺🇸US¹-NL⁰_18|0.9MB/s|3%|GPT⁺|GM|YT|TK|NF|D+|X|KeepSucceed
@@ -3443,6 +3806,127 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 关注https://github.com/wzdnzd不迷路
+      - 🇯🇵 日本 03
+      - 🇺🇸 美国 282
+      - 🇺🇸 亚美尼亚 03
+      - 🇺🇸 美国 250
+      - 🇸🇬 新加坡 09
+      - 🇯🇵 日本 18
+      - 🇸🇬 新加坡 29
+      - 🇺🇸 美国 296
+      - 🇺🇸 美国 224
+      - 🇰🇷 韩国 06
+      - 🇺🇸 美国 297
+      - 🇺🇸 美国 196
+      - 🇺🇸 美国 178
+      - 🇸🇬 新加坡 10
+      - 🇫🇷 法国 28
+      - 🇹🇼 台湾 007
+      - 🇹🇼 台湾 003
+      - 🇰🇷 韩国 31
+      - 🇺🇸 美国 130
+      - 🇩🇪 德国 51
+      - 🇺🇸 美国 290
+      - 🇺🇸 美国 023
+      - 🇸🇬 新加坡 14
+      - 🇩🇪 德国 68
+      - 🇸🇬 新加坡 02
+      - 🇹🇼 台湾 006
+      - 🇯🇵 日本 10
+      - 🇺🇸 美国 156
+      - 🇹🇼 台湾 043
+      - 🇹🇼 台湾 039
+      - 🇸🇬 新加坡 36
+      - 🇺🇸 美国 248
+      - 🇹🇼 台湾 001
+      - 🇹🇼 台湾 090
+      - 🇺🇸 美国 131
+      - 🇬🇧 英国 13
+      - 🇩🇪 德国 47
+      - 🇬🇧 英国 03
+      - 🇹🇼 台湾家宽 03
+      - 🇺🇸 美国 175
+      - 🇹🇼 台湾 011
+      - 🇹🇼 台湾 034
+      - 🇺🇦 乌克兰 01
+      - 🇺🇸 美国 186
+      - 🇫🇷 法国 15
+      - 🇨🇿 捷克 01
+      - 🇺🇸 美国 164
+      - 🇫🇷 法国 10
+      - 🇺🇸 美国 215
+      - 🇺🇸 美国 022
+      - 🇭🇰 香港 27
+      - 🇹🇼 台湾 101
+      - 🇰🇷 韩国 27
+      - 🇲🇽 墨西哥 02
+      - 🇺🇸 美国 157
+      - 🇹🇼 台湾 027
+      - 🇺🇸 美国 206
+      - 🇹🇼 台湾 079
+      - 🇺🇸 美国 195
+      - 🇳🇱 荷兰 04
+      - 🇺🇸 美国 234
+      - 🇹🇼 台湾 013
+      - 🇺🇸 美国 138
+      - 🇫🇷 法国 16
+      - 🇺🇸 美国 016
+      - 🇰🇷 韩国 05
+      - 🇦🇺 澳大利亚 02
+      - 🇰🇷 韩国 33
+      - 🇻🇳 越南 03
+      - 🇹🇼 台湾 063
+      - 🇦🇺 澳大利亚 03
+      - 🇺🇸 美国 159
+      - 🇭🇰 香港 24
+      - 🇺🇸 美国 269
+      - 🇺🇸 美国 063
+      - 🇹🇼 台湾 038
+      - 🇺🇸 美国 293
+      - 🇮🇱 以色列 02
+      - 🇩🇪 德国 74
+      - 🇹🇼 台湾 033
+      - 🇯🇵 日本 15
+      - 🇯🇵 日本 20
+      - 🇭🇰 香港 10
+      - 🇸🇬 新加坡 04
+      - 🇯🇵 日本 14
+      - 🇹🇼 台湾 023
+      - 🇸🇬 新加坡 32
+      - 🇻🇳 越南 02
+      - 🇺🇸 美国 307
+      - 🇸🇬 新加坡 06
+      - 🇺🇸 美国 245
+      - 🇺🇸 美国 299
+      - 🇺🇸 美国 171
+      - 🇭🇰 香港 18
+      - 🇺🇸 美国 267
+      - 🇲🇾 马来西亚 02
+      - 🇫🇷 法国 01
+      - 🇳🇱 荷兰 03
+      - 🇰🇷 韩国 16
+      - 🇭🇰 香港 35
+      - 🇹🇼 台湾 044
+      - 🇺🇸 美国 271
+      - 🇺🇸 美国 166
+      - 🇷🇺 俄罗斯联邦 02
+      - 🇰🇷 韩国 34
+      - 🇺🇸 美国 257
+      - 🇫🇷 法国 21
+      - 🇫🇷 法国 18
+      - 🇺🇸 亚美尼亚 02
+      - 🇹🇼 台湾 055
+      - 🇺🇸 美国 253
+      - 🇭🇰 香港 20
+      - 🇺🇸 美国 051
+      - 🇺🇸 美国 139
+      - 🇺🇸 美国 012
+      - 🇺🇸 美国 149
+      - 🇹🇼 台湾 075
+      - 🇷🇴 罗马尼亚 02
+      - 🇹🇼 台湾 036
+      - 🇯🇵 日本 08
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_10|0.8MB/s|GPT⁺|GM|YT|TK|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-KR⁰_1|1.0MB/s|3%|NF|D+|X
       - 🇺🇸 www.85la.com🇺🇸US¹-NL⁰_18|0.9MB/s|3%|GPT⁺|GM|YT|TK|NF|D+|X|KeepSucceed
@@ -4582,6 +5066,127 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 关注https://github.com/wzdnzd不迷路
+      - 🇯🇵 日本 03
+      - 🇺🇸 美国 282
+      - 🇺🇸 亚美尼亚 03
+      - 🇺🇸 美国 250
+      - 🇸🇬 新加坡 09
+      - 🇯🇵 日本 18
+      - 🇸🇬 新加坡 29
+      - 🇺🇸 美国 296
+      - 🇺🇸 美国 224
+      - 🇰🇷 韩国 06
+      - 🇺🇸 美国 297
+      - 🇺🇸 美国 196
+      - 🇺🇸 美国 178
+      - 🇸🇬 新加坡 10
+      - 🇫🇷 法国 28
+      - 🇹🇼 台湾 007
+      - 🇹🇼 台湾 003
+      - 🇰🇷 韩国 31
+      - 🇺🇸 美国 130
+      - 🇩🇪 德国 51
+      - 🇺🇸 美国 290
+      - 🇺🇸 美国 023
+      - 🇸🇬 新加坡 14
+      - 🇩🇪 德国 68
+      - 🇸🇬 新加坡 02
+      - 🇹🇼 台湾 006
+      - 🇯🇵 日本 10
+      - 🇺🇸 美国 156
+      - 🇹🇼 台湾 043
+      - 🇹🇼 台湾 039
+      - 🇸🇬 新加坡 36
+      - 🇺🇸 美国 248
+      - 🇹🇼 台湾 001
+      - 🇹🇼 台湾 090
+      - 🇺🇸 美国 131
+      - 🇬🇧 英国 13
+      - 🇩🇪 德国 47
+      - 🇬🇧 英国 03
+      - 🇹🇼 台湾家宽 03
+      - 🇺🇸 美国 175
+      - 🇹🇼 台湾 011
+      - 🇹🇼 台湾 034
+      - 🇺🇦 乌克兰 01
+      - 🇺🇸 美国 186
+      - 🇫🇷 法国 15
+      - 🇨🇿 捷克 01
+      - 🇺🇸 美国 164
+      - 🇫🇷 法国 10
+      - 🇺🇸 美国 215
+      - 🇺🇸 美国 022
+      - 🇭🇰 香港 27
+      - 🇹🇼 台湾 101
+      - 🇰🇷 韩国 27
+      - 🇲🇽 墨西哥 02
+      - 🇺🇸 美国 157
+      - 🇹🇼 台湾 027
+      - 🇺🇸 美国 206
+      - 🇹🇼 台湾 079
+      - 🇺🇸 美国 195
+      - 🇳🇱 荷兰 04
+      - 🇺🇸 美国 234
+      - 🇹🇼 台湾 013
+      - 🇺🇸 美国 138
+      - 🇫🇷 法国 16
+      - 🇺🇸 美国 016
+      - 🇰🇷 韩国 05
+      - 🇦🇺 澳大利亚 02
+      - 🇰🇷 韩国 33
+      - 🇻🇳 越南 03
+      - 🇹🇼 台湾 063
+      - 🇦🇺 澳大利亚 03
+      - 🇺🇸 美国 159
+      - 🇭🇰 香港 24
+      - 🇺🇸 美国 269
+      - 🇺🇸 美国 063
+      - 🇹🇼 台湾 038
+      - 🇺🇸 美国 293
+      - 🇮🇱 以色列 02
+      - 🇩🇪 德国 74
+      - 🇹🇼 台湾 033
+      - 🇯🇵 日本 15
+      - 🇯🇵 日本 20
+      - 🇭🇰 香港 10
+      - 🇸🇬 新加坡 04
+      - 🇯🇵 日本 14
+      - 🇹🇼 台湾 023
+      - 🇸🇬 新加坡 32
+      - 🇻🇳 越南 02
+      - 🇺🇸 美国 307
+      - 🇸🇬 新加坡 06
+      - 🇺🇸 美国 245
+      - 🇺🇸 美国 299
+      - 🇺🇸 美国 171
+      - 🇭🇰 香港 18
+      - 🇺🇸 美国 267
+      - 🇲🇾 马来西亚 02
+      - 🇫🇷 法国 01
+      - 🇳🇱 荷兰 03
+      - 🇰🇷 韩国 16
+      - 🇭🇰 香港 35
+      - 🇹🇼 台湾 044
+      - 🇺🇸 美国 271
+      - 🇺🇸 美国 166
+      - 🇷🇺 俄罗斯联邦 02
+      - 🇰🇷 韩国 34
+      - 🇺🇸 美国 257
+      - 🇫🇷 法国 21
+      - 🇫🇷 法国 18
+      - 🇺🇸 亚美尼亚 02
+      - 🇹🇼 台湾 055
+      - 🇺🇸 美国 253
+      - 🇭🇰 香港 20
+      - 🇺🇸 美国 051
+      - 🇺🇸 美国 139
+      - 🇺🇸 美国 012
+      - 🇺🇸 美国 149
+      - 🇹🇼 台湾 075
+      - 🇷🇴 罗马尼亚 02
+      - 🇹🇼 台湾 036
+      - 🇯🇵 日本 08
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_10|0.8MB/s|GPT⁺|GM|YT|TK|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-KR⁰_1|1.0MB/s|3%|NF|D+|X
       - 🇺🇸 www.85la.com🇺🇸US¹-NL⁰_18|0.9MB/s|3%|GPT⁺|GM|YT|TK|NF|D+|X|KeepSucceed
@@ -5895,6 +6500,12 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇭🇰 香港 27
+      - 🇭🇰 香港 24
+      - 🇭🇰 香港 10
+      - 🇭🇰 香港 18
+      - 🇭🇰 香港 35
+      - 🇭🇰 香港 20
       - 🇭🇰 www.85la.com🇭🇰HK¹-KR⁰_1|1.0MB/s|3%|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK⁻¹_4|0.3MB/s|YT|NF|History
       - 🇭🇰 www.85la.com🇭🇰HK¹-TW⁰_151|0.4MB/s|YT|X|History
@@ -6355,6 +6966,13 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇯🇵 日本 03
+      - 🇯🇵 日本 18
+      - 🇯🇵 日本 10
+      - 🇯🇵 日本 15
+      - 🇯🇵 日本 20
+      - 🇯🇵 日本 14
+      - 🇯🇵 日本 08
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_1|12.0MB/s|GPT|TK-US|NF|X|History
       - 🇹🇼 www.85la.com🇯🇵JP¹-TW⁰_5|0.7MB/s|GM|TK-US|X|[广播|机房]
       - 🇹🇼 www.85la.com🇯🇵JP¹-TW⁰_9|9.5MB/s|TK-US|NF|X
@@ -6428,6 +7046,65 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
+      - 🇺🇸 美国 282
+      - 🇺🇸 亚美尼亚 03
+      - 🇺🇸 美国 250
+      - 🇺🇸 美国 296
+      - 🇺🇸 美国 224
+      - 🇺🇸 美国 297
+      - 🇺🇸 美国 196
+      - 🇺🇸 美国 178
+      - 🇫🇷 法国 28
+      - 🇺🇸 美国 130
+      - 🇩🇪 德国 51
+      - 🇺🇸 美国 290
+      - 🇺🇸 美国 023
+      - 🇩🇪 德国 68
+      - 🇺🇸 美国 156
+      - 🇺🇸 美国 248
+      - 🇺🇸 美国 131
+      - 🇬🇧 英国 13
+      - 🇩🇪 德国 47
+      - 🇬🇧 英国 03
+      - 🇺🇸 美国 175
+      - 🇺🇸 美国 186
+      - 🇫🇷 法国 15
+      - 🇺🇸 美国 164
+      - 🇫🇷 法国 10
+      - 🇺🇸 美国 215
+      - 🇺🇸 美国 022
+      - 🇺🇸 美国 157
+      - 🇺🇸 美国 206
+      - 🇺🇸 美国 195
+      - 🇺🇸 美国 234
+      - 🇺🇸 美国 138
+      - 🇫🇷 法国 16
+      - 🇺🇸 美国 016
+      - 🇦🇺 澳大利亚 02
+      - 🇦🇺 澳大利亚 03
+      - 🇺🇸 美国 159
+      - 🇺🇸 美国 269
+      - 🇺🇸 美国 063
+      - 🇺🇸 美国 293
+      - 🇩🇪 德国 74
+      - 🇺🇸 美国 307
+      - 🇺🇸 美国 245
+      - 🇺🇸 美国 299
+      - 🇺🇸 美国 171
+      - 🇺🇸 美国 267
+      - 🇫🇷 法国 01
+      - 🇺🇸 美国 271
+      - 🇺🇸 美国 166
+      - 🇷🇺 俄罗斯联邦 02
+      - 🇺🇸 美国 257
+      - 🇫🇷 法国 21
+      - 🇫🇷 法国 18
+      - 🇺🇸 亚美尼亚 02
+      - 🇺🇸 美国 253
+      - 🇺🇸 美国 051
+      - 🇺🇸 美国 139
+      - 🇺🇸 美国 012
+      - 🇺🇸 美国 149
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_10|0.8MB/s|GPT⁺|GM|YT|TK|NF|D+|X
       - 🇺🇸 www.85la.com🇺🇸US¹-NL⁰_18|0.9MB/s|3%|GPT⁺|GM|YT|TK|NF|D+|X|KeepSucceed
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_25|1.9MB/s|YT-CA|TK|NF|D+|X|sinspired/subs-check
@@ -6743,6 +7420,29 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇹🇼 台湾 007
+      - 🇹🇼 台湾 003
+      - 🇹🇼 台湾 006
+      - 🇹🇼 台湾 043
+      - 🇹🇼 台湾 039
+      - 🇹🇼 台湾 001
+      - 🇹🇼 台湾 090
+      - 🇹🇼 台湾家宽 03
+      - 🇹🇼 台湾 011
+      - 🇹🇼 台湾 034
+      - 🇹🇼 台湾 101
+      - 🇹🇼 台湾 027
+      - 🇹🇼 台湾 079
+      - 🇹🇼 台湾 013
+      - 🇹🇼 台湾 063
+      - 🇹🇼 台湾 038
+      - 🇹🇼 台湾 033
+      - 🇹🇼 台湾 023
+      - 🇲🇾 马来西亚 02
+      - 🇹🇼 台湾 044
+      - 🇹🇼 台湾 055
+      - 🇹🇼 台湾 075
+      - 🇹🇼 台湾 036
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_10|0.8MB/s|GPT⁺|GM|YT|TK|NF|D+|X
       - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_25|1.9MB/s|YT-CA|TK|NF|D+|X|sinspired/subs-check
       - 🇭🇰 www.85la.com🇭🇰HK¹-TW⁰_151|0.4MB/s|YT|X|History
@@ -7329,6 +8029,15 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇸🇬 新加坡 09
+      - 🇸🇬 新加坡 29
+      - 🇸🇬 新加坡 10
+      - 🇸🇬 新加坡 14
+      - 🇸🇬 新加坡 02
+      - 🇸🇬 新加坡 36
+      - 🇸🇬 新加坡 04
+      - 🇸🇬 新加坡 32
+      - 🇸🇬 新加坡 06
       - 🇭🇰 www.85la.com🇭🇰HK¹-SG⁰_1|5.2MB/s|3%|YT|NF|D+|X|[广播|机房]
       - 🇭🇰 www.85la.com🇭🇰HK¹-SG⁰_2|9.5MB/s|3%|GPT|YT|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-SG⁰_5|0.3MB/s|3%|YT|TK-US|NF|D+|X
@@ -7375,6 +8084,13 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇰🇷 韩国 06
+      - 🇰🇷 韩国 31
+      - 🇰🇷 韩国 27
+      - 🇰🇷 韩国 05
+      - 🇰🇷 韩国 33
+      - 🇰🇷 韩国 16
+      - 🇰🇷 韩国 34
       - 🇭🇰 www.85la.com🇭🇰HK¹-KR⁰_1|1.0MB/s|3%|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-KR⁰_2|3.6MB/s|YT|NF|D+|X
       - 🇸🇬 www.85la.com🇸🇬SG¹-KR⁰_1|2.4MB/s|GPT|YT|X
