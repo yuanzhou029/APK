@@ -62,11 +62,12 @@ TCP_TIMEOUT = 2
 # API响应超时秒数
 API_TIMEOUT = 5
 
-# ==================== 功能开关 ====================
+# ==================== 功能开关 True False====================
 # 是否进行二次验证
-ENABLE_SECOND_VERIFY = True
+ENABLE_SECOND_VERIFY = False
 
 # 是否输出每个IP的检测结果
 VERBOSE_OUTPUT = False
+
 
 
