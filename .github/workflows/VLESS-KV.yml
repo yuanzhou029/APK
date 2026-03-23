@@ -23,9 +23,14 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install requests telethon awscli beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller crawl4ai
-          pip install --upgrade requests urllib3 chardet charset-normalizer
+          python -m pip install --upgrade pip setuptools wheel
+          pip install
+            "requests==2.32.3"
+            "urllib3==2.2.0"
+            "charset-normalizer==3.3.2"
+            "idna==3.7"
+            "certifi==2024.2.2"
+          pip install telethon awscli beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller crawl4ai  
           playwright install chromium
           
 
