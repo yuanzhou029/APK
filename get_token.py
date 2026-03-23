@@ -215,19 +215,17 @@ def extract_paste_to_url(description: str) -> Optional[str]:
 
 
 def extract_password_from_video_screenshot(video_url: str, screenshots_dir: Path) -> Optional[str]:
-    """使用OCR识别视频截图中的文字来提取密码"""
+    """使用Playwright识别视频截图中的文字来提取密码"""
     print("\n🔍 开始识别视频截图中的文字...")
-    print("💡 使用OCR技术提取视频中的密码...")
-    print("📹 策略：播放1分钟后开始截图，每帧保存一张")
+    print("💡 使用Playwright + OCR技术提取视频中的密码...")
+    print("📹 策略：播放60秒后开始截图，每5秒截一张图，持续捕获")
 
     try:
-        import crawl4ai
         import asyncio
-        import re
-        import json
-        import subprocess
+        from playwright.async_api import async_playwright
         from PIL import Image
-        import pytesseract  # OCR库
+        import pytesseract
+        import re
 
         # 提取视频ID
         video_id = re.search(r'v=([^&]+)', video_url)
@@ -240,106 +238,102 @@ def extract_password_from_video_screenshot(video_url: str, screenshots_dir: Path
         video_id = video_id.group(1)
         print(f"   视频ID: {video_id}")
 
-        # 使用crawl4ai获取视频页面并截图
-        async def screenshot_video():
-            async with crawl4ai.AsyncWebCrawler(verbose=False) as crawler:
-                # 步骤1：访问视频页面
-                result = await crawler.arun(
-                    url=video_url,
-                    wait_for="networkidle",
-                    page_timeout=30000,
-                    bypass_cache=True,
-                    magic=True,
-                    simulate_user=True,
-                    override_navigator=True,
-                    screenshot=True,  # 截取初始页面
-                    js_code="""
-                        // 点击播放按钮开始播放
-                        const playButton = document.querySelector('.ytp-play-button');
-                        if (playButton) {
-                            playButton.click();
-                            console.log('已点击播放按钮');
-                        } else {
-                            console.log('未找到播放按钮');
-                        }
-                    """
+        # 使用Playwright
+        async def screenshot_with_playwright():
+            async with async_playwright() as p:
+                # 启动浏览器（反检测模式）
+                browser = await p.chromium.launch(
+                    headless=True,
+                    args=[
+                        '--disable-blink-features=AutomationControlled',
+                        '--disable-dev-shm-usage',
+                        '--no-sandbox',
+                        '--disable-setuid-sandbox',
+                        '--disable-web-security',
+                        '--disable-features=IsolateOrigins,site-per-process',
+                    ]
                 )
-                
-                if not result.success:
-                    print(f"❌ 爬虫执行失败: {result.error_message}")
-                    return None, None
 
-                print(f"✅ 成功获取视频页面")
-                
-                # 步骤2：等待60秒让视频真正播放
-                print(f"⏱️ 等待60秒让视频播放...")
-                print(f"💡 视频正在播放中...")
-                import time
-                time.sleep(60)
-                
-                # 步骤3：截图（视频播放60秒后的状态）
-                print(f"📸 截取播放60秒后的页面...")
-                result_after = await crawler.arun(
-                    url=video_url,
-                    wait_for="networkidle",
-                    page_timeout=30000,
-                    bypass_cache=True,
-                    magic=True,
-                    simulate_user=True,
-                    override_navigator=True,
-                    screenshot=True,
-                    js_code="""
-                        // 暂停视频
-                        const pauseButton = document.querySelector('.ytp-play-button');
-                        if (pauseButton) {
-                            pauseButton.click();
-                            console.log('已暂停视频');
-                        }
-                    """
+                # 创建上下文（模拟真实用户）
+                context = await browser.new_context(
+                    viewport={'width': 1920, 'height': 1080},
+                    user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    locale='zh-CN',
+                    timezone_id='Asia/Shanghai',
                 )
-                
-                return result, result_after
 
-        # 运行异步爬虫
-        import asyncio
-        result, result_after = asyncio.run(screenshot_video())
+                page = await context.new_page()
 
-        if not result or not result_after:
-            print(f"❌ 爬虫执行失败")
-            return None
+                try:
+                    # 步骤1：访问视频页面
+                    print(f"📺 访问视频页面...")
+                    await page.goto(video_url, wait_until='networkidle', timeout=30000)
 
-        # 保存截图到screenshots目录
-        screenshots = []
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        
-        # 初始截图
-        if hasattr(result, 'screenshot') and result.screenshot:
-            screenshot1_path = screenshots_dir / f"{video_id}_initial_{timestamp}.png"
-            with screenshot1_path.open('wb') as f:
-                f.write(result.screenshot)
-            screenshots.append(screenshot1_path)
-            print(f"✅ 初始截图已保存: {screenshot1_path.name}")
-        
-        # 播放后截图
-        if hasattr(result_after, 'screenshot') and result_after.screenshot:
-            screenshot2_path = screenshots_dir / f"{video_id}_after60s_{timestamp}.png"
-            with screenshot2_path.open('wb') as f:
-                f.write(result_after.screenshot)
-            screenshots.append(screenshot2_path)
-            print(f"✅ 播放后截图已保存: {screenshot2_path.name}")
+                    # 步骤2：等待几秒让页面加载
+                    await asyncio.sleep(3)
+
+                    # 步骤3：截取初始截图
+                    print(f"📸 截取初始页面...")
+                    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+                    screenshot1_path = screenshots_dir / f"{video_id}_initial_{timestamp}.png"
+                    await page.screenshot(path=str(screenshot1_path), full_page=False)
+                    print(f"✅ 初始截图已保存: {screenshot1_path.name}")
+
+                    # 步骤4：尝试点击播放按钮
+                    print(f"▶️ 尝试播放视频...")
+                    try:
+                        # 等待播放按钮出现
+                        await page.wait_for_selector('.ytp-play-button', timeout=5000)
+                        await page.click('.ytp-play-button')
+                        print(f"✅ 已点击播放按钮")
+                    except Exception as e:
+                        print(f"⚠️ 点击播放按钮失败: {e}")
+                        # 尝试使用JavaScript播放
+                        await page.evaluate('() => { if (window.player) window.player.playVideo(); }')
+
+                    # 步骤5：等待60秒让视频播放
+                    print(f"⏱️ 等待60秒让视频播放...")
+                    print(f"💡 视频正在播放中...")
+                    await asyncio.sleep(60)
+
+                    # 步骤6：从第60秒开始，每隔5秒截一张图，持续捕获
+                    print(f"\n📸 开始持续截图（每5秒一张）...")
+                    screenshots = []
+                    capture_duration = 30  # 持续截图30秒
+                    capture_interval = 5  # 每5秒截一张
+                    num_captures = capture_duration // capture_interval
+
+                    for i in range(num_captures):
+                        screenshot_path = screenshots_dir / f"{video_id}_frame_{60 + i*5}s_{timestamp}.png"
+                        await page.screenshot(path=str(screenshot_path), full_page=False)
+                        screenshots.append(screenshot_path)
+                        print(f"✅ 第 {i+1}/{num_captures} 张截图已保存: {screenshot_path.name} (播放时长: {60 + i*5}秒)")
+
+                        # 等待5秒再截下一张
+                        if i < num_captures - 1:
+                            await asyncio.sleep(capture_interval)
+
+                    return screenshots
+
+                finally:
+                    await browser.close()
+
+        # 运行Playwright
+        screenshots = asyncio.run(screenshot_with_playwright())
 
         if not screenshots:
             print("❌ 未获取到截图")
             return None
 
         # 使用OCR识别所有截图
+        print(f"\n🔍 开始OCR识别...")
         all_text = ""
         for i, screenshot_path in enumerate(screenshots):
             print(f"\n🔍 识别第 {i+1} 张截图...")
             try:
                 # 使用pytesseract进行OCR
                 image = Image.open(screenshot_path)
-                text = pytesseract.image_to_string(image, lang='chi_sim+eng')  # 支持中文和英文
+                text = pytesseract.image_to_string(image, lang='chi_sim+eng')
 
                 print(f"✅ OCR识别成功")
                 print(f"   识别文字长度: {len(text)} 字符")
@@ -352,9 +346,6 @@ def extract_password_from_video_screenshot(video_url: str, screenshots_dir: Path
 
                 all_text += f"\n\n=== 截图 {i+1} ===\n{text}"
 
-            except ImportError:
-                print("❌ 未安装pytesseract库")
-                continue
             except Exception as e:
                 print(f"❌ OCR识别失败: {e}")
                 continue
@@ -369,7 +360,7 @@ def extract_password_from_video_screenshot(video_url: str, screenshots_dir: Path
         return password
 
     except ImportError:
-        print("❌ 未安装必要的库（crawl4ai, pytesseract, PIL）")
+        print("❌ 未安装必要的库（playwright, pytesseract, PIL）")
         return None
     except Exception as e:
         print(f"❌ 视频截图识别失败: {e}")
