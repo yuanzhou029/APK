@@ -25,24 +25,10 @@ jobs:
         run: |
           # 升级基础工具
           python -m pip install --upgrade pip setuptools wheel
-          # 升级基础工具
-          python -m pip install --upgrade pip setuptools wheel
           # 安装兼容版本
-          pip install
-            "urllib3==2.2.0"
-            "charset-normalizer==3.3.2"
-            "certifi==2024.2.2"
-            "idna==3.7"
-            "requests==2.32.3"
+          pip install urllib3==2.2.0 charset-normalizer==3.3.2 certifi==2024.2.2 idna==3.7 requests==2.32.3
           # 安装其他依赖
-          pip install 
-            telethon
-            awscli
-            beautifulsoup4
-            selenium
-            undetected-chromedriver
-            chromedriver-autoinstaller
-            crawl4ai
+          pip install telethon awscli beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller crawl4ai 
           # 安装 Playwright
           playwright install chromium
           # 验证安装
