@@ -290,46 +290,62 @@ def download_audio_crawl4ai(video_url: str, audio_dir: Path) -> Optional[Path]:
             print("⚠️ 未找到streamingData")
             return None
 
-        # 获取音频流URL
+        # 获取视频流URL（优先下载视频，因为视频流通常更容易获取）
+        video_streams = []
         audio_streams = []
+
         if 'adaptiveFormats' in streaming_data:
             for format in streaming_data['adaptiveFormats']:
-                if format.get('mimeType', '').startswith('audio/'):
+                mime_type = format.get('mimeType', '')
+                if mime_type.startswith('video/'):
+                    video_streams.append(format)
+                elif mime_type.startswith('audio/'):
                     audio_streams.append(format)
 
-        if not audio_streams:
-            print("❌ 未找到音频流")
+        # 优先使用视频流
+        if video_streams:
+            # 选择质量最好的视频流（通常包含音频）
+            best_stream = max(video_streams, key=lambda x: x.get('bitrate', 0))
+            stream_url = best_stream.get('url')
+            stream_type = "视频"
+            print(f"✅ 找到视频流，比特率: {best_stream.get('bitrate', 0)}")
+        elif audio_streams:
+            # 如果没有视频流，使用音频流
+            best_stream = max(audio_streams, key=lambda x: x.get('bitrate', 0))
+            stream_url = best_stream.get('url')
+            stream_type = "音频"
+            print(f"✅ 找到音频流，比特率: {best_stream.get('bitrate', 0)}")
+        else:
+            print("❌ 未找到视频流或音频流")
             return None
 
-        # 选择最佳音频流
-        best_audio = max(audio_streams, key=lambda x: x.get('bitrate', 0))
-        audio_url = best_audio.get('url')
-
-        if not audio_url:
-            print("❌ 音频流URL为空")
+        if not stream_url:
+            print("❌ 流URL为空")
             return None
 
-        print(f"✅ 找到音频流，比特率: {best_audio.get('bitrate', 0)}")
-
-        # 下载音频文件
-        print(f"📥 开始下载音频...")
+        # 下载文件
+        print(f"📥 开始下载{stream_type}...")
 
         # 获取视频标题作为文件名
-        video_title = video_data.get('videoDetails', {}).get('title', 'audio')
+        video_title = video_data.get('videoDetails', {}).get('title', 'video')
         # 清理文件名
         video_title = re.sub(r'[<>:"/\\|?*]', '', video_title)
         video_title = video_title[:100]  # 限制长度
 
-        audio_file = audio_dir / f"{video_title}.m4a"
+        # 根据流类型选择扩展名
+        if stream_type == "视频":
+            media_file = audio_dir / f"{video_title}.mp4"
+        else:
+            media_file = audio_dir / f"{video_title}.m4a"
 
-        # 下载音频
-        response = requests.get(audio_url, stream=True, timeout=60)
+        # 下载媒体文件
+        response = requests.get(stream_url, stream=True, timeout=120)
         response.raise_for_status()
 
         total_size = int(response.headers.get('content-length', 0))
         downloaded = 0
 
-        with audio_file.open('wb') as f:
+        with media_file.open('wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
                 if chunk:
                     f.write(chunk)
@@ -338,9 +354,37 @@ def download_audio_crawl4ai(video_url: str, audio_dir: Path) -> Optional[Path]:
                         progress = (downloaded / total_size) * 100
                         print(f"\r   下载进度: {progress:.1f}%", end='', flush=True)
 
-        print(f"\n✅ 音频下载成功: {audio_file.name}")
-        print(f"   文件大小: {audio_file.stat().st_size / 1024 / 1024:.2f} MB")
-        return audio_file
+        print(f"\n✅ {stream_type}下载成功: {media_file.name}")
+        print(f"   文件大小: {media_file.stat().st_size / 1024 / 1024:.2f} MB")
+
+        # 如果下载的是视频，提取音频
+        if stream_type == "视频":
+            print(f"\n🔧 从视频中提取音频...")
+            audio_file = audio_dir / f"{video_title}.m4a"
+
+            # 使用FFmpeg提取音频
+            try:
+                result = subprocess.run([
+                    'ffmpeg', '-i', str(media_file),
+                    '-vn', '-acodec', 'copy',
+                    '-y', str(audio_file)
+                ], capture_output=True, text=True, timeout=60)
+
+                if result.returncode == 0:
+                    print(f"✅ 音频提取成功: {audio_file.name}")
+                    print(f"   文件大小: {audio_file.stat().st_size / 1024 / 1024:.2f} MB")
+                    # 删除视频文件以节省空间
+                    media_file.unlink()
+                    return audio_file
+                else:
+                    print(f"⚠️ 音频提取失败，尝试使用视频文件")
+                    return media_file
+            except Exception as e:
+                print(f"⚠️ 音频提取失败: {e}")
+                print(f"💡 将直接使用视频文件进行识别")
+                return media_file
+
+        return media_file
 
     except ImportError:
         print("❌ 未安装crawl4ai库")
