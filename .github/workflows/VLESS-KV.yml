@@ -111,7 +111,7 @@ jobs:
             echo "📋 没有需要提交的变更"
           fi
 
-  清理工作流记录:
+  cleanup-workflow-runs:  
     runs-on: ubuntu-latest
     needs: upload-to-r2
 
@@ -127,11 +127,11 @@ jobs:
           工作流ID列表=$(curl -s -H "Authorization: token $GH_TOKEN" \
             "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
             | jq '.workflow_runs[] | select(.status == "completed") | .id')
-          计数=0
+          已清理数量=0
           for 工作流ID in $工作流ID列表; do
             echo "正在删除工作流 ID: $工作流ID"
             curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
               "https://api.github.com/repos/${{ github.repository }}/actions/runs/$工作流ID"
-            ((计数++))
+            ((已清理数量++))
           done
-          echo "✅ 已清理 $计数 个工作流记录"
+          echo "✅ 已清理 $已清理数量 个工作流记录"
