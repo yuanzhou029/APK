@@ -1,9 +1,6 @@
 name: VLESS-KVM
 on:
   workflow_dispatch:
-  schedule:
-    #-     #- cron: '40 22 * # 每天 22:40 UTC（北京时间 6:40）
-    - cron:  '0 8 * * *'     # 每天 08:00 UTC（北京时间 16:00）
 
 jobs:
   upload-to-r2:
@@ -58,10 +55,6 @@ jobs:
           SPEECH_RECOGNITION_ENGINE: "whisper"
         run: |
           python get_token.py
-          python MB.py
-          python 58LA.py
-          python sub.py
-          python yz.py
 
       - name: Sync to Cloudflare KV
         env:
