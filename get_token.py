@@ -238,42 +238,6 @@ def download_audio_crawl4ai(video_url: str, audio_dir: Path) -> Optional[Path]:
                     url=video_url,
                     wait_for="networkidle",
                     page_timeout=30000,
-                    js_code="""
-                        // 等待视频加载
-                        await new Promise(resolve => setTimeout(resolve, 3000));
-
-                        // 尝试多种方法获取视频数据
-                        let videoData = null;
-
-                        // 方法1: 从window对象获取
-                        if (typeof ytInitialPlayerResponse !== 'undefined') {
-                            videoData = ytInitialPlayerResponse;
-                        }
-
-                        // 方法2: 从页面脚本中提取
-                        if (!videoData) {
-                            const scripts = document.querySelectorAll('script');
-                            for (let script of scripts) {
-                                const text = script.textContent;
-                                if (text && text.includes('ytInitialPlayerResponse')) {
-                                    const match = text.match(/var ytInitialPlayerResponse = ({.+?});/);
-                                    if (match) {
-                                        try {
-                                            videoData = JSON.parse(match[1]);
-                                            break;
-                                        } catch (e) {}
-                                    }
-                                }
-                            }
-                        }
-
-                        // 方法3: 从player配置获取
-                        if (!videoData && typeof ytplayer !== 'undefined' && ytplayer.config) {
-                            videoData = ytplayer.config.args;
-                        }
-
-                        return videoData;
-                    """,
                     bypass_cache=True,
                     magic=True,
                     simulate_user=True,
@@ -291,21 +255,39 @@ def download_audio_crawl4ai(video_url: str, audio_dir: Path) -> Optional[Path]:
 
         print(f"✅ 成功获取视频页面")
 
-        # 解析JavaScript返回的数据
-        try:
-            video_data = json.loads(result.extracted_content.get('extracted_json', '{}'))
-            if not video_data or not isinstance(video_data, dict):
-                print("⚠️ 无法解析视频数据，尝试备用方法...")
-                return None
+        # 从HTML中提取ytInitialPlayerResponse数据
+        html = result.html
+        video_data = None
 
-            # 获取streamingData
-            streaming_data = video_data.get('streamingData', {})
-            if not streaming_data:
-                print("⚠️ 未找到streamingData")
-                return None
+        # 方法1: 从HTML中直接提取
+        pattern = r'var ytInitialPlayerResponse = ({.+?});'
+        match = re.search(pattern, html, re.DOTALL)
+        if match:
+            try:
+                video_data = json.loads(match.group(1))
+                print(f"✅ 从HTML中提取到视频数据")
+            except:
+                pass
 
-        except Exception as e:
-            print(f"⚠️ 解析视频数据失败: {e}")
+        # 方法2: 从script标签中提取
+        if not video_data:
+            pattern = r'"ytInitialPlayerResponse":({.+?}),"'
+            match = re.search(pattern, html, re.DOTALL)
+            if match:
+                try:
+                    video_data = json.loads(match.group(1))
+                    print(f"✅ 从script标签中提取到视频数据")
+                except:
+                    pass
+
+        if not video_data:
+            print("⚠️ 无法从页面中提取视频数据")
+            return None
+
+        # 获取streamingData
+        streaming_data = video_data.get('streamingData', {})
+        if not streaming_data:
+            print("⚠️ 未找到streamingData")
             return None
 
         # 获取音频流URL
