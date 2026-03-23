@@ -1,248 +1,557 @@
 import requests
 import re
-import os
+import sys
+import json
 import time
-from urllib.parse import urlparse
+import os
+import subprocess
+import webbrowser
 from pathlib import Path
+from datetime import datetime, timedelta, timezone
+from urllib.parse import urlparse, unquote
+from typing import Optional, Dict, List, Tuple
 
 # ================= 配置区域 =================
-# 项目配置
-github_issue_url = "https://github.com/wzdnzd/aggregator/issues/91"
-github_api_url = "https://api.github.com/repos/wzdnzd/aggregator/issues/91"
-default_domain = "https://proxy-manager-ggeu.onrender.com"
-output_file = "links.txt"
+# YouTube API配置（从环境变量获取）
+YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY', '')
+CHANNEL_ID = os.getenv('CHANNEL_ID', '')
+CHANNEL_USERNAME = os.getenv('CHANNEL_USERNAME', '')
 
-# 网络请求配置
-request_timeout = 15
-max_retries = 3
-retry_delay = 2  # 重试间隔秒数
+# 下载配置
+DOWNLOAD_DIR = "v2ray_configs"
+AUDIO_DIR = "audio_download"
+REQUEST_TIMEOUT = 15
+MAX_RETRIES = 3
+RETRY_DELAY = 2
+
+# 视频搜索配置
+SEARCH_DAYS = 3
+MAX_VIDEOS = 20
+
+# 音频识别配置
+USE_AUDIO_RECOGNITION = os.getenv('USE_AUDIO_RECOGNITION', 'true').lower() == 'true'
+SPEECH_RECOGNITION_ENGINE = os.getenv('SPEECH_RECOGNITION_ENGINE', 'whisper')
 # ===========================================
 
 
-def _fetch_url_content(url: str, description: str, is_api: bool = False) -> str | None:
-    """
-    辅助函数：从指定URL获取内容，并处理重试逻辑。
+def setup_encoding():
+    """设置UTF-8编码（解决Windows下emoji显示问题）"""
+    if sys.platform == 'win32':
+        import io
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
-    参数:
-        url (str): 要请求的URL。
-        description (str): 请求的描述，用于日志输出。
-        is_api (bool): 是否为API请求，如果是则返回JSON格式。
 
-    返回:
-        str: 页面内容，如果请求失败则返回None。
-    """
-    print(f"开始{description}，请求URL: {url}")
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Accept': 'application/vnd.github.v3+json' if is_api else 'text/html'
-    }
-    
-    for retries in range(1, max_retries + 1):
+def create_directories():
+    """创建必要的目录"""
+    download_path = Path(__file__).parent / DOWNLOAD_DIR
+    audio_path = Path(__file__).parent / AUDIO_DIR
+    download_path.mkdir(exist_ok=True)
+    audio_path.mkdir(exist_ok=True)
+    return download_path, audio_path
+
+
+def fetch_youtube_api(url: str, description: str) -> Optional[Dict]:
+    """获取YouTube API数据（带重试机制）"""
+    print(f"📡 {description}...")
+
+    for retry in range(1, MAX_RETRIES + 1):
         try:
-            response = requests.get(url, headers=headers, timeout=request_timeout)
+            response = requests.get(url, timeout=REQUEST_TIMEOUT)
             response.raise_for_status()
-            if is_api:
-                return response.json()
-            return response.text
-        except requests.exceptions.RequestException as e:
-            error_msg = f"{description}请求失败 (尝试 {retries}/{max_retries}): {e}"
-            if retries < max_retries:
-                print(f"{error_msg}, {retry_delay}秒后重试...")
-                time.sleep(retry_delay)
-            else:
-                print(f"{error_msg}")
+            data = response.json()
+
+            if 'error' in data:
+                print(f"❌ API错误: {data['error'].get('message', '未知错误')}")
                 return None
 
+            return data
 
-def extract_from_github_api() -> tuple[str | None, str]:
-    """
-    从GitHub API提取token和服务地址（更可靠的方式）
+        except requests.exceptions.RequestException as e:
+            error_msg = f"{description}失败 (尝试 {retry}/{MAX_RETRIES}): {e}"
+            if retry < MAX_RETRIES:
+                print(f"⚠️ {error_msg}, {RETRY_DELAY}秒后重试...")
+                time.sleep(RETRY_DELAY)
+            else:
+                print(f"❌ {error_msg}")
+                return None
 
-    返回:
-        tuple: (token, service_url)
-    """
-    data = _fetch_url_content(github_api_url, "获取Issue数据(API)", is_api=True)
-    if not data:
-        return None, default_domain
-    
-    body = data.get('body', '')
-    if not body:
-        print("Issue body为空")
-        return None, default_domain
-    
-    token = None
-    service_url = default_domain
-    
-    # 从Markdown表格中提取token
-    # 匹配格式: |  token  |  鉴权  |  是  |  -  |  -  |  `xxxxx`  |
-    token_match = re.search(r'\|\s*token\s*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|\s*`([a-z0-9]{16,40})`\s*\|', body)
-    if token_match:
-        token = token_match.group(1)
-        print(f"✅ 成功从表格提取到token: {token[:4]}****{token[-4:]}")
-    else:
-        # 备用方案：直接搜索反引号包裹的32位token
-        backup_match = re.search(r'`([a-z0-9]{32})`', body)
-        if backup_match:
-            token = backup_match.group(1)
-            print(f"✅ 成功从备用方案提取到token: {token[:4]}****{token[-4:]}")
-        else:
-            print("❌ 未找到符合格式的token")
-    
-    # 提取服务地址
-    # 匹配格式: **在线服务接口地址**：https://xxx.xxx/api/v1/subscribe?token=xxx
-    url_match = re.search(r'\*\*在线服务接口地址\*\*[：:]\s*(https?://[^\s\n]+)', body)
-    if url_match:
-        full_url = url_match.group(1)
-        # 解析URL，提取协议和域名部分
-        parsed_url = urlparse(full_url)
-        service_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
-        print(f"✅ 成功提取到服务地址: {service_url}")
-    else:
-        print(f"⚠️ 未找到服务地址，使用默认值: {default_domain}")
-    
-    return token, service_url
-
-
-def extract_unified_token() -> str | None:
-    """
-    从GitHub Issue提取统一token字符串（HTML方式，作为备用）
-
-    返回:
-        str: 提取到的token，如果提取失败则返回None
-    """
-    html_content = _fetch_url_content(github_issue_url, "获取token(HTML)")
-    if not html_content:
-        return None
-
-    # 方案1：查找具有class="notranslate"属性的<code>标签中的token
-    match = re.search(r'<code[^>]*>([a-z0-9]{32})</code>', html_content)
-    if match:
-        token = match.group(1)
-        return token
-    
-    # 方案2：从表格单元格中提取
-    match = re.search(r'<td[^>]*>\s*<code[^>]*>([a-z0-9]{16,40})</code>\s*</td>', html_content)
-    if match:
-        token = match.group(1)
-        return token
-    
-    print("未找到符合格式的token")
     return None
 
 
-def extract_service_url() -> str:
-    """
-    从GitHub Issue提取在线服务接口的域名（HTML方式，作为备用）
+def get_channel_id_from_username(username: str) -> Optional[str]:
+    """通过用户名获取频道ID"""
+    url = f"https://www.googleapis.com/youtube/v3/channels?key={YOUTUBE_API_KEY}&part=id&forHandle={username}"
+    data = fetch_youtube_api(url, f"获取频道ID ({username})")
 
-    返回:
-        str: 提取到的域名，如果提取失败则返回默认域名
-    """
-    html_content = _fetch_url_content(github_issue_url, "获取服务URL(HTML)")
-    if not html_content:
-        return default_domain
+    if data and 'items' in data and len(data['items']) > 0:
+        channel_id = data['items'][0]['id']
+        print(f"✅ 成功获取频道ID: {channel_id}")
+        return channel_id
 
-    # 匹配 a 标签中的 href 属性
-    match = re.search(r'<strong>在线服务接口地址</strong>[：:]\s*<a href="(https?://[^"]+)"', html_content)
-    if match:
-        full_url = match.group(1)
-        full_url = full_url.replace('&amp;', '&')
-        parsed_url = urlparse(full_url)
-        domain = f"{parsed_url.scheme}://{parsed_url.netloc}"
-        return domain
-
-    print(f"未找到符合格式的域名，使用默认值: {default_domain}")
-    return default_domain
+    return None
 
 
-def generate_subscribe_url(token: str, base_url: str) -> str:
-    """
-    生成订阅URL
+def extract_date_from_title(title: str) -> Optional[Tuple[datetime, str]]:
+    """从视频标题中提取日期"""
+    date_patterns = [
+        (r'(\d{4})年(\d{1,2})月(\d{1,2})日', '%Y-%m-%d'),
+        (r'(\d{4})-(\d{1,2})-(\d{1,2})', '%Y-%m-%d'),
+        (r'(\d{4})/(\d{1,2})/(\d{1,2})', '%Y-%m-%d'),
+        (r'(\d{4})\.(\d{1,2})\.(\d{1,2})', '%Y-%m-%d'),
+        (r'(\d{1,2})月(\d{1,2})日', None),
+    ]
 
-    参数:
-        token: 用于订阅的token
-        base_url: 服务基础地址
+    for pattern, date_format in date_patterns:
+        match = re.search(pattern, title)
+        if match:
+            if date_format:
+                try:
+                    year, month, day = match.groups()
+                    date_str = f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+                    date_obj = datetime.strptime(date_str, date_format)
+                    return date_obj, date_str
+                except ValueError:
+                    continue
+            else:
+                try:
+                    month, day = match.groups()
+                    current_year = datetime.now().year
+                    date_str = f"{current_year}-{month.zfill(2)}-{day.zfill(2)}"
+                    date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+                    return date_obj, date_str
+                except ValueError:
+                    continue
 
-    返回:
-        str: 完整的订阅URL
-    """
-    if not token:
-        raise ValueError("token不能为空")
+    return None
 
-    # 固定的后半部分
-    fixed_path = "/api/v1/subscribe?token={}&target=v2ray&list=true"
-    subscribe_url = base_url + fixed_path.format(token)
-    return subscribe_url
+
+def get_latest_video_with_date(channel_id: str) -> Optional[Dict]:
+    """获取频道中带有日期的最新视频"""
+    url = f"https://www.googleapis.com/youtube/v3/search?key={YOUTUBE_API_KEY}&channelId={channel_id}&part=id,snippet&order=date&maxResults={MAX_VIDEOS}"
+    data = fetch_youtube_api(url, "获取频道视频列表")
+
+    if not data or 'items' not in data:
+        return None
+
+    print(f"\n🔍 正在分析 {len(data['items'])} 个视频...")
+
+    videos_with_date = []
+    for item in data['items']:
+        if item['id']['kind'] != 'youtube#video':
+            continue
+
+        video_id = item['id']['videoId']
+        snippet = item['snippet']
+        title = snippet['title']
+        published_at = datetime.fromisoformat(snippet['publishedAt'].replace('Z', '+00:00'))
+
+        date_info = extract_date_from_title(title)
+        if date_info:
+            date_obj, date_str = date_info
+            videos_with_date.append({
+                'video_id': video_id,
+                'title': title,
+                'date': date_obj,
+                'date_str': date_str,
+                'published_at': published_at,
+                'url': f"https://www.youtube.com/watch?v={video_id}"
+            })
+            print(f"  ✅ 找到带日期的视频: {title}")
+            print(f"     提取日期: {date_str}")
+
+    if not videos_with_date:
+        print("❌ 未找到带有日期的视频")
+        return None
+
+    videos_with_date.sort(key=lambda x: x['date'], reverse=True)
+    latest_video = videos_with_date[0]
+
+    print(f"\n🎯 自动选择最新视频:")
+    print(f"   标题: {latest_video['title']}")
+    print(f"   日期: {latest_video['date_str']}")
+    print(f"   链接: {latest_video['url']}")
+
+    return latest_video
+
+
+def get_video_details(video_id: str) -> Optional[Dict]:
+    """获取视频详细信息（包括完整描述）"""
+    url = f"https://www.googleapis.com/youtube/v3/videos?key={YOUTUBE_API_KEY}&part=snippet&id={video_id}"
+    data = fetch_youtube_api(url, f"获取视频详情 ({video_id})")
+
+    if data and 'items' in data and len(data['items']) > 0:
+        return data['items'][0]
+
+    return None
+
+
+def extract_paste_to_url(description: str) -> Optional[str]:
+    """从视频描述中提取paste.to下载地址"""
+    pattern = r'https://paste\.to/[^\s\n<>"]+'
+    matches = re.findall(pattern, description)
+
+    if matches:
+        url = matches[0]
+        print(f"✅ 成功提取到paste.to下载地址: {url}")
+        return url
+
+    print("❌ 未找到paste.to下载地址")
+    return None
+
+
+def download_audio_yt_dlp(video_url: str, audio_dir: Path) -> Optional[Path]:
+    """使用yt-dlp下载音频"""
+    print("\n🔍 开始下载音频...")
+
+    try:
+        import yt_dlp
+
+        ydl_opts = {
+            'format': 'bestaudio/best',
+            'outtmpl': str(audio_dir / '%(title)s.%(ext)s'),
+            'quiet': True,
+            'no_warnings': True,
+        }
+
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(video_url, download=True)
+            audio_filename = ydl.prepare_filename(info)
+
+        # 查找下载的文件
+        audio_files = list(audio_dir.glob('*.mp4')) + list(audio_dir.glob('*.mp3')) + list(audio_dir.glob('*.webm'))
+        if audio_files:
+            audio_file = audio_files[-1]  # 获取最新的文件
+            print(f"✅ 音频下载成功: {audio_file.name}")
+            print(f"   文件大小: {audio_file.stat().st_size / 1024 / 1024:.2f} MB")
+            return audio_file
+        else:
+            print("❌ 未找到下载的音频文件")
+            return None
+
+    except ImportError:
+        print("❌ 未安装yt-dlp库")
+        return None
+    except Exception as e:
+        print(f"❌ 音频下载失败: {e}")
+        return None
+
+
+def convert_audio_to_wav(input_file: Path, output_file: Path) -> bool:
+    """使用ffmpeg将音频转换为WAV格式（可选，whisper不需要）"""
+    print(f"\n🔍 音频格式转换（whisper不需要，跳过）...")
+    print(f"💡 whisper可以直接识别mp4/mp3格式，无需转换")
+    return False  # 直接返回False，跳过转换
+
+
+def recognize_audio_whisper(audio_file: Path) -> Optional[str]:
+    """使用whisper识别音频（直接识别mp4/mp3，需要FFmpeg解码）"""
+    print(f"\n🔍 使用whisper识别音频...")
+
+    try:
+        import whisper
+
+        print(f"   音频文件: {audio_file.name}")
+        print(f"   文件大小: {audio_file.stat().st_size / 1024 / 1024:.2f} MB")
+
+        # 检查FFmpeg是否可用（whisper需要FFmpeg解码音频）
+        try:
+            result = subprocess.run(['ffmpeg', '-version'], capture_output=True, text=True, timeout=5)
+            if result.returncode != 0:
+                print("❌ whisper需要FFmpeg来解码音频")
+                return None
+            else:
+                print("✅ FFmpeg检测成功")
+        except (subprocess.TimeoutExpired, FileNotFoundError):
+            print("❌ whisper需要FFmpeg来解码音频")
+            return None
+
+        print(f"\n   加载whisper模型...")
+        model_size = 'base'  # 可选: tiny, base, small, medium, large
+        print(f"   模型大小: {model_size}")
+        print(f"💡 首次运行会自动下载模型，可能需要一些时间")
+
+        model = whisper.load_model(model_size)
+        print(f"✅ 模型加载成功")
+
+        print(f"\n   正在识别音频（可能需要几分钟）...")
+        print(f"💡 whisper使用FFmpeg解码mp4格式")
+        result = model.transcribe(str(audio_file), language='zh')
+
+        text = result['text']
+        print(f"✅ 音频识别成功")
+        print(f"   识别文字长度: {len(text)} 字符")
+
+        # 显示识别结果的前200个字符
+        if len(text) > 200:
+            print(f"   识别文字预览: {text[:200]}...")
+        else:
+            print(f"   识别文字: {text}")
+
+        return text
+
+    except ImportError:
+        print("❌ 未安装whisper库")
+        return None
+    except Exception as e:
+        print(f"❌ 音频识别失败: {e}")
+        return None
+
+
+def recognize_audio_speech_recognition(audio_file: Path) -> Optional[str]:
+    """使用SpeechRecognition识别音频"""
+    print(f"\n🔍 使用SpeechRecognition识别音频...")
+
+    try:
+        import speech_recognition as sr
+
+        r = sr.Recognizer()
+
+        print(f"   读取音频文件...")
+        with sr.AudioFile(str(audio_file)) as source:
+            audio_data = r.record(source)
+
+        print(f"   正在识别音频（需要网络）...")
+        try:
+            text = r.recognize_google(audio_data, language='zh-CN')
+            print(f"✅ 音频识别成功")
+            print(f"   识别文字长度: {len(text)} 字符")
+            return text
+        except sr.UnknownValueError:
+            print("❌ 无法识别音频内容")
+            return None
+        except sr.RequestError as e:
+            print(f"❌ 识别服务错误: {e}")
+            return None
+
+    except ImportError:
+        print("❌ 未安装SpeechRecognition库")
+        return None
+    except Exception as e:
+        print(f"❌ 音频识别失败: {e}")
+        return None
+
+
+def extract_password_from_text(text: str) -> Optional[str]:
+    """从文字中提取密码"""
+    if not text:
+        return None
+
+    print(f"\n🔍 从文字中提取密码...")
+
+    # 常见的密码格式
+    password_patterns = [
+        r'密码\s*[:：是]\s*([a-zA-Z0-9]+)',
+        r'提取码\s*[:：是]\s*([a-zA-Z0-9]+)',
+        r'访问码\s*[:：是]\s*([a-zA-Z0-9]+)',
+        r'下载密码\s*[:：是]\s*([a-zA-Z0-9]+)',
+        r'解压密码\s*[:：是]\s*([a-zA-Z0-9]+)',
+        r'pass\s*[:：是]\s*([a-zA-Z0-9]+)',
+        r'password\s*[:：is]\s*([a-zA-Z0-9]+)',
+    ]
+
+    for pattern in password_patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            password = match.group(1)
+            print(f"✅ 找到密码: {password}")
+            return password
+
+    print("⚠️ 未找到密码")
+    return None
+
+
+def extract_password_from_description(description: str) -> Optional[str]:
+    """从视频描述中提取密码"""
+    print(f"\n🔍 从描述中提取密码...")
+
+    password_patterns = [
+        r'密码\s*[:：是]\s*([a-zA-Z0-9]+)',
+        r'提取码\s*[:：是]\s*([a-zA-Z0-9]+)',
+        r'访问码\s*[:：是]\s*([a-zA-Z0-9]+)',
+        r'下载密码\s*[:：是]\s*([a-zA-Z0-9]+)',
+        r'解压密码\s*[:：是]\s*([a-zA-Z0-9]+)',
+    ]
+
+    for pattern in password_patterns:
+        match = re.search(pattern, description, re.IGNORECASE)
+        if match:
+            password = match.group(1)
+            print(f"✅ 从描述中找到密码: {password}")
+            return password
+
+    print("⚠️ 描述中未找到密码")
+    return None
+
+
+def check_config() -> bool:
+    """检查配置是否完整"""
+    errors = []
+
+    if not YOUTUBE_API_KEY:
+        errors.append("YouTube API密钥未配置（环境变量 YOUTUBE_API_KEY）")
+
+    if not CHANNEL_ID and not CHANNEL_USERNAME:
+        errors.append("频道ID或用户名未配置（环境变量 CHANNEL_ID 或 CHANNEL_USERNAME）")
+
+    if errors:
+        print("❌ 配置错误:")
+        for error in errors:
+            print(f"   - {error}")
+        return False
+
+    return True
+
+
+def test_api_connection() -> bool:
+    """测试YouTube API连接"""
+    print("\n🔍 测试YouTube API连接...")
+
+    if CHANNEL_ID:
+        url = f"https://www.googleapis.com/youtube/v3/channels?key={YOUTUBE_API_KEY}&part=snippet&id={CHANNEL_ID}"
+    else:
+        url = f"https://www.googleapis.com/youtube/v3/channels?key={YOUTUBE_API_KEY}&part=snippet&forHandle={CHANNEL_USERNAME}"
+
+    data = fetch_youtube_api(url, "测试API连接")
+
+    if data and 'items' in data and len(data['items']) > 0:
+        channel_title = data['items'][0]['snippet']['title']
+        print(f"✅ API连接成功！")
+        print(f"   频道名称: {channel_title}")
+        return True
+    else:
+        print("❌ API连接失败")
+        return False
 
 
 def main():
-    """主函数，执行脚本主要逻辑"""
-    # 检查并创建输出文件
-    links_path = Path(__file__).parent / output_file
-    if not links_path.exists():
-        try:
-            links_path.touch()
-            print(f"{output_file} 文件不存在，已创建新文件")
-        except OSError as e:
-            print(f"创建{output_file}文件失败: {e}")
-            return
+    """主函数 - 完全自动化流程（GitHub Actions版本）"""
+    setup_encoding()
+    print("=" * 80)
+    print("🚀 YouTube V2Ray/Clash配置文件自动化助手 v3.3（GitHub Actions版）")
+    print("=" * 80)
+    print("⚡ 完全自动化模式：音频下载 + whisper识别 + 密码提取")
+    print("💡 使用环境变量传递配置信息")
+    print("=" * 80)
+
+    # 检查配置
+    if not check_config():
+        raise RuntimeError("❌ 配置错误：请检查环境变量")
+
+    # 测试API连接
+    if not test_api_connection():
+        raise RuntimeError("❌ API连接失败")
+
+    # 创建目录
+    download_dir, audio_dir = create_directories()
+    print(f"✅ 下载目录: {download_dir}")
+    print(f"✅ 音频目录: {audio_dir}")
+
+    # 获取频道ID
+    channel_id = CHANNEL_ID
+    if CHANNEL_USERNAME and not channel_id:
+        print(f"\n🔍 通过用户名获取频道ID: {CHANNEL_USERNAME}")
+        channel_id = get_channel_id_from_username(CHANNEL_USERNAME)
+        if not channel_id:
+            raise RuntimeError("❌ 无法获取频道ID")
+
+    # 步骤1：自动获取最新带日期的视频
+    print("\n" + "=" * 80)
+    print("📺 步骤1：自动识别最新视频")
+    print("=" * 80)
+
+    latest_video = get_latest_video_with_date(channel_id)
+    if not latest_video:
+        raise RuntimeError("❌ 无法获取最新视频")
+
+    # 获取视频详细信息
+    print(f"\n🔍 获取视频详细信息...")
+    video_details = get_video_details(latest_video['video_id'])
+
+    if video_details:
+        full_description = video_details['snippet'].get('description', '')
     else:
-        print(f"{output_file} 文件已存在")
+        full_description = ''
 
-    # 优先使用GitHub API提取（更可靠）
-    print("\n" + "=" * 50)
-    print("📡 尝试通过GitHub API获取数据...")
-    print("=" * 50)
-    
-    token, service_url = extract_from_github_api()
-    
-    # 如果API方式失败，尝试HTML方式
-    if not token:
-        print("\n" + "=" * 50)
-        print("📡 API方式失败，尝试HTML方式...")
-        print("=" * 50)
-        token = extract_unified_token()
-        if token:
-            service_url = extract_service_url()
-    
-    if token:
-        try:
-            subscribe_url = generate_subscribe_url(token, service_url)
-            print("\n" + "=" * 50)
-            print("🎉 获取成功！")
-            print("=" * 50)
-            print(f"Token: {token[:4]}****{token[-4:]}")
-            print(f"服务地址: {service_url}")
-            print(f"订阅URL: {subscribe_url}")
+    # 步骤2：自动提取paste.to下载地址
+    print("\n" + "=" * 80)
+    print("📥 步骤2：自动提取下载地址")
+    print("=" * 80)
 
-            # 读取现有内容，检查是否已存在相同URL
-            existing_urls = set()
-            if links_path.exists():
-                with links_path.open("r", encoding="utf-8") as f:
-                    existing_urls = set(line.strip() for line in f if line.strip())
-            
-            if subscribe_url in existing_urls:
-                print(f"\n⚠️ 该订阅URL已存在于{output_file}中，跳过写入")
+    download_url = extract_paste_to_url(full_description)
+    if not download_url:
+        raise RuntimeError("❌ 无法提取下载地址")
+
+    # 步骤3：自动获取密码
+    print("\n" + "=" * 80)
+    print("🔑 步骤3：自动获取密码")
+    print("=" * 80)
+
+    password = None
+
+    # 方法1：从描述中获取
+    password = extract_password_from_description(full_description)
+
+    # 方法2：使用音频识别
+    if not password and USE_AUDIO_RECOGNITION:
+        print("\n描述中未找到密码，使用音频识别...")
+
+        # 3.1 下载音频
+        audio_file = download_audio_yt_dlp(latest_video['url'], audio_dir)
+        if not audio_file:
+            raise RuntimeError("❌ 音频下载失败")
+        else:
+            # 3.2 直接使用whisper识别（无需转换）
+            if SPEECH_RECOGNITION_ENGINE == "whisper":
+                text = recognize_audio_whisper(audio_file)
+                if not text:
+                    raise RuntimeError("❌ 音频识别失败")
             else:
-                # 保存订阅URL到文件
-                with links_path.open("a", encoding="utf-8") as f:
-                    f.write(subscribe_url + "\n")
-                print(f"\n✅ 订阅URL已成功追加到{output_file}")
-            print("=" * 50)
-        except ValueError as e:
-            print(f"❌ 生成订阅URL失败: {e}")
-        except Exception as e:
-            print(f"❌ 处理订阅URL时发生未知错误: {e}")
-    else:
-        print("\n" + "=" * 50)
-        print("❌ 未能获取到token，请检查：")
-        print("   1. 网络连接是否正常")
-        print("   2. GitHub Issue是否可访问")
-        print("   3. Issue内容格式是否有变化")
-        print("=" * 50)
+                # 如果使用SpeechRecognition，需要转换为WAV格式
+                wav_file = audio_dir / f"{audio_file.stem}.wav"
+                if convert_audio_to_wav(audio_file, wav_file):
+                    text = recognize_audio_speech_recognition(wav_file)
+                    if not text:
+                        raise RuntimeError("❌ 音频识别失败")
+                else:
+                    raise RuntimeError("❌ 音频转换失败")
+
+            # 3.3 提取密码
+            if text:
+                password = extract_password_from_text(text)
+
+    # 检查密码是否获取成功
+    if not password:
+        raise RuntimeError("❌ 自动获取密码失败，无法继续执行")
+
+    # 步骤4：保存下载信息
+    print("\n" + "=" * 80)
+    print("💾 步骤4：保存下载信息")
+    print("=" * 80)
+
+    download_info_file = download_dir / "download_info.txt"
+    with download_info_file.open("w", encoding="utf-8") as f:
+        f.write(f"视频标题: {latest_video['title']}\n")
+        f.write(f"视频日期: {latest_video['date_str']}\n")
+        f.write(f"视频链接: {latest_video['url']}\n")
+        f.write(f"下载地址: {download_url}\n")
+        f.write(f"密码: {password}\n")
+        f.write(f"获取时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+
+    print(f"✅ 下载信息已保存到: {download_info_file}")
+
+    # 完成
+    print("\n" + "=" * 80)
+    print("✅ 自动化流程完成！")
+    print("=" * 80)
+    print(f"\n📋 总结:")
+    print(f"   视频标题: {latest_video['title']}")
+    print(f"   视频日期: {latest_video['date_str']}")
+    print(f"   下载地址: {download_url}")
+    print(f"   密码: {password}")
+    print(f"\n💡 使用下载地址和密码获取订阅链接")
+    print("=" * 80)
 
 
 if __name__ == "__main__":
-    print("=" * 50)
-    print("🚀 GitHub Token 提取工具 v2.0")
-    print("=" * 50)
     main()
