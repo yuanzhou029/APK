@@ -1,4 +1,4 @@
-name: VLESS-节点
+name: VLESS-KVM
 on:
   workflow_dispatch:
   schedule:
