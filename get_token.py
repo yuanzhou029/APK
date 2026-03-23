@@ -242,15 +242,37 @@ def download_audio_crawl4ai(video_url: str, audio_dir: Path) -> Optional[Path]:
                         // 等待视频加载
                         await new Promise(resolve => setTimeout(resolve, 3000));
 
-                        // 尝试获取视频信息
-                        const videoData = ytInitialPlayerResponse || {};
-                        const streamingData = videoData.streamingData || {};
+                        // 尝试多种方法获取视频数据
+                        let videoData = null;
 
-                        // 返回音频流URL
-                        return {
-                            streamingData: streamingData,
-                            videoDetails: videoData.videoDetails || {}
-                        };
+                        // 方法1: 从window对象获取
+                        if (typeof ytInitialPlayerResponse !== 'undefined') {
+                            videoData = ytInitialPlayerResponse;
+                        }
+
+                        // 方法2: 从页面脚本中提取
+                        if (!videoData) {
+                            const scripts = document.querySelectorAll('script');
+                            for (let script of scripts) {
+                                const text = script.textContent;
+                                if (text && text.includes('ytInitialPlayerResponse')) {
+                                    const match = text.match(/var ytInitialPlayerResponse = ({.+?});/);
+                                    if (match) {
+                                        try {
+                                            videoData = JSON.parse(match[1]);
+                                            break;
+                                        } catch (e) {}
+                                    }
+                                }
+                            }
+                        }
+
+                        // 方法3: 从player配置获取
+                        if (!videoData && typeof ytplayer !== 'undefined' && ytplayer.config) {
+                            videoData = ytplayer.config.args;
+                        }
+
+                        return videoData;
                     """,
                     bypass_cache=True,
                     magic=True,
@@ -271,10 +293,19 @@ def download_audio_crawl4ai(video_url: str, audio_dir: Path) -> Optional[Path]:
 
         # 解析JavaScript返回的数据
         try:
-            extracted_data = json.loads(result.extracted_content.get('extracted_json', '{}'))
-            streaming_data = extracted_data.get('streamingData', {})
-        except:
-            print("⚠️ 无法解析视频数据，尝试其他方法...")
+            video_data = json.loads(result.extracted_content.get('extracted_json', '{}'))
+            if not video_data or not isinstance(video_data, dict):
+                print("⚠️ 无法解析视频数据，尝试备用方法...")
+                return None
+
+            # 获取streamingData
+            streaming_data = video_data.get('streamingData', {})
+            if not streaming_data:
+                print("⚠️ 未找到streamingData")
+                return None
+
+        except Exception as e:
+            print(f"⚠️ 解析视频数据失败: {e}")
             return None
 
         # 获取音频流URL
@@ -302,7 +333,7 @@ def download_audio_crawl4ai(video_url: str, audio_dir: Path) -> Optional[Path]:
         print(f"📥 开始下载音频...")
 
         # 获取视频标题作为文件名
-        video_title = extracted_data.get('videoDetails', {}).get('title', 'audio')
+        video_title = video_data.get('videoDetails', {}).get('title', 'audio')
         # 清理文件名
         video_title = re.sub(r'[<>:"/\\|?*]', '', video_title)
         video_title = video_title[:100]  # 限制长度
