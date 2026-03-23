@@ -1,4 +1,4 @@
-name: VLESS-KVM
+name: VLESS-节点
 on:
   workflow_dispatch:
   schedule:
@@ -25,13 +25,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests telethon awscli beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller crawl4ai
           pip install --upgrade requests urllib3 chardet charset-normalizer
-          pip install yt-dlp openai-whisper
+          pip install yt-dlp openai-whisper Pillow pytesseract pytesseract-langpack
           playwright install chromium
 
       - name: Install FFmpeg
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
+
+      - name: Install Tesseract OCR
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-chi-sim tesseract-ocr-chi-tra
 
       - name: Clear links.txt content
         run: |
