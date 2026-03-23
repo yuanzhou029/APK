@@ -80,12 +80,12 @@ def extract_subscription_links(page_content):
     - https://mm.mibei77.com/202601/01.05Clasholryaml
     """
     # 更新正则表达式以匹配实际格式：年月/月.日+随机字符.扩展名
-    pattern = re.compile(r'(https?://mm\.mibei77\.com/\d{6}/\d{2}\.\d{2}[a-zA-Z0-9]+\.(?:txt|yaml))')
+    pattern = re.compile(r'(https?://mm\.mibei77\.com/\d{6}/\d{2}\.\d{2}[a-zA-Z0-9]+\.(?:yaml))') #  ?:txt|yaml
     links = pattern.findall(page_content)
     
     # 备用方案：更宽松的匹配
     if not links:
-        pattern2 = re.compile(r'(https?://mm\.mibei77\.com/[^\s"\'<>]+\.(?:txt|yaml))')
+        pattern2 = re.compile(r'(https?://mm\.mibei77\.com/[^\s"\'<>]+\.(?:yaml))')  # ?:txt|yaml
         links = pattern2.findall(page_content)
     
     return links
