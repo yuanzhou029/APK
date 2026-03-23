@@ -208,7 +208,111 @@ def extract_paste_to_url(description: str) -> Optional[str]:
     return None
 
 
-def download_audio_crawl4ai(video_url: str, audio_dir: Path) -> Optional[Path]:
+def extract_password_from_video_screenshot(video_url: str, audio_dir: Path) -> Optional[str]:
+    """使用OCR识别视频截图中的文字来提取密码"""
+    print("\n🔍 开始识别视频截图中的文字...")
+    print("💡 使用OCR技术提取视频中的密码...")
+
+    try:
+        import crawl4ai
+        import asyncio
+        import re
+        import json
+        import subprocess
+        from PIL import Image
+        import pytesseract  # OCR库
+
+        # 提取视频ID
+        video_id = re.search(r'v=([^&]+)', video_url)
+        if not video_id:
+            video_id = re.search(r'youtu\.be/([^?]+)', video_url)
+        if not video_id:
+            print("❌ 无法提取视频ID")
+            return None
+
+        video_id = video_id.group(1)
+        print(f"   视频ID: {video_id}")
+
+        # 使用crawl4ai获取视频页面和截图
+        async def screenshot_video():
+            async with crawl4ai.AsyncWebCrawler(verbose=False) as crawler:
+                result = await crawler.arun(
+                    url=video_url,
+                    wait_for="networkidle",
+                    page_timeout=30000,
+                    bypass_cache=True,
+                    magic=True,
+                    simulate_user=True,
+                    override_navigator=True,
+                    screenshot=True,  # 启用截图功能
+                )
+                return result
+
+        # 运行异步爬虫
+        import asyncio
+        result = asyncio.run(screenshot_video())
+
+        if not result.success:
+            print(f"❌ 爬虫执行失败: {result.error_message}")
+            return None
+
+        print(f"✅ 成功获取视频页面和截图")
+
+        # 检查是否有截图
+        if not hasattr(result, 'screenshot') or not result.screenshot:
+            print("❌ 未获取到截图")
+            return None
+
+        # 保存截图
+        screenshot_path = audio_dir / f"{video_id}_screenshot.png"
+        with screenshot_path.open('wb') as f:
+            f.write(result.screenshot)
+
+        print(f"✅ 截图已保存: {screenshot_path.name}")
+        print(f"   文件大小: {screenshot_path.stat().st_size / 1024:.2f} KB")
+
+        # 使用OCR识别文字
+        print(f"\n🔍 使用OCR识别文字...")
+        try:
+            # 使用pytesseract进行OCR
+            image = Image.open(screenshot_path)
+            text = pytesseract.image_to_string(image, lang='chi_sim+eng')  # 支持中文和英文
+
+            print(f"✅ OCR识别成功")
+            print(f"   识别文字长度: {len(text)} 字符")
+
+            # 显示识别结果的前200个字符
+            if len(text) > 200:
+                print(f"   识别文字预览: {text[:200]}...")
+            else:
+                print(f"   识别文字: {text}")
+
+            # 从识别的文字中提取密码
+            password = extract_password_from_text(text)
+
+            # 删除截图文件
+            screenshot_path.unlink()
+
+            return password
+
+        except ImportError:
+            print("❌ 未安装pytesseract库")
+            return None
+        except Exception as e:
+            print(f"❌ OCR识别失败: {e}")
+            # 删除截图文件
+            if screenshot_path.exists():
+                screenshot_path.unlink()
+            return None
+
+    except ImportError:
+        print("❌ 未安装必要的库（crawl4ai, pytesseract, PIL）")
+        return None
+    except Exception as e:
+        print(f"❌ 视频截图识别失败: {e}")
+        import traceback
+        traceback.print_exc()
+        return None
     """使用crawl4ai爬虫架构下载音频"""
     print("\n🔍 开始下载音频...")
     print("💡 使用crawl4ai爬虫架构（模拟真实浏览器）...")
@@ -284,10 +388,32 @@ def download_audio_crawl4ai(video_url: str, audio_dir: Path) -> Optional[Path]:
             print("⚠️ 无法从页面中提取视频数据")
             return None
 
-        # 获取streamingData
+        # 调试：显示video_data的键
+        print(f"   video_data的键: {list(video_data.keys())}")
+
+        # 获取streamingData（可能在不同位置）
         streaming_data = video_data.get('streamingData', {})
         if not streaming_data:
+            # 尝试其他位置
+            streaming_data = video_data.get('streaming_data', {})
+        if not streaming_data:
+            # 尝试从其他嵌套结构中获取
+            if 'args' in video_data:
+                streaming_data = video_data['args'].get('streamingData', {})
+        if not streaming_data:
+            # 尝试直接从video_data中查找
+            for key, value in video_data.items():
+                if 'streaming' in key.lower():
+                    streaming_data = value
+                    print(f"   从键 '{key}' 中找到streamingData")
+                    break
+
+        if not streaming_data:
             print("⚠️ 未找到streamingData")
+            # 显示video_data的部分内容以便调试
+            print(f"   video_data类型: {type(video_data)}")
+            if isinstance(video_data, dict):
+                print(f"   video_data包含的主要键: {list(video_data.keys())[:10]}")
             return None
 
         # 获取视频流URL（优先下载视频，因为视频流通常更容易获取）
@@ -733,9 +859,14 @@ def main():
     # 方法1：从描述中获取
     password = extract_password_from_description(full_description)
 
-    # 方法2：使用音频识别
+    # 方法2：使用OCR识别视频截图
+    if not password:
+        print("\n描述中未找到密码，使用OCR识别视频截图...")
+        password = extract_password_from_video_screenshot(latest_video['url'], audio_dir)
+
+    # 方法3：使用音频识别
     if not password and USE_AUDIO_RECOGNITION:
-        print("\n描述中未找到密码，使用音频识别...")
+        print("\n描述和OCR中未找到密码，使用音频识别...")
 
         # 3.1 下载音频 - 优先使用crawl4ai
         audio_file = download_audio_crawl4ai(latest_video['url'], audio_dir)
