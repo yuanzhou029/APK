@@ -253,6 +253,16 @@ def extract_password_from_video_screenshot(video_url: str, screenshots_dir: Path
                     simulate_user=True,
                     override_navigator=True,
                     screenshot=True,  # 截取初始页面
+                    js_code="""
+                        // 点击播放按钮开始播放
+                        const playButton = document.querySelector('.ytp-play-button');
+                        if (playButton) {
+                            playButton.click();
+                            console.log('已点击播放按钮');
+                        } else {
+                            console.log('未找到播放按钮');
+                        }
+                    """
                 )
                 
                 if not result.success:
@@ -261,12 +271,14 @@ def extract_password_from_video_screenshot(video_url: str, screenshots_dir: Path
 
                 print(f"✅ 成功获取视频页面")
                 
-                # 步骤2：等待1分钟后再次截图（模拟视频播放）
-                print(f"⏱️  等待60秒让视频播放...")
+                # 步骤2：等待60秒让视频真正播放
+                print(f"⏱️ 等待60秒让视频播放...")
+                print(f"💡 视频正在播放中...")
                 import time
                 time.sleep(60)
                 
-                # 步骤3：再次截图（播放后的页面）
+                # 步骤3：截图（视频播放60秒后的状态）
+                print(f"📸 截取播放60秒后的页面...")
                 result_after = await crawler.arun(
                     url=video_url,
                     wait_for="networkidle",
@@ -277,10 +289,11 @@ def extract_password_from_video_screenshot(video_url: str, screenshots_dir: Path
                     override_navigator=True,
                     screenshot=True,
                     js_code="""
-                        // 点击播放按钮
-                        const playButton = document.querySelector('.ytp-play-button');
-                        if (playButton) {
-                            playButton.click();
+                        // 暂停视频
+                        const pauseButton = document.querySelector('.ytp-play-button');
+                        if (pauseButton) {
+                            pauseButton.click();
+                            console.log('已暂停视频');
                         }
                     """
                 )
