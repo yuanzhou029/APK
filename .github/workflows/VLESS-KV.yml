@@ -1,10 +1,9 @@
-name: VLESS-KV
-
+name: VLESS-节点
 on:
   workflow_dispatch:
   schedule:
-    #- cron: '40 22 * * *'     # 每天 22:40 UTC（北京时间 6:40）
-    - cron: '0 8 * * *'     # 每天 08:00 UTC（北京时间 16:00）
+    #-     #- cron: '40 22 * # 每天 22:40 UTC（北京时间 6:40）
+    - cron:  '0 8 * * *'     # 每天 08:00 UTC（北京时间 16:00）
 
 jobs:
   upload-to-r2:
@@ -13,125 +12,75 @@ jobs:
       contents: write
 
     steps:
-      - name: 检出代码
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: 安装 Python 环境
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.13'
+          python-version: '3.11'
 
-      - name: 安装依赖包
+      - name: Install dependencies
         run: |
-          echo "🔧 开始安装依赖..."
-          
-          # 升级 pip
           python -m pip install --upgrade pip
-          
-          # 先卸载可能存在冲突的包
-          python -m pip uninstall -y urllib3 charset-normalizer chardet requests || true
-          
-          # 强制安装兼容版本（使用 pip install --no-deps 避免依赖自动升级）
-          python -m pip install \
-            "urllib3==2.2.0" \
-            "charset-normalizer==3.3.2" \
-            "certifi==2024.7.4" \
-            "idna==3.7" \
-            "requests==2.32.3" \
-            --no-deps  # 重要：避免自动安装依赖
-          
-          # 重新安装 requests 的依赖
-          python -m pip install "requests==2.32.3"  # 这会自动安装正确版本的依赖
-          
-          # 显示版本验证
-          echo "验证安装版本："
-          python -c "
-          import warnings
-          import requests
-          import urllib3
-          import charset_normalizer as cs
-          print('✓ requests 版本:', requests.__version__)
-          print('✓ urllib3 版本:', urllib3.__version__)
-          print('✓ charset-normalizer 版本:', cs.__version__)
-          "
-          
-          # 安装其他包（使用 --no-deps 避免冲突）
-          echo "安装其他依赖..."
-          python -m pip install telethon --no-deps
-          python -m pip install awscli --no-deps  # awscli 可能自动升级 urllib3
-          python -m pip install beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller crawl4ai
-          
-          # 特殊处理：awscli 可能需要额外依赖
-          python -m pip install "botocore==1.31.65" "s3transfer==0.8.2" "jmespath==1.0.1" --no-deps
-          python -m pip install awscli  # 重新完整安装
-          
-          # 安装 Playwright
+          pip install requests telethon awscli beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller crawl4ai
+          pip install --upgrade requests urllib3 chardet charset-normalizer
           playwright install chromium
           
-          echo "✅ 依赖安装完成"
 
-      - name: 清空旧连接文件
+      - name: Clear links.txt content
         run: |
-          echo -n "" > links.txt
-          echo -n "" > usb.txt
+         echo -n "" > links.txt
+         echo -n "" > usb.txt
 
-      - name: 执行 Python 脚本
+      # 你之前的脚本执行步骤不变
+      - name: Run core Python scripts
         run: |
-          echo "🔨 开始执行脚本..."
           python get_token.py
           python MB.py
           python 58LA.py
           python sub.py
           python yz.py
-          echo "✅ 脚本执行完成"
 
-      - name: 同步到 Cloudflare KV
+      - name: Sync to Cloudflare KV
         env:
           CF_EMAIL: ${{ secrets.CF_EMAIL }}
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
           CF_KV_KEY: "LINK.txt"
-        run: |
-          echo "☁️ 同步数据到 Cloudflare KV..."
-          python kv.py
-          echo "✅ KV 同步完成"
+        run: python kv.py
 
-      - name: 提交变更到 Git
+      - name: Commit and push changes
         run: |
-          echo "📝 提交变更..."
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add links.txt usb.txt
           if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "更新链接文件"
+            git commit -m "Update links.txt with valid URLs"
             git push
-            echo "✅ 变更已提交"
           else
-            echo "📋 没有需要提交的变更"
+            echo "No changes to commit"
           fi
 
-  cleanup-workflow-runs:  # 这个 job ID 必须是英文
+  cleanup-workflow-runs:
     runs-on: ubuntu-latest
     needs: upload-to-r2
 
     steps:
-      - name: 安装 jq 工具
+      - name: Install jq
         run: sudo apt-get install -y jq
 
-      - name: 清理已完成的工作流
+      - name: Delete completed workflow runs
         env:
           GH_TOKEN: ${{ secrets.GT_TOKEN }}
         run: |
-          echo "🗑️ 清理已完成的工作流..."
-          工作流ID列表=$(curl -s -H "Authorization: token $GH_TOKEN" \
+          echo "Fetching completed workflow runs..."
+          RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
             "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
             | jq '.workflow_runs[] | select(.status == "completed") | .id')
-          已清理数量=0
-          for 工作流ID in $工作流ID列表; do
-            echo "正在删除工作流 ID: $工作流ID"
+          for run_id in $RUN_IDS; do
+            echo "Deleting run ID: $run_id"
             curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
-              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$工作流ID"
-            ((已清理数量++))
+              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
           done
-          echo "✅ 已清理 $已清理数量 个工作流记录"
