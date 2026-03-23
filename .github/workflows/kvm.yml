@@ -1,0 +1,102 @@
+name: VLESS-节点
+on:
+  workflow_dispatch:
+  schedule:
+    #-     #- cron: '40 22 * # 每天 22:40 UTC（北京时间 6:40）
+    - cron:  '0 8 * * *'     # 每天 08:00 UTC（北京时间 16:00）
+
+jobs:
+  upload-to-r2:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests telethon awscli beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller crawl4ai
+          pip install --upgrade requests urllib3 chardet charset-normalizer
+          pip install yt-dlp openai-whisper
+          playwright install chromium
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Clear links.txt content
+        run: |
+         echo -n "" > links.txt
+         echo -n "" > usb.txt
+
+      - name: Create temporary directories
+        run: |
+         mkdir -p v2ray_configs
+         mkdir -p audio_download
+
+      # 你之前的脚本执行步骤不变
+      - name: Run core Python scripts
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+          CHANNEL_USERNAME: ${{ secrets.CHANNEL_USERNAME }}
+          USE_AUDIO_RECOGNITION: "true"
+          SPEECH_RECOGNITION_ENGINE: "whisper"
+        run: |
+          python get_token.py
+          python MB.py
+          python 58LA.py
+          python sub.py
+          python yz.py
+
+      - name: Sync to Cloudflare KV
+        env:
+          CF_EMAIL: ${{ secrets.CF_EMAIL }}
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
+          CF_KV_KEY: "LINK.txt"
+        run: python kv.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add links.txt usb.txt
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Update links.txt with valid URLs"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+  cleanup-workflow-runs:
+    runs-on: ubuntu-latest
+    needs: upload-to-r2
+
+    steps:
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Delete completed workflow runs
+        env:
+          GH_TOKEN: ${{ secrets.GT_TOKEN }}
+        run: |
+          echo "Fetching completed workflow runs..."
+          RUN_IDS=$(curl -s -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs?per_page=100" \
+            | jq '.workflow_runs[] | select(.status == "completed") | .id')
+          for run_id in $RUN_IDS; do
+            echo "Deleting run ID: $run_id"
+            curl -s -X DELETE -H "Authorization: token $GH_TOKEN" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id"
+          done
