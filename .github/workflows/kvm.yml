@@ -1,4 +1,4 @@
-name: VLESS-KVM
+name: VLESS-节点
 on:
   workflow_dispatch:
   schedule:
@@ -25,7 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests telethon awscli beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller crawl4ai
           pip install --upgrade requests urllib3 chardet charset-normalizer
-          pip install yt-dlp openai-whisper Pillow pytesseract pytesseract-langpack
+          pip install yt-dlp openai-whisper Pillow pytesseract
           playwright install chromium
 
       - name: Install FFmpeg
