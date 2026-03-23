@@ -165,12 +165,15 @@ def get_latest_video_with_date(channel_id: str) -> Optional[Dict]:
                 'published_at': published_at,
                 'url': f"https://www.youtube.com/watch?v={video_id}"
             })
-            print(f"  ✅ 找到带日期的视频: {title}")
-            print(f"     提取日期: {date_str}")
+            # 移除详细输出，只计数
+            # print(f"  ✅ 找到带日期的视频: {title}")
+            # print(f"     提取日期: {date_str}")
 
     if not videos_with_date:
         print("❌ 未找到带有日期的视频")
         return None
+
+    print(f"✅ 找到 {len(videos_with_date)} 个带日期的视频")
 
     videos_with_date.sort(key=lambda x: x['date'], reverse=True)
     latest_video = videos_with_date[0]
@@ -313,7 +316,9 @@ def extract_password_from_video_screenshot(video_url: str, audio_dir: Path) -> O
         import traceback
         traceback.print_exc()
         return None
-    """使用crawl4ai爬虫架构下载音频"""
+
+
+def download_audio_crawl4ai(video_url: str, audio_dir: Path) -> Optional[Path]:
     print("\n🔍 开始下载音频...")
     print("💡 使用crawl4ai爬虫架构（模拟真实浏览器）...")
 
