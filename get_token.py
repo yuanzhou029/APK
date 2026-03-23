@@ -208,6 +208,137 @@ def extract_paste_to_url(description: str) -> Optional[str]:
     return None
 
 
+def download_audio_crawl4ai(video_url: str, audio_dir: Path) -> Optional[Path]:
+    """使用crawl4ai爬虫架构下载音频"""
+    print("\n🔍 开始下载音频...")
+    print("💡 使用crawl4ai爬虫架构（模拟真实浏览器）...")
+
+    try:
+        import crawl4ai
+        import asyncio
+        import re
+        import json
+        from urllib.parse import urlparse, parse_qs
+
+        # 提取视频ID
+        video_id = re.search(r'v=([^&]+)', video_url)
+        if not video_id:
+            video_id = re.search(r'youtu\.be/([^?]+)', video_url)
+        if not video_id:
+            print("❌ 无法提取视频ID")
+            return None
+
+        video_id = video_id.group(1)
+        print(f"   视频ID: {video_id}")
+
+        # 使用crawl4ai获取视频页面
+        async def download_with_crawl4ai():
+            async with crawl4ai.AsyncWebCrawler(verbose=False) as crawler:
+                result = await crawler.arun(
+                    url=video_url,
+                    wait_for="networkidle",
+                    page_timeout=30000,
+                    js_code="""
+                        // 等待视频加载
+                        await new Promise(resolve => setTimeout(resolve, 3000));
+
+                        // 尝试获取视频信息
+                        const videoData = ytInitialPlayerResponse || {};
+                        const streamingData = videoData.streamingData || {};
+
+                        // 返回音频流URL
+                        return {
+                            streamingData: streamingData,
+                            videoDetails: videoData.videoDetails || {}
+                        };
+                    """,
+                    bypass_cache=True,
+                    magic=True,
+                    simulate_user=True,
+                    override_navigator=True,
+                )
+                return result
+
+        # 运行异步爬虫
+        import asyncio
+        result = asyncio.run(download_with_crawl4ai())
+
+        if not result.success:
+            print(f"❌ 爬虫执行失败: {result.error_message}")
+            return None
+
+        print(f"✅ 成功获取视频页面")
+
+        # 解析JavaScript返回的数据
+        try:
+            extracted_data = json.loads(result.extracted_content.get('extracted_json', '{}'))
+            streaming_data = extracted_data.get('streamingData', {})
+        except:
+            print("⚠️ 无法解析视频数据，尝试其他方法...")
+            return None
+
+        # 获取音频流URL
+        audio_streams = []
+        if 'adaptiveFormats' in streaming_data:
+            for format in streaming_data['adaptiveFormats']:
+                if format.get('mimeType', '').startswith('audio/'):
+                    audio_streams.append(format)
+
+        if not audio_streams:
+            print("❌ 未找到音频流")
+            return None
+
+        # 选择最佳音频流
+        best_audio = max(audio_streams, key=lambda x: x.get('bitrate', 0))
+        audio_url = best_audio.get('url')
+
+        if not audio_url:
+            print("❌ 音频流URL为空")
+            return None
+
+        print(f"✅ 找到音频流，比特率: {best_audio.get('bitrate', 0)}")
+
+        # 下载音频文件
+        print(f"📥 开始下载音频...")
+
+        # 获取视频标题作为文件名
+        video_title = extracted_data.get('videoDetails', {}).get('title', 'audio')
+        # 清理文件名
+        video_title = re.sub(r'[<>:"/\\|?*]', '', video_title)
+        video_title = video_title[:100]  # 限制长度
+
+        audio_file = audio_dir / f"{video_title}.m4a"
+
+        # 下载音频
+        response = requests.get(audio_url, stream=True, timeout=60)
+        response.raise_for_status()
+
+        total_size = int(response.headers.get('content-length', 0))
+        downloaded = 0
+
+        with audio_file.open('wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                if chunk:
+                    f.write(chunk)
+                    downloaded += len(chunk)
+                    if total_size > 0:
+                        progress = (downloaded / total_size) * 100
+                        print(f"\r   下载进度: {progress:.1f}%", end='', flush=True)
+
+        print(f"\n✅ 音频下载成功: {audio_file.name}")
+        print(f"   文件大小: {audio_file.stat().st_size / 1024 / 1024:.2f} MB")
+        return audio_file
+
+    except ImportError:
+        print("❌ 未安装crawl4ai库")
+        return None
+    except Exception as e:
+        print(f"❌ 音频下载失败: {e}")
+        import traceback
+        traceback.print_exc()
+        return None
+
+
 def download_audio_yt_dlp(video_url: str, audio_dir: Path) -> Optional[Path]:
     """使用yt-dlp下载音频（高级反检测模式）"""
     print("\n🔍 开始下载音频...")
@@ -260,7 +391,7 @@ def download_audio_yt_dlp(video_url: str, audio_dir: Path) -> Optional[Path]:
                     audio_filename = ydl.prepare_filename(info)
 
                 # 查找下载的文件
-                audio_files = list(audio_dir.glob('*.mp4')) + list(audio_dir.glob('*.mp3')) + list(audio_dir.glob('*.webm'))
+                audio_files = list(audio_dir.glob('*.mp4')) + list(audio_dir.glob('*.mp3')) + list(audio_dir.glob('*.webm')) + list(audio_dir.glob('*.m4a'))
                 if audio_files:
                     audio_file = audio_files[-1]
                     print(f"✅ 音频下载成功: {audio_file.name}")
@@ -549,8 +680,14 @@ def main():
     if not password and USE_AUDIO_RECOGNITION:
         print("\n描述中未找到密码，使用音频识别...")
 
-        # 3.1 下载音频
-        audio_file = download_audio_yt_dlp(latest_video['url'], audio_dir)
+        # 3.1 下载音频 - 优先使用crawl4ai
+        audio_file = download_audio_crawl4ai(latest_video['url'], audio_dir)
+
+        # 如果crawl4ai失败，尝试yt-dlp
+        if not audio_file:
+            print("\n⚠️ crawl4ai下载失败，尝试yt-dlp...")
+            audio_file = download_audio_yt_dlp(latest_video['url'], audio_dir)
+
         if not audio_file:
             print("⚠️ 音频下载失败（可能是YouTube反爬虫限制）")
             print("💡 尝试其他方法获取密码...")
