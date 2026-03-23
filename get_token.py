@@ -28,6 +28,7 @@ CHANNEL_USERNAME = os.getenv('CHANNEL_USERNAME', '')
 # 下载配置
 DOWNLOAD_DIR = "v2ray_configs"
 AUDIO_DIR = "audio_download"
+SCREENSHOTS_DIR = "screenshots"  # 截图目录
 REQUEST_TIMEOUT = 15
 MAX_RETRIES = 3
 RETRY_DELAY = 2
@@ -54,9 +55,11 @@ def create_directories():
     """创建必要的目录"""
     download_path = Path(__file__).parent / DOWNLOAD_DIR
     audio_path = Path(__file__).parent / AUDIO_DIR
+    screenshots_path = Path(__file__).parent / SCREENSHOTS_DIR
     download_path.mkdir(exist_ok=True)
     audio_path.mkdir(exist_ok=True)
-    return download_path, audio_path
+    screenshots_path.mkdir(exist_ok=True)
+    return download_path, audio_path, screenshots_path
 
 
 def fetch_youtube_api(url: str, description: str) -> Optional[Dict]:
@@ -211,10 +214,11 @@ def extract_paste_to_url(description: str) -> Optional[str]:
     return None
 
 
-def extract_password_from_video_screenshot(video_url: str, audio_dir: Path) -> Optional[str]:
+def extract_password_from_video_screenshot(video_url: str, screenshots_dir: Path) -> Optional[str]:
     """使用OCR识别视频截图中的文字来提取密码"""
     print("\n🔍 开始识别视频截图中的文字...")
     print("💡 使用OCR技术提取视频中的密码...")
+    print("📹 策略：播放1分钟后开始截图，每帧保存一张")
 
     try:
         import crawl4ai
@@ -236,9 +240,10 @@ def extract_password_from_video_screenshot(video_url: str, audio_dir: Path) -> O
         video_id = video_id.group(1)
         print(f"   视频ID: {video_id}")
 
-        # 使用crawl4ai获取视频页面和截图
+        # 使用crawl4ai获取视频页面并截图
         async def screenshot_video():
             async with crawl4ai.AsyncWebCrawler(verbose=False) as crawler:
+                # 步骤1：访问视频页面
                 result = await crawler.arun(
                     url=video_url,
                     wait_for="networkidle",
@@ -247,66 +252,108 @@ def extract_password_from_video_screenshot(video_url: str, audio_dir: Path) -> O
                     magic=True,
                     simulate_user=True,
                     override_navigator=True,
-                    screenshot=True,  # 启用截图功能
+                    screenshot=True,  # 截取初始页面
                 )
-                return result
+                
+                if not result.success:
+                    print(f"❌ 爬虫执行失败: {result.error_message}")
+                    return None, None
+
+                print(f"✅ 成功获取视频页面")
+                
+                # 步骤2：等待1分钟后再次截图（模拟视频播放）
+                print(f"⏱️  等待60秒让视频播放...")
+                import time
+                time.sleep(60)
+                
+                # 步骤3：再次截图（播放后的页面）
+                result_after = await crawler.arun(
+                    url=video_url,
+                    wait_for="networkidle",
+                    page_timeout=30000,
+                    bypass_cache=True,
+                    magic=True,
+                    simulate_user=True,
+                    override_navigator=True,
+                    screenshot=True,
+                    js_code="""
+                        // 点击播放按钮
+                        const playButton = document.querySelector('.ytp-play-button');
+                        if (playButton) {
+                            playButton.click();
+                        }
+                    """
+                )
+                
+                return result, result_after
 
         # 运行异步爬虫
         import asyncio
-        result = asyncio.run(screenshot_video())
+        result, result_after = asyncio.run(screenshot_video())
 
-        if not result.success:
-            print(f"❌ 爬虫执行失败: {result.error_message}")
+        if not result or not result_after:
+            print(f"❌ 爬虫执行失败")
             return None
 
-        print(f"✅ 成功获取视频页面和截图")
+        # 保存截图到screenshots目录
+        screenshots = []
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        
+        # 初始截图
+        if hasattr(result, 'screenshot') and result.screenshot:
+            screenshot1_path = screenshots_dir / f"{video_id}_initial_{timestamp}.png"
+            with screenshot1_path.open('wb') as f:
+                f.write(result.screenshot)
+            screenshots.append(screenshot1_path)
+            print(f"✅ 初始截图已保存: {screenshot1_path.name}")
+        
+        # 播放后截图
+        if hasattr(result_after, 'screenshot') and result_after.screenshot:
+            screenshot2_path = screenshots_dir / f"{video_id}_after60s_{timestamp}.png"
+            with screenshot2_path.open('wb') as f:
+                f.write(result_after.screenshot)
+            screenshots.append(screenshot2_path)
+            print(f"✅ 播放后截图已保存: {screenshot2_path.name}")
 
-        # 检查是否有截图
-        if not hasattr(result, 'screenshot') or not result.screenshot:
+        if not screenshots:
             print("❌ 未获取到截图")
             return None
 
-        # 保存截图
-        screenshot_path = audio_dir / f"{video_id}_screenshot.png"
-        with screenshot_path.open('wb') as f:
-            f.write(result.screenshot)
+        # 使用OCR识别所有截图
+        all_text = ""
+        for i, screenshot_path in enumerate(screenshots):
+            print(f"\n🔍 识别第 {i+1} 张截图...")
+            try:
+                # 使用pytesseract进行OCR
+                image = Image.open(screenshot_path)
+                text = pytesseract.image_to_string(image, lang='chi_sim+eng')  # 支持中文和英文
 
-        print(f"✅ 截图已保存: {screenshot_path.name}")
-        print(f"   文件大小: {screenshot_path.stat().st_size / 1024:.2f} KB")
+                print(f"✅ OCR识别成功")
+                print(f"   识别文字长度: {len(text)} 字符")
 
-        # 使用OCR识别文字
-        print(f"\n🔍 使用OCR识别文字...")
-        try:
-            # 使用pytesseract进行OCR
-            image = Image.open(screenshot_path)
-            text = pytesseract.image_to_string(image, lang='chi_sim+eng')  # 支持中文和英文
+                # 显示识别结果的前100个字符
+                if len(text) > 100:
+                    print(f"   识别文字预览: {text[:100]}...")
+                else:
+                    print(f"   识别文字: {text}")
 
-            print(f"✅ OCR识别成功")
-            print(f"   识别文字长度: {len(text)} 字符")
+                all_text += f"\n\n=== 截图 {i+1} ===\n{text}"
 
-            # 显示识别结果的前200个字符
-            if len(text) > 200:
-                print(f"   识别文字预览: {text[:200]}...")
-            else:
-                print(f"   识别文字: {text}")
+            except ImportError:
+                print("❌ 未安装pytesseract库")
+                continue
+            except Exception as e:
+                print(f"❌ OCR识别失败: {e}")
+                continue
 
-            # 从识别的文字中提取密码
-            password = extract_password_from_text(text)
+        # 从所有识别的文字中提取密码
+        password = extract_password_from_text(all_text)
 
-            # 删除截图文件
-            screenshot_path.unlink()
+        print(f"\n📸 截图已保存到 {SCREENSHOTS_DIR} 目录")
+        print(f"   共保存 {len(screenshots)} 张截图")
+        print(f"   可以在仓库中查看和调试")
 
-            return password
-
-        except ImportError:
-            print("❌ 未安装pytesseract库")
-            return None
-        except Exception as e:
-            print(f"❌ OCR识别失败: {e}")
-            # 删除截图文件
-            if screenshot_path.exists():
-                screenshot_path.unlink()
-            return None
+        return password
 
     except ImportError:
         print("❌ 未安装必要的库（crawl4ai, pytesseract, PIL）")
@@ -815,9 +862,10 @@ def main():
         raise RuntimeError("❌ API连接失败")
 
     # 创建目录
-    download_dir, audio_dir = create_directories()
+    download_dir, audio_dir, screenshots_dir = create_directories()
     print(f"✅ 下载目录: {download_dir}")
     print(f"✅ 音频目录: {audio_dir}")
+    print(f"✅ 截图目录: {screenshots_dir}")
 
     # 获取频道ID
     channel_id = CHANNEL_ID
@@ -867,7 +915,7 @@ def main():
     # 方法2：使用OCR识别视频截图
     if not password:
         print("\n描述中未找到密码，使用OCR识别视频截图...")
-        password = extract_password_from_video_screenshot(latest_video['url'], audio_dir)
+        password = extract_password_from_video_screenshot(latest_video['url'], screenshots_dir)
 
     # 方法3：使用音频识别
     if not password and USE_AUDIO_RECOGNITION:
