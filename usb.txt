@@ -4,7 +4,18 @@ socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: 127.0.0.1:9090
+external-controller: :9090
+dns:
+  enable: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
 proxies:
   - {name: 🇺🇸 US美国(yz), server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇭🇰 HK香港(yz), server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
@@ -1228,7 +1239,7 @@ proxies:
   - {name: 🇺🇸 www.85la.com🇺🇸US⁻¹_5|1.7MB/s|GM|YT|TK|NF|D+|Succeed, server: 104.26.14.21, port: 443, type: vless, uuid: 16068e83-af4c-49ba-8048-98fcff3e5e7b, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, network: ws, ws-opts: {path: /, headers: {Host: afrcloud22.mmv.kr}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US⁻¹_2|3.3MB/s|GM|YT|TK|NF|D+, server: 104.26.14.21, port: 443, type: vless, uuid: 682373b3-7927-4cbf-9a6e-f53877458555, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /, headers: {Host: afrcloud22.mmv.kr}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US⁻¹_302|3.3MB/s|YT|TK|NF|D+|Succeed, server: 104.26.15.21, port: 443, type: vless, uuid: b7039fbe-0359-4d91-977d-a926203b1936, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /, headers: {Host: afrcloud22.mmv.kr}}}
-  - {name: 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed, server: cf.090227.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: pg.hhhhh.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: pg.hhhhh.eu.org}}}
+  - {name: 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed, server: cf.090227.xyz, port: 443, type: trojan, password: 5a2c16f9, sni: pg.hhhhh.eu.org, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: pg.hhhhh.eu.org}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US¹⁺_61|3.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed, server: 104.26.14.21, port: 443, type: vless, uuid: 0e4e3a71-e712-49c6-a6a5-0b457764746e, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /3.86.231.180=443, headers: {Host: afrcloud22.mmv.kr}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US⁻¹_227|1.9MB/s|YT|TK|NF|D+|Succeed, server: 104.16.2.90, port: 443, type: vless, uuid: aaaaaabb-4ddd-4eee-9fff-ffffffffffff, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /43.218.77.16=1443, headers: {Host: afrcloud22.mmv.kr}}}
   - {name: 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_1|1.1MB/s|5%|NF|D+|X|Succeed, server: afrcloud22.mmv.kr, port: 443, type: vless, uuid: e8add82d-0a0a-4f3b-a22e-c74f83da73b9, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /138.2.64.229=443, headers: {Host: afrcloud22.mmv.kr}}}
@@ -1575,7 +1586,7 @@ proxies:
   - {name: 🇺🇸 www.85la.com🇺🇸US²_254|2.4MB/s|4%|GPT⁺|GM|YT|TK|NF|X|History, server: 185.148.106.199, port: 443, type: vmess, uuid: f08369d1-5ee7-4b16-d786-30bce12fc33c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: ous3.dean52.top, network: ws, ws-opts: {path: /, headers: {Host: ous3.dean52.top}}}
   - {name: 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_49|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed, server: 104.26.15.21, port: 443, type: vless, uuid: 1e681d1b-3f6e-4bd4-9fed-b8976bd1b3be, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /45.76.192.129=24434, headers: {Host: afrcloud22.mmv.kr}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US¹-🏴‍☠️⁰_34|1.2MB/s|YT|TK|NF|D+|Succeed, server: afrcloud22.mmv.kr, port: 443, type: vless, uuid: c1a3e8f5-48c7-4070-95bb-8d609955d3ad, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /172.245.182.112=443, headers: {Host: afrcloud22.mmv.kr}}}
-  - {name: 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed, server: cf.090227.xyz, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: pg.hhhhh.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /, headers: {Host: pg.hhhhh.eu.org}}}
+  - {name: 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed, server: cf.090227.xyz, port: 443, type: vless, uuid: 5a2c16f9-e365-4080-8d38-6924c3835586, tls: true, tfo: false, skip-cert-verify: false, servername: pg.hhhhh.eu.org, client-fingerprint: chrome, network: ws, ws-opts: {path: /, headers: {Host: pg.hhhhh.eu.org}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US⁻¹_160|1.5MB/s|YT|TK|NF|D+|Succeed, server: afrcloud22.mmv.kr, port: 443, type: vless, uuid: a1923428-524e-46c3-936d-16cda1656763, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: "/🔒 [By EbraSha]", headers: {Host: afrcloud22.mmv.kr}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US¹⁺_132|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed, server: afrcloud22.mmv.kr, port: 443, type: vless, uuid: b5c4c990-3f87-484d-b2bf-d75737d37729, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /35.175.188.144=9000, headers: {Host: afrcloud22.mmv.kr}}}
   - {name: 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_3|2.5MB/s|GM|YT|TK|NF|D+|X|Succeed, server: 172.67.73.14, port: 443, type: vless, uuid: 61066a16-78fc-4446-8013-6646bc3f27ba, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /103.86.44.120=65432, headers: {Host: afrcloud22.mmv.kr}}}
@@ -1962,7 +1973,7 @@ proxies:
   - {name: 🇺🇸 www.85la.com🇺🇸US²_191|3.9MB/s|33%|GPT⁺|YT|TK|NF|X|Succeed, server: ui.huangshang.indevs.in, port: 443, type: vless, uuid: 721d3fd0-e9f1-40c3-92cd-d4405a4319d6, tls: true, tfo: false, skip-cert-verify: false, servername: ui.huangshang.indevs.in, client-fingerprint: chrome, network: ws, ws-opts: {path: /9NojP751adPiN9LMya, headers: {Host: ui.huangshang.indevs.in}}}
   - {name: 🇯🇵 www.85la.com🇯🇵JP²_14|0.4MB/s|GPT⁺|GM|YT|NF|X|History, server: n1751468092.lie5d.cyou, port: 443, type: vmess, uuid: 7ace1873-9822-46af-9920-bd64f725212c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: n1751468092.lie5d.cyou, network: ws, ws-opts: {path: /, headers: {Host: n1751468092.lie5d.cyou}}}
   - {name: 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_15|0.4MB/s|5%|GPT⁺|YT|D+|X|History, server: 38.147.184.173, port: 444, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: jp.aniua.qzz.io, client-fingerprint: chrome, network: ws, ws-opts: {path: "//?ed=2095", headers: {Host: jp.aniua.qzz.io}}}
-  - {name: 🇨🇳 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History, server: 34.80.251.171, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: jp.aniua.qzz.io, client-fingerprint: chrome, network: ws, ws-opts: {path: "//?ed=2095", headers: {Host: jp.aniua.qzz.io}}}
+  - {name: 🇹🇼 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History, server: 34.80.251.171, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: jp.aniua.qzz.io, client-fingerprint: chrome, network: ws, ws-opts: {path: "//?ed=2095", headers: {Host: jp.aniua.qzz.io}}}
   - {name: 🇺🇸 www.85la.com🇩🇪DE²_34|2.9MB/s|0%|GPT⁺|YT-US|TK|NF|X|sinspired/subs-check, server: prime.dissertationhelpspecialist.com, port: 2053, type: vless, uuid: a8093965-d121-477f-ac01-44ed9912e569, tls: true, tfo: false, skip-cert-verify: false, reality-opts: {public-key: mf8KAFdlE3Ze2v2_UJSh7LQjug-aiyV-IrTnlVBCCgM, short-id: "f6bf7084" }, servername: tgju.org, client-fingerprint: firefox, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet-SevenNet}}
   - {name: 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_18|0.4MB/s|GPT⁺|YT|NF|D+|X, server: 38.207.177.100, port: 443, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: jp.aniua.qzz.io, client-fingerprint: chrome, network: ws, ws-opts: {path: "//?ed=2095", headers: {Host: jp.aniua.qzz.io}}}
   - {name: 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_4|0.3MB/s|5%|GPT⁺|YT|NF|D+|X|Succeed, server: 45.136.14.61, port: 2053, type: vless, uuid: e258977b-e413-4718-a3af-02d75492c349, tls: true, tfo: false, skip-cert-verify: false, servername: jp.aniua.qzz.io, client-fingerprint: chrome, network: ws, ws-opts: {path: "//?ed=2095", headers: {Host: jp.aniua.qzz.io}}}
@@ -3337,7 +3348,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_5|1.7MB/s|GM|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_2|3.3MB/s|GM|YT|TK|NF|D+
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_302|3.3MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_61|3.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_227|1.9MB/s|YT|TK|NF|D+|Succeed
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_1|1.1MB/s|5%|NF|D+|X|Succeed
@@ -3684,7 +3695,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_254|2.4MB/s|4%|GPT⁺|GM|YT|TK|NF|X|History
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_49|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹-🏴‍☠️⁰_34|1.2MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_160|1.5MB/s|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_132|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_3|2.5MB/s|GM|YT|TK|NF|D+|X|Succeed
@@ -4071,7 +4082,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_191|3.9MB/s|33%|GPT⁺|YT|TK|NF|X|Succeed
       - 🇯🇵 www.85la.com🇯🇵JP²_14|0.4MB/s|GPT⁺|GM|YT|NF|X|History
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_15|0.4MB/s|5%|GPT⁺|YT|D+|X|History
-      - 🇨🇳 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
+      - 🇹🇼 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
       - 🇺🇸 www.85la.com🇩🇪DE²_34|2.9MB/s|0%|GPT⁺|YT-US|TK|NF|X|sinspired/subs-check
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_18|0.4MB/s|GPT⁺|YT|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_4|0.3MB/s|5%|GPT⁺|YT|NF|D+|X|Succeed
@@ -5434,7 +5445,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_5|1.7MB/s|GM|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_2|3.3MB/s|GM|YT|TK|NF|D+
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_302|3.3MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_61|3.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_227|1.9MB/s|YT|TK|NF|D+|Succeed
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_1|1.1MB/s|5%|NF|D+|X|Succeed
@@ -5781,7 +5792,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_254|2.4MB/s|4%|GPT⁺|GM|YT|TK|NF|X|History
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_49|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹-🏴‍☠️⁰_34|1.2MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_160|1.5MB/s|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_132|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_3|2.5MB/s|GM|YT|TK|NF|D+|X|Succeed
@@ -6168,7 +6179,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_191|3.9MB/s|33%|GPT⁺|YT|TK|NF|X|Succeed
       - 🇯🇵 www.85la.com🇯🇵JP²_14|0.4MB/s|GPT⁺|GM|YT|NF|X|History
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_15|0.4MB/s|5%|GPT⁺|YT|D+|X|History
-      - 🇨🇳 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
+      - 🇹🇼 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
       - 🇺🇸 www.85la.com🇩🇪DE²_34|2.9MB/s|0%|GPT⁺|YT-US|TK|NF|X|sinspired/subs-check
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_18|0.4MB/s|GPT⁺|YT|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_4|0.3MB/s|5%|GPT⁺|YT|NF|D+|X|Succeed
@@ -7531,7 +7542,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_5|1.7MB/s|GM|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_2|3.3MB/s|GM|YT|TK|NF|D+
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_302|3.3MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_61|3.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_227|1.9MB/s|YT|TK|NF|D+|Succeed
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_1|1.1MB/s|5%|NF|D+|X|Succeed
@@ -7878,7 +7889,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_254|2.4MB/s|4%|GPT⁺|GM|YT|TK|NF|X|History
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_49|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹-🏴‍☠️⁰_34|1.2MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_160|1.5MB/s|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_132|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_3|2.5MB/s|GM|YT|TK|NF|D+|X|Succeed
@@ -8265,7 +8276,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_191|3.9MB/s|33%|GPT⁺|YT|TK|NF|X|Succeed
       - 🇯🇵 www.85la.com🇯🇵JP²_14|0.4MB/s|GPT⁺|GM|YT|NF|X|History
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_15|0.4MB/s|5%|GPT⁺|YT|D+|X|History
-      - 🇨🇳 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
+      - 🇹🇼 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
       - 🇺🇸 www.85la.com🇩🇪DE²_34|2.9MB/s|0%|GPT⁺|YT-US|TK|NF|X|sinspired/subs-check
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_18|0.4MB/s|GPT⁺|YT|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_4|0.3MB/s|5%|GPT⁺|YT|NF|D+|X|Succeed
@@ -9629,7 +9640,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_5|1.7MB/s|GM|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_2|3.3MB/s|GM|YT|TK|NF|D+
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_302|3.3MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_61|3.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_227|1.9MB/s|YT|TK|NF|D+|Succeed
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_1|1.1MB/s|5%|NF|D+|X|Succeed
@@ -9976,7 +9987,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_254|2.4MB/s|4%|GPT⁺|GM|YT|TK|NF|X|History
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_49|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹-🏴‍☠️⁰_34|1.2MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_160|1.5MB/s|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_132|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_3|2.5MB/s|GM|YT|TK|NF|D+|X|Succeed
@@ -10363,7 +10374,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_191|3.9MB/s|33%|GPT⁺|YT|TK|NF|X|Succeed
       - 🇯🇵 www.85la.com🇯🇵JP²_14|0.4MB/s|GPT⁺|GM|YT|NF|X|History
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_15|0.4MB/s|5%|GPT⁺|YT|D+|X|History
-      - 🇨🇳 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
+      - 🇹🇼 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
       - 🇺🇸 www.85la.com🇩🇪DE²_34|2.9MB/s|0%|GPT⁺|YT-US|TK|NF|X|sinspired/subs-check
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_18|0.4MB/s|GPT⁺|YT|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_4|0.3MB/s|5%|GPT⁺|YT|NF|D+|X|Succeed
@@ -10930,7 +10941,7 @@ proxy-groups:
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_58|0.4MB/s|5%|GPT⁺|GM|YT|TK|NF|D+|X
       - 🇯🇵 www.85la.com🇯🇵JP²_14|0.4MB/s|GPT⁺|GM|YT|NF|X|History
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_15|0.4MB/s|5%|GPT⁺|YT|D+|X|History
-      - 🇨🇳 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
+      - 🇹🇼 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_18|0.4MB/s|GPT⁺|YT|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_4|0.3MB/s|5%|GPT⁺|YT|NF|D+|X|Succeed
       - 🇭🇰 www.85la.com🇺🇸US¹-JP⁰_103|0.5MB/s|5%|GPT⁺|YT-HK|NF|D+|X|History
@@ -11968,7 +11979,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_5|1.7MB/s|GM|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_2|3.3MB/s|GM|YT|TK|NF|D+
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_302|3.3MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_61|3.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_227|1.9MB/s|YT|TK|NF|D+|Succeed
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_1|1.1MB/s|5%|NF|D+|X|Succeed
@@ -12315,7 +12326,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_254|2.4MB/s|4%|GPT⁺|GM|YT|TK|NF|X|History
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_49|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹-🏴‍☠️⁰_34|1.2MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_160|1.5MB/s|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_132|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_3|2.5MB/s|GM|YT|TK|NF|D+|X|Succeed
@@ -12743,9 +12754,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
-      - 🇨🇳 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
   - name: 🇸🇬 狮城节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -13080,7 +13091,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_5|1.7MB/s|GM|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_2|3.3MB/s|GM|YT|TK|NF|D+
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_302|3.3MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_7|0.3MB/s|GPT|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_61|3.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_227|1.9MB/s|YT|TK|NF|D+|Succeed
       - 🇸🇬 www.85la.com🇺🇸US¹-SG⁰_1|1.1MB/s|5%|NF|D+|X|Succeed
@@ -13421,7 +13432,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com🇺🇸US²_254|2.4MB/s|4%|GPT⁺|GM|YT|TK|NF|X|History
       - 🇯🇵 www.85la.com🇺🇸US¹-JP⁰_49|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹-🏴‍☠️⁰_34|1.2MB/s|YT|TK|NF|D+|Succeed
-      - 🇨🇳 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
+      - 🇹🇼 www.85la.com🇺🇸US¹-TW⁰_2|3.4MB/s|GPT⁺|GM|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_160|1.5MB/s|YT|TK|NF|D+|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_132|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_3|2.5MB/s|GM|YT|TK|NF|D+|X|Succeed
@@ -13787,7 +13798,7 @@ proxy-groups:
       - 🇭🇰 www.85la.com🇭🇰HK¹-SG⁰_1|0.8MB/s|5%|GPT⁺|YT|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US²_191|3.9MB/s|33%|GPT⁺|YT|TK|NF|X|Succeed
       - 🇯🇵 www.85la.com🇯🇵JP²_14|0.4MB/s|GPT⁺|GM|YT|NF|X|History
-      - 🇨🇳 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
+      - 🇹🇼 www.85la.com🇹🇼TW¹-JP⁰_4|0.5MB/s|5%|GPT⁺|YT|NF|D+|X|History
       - 🇺🇸 www.85la.com🇩🇪DE²_34|2.9MB/s|0%|GPT⁺|YT-US|TK|NF|X|sinspired/subs-check
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_18|0.4MB/s|GPT⁺|YT|NF|D+|X
       - 🇭🇰 www.85la.com🇭🇰HK¹-JP⁰_4|0.3MB/s|5%|GPT⁺|YT|NF|D+|X|Succeed
