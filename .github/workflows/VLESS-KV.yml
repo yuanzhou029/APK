@@ -24,21 +24,35 @@ jobs:
       - name: Install dependencies
         run: |
           # 升级基础工具
-          python -m pip install --upgrade pip
-          # 完全卸载和重新安装 requests 及其依赖性
-          pip uninstall -y requests urllib3 chardet charset-normalizer || true
+          python -m pip install --upgrade pip setuptools wheel
+          # 升级基础工具
+          python -m pip install --upgrade pip setuptools wheel
           # 安装兼容版本
           pip install
             "urllib3==2.2.0"
             "charset-normalizer==3.3.2"
             "certifi==2024.2.2"
             "idna==3.7"
-          # 安装 requests 和其他依赖
-          pip install 
             "requests==2.32.3"
-            telethon awscli beautifulsoup4 selenium undetected-chromedriver chromedriver-autoinstaller crawl4ai
+          # 安装其他依赖
+          pip install 
+            telethon
+            awscli
+            beautifulsoup4
+            selenium
+            undetected-chromedriver
+            chromedriver-autoinstaller
+            crawl4ai
+          # 安装 Playwright
           playwright install chromium
-          
+          # 验证安装
+          python -c "
+          import warnings
+          import requests
+          warnings.filterwarnings('ignore')
+          print(f'✓ requests version: {requests.__version__}')
+          print(f'✓ urllib3 version: {requests.__version__}')
+          "
 
       - name: Clear links.txt content
         run: |
