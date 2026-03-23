@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+YouTube V2Ray/Clash配置文件自动化助手 v3.3（GitHub Actions版）
+功能：完全自动化获取最新视频、下载地址和密码
+密码获取方式：下载音频 → whisper识别 → 提取密码
+"""
+
 import requests
 import re
 import sys
@@ -201,33 +209,78 @@ def extract_paste_to_url(description: str) -> Optional[str]:
 
 
 def download_audio_yt_dlp(video_url: str, audio_dir: Path) -> Optional[Path]:
-    """使用yt-dlp下载音频"""
+    """使用yt-dlp下载音频（高级反检测模式）"""
     print("\n🔍 开始下载音频...")
+    print("💡 使用高级反检测模式...")
 
     try:
         import yt_dlp
 
-        ydl_opts = {
-            'format': 'bestaudio/best',
-            'outtmpl': str(audio_dir / '%(title)s.%(ext)s'),
-            'quiet': True,
-            'no_warnings': True,
-        }
+        # 使用多个User-Agent轮换
+        user_agents = [
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0',
+        ]
 
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            info = ydl.extract_info(video_url, download=True)
-            audio_filename = ydl.prepare_filename(info)
+        # 尝试使用不同的客户端
+        for i, user_agent in enumerate(user_agents):
+            try:
+                print(f"  尝试方法 {i+1}/{len(user_agents)}...")
 
-        # 查找下载的文件
-        audio_files = list(audio_dir.glob('*.mp4')) + list(audio_dir.glob('*.mp3')) + list(audio_dir.glob('*.webm'))
-        if audio_files:
-            audio_file = audio_files[-1]  # 获取最新的文件
-            print(f"✅ 音频下载成功: {audio_file.name}")
-            print(f"   文件大小: {audio_file.stat().st_size / 1024 / 1024:.2f} MB")
-            return audio_file
-        else:
-            print("❌ 未找到下载的音频文件")
-            return None
+                ydl_opts = {
+                    'format': 'bestaudio/best',
+                    'outtmpl': str(audio_dir / '%(title)s.%(ext)s'),
+                    'quiet': True,
+                    'no_warnings': True,
+                    'nocheckcertificate': True,
+                    'ignoreerrors': True,
+                    'extract_flat': False,
+                    'noplaylist': True,
+                    'user_agent': user_agent,
+                    'extractor_args': {
+                        'youtube': {
+                            'player_client': ['android', 'web'],  # 使用多个客户端
+                        }
+                    },
+                    'http_headers': {
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+                        'Accept-Encoding': 'gzip, deflate, br',
+                        'Connection': 'keep-alive',
+                        'Upgrade-Insecure-Requests': '1',
+                    },
+                    'retries': 3,
+                    'fragment_retries': 3,
+                }
+
+                with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                    info = ydl.extract_info(video_url, download=True)
+                    audio_filename = ydl.prepare_filename(info)
+
+                # 查找下载的文件
+                audio_files = list(audio_dir.glob('*.mp4')) + list(audio_dir.glob('*.mp3')) + list(audio_dir.glob('*.webm'))
+                if audio_files:
+                    audio_file = audio_files[-1]
+                    print(f"✅ 音频下载成功: {audio_file.name}")
+                    print(f"   文件大小: {audio_file.stat().st_size / 1024 / 1024:.2f} MB")
+                    return audio_file
+
+            except Exception as e:
+                error_msg = str(e)
+                print(f"  方法 {i+1} 失败: {error_msg[:100]}")
+
+                # 如果是机器人检测错误，尝试下一个方法
+                if 'bot' in error_msg.lower() or 'sign in' in error_msg.lower():
+                    if i < len(user_agents) - 1:
+                        print(f"  检测到反爬虫，切换User-Agent...")
+                        import time
+                        time.sleep(2)
+                        continue
+
+        print("❌ 所有下载方法都失败了")
+        return None
 
     except ImportError:
         print("❌ 未安装yt-dlp库")
@@ -499,26 +552,29 @@ def main():
         # 3.1 下载音频
         audio_file = download_audio_yt_dlp(latest_video['url'], audio_dir)
         if not audio_file:
-            raise RuntimeError("❌ 音频下载失败")
+            print("⚠️ 音频下载失败（可能是YouTube反爬虫限制）")
+            print("💡 尝试其他方法获取密码...")
         else:
             # 3.2 直接使用whisper识别（无需转换）
             if SPEECH_RECOGNITION_ENGINE == "whisper":
                 text = recognize_audio_whisper(audio_file)
                 if not text:
-                    raise RuntimeError("❌ 音频识别失败")
+                    print("⚠️ 音频识别失败")
+                else:
+                    # 3.3 提取密码
+                    password = extract_password_from_text(text)
             else:
                 # 如果使用SpeechRecognition，需要转换为WAV格式
                 wav_file = audio_dir / f"{audio_file.stem}.wav"
                 if convert_audio_to_wav(audio_file, wav_file):
                     text = recognize_audio_speech_recognition(wav_file)
                     if not text:
-                        raise RuntimeError("❌ 音频识别失败")
+                        print("⚠️ 音频识别失败")
+                    else:
+                        # 3.3 提取密码
+                        password = extract_password_from_text(text)
                 else:
-                    raise RuntimeError("❌ 音频转换失败")
-
-            # 3.3 提取密码
-            if text:
-                password = extract_password_from_text(text)
+                    print("⚠️ 音频转换失败")
 
     # 检查密码是否获取成功
     if not password:
