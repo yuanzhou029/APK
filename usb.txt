@@ -17,296 +17,279 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - {name: 🇺🇸 US美国(yz), server: russia.com, port: 443, type: trojan, password: bpb-trojan, sni: russia.com, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 3, server: hk14.network-cdn-gw-yd.net, port: 32062, type: ss, cipher: chacha20-ietf-poly1305, password: eb9aff96-654d-4b84-bfbd-30d57a927e4d}
-  - {name: 🇺🇸 US美国(yz) 4, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz), server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇸🇬 SG新加坡(yz), server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz), server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2}
+  - {name: 🇺🇸 US美国(yz) 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 3, server: 118.34.36.61, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 4, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 5, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 6, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 7, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 6, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2}
+  - {name: 🇬🇧 GB英国(yz), server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 7, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 8, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 9, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇬🇧 GB英国(yz) 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 3, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 8, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 4, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 5, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 6, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 9, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 10, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 3, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 4, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 11, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 5, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 12, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 7, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 6, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 13, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 7, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇬🇧 GB英国(yz) 8, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 14, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇸🇬 SG新加坡(yz), server: vc.fly.dev, port: 443, type: vmess, uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee, alterId: 32, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /vc, headers: {Host: vc.fly.dev}}}
-  - {name: 🇺🇸 US美国(yz) 15, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 16, server: 2001:bc8:32d7:302::11, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: Azerb.NET}}}
-  - {name: 🇺🇸 US美国(yz) 17, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 18, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
+  - {name: 🇺🇸 US美国(yz) 14, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 15, server: v9.hdacd.com, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 16, server: v29.hdacd.com, port: 30829, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 17, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz), server: chengbai02.ascwt179.com, port: 13223, type: ss, cipher: aes-128-gcm, password: JVrsLLN1tkN8oXZO}
+  - {name: 🇺🇸 US美国(yz) 18, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
   - {name: 🇺🇸 US美国(yz) 19, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 20, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 21, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 22, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 23, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 24, server: 118.34.36.61, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 25, server: v36.hdacd.com, port: 30836, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 26, server: 2a14:7584:d0a2::a, port: 23456, type: vmess, uuid: bd48e0ac-e90e-4451-a4f2-abf061cfb890, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /alvin9999.com, headers: {Host: www.bing.com}}}
-  - {name: 🇺🇸 US美国(yz) 27, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 9, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 28, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 29, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 10, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz), server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 11, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 20, server: 38.60.89.136, port: 50000, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 21, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 22, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇰🇷 KR韩国(yz), server: fun-seagull.rooster465.autos, port: 443, type: trojan, password: WF42809561, sni: fun-seagull.rooster465.autos, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz), server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 23, server: hk14.network-cdn-gw-yd.net, port: 32062, type: ss, cipher: chacha20-ietf-poly1305, password: eb9aff96-654d-4b84-bfbd-30d57a927e4d}
+  - {name: 🇭🇰 HK香港 (yz), server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 24, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 25, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 26, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 27, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇬🇧 GB英国(yz) 9, server: model-stingray.crayfish192.xyz, port: 443, type: trojan, password: WF42809561, sni: model-stingray.crayfish192.xyz, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 2, server: hk14.network-cdn-gw-yd.net, port: 32062, type: ss, cipher: chacha20-ietf-poly1305, password: eb9aff96-654d-4b84-bfbd-30d57a927e4d}
+  - {name: 🇺🇸 US美国(yz) 28, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
+  - {name: 🇭🇰 HK香港(yz) 3, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 29, server: 2a14:7584:d0a2::a, port: 23456, type: vmess, uuid: bd48e0ac-e90e-4451-a4f2-abf061cfb890, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /alvin9999.com, headers: {Host: www.bing.com}}}
+  - {name: 🇰🇷 KR韩国(yz) 2, server: fun-seagull.rooster465.autos, port: 443, type: trojan, password: WF42809561, sni: fun-seagull.rooster465.autos, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 30, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 31, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 32, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 33, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2}
-  - {name: 🇺🇸 US美国(yz) 34, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 31, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 4, server: top-goshawk.rooster465.autos, port: 443, type: trojan, password: WF42809561, sni: top-goshawk.rooster465.autos, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 32, server: 118.34.36.61, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 3, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 4, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
+  - {name: 🇭🇰 HK香港(yz) 5, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港 (yz) 2, server: chengbai02.ascwt179.com, port: 13223, type: ss, cipher: aes-128-gcm, password: JVrsLLN1tkN8oXZO}
+  - {name: 🇰🇷 KR韩国(yz) 3, server: premium-lab.rooster465.autos, port: 443, type: trojan, password: WF42809561, sni: premium-lab.rooster465.autos, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 6, server: funky-platypus.rooster465.autos, port: 443, type: trojan, password: WF42809561, sni: funky-platypus.rooster465.autos, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 7, server: funky-platypus.rooster465.autos, port: 443, type: trojan, password: WF42809561, sni: funky-platypus.rooster465.autos, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 33, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 10, server: 152.53.45.251, port: 8888, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 34, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 35, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 36, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 37, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 38, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 39, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 40, server: 152.53.200.167, port: 8444, type: trojan, password: trojan, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 41, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 42, server: 118.34.36.61, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 37, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇦 乌克兰(yz), server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
-  - {name: 🇫🇷 FR法国(yz), server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
-  - {name: 🇭🇰 HK香港(yz) 3, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
-  - {name: 🇺🇸 US美国(yz) 43, server: v9.hdacd.com, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 44, server: 103.181.164.145, port: 54022, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 45, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
-  - {name: 🇭🇰 HK香港(yz) 4, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 46, server: 103.181.164.145, port: 51556, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 47, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 48, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 3, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 49, server: 152.53.200.167, port: 8444, type: trojan, password: trojan, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 50, server: 103.181.164.145, port: 54022, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 51, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 52, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 4, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 53, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 12, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 5, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 54, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 55, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 38, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 11, server: 152.53.200.98, port: 8444, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 39, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 40, server: 152.53.200.167, port: 8444, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 41, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 42, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 43, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 12, server: 152.53.60.198, port: 8444, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 44, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 45, server: 2001:bc8:32d7:302::16, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
   - {name: 🇬🇧 GB英国(yz) 13, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 56, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 57, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 58, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 59, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 60, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 61, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 62, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 46, server: 152.53.200.167, port: 8444, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 47, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 48, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
+  - {name: 🇺🇸 US美国(yz) 49, server: v36.hdacd.com, port: 30836, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 50, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 51, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 52, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 53, server: 221.146.116.77, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 54, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 55, server: 2001:bc8:32d7:302::11, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: TABRIZ.NET}}}
+  - {name: 🇺🇸 US美国(yz) 56, server: 2001:bc8:32d7:302::17, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
+  - {name: 🇺🇸 US美国(yz) 57, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: AZERB.NET}}}
+  - {name: 🇺🇸 US美国(yz) 58, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
+  - {name: 🇺🇸 US美国(yz) 59, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
+  - {name: 🇺🇸 US美国(yz) 60, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: TABRIZ.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 5, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 61, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 6, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 62, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
   - {name: 🇬🇧 GB英国(yz) 14, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇬🇧 GB英国(yz) 15, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 63, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 5, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 64, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇸🇬 SG新加坡(yz) 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 65, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 66, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 6, server: chengbai02.ascwt179.com, port: 13223, type: ss, cipher: aes-128-gcm, password: JVrsLLN1tkN8oXZO}
-  - {name: 🇺🇸 US美国(yz) 67, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 7, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 68, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇰🇷 KR韩国(yz) 4, server: 211.106.184.129, port: 11310, type: trojan, password: trojan, skip-cert-verify: false}
   - {name: 🇬🇧 GB英国(yz) 16, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 69, server: v33.hdacd.com, port: 30833, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 6, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 70, server: 2001:bc8:32d7:302::16, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
-  - {name: 🇺🇸 US美国(yz) 71, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇫🇷 FR法国(yz) 7, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 72, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 73, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 74, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇰🇷 KR韩国(yz), server: 221.146.116.77, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 75, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇰🇷 KR韩国(yz) 2, server: 221.146.116.77, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 64, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 65, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇬🇧 GB英国(yz) 17, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 66, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇬🇧 GB英国(yz) 18, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 19, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 67, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 68, server: ru.n.belka.network, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: Mk_NNq9VBQHMhcRexcpCsExnadd0DeJK}
+  - {name: 🇺🇸 US美国(yz) 69, server: fi.n.belka.network, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: Mk_NNq9VBQHMhcRexcpCsExnadd0DeJK}
+  - {name: 🇺🇸 US美国(yz) 70, server: 59.20.121.139, port: 29999, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 71, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇸🇬 SG新加坡(yz) 2, server: vc.fly.dev, port: 443, type: vmess, uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee, alterId: 32, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /vc, headers: {Host: vc.fly.dev}}}
+  - {name: 🇭🇰 HK香港(yz) 8, server: top-goshawk.rooster465.autos, port: 443, type: trojan, password: WF42809561, sni: top-goshawk.rooster465.autos, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 72, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 73, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 7, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 8, server: 2001:bc8:32d7:302::15, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK.NET}}}
+  - {name: 🇸🇬 SG新加坡(yz) 3, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 9, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 10, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 74, server: 2001:bc8:32d7:302::11, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: Azerb.NET}}}
+  - {name: 🇺🇸 US美国(yz) 75, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 11, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 12, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 13, server: 2001:bc8:32d7:302::14, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: TABRIZ.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 14, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 15, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 16, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 76, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 77, server: russia.com, port: 443, type: trojan, password: bpb-trojan, sni: russia.com, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 2 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 3 2, server: hk14.network-cdn-gw-yd.net, port: 32062, type: ss, cipher: chacha20-ietf-poly1305, password: eb9aff96-654d-4b84-bfbd-30d57a927e4d}
+  - {name: 🇺🇸 US美国(yz) 4 2, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 19, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 5 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 6 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 7 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 2 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 3 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 8 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 4 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 5 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 6 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 9 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 10 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 11 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 12 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 7 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 13 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 8 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 14 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇸🇬 SG新加坡(yz) 4, server: vc.fly.dev, port: 443, type: vmess, uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee, alterId: 32, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /vc, headers: {Host: vc.fly.dev}}}
+  - {name: 🇺🇸 US美国(yz) 15 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 16 2, server: 2001:bc8:32d7:302::11, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: Azerb.NET}}}
+  - {name: 🇺🇸 US美国(yz) 17 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 18 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
+  - {name: 🇺🇸 US美国(yz) 19 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 20 2, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 21 2, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 22 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 23 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 24 2, server: 118.34.36.61, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 25 2, server: v36.hdacd.com, port: 30836, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 26 2, server: 2a14:7584:d0a2::a, port: 23456, type: vmess, uuid: bd48e0ac-e90e-4451-a4f2-abf061cfb890, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /alvin9999.com, headers: {Host: www.bing.com}}}
+  - {name: 🇺🇸 US美国(yz) 27 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 9 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 28 2, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 29 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 10 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 9, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 11 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 30 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 31 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 32 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 33 2, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2}
+  - {name: 🇺🇸 US美国(yz) 34 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 35 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 36 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 37 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 38 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 39 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 40 2, server: 152.53.200.167, port: 8444, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 41 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 42 2, server: 118.34.36.61, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 2 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇦 乌克兰(yz) 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
+  - {name: 🇫🇷 FR法国(yz) 17, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
+  - {name: 🇭🇰 HK香港(yz) 3 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 2 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
+  - {name: 🇺🇸 US美国(yz) 43 2, server: v9.hdacd.com, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 44 2, server: 103.181.164.145, port: 54022, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 45 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
+  - {name: 🇭🇰 HK香港(yz) 4 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 46 2, server: 103.181.164.145, port: 51556, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 47 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 48 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 3 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 49 2, server: 152.53.200.167, port: 8444, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 50 2, server: 103.181.164.145, port: 54022, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 51 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 52 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 4 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 53 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 12 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 5 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 54 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 55 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 13 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 56 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 57 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 58 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 59 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 60 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 61 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 62 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 14 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 15 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 63 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 5 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 64 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇸🇬 SG新加坡(yz) 2 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 65 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 66 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 6 2, server: chengbai02.ascwt179.com, port: 13223, type: ss, cipher: aes-128-gcm, password: JVrsLLN1tkN8oXZO}
+  - {name: 🇺🇸 US美国(yz) 67 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 7 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 68 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 16 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 69 2, server: v33.hdacd.com, port: 30833, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 6 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 70 2, server: 2001:bc8:32d7:302::16, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
+  - {name: 🇺🇸 US美国(yz) 71 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 7 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 72 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇺🇸 US美国(yz) 73 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 74 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇰🇷 KR韩国(yz) 5, server: 221.146.116.77, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 75 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇰🇷 KR韩国(yz) 2 2, server: 221.146.116.77, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 17 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 18 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 GB英国(yz) 19 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇬🇧 GB英国(yz) 20, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇬🇧 GB英国(yz) 21, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇬🇧 GB英国(yz) 22, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇬🇧 GB英国(yz) 23, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇬🇧 GB英国(yz) 24, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 76, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 77, server: hk14.network-cdn-gw-yd.net, port: 32062, type: ss, cipher: chacha20-ietf-poly1305, password: eb9aff96-654d-4b84-bfbd-30d57a927e4d}
+  - {name: 🇺🇸 US美国(yz) 76 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 US美国(yz) 77 2, server: hk14.network-cdn-gw-yd.net, port: 32062, type: ss, cipher: chacha20-ietf-poly1305, password: eb9aff96-654d-4b84-bfbd-30d57a927e4d}
   - {name: 🇺🇸 US美国(yz) 78, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 8, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 HK香港(yz) 8 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 79, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: AZERB.NET}}}
-  - {name: 🇭🇰 HK香港(yz) 9, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 8, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
+  - {name: 🇭🇰 HK香港(yz) 9 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇫🇷 FR法国(yz) 8 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
   - {name: 🇺🇸 US美国(yz) 80, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: TABRIZ.NET}}}
-  - {name: 🇫🇷 FR法国(yz) 9, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
-  - {name: 🇫🇷 FR法国(yz) 10, server: 2001:bc8:32d7:302::14, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: TABRIZ.NET}}}
-  - {name: 🇫🇷 FR法国(yz) 11, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 9 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 10 2, server: 2001:bc8:32d7:302::14, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: TABRIZ.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 11 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
   - {name: 🇺🇸 US美国(yz) 81, server: 2001:bc8:32d7:302::11, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: TABRIZ.NET}}}
   - {name: 🇺🇸 US美国(yz) 82, server: 2001:bc8:32d7:302::17, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
   - {name: 🇺🇸 US美国(yz) 83, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇫🇷 FR法国(yz) 12, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: 2001:bc8:32d7:302::10}}}
+  - {name: 🇫🇷 FR法国(yz) 12 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: 2001:bc8:32d7:302::10}}}
   - {name: 🇺🇸 US美国(yz) 84, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇫🇷 FR法国(yz) 13, server: 2001:bc8:32d7:302::15, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 13 2, server: 2001:bc8:32d7:302::15, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK.NET}}}
   - {name: 🇺🇸 US美国(yz) 85, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10", headers: {Host: 2001:bc8:32d7:302::10}}}
   - {name: 🇺🇸 US美国(yz) 86, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 87, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 88, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 89, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 14, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
+  - {name: 🇫🇷 FR法国(yz) 14 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
   - {name: 🇺🇸 US美国(yz) 90, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 US美国(yz) 91, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
   - {name: 🇺🇸 US美国(yz) 92, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2}
-  - {name: 🇸🇬 SG新加坡(yz) 3, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 93, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 10, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 2 2, server: los7.ee2.in, port: 33741, type: trojan, password: 24900_tc0b8476d, sni: los7.ee2.in, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 3 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 15, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 4 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 5 2, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2}
-  - {name: 🇺🇸 US美国(yz) 6 2, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2}
-  - {name: 🇺🇸 US美国(yz) 7 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 8 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 9 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 2 2, server: chengbai02.ascwt179.com, port: 13223, type: ss, cipher: aes-128-gcm, password: JVrsLLN1tkN8oXZO}
-  - {name: 🇺🇸 US美国(yz) 10 2, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 11 2, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 12 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 13 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 14 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 15 2, server: 152.53.200.167, port: 8444, type: trojan, password: trojan, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 16 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 3 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 2 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 17 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 3 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
-  - {name: 🇺🇸 US美国(yz) 18 2, server: hk14.network-cdn-gw-yd.net, port: 32062, type: ss, cipher: chacha20-ietf-poly1305, password: eb9aff96-654d-4b84-bfbd-30d57a927e4d}
-  - {name: 🇺🇸 US美国(yz) 19 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
-  - {name: 🇭🇰 HK香港(yz) 4 2, server: chengbai02.ascwt179.com, port: 13223, type: ss, cipher: aes-128-gcm, password: JVrsLLN1tkN8oXZO}
-  - {name: 🇺🇸 US美国(yz) 20 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇩🇪 DE德国(yz), server: d.810114.xyz, port: 443, type: vmess, uuid: 2ce2ab9a-ea25-45d3-80d9-c361878bb983, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /mea, headers: {Host: d.810114.xyz}}}
-  - {name: 🇸🇬 SG新加坡(yz) 4, server: vc.fly.dev, port: 443, type: vmess, uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee, alterId: 32, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /vc, headers: {Host: vc.fly.dev}}}
-  - {name: 🇺🇸 US美国(yz) 21 2, server: 103.181.164.145, port: 54022, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 22 2, server: v33.hdacd.com, port: 30833, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 23 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇺🇸 US美国(yz) 24 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 5 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 25 2, server: v9.hdacd.com, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 26 2, server: 103.181.164.145, port: 51556, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 4 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm}
-  - {name: 🇭🇰 HK香港(yz) 6 2, server: hk14.network-cdn-gw-yd.net, port: 32062, type: ss, cipher: chacha20-ietf-poly1305, password: eb9aff96-654d-4b84-bfbd-30d57a927e4d}
-  - {name: 🇺🇸 US美国(yz) 27 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 28 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: wwzVn2ZnHfqYa6l8EWh3eY}
-  - {name: 🇺🇸 US美国(yz) 29 2, server: shrimp-door-9527.gym0boy.com, port: 37748, type: ss, cipher: aes-128-gcm, password: 62800033-f1ce-4867-87ce-8995891d5d97}
-  - {name: 🇬🇧 GB英国(yz) 25, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 2 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 3 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 4 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 5 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 30 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 31 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 5 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 32 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 33 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 34 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 35 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 36 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 37 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 38 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 39 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 40 2, server: shrimp-door-9527.gym0boy.com, port: 44572, type: ss, cipher: aes-128-gcm, password: 62800033-f1ce-4867-87ce-8995891d5d97}
-  - {name: 🇺🇸 US美国(yz) 41 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 6 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 7 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 42 2, server: 152.53.200.167, port: 8444, type: trojan, password: trojan, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 43 2, server: shrimp-door-9527.gym0boy.com, port: 25770, type: ss, cipher: aes-128-gcm, password: 62800033-f1ce-4867-87ce-8995891d5d97}
-  - {name: 🇺🇸 US美国(yz) 44 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 45 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 46 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 47 2, server: kto1.ttddd.xyz, port: 443, type: trojan, password: 14326_tf497f7b0, sni: kto1.ttddd.xyz, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 48 2, server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH}
-  - {name: 🇺🇸 US美国(yz) 49 2, server: lkhjm.edu2026.cn, port: 16045, type: ss, cipher: aes-128-gcm, password: 62800033-f1ce-4867-87ce-8995891d5d97}
-  - {name: 🇺🇸 US美国(yz) 50 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 51 2, server: 118.34.36.61, port: 10003, type: trojan, password: trojan, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 52 2, server: v29.hdacd.com, port: 30829, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 53 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 7 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 54 2, server: rgt.ae1autumn.dpdns.org, port: 80, type: vmess, uuid: 13ad36e6-c091-43f2-8505-47d868dd544c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /YsmRouA9ZbxgW4, headers: {Host: rgt.ae1autumn.dpdns.org}}}
-  - {name: 🇸🇬 SG新加坡(yz) 2 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇸🇬 SG新加坡(yz) 3 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 55 2, server: v24.hdacd.com, port: 30824, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 56 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 6 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇫🇷 FR法国(yz) 7 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 57 2, server: 103.181.164.145, port: 54022, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 58 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "?ed=2048", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 59 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 8 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 60 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 9 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 61 2, server: 167.68.4.199, port: 2053, type: trojan, password: Aimer, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 10 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 11 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 12 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 13 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 14 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 15 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 62 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 63 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 64 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 16 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 17 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 18 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 65 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 19 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 20 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 21 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 22 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 66 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 23 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 24 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 67 2, server: v36.hdacd.com, port: 30836, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 25 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 26, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 68 2, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 69 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 GB英国(yz) 27, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 70 2, server: tky8.ttddd.xyz, port: 443, type: trojan, password: 27390_t853d9c0b, sni: tky8.ttddd.xyz, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 8 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 71 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 72 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 73 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 74 2, server: 2a14:7584:d0a2::a, port: 23456, type: vmess, uuid: bd48e0ac-e90e-4451-a4f2-abf061cfb890, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /alvin9999.com, headers: {Host: www.bing.com}}}
-  - {name: 🇺🇸 US美国(yz) 75 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 76 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 77 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 78 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: TABRIZ.NET}}}
-  - {name: 🇺🇸 US美国(yz) 79 2, server: 2001:bc8:32d7:302::15, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK.NET}}}
-  - {name: 🇺🇸 US美国(yz) 80 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 81 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 82 2, server: 2001:bc8:32d7:302::14, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: TABRIZ.NET}}}
-  - {name: 🇺🇸 US美国(yz) 83 2, server: 2001:bc8:32d7:302::17, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
-  - {name: 🇺🇸 US美国(yz) 84 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: TURK1.NET.NET}}}
-  - {name: 🇺🇸 US美国(yz) 85 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: AZERB.NET}}}
-  - {name: 🇫🇷 FR法国(yz) 8 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
-  - {name: 🇺🇸 US美国(yz) 86 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 87 2, server: 2001:bc8:32d7:302::11, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: TABRIZ.NET}}}
-  - {name: 🇺🇸 US美国(yz) 88 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 89 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 90 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: AZERB.NET}}}
-  - {name: 🇺🇸 US美国(yz) 91 2, server: 2001:bc8:32d7:302::16, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
-  - {name: 🇺🇸 US美国(yz) 92 2, server: 2001:bc8:32d7:302::11, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560", headers: {Host: Azerb.NET}}}
-  - {name: 🇺🇸 US美国(yz) 93 2, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 HK香港(yz) 9 2, server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 US美国(yz) 94, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN--HiByeVPNN", headers: {Host: 2001:bc8:32d7:302::10}}}
-  - {name: 🇺🇸 US美国(yz) 95, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇫🇷 FR法国(yz) 9 2, server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1", headers: {Host: AZERB.NET}}}
-  - {name: 🇺🇸 US美国(yz) 96, server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇺🇸 www.85la.com🇺🇸US¹⁺_120|1.2MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed, server: 172.67.73.14, port: 443, type: vless, uuid: d85ea913-7dfa-44b0-bd66-33414e897991, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /35.230.79.26=443, headers: {Host: afrcloud22.mmv.kr}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US¹⁺_100|1.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed, server: afrcloud22.mmv.kr, port: 443, type: vless, uuid: 6573a2b1-fd7a-4916-9688-b88260547c24, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /43.130.134.123=65002, headers: {Host: afrcloud22.mmv.kr}}}
   - {name: 🇺🇸 www.85la.com🇺🇸US⁻¹_92|3.9MB/s|YT|TK|NF|D+|Succeed, server: afrcloud22.mmv.kr, port: 443, type: vless, uuid: d3e15a11-ebd9-4315-b110-f9fb1c52f153, tls: true, tfo: false, skip-cert-verify: false, servername: afrcloud22.mmv.kr, client-fingerprint: chrome, network: ws, ws-opts: {path: /🔒, headers: {Host: afrcloud22.mmv.kr}}}
@@ -1373,200 +1356,178 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     proxies:
+      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz)
       - 🇺🇸 US美国(yz) 2
       - 🇺🇸 US美国(yz) 3
       - 🇺🇸 US美国(yz) 4
-      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 5
       - 🇺🇸 US美国(yz) 6
+      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 7
-      - 🇬🇧 GB英国(yz) 2
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 8
-      - 🇬🇧 GB英国(yz) 4
-      - 🇬🇧 GB英国(yz) 5
-      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 US美国(yz) 9
+      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 10
+      - 🇬🇧 GB英国(yz) 3
+      - 🇬🇧 GB英国(yz) 4
       - 🇺🇸 US美国(yz) 11
+      - 🇬🇧 GB英国(yz) 5
       - 🇺🇸 US美国(yz) 12
-      - 🇬🇧 GB英国(yz) 7
+      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 US美国(yz) 13
+      - 🇬🇧 GB英国(yz) 7
       - 🇬🇧 GB英国(yz) 8
       - 🇺🇸 US美国(yz) 14
-      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz) 15
       - 🇺🇸 US美国(yz) 16
       - 🇺🇸 US美国(yz) 17
+      - 🇭🇰 HK香港(yz)
       - 🇺🇸 US美国(yz) 18
       - 🇺🇸 US美国(yz) 19
       - 🇺🇸 US美国(yz) 20
       - 🇺🇸 US美国(yz) 21
       - 🇺🇸 US美国(yz) 22
+      - 🇰🇷 KR韩国(yz)
+      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz) 23
+      - 🇭🇰 HK香港 (yz)
       - 🇺🇸 US美国(yz) 24
       - 🇺🇸 US美国(yz) 25
       - 🇺🇸 US美国(yz) 26
       - 🇺🇸 US美国(yz) 27
       - 🇬🇧 GB英国(yz) 9
+      - 🇭🇰 HK香港(yz) 2
       - 🇺🇸 US美国(yz) 28
+      - 🇭🇰 HK香港(yz) 3
       - 🇺🇸 US美国(yz) 29
-      - 🇬🇧 GB英国(yz) 10
-      - 🇭🇰 HK香港(yz)
-      - 🇬🇧 GB英国(yz) 11
+      - 🇰🇷 KR韩国(yz) 2
       - 🇺🇸 US美国(yz) 30
       - 🇺🇸 US美国(yz) 31
+      - 🇭🇰 HK香港(yz) 4
+      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 32
+      - 🇫🇷 FR法国(yz) 3
+      - 🇫🇷 FR法国(yz) 4
+      - 🇭🇰 HK香港(yz) 5
+      - 🇭🇰 HK香港 (yz) 2
+      - 🇰🇷 KR韩国(yz) 3
+      - 🇭🇰 HK香港(yz) 6
+      - 🇭🇰 HK香港(yz) 7
       - 🇺🇸 US美国(yz) 33
+      - 🇬🇧 GB英国(yz) 10
       - 🇺🇸 US美国(yz) 34
       - 🇺🇸 US美国(yz) 35
       - 🇺🇸 US美国(yz) 36
       - 🇺🇸 US美国(yz) 37
+      - 🇺🇦 乌克兰(yz)
       - 🇺🇸 US美国(yz) 38
+      - 🇬🇧 GB英国(yz) 11
       - 🇺🇸 US美国(yz) 39
       - 🇺🇸 US美国(yz) 40
       - 🇺🇸 US美国(yz) 41
       - 🇺🇸 US美国(yz) 42
-      - 🇭🇰 HK香港(yz) 2
-      - 🇺🇦 乌克兰(yz)
-      - 🇫🇷 FR法国(yz)
-      - 🇭🇰 HK香港(yz) 3
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 43
+      - 🇬🇧 GB英国(yz) 12
       - 🇺🇸 US美国(yz) 44
       - 🇺🇸 US美国(yz) 45
-      - 🇭🇰 HK香港(yz) 4
+      - 🇬🇧 GB英国(yz) 13
       - 🇺🇸 US美国(yz) 46
       - 🇺🇸 US美国(yz) 47
       - 🇺🇸 US美国(yz) 48
-      - 🇫🇷 FR法国(yz) 3
       - 🇺🇸 US美国(yz) 49
       - 🇺🇸 US美国(yz) 50
       - 🇺🇸 US美国(yz) 51
       - 🇺🇸 US美国(yz) 52
-      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 53
-      - 🇬🇧 GB英国(yz) 12
-      - 🇫🇷 FR法国(yz) 5
       - 🇺🇸 US美国(yz) 54
       - 🇺🇸 US美国(yz) 55
-      - 🇬🇧 GB英国(yz) 13
       - 🇺🇸 US美国(yz) 56
       - 🇺🇸 US美国(yz) 57
       - 🇺🇸 US美国(yz) 58
       - 🇺🇸 US美国(yz) 59
       - 🇺🇸 US美国(yz) 60
+      - 🇫🇷 FR法国(yz) 5
       - 🇺🇸 US美国(yz) 61
+      - 🇫🇷 FR法国(yz) 6
       - 🇺🇸 US美国(yz) 62
       - 🇬🇧 GB英国(yz) 14
       - 🇬🇧 GB英国(yz) 15
       - 🇺🇸 US美国(yz) 63
-      - 🇭🇰 HK香港(yz) 5
-      - 🇺🇸 US美国(yz) 64
-      - 🇸🇬 SG新加坡(yz) 2
-      - 🇺🇸 US美国(yz) 65
-      - 🇺🇸 US美国(yz) 66
-      - 🇭🇰 HK香港(yz) 6
-      - 🇺🇸 US美国(yz) 67
-      - 🇭🇰 HK香港(yz) 7
-      - 🇺🇸 US美国(yz) 68
+      - 🇰🇷 KR韩国(yz) 4
       - 🇬🇧 GB英国(yz) 16
+      - 🇺🇸 US美国(yz) 64
+      - 🇺🇸 US美国(yz) 65
+      - 🇬🇧 GB英国(yz) 17
+      - 🇺🇸 US美国(yz) 66
+      - 🇬🇧 GB英国(yz) 18
+      - 🇺🇸 US美国(yz) 67
+      - 🇺🇸 US美国(yz) 68
       - 🇺🇸 US美国(yz) 69
-      - 🇫🇷 FR法国(yz) 6
       - 🇺🇸 US美国(yz) 70
       - 🇺🇸 US美国(yz) 71
-      - 🇫🇷 FR法国(yz) 7
+      - 🇸🇬 SG新加坡(yz) 2
+      - 🇭🇰 HK香港(yz) 8
       - 🇺🇸 US美国(yz) 72
       - 🇺🇸 US美国(yz) 73
-      - 🇺🇸 US美国(yz) 74
-      - 🇰🇷 KR韩国(yz)
-      - 🇺🇸 US美国(yz) 75
-      - 🇰🇷 KR韩国(yz) 2
-      - 🇬🇧 GB英国(yz) 17
-      - 🇬🇧 GB英国(yz) 18
-      - 🇬🇧 GB英国(yz) 19
-      - 🇬🇧 GB英国(yz) 20
-      - 🇬🇧 GB英国(yz) 21
-      - 🇬🇧 GB英国(yz) 22
-      - 🇬🇧 GB英国(yz) 23
-      - 🇬🇧 GB英国(yz) 24
-      - 🇺🇸 US美国(yz) 76
-      - 🇺🇸 US美国(yz) 77
-      - 🇺🇸 US美国(yz) 78
-      - 🇭🇰 HK香港(yz) 8
-      - 🇺🇸 US美国(yz) 79
-      - 🇭🇰 HK香港(yz) 9
+      - 🇫🇷 FR法国(yz) 7
       - 🇫🇷 FR法国(yz) 8
-      - 🇺🇸 US美国(yz) 80
+      - 🇸🇬 SG新加坡(yz) 3
       - 🇫🇷 FR法国(yz) 9
       - 🇫🇷 FR法国(yz) 10
+      - 🇺🇸 US美国(yz) 74
+      - 🇺🇸 US美国(yz) 75
       - 🇫🇷 FR法国(yz) 11
-      - 🇺🇸 US美国(yz) 81
-      - 🇺🇸 US美国(yz) 82
-      - 🇺🇸 US美国(yz) 83
       - 🇫🇷 FR法国(yz) 12
-      - 🇺🇸 US美国(yz) 84
       - 🇫🇷 FR法国(yz) 13
-      - 🇺🇸 US美国(yz) 85
-      - 🇺🇸 US美国(yz) 86
-      - 🇺🇸 US美国(yz) 87
-      - 🇺🇸 US美国(yz) 88
-      - 🇺🇸 US美国(yz) 89
       - 🇫🇷 FR法国(yz) 14
-      - 🇺🇸 US美国(yz) 90
-      - 🇺🇸 US美国(yz) 91
-      - 🇺🇸 US美国(yz) 92
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇺🇸 US美国(yz) 93
-      - 🇭🇰 HK香港(yz) 10
+      - 🇫🇷 FR法国(yz) 15
+      - 🇫🇷 FR法国(yz) 16
+      - 🇺🇸 US美国(yz) 76
+      - 🇺🇸 US美国(yz) 77
       - 🇺🇸 US美国(yz) 2 2
       - 🇺🇸 US美国(yz) 3 2
-      - 🇫🇷 FR法国(yz) 15
       - 🇺🇸 US美国(yz) 4 2
+      - 🇬🇧 GB英国(yz) 19
       - 🇺🇸 US美国(yz) 5 2
       - 🇺🇸 US美国(yz) 6 2
       - 🇺🇸 US美国(yz) 7 2
+      - 🇬🇧 GB英国(yz) 2 2
+      - 🇬🇧 GB英国(yz) 3 2
       - 🇺🇸 US美国(yz) 8 2
+      - 🇬🇧 GB英国(yz) 4 2
+      - 🇬🇧 GB英国(yz) 5 2
+      - 🇬🇧 GB英国(yz) 6 2
       - 🇺🇸 US美国(yz) 9 2
-      - 🇭🇰 HK香港(yz) 2 2
       - 🇺🇸 US美国(yz) 10 2
       - 🇺🇸 US美国(yz) 11 2
       - 🇺🇸 US美国(yz) 12 2
+      - 🇬🇧 GB英国(yz) 7 2
       - 🇺🇸 US美国(yz) 13 2
+      - 🇬🇧 GB英国(yz) 8 2
       - 🇺🇸 US美国(yz) 14 2
+      - 🇸🇬 SG新加坡(yz) 4
       - 🇺🇸 US美国(yz) 15 2
       - 🇺🇸 US美国(yz) 16 2
-      - 🇭🇰 HK香港(yz) 3 2
-      - 🇫🇷 FR法国(yz) 2 2
       - 🇺🇸 US美国(yz) 17 2
-      - 🇫🇷 FR法国(yz) 3 2
       - 🇺🇸 US美国(yz) 18 2
       - 🇺🇸 US美国(yz) 19 2
-      - 🇭🇰 HK香港(yz) 4 2
       - 🇺🇸 US美国(yz) 20 2
-      - 🇩🇪 DE德国(yz)
-      - 🇸🇬 SG新加坡(yz) 4
       - 🇺🇸 US美国(yz) 21 2
       - 🇺🇸 US美国(yz) 22 2
       - 🇺🇸 US美国(yz) 23 2
       - 🇺🇸 US美国(yz) 24 2
-      - 🇭🇰 HK香港(yz) 5 2
       - 🇺🇸 US美国(yz) 25 2
       - 🇺🇸 US美国(yz) 26 2
-      - 🇫🇷 FR法国(yz) 4 2
-      - 🇭🇰 HK香港(yz) 6 2
       - 🇺🇸 US美国(yz) 27 2
+      - 🇬🇧 GB英国(yz) 9 2
       - 🇺🇸 US美国(yz) 28 2
       - 🇺🇸 US美国(yz) 29 2
-      - 🇬🇧 GB英国(yz) 25
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇬🇧 GB英国(yz) 3 2
-      - 🇬🇧 GB英国(yz) 4 2
-      - 🇫🇷 FR法国(yz) 5 2
+      - 🇬🇧 GB英国(yz) 10 2
+      - 🇭🇰 HK香港(yz) 9
+      - 🇬🇧 GB英国(yz) 11 2
       - 🇺🇸 US美国(yz) 30 2
       - 🇺🇸 US美国(yz) 31 2
-      - 🇬🇧 GB英国(yz) 5 2
       - 🇺🇸 US美国(yz) 32 2
       - 🇺🇸 US美国(yz) 33 2
       - 🇺🇸 US美国(yz) 34 2
@@ -1577,92 +1538,97 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 39 2
       - 🇺🇸 US美国(yz) 40 2
       - 🇺🇸 US美国(yz) 41 2
-      - 🇬🇧 GB英国(yz) 6 2
-      - 🇬🇧 GB英国(yz) 7 2
       - 🇺🇸 US美国(yz) 42 2
+      - 🇭🇰 HK香港(yz) 2 2
+      - 🇺🇦 乌克兰(yz) 2
+      - 🇫🇷 FR法国(yz) 17
+      - 🇭🇰 HK香港(yz) 3 2
+      - 🇫🇷 FR法国(yz) 2 2
       - 🇺🇸 US美国(yz) 43 2
       - 🇺🇸 US美国(yz) 44 2
       - 🇺🇸 US美国(yz) 45 2
+      - 🇭🇰 HK香港(yz) 4 2
       - 🇺🇸 US美国(yz) 46 2
       - 🇺🇸 US美国(yz) 47 2
       - 🇺🇸 US美国(yz) 48 2
+      - 🇫🇷 FR法国(yz) 3 2
       - 🇺🇸 US美国(yz) 49 2
       - 🇺🇸 US美国(yz) 50 2
       - 🇺🇸 US美国(yz) 51 2
       - 🇺🇸 US美国(yz) 52 2
+      - 🇫🇷 FR法国(yz) 4 2
       - 🇺🇸 US美国(yz) 53 2
-      - 🇭🇰 HK香港(yz) 7 2
+      - 🇬🇧 GB英国(yz) 12 2
+      - 🇫🇷 FR法国(yz) 5 2
       - 🇺🇸 US美国(yz) 54 2
-      - 🇸🇬 SG新加坡(yz) 2 2
-      - 🇸🇬 SG新加坡(yz) 3 2
       - 🇺🇸 US美国(yz) 55 2
+      - 🇬🇧 GB英国(yz) 13 2
       - 🇺🇸 US美国(yz) 56 2
-      - 🇫🇷 FR法国(yz) 6 2
-      - 🇫🇷 FR法国(yz) 7 2
       - 🇺🇸 US美国(yz) 57 2
       - 🇺🇸 US美国(yz) 58 2
       - 🇺🇸 US美国(yz) 59 2
-      - 🇬🇧 GB英国(yz) 8 2
       - 🇺🇸 US美国(yz) 60 2
-      - 🇬🇧 GB英国(yz) 9 2
       - 🇺🇸 US美国(yz) 61 2
-      - 🇬🇧 GB英国(yz) 10 2
-      - 🇬🇧 GB英国(yz) 11 2
-      - 🇬🇧 GB英国(yz) 12 2
-      - 🇬🇧 GB英国(yz) 13 2
+      - 🇺🇸 US美国(yz) 62 2
       - 🇬🇧 GB英国(yz) 14 2
       - 🇬🇧 GB英国(yz) 15 2
-      - 🇺🇸 US美国(yz) 62 2
       - 🇺🇸 US美国(yz) 63 2
+      - 🇭🇰 HK香港(yz) 5 2
       - 🇺🇸 US美国(yz) 64 2
-      - 🇬🇧 GB英国(yz) 16 2
-      - 🇬🇧 GB英国(yz) 17 2
-      - 🇬🇧 GB英国(yz) 18 2
+      - 🇸🇬 SG新加坡(yz) 2 2
       - 🇺🇸 US美国(yz) 65 2
-      - 🇬🇧 GB英国(yz) 19 2
-      - 🇬🇧 GB英国(yz) 20 2
-      - 🇬🇧 GB英国(yz) 21 2
-      - 🇬🇧 GB英国(yz) 22 2
       - 🇺🇸 US美国(yz) 66 2
-      - 🇬🇧 GB英国(yz) 23 2
-      - 🇬🇧 GB英国(yz) 24 2
+      - 🇭🇰 HK香港(yz) 6 2
       - 🇺🇸 US美国(yz) 67 2
-      - 🇬🇧 GB英国(yz) 25 2
-      - 🇬🇧 GB英国(yz) 26
+      - 🇭🇰 HK香港(yz) 7 2
       - 🇺🇸 US美国(yz) 68 2
+      - 🇬🇧 GB英国(yz) 16 2
       - 🇺🇸 US美国(yz) 69 2
-      - 🇬🇧 GB英国(yz) 27
+      - 🇫🇷 FR法国(yz) 6 2
       - 🇺🇸 US美国(yz) 70 2
-      - 🇭🇰 HK香港(yz) 8 2
       - 🇺🇸 US美国(yz) 71 2
+      - 🇫🇷 FR法国(yz) 7 2
       - 🇺🇸 US美国(yz) 72 2
       - 🇺🇸 US美国(yz) 73 2
       - 🇺🇸 US美国(yz) 74 2
+      - 🇰🇷 KR韩国(yz) 5
       - 🇺🇸 US美国(yz) 75 2
+      - 🇰🇷 KR韩国(yz) 2 2
+      - 🇬🇧 GB英国(yz) 17 2
+      - 🇬🇧 GB英国(yz) 18 2
+      - 🇬🇧 GB英国(yz) 19 2
+      - 🇬🇧 GB英国(yz) 20
+      - 🇬🇧 GB英国(yz) 21
+      - 🇬🇧 GB英国(yz) 22
+      - 🇬🇧 GB英国(yz) 23
+      - 🇬🇧 GB英国(yz) 24
       - 🇺🇸 US美国(yz) 76 2
       - 🇺🇸 US美国(yz) 77 2
-      - 🇺🇸 US美国(yz) 78 2
-      - 🇺🇸 US美国(yz) 79 2
-      - 🇺🇸 US美国(yz) 80 2
-      - 🇺🇸 US美国(yz) 81 2
-      - 🇺🇸 US美国(yz) 82 2
-      - 🇺🇸 US美国(yz) 83 2
-      - 🇺🇸 US美国(yz) 84 2
-      - 🇺🇸 US美国(yz) 85 2
-      - 🇫🇷 FR法国(yz) 8 2
-      - 🇺🇸 US美国(yz) 86 2
-      - 🇺🇸 US美国(yz) 87 2
-      - 🇺🇸 US美国(yz) 88 2
-      - 🇺🇸 US美国(yz) 89 2
-      - 🇺🇸 US美国(yz) 90 2
-      - 🇺🇸 US美国(yz) 91 2
-      - 🇺🇸 US美国(yz) 92 2
-      - 🇺🇸 US美国(yz) 93 2
+      - 🇺🇸 US美国(yz) 78
+      - 🇭🇰 HK香港(yz) 8 2
+      - 🇺🇸 US美国(yz) 79
       - 🇭🇰 HK香港(yz) 9 2
-      - 🇺🇸 US美国(yz) 94
-      - 🇺🇸 US美国(yz) 95
+      - 🇫🇷 FR法国(yz) 8 2
+      - 🇺🇸 US美国(yz) 80
       - 🇫🇷 FR法国(yz) 9 2
-      - 🇺🇸 US美国(yz) 96
+      - 🇫🇷 FR法国(yz) 10 2
+      - 🇫🇷 FR法国(yz) 11 2
+      - 🇺🇸 US美国(yz) 81
+      - 🇺🇸 US美国(yz) 82
+      - 🇺🇸 US美国(yz) 83
+      - 🇫🇷 FR法国(yz) 12 2
+      - 🇺🇸 US美国(yz) 84
+      - 🇫🇷 FR法国(yz) 13 2
+      - 🇺🇸 US美国(yz) 85
+      - 🇺🇸 US美国(yz) 86
+      - 🇺🇸 US美国(yz) 87
+      - 🇺🇸 US美国(yz) 88
+      - 🇺🇸 US美国(yz) 89
+      - 🇫🇷 FR法国(yz) 14 2
+      - 🇺🇸 US美国(yz) 90
+      - 🇺🇸 US美国(yz) 91
+      - 🇺🇸 US美国(yz) 92
+      - 🇸🇬 SG新加坡(yz) 3 2
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_120|1.2MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_100|1.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_92|3.9MB/s|YT|TK|NF|D+|Succeed
@@ -2717,200 +2683,178 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz)
       - 🇺🇸 US美国(yz) 2
       - 🇺🇸 US美国(yz) 3
       - 🇺🇸 US美国(yz) 4
-      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 5
       - 🇺🇸 US美国(yz) 6
+      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 7
-      - 🇬🇧 GB英国(yz) 2
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 8
-      - 🇬🇧 GB英国(yz) 4
-      - 🇬🇧 GB英国(yz) 5
-      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 US美国(yz) 9
+      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 10
+      - 🇬🇧 GB英国(yz) 3
+      - 🇬🇧 GB英国(yz) 4
       - 🇺🇸 US美国(yz) 11
+      - 🇬🇧 GB英国(yz) 5
       - 🇺🇸 US美国(yz) 12
-      - 🇬🇧 GB英国(yz) 7
+      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 US美国(yz) 13
+      - 🇬🇧 GB英国(yz) 7
       - 🇬🇧 GB英国(yz) 8
       - 🇺🇸 US美国(yz) 14
-      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz) 15
       - 🇺🇸 US美国(yz) 16
       - 🇺🇸 US美国(yz) 17
+      - 🇭🇰 HK香港(yz)
       - 🇺🇸 US美国(yz) 18
       - 🇺🇸 US美国(yz) 19
       - 🇺🇸 US美国(yz) 20
       - 🇺🇸 US美国(yz) 21
       - 🇺🇸 US美国(yz) 22
+      - 🇰🇷 KR韩国(yz)
+      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz) 23
+      - 🇭🇰 HK香港 (yz)
       - 🇺🇸 US美国(yz) 24
       - 🇺🇸 US美国(yz) 25
       - 🇺🇸 US美国(yz) 26
       - 🇺🇸 US美国(yz) 27
       - 🇬🇧 GB英国(yz) 9
+      - 🇭🇰 HK香港(yz) 2
       - 🇺🇸 US美国(yz) 28
+      - 🇭🇰 HK香港(yz) 3
       - 🇺🇸 US美国(yz) 29
-      - 🇬🇧 GB英国(yz) 10
-      - 🇭🇰 HK香港(yz)
-      - 🇬🇧 GB英国(yz) 11
+      - 🇰🇷 KR韩国(yz) 2
       - 🇺🇸 US美国(yz) 30
       - 🇺🇸 US美国(yz) 31
+      - 🇭🇰 HK香港(yz) 4
+      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 32
+      - 🇫🇷 FR法国(yz) 3
+      - 🇫🇷 FR法国(yz) 4
+      - 🇭🇰 HK香港(yz) 5
+      - 🇭🇰 HK香港 (yz) 2
+      - 🇰🇷 KR韩国(yz) 3
+      - 🇭🇰 HK香港(yz) 6
+      - 🇭🇰 HK香港(yz) 7
       - 🇺🇸 US美国(yz) 33
+      - 🇬🇧 GB英国(yz) 10
       - 🇺🇸 US美国(yz) 34
       - 🇺🇸 US美国(yz) 35
       - 🇺🇸 US美国(yz) 36
       - 🇺🇸 US美国(yz) 37
+      - 🇺🇦 乌克兰(yz)
       - 🇺🇸 US美国(yz) 38
+      - 🇬🇧 GB英国(yz) 11
       - 🇺🇸 US美国(yz) 39
       - 🇺🇸 US美国(yz) 40
       - 🇺🇸 US美国(yz) 41
       - 🇺🇸 US美国(yz) 42
-      - 🇭🇰 HK香港(yz) 2
-      - 🇺🇦 乌克兰(yz)
-      - 🇫🇷 FR法国(yz)
-      - 🇭🇰 HK香港(yz) 3
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 43
+      - 🇬🇧 GB英国(yz) 12
       - 🇺🇸 US美国(yz) 44
       - 🇺🇸 US美国(yz) 45
-      - 🇭🇰 HK香港(yz) 4
+      - 🇬🇧 GB英国(yz) 13
       - 🇺🇸 US美国(yz) 46
       - 🇺🇸 US美国(yz) 47
       - 🇺🇸 US美国(yz) 48
-      - 🇫🇷 FR法国(yz) 3
       - 🇺🇸 US美国(yz) 49
       - 🇺🇸 US美国(yz) 50
       - 🇺🇸 US美国(yz) 51
       - 🇺🇸 US美国(yz) 52
-      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 53
-      - 🇬🇧 GB英国(yz) 12
-      - 🇫🇷 FR法国(yz) 5
       - 🇺🇸 US美国(yz) 54
       - 🇺🇸 US美国(yz) 55
-      - 🇬🇧 GB英国(yz) 13
       - 🇺🇸 US美国(yz) 56
       - 🇺🇸 US美国(yz) 57
       - 🇺🇸 US美国(yz) 58
       - 🇺🇸 US美国(yz) 59
       - 🇺🇸 US美国(yz) 60
+      - 🇫🇷 FR法国(yz) 5
       - 🇺🇸 US美国(yz) 61
+      - 🇫🇷 FR法国(yz) 6
       - 🇺🇸 US美国(yz) 62
       - 🇬🇧 GB英国(yz) 14
       - 🇬🇧 GB英国(yz) 15
       - 🇺🇸 US美国(yz) 63
-      - 🇭🇰 HK香港(yz) 5
-      - 🇺🇸 US美国(yz) 64
-      - 🇸🇬 SG新加坡(yz) 2
-      - 🇺🇸 US美国(yz) 65
-      - 🇺🇸 US美国(yz) 66
-      - 🇭🇰 HK香港(yz) 6
-      - 🇺🇸 US美国(yz) 67
-      - 🇭🇰 HK香港(yz) 7
-      - 🇺🇸 US美国(yz) 68
+      - 🇰🇷 KR韩国(yz) 4
       - 🇬🇧 GB英国(yz) 16
+      - 🇺🇸 US美国(yz) 64
+      - 🇺🇸 US美国(yz) 65
+      - 🇬🇧 GB英国(yz) 17
+      - 🇺🇸 US美国(yz) 66
+      - 🇬🇧 GB英国(yz) 18
+      - 🇺🇸 US美国(yz) 67
+      - 🇺🇸 US美国(yz) 68
       - 🇺🇸 US美国(yz) 69
-      - 🇫🇷 FR法国(yz) 6
       - 🇺🇸 US美国(yz) 70
       - 🇺🇸 US美国(yz) 71
-      - 🇫🇷 FR法国(yz) 7
+      - 🇸🇬 SG新加坡(yz) 2
+      - 🇭🇰 HK香港(yz) 8
       - 🇺🇸 US美国(yz) 72
       - 🇺🇸 US美国(yz) 73
-      - 🇺🇸 US美国(yz) 74
-      - 🇰🇷 KR韩国(yz)
-      - 🇺🇸 US美国(yz) 75
-      - 🇰🇷 KR韩国(yz) 2
-      - 🇬🇧 GB英国(yz) 17
-      - 🇬🇧 GB英国(yz) 18
-      - 🇬🇧 GB英国(yz) 19
-      - 🇬🇧 GB英国(yz) 20
-      - 🇬🇧 GB英国(yz) 21
-      - 🇬🇧 GB英国(yz) 22
-      - 🇬🇧 GB英国(yz) 23
-      - 🇬🇧 GB英国(yz) 24
-      - 🇺🇸 US美国(yz) 76
-      - 🇺🇸 US美国(yz) 77
-      - 🇺🇸 US美国(yz) 78
-      - 🇭🇰 HK香港(yz) 8
-      - 🇺🇸 US美国(yz) 79
-      - 🇭🇰 HK香港(yz) 9
+      - 🇫🇷 FR法国(yz) 7
       - 🇫🇷 FR法国(yz) 8
-      - 🇺🇸 US美国(yz) 80
+      - 🇸🇬 SG新加坡(yz) 3
       - 🇫🇷 FR法国(yz) 9
       - 🇫🇷 FR法国(yz) 10
+      - 🇺🇸 US美国(yz) 74
+      - 🇺🇸 US美国(yz) 75
       - 🇫🇷 FR法国(yz) 11
-      - 🇺🇸 US美国(yz) 81
-      - 🇺🇸 US美国(yz) 82
-      - 🇺🇸 US美国(yz) 83
       - 🇫🇷 FR法国(yz) 12
-      - 🇺🇸 US美国(yz) 84
       - 🇫🇷 FR法国(yz) 13
-      - 🇺🇸 US美国(yz) 85
-      - 🇺🇸 US美国(yz) 86
-      - 🇺🇸 US美国(yz) 87
-      - 🇺🇸 US美国(yz) 88
-      - 🇺🇸 US美国(yz) 89
       - 🇫🇷 FR法国(yz) 14
-      - 🇺🇸 US美国(yz) 90
-      - 🇺🇸 US美国(yz) 91
-      - 🇺🇸 US美国(yz) 92
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇺🇸 US美国(yz) 93
-      - 🇭🇰 HK香港(yz) 10
+      - 🇫🇷 FR法国(yz) 15
+      - 🇫🇷 FR法国(yz) 16
+      - 🇺🇸 US美国(yz) 76
+      - 🇺🇸 US美国(yz) 77
       - 🇺🇸 US美国(yz) 2 2
       - 🇺🇸 US美国(yz) 3 2
-      - 🇫🇷 FR法国(yz) 15
       - 🇺🇸 US美国(yz) 4 2
+      - 🇬🇧 GB英国(yz) 19
       - 🇺🇸 US美国(yz) 5 2
       - 🇺🇸 US美国(yz) 6 2
       - 🇺🇸 US美国(yz) 7 2
+      - 🇬🇧 GB英国(yz) 2 2
+      - 🇬🇧 GB英国(yz) 3 2
       - 🇺🇸 US美国(yz) 8 2
+      - 🇬🇧 GB英国(yz) 4 2
+      - 🇬🇧 GB英国(yz) 5 2
+      - 🇬🇧 GB英国(yz) 6 2
       - 🇺🇸 US美国(yz) 9 2
-      - 🇭🇰 HK香港(yz) 2 2
       - 🇺🇸 US美国(yz) 10 2
       - 🇺🇸 US美国(yz) 11 2
       - 🇺🇸 US美国(yz) 12 2
+      - 🇬🇧 GB英国(yz) 7 2
       - 🇺🇸 US美国(yz) 13 2
+      - 🇬🇧 GB英国(yz) 8 2
       - 🇺🇸 US美国(yz) 14 2
+      - 🇸🇬 SG新加坡(yz) 4
       - 🇺🇸 US美国(yz) 15 2
       - 🇺🇸 US美国(yz) 16 2
-      - 🇭🇰 HK香港(yz) 3 2
-      - 🇫🇷 FR法国(yz) 2 2
       - 🇺🇸 US美国(yz) 17 2
-      - 🇫🇷 FR法国(yz) 3 2
       - 🇺🇸 US美国(yz) 18 2
       - 🇺🇸 US美国(yz) 19 2
-      - 🇭🇰 HK香港(yz) 4 2
       - 🇺🇸 US美国(yz) 20 2
-      - 🇩🇪 DE德国(yz)
-      - 🇸🇬 SG新加坡(yz) 4
       - 🇺🇸 US美国(yz) 21 2
       - 🇺🇸 US美国(yz) 22 2
       - 🇺🇸 US美国(yz) 23 2
       - 🇺🇸 US美国(yz) 24 2
-      - 🇭🇰 HK香港(yz) 5 2
       - 🇺🇸 US美国(yz) 25 2
       - 🇺🇸 US美国(yz) 26 2
-      - 🇫🇷 FR法国(yz) 4 2
-      - 🇭🇰 HK香港(yz) 6 2
       - 🇺🇸 US美国(yz) 27 2
+      - 🇬🇧 GB英国(yz) 9 2
       - 🇺🇸 US美国(yz) 28 2
       - 🇺🇸 US美国(yz) 29 2
-      - 🇬🇧 GB英国(yz) 25
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇬🇧 GB英国(yz) 3 2
-      - 🇬🇧 GB英国(yz) 4 2
-      - 🇫🇷 FR法国(yz) 5 2
+      - 🇬🇧 GB英国(yz) 10 2
+      - 🇭🇰 HK香港(yz) 9
+      - 🇬🇧 GB英国(yz) 11 2
       - 🇺🇸 US美国(yz) 30 2
       - 🇺🇸 US美国(yz) 31 2
-      - 🇬🇧 GB英国(yz) 5 2
       - 🇺🇸 US美国(yz) 32 2
       - 🇺🇸 US美国(yz) 33 2
       - 🇺🇸 US美国(yz) 34 2
@@ -2921,92 +2865,97 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 39 2
       - 🇺🇸 US美国(yz) 40 2
       - 🇺🇸 US美国(yz) 41 2
-      - 🇬🇧 GB英国(yz) 6 2
-      - 🇬🇧 GB英国(yz) 7 2
       - 🇺🇸 US美国(yz) 42 2
+      - 🇭🇰 HK香港(yz) 2 2
+      - 🇺🇦 乌克兰(yz) 2
+      - 🇫🇷 FR法国(yz) 17
+      - 🇭🇰 HK香港(yz) 3 2
+      - 🇫🇷 FR法国(yz) 2 2
       - 🇺🇸 US美国(yz) 43 2
       - 🇺🇸 US美国(yz) 44 2
       - 🇺🇸 US美国(yz) 45 2
+      - 🇭🇰 HK香港(yz) 4 2
       - 🇺🇸 US美国(yz) 46 2
       - 🇺🇸 US美国(yz) 47 2
       - 🇺🇸 US美国(yz) 48 2
+      - 🇫🇷 FR法国(yz) 3 2
       - 🇺🇸 US美国(yz) 49 2
       - 🇺🇸 US美国(yz) 50 2
       - 🇺🇸 US美国(yz) 51 2
       - 🇺🇸 US美国(yz) 52 2
+      - 🇫🇷 FR法国(yz) 4 2
       - 🇺🇸 US美国(yz) 53 2
-      - 🇭🇰 HK香港(yz) 7 2
+      - 🇬🇧 GB英国(yz) 12 2
+      - 🇫🇷 FR法国(yz) 5 2
       - 🇺🇸 US美国(yz) 54 2
-      - 🇸🇬 SG新加坡(yz) 2 2
-      - 🇸🇬 SG新加坡(yz) 3 2
       - 🇺🇸 US美国(yz) 55 2
+      - 🇬🇧 GB英国(yz) 13 2
       - 🇺🇸 US美国(yz) 56 2
-      - 🇫🇷 FR法国(yz) 6 2
-      - 🇫🇷 FR法国(yz) 7 2
       - 🇺🇸 US美国(yz) 57 2
       - 🇺🇸 US美国(yz) 58 2
       - 🇺🇸 US美国(yz) 59 2
-      - 🇬🇧 GB英国(yz) 8 2
       - 🇺🇸 US美国(yz) 60 2
-      - 🇬🇧 GB英国(yz) 9 2
       - 🇺🇸 US美国(yz) 61 2
-      - 🇬🇧 GB英国(yz) 10 2
-      - 🇬🇧 GB英国(yz) 11 2
-      - 🇬🇧 GB英国(yz) 12 2
-      - 🇬🇧 GB英国(yz) 13 2
+      - 🇺🇸 US美国(yz) 62 2
       - 🇬🇧 GB英国(yz) 14 2
       - 🇬🇧 GB英国(yz) 15 2
-      - 🇺🇸 US美国(yz) 62 2
       - 🇺🇸 US美国(yz) 63 2
+      - 🇭🇰 HK香港(yz) 5 2
       - 🇺🇸 US美国(yz) 64 2
-      - 🇬🇧 GB英国(yz) 16 2
-      - 🇬🇧 GB英国(yz) 17 2
-      - 🇬🇧 GB英国(yz) 18 2
+      - 🇸🇬 SG新加坡(yz) 2 2
       - 🇺🇸 US美国(yz) 65 2
-      - 🇬🇧 GB英国(yz) 19 2
-      - 🇬🇧 GB英国(yz) 20 2
-      - 🇬🇧 GB英国(yz) 21 2
-      - 🇬🇧 GB英国(yz) 22 2
       - 🇺🇸 US美国(yz) 66 2
-      - 🇬🇧 GB英国(yz) 23 2
-      - 🇬🇧 GB英国(yz) 24 2
+      - 🇭🇰 HK香港(yz) 6 2
       - 🇺🇸 US美国(yz) 67 2
-      - 🇬🇧 GB英国(yz) 25 2
-      - 🇬🇧 GB英国(yz) 26
+      - 🇭🇰 HK香港(yz) 7 2
       - 🇺🇸 US美国(yz) 68 2
+      - 🇬🇧 GB英国(yz) 16 2
       - 🇺🇸 US美国(yz) 69 2
-      - 🇬🇧 GB英国(yz) 27
+      - 🇫🇷 FR法国(yz) 6 2
       - 🇺🇸 US美国(yz) 70 2
-      - 🇭🇰 HK香港(yz) 8 2
       - 🇺🇸 US美国(yz) 71 2
+      - 🇫🇷 FR法国(yz) 7 2
       - 🇺🇸 US美国(yz) 72 2
       - 🇺🇸 US美国(yz) 73 2
       - 🇺🇸 US美国(yz) 74 2
+      - 🇰🇷 KR韩国(yz) 5
       - 🇺🇸 US美国(yz) 75 2
+      - 🇰🇷 KR韩国(yz) 2 2
+      - 🇬🇧 GB英国(yz) 17 2
+      - 🇬🇧 GB英国(yz) 18 2
+      - 🇬🇧 GB英国(yz) 19 2
+      - 🇬🇧 GB英国(yz) 20
+      - 🇬🇧 GB英国(yz) 21
+      - 🇬🇧 GB英国(yz) 22
+      - 🇬🇧 GB英国(yz) 23
+      - 🇬🇧 GB英国(yz) 24
       - 🇺🇸 US美国(yz) 76 2
       - 🇺🇸 US美国(yz) 77 2
-      - 🇺🇸 US美国(yz) 78 2
-      - 🇺🇸 US美国(yz) 79 2
-      - 🇺🇸 US美国(yz) 80 2
-      - 🇺🇸 US美国(yz) 81 2
-      - 🇺🇸 US美国(yz) 82 2
-      - 🇺🇸 US美国(yz) 83 2
-      - 🇺🇸 US美国(yz) 84 2
-      - 🇺🇸 US美国(yz) 85 2
-      - 🇫🇷 FR法国(yz) 8 2
-      - 🇺🇸 US美国(yz) 86 2
-      - 🇺🇸 US美国(yz) 87 2
-      - 🇺🇸 US美国(yz) 88 2
-      - 🇺🇸 US美国(yz) 89 2
-      - 🇺🇸 US美国(yz) 90 2
-      - 🇺🇸 US美国(yz) 91 2
-      - 🇺🇸 US美国(yz) 92 2
-      - 🇺🇸 US美国(yz) 93 2
+      - 🇺🇸 US美国(yz) 78
+      - 🇭🇰 HK香港(yz) 8 2
+      - 🇺🇸 US美国(yz) 79
       - 🇭🇰 HK香港(yz) 9 2
-      - 🇺🇸 US美国(yz) 94
-      - 🇺🇸 US美国(yz) 95
+      - 🇫🇷 FR法国(yz) 8 2
+      - 🇺🇸 US美国(yz) 80
       - 🇫🇷 FR法国(yz) 9 2
-      - 🇺🇸 US美国(yz) 96
+      - 🇫🇷 FR法国(yz) 10 2
+      - 🇫🇷 FR法国(yz) 11 2
+      - 🇺🇸 US美国(yz) 81
+      - 🇺🇸 US美国(yz) 82
+      - 🇺🇸 US美国(yz) 83
+      - 🇫🇷 FR法国(yz) 12 2
+      - 🇺🇸 US美国(yz) 84
+      - 🇫🇷 FR法国(yz) 13 2
+      - 🇺🇸 US美国(yz) 85
+      - 🇺🇸 US美国(yz) 86
+      - 🇺🇸 US美国(yz) 87
+      - 🇺🇸 US美国(yz) 88
+      - 🇺🇸 US美国(yz) 89
+      - 🇫🇷 FR法国(yz) 14 2
+      - 🇺🇸 US美国(yz) 90
+      - 🇺🇸 US美国(yz) 91
+      - 🇺🇸 US美国(yz) 92
+      - 🇸🇬 SG新加坡(yz) 3 2
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_120|1.2MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_100|1.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_92|3.9MB/s|YT|TK|NF|D+|Succeed
@@ -4061,200 +4010,178 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz)
       - 🇺🇸 US美国(yz) 2
       - 🇺🇸 US美国(yz) 3
       - 🇺🇸 US美国(yz) 4
-      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 5
       - 🇺🇸 US美国(yz) 6
+      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 7
-      - 🇬🇧 GB英国(yz) 2
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 8
-      - 🇬🇧 GB英国(yz) 4
-      - 🇬🇧 GB英国(yz) 5
-      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 US美国(yz) 9
+      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 10
+      - 🇬🇧 GB英国(yz) 3
+      - 🇬🇧 GB英国(yz) 4
       - 🇺🇸 US美国(yz) 11
+      - 🇬🇧 GB英国(yz) 5
       - 🇺🇸 US美国(yz) 12
-      - 🇬🇧 GB英国(yz) 7
+      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 US美国(yz) 13
+      - 🇬🇧 GB英国(yz) 7
       - 🇬🇧 GB英国(yz) 8
       - 🇺🇸 US美国(yz) 14
-      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz) 15
       - 🇺🇸 US美国(yz) 16
       - 🇺🇸 US美国(yz) 17
+      - 🇭🇰 HK香港(yz)
       - 🇺🇸 US美国(yz) 18
       - 🇺🇸 US美国(yz) 19
       - 🇺🇸 US美国(yz) 20
       - 🇺🇸 US美国(yz) 21
       - 🇺🇸 US美国(yz) 22
+      - 🇰🇷 KR韩国(yz)
+      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz) 23
+      - 🇭🇰 HK香港 (yz)
       - 🇺🇸 US美国(yz) 24
       - 🇺🇸 US美国(yz) 25
       - 🇺🇸 US美国(yz) 26
       - 🇺🇸 US美国(yz) 27
       - 🇬🇧 GB英国(yz) 9
+      - 🇭🇰 HK香港(yz) 2
       - 🇺🇸 US美国(yz) 28
+      - 🇭🇰 HK香港(yz) 3
       - 🇺🇸 US美国(yz) 29
-      - 🇬🇧 GB英国(yz) 10
-      - 🇭🇰 HK香港(yz)
-      - 🇬🇧 GB英国(yz) 11
+      - 🇰🇷 KR韩国(yz) 2
       - 🇺🇸 US美国(yz) 30
       - 🇺🇸 US美国(yz) 31
+      - 🇭🇰 HK香港(yz) 4
+      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 32
+      - 🇫🇷 FR法国(yz) 3
+      - 🇫🇷 FR法国(yz) 4
+      - 🇭🇰 HK香港(yz) 5
+      - 🇭🇰 HK香港 (yz) 2
+      - 🇰🇷 KR韩国(yz) 3
+      - 🇭🇰 HK香港(yz) 6
+      - 🇭🇰 HK香港(yz) 7
       - 🇺🇸 US美国(yz) 33
+      - 🇬🇧 GB英国(yz) 10
       - 🇺🇸 US美国(yz) 34
       - 🇺🇸 US美国(yz) 35
       - 🇺🇸 US美国(yz) 36
       - 🇺🇸 US美国(yz) 37
+      - 🇺🇦 乌克兰(yz)
       - 🇺🇸 US美国(yz) 38
+      - 🇬🇧 GB英国(yz) 11
       - 🇺🇸 US美国(yz) 39
       - 🇺🇸 US美国(yz) 40
       - 🇺🇸 US美国(yz) 41
       - 🇺🇸 US美国(yz) 42
-      - 🇭🇰 HK香港(yz) 2
-      - 🇺🇦 乌克兰(yz)
-      - 🇫🇷 FR法国(yz)
-      - 🇭🇰 HK香港(yz) 3
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 43
+      - 🇬🇧 GB英国(yz) 12
       - 🇺🇸 US美国(yz) 44
       - 🇺🇸 US美国(yz) 45
-      - 🇭🇰 HK香港(yz) 4
+      - 🇬🇧 GB英国(yz) 13
       - 🇺🇸 US美国(yz) 46
       - 🇺🇸 US美国(yz) 47
       - 🇺🇸 US美国(yz) 48
-      - 🇫🇷 FR法国(yz) 3
       - 🇺🇸 US美国(yz) 49
       - 🇺🇸 US美国(yz) 50
       - 🇺🇸 US美国(yz) 51
       - 🇺🇸 US美国(yz) 52
-      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 53
-      - 🇬🇧 GB英国(yz) 12
-      - 🇫🇷 FR法国(yz) 5
       - 🇺🇸 US美国(yz) 54
       - 🇺🇸 US美国(yz) 55
-      - 🇬🇧 GB英国(yz) 13
       - 🇺🇸 US美国(yz) 56
       - 🇺🇸 US美国(yz) 57
       - 🇺🇸 US美国(yz) 58
       - 🇺🇸 US美国(yz) 59
       - 🇺🇸 US美国(yz) 60
+      - 🇫🇷 FR法国(yz) 5
       - 🇺🇸 US美国(yz) 61
+      - 🇫🇷 FR法国(yz) 6
       - 🇺🇸 US美国(yz) 62
       - 🇬🇧 GB英国(yz) 14
       - 🇬🇧 GB英国(yz) 15
       - 🇺🇸 US美国(yz) 63
-      - 🇭🇰 HK香港(yz) 5
-      - 🇺🇸 US美国(yz) 64
-      - 🇸🇬 SG新加坡(yz) 2
-      - 🇺🇸 US美国(yz) 65
-      - 🇺🇸 US美国(yz) 66
-      - 🇭🇰 HK香港(yz) 6
-      - 🇺🇸 US美国(yz) 67
-      - 🇭🇰 HK香港(yz) 7
-      - 🇺🇸 US美国(yz) 68
+      - 🇰🇷 KR韩国(yz) 4
       - 🇬🇧 GB英国(yz) 16
+      - 🇺🇸 US美国(yz) 64
+      - 🇺🇸 US美国(yz) 65
+      - 🇬🇧 GB英国(yz) 17
+      - 🇺🇸 US美国(yz) 66
+      - 🇬🇧 GB英国(yz) 18
+      - 🇺🇸 US美国(yz) 67
+      - 🇺🇸 US美国(yz) 68
       - 🇺🇸 US美国(yz) 69
-      - 🇫🇷 FR法国(yz) 6
       - 🇺🇸 US美国(yz) 70
       - 🇺🇸 US美国(yz) 71
-      - 🇫🇷 FR法国(yz) 7
+      - 🇸🇬 SG新加坡(yz) 2
+      - 🇭🇰 HK香港(yz) 8
       - 🇺🇸 US美国(yz) 72
       - 🇺🇸 US美国(yz) 73
-      - 🇺🇸 US美国(yz) 74
-      - 🇰🇷 KR韩国(yz)
-      - 🇺🇸 US美国(yz) 75
-      - 🇰🇷 KR韩国(yz) 2
-      - 🇬🇧 GB英国(yz) 17
-      - 🇬🇧 GB英国(yz) 18
-      - 🇬🇧 GB英国(yz) 19
-      - 🇬🇧 GB英国(yz) 20
-      - 🇬🇧 GB英国(yz) 21
-      - 🇬🇧 GB英国(yz) 22
-      - 🇬🇧 GB英国(yz) 23
-      - 🇬🇧 GB英国(yz) 24
-      - 🇺🇸 US美国(yz) 76
-      - 🇺🇸 US美国(yz) 77
-      - 🇺🇸 US美国(yz) 78
-      - 🇭🇰 HK香港(yz) 8
-      - 🇺🇸 US美国(yz) 79
-      - 🇭🇰 HK香港(yz) 9
+      - 🇫🇷 FR法国(yz) 7
       - 🇫🇷 FR法国(yz) 8
-      - 🇺🇸 US美国(yz) 80
+      - 🇸🇬 SG新加坡(yz) 3
       - 🇫🇷 FR法国(yz) 9
       - 🇫🇷 FR法国(yz) 10
+      - 🇺🇸 US美国(yz) 74
+      - 🇺🇸 US美国(yz) 75
       - 🇫🇷 FR法国(yz) 11
-      - 🇺🇸 US美国(yz) 81
-      - 🇺🇸 US美国(yz) 82
-      - 🇺🇸 US美国(yz) 83
       - 🇫🇷 FR法国(yz) 12
-      - 🇺🇸 US美国(yz) 84
       - 🇫🇷 FR法国(yz) 13
-      - 🇺🇸 US美国(yz) 85
-      - 🇺🇸 US美国(yz) 86
-      - 🇺🇸 US美国(yz) 87
-      - 🇺🇸 US美国(yz) 88
-      - 🇺🇸 US美国(yz) 89
       - 🇫🇷 FR法国(yz) 14
-      - 🇺🇸 US美国(yz) 90
-      - 🇺🇸 US美国(yz) 91
-      - 🇺🇸 US美国(yz) 92
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇺🇸 US美国(yz) 93
-      - 🇭🇰 HK香港(yz) 10
+      - 🇫🇷 FR法国(yz) 15
+      - 🇫🇷 FR法国(yz) 16
+      - 🇺🇸 US美国(yz) 76
+      - 🇺🇸 US美国(yz) 77
       - 🇺🇸 US美国(yz) 2 2
       - 🇺🇸 US美国(yz) 3 2
-      - 🇫🇷 FR法国(yz) 15
       - 🇺🇸 US美国(yz) 4 2
+      - 🇬🇧 GB英国(yz) 19
       - 🇺🇸 US美国(yz) 5 2
       - 🇺🇸 US美国(yz) 6 2
       - 🇺🇸 US美国(yz) 7 2
+      - 🇬🇧 GB英国(yz) 2 2
+      - 🇬🇧 GB英国(yz) 3 2
       - 🇺🇸 US美国(yz) 8 2
+      - 🇬🇧 GB英国(yz) 4 2
+      - 🇬🇧 GB英国(yz) 5 2
+      - 🇬🇧 GB英国(yz) 6 2
       - 🇺🇸 US美国(yz) 9 2
-      - 🇭🇰 HK香港(yz) 2 2
       - 🇺🇸 US美国(yz) 10 2
       - 🇺🇸 US美国(yz) 11 2
       - 🇺🇸 US美国(yz) 12 2
+      - 🇬🇧 GB英国(yz) 7 2
       - 🇺🇸 US美国(yz) 13 2
+      - 🇬🇧 GB英国(yz) 8 2
       - 🇺🇸 US美国(yz) 14 2
+      - 🇸🇬 SG新加坡(yz) 4
       - 🇺🇸 US美国(yz) 15 2
       - 🇺🇸 US美国(yz) 16 2
-      - 🇭🇰 HK香港(yz) 3 2
-      - 🇫🇷 FR法国(yz) 2 2
       - 🇺🇸 US美国(yz) 17 2
-      - 🇫🇷 FR法国(yz) 3 2
       - 🇺🇸 US美国(yz) 18 2
       - 🇺🇸 US美国(yz) 19 2
-      - 🇭🇰 HK香港(yz) 4 2
       - 🇺🇸 US美国(yz) 20 2
-      - 🇩🇪 DE德国(yz)
-      - 🇸🇬 SG新加坡(yz) 4
       - 🇺🇸 US美国(yz) 21 2
       - 🇺🇸 US美国(yz) 22 2
       - 🇺🇸 US美国(yz) 23 2
       - 🇺🇸 US美国(yz) 24 2
-      - 🇭🇰 HK香港(yz) 5 2
       - 🇺🇸 US美国(yz) 25 2
       - 🇺🇸 US美国(yz) 26 2
-      - 🇫🇷 FR法国(yz) 4 2
-      - 🇭🇰 HK香港(yz) 6 2
       - 🇺🇸 US美国(yz) 27 2
+      - 🇬🇧 GB英国(yz) 9 2
       - 🇺🇸 US美国(yz) 28 2
       - 🇺🇸 US美国(yz) 29 2
-      - 🇬🇧 GB英国(yz) 25
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇬🇧 GB英国(yz) 3 2
-      - 🇬🇧 GB英国(yz) 4 2
-      - 🇫🇷 FR法国(yz) 5 2
+      - 🇬🇧 GB英国(yz) 10 2
+      - 🇭🇰 HK香港(yz) 9
+      - 🇬🇧 GB英国(yz) 11 2
       - 🇺🇸 US美国(yz) 30 2
       - 🇺🇸 US美国(yz) 31 2
-      - 🇬🇧 GB英国(yz) 5 2
       - 🇺🇸 US美国(yz) 32 2
       - 🇺🇸 US美国(yz) 33 2
       - 🇺🇸 US美国(yz) 34 2
@@ -4265,92 +4192,97 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 39 2
       - 🇺🇸 US美国(yz) 40 2
       - 🇺🇸 US美国(yz) 41 2
-      - 🇬🇧 GB英国(yz) 6 2
-      - 🇬🇧 GB英国(yz) 7 2
       - 🇺🇸 US美国(yz) 42 2
+      - 🇭🇰 HK香港(yz) 2 2
+      - 🇺🇦 乌克兰(yz) 2
+      - 🇫🇷 FR法国(yz) 17
+      - 🇭🇰 HK香港(yz) 3 2
+      - 🇫🇷 FR法国(yz) 2 2
       - 🇺🇸 US美国(yz) 43 2
       - 🇺🇸 US美国(yz) 44 2
       - 🇺🇸 US美国(yz) 45 2
+      - 🇭🇰 HK香港(yz) 4 2
       - 🇺🇸 US美国(yz) 46 2
       - 🇺🇸 US美国(yz) 47 2
       - 🇺🇸 US美国(yz) 48 2
+      - 🇫🇷 FR法国(yz) 3 2
       - 🇺🇸 US美国(yz) 49 2
       - 🇺🇸 US美国(yz) 50 2
       - 🇺🇸 US美国(yz) 51 2
       - 🇺🇸 US美国(yz) 52 2
+      - 🇫🇷 FR法国(yz) 4 2
       - 🇺🇸 US美国(yz) 53 2
-      - 🇭🇰 HK香港(yz) 7 2
+      - 🇬🇧 GB英国(yz) 12 2
+      - 🇫🇷 FR法国(yz) 5 2
       - 🇺🇸 US美国(yz) 54 2
-      - 🇸🇬 SG新加坡(yz) 2 2
-      - 🇸🇬 SG新加坡(yz) 3 2
       - 🇺🇸 US美国(yz) 55 2
+      - 🇬🇧 GB英国(yz) 13 2
       - 🇺🇸 US美国(yz) 56 2
-      - 🇫🇷 FR法国(yz) 6 2
-      - 🇫🇷 FR法国(yz) 7 2
       - 🇺🇸 US美国(yz) 57 2
       - 🇺🇸 US美国(yz) 58 2
       - 🇺🇸 US美国(yz) 59 2
-      - 🇬🇧 GB英国(yz) 8 2
       - 🇺🇸 US美国(yz) 60 2
-      - 🇬🇧 GB英国(yz) 9 2
       - 🇺🇸 US美国(yz) 61 2
-      - 🇬🇧 GB英国(yz) 10 2
-      - 🇬🇧 GB英国(yz) 11 2
-      - 🇬🇧 GB英国(yz) 12 2
-      - 🇬🇧 GB英国(yz) 13 2
+      - 🇺🇸 US美国(yz) 62 2
       - 🇬🇧 GB英国(yz) 14 2
       - 🇬🇧 GB英国(yz) 15 2
-      - 🇺🇸 US美国(yz) 62 2
       - 🇺🇸 US美国(yz) 63 2
+      - 🇭🇰 HK香港(yz) 5 2
       - 🇺🇸 US美国(yz) 64 2
-      - 🇬🇧 GB英国(yz) 16 2
-      - 🇬🇧 GB英国(yz) 17 2
-      - 🇬🇧 GB英国(yz) 18 2
+      - 🇸🇬 SG新加坡(yz) 2 2
       - 🇺🇸 US美国(yz) 65 2
-      - 🇬🇧 GB英国(yz) 19 2
-      - 🇬🇧 GB英国(yz) 20 2
-      - 🇬🇧 GB英国(yz) 21 2
-      - 🇬🇧 GB英国(yz) 22 2
       - 🇺🇸 US美国(yz) 66 2
-      - 🇬🇧 GB英国(yz) 23 2
-      - 🇬🇧 GB英国(yz) 24 2
+      - 🇭🇰 HK香港(yz) 6 2
       - 🇺🇸 US美国(yz) 67 2
-      - 🇬🇧 GB英国(yz) 25 2
-      - 🇬🇧 GB英国(yz) 26
+      - 🇭🇰 HK香港(yz) 7 2
       - 🇺🇸 US美国(yz) 68 2
+      - 🇬🇧 GB英国(yz) 16 2
       - 🇺🇸 US美国(yz) 69 2
-      - 🇬🇧 GB英国(yz) 27
+      - 🇫🇷 FR法国(yz) 6 2
       - 🇺🇸 US美国(yz) 70 2
-      - 🇭🇰 HK香港(yz) 8 2
       - 🇺🇸 US美国(yz) 71 2
+      - 🇫🇷 FR法国(yz) 7 2
       - 🇺🇸 US美国(yz) 72 2
       - 🇺🇸 US美国(yz) 73 2
       - 🇺🇸 US美国(yz) 74 2
+      - 🇰🇷 KR韩国(yz) 5
       - 🇺🇸 US美国(yz) 75 2
+      - 🇰🇷 KR韩国(yz) 2 2
+      - 🇬🇧 GB英国(yz) 17 2
+      - 🇬🇧 GB英国(yz) 18 2
+      - 🇬🇧 GB英国(yz) 19 2
+      - 🇬🇧 GB英国(yz) 20
+      - 🇬🇧 GB英国(yz) 21
+      - 🇬🇧 GB英国(yz) 22
+      - 🇬🇧 GB英国(yz) 23
+      - 🇬🇧 GB英国(yz) 24
       - 🇺🇸 US美国(yz) 76 2
       - 🇺🇸 US美国(yz) 77 2
-      - 🇺🇸 US美国(yz) 78 2
-      - 🇺🇸 US美国(yz) 79 2
-      - 🇺🇸 US美国(yz) 80 2
-      - 🇺🇸 US美国(yz) 81 2
-      - 🇺🇸 US美国(yz) 82 2
-      - 🇺🇸 US美国(yz) 83 2
-      - 🇺🇸 US美国(yz) 84 2
-      - 🇺🇸 US美国(yz) 85 2
-      - 🇫🇷 FR法国(yz) 8 2
-      - 🇺🇸 US美国(yz) 86 2
-      - 🇺🇸 US美国(yz) 87 2
-      - 🇺🇸 US美国(yz) 88 2
-      - 🇺🇸 US美国(yz) 89 2
-      - 🇺🇸 US美国(yz) 90 2
-      - 🇺🇸 US美国(yz) 91 2
-      - 🇺🇸 US美国(yz) 92 2
-      - 🇺🇸 US美国(yz) 93 2
+      - 🇺🇸 US美国(yz) 78
+      - 🇭🇰 HK香港(yz) 8 2
+      - 🇺🇸 US美国(yz) 79
       - 🇭🇰 HK香港(yz) 9 2
-      - 🇺🇸 US美国(yz) 94
-      - 🇺🇸 US美国(yz) 95
+      - 🇫🇷 FR法国(yz) 8 2
+      - 🇺🇸 US美国(yz) 80
       - 🇫🇷 FR法国(yz) 9 2
-      - 🇺🇸 US美国(yz) 96
+      - 🇫🇷 FR法国(yz) 10 2
+      - 🇫🇷 FR法国(yz) 11 2
+      - 🇺🇸 US美国(yz) 81
+      - 🇺🇸 US美国(yz) 82
+      - 🇺🇸 US美国(yz) 83
+      - 🇫🇷 FR法国(yz) 12 2
+      - 🇺🇸 US美国(yz) 84
+      - 🇫🇷 FR法国(yz) 13 2
+      - 🇺🇸 US美国(yz) 85
+      - 🇺🇸 US美国(yz) 86
+      - 🇺🇸 US美国(yz) 87
+      - 🇺🇸 US美国(yz) 88
+      - 🇺🇸 US美国(yz) 89
+      - 🇫🇷 FR法国(yz) 14 2
+      - 🇺🇸 US美国(yz) 90
+      - 🇺🇸 US美国(yz) 91
+      - 🇺🇸 US美国(yz) 92
+      - 🇸🇬 SG新加坡(yz) 3 2
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_120|1.2MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_100|1.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_92|3.9MB/s|YT|TK|NF|D+|Succeed
@@ -5406,200 +5338,178 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz)
       - 🇺🇸 US美国(yz) 2
       - 🇺🇸 US美国(yz) 3
       - 🇺🇸 US美国(yz) 4
-      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 5
       - 🇺🇸 US美国(yz) 6
+      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 7
-      - 🇬🇧 GB英国(yz) 2
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 8
-      - 🇬🇧 GB英国(yz) 4
-      - 🇬🇧 GB英国(yz) 5
-      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 US美国(yz) 9
+      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 10
+      - 🇬🇧 GB英国(yz) 3
+      - 🇬🇧 GB英国(yz) 4
       - 🇺🇸 US美国(yz) 11
+      - 🇬🇧 GB英国(yz) 5
       - 🇺🇸 US美国(yz) 12
-      - 🇬🇧 GB英国(yz) 7
+      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 US美国(yz) 13
+      - 🇬🇧 GB英国(yz) 7
       - 🇬🇧 GB英国(yz) 8
       - 🇺🇸 US美国(yz) 14
-      - 🇸🇬 SG新加坡(yz)
       - 🇺🇸 US美国(yz) 15
       - 🇺🇸 US美国(yz) 16
       - 🇺🇸 US美国(yz) 17
+      - 🇭🇰 HK香港(yz)
       - 🇺🇸 US美国(yz) 18
       - 🇺🇸 US美国(yz) 19
       - 🇺🇸 US美国(yz) 20
       - 🇺🇸 US美国(yz) 21
       - 🇺🇸 US美国(yz) 22
+      - 🇰🇷 KR韩国(yz)
+      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz) 23
+      - 🇭🇰 HK香港 (yz)
       - 🇺🇸 US美国(yz) 24
       - 🇺🇸 US美国(yz) 25
       - 🇺🇸 US美国(yz) 26
       - 🇺🇸 US美国(yz) 27
       - 🇬🇧 GB英国(yz) 9
+      - 🇭🇰 HK香港(yz) 2
       - 🇺🇸 US美国(yz) 28
+      - 🇭🇰 HK香港(yz) 3
       - 🇺🇸 US美国(yz) 29
-      - 🇬🇧 GB英国(yz) 10
-      - 🇭🇰 HK香港(yz)
-      - 🇬🇧 GB英国(yz) 11
+      - 🇰🇷 KR韩国(yz) 2
       - 🇺🇸 US美国(yz) 30
       - 🇺🇸 US美国(yz) 31
+      - 🇭🇰 HK香港(yz) 4
+      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 32
+      - 🇫🇷 FR法国(yz) 3
+      - 🇫🇷 FR法国(yz) 4
+      - 🇭🇰 HK香港(yz) 5
+      - 🇭🇰 HK香港 (yz) 2
+      - 🇰🇷 KR韩国(yz) 3
+      - 🇭🇰 HK香港(yz) 6
+      - 🇭🇰 HK香港(yz) 7
       - 🇺🇸 US美国(yz) 33
+      - 🇬🇧 GB英国(yz) 10
       - 🇺🇸 US美国(yz) 34
       - 🇺🇸 US美国(yz) 35
       - 🇺🇸 US美国(yz) 36
       - 🇺🇸 US美国(yz) 37
+      - 🇺🇦 乌克兰(yz)
       - 🇺🇸 US美国(yz) 38
+      - 🇬🇧 GB英国(yz) 11
       - 🇺🇸 US美国(yz) 39
       - 🇺🇸 US美国(yz) 40
       - 🇺🇸 US美国(yz) 41
       - 🇺🇸 US美国(yz) 42
-      - 🇭🇰 HK香港(yz) 2
-      - 🇺🇦 乌克兰(yz)
-      - 🇫🇷 FR法国(yz)
-      - 🇭🇰 HK香港(yz) 3
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 43
+      - 🇬🇧 GB英国(yz) 12
       - 🇺🇸 US美国(yz) 44
       - 🇺🇸 US美国(yz) 45
-      - 🇭🇰 HK香港(yz) 4
+      - 🇬🇧 GB英国(yz) 13
       - 🇺🇸 US美国(yz) 46
       - 🇺🇸 US美国(yz) 47
       - 🇺🇸 US美国(yz) 48
-      - 🇫🇷 FR法国(yz) 3
       - 🇺🇸 US美国(yz) 49
       - 🇺🇸 US美国(yz) 50
       - 🇺🇸 US美国(yz) 51
       - 🇺🇸 US美国(yz) 52
-      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 53
-      - 🇬🇧 GB英国(yz) 12
-      - 🇫🇷 FR法国(yz) 5
       - 🇺🇸 US美国(yz) 54
       - 🇺🇸 US美国(yz) 55
-      - 🇬🇧 GB英国(yz) 13
       - 🇺🇸 US美国(yz) 56
       - 🇺🇸 US美国(yz) 57
       - 🇺🇸 US美国(yz) 58
       - 🇺🇸 US美国(yz) 59
       - 🇺🇸 US美国(yz) 60
+      - 🇫🇷 FR法国(yz) 5
       - 🇺🇸 US美国(yz) 61
+      - 🇫🇷 FR法国(yz) 6
       - 🇺🇸 US美国(yz) 62
       - 🇬🇧 GB英国(yz) 14
       - 🇬🇧 GB英国(yz) 15
       - 🇺🇸 US美国(yz) 63
-      - 🇭🇰 HK香港(yz) 5
-      - 🇺🇸 US美国(yz) 64
-      - 🇸🇬 SG新加坡(yz) 2
-      - 🇺🇸 US美国(yz) 65
-      - 🇺🇸 US美国(yz) 66
-      - 🇭🇰 HK香港(yz) 6
-      - 🇺🇸 US美国(yz) 67
-      - 🇭🇰 HK香港(yz) 7
-      - 🇺🇸 US美国(yz) 68
+      - 🇰🇷 KR韩国(yz) 4
       - 🇬🇧 GB英国(yz) 16
+      - 🇺🇸 US美国(yz) 64
+      - 🇺🇸 US美国(yz) 65
+      - 🇬🇧 GB英国(yz) 17
+      - 🇺🇸 US美国(yz) 66
+      - 🇬🇧 GB英国(yz) 18
+      - 🇺🇸 US美国(yz) 67
+      - 🇺🇸 US美国(yz) 68
       - 🇺🇸 US美国(yz) 69
-      - 🇫🇷 FR法国(yz) 6
       - 🇺🇸 US美国(yz) 70
       - 🇺🇸 US美国(yz) 71
-      - 🇫🇷 FR法国(yz) 7
+      - 🇸🇬 SG新加坡(yz) 2
+      - 🇭🇰 HK香港(yz) 8
       - 🇺🇸 US美国(yz) 72
       - 🇺🇸 US美国(yz) 73
-      - 🇺🇸 US美国(yz) 74
-      - 🇰🇷 KR韩国(yz)
-      - 🇺🇸 US美国(yz) 75
-      - 🇰🇷 KR韩国(yz) 2
-      - 🇬🇧 GB英国(yz) 17
-      - 🇬🇧 GB英国(yz) 18
-      - 🇬🇧 GB英国(yz) 19
-      - 🇬🇧 GB英国(yz) 20
-      - 🇬🇧 GB英国(yz) 21
-      - 🇬🇧 GB英国(yz) 22
-      - 🇬🇧 GB英国(yz) 23
-      - 🇬🇧 GB英国(yz) 24
-      - 🇺🇸 US美国(yz) 76
-      - 🇺🇸 US美国(yz) 77
-      - 🇺🇸 US美国(yz) 78
-      - 🇭🇰 HK香港(yz) 8
-      - 🇺🇸 US美国(yz) 79
-      - 🇭🇰 HK香港(yz) 9
+      - 🇫🇷 FR法国(yz) 7
       - 🇫🇷 FR法国(yz) 8
-      - 🇺🇸 US美国(yz) 80
+      - 🇸🇬 SG新加坡(yz) 3
       - 🇫🇷 FR法国(yz) 9
       - 🇫🇷 FR法国(yz) 10
+      - 🇺🇸 US美国(yz) 74
+      - 🇺🇸 US美国(yz) 75
       - 🇫🇷 FR法国(yz) 11
-      - 🇺🇸 US美国(yz) 81
-      - 🇺🇸 US美国(yz) 82
-      - 🇺🇸 US美国(yz) 83
       - 🇫🇷 FR法国(yz) 12
-      - 🇺🇸 US美国(yz) 84
       - 🇫🇷 FR法国(yz) 13
-      - 🇺🇸 US美国(yz) 85
-      - 🇺🇸 US美国(yz) 86
-      - 🇺🇸 US美国(yz) 87
-      - 🇺🇸 US美国(yz) 88
-      - 🇺🇸 US美国(yz) 89
       - 🇫🇷 FR法国(yz) 14
-      - 🇺🇸 US美国(yz) 90
-      - 🇺🇸 US美国(yz) 91
-      - 🇺🇸 US美国(yz) 92
-      - 🇸🇬 SG新加坡(yz) 3
-      - 🇺🇸 US美国(yz) 93
-      - 🇭🇰 HK香港(yz) 10
+      - 🇫🇷 FR法国(yz) 15
+      - 🇫🇷 FR法国(yz) 16
+      - 🇺🇸 US美国(yz) 76
+      - 🇺🇸 US美国(yz) 77
       - 🇺🇸 US美国(yz) 2 2
       - 🇺🇸 US美国(yz) 3 2
-      - 🇫🇷 FR法国(yz) 15
       - 🇺🇸 US美国(yz) 4 2
+      - 🇬🇧 GB英国(yz) 19
       - 🇺🇸 US美国(yz) 5 2
       - 🇺🇸 US美国(yz) 6 2
       - 🇺🇸 US美国(yz) 7 2
+      - 🇬🇧 GB英国(yz) 2 2
+      - 🇬🇧 GB英国(yz) 3 2
       - 🇺🇸 US美国(yz) 8 2
+      - 🇬🇧 GB英国(yz) 4 2
+      - 🇬🇧 GB英国(yz) 5 2
+      - 🇬🇧 GB英国(yz) 6 2
       - 🇺🇸 US美国(yz) 9 2
-      - 🇭🇰 HK香港(yz) 2 2
       - 🇺🇸 US美国(yz) 10 2
       - 🇺🇸 US美国(yz) 11 2
       - 🇺🇸 US美国(yz) 12 2
+      - 🇬🇧 GB英国(yz) 7 2
       - 🇺🇸 US美国(yz) 13 2
+      - 🇬🇧 GB英国(yz) 8 2
       - 🇺🇸 US美国(yz) 14 2
+      - 🇸🇬 SG新加坡(yz) 4
       - 🇺🇸 US美国(yz) 15 2
       - 🇺🇸 US美国(yz) 16 2
-      - 🇭🇰 HK香港(yz) 3 2
-      - 🇫🇷 FR法国(yz) 2 2
       - 🇺🇸 US美国(yz) 17 2
-      - 🇫🇷 FR法国(yz) 3 2
       - 🇺🇸 US美国(yz) 18 2
       - 🇺🇸 US美国(yz) 19 2
-      - 🇭🇰 HK香港(yz) 4 2
       - 🇺🇸 US美国(yz) 20 2
-      - 🇩🇪 DE德国(yz)
-      - 🇸🇬 SG新加坡(yz) 4
       - 🇺🇸 US美国(yz) 21 2
       - 🇺🇸 US美国(yz) 22 2
       - 🇺🇸 US美国(yz) 23 2
       - 🇺🇸 US美国(yz) 24 2
-      - 🇭🇰 HK香港(yz) 5 2
       - 🇺🇸 US美国(yz) 25 2
       - 🇺🇸 US美国(yz) 26 2
-      - 🇫🇷 FR法国(yz) 4 2
-      - 🇭🇰 HK香港(yz) 6 2
       - 🇺🇸 US美国(yz) 27 2
+      - 🇬🇧 GB英国(yz) 9 2
       - 🇺🇸 US美国(yz) 28 2
       - 🇺🇸 US美国(yz) 29 2
-      - 🇬🇧 GB英国(yz) 25
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇬🇧 GB英国(yz) 3 2
-      - 🇬🇧 GB英国(yz) 4 2
-      - 🇫🇷 FR法国(yz) 5 2
+      - 🇬🇧 GB英国(yz) 10 2
+      - 🇭🇰 HK香港(yz) 9
+      - 🇬🇧 GB英国(yz) 11 2
       - 🇺🇸 US美国(yz) 30 2
       - 🇺🇸 US美国(yz) 31 2
-      - 🇬🇧 GB英国(yz) 5 2
       - 🇺🇸 US美国(yz) 32 2
       - 🇺🇸 US美国(yz) 33 2
       - 🇺🇸 US美国(yz) 34 2
@@ -5610,92 +5520,97 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 39 2
       - 🇺🇸 US美国(yz) 40 2
       - 🇺🇸 US美国(yz) 41 2
-      - 🇬🇧 GB英国(yz) 6 2
-      - 🇬🇧 GB英国(yz) 7 2
       - 🇺🇸 US美国(yz) 42 2
+      - 🇭🇰 HK香港(yz) 2 2
+      - 🇺🇦 乌克兰(yz) 2
+      - 🇫🇷 FR法国(yz) 17
+      - 🇭🇰 HK香港(yz) 3 2
+      - 🇫🇷 FR法国(yz) 2 2
       - 🇺🇸 US美国(yz) 43 2
       - 🇺🇸 US美国(yz) 44 2
       - 🇺🇸 US美国(yz) 45 2
+      - 🇭🇰 HK香港(yz) 4 2
       - 🇺🇸 US美国(yz) 46 2
       - 🇺🇸 US美国(yz) 47 2
       - 🇺🇸 US美国(yz) 48 2
+      - 🇫🇷 FR法国(yz) 3 2
       - 🇺🇸 US美国(yz) 49 2
       - 🇺🇸 US美国(yz) 50 2
       - 🇺🇸 US美国(yz) 51 2
       - 🇺🇸 US美国(yz) 52 2
+      - 🇫🇷 FR法国(yz) 4 2
       - 🇺🇸 US美国(yz) 53 2
-      - 🇭🇰 HK香港(yz) 7 2
+      - 🇬🇧 GB英国(yz) 12 2
+      - 🇫🇷 FR法国(yz) 5 2
       - 🇺🇸 US美国(yz) 54 2
-      - 🇸🇬 SG新加坡(yz) 2 2
-      - 🇸🇬 SG新加坡(yz) 3 2
       - 🇺🇸 US美国(yz) 55 2
+      - 🇬🇧 GB英国(yz) 13 2
       - 🇺🇸 US美国(yz) 56 2
-      - 🇫🇷 FR法国(yz) 6 2
-      - 🇫🇷 FR法国(yz) 7 2
       - 🇺🇸 US美国(yz) 57 2
       - 🇺🇸 US美国(yz) 58 2
       - 🇺🇸 US美国(yz) 59 2
-      - 🇬🇧 GB英国(yz) 8 2
       - 🇺🇸 US美国(yz) 60 2
-      - 🇬🇧 GB英国(yz) 9 2
       - 🇺🇸 US美国(yz) 61 2
-      - 🇬🇧 GB英国(yz) 10 2
-      - 🇬🇧 GB英国(yz) 11 2
-      - 🇬🇧 GB英国(yz) 12 2
-      - 🇬🇧 GB英国(yz) 13 2
+      - 🇺🇸 US美国(yz) 62 2
       - 🇬🇧 GB英国(yz) 14 2
       - 🇬🇧 GB英国(yz) 15 2
-      - 🇺🇸 US美国(yz) 62 2
       - 🇺🇸 US美国(yz) 63 2
+      - 🇭🇰 HK香港(yz) 5 2
       - 🇺🇸 US美国(yz) 64 2
-      - 🇬🇧 GB英国(yz) 16 2
-      - 🇬🇧 GB英国(yz) 17 2
-      - 🇬🇧 GB英国(yz) 18 2
+      - 🇸🇬 SG新加坡(yz) 2 2
       - 🇺🇸 US美国(yz) 65 2
-      - 🇬🇧 GB英国(yz) 19 2
-      - 🇬🇧 GB英国(yz) 20 2
-      - 🇬🇧 GB英国(yz) 21 2
-      - 🇬🇧 GB英国(yz) 22 2
       - 🇺🇸 US美国(yz) 66 2
-      - 🇬🇧 GB英国(yz) 23 2
-      - 🇬🇧 GB英国(yz) 24 2
+      - 🇭🇰 HK香港(yz) 6 2
       - 🇺🇸 US美国(yz) 67 2
-      - 🇬🇧 GB英国(yz) 25 2
-      - 🇬🇧 GB英国(yz) 26
+      - 🇭🇰 HK香港(yz) 7 2
       - 🇺🇸 US美国(yz) 68 2
+      - 🇬🇧 GB英国(yz) 16 2
       - 🇺🇸 US美国(yz) 69 2
-      - 🇬🇧 GB英国(yz) 27
+      - 🇫🇷 FR法国(yz) 6 2
       - 🇺🇸 US美国(yz) 70 2
-      - 🇭🇰 HK香港(yz) 8 2
       - 🇺🇸 US美国(yz) 71 2
+      - 🇫🇷 FR法国(yz) 7 2
       - 🇺🇸 US美国(yz) 72 2
       - 🇺🇸 US美国(yz) 73 2
       - 🇺🇸 US美国(yz) 74 2
+      - 🇰🇷 KR韩国(yz) 5
       - 🇺🇸 US美国(yz) 75 2
+      - 🇰🇷 KR韩国(yz) 2 2
+      - 🇬🇧 GB英国(yz) 17 2
+      - 🇬🇧 GB英国(yz) 18 2
+      - 🇬🇧 GB英国(yz) 19 2
+      - 🇬🇧 GB英国(yz) 20
+      - 🇬🇧 GB英国(yz) 21
+      - 🇬🇧 GB英国(yz) 22
+      - 🇬🇧 GB英国(yz) 23
+      - 🇬🇧 GB英国(yz) 24
       - 🇺🇸 US美国(yz) 76 2
       - 🇺🇸 US美国(yz) 77 2
-      - 🇺🇸 US美国(yz) 78 2
-      - 🇺🇸 US美国(yz) 79 2
-      - 🇺🇸 US美国(yz) 80 2
-      - 🇺🇸 US美国(yz) 81 2
-      - 🇺🇸 US美国(yz) 82 2
-      - 🇺🇸 US美国(yz) 83 2
-      - 🇺🇸 US美国(yz) 84 2
-      - 🇺🇸 US美国(yz) 85 2
-      - 🇫🇷 FR法国(yz) 8 2
-      - 🇺🇸 US美国(yz) 86 2
-      - 🇺🇸 US美国(yz) 87 2
-      - 🇺🇸 US美国(yz) 88 2
-      - 🇺🇸 US美国(yz) 89 2
-      - 🇺🇸 US美国(yz) 90 2
-      - 🇺🇸 US美国(yz) 91 2
-      - 🇺🇸 US美国(yz) 92 2
-      - 🇺🇸 US美国(yz) 93 2
+      - 🇺🇸 US美国(yz) 78
+      - 🇭🇰 HK香港(yz) 8 2
+      - 🇺🇸 US美国(yz) 79
       - 🇭🇰 HK香港(yz) 9 2
-      - 🇺🇸 US美国(yz) 94
-      - 🇺🇸 US美国(yz) 95
+      - 🇫🇷 FR法国(yz) 8 2
+      - 🇺🇸 US美国(yz) 80
       - 🇫🇷 FR法国(yz) 9 2
-      - 🇺🇸 US美国(yz) 96
+      - 🇫🇷 FR法国(yz) 10 2
+      - 🇫🇷 FR法国(yz) 11 2
+      - 🇺🇸 US美国(yz) 81
+      - 🇺🇸 US美国(yz) 82
+      - 🇺🇸 US美国(yz) 83
+      - 🇫🇷 FR法国(yz) 12 2
+      - 🇺🇸 US美国(yz) 84
+      - 🇫🇷 FR法国(yz) 13 2
+      - 🇺🇸 US美国(yz) 85
+      - 🇺🇸 US美国(yz) 86
+      - 🇺🇸 US美国(yz) 87
+      - 🇺🇸 US美国(yz) 88
+      - 🇺🇸 US美国(yz) 89
+      - 🇫🇷 FR法国(yz) 14 2
+      - 🇺🇸 US美国(yz) 90
+      - 🇺🇸 US美国(yz) 91
+      - 🇺🇸 US美国(yz) 92
+      - 🇸🇬 SG新加坡(yz) 3 2
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_120|1.2MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_100|1.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_92|3.9MB/s|YT|TK|NF|D+|Succeed
@@ -6926,15 +6841,16 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇭🇰 HK香港(yz)
+      - 🇭🇰 HK香港 (yz)
       - 🇭🇰 HK香港(yz) 2
       - 🇭🇰 HK香港(yz) 3
       - 🇭🇰 HK香港(yz) 4
       - 🇭🇰 HK香港(yz) 5
+      - 🇭🇰 HK香港 (yz) 2
       - 🇭🇰 HK香港(yz) 6
       - 🇭🇰 HK香港(yz) 7
       - 🇭🇰 HK香港(yz) 8
       - 🇭🇰 HK香港(yz) 9
-      - 🇭🇰 HK香港(yz) 10
       - 🇭🇰 HK香港(yz) 2 2
       - 🇭🇰 HK香港(yz) 3 2
       - 🇭🇰 HK香港(yz) 4 2
@@ -7069,22 +6985,22 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 2
       - 🇺🇸 US美国(yz) 3
       - 🇺🇸 US美国(yz) 4
-      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 5
       - 🇺🇸 US美国(yz) 6
+      - 🇬🇧 GB英国(yz)
       - 🇺🇸 US美国(yz) 7
-      - 🇬🇧 GB英国(yz) 2
-      - 🇬🇧 GB英国(yz) 3
       - 🇺🇸 US美国(yz) 8
-      - 🇬🇧 GB英国(yz) 4
-      - 🇬🇧 GB英国(yz) 5
-      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 US美国(yz) 9
+      - 🇬🇧 GB英国(yz) 2
       - 🇺🇸 US美国(yz) 10
+      - 🇬🇧 GB英国(yz) 3
+      - 🇬🇧 GB英国(yz) 4
       - 🇺🇸 US美国(yz) 11
+      - 🇬🇧 GB英国(yz) 5
       - 🇺🇸 US美国(yz) 12
-      - 🇬🇧 GB英国(yz) 7
+      - 🇬🇧 GB英国(yz) 6
       - 🇺🇸 US美国(yz) 13
+      - 🇬🇧 GB英国(yz) 7
       - 🇬🇧 GB英国(yz) 8
       - 🇺🇸 US美国(yz) 14
       - 🇺🇸 US美国(yz) 15
@@ -7095,6 +7011,7 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 20
       - 🇺🇸 US美国(yz) 21
       - 🇺🇸 US美国(yz) 22
+      - 🇫🇷 FR法国(yz)
       - 🇺🇸 US美国(yz) 23
       - 🇺🇸 US美国(yz) 24
       - 🇺🇸 US美国(yz) 25
@@ -7103,140 +7020,119 @@ proxy-groups:
       - 🇬🇧 GB英国(yz) 9
       - 🇺🇸 US美国(yz) 28
       - 🇺🇸 US美国(yz) 29
-      - 🇬🇧 GB英国(yz) 10
-      - 🇬🇧 GB英国(yz) 11
       - 🇺🇸 US美国(yz) 30
       - 🇺🇸 US美国(yz) 31
+      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 32
+      - 🇫🇷 FR法国(yz) 3
+      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 33
+      - 🇬🇧 GB英国(yz) 10
       - 🇺🇸 US美国(yz) 34
       - 🇺🇸 US美国(yz) 35
       - 🇺🇸 US美国(yz) 36
       - 🇺🇸 US美国(yz) 37
       - 🇺🇸 US美国(yz) 38
+      - 🇬🇧 GB英国(yz) 11
       - 🇺🇸 US美国(yz) 39
       - 🇺🇸 US美国(yz) 40
       - 🇺🇸 US美国(yz) 41
       - 🇺🇸 US美国(yz) 42
-      - 🇫🇷 FR法国(yz)
-      - 🇫🇷 FR法国(yz) 2
       - 🇺🇸 US美国(yz) 43
+      - 🇬🇧 GB英国(yz) 12
       - 🇺🇸 US美国(yz) 44
       - 🇺🇸 US美国(yz) 45
+      - 🇬🇧 GB英国(yz) 13
       - 🇺🇸 US美国(yz) 46
       - 🇺🇸 US美国(yz) 47
       - 🇺🇸 US美国(yz) 48
-      - 🇫🇷 FR法国(yz) 3
       - 🇺🇸 US美国(yz) 49
       - 🇺🇸 US美国(yz) 50
       - 🇺🇸 US美国(yz) 51
       - 🇺🇸 US美国(yz) 52
-      - 🇫🇷 FR法国(yz) 4
       - 🇺🇸 US美国(yz) 53
-      - 🇬🇧 GB英国(yz) 12
-      - 🇫🇷 FR法国(yz) 5
       - 🇺🇸 US美国(yz) 54
       - 🇺🇸 US美国(yz) 55
-      - 🇬🇧 GB英国(yz) 13
       - 🇺🇸 US美国(yz) 56
       - 🇺🇸 US美国(yz) 57
       - 🇺🇸 US美国(yz) 58
       - 🇺🇸 US美国(yz) 59
       - 🇺🇸 US美国(yz) 60
+      - 🇫🇷 FR法国(yz) 5
       - 🇺🇸 US美国(yz) 61
+      - 🇫🇷 FR法国(yz) 6
       - 🇺🇸 US美国(yz) 62
       - 🇬🇧 GB英国(yz) 14
       - 🇬🇧 GB英国(yz) 15
       - 🇺🇸 US美国(yz) 63
+      - 🇬🇧 GB英国(yz) 16
       - 🇺🇸 US美国(yz) 64
       - 🇺🇸 US美国(yz) 65
+      - 🇬🇧 GB英国(yz) 17
       - 🇺🇸 US美国(yz) 66
+      - 🇬🇧 GB英国(yz) 18
       - 🇺🇸 US美国(yz) 67
       - 🇺🇸 US美国(yz) 68
-      - 🇬🇧 GB英国(yz) 16
       - 🇺🇸 US美国(yz) 69
-      - 🇫🇷 FR法国(yz) 6
       - 🇺🇸 US美国(yz) 70
       - 🇺🇸 US美国(yz) 71
-      - 🇫🇷 FR法国(yz) 7
       - 🇺🇸 US美国(yz) 72
       - 🇺🇸 US美国(yz) 73
-      - 🇺🇸 US美国(yz) 74
-      - 🇺🇸 US美国(yz) 75
-      - 🇬🇧 GB英国(yz) 17
-      - 🇬🇧 GB英国(yz) 18
-      - 🇬🇧 GB英国(yz) 19
-      - 🇬🇧 GB英国(yz) 20
-      - 🇬🇧 GB英国(yz) 21
-      - 🇬🇧 GB英国(yz) 22
-      - 🇬🇧 GB英国(yz) 23
-      - 🇬🇧 GB英国(yz) 24
-      - 🇺🇸 US美国(yz) 76
-      - 🇺🇸 US美国(yz) 77
-      - 🇺🇸 US美国(yz) 78
-      - 🇺🇸 US美国(yz) 79
+      - 🇫🇷 FR法国(yz) 7
       - 🇫🇷 FR法国(yz) 8
-      - 🇺🇸 US美国(yz) 80
       - 🇫🇷 FR法国(yz) 9
       - 🇫🇷 FR法国(yz) 10
+      - 🇺🇸 US美国(yz) 74
+      - 🇺🇸 US美国(yz) 75
       - 🇫🇷 FR法国(yz) 11
-      - 🇺🇸 US美国(yz) 81
-      - 🇺🇸 US美国(yz) 82
-      - 🇺🇸 US美国(yz) 83
       - 🇫🇷 FR法国(yz) 12
-      - 🇺🇸 US美国(yz) 84
       - 🇫🇷 FR法国(yz) 13
-      - 🇺🇸 US美国(yz) 85
-      - 🇺🇸 US美国(yz) 86
-      - 🇺🇸 US美国(yz) 87
-      - 🇺🇸 US美国(yz) 88
-      - 🇺🇸 US美国(yz) 89
       - 🇫🇷 FR法国(yz) 14
-      - 🇺🇸 US美国(yz) 90
-      - 🇺🇸 US美国(yz) 91
-      - 🇺🇸 US美国(yz) 92
-      - 🇺🇸 US美国(yz) 93
+      - 🇫🇷 FR法国(yz) 15
+      - 🇫🇷 FR法国(yz) 16
+      - 🇺🇸 US美国(yz) 76
+      - 🇺🇸 US美国(yz) 77
       - 🇺🇸 US美国(yz) 2 2
       - 🇺🇸 US美国(yz) 3 2
-      - 🇫🇷 FR法国(yz) 15
       - 🇺🇸 US美国(yz) 4 2
+      - 🇬🇧 GB英国(yz) 19
       - 🇺🇸 US美国(yz) 5 2
       - 🇺🇸 US美国(yz) 6 2
       - 🇺🇸 US美国(yz) 7 2
+      - 🇬🇧 GB英国(yz) 2 2
+      - 🇬🇧 GB英国(yz) 3 2
       - 🇺🇸 US美国(yz) 8 2
+      - 🇬🇧 GB英国(yz) 4 2
+      - 🇬🇧 GB英国(yz) 5 2
+      - 🇬🇧 GB英国(yz) 6 2
       - 🇺🇸 US美国(yz) 9 2
       - 🇺🇸 US美国(yz) 10 2
       - 🇺🇸 US美国(yz) 11 2
       - 🇺🇸 US美国(yz) 12 2
+      - 🇬🇧 GB英国(yz) 7 2
       - 🇺🇸 US美国(yz) 13 2
+      - 🇬🇧 GB英国(yz) 8 2
       - 🇺🇸 US美国(yz) 14 2
       - 🇺🇸 US美国(yz) 15 2
       - 🇺🇸 US美国(yz) 16 2
-      - 🇫🇷 FR法国(yz) 2 2
       - 🇺🇸 US美国(yz) 17 2
-      - 🇫🇷 FR法国(yz) 3 2
       - 🇺🇸 US美国(yz) 18 2
       - 🇺🇸 US美国(yz) 19 2
       - 🇺🇸 US美国(yz) 20 2
-      - 🇩🇪 DE德国(yz)
       - 🇺🇸 US美国(yz) 21 2
       - 🇺🇸 US美国(yz) 22 2
       - 🇺🇸 US美国(yz) 23 2
       - 🇺🇸 US美国(yz) 24 2
       - 🇺🇸 US美国(yz) 25 2
       - 🇺🇸 US美国(yz) 26 2
-      - 🇫🇷 FR法国(yz) 4 2
       - 🇺🇸 US美国(yz) 27 2
+      - 🇬🇧 GB英国(yz) 9 2
       - 🇺🇸 US美国(yz) 28 2
       - 🇺🇸 US美国(yz) 29 2
-      - 🇬🇧 GB英国(yz) 25
-      - 🇬🇧 GB英国(yz) 2 2
-      - 🇬🇧 GB英国(yz) 3 2
-      - 🇬🇧 GB英国(yz) 4 2
-      - 🇫🇷 FR法国(yz) 5 2
+      - 🇬🇧 GB英国(yz) 10 2
+      - 🇬🇧 GB英国(yz) 11 2
       - 🇺🇸 US美国(yz) 30 2
       - 🇺🇸 US美国(yz) 31 2
-      - 🇬🇧 GB英国(yz) 5 2
       - 🇺🇸 US美国(yz) 32 2
       - 🇺🇸 US美国(yz) 33 2
       - 🇺🇸 US美国(yz) 34 2
@@ -7247,87 +7143,84 @@ proxy-groups:
       - 🇺🇸 US美国(yz) 39 2
       - 🇺🇸 US美国(yz) 40 2
       - 🇺🇸 US美国(yz) 41 2
-      - 🇬🇧 GB英国(yz) 6 2
-      - 🇬🇧 GB英国(yz) 7 2
       - 🇺🇸 US美国(yz) 42 2
+      - 🇫🇷 FR法国(yz) 17
+      - 🇫🇷 FR法国(yz) 2 2
       - 🇺🇸 US美国(yz) 43 2
       - 🇺🇸 US美国(yz) 44 2
       - 🇺🇸 US美国(yz) 45 2
       - 🇺🇸 US美国(yz) 46 2
       - 🇺🇸 US美国(yz) 47 2
       - 🇺🇸 US美国(yz) 48 2
+      - 🇫🇷 FR法国(yz) 3 2
       - 🇺🇸 US美国(yz) 49 2
       - 🇺🇸 US美国(yz) 50 2
       - 🇺🇸 US美国(yz) 51 2
       - 🇺🇸 US美国(yz) 52 2
+      - 🇫🇷 FR法国(yz) 4 2
       - 🇺🇸 US美国(yz) 53 2
+      - 🇬🇧 GB英国(yz) 12 2
+      - 🇫🇷 FR法国(yz) 5 2
       - 🇺🇸 US美国(yz) 54 2
       - 🇺🇸 US美国(yz) 55 2
+      - 🇬🇧 GB英国(yz) 13 2
       - 🇺🇸 US美国(yz) 56 2
-      - 🇫🇷 FR法国(yz) 6 2
-      - 🇫🇷 FR法国(yz) 7 2
       - 🇺🇸 US美国(yz) 57 2
       - 🇺🇸 US美国(yz) 58 2
       - 🇺🇸 US美国(yz) 59 2
-      - 🇬🇧 GB英国(yz) 8 2
       - 🇺🇸 US美国(yz) 60 2
-      - 🇬🇧 GB英国(yz) 9 2
       - 🇺🇸 US美国(yz) 61 2
-      - 🇬🇧 GB英国(yz) 10 2
-      - 🇬🇧 GB英国(yz) 11 2
-      - 🇬🇧 GB英国(yz) 12 2
-      - 🇬🇧 GB英国(yz) 13 2
+      - 🇺🇸 US美国(yz) 62 2
       - 🇬🇧 GB英国(yz) 14 2
       - 🇬🇧 GB英国(yz) 15 2
-      - 🇺🇸 US美国(yz) 62 2
       - 🇺🇸 US美国(yz) 63 2
       - 🇺🇸 US美国(yz) 64 2
-      - 🇬🇧 GB英国(yz) 16 2
-      - 🇬🇧 GB英国(yz) 17 2
-      - 🇬🇧 GB英国(yz) 18 2
       - 🇺🇸 US美国(yz) 65 2
-      - 🇬🇧 GB英国(yz) 19 2
-      - 🇬🇧 GB英国(yz) 20 2
-      - 🇬🇧 GB英国(yz) 21 2
-      - 🇬🇧 GB英国(yz) 22 2
       - 🇺🇸 US美国(yz) 66 2
-      - 🇬🇧 GB英国(yz) 23 2
-      - 🇬🇧 GB英国(yz) 24 2
       - 🇺🇸 US美国(yz) 67 2
-      - 🇬🇧 GB英国(yz) 25 2
-      - 🇬🇧 GB英国(yz) 26
       - 🇺🇸 US美国(yz) 68 2
+      - 🇬🇧 GB英国(yz) 16 2
       - 🇺🇸 US美国(yz) 69 2
-      - 🇬🇧 GB英国(yz) 27
+      - 🇫🇷 FR法国(yz) 6 2
       - 🇺🇸 US美国(yz) 70 2
       - 🇺🇸 US美国(yz) 71 2
+      - 🇫🇷 FR法国(yz) 7 2
       - 🇺🇸 US美国(yz) 72 2
       - 🇺🇸 US美国(yz) 73 2
       - 🇺🇸 US美国(yz) 74 2
       - 🇺🇸 US美国(yz) 75 2
+      - 🇬🇧 GB英国(yz) 17 2
+      - 🇬🇧 GB英国(yz) 18 2
+      - 🇬🇧 GB英国(yz) 19 2
+      - 🇬🇧 GB英国(yz) 20
+      - 🇬🇧 GB英国(yz) 21
+      - 🇬🇧 GB英国(yz) 22
+      - 🇬🇧 GB英国(yz) 23
+      - 🇬🇧 GB英国(yz) 24
       - 🇺🇸 US美国(yz) 76 2
       - 🇺🇸 US美国(yz) 77 2
-      - 🇺🇸 US美国(yz) 78 2
-      - 🇺🇸 US美国(yz) 79 2
-      - 🇺🇸 US美国(yz) 80 2
-      - 🇺🇸 US美国(yz) 81 2
-      - 🇺🇸 US美国(yz) 82 2
-      - 🇺🇸 US美国(yz) 83 2
-      - 🇺🇸 US美国(yz) 84 2
-      - 🇺🇸 US美国(yz) 85 2
+      - 🇺🇸 US美国(yz) 78
+      - 🇺🇸 US美国(yz) 79
       - 🇫🇷 FR法国(yz) 8 2
-      - 🇺🇸 US美国(yz) 86 2
-      - 🇺🇸 US美国(yz) 87 2
-      - 🇺🇸 US美国(yz) 88 2
-      - 🇺🇸 US美国(yz) 89 2
-      - 🇺🇸 US美国(yz) 90 2
-      - 🇺🇸 US美国(yz) 91 2
-      - 🇺🇸 US美国(yz) 92 2
-      - 🇺🇸 US美国(yz) 93 2
-      - 🇺🇸 US美国(yz) 94
-      - 🇺🇸 US美国(yz) 95
+      - 🇺🇸 US美国(yz) 80
       - 🇫🇷 FR法国(yz) 9 2
-      - 🇺🇸 US美国(yz) 96
+      - 🇫🇷 FR法国(yz) 10 2
+      - 🇫🇷 FR法国(yz) 11 2
+      - 🇺🇸 US美国(yz) 81
+      - 🇺🇸 US美国(yz) 82
+      - 🇺🇸 US美国(yz) 83
+      - 🇫🇷 FR法国(yz) 12 2
+      - 🇺🇸 US美国(yz) 84
+      - 🇫🇷 FR法国(yz) 13 2
+      - 🇺🇸 US美国(yz) 85
+      - 🇺🇸 US美国(yz) 86
+      - 🇺🇸 US美国(yz) 87
+      - 🇺🇸 US美国(yz) 88
+      - 🇺🇸 US美国(yz) 89
+      - 🇫🇷 FR法国(yz) 14 2
+      - 🇺🇸 US美国(yz) 90
+      - 🇺🇸 US美国(yz) 91
+      - 🇺🇸 US美国(yz) 92
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_120|1.2MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US¹⁺_100|1.6MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇺🇸 www.85la.com🇺🇸US⁻¹_92|3.9MB/s|YT|TK|NF|D+|Succeed
@@ -8390,6 +8283,10 @@ proxy-groups:
     proxies:
       - 🇰🇷 KR韩国(yz)
       - 🇰🇷 KR韩国(yz) 2
+      - 🇰🇷 KR韩国(yz) 3
+      - 🇰🇷 KR韩国(yz) 4
+      - 🇰🇷 KR韩国(yz) 5
+      - 🇰🇷 KR韩国(yz) 2 2
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_16|2.7MB/s|GM|YT|TK|NF|D+|X|Succeed
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_28|2.5MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
       - 🇰🇷 www.85la.com🇺🇸US¹-KR⁰_19|2.4MB/s|5%|GPT⁺|YT|TK|NF|D+|X|Succeed
