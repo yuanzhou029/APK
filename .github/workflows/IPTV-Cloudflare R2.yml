@@ -2,8 +2,8 @@ name: IPTV-Cloudflare R2
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'
+  #schedule:
+   # - cron: '0 0 * * *'
 
 jobs:
   upload-to-r2:
