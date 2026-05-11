@@ -46,7 +46,7 @@ OUTPUT_DIR = "valid_proxies"
 
 # ==================== 下载配置 ====================
 # IP源下载URL
-DOWNLOAD_URL = "https://zip.cm.edu.kg"
+DOWNLOAD_URL = "https://172.67.143.34/ip.zip"
 
 # ==================== API配置 ====================
 # 代理检测API
