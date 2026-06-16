@@ -4,7 +4,7 @@ import requests
 # ==================== 配置区 ====================
 
 # 是否输出每个DNS记录的详细操作信息（设为False则只输出最终汇总True全部输出）
-VERBOSE_OUTPUT = False
+VERBOSE_OUTPUT = True
 
 # ==================== 配置区结束 ====================
 
