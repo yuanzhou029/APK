@@ -64,18 +64,23 @@ def create_dns_record(cf_token, zone_id, name, content, record_type="A"):
             return True
         else:
             errors = result.get('errors', [])
+            # 检查是否因为“记录已存在”而报错
             if any('already exists' in str(e).lower() for e in errors):
                 if VERBOSE_OUTPUT:
                     print(f"⚠️ 已存在: {mask_record_name(name)}")
                 return True
+            
+            # 【修改这部分】：如果真的失败了，把 CF 具体的报错信息打印出来
             if VERBOSE_OUTPUT:
-                print(f"❌ 失败: {mask_record_name(name)}")
+                # 提取错误列表的 code 和 message
+                err_msgs = [f"[Code {e.get('code')}] {e.get('message')}" for e in errors]
+                err_detail = ", ".join(err_msgs) if err_msgs else "未知错误"
+                print(f"❌ 失败: {mask_record_name(name)} | 原因: {err_detail}")
             return False
     except Exception as e:
         if VERBOSE_OUTPUT:
             print(f"❌ 出错: {e}")
         return False
-
 def delete_existing_records(cf_token, zone_id, record_name):
     """删除指定子域名的所有现有DNS记录"""
     url = f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
