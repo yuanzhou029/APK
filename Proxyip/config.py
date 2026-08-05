@@ -51,7 +51,7 @@ DOWNLOAD_URL = "https://zip.yh-iot.pp.ua/zip/ip.zip"
 # ==================== API配置 ====================
 # 代理检测API
 # CHECK_API = "https://proxyip.yuanzhou04-764.workers.dev/check"
-CHECK_API = "https://check.proxyip.cmliussss.net/check"
+CHECK_API = "https://proxyip.yuanzhou04-764.workers.dev/check"
 
 # https://proxyip.yuanzhou04-764.workers.dev/check
 # https://cf.090227.xyz/check
