@@ -1,0 +1,47 @@
+{
+  "default_replace": "替换内容",
+  "default_retries": 5,
+  "default_retry_delay": 3,
+  "urls": [
+    {
+      "url": "https://bestcf.pages.dev/domain/all.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-1",
+      "timeout": 20
+    },
+    {
+      "url": "https://bestcf.pages.dev/domain/ygkkk/all.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-1",
+      "timeout": 20
+    },
+    {
+      "url": "https://bestcf.pages.dev/wetest/ipv4.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-1",
+      "timeout": 20
+    },
+    {
+      "url": "https://bestcf.pages.dev/cfyes/ipv6.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-1",
+      "timeout": 20
+    },
+    {
+      "url": "https://bestcf.pages.dev/tiancheng/all.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-1",
+      "timeout": 20
+    }
+  ]
+}
