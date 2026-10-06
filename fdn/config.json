@@ -8,7 +8,7 @@
       "retries":3,
       "retry_delay":2,
       "enabled": true,
-      "replace": "yz-1",
+      "replace": "yz-EDT导航",
       "timeout": 20
     },
     {
@@ -16,7 +16,7 @@
       "retries":3,
       "retry_delay":2,
       "enabled": true,
-      "replace": "yz-2",
+      "replace": "yz-ygkkk",
       "timeout": 20
     },
     {
@@ -24,7 +24,7 @@
       "retries":3,
       "retry_delay":2,
       "enabled": true,
-      "replace": "yz-3",
+      "replace": "yz-wetest",
       "timeout": 20
     },
     {
@@ -32,7 +32,7 @@
       "retries":3,
       "retry_delay":2,
       "enabled": true,
-      "replace": "yz-4",
+      "replace": "yz-cfyes",
       "timeout": 20
     },
     {
@@ -40,7 +40,55 @@
       "retries":3,
       "retry_delay":2,
       "enabled": true,
-      "replace": "yz-5",
+      "replace": "yz-天成",
+      "timeout": 20
+    },
+    {
+      "url": "https://bestcf.pages.dev/domain/ircf/all.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-ircf",
+      "timeout": 20
+    }，
+    {
+      "url": "https://bestcf.pages.dev/lzj/all.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-辣子鸡",
+      "timeout": 20
+    }，    
+    {
+      "url": "https://bestcf.pages.dev/s5gy/all.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-s5公益",
+      "timeout": 20
+    }，    
+    {
+      "url": "https://bestcf.pages.dev/vvhan/ipv6.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-vvhan",
+      "timeout": 20
+    }，    
+    {
+      "url": "https://090227.pages.dev/bestcf?isp=ct&ips=50",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-ips",
+      "timeout": 20
+    }，    
+    {
+      "url": "https://raw.githubusercontent.com/LancelotRar/best-cf-ips/refs/heads/main/best-cf-ip-scanned-top50.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-cf-ip",
       "timeout": 20
     }
   ]
