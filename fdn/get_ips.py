@@ -24,14 +24,11 @@ def _positive_int(value, default):
         return default
 
 
-def parse_config(config_file):
+def build_entries(config):
     """
-    读取 JSON 配置文件，返回 entries 列表。
+    从 config dict 构建 entries 列表。
     每项含 url/replace/enabled/timeout/retries/retry_delay（已合并默认值）。
     """
-    with open(config_file, 'r', encoding='utf-8') as f:
-        config = json.load(f)
-
     default_replace = config.get('default_replace')
     default_timeout = _positive(config.get('default_timeout', 15), 15)
     default_retries = _positive_int(config.get('default_retries', 3), 3)
@@ -161,27 +158,69 @@ def fetch_url(url, timeout=15, retries=3, retry_delay=2):
     return None, last_err, url, retries
 
 
+def check_files(config_file, output_file):
+    """
+    运行前预检：config.json 是否存在/可读/JSON 有效/含 urls；
+    data.txt 是否可写（存在则可覆盖，不存在则可创建）。
+    返回 config dict，失败返回 None。
+    """
+    if not os.path.exists(config_file):
+        print(f"错误: 配置文件 '{config_file}' 不存在，请先创建它。")
+        return None
+    if not os.access(config_file, os.R_OK):
+        print(f"错误: 配置文件 '{config_file}' 不可读。")
+        return None
+
+    try:
+        with open(config_file, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"错误: 配置文件 JSON 格式不正确: {e}")
+        return None
+    except Exception as e:
+        print(f"错误: 读取配置文件失败: {e}")
+        return None
+
+    if not isinstance(config, dict) or not config.get('urls'):
+        print(f"错误: 配置文件无效：缺少 'urls' 或 'urls' 为空。")
+        return None
+
+    if os.path.exists(output_file):
+        if os.path.isdir(output_file):
+            print(f"错误: 输出路径 '{output_file}' 是目录而非文件。")
+            return None
+        if not os.access(output_file, os.W_OK):
+            print(f"错误: 输出文件 '{output_file}' 不可写。")
+            return None
+    else:
+        parent = os.path.dirname(output_file) or '.'
+        if not os.access(parent, os.W_OK):
+            print(f"错误: 输出目录 '{parent}' 不可写，无法创建 '{output_file}'。")
+            return None
+
+    return config
+
+
 def main():
     config_file = 'config.json'
     output_file = 'data.txt'
 
-    if not os.path.exists(config_file):
-        print(f"错误: 找不到配置文件 '{config_file}'，请先创建它。")
+    print("运行前检查...")
+    config = check_files(config_file, output_file)
+    if config is None:
         return
 
-    print(f"正在读取 {config_file} ...")
-
-    try:
-        entries = parse_config(config_file)
-    except json.JSONDecodeError as e:
-        print(f"错误: 配置文件 JSON 格式不正确: {e}")
-        return
-    except Exception as e:
-        print(f"错误: 读取配置文件失败: {e}")
-        return
+    print(f"正在解析 {config_file} ...")
+    entries = build_entries(config)
 
     if not entries:
         print("配置文件中没有有效的 URL。")
+        return
+
+    try:
+        open(output_file, 'w', encoding='utf-8').close()
+    except OSError as e:
+        print(f"错误: 无法初始化输出文件 '{output_file}': {e}")
         return
 
     active = [e for e in entries if e['enabled']]
