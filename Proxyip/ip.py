@@ -37,7 +37,7 @@ except ImportError:
     COUNTRY_CODES = ["TW", "JP", "HK", "SG"]
     IP_SOURCE_DIR = "source_ips"
     OUTPUT_DIR = "valid_proxies"
-    CHECK_API = "https://proxyip.yuanzhou04-764.workers.dev/check"
+    CHECK_API = "https://proxyip-ff67.yh-iot.workers.dev/check"
     MAX_THREADS = 30
     TCP_TIMEOUT = 2
     API_TIMEOUT = 5
