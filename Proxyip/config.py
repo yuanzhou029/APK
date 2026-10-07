@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-ProxyIP 项目共享配置文件
-
-此配置文件被以下脚本共享使用：
-- download_and_extract.py: 下载并解压IP源数据
-- ip.py: 代理IP检测
-
-修改此文件中的配置，两个脚本会自动同步。
-"""
-
 # ==================== 端口配置 ====================
 # 检测端口列表
 # - download_and_extract.py: 从这些端口目录读取IP文件
