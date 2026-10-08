@@ -90,6 +90,14 @@
       "enabled": true,
       "replace": "yz-cf-ip",
       "timeout": 20
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ymyuuu/IPDB/refs/heads/main/BestProxy/bestproxy%26country.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-反代-ip",
+      "timeout": 20
     }
   ]
 }
