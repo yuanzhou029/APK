@@ -39,7 +39,6 @@ except ImportError:
     IP_SOURCE_DIR = "source_ips"
     OUTPUT_DIR = "valid_proxies"
     CHECK_API = "https://cf.090227.xyz/check"
-    API_TOKEN = "0000000000"
     MAX_THREADS = 30
     TCP_TIMEOUT = 2
     API_TIMEOUT = 5
