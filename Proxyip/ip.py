@@ -37,7 +37,7 @@ except ImportError:
     COUNTRY_CODES = ["TW", "JP", "HK", "SG"]
     IP_SOURCE_DIR = "source_ips"
     OUTPUT_DIR = "valid_proxies"
-    CHECK_API = "https://proxyip-ff67.yh-iot.workers.dev/check"
+     = "https://proxyip-ff67.yh-iot.workers.dev/check"
     MAX_THREADS = 30
     TCP_TIMEOUT = 2
     API_TIMEOUT = 5
@@ -277,7 +277,7 @@ def check_proxy(proxy_str):
 
     # API 验证
     try:
-        params = {"proxyip": f"{ip}:{port}"}
+        params = {"token": API_TOKEN, "proxyip": f"{ip}:{port}"}
         response = requests.get(CHECK_API, params=params, timeout=API_TIMEOUT)
         data = response.json()
 
@@ -331,7 +331,7 @@ def verify_proxy(proxy_info):
 
     # API 验证
     try:
-        params = {"proxyip": f"{ip}:{port}"}
+        params = {"token": API_TOKEN, "proxyip": f"{ip}:{port}"}
         response = requests.get(CHECK_API, params=params, timeout=API_TIMEOUT)
         data = response.json()
 
