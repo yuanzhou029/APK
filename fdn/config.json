@@ -92,7 +92,7 @@
       "timeout": 20
     },
     {
-      "url": "https://raw.githubusercontent.com/ymyuuu/IPDB/refs/heads/main/BestProxy/bestproxy%26country.txt",
+      "url": "https://raw.githubusercontent.com/LancelotRar/best-cf-ips/refs/heads/main/best-cf-ip-collected.txt",
       "retries":3,
       "retry_delay":2,
       "enabled": true,
