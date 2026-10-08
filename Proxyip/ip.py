@@ -24,7 +24,7 @@ try:
         TCP_TIMEOUT,
         API_TIMEOUT,
         ENABLE_SECOND_VERIFY,
-        VERBOSE_OUTPUT
+        VERBOSE_OUTPUT,
         API_TOKEN
     )
     USE_CONFIG = True
