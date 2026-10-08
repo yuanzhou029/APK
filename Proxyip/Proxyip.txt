@@ -1,2 +1,3 @@
 # Proxy IP 输入文件示例
 https://raw.githubusercontent.com/ymyuuu/IPDB/refs/heads/main/BestProxy/proxy.txt
+https://raw.githubusercontent.com/yuanzhou029/APK/refs/heads/main/Proxyip/TW.txt
