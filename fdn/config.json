@@ -98,6 +98,22 @@
       "enabled": true,
       "replace": "yz-反代-ip",
       "timeout": 20
+    },
+    {
+      "url": "https://cf.090227.xyz/ct?ips=50",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-CM-ip",
+      "timeout": 20
+    },
+    {
+      "url": "https://raw.githubusercontent.com/joname1/BestCFip/refs/heads/main/ipv6.txt",
+      "retries":3,
+      "retry_delay":2,
+      "enabled": true,
+      "replace": "yz-IPV6-ip",
+      "timeout": 20
     }
   ]
 }
