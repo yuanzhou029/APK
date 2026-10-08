@@ -38,8 +38,8 @@ except ImportError:
     COUNTRY_CODES = ["TW", "JP", "HK", "SG"]
     IP_SOURCE_DIR = "source_ips"
     OUTPUT_DIR = "valid_proxies"
-    CHECK_API = "https://iiippp.yh-iot.workers.dev/check"
-    API_TOKEN = "mysupersecret"
+    CHECK_API = "https://iiippp.yh-iot.workers.dev/checker"
+    API_TOKEN = "mysupersecret00"
     MAX_THREADS = 30
     TCP_TIMEOUT = 2
     API_TIMEOUT = 5
