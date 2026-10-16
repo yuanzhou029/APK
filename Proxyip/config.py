@@ -37,7 +37,7 @@ OUTPUT_DIR = "valid_proxies"
 # ==================== 下载配置 ====================
 # IP源下载URL
 DOWNLOAD_URL = "https://zip.yh-iot.pp.ua/zip/ip.zip"
-
+# DOWNLOAD_URL = "https://zip.yh-iot.pp.ua/zip/ip.zip"
 # ==================== API配置 ====================
 # 代理检测API
 CHECK_API = "https://proxyip-ff67.yh-iot.workers.dev/check"
