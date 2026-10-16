@@ -2,15 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 IP源数据获取与分类工具（增强高鲁棒性版）
-从指定的文本URL获取IP列表，并按国家代码筛选去重保存到 source_ips 目录
-内置机制：
-1. 请求头指纹随机轮换 (Chrome/Edge/Firefox/Safari)
-2. Cloudflare 质询拦截特征检测（5秒盾/Turnstile/WAF）
-3. 多梯队降级拉取：
-   - 梯队一: requests 会话 + 随机桌面 UA + 自动重试
-   - 梯队二: 自动检测并调用 cloudscraper / curl_cffi（若环境已安装）
-   - 梯队三: 原生 curl 工具命令行降级拉取
-4. 数据有效性熔断保护（避免写入空文件或HTML错误页）
 """
 
 import os
