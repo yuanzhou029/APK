@@ -185,7 +185,7 @@ llm = context.get_service("llm")
 | `set_enabled(enabled) -> bool` | 启停开关 |
 | `get_ai_prompts() -> Dict[str, str]` | **专有大模型提示词隔离字典**，见下 |
 | `call_ai_service(prompt_key, user_content, temperature) -> str` | 安全调用大模型中枢，自动注入本插件专属 System Prompt |
-| `get_ui_extensions() -> List[Dict]` | 向宿主界面注册扩展插槽（2 类/3 类可用） |
+| `get_ui_extensions() -> List[Dict]` | 向宿主界面注册扩展插槽与通用自包含视窗（2 类/3 类可用） |
 
 `get_ai_prompts()` 实现的是**提示词隔离机制**：每个插件持有独立的专业角色上下文，互不污染。
 
@@ -196,6 +196,34 @@ def get_ai_prompts(self) -> Dict[str, str]:
         "extract_schema": "只输出 JSON，字段为 period_ms / duty_cycle……",
     }
 ```
+
+### 4.2 自包含 UI 视窗机制（Generic Plugin View Host 规范）
+
+在 AI-MA v5.3+ 中，**插件带界面无需修改宿主系统的任何 HTML/JS/CSS 文件**，实现了单文件即插即用（Self-Contained Ingress）：
+
+- **静默插件**：保持默认 `get_ui_extensions()` 返回 `[]`，纯净运行；
+- **独立看板 / 可视化监控插件**：仅需在 `get_ui_extensions()` 中声明目标插槽（如 `slot: "topbar_actions"`）并挂载 `view_html`。
+
+```python
+def get_ui_extensions(self) -> List[Dict[str, Any]]:
+    return [
+        {
+            "slot": "topbar_actions",            # 挂载位置: 顶栏操作区
+            "id": "btnMyMonitor",                # 按钮唯一 ID
+            "label": "我的看板",                 # 按钮文本
+            "icon": "fa-chart-network",          # 图标
+            "modal_title": "实时协议看板",       # 弹窗标题
+            "modal_size": "lg",                  # 弹窗宽度: sm / md / lg
+            "view_html": self.render_html()      # 自包含的 HTML + JS 模板
+        }
+    ]
+```
+
+**宿主运行机制**：
+1. 宿主前端自动扫描已启用的插件扩展，在对应插槽（如顶栏）动态生成按钮；
+2. 用户点击按钮时呼出通用视窗容器（`modalGenericPluginHost`），安全载入 `view_html`；
+3. 视图内内置脚本可通过 `pluginContext`（提供 `pluginId`, `api`, `setTimer` 等注入函数）与后端实时通信；
+4. 插件卸载或移出目录后，界面按钮与视窗自动移除，宿主**零代码残留**。
 
 ---
 
@@ -304,7 +332,8 @@ class StrobeMacroPlugin(BaseMacroPlugin):
 4. `type` 是否取自 6 种受支持值？
 5. `get_config_schema()` 每项是否都有 `type` 与 `label`？
 6. `on_disable()` 是否释放了全部套接字、线程与内存？
-7. 启动后是否在日志的「插件生态装载总览」中看到本插件？
+7. 是否需要界面：若需要独立看板，是否在 `get_ui_extensions()` 中声明了自包含 `view_html`（遵循 4.2 节单文件自包含规范，严禁侵入修改宿主 `index.html`）？
+8. 启动后是否在日志的「插件生态装载总览」中看到本插件？
    格式为「插件 id  中文名称  [启停状态]」。**没看到就是被拒收了**，
    请在总览末尾的失败明细中按 id 查找原因，或调用 `GET /api/plugins/diagnostics`。
 
