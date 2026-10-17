@@ -197,33 +197,146 @@ def get_ai_prompts(self) -> Dict[str, str]:
     }
 ```
 
-### 4.2 自包含 UI 视窗机制（Generic Plugin View Host 规范）
+### 4.2 自包含 UI 视窗机制与多插槽全域规范（Generic Plugin View Host）
 
 在 AI-MA v5.3+ 中，**插件带界面无需修改宿主系统的任何 HTML/JS/CSS 文件**，实现了单文件即插即用（Self-Contained Ingress）：
 
 - **静默插件**：保持默认 `get_ui_extensions()` 返回 `[]`，纯净运行；
-- **独立看板 / 可视化监控插件**：仅需在 `get_ui_extensions()` 中声明目标插槽（如 `slot: "topbar_actions"`）并挂载 `view_html`。
+- **独立看板 / 可视化监控插件**：仅需在 `get_ui_extensions()` 中声明目标插槽（`slot`）并挂载 `view_html`。
+
+#### 4.2.1 官方支持的挂载插槽列表（Slot Registry）
+
+宿主 Web 界面目前开放以下标准插槽供插件挂载：
+
+| 插槽标识 (`slot`) | 物理所在区域 | 展现形式 | 适用插件场景 |
+| :--- | :--- | :--- | :--- |
+| `topbar_actions` | **顶部右上角操作区** | 小尺寸按钮 (`btn-xs`) | 全局网络实时看板、帧率监控、全局紧急开关、总控工具 |
+| `nav_items` | **左侧主导航栏（系统扩展组）** | 导航菜单条目 (`nav-item`) | 具有完整独立大界面的系统级扩展、调试套件、复杂业务台 |
+| `kb_profiles_toolbar` | **知识库 · 物理灯库面板工具栏** | 标准工具按钮 (`btn-sm`) | 控台灯库格式转换（如 MA2/MA3/GDTF 导入）、灯库修复工具 |
+
+#### 4.2.2 挂载与自包含视窗声明语法
 
 ```python
 def get_ui_extensions(self) -> List[Dict[str, Any]]:
     return [
         {
-            "slot": "topbar_actions",            # 挂载位置: 顶栏操作区
-            "id": "btnMyMonitor",                # 按钮唯一 ID
-            "label": "我的看板",                 # 按钮文本
-            "icon": "fa-chart-network",          # 图标
-            "modal_title": "实时协议看板",       # 弹窗标题
-            "modal_size": "lg",                  # 弹窗宽度: sm / md / lg
-            "view_html": self.render_html()      # 自包含的 HTML + JS 模板
+            "slot": "topbar_actions",            # 挂载插槽: topbar_actions / nav_items / kb_profiles_toolbar
+            "id": "btnArtNetMonitor",            # 按钮唯一 DOM ID
+            "label": "Art-Net 看板",             # 按钮/导航项文字
+            "icon": "fa-chart-network",          # FontAwesome 6 图标
+            "btn_class": "btn-brand",            # 按钮配色类: btn-brand / btn-primary / btn-accent
+            "modal_title": "实时协议看板",       # 弹窗主标题
+            "modal_sub": "UDP 实时数据流监控",   # 弹窗副标题
+            "modal_size": "lg",                  # 弹窗尺寸: sm (560px) / md (760px) / lg (960px)
+            "modal_foot": "状态: 运行中",        # 弹窗左下角状态提示
+            "view_html": self.render_html()      # 插件自包含的 HTML + JS 视图模板
         }
     ]
 ```
 
 **宿主运行机制**：
-1. 宿主前端自动扫描已启用的插件扩展，在对应插槽（如顶栏）动态生成按钮；
+1. 宿主前端自动扫描已启用的插件扩展，在对应插槽（顶栏、左侧菜单、面板工具栏）动态生成按钮或菜单项；
 2. 用户点击按钮时呼出通用视窗容器（`modalGenericPluginHost`），安全载入 `view_html`；
-3. 视图内内置脚本可通过 `pluginContext`（提供 `pluginId`, `api`, `setTimer` 等注入函数）与后端实时通信；
+3. 视图内内置脚本可通过注入的 `pluginContext`（提供 `pluginId`, `api`, `setTimer`, `esc` 等函数）与后端实时通信；
 4. 插件卸载或移出目录后，界面按钮与视窗自动移除，宿主**零代码残留**。
+
+---
+
+### 4.3 插件参数系统：声明、UI 输入联动与持久化存储体系
+
+当插件需要用户输入数值、阈值、IP 或开关配置时，AI-MA 提供了**声明式参数系统（Schema-Driven Config）**，插件作者无需编写任何配置界面代码，即可实现“表单自动生成 ↔ 参数物理持久化 ↔ 运行时热更新（Hot Reload）”。
+
+#### 4.3.1 参数声明 Schema 语法与 5 种支持控件
+
+通过重写 `get_config_schema() -> Dict[str, Dict[str, Any]]` 声明输入参数。系统支持以下 5 种标准输入类型：
+
+```python
+def get_config_schema(self) -> Dict[str, Dict[str, Any]]:
+    return {
+        # 1. 整数数值输入 (UI 渲染为数字输入框 input type="number")
+        "listen_port": {
+            "type": "integer",
+            "label": "UDP 监听端口",
+            "default": 6454,
+            "description": "标准 Art-Net 端口为 6454"
+        },
+        # 2. 浮点/连续数值输入
+        "refresh_rate_hz": {
+            "type": "number",
+            "label": "采样刷新频率 (Hz)",
+            "default": 44.0,
+            "description": "看板数据采样频率，建议 30.0 ~ 44.0"
+        },
+        # 3. 布尔开关 (UI 自动渲染为下拉开关: 开启 True / 关闭 False)
+        "enable_auto_log": {
+            "type": "boolean",
+            "label": "自动错误转储",
+            "default": False,
+            "description": "检测到丢包或帧序列跳变时是否自动落盘日志"
+        },
+        # 4. 下拉单选枚举 (UI 渲染为 select 下拉框)
+        "filter_mode": {
+            "type": "string",
+            "label": "协议过滤模式",
+            "enum": ["ALL", "UNICAST_ONLY", "BROADCAST_ONLY"],
+            "default": "ALL",
+            "description": "指定接收的数据流范围"
+        },
+        # 5. 普通文本/IP 输入 (UI 渲染为 input type="text")
+        "bind_ip": {
+            "type": "string",
+            "label": "绑定监听 IP",
+            "default": "0.0.0.0",
+            "description": "默认 0.0.0.0 监听本机全部物理网卡与回环端口"
+        }
+    }
+```
+
+#### 4.3.2 参数物理存储与原子写入原理
+
+1. **物理存储文件**：
+   所有插件的参数统一持久化在工程根目录的 `config/plugins_config.json` 中。
+2. **存储结构格式**：
+   ```json
+   {
+     "adapter_artnet_dashboard": {
+       "enabled": true,
+       "config": {
+         "listen_port": 6454,
+         "refresh_rate_hz": 44.0,
+         "enable_auto_log": false,
+         "filter_mode": "ALL",
+         "bind_ip": "0.0.0.0"
+       }
+     }
+   }
+   ```
+3. **数据读写与合并机制**：
+   - **读取**：在代码中调用 `self.get_config()` 时，系统会先取 `get_config_schema()` 声明的 `default` 默认值，再用文件中保存的真实配置进行深层覆盖。**即便插件升级新增了参数项，老配置文件也不会报错，而是优雅退化为默认值**。
+   - **写入**：用户在 Web 控制台点击“保存并热生效”时，通过 `POST /api/plugins/save_config` 提交，服务端经字段清洗后原子写入 `config/plugins_config.json`，确保断电重启不丢失。
+
+#### 4.3.3 参数代码读取与运行时热更新（Hot Reload）
+
+- **随时读取**：
+  ```python
+  cfg = self.get_config()
+  port = int(cfg.get("listen_port", 6454))
+  is_log = bool(cfg.get("enable_auto_log", False))
+  ```
+- **监听参数热变更（无需重启服务）**：
+  当用户修改参数保存时，系统会主动回调插件的 `update_config(new_config)` 方法。开发者可重写该方法实现无缝平滑重载：
+  ```python
+  def update_config(self, new_config: Dict[str, Any]) -> bool:
+      # 先调用基类方法更新内存字典
+      super().update_config(new_config)
+      
+      # 检查关注的参数是否发生变化
+      new_port = new_config.get("listen_port")
+      if new_port and new_port != self.current_port:
+          logger.info(f"检测到端口配置热变更 -> {new_port}，正在平滑重启 Socket…")
+          self._rebind_socket(new_port)
+      return True
+  ```
 
 ---
 
