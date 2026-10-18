@@ -547,14 +547,17 @@ GET /api/plugins/diagnostics        (需 superadmin / admin 角色)
 
 | 测试脚本 | 断言数 | 结果 | 需独占端口 |
 |---|---|---|---|
-| `tests/test_aima53_standalone_system.py` | 4 | **PASS** | 否 |
+| `tests/test_aima53_standalone_system.py` | 5 | **PASS** | 否 |
 | `tests/test_plugin_observability.py` | 31 | **PASS** | 否（进程内自包含） |
 | `tests/test_auth_noise_suppression.py` | 28 | **PASS** | 是 |
 | `tests/test_aima53_boot_e2e.py` | 32 | **PASS** | 是 |
 | `tests/test_kernel_watchdog.py` | 17 | **PASS** | 是 |
 | `tests/test_release_package_integrity.py` | 35 | **PASS** | 是 |
-| **合计** | **147** | **全部通过** | |
+| **准出基线小计** | **148** | **全部通过** | |
+| `tests/test_audit_remediation.py`（审计整改自测套件） | 4 | **PASS** | 否（自包含） |
+| **最终全量验证总计** | **152** | **全部通过** | |
 
+> 注：`test_aima53_standalone_system.py` 包含 5 项裸断言（桥接挂载、内核推流模式、三层插件隔离、L4 槽位写入等），此前表格曾误记导致统计漂移，现已纠正为权威实测的 148 项基线（加上审计整改套件 4 项后达 152 项）。
 > 需要独占端口的 4 套测试均带**独占性前置检查**：检测到已有实例在运行即以退出码 2 礼貌跳过，
 > 绝不为了自身方便而杀死用户正在使用的进程（该纪律源于第 7.4 节记录的一次真实事故）。
 
@@ -657,6 +660,26 @@ async function forceLogout(msg) {
 > 真正需要被看见的攻击会淹没在日常噪音里。
 
 这一条同样适用于其他高频路径：日志轮询、心跳探测、遥测拉取。
+
+---
+
+## 12. 系统深度审计与四项严重缺陷整改实录 (2026-10-17)
+
+在系统准出审查阶段，审计官（小申）对系统边界和极限失效模式进行了全面穿透性审计，发现了 4 项关键缺陷；工程团队（小代）已彻底攻克修复，小艾同步归档如下：
+
+### 12.1 缺陷整改与机理
+
+| 序号 | 缺陷项 | 严重级别 | 根因机理与危害 | 修复实现与关键代码 |
+|---|---|---|---|---|
+| 1 | **插件上传路径穿越漏洞 (RCE)** | 严重/高危 | `/api/plugins/community/upload` 虽限制 `.py`，但未清洗路径，攻击者可通过 `../../core/engine.py` 覆盖核心代码实现任意代码执行 | 在 `control_station.py` 中引入 `os.path.basename` 剥离穿越前缀，并强制要求主体名为合法 Python 标识符（`name_without_ext.isidentifier()`），非法即 400 阻断 |
+| 2 | **L4 掩码以零值判断致暗场失效** | 高危 | `engine.py` 原先用 `val > 0` 生成 `mask`。DMX 中 0 电平代表关死/暗场，掩码置 0 导致微内核判定无意图而穿透到下层或保持残留帧，产生残影 | 在 `DmxMerger` 中实现 `get_controlled_channels_mask(universe)`，只要信号源激活，受控通道掩码恒置 1，确保 0 电平有效穿透写入 L4 槽位 |
+| 3 | **跨 Universe 宏特效截断** | 高危 | `_update_macro()` 原先写死只取 `fixtures[0]` 所在 Universe 并只渲染该 Universe，导致跨多 Universe 的大场面走马灯/呼吸灯除 U0 外全场冻结 | 在 `engine.py` 中将 `fixtures` 按 `universe` 聚类为字典，循环调用宏插件独立渲染每个宇宙的底帧并提交，彻底支持全场跨宇宙联动 |
+| 4 | **看门狗重启内核后共享内存句柄失效** | 中高危 | 内核异常崩溃被看门狗拉起后，Python 单例持有的是断开前的陈旧/失效句柄或坏锁状态，导致后续写入无法生效 | `AimaKernelBridge` 增加 `reconnect()`/`reset()` 方法，看门狗在成功拉起新内核进程后立即显式调用 `reconnect()` 重建映射 |
+
+### 12.2 专项验证
+
+上述整改由专门编写的自测套件 `tests/test_audit_remediation.py`（4 项单元与集成断言）进行强力对抗验证，已获审计官小申全面核验通过（PASS）。详细推导与架构演进议题已同步沉淀至 `docs/08_系统深度审计与隐藏缺陷分析报告.md`。
+
 
 
 

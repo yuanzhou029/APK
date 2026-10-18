@@ -80,7 +80,8 @@ from typing import Dict, Any, List
 # —— 层级基类（决定 tier，插件作者通常不直接继承它们）——
 BasePlugin(ABC)                 # 默认 tier = CREATIVE(3)
 ├── BaseSystemPlugin            # tier = SYSTEM(1)
-│   ├── BaseProtocolPlugin      # 输出协议驱动
+│   ├── BaseProtocolPlugin      # 输出协议驱动 (Art-Net / sACN / DMX)
+│   ├── BaseTransportPlugin     # 通用下行与硬件通信总线 (MQTT / HA / ZigBee / Modbus / CAN)
 │   └── BaseLLMPlugin           # 大模型与认知中枢
 ├── BaseAdapterPlugin           # tier = ADAPTER(2)
 └── BaseCreativePlugin          # tier = CREATIVE(3)
@@ -88,11 +89,12 @@ BasePlugin(ABC)                 # 默认 tier = CREATIVE(3)
     └── BasePerceptionPlugin    # 外部感知输入
 ```
 
-### 3.2 PluginType 受支持类型（共 6 种，取自源码）
+### 3.2 PluginType 受支持类型（共 7 种，取自源码）
 
 ```python
 class PluginType:
     PROTOCOL   = "protocol"     # 输出协议 (Art-Net, sACN, OSC, Telnet, Modbus)
+    TRANSPORT  = "transport"    # 物理/通用通信总线驱动 (MQTT, HomeAssistant, ZigBee, Serial, CAN)
     PERCEPTION = "perception"   # 外部感知 (音频分析, BPM 提取, 摄像头追踪, 传感器)
     MACRO      = "macro"        # 动态特效宏引擎 (走马灯, 呼吸, 矩阵彩虹)
     LLM        = "llm"          # 大语言模型与决策器适配器 (Qwen, DeepSeek, Claude)
@@ -100,7 +102,7 @@ class PluginType:
     ADAPTER    = "adapter"      # 外部资产与控台格式转换器 (MA2 XML, GDTF, Titan)
 ```
 
-> `get_info()["type"]` 必须取自上述 6 个值之一，否则 `PluginValidator` 直接判不合规。
+> `get_info()["type"]` 必须取自上述 7 个值之一，否则 `PluginValidator` 直接判不合规。
 
 ### 3.3 BasePlugin 抽象方法（所有插件必须实现）
 
@@ -140,12 +142,15 @@ class BasePlugin(ABC):
 | 基类 | 层级 | 必须额外实现 |
 | --- | --- | --- |
 | `BaseProtocolPlugin` | 1 类 | `send_universe(self, universe: int, dmx_data_512: bytearray) -> bool` |
+| `BaseTransportPlugin` | 1 类 | `connect(self) -> bool` · `send_raw(self, topic_or_addr: str, payload: bytes) -> bool` · `is_connected(self) -> bool` |
 | `BaseLLMPlugin` | 1 类 | `chat_completion(self, messages: List[Dict[str,str]], temperature: float = 0.2) -> str` |
 | `BaseAdapterPlugin` | 2 类 | `supported_extensions(self) -> List[str]` · `convert_to_profile(self, file_bytes: bytes, filename: str) -> Dict[str, Any]` |
 | `BaseMacroPlugin` | 3 类 | `render(self, elapsed_ms: float, params: Dict[str, Any], current_frame: bytearray) -> bytearray` |
 | `BasePerceptionPlugin` | 3 类 | `get_status(self) -> Dict[str, Any]` |
 
 > `BaseProtocolPlugin.broadcast_sync()` **已提供默认实现且不是抽象方法**，仅在需要同步帧时覆盖。
+> `BaseAdapterPlugin` 具备能力注册方法 `get_provided_capabilities()` 与对下总线访问通道 `get_transport()`。
+> `BaseCreativePlugin` 声明依赖方法 `get_required_capabilities()`，由 `PluginValidator` 在准入时严格核验是否存在有效 2 类服务提供方，若缺失则阻断装载并记录 `ERR-PLUGIN-FOUNDATION`。
 
 ---
 
@@ -208,11 +213,43 @@ def get_ai_prompts(self) -> Dict[str, str]:
 
 宿主 Web 界面目前开放以下标准插槽供插件挂载：
 
-| 插槽标识 (`slot`) | 物理所在区域 | 展现形式 | 适用插件场景 |
-| :--- | :--- | :--- | :--- |
-| `topbar_actions` | **顶部右上角操作区** | 小尺寸按钮 (`btn-xs`) | 全局网络实时看板、帧率监控、全局紧急开关、总控工具 |
-| `nav_items` | **左侧主导航栏（系统扩展组）** | 导航菜单条目 (`nav-item`) | 具有完整独立大界面的系统级扩展、调试套件、复杂业务台 |
-| `kb_profiles_toolbar` | **知识库 · 物理灯库面板工具栏** | 标准工具按钮 (`btn-sm`) | 控台灯库格式转换（如 MA2/MA3/GDTF 导入）、灯库修复工具 |
+| 插槽标识 (`slot`) | 物理所在区域 | 展现形式 | 层级支持 | 适用插件场景 |
+| :--- | :--- | :--- | :--- | :--- |
+| `topbar_actions` | **顶部右上角操作区** | 小尺寸按钮 (`btn-xs`) | 单层按钮 | 全局网络实时看板、帧率监控、全局紧急开关、总控工具 |
+| `nav_items` | **左侧主导航栏（系统扩展组）** | 导航菜单条目 (`nav-item`) | **支持两层分组结构** | 具有完整独立大界面的系统级扩展、独立调试套件、二级插件工具箱 |
+| `kb_profiles_toolbar` | **知识库 · 物理灯库面板工具栏** | 标准工具按钮 (`btn-sm`) | 单层按钮 | 控台灯库格式转换（如 MA2/MA3/GDTF 导入）、灯库修复工具 |
+
+> **两层侧边栏导航条目规范（特别说明）**：
+> 在 `slot: "nav_items"` 中，系统支持**创建两层结构（分组条目 + 子功能按钮）**。
+> 开发者只需在扩展定义中指定 `"group_label"`（一级分类条目名），宿主即会在侧边栏自动创建该一级条目，并将该插件注册的一个或多个功能项（或多个插件的功能项）自动收纳为其下属的**二级子功能条目 (`nav-sub-item`)**！
+>
+> **两层侧边栏声明代码范例**：
+> ```python
+> def get_ui_extensions(self) -> List[Dict[str, Any]]:
+>     return [
+>         # 第一层: 属于 "演艺网络诊断" 大类下的 "Art-Net 监视器"
+>         {
+>             "slot": "nav_items",
+>             "group_label": "演艺网络诊断",       # 一级条目/分组标题
+>             "id": "nav_artnet_monitor",          # 二级按钮 ID
+>             "label": "Art-Net 实时流监视",       # 二级功能按钮名称
+>             "icon": "fa-chart-network",          # 二级图标
+>             "badge": "实时",                     # 可选右侧小角标
+>             "modal_title": "Art-Net 协议实时数据看板",
+>             "view_html": self.render_html()
+>         },
+>         # 同一分组下的第二个子功能
+>         {
+>             "slot": "nav_items",
+>             "group_label": "演艺网络诊断",       # 归入同一一级分组条目
+>             "id": "nav_artnet_pcap",
+>             "label": "离线数据包分析器",
+>             "icon": "fa-file-lines",
+>             "modal_title": "Art-Net PCAP 离线分析",
+>             "view_html": self.render_pcap_html()
+>         }
+>     ]
+> ```
 
 #### 4.2.2 挂载与自包含视窗声明语法
 

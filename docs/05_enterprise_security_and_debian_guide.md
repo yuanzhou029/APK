@@ -16,7 +16,7 @@
 | 角色常量名 | 未给出 | `Role.SUPERADMIN` / `ADMIN` / `ENGINEER` / `VIEWER` |
 | 权限模型 | 文字描述"权限等级 L1/L2/L3" | **9 项显式权限字符串**，`SUPERADMIN` 具全权穿透 |
 | 心跳频率 | "30Hz 心跳引擎" | **44Hz 为 Rust 微内核物理推流节奏**；`engine.py` 的 Python 侧 `fps` 默认 **30** |
-| 故障码数量 | 5 个 | **14 个**（`ERROR_DIAGNOSTICS_DB` 全量登记） |
+| 故障码数量 | 5 个 | **18 个**（`ERROR_DIAGNOSTICS_DB` 全量登记） |
 | 鉴权噪音策略 | 无（每次 401 都记 ERROR） | **分级判定**（DEBUG/INFO/ERROR），防告警脱敏 |
 | systemd 单元 | 单个 `ai-lighting.service` | **双单元** `aima-rt.service` + `ai-ma.service`（`BindsTo` 强绑定） |
 | 部署路径 | 未明确 | `/opt/ai-ma` |
@@ -204,6 +204,10 @@ def check_permission(self, token: str, required_perm: str) -> bool:
 | `ERR-PLUGIN-FOUNDATION` | 系统底座插件（1/2 类）装载失败 | 语法错误、缺依赖、未过合规校验、`on_init` 返回 False | 查启动日志「插件生态装载总览」或 `/api/plugins/diagnostics` |
 | `ERR-KB-WRITE` | RAG 知识库写入或删除失败 | 目录无写权限、JSON 被占用、磁盘不足、结构不合规 | 检查 `knowledge_base/` 权限与磁盘空间 |
 | `ERR-ADAPTER-IMPORT` | 外部控台灯库资产导入失败 | 格式不受支持的适配器处理，或适配器未启用 | 确认 2 类适配器已启用；校验源文件格式 |
+| `ERR-RPC-PERMISSION` | 插件间 RPC 服务调用权限被拒绝 | 调用方未在目标白名单或越权访问私有服务 | 检查 callers 白名单与插件依赖规约 |
+| `ERR-SERVICE-NOT-FOUND` | 未找到请求的插件 RPC 目标服务 | 服务未注册、提供者未启用或已注销 | 确认目标插件已启用及 service_name 拼写 |
+| `ERR-RPC-TIMEOUT` | 插件间 RPC 服务调用超时或断路器熔断 | 超出超时预算或服务频繁崩溃熔断器打开 | 优化耗时逻辑、检查断路器恢复周期 |
+| `ERR-PLUGIN-PERF-VIOLATION` | 插件性能门禁违规触发降级或熔断 | 单帧耗时或事件处理持续挤占 44Hz 周期 | 消除大循环与同步 IO、使用 Mock 沙盒压测排查 |
 
 ---
 

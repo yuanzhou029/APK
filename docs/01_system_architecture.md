@@ -139,7 +139,8 @@ AI-MA5.3/
 │   │   ├── qwen_plugin.py          #   llm_local_qwen_7b
 │   │   └── system_log_ai_repair_plugin.py   # system_log_ai_repair
 │   ├── adapters/                   # 2 类·适配级：专业人员维护，用户不可见
-│   │   └── ma_fixture_adapter.py   #   adapter_ma_fixture
+│   │   ├── ma_fixture_adapter.py   #   adapter_ma_fixture
+│   │   └── artnet_dashboard_adapter.py # adapter_artnet_dashboard
 │   └── community/                  # 3 类·表现创意：插件市场唯一展示分类，可热卸载
 │       ├── breathing_plugin.py             # macro_breathing
 │       ├── marquee_plugin.py               # macro_marquee
@@ -275,6 +276,7 @@ v5.3 最重要的一项架构决策。三层不是"分类标签"，而是**由�
 | 1 类 | `llm_local_qwen_7b` | `plugins/system/qwen_plugin.py` |
 | 1 类 | `system_log_ai_repair` | `plugins/system/system_log_ai_repair_plugin.py` |
 | 2 类 | `adapter_ma_fixture` | `plugins/adapters/ma_fixture_adapter.py` |
+| 2 类 | `adapter_artnet_dashboard` | `plugins/adapters/artnet_dashboard_adapter.py` |
 | 3 类 | `macro_breathing` | `plugins/community/breathing_plugin.py` |
 | 3 类 | `macro_marquee` | `plugins/community/marquee_plugin.py` |
 | 3 类 | `perception_audio_beat_sim` | `plugins/community/perception_audio_beat_sim.py` |
