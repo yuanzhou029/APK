@@ -14,7 +14,7 @@ PROXY_PORTS = [443]
 #
 # 如果要添加新国家，只需在此添加映射即可
 COUNTRY_CONFIG = {
- #   "KR": "韩国",
+    "KR": "韩国",
     "JP": "日本",
  #   "HK": "香港",
  #   "SG": "新加坡",
@@ -47,7 +47,7 @@ API_TOKEN = "sk-3c7066bcc4f61ed0-2063ad-cec19184"
 
 # ==================== 性能配置 ====================
 # 并发线程数
-MAX_THREADS = 30
+MAX_THREADS = 10
 
 # TCP握手超时秒数
 TCP_TIMEOUT = 2
