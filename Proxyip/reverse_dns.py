@@ -159,7 +159,7 @@ COUNTRY_NAME_MAP = {
     "NZ": "新西兰",
 }
 
-def upload_ips_to_cf(input_dir, reverse_domain, cf_token, zone_id, max_ips=30):
+def upload_ips_to_cf(input_dir, reverse_domain, cf_token, zone_id, max_ips=3):
     """将IP上传到Cloudflare DNS"""
     if not all([reverse_domain, cf_token, zone_id]):
         print("❌ 缺少必要配置（CF_API_TOKEN, CF_ZONE_ID, CF_REVERSE_DOMAIN）")
