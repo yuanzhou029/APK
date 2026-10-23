@@ -47,7 +47,7 @@ API_TOKEN = "sk-3c7066bcc4f61ed0-2063ad-cec19184"
 
 # ==================== 性能配置 ====================
 # 并发线程数
-MAX_THREADS = 10
+MAX_THREADS = 30
 
 # TCP握手超时秒数
 TCP_TIMEOUT = 2
